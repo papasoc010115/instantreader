@@ -95,20 +95,20 @@ jQuery(function ($) {
       Side Menu
      ====================================== */
 
-    $("#full-menu-1").on("click", function () {
-        $(this).toggleClass("active");
-        $(".nav-holder").toggleClass("active");
-        $("body").toggleClass("overflow-hidden");
-    }), $(".nav-holder.main,.fullnav-close").on("click", function () {
-        $("#full-menu-1.active").removeClass("active");
-        $(".nav-holder").removeClass("active");
-        $("body").removeClass("overflow-hidden");
-    }),$(".nav-holder.alt").on("click", function (e) {
-        if(!$(e.target).hasClass('link')){
-            $("#full-menu-1.active").removeClass("active");
-            $(".nav-holder").removeClass("active");
-            $("body").removeClass("overflow-hidden");
-        }});
+    // $("#full-menu-1").on("click", function () {
+    //     $(this).toggleClass("active");
+    //     $(".nav-holder").toggleClass("active");
+    //     $("body").toggleClass("overflow-hidden");
+    // }), $(".nav-holder.main,.fullnav-close").on("click", function () {
+    //     $("#full-menu-1.active").removeClass("active");
+    //     $(".nav-holder").removeClass("active");
+    //     $("body").removeClass("overflow-hidden");
+    // }),$(".nav-holder.alt").on("click", function (e) {
+    //     if(!$(e.target).hasClass('link')){
+    //         $("#full-menu-1.active").removeClass("active");
+    //         $(".nav-holder").removeClass("active");
+    //         $("body").removeClass("overflow-hidden");
+    //     }});
 
     /* ===================================
       Animated Cursor
