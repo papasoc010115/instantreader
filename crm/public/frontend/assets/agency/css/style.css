@@ -858,8 +858,8 @@ header .nav-holder.active .shape-right {
 .nav-holder.style-2 .full-menu-navigation{
     position: absolute;
     height: auto;
-    right: 240px;
-    bottom: 125px;
+    right: 220px;
+    top: 350px;
     opacity: 0;
     -webkit-transition: all .3s ease-in-out;
     -moz-transition: all .3s ease-in-out;
@@ -3380,4 +3380,19 @@ input.inputerror, textarea.inputerror, select.inputerror {
     .box {
         left: 43%;
     }
+}
+
+
+/* ===================================
+    Added by Developers
+   ====================================== */
+
+.profile-pic{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    background-color: #FFFFFF;
 }
