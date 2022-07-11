@@ -12,7 +12,7 @@
     <meta name="keywords" content="creative, modern, clean, bootstrap responsive, html5, css3, portfolio, blog, agency, templates, multipurpose, one page, corporate, start-up, studio, branding, designer, freelancer, carousel, parallax, photography, personal, masonry, grid, faq">
     <!-- Page Title -->
     <title>Agency | MegaOne HTML5 Template</title>
-  <!--   {{ asset('frontend/assets/') }} -->
+    <!--   {{ asset('frontend/assets/') }} -->
     <!-- Favicon -->
     <link href="{{ asset('frontend/assets/agency/img/favicon.ico') }}" rel="icon">
     <!-- Bundle -->

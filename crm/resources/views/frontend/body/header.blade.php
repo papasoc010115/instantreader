@@ -5,7 +5,7 @@
         <div class="container">
             <a class="logo link scroll" href="javascript:void(0)" title="Logo">
                 <!--Logo Default-->
-                <img alt="logo" class="logo-dark default" src="agency/img/logo-white.png">
+                <img alt="logo" class="logo-dark default" src="{{ asset('frontend/assets/agency/img/logo-white.png') }}">
             </a>
 
 
@@ -13,24 +13,24 @@
             <div class="collapse navbar-collapse" id="agency">
                 <div class="navbar-nav ml-auto">
                     <a class="nav-link link scroll active" href="#home">Home</a>
-                    <a class="nav-link link scroll" href="#about-us">About Us</a>
-                    <a class="nav-link link scroll" href="#portfolio">Our Work</a>
-                    <a class="nav-link link scroll" href="#clients">Clients</a>
-                    <a class="nav-link link scroll" href="#blog">Our Blog</a>
-                    <a class="nav-link link scroll" href="#contact">Contact Us</a>
+                    <div class="nav-link link scroll menu-dropdown">
+                        <a class="unclickable">Learn More</a>
+                        <div class="menu-dropdown-content">
+                            <a href="#">Online Reading Assessment</a>
+                            <a href="#">Instant Reader Kids Club</a>
+                            <a href="#">FAQs</a>
+                            <a href="#">Reading Program Overview</a>
+                        </div>
+                    </div>
+                    <div class="nav-link link scroll menu-dropdown">
+                        <a class="unclickable">Contact Us</a>
+                        <div class="menu-dropdown-content">
+                            <a href="#">Book a FREE Consultation</a>
+                            <a href="#">Start a Career with Us</a>
+                        </div>
+                    </div>          
                     <span class="menu-line"><i aria-hidden="true" class="fa fa-angle-down"></i></span>
                 </div>
-                <a class="btn btn-medium btn-rounded btn-transparent-white btn-hvr-white ml-3" data-animation-duration="500" data-fancybox data-src="#animatedModal"
-                   href="javascript:void(0);">Get A Quote
-                    <div class="btn-hvr-setting">
-                        <ul class="btn-hvr-setting-inner">
-                            <li class="btn-hvr-effect"></li>
-                            <li class="btn-hvr-effect"></li>
-                            <li class="btn-hvr-effect"></li>
-                            <li class="btn-hvr-effect"></li>
-                        </ul>
-                    </div>
-                </a>
             </div>
 
             <!--Menu Button-->
@@ -40,23 +40,11 @@
                 <span class="line"></span>
             </button>
 
-            <!--Slider Social-->
-            <div class="slider-social">
-                <ul class="list-unstyled">
-                    <li class="animated-wrap"><a class="animated-element" href="javascript:void(0);"><i
-                            aria-hidden="true" class="fab fa-facebook-f"></i></a></li>
-                    <li class="animated-wrap"><a class="animated-element" href="javascript:void(0);"><i
-                            aria-hidden="true" class="fab fa-instagram"></i></a></li>
-                    <li class="animated-wrap"><a class="animated-element" href="javascript:void(0);"><i
-                            aria-hidden="true" class="fab fa-twitter"></i></a></li>
-                </ul>
-            </div>
-
         </div>
     </nav>
 
     <!--Full menu-->
-    <div class="nav-holder main style-2 alt-font">
+    <div class="nav-holder alt style-2 alt-font">
 
         <!--Menu Button-->
         <button class="fullnav-close link" type="button">
@@ -69,43 +57,37 @@
             <div class="shape-left">
                 <nav class="navbar full-menu-navigation left">
                     <ul class="list-unstyled">
-                        <li><a class="link scroll" href="#home">
+                        <li><a href="../index-agency.html#home" class="link unclickable">
                             <span class="anchor-circle"></span>
-                            <span class="anchor-text">Home</span>
+                            <span class="anchor-text">About Us</span>
                         </a></li>
-                        <li><a class="link scroll" href="#about-us">
+                        <div class="list-unstyled">
+                            <li><a href="../index-agency.html#about-us" class="link sub-option">
+                                <span class="anchor-circle"></span>
+                                <span class="anchor-text">Our Founder & CEO</span>
+                            </a></li>
+                            <li><a href="../index-agency.html#portfolio" class="link sub-option">
+                                <span class="anchor-circle"></span>
+                                <span class="anchor-text">Testimonials</span>
+                            </a></li> 
+                        </div>
+                        <li><a href="../index-agency.html#clients" class="link">
                             <span class="anchor-circle"></span>
-                            <span class="anchor-text">About</span>
-                        </a></li>
-                        <li><a class="link scroll" href="#portfolio">
-                            <span class="anchor-circle"></span>
-                            <span class="anchor-text">Work</span>
-                        </a></li>
-                        <li><a class="link scroll" href="#clients">
-                            <span class="anchor-circle"></span>
-                            <span class="anchor-text">Clients</span>
-                        </a></li>
-                        <li><a class="link scroll" href="#blog">
-                            <span class="anchor-circle"></span>
-                            <span class="anchor-text">Blog</span>
-                        </a></li>
-                        <li><a class="link scroll" href="#contact">
-                            <span class="anchor-circle"></span>
-                            <span class="anchor-text">Contact</span>
+                            <span class="anchor-text">Additional Resources</span>
                         </a></li>
                     </ul>
                     <span class="full-menu-dot" style="transform: scale(0);"></span>
                 </nav>
-                <img alt="shape" src="agency/img/shape-8.png">
+                <img src="{{ asset('frontend/assets/agency/img/shape-8.png') }}" alt="shape">
             </div>
             <div class="shape-right">
                 <div class="full-menu-detail hide-cursor">
-                    <h6 class="title">Press Contact</h6>
-                    <p><i class="fas fa-user-alt"></i>David Warrior</p>
-                    <p><i class="fas fa-mobile-alt"></i>+97 53 49 24 78 36</p>
-                    <p><i class="fas fa-envelope"></i>contact@megaone.com</p>
+                    <img src="{{ asset('frontend/assets/agency/img/default-profile-pic.png') }}" class="profile-pic" />
+                    <h6 class="title">Guest</h6>
+                    <p><a href="#">Log In</a></p>
+                    <p><a href="#">Sign Up</a></p>
                 </div>
-                <img alt="shape" src="agency/img/shape-7.png">
+                <img src="{{ asset('frontend/assets/agency/img/shape-7.png') }}" alt="shape">
             </div>
         </div>
     </div>
