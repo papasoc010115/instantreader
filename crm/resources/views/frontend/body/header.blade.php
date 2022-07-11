@@ -13,8 +13,22 @@
             <div class="collapse navbar-collapse" id="agency">
                 <div class="navbar-nav ml-auto">
                     <a class="nav-link link scroll active" href="#home">Home</a>
-                    <a class="nav-link link scroll" href="#about-us">Learn</a>
-                    <a class="nav-link link scroll" href="#contact">Contact Us</a>
+                    <div class="nav-link link scroll menu-dropdown">
+                        <a class="unclickable">Learn More</a>
+                        <div class="menu-dropdown-content">
+                            <a href="#">Online Reading Assessment</a>
+                            <a href="#">Instant Reader Kids Club</a>
+                            <a href="#">FAQs</a>
+                            <a href="#">Reading Program Overview</a>
+                        </div>
+                    </div>
+                    <div class="nav-link link scroll menu-dropdown">
+                        <a class="unclickable">Contact Us</a>
+                        <div class="menu-dropdown-content">
+                            <a href="#">Book a FREE Consultation</a>
+                            <a href="#">Start a Career with Us</a>
+                        </div>
+                    </div>          
                     <span class="menu-line"><i aria-hidden="true" class="fa fa-angle-down"></i></span>
                 </div>
             </div>
@@ -43,16 +57,16 @@
             <div class="shape-left">
                 <nav class="navbar full-menu-navigation left">
                     <ul class="list-unstyled">
-                        <li><a href="../index-agency.html#home" class="link">
+                        <li><a href="../index-agency.html#home" class="link unclickable">
                             <span class="anchor-circle"></span>
                             <span class="anchor-text">About Us</span>
                         </a></li>
-                        <div>
-                            <li><a href="../index-agency.html#about-us" class="link">
+                        <div class="list-unstyled">
+                            <li><a href="../index-agency.html#about-us" class="link sub-option">
                                 <span class="anchor-circle"></span>
                                 <span class="anchor-text">Our Founder & CEO</span>
                             </a></li>
-                            <li><a href="../index-agency.html#portfolio" class="link">
+                            <li><a href="../index-agency.html#portfolio" class="link sub-option">
                                 <span class="anchor-circle"></span>
                                 <span class="anchor-text">Testimonials</span>
                             </a></li> 
@@ -70,8 +84,8 @@
                 <div class="full-menu-detail hide-cursor">
                     <img src="{{ asset('frontend/assets/agency/img/default-profile-pic.png') }}" class="profile-pic" />
                     <h6 class="title">Guest</h6>
-                    <p>Log In</p>
-                    <p>Sign Up</p>
+                    <p><a href="#">Log In</a></p>
+                    <p><a href="#">Sign Up</a></p>
                 </div>
                 <img src="{{ asset('frontend/assets/agency/img/shape-7.png') }}" alt="shape">
             </div>
