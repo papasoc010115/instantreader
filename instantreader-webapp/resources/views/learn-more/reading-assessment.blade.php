@@ -63,7 +63,7 @@
     "
     background-color: #562FB7;
     margin-top: 3em;
-    padding: 1em
+    padding: 2em 1em
     "
 >
     <div class="container">
