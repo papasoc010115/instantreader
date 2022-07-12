@@ -40,7 +40,7 @@
     <!--Navigation-->
     <nav class="navbar navbar-top-default navbar-expand-lg navbar-gradient nav-icon alt-font">
         <div class="container">
-            <a class="logo link scroll" href="javascript:void(0)" title="Logo">
+            <a class="logo link scroll" href="/" title="Logo">
                 <!--Logo Default-->
                 <img alt="logo" class="logo-dark default" src="{{ asset('marketing-site/assets/img/ir-logo.png') }}">
             </a>
@@ -49,21 +49,21 @@
             <!--Nav Links-->
             <div class="collapse navbar-collapse" id="agency">
                 <div class="navbar-nav ml-auto">
-                    <a class="nav-link link scroll active" href="#home">Home</a>
+                    <a class="nav-link link scroll active" href="/" id="nav-home">Home</a>
                     <div class="nav-link link scroll menu-dropdown">
                         <a class="unclickable">Learn More</a>
                         <div class="menu-dropdown-content">
-                            <a href="#">Online Reading Assessment</a>
-                            <a href="#">Instant Reader Kids Club</a>
-                            <a href="#">FAQs</a>
-                            <a href="#">Reading Program Overview</a>
+                            <a href="#" id="nav-readassess">Online Reading Assessment</a>
+                            <a href="#" id="nav-kidsclub">Instant Reader Kids Club</a>
+                            <a href="#" id="nav-faq">FAQs</a>
+                            <a href="#" id="nav-readingprogram">Reading Program Overview</a>
                         </div>
                     </div>
                     <div class="nav-link link scroll menu-dropdown">
                         <a class="unclickable">Contact Us</a>
                         <div class="menu-dropdown-content">
-                            <a href="#">Book a FREE Consultation</a>
-                            <a href="#">Start a Career with Us</a>
+                            <a href="#" id="nav-bookconsultation">Book a FREE Consultation</a>
+                            <a href="#" id="nav-application">Start a Career with Us</a>
                         </div>
                     </div>          
                     <span class="menu-line"><i aria-hidden="true" class="fa fa-angle-down"></i></span>
@@ -282,6 +282,7 @@
 <script src="{{ asset('marketing-site/assets/vendor/js/extensions/revolution.extension.parallax.min.js') }}"></script>
 <script src="{{ asset('marketing-site/assets/vendor/js/extensions/revolution.extension.slideanims.min.js') }}"></script>
 <script src="{{ asset('marketing-site/assets/vendor/js/extensions/revolution.extension.video.min.js') }}"></script>
+
 <!-- google map -->
 <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJRG4KqGVNvAPY4UcVDLcLNXMXk2ktNfY"></script> -->
 <script src="{{ asset('marketing-site/assets/agency/js/map.js') }}"></script>
