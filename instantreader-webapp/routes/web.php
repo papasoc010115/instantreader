@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('home');
 });
+
+Route::get('/learn-more/reading-assessment', function () {
+    return view('learn-more.reading-assessment');
+})->name('learn-more.reading-assessment');
