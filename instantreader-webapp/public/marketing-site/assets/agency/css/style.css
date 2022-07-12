@@ -309,12 +309,17 @@ header a.logo img {max-width: 50%;}
     height: 90px;
     width: 100%;
     padding: 0;
-    margin-top: 20px;
+    /* margin-top: 20px; */
     -webkit-transition: all .1s ease;
     -moz-transition: all .1s ease;
     -ms-transition: all .1s ease;
     -o-transition: all .1s ease;
     transition: all .1s ease;
+    background: #3264f5;
+    background: -moz-linear-gradient(left, #7004bc 2%, #3264f5 82%);
+    background: -webkit-linear-gradient(left, #7004bc 2%, #3264f5 82%);
+    background: linear-gradient(to right, #7004bc 2%, #3264f5 82%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3264f5', endColorstr='#7004bc',GradientType=1 );
 }
 
 
