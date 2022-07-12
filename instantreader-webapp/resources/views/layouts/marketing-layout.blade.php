@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Page Title -->
-    <title>ReadRIGHT</title>
+    <title>Instant Reader</title>
     <!-- Favicon -->
     <link rel="icon" href="{{ asset('favicon.ico') }}">
     <!-- Icons -->
@@ -55,10 +55,10 @@
                     <div class="nav-link link scroll menu-dropdown">
                         <a class="unclickable">Learn More</a>
                         <div class="menu-dropdown-content">
-                            <a href="#" id="nav-readassess">Online Reading Assessment</a>
-                            <a href="#" id="nav-kidsclub">Instant Reader Kids Club</a>
-                            <a href="#" id="nav-faq">FAQs</a>
-                            <a href="#" id="nav-readingprogram">Reading Program Overview</a>
+                            <a href="#" id="nav-readingprogram">Reading Programs</a>
+                            <a href="#" id="nav-readassess">Reading Assessment</a>
+                            <a href="#" id="nav-kidsclub">Kids Club</a>
+                            <a href="#" id="nav-faq">FAQs</a>                            
                         </div>
                     </div>
                     <div class="nav-link link scroll menu-dropdown">
