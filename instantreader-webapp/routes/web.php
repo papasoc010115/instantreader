@@ -20,3 +20,7 @@ Route::get('/', function () {
 Route::get('/learn-more/reading-assessment', function () {
     return view('learn-more.reading-assessment');
 })->name('learn-more.reading-assessment');
+
+Route::get('/learn-more/reading-programs', function () {
+    return view('learn-more.program-overview');
+})->name('learn-more.program-overview');
