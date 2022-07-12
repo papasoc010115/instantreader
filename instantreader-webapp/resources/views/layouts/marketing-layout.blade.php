@@ -10,7 +10,7 @@
     <!-- Favicon -->
     <link rel="icon" href="{{ asset('favicon.ico') }}">
     <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.css">
     <!-- Bundle -->
     <link rel="stylesheet" href="{{ asset('marketing-site/assets/vendor/css/bundle.min.css') }}">
     <link rel="stylesheet" href="{{ asset('marketing-site/assets/vendor/css/revolution-settings.min.css') }}">
@@ -104,7 +104,7 @@
         </button>
 
         <div class="container">
-            <div class="shape-left">
+            <div class="shape-left" id="shape-left">
                 <nav class="navbar full-menu-navigation left">
                     <ul class="list-unstyled">
                         <li><a href="../index-agency.html#home" class="link unclickable">
@@ -130,7 +130,7 @@
                 </nav>
                 <img src="{{ asset('marketing-site/assets/agency/img/shape-8.png') }}" alt="shape">
             </div>
-            <div class="shape-right">
+            <div class="shape-right" id="shape-right">
                 <div class="full-menu-detail hide-cursor">
                     <img src="{{ asset('marketing-site/assets/agency/img/default-profile-pic.png') }}" class="profile-pic" />
                     <h6 class="title">Guest</h6>

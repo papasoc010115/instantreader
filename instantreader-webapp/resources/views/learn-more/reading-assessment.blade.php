@@ -14,7 +14,7 @@
         <ul class="page-breadcrumb link">
             <li>
                 <a href="javascript:void(0)" id="scroll-to-form">
-                    <i class="icon fa-solid fa-brain"></i> Book Now <i class="fa-solid fa-angles-down" style="font-size:0.8em"></i>
+                    <i class="icon fas fa-brain"></i> Book Now <i class="fas fa-angle-double-down" style="font-size:0.8em"></i>
                 </a>
             </li>
         </ul>
@@ -35,7 +35,7 @@
                         Egestas sed tempus urna et pharetra pharetra massa massa ultricies. Donec ac odio tempor orci dapibus ultrices in iaculis nunc. 
                                             
                     </p>
-                    <a class="btn btn-large btn-rounded btn-pink btn-hvr-blue mt-3" href="#">                    
+                    <a class="btn btn-large btn-rounded btn-pink btn-hvr-blue mt-3" href="{{route('learn-more.program-overview')}}">                    
                         Learn More
                         <div class="btn-hvr-setting">
                             <ul class="btn-hvr-setting-inner">
