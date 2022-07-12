@@ -1,7 +1,18 @@
 @extends('layouts.marketing-layout')
 
 @section('content')
-<!--PAGE CONTENT START--><!-- Banner -->
+<!--PAGE CONTENT START-->
+
+<!-- Style -->
+<style>
+    #book-reading-assessment-form{
+        background-color: #562FB7;
+        margin-top: 3em;
+        padding: 2em 1em
+    }
+</style>
+
+<!-- Banner -->
 <section class="page-title cursor-light">
     <!-- Pattern Layers -->
     <div class="pattern-layers">
@@ -14,7 +25,7 @@
         <ul class="page-breadcrumb link">
             <li>
                 <a href="javascript:void(0)" id="scroll-to-form">
-                    <i class="icon fas fa-brain"></i> Book Now <i class="fas fa-angle-double-down" style="font-size:0.8em"></i>
+                    <i class="icon fab fa-leanpub"></i> Book Now <i class="fas fa-angle-double-down" style="font-size:0.8em"></i>
                 </a>
             </li>
         </ul>
@@ -59,13 +70,7 @@
 <!--About the assessment End-->
 
 <!-- Booking Form -->
-<section id="book-reading-assessment-form" style=
-    "
-    background-color: #562FB7;
-    margin-top: 3em;
-    padding: 2em 1em
-    "
->
+<section id="book-reading-assessment-form">
     <div class="container">
         <h2 style="color: white; margin-bottom: 1em">
             Booking Form
