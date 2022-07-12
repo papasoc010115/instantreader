@@ -49,8 +49,9 @@
         <h2 class="hide-cursor">Instant Reader Programs</h2>
         <ul class="page-breadcrumb link">
             <li>
-                <i>Your child can read in 20 days</i>
-                
+                <a href="{{ route('learn-more.reading-assessment') }}" class="card-btn btn btn-large btn-rounded btn-pink btn-hvr-blue mt-3">
+                    Join the program                    
+                </a>
             </li>
         </ul>
     </div>
