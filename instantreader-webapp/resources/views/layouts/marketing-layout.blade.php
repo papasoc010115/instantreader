@@ -151,6 +151,7 @@
         </div>
         <!--Contact Form-->
         <form class="contact-form">
+            @csrf
             <div class="row">
                 <!--Result-->
                 <div class="col-12" id="quote_result"></div>
