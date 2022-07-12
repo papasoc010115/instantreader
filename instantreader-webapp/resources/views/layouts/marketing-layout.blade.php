@@ -31,9 +31,9 @@
 </div>
 
 <!-- Ink Transition -->
-<div class="cd-transition-layer visible opening">
+<!-- <div class="cd-transition-layer visible opening">
     <div class="bg-layer"></div>
-</div>
+</div> -->
 <!--/Preloader -->
 
 <!--Header Start-->
