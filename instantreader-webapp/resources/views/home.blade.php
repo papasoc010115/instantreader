@@ -2,6 +2,22 @@
 
 @section('content')
 <!--PAGE CONTENT START-->
+<!--Banner Start-->
+<section class="page-title cursor-light">
+    <!-- Pattern Layers -->
+    <div class="pattern-layers">
+        <div class="layer-one"></div>
+        <div class="layer-two"></div>
+    </div>
+    <div class="auto-container">
+        <h2 class="hide-cursor">Latest News</h2>
+        <ul class="page-breadcrumb link">
+            <li><a href="javascript:void(0);"><span class="icon fas fa-home"></span> home</a></li>
+            <li>Latest News</li>
+        </ul>
+    </div>
+</section>
+<!--Banner End-->
 <!--Slider Start-->
 <section class="p-0 no-transition cursor-light" id="home">
     <h2 class="d-none">hidden</h2>
