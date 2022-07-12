@@ -241,7 +241,7 @@
             </div>
             <!--Text-->
             <div class="col-md-6 text-md-right">
-                <p class="company-about fadeIn">© 2020 MegaOne. Made With Love By <a href="javascript:void(0);">Themesindustry</a></p>
+                <p class="company-about fadeIn">© 2022 ReadRIGHT Inc. Made with love by <a href="javascript:void(0);">UPLB Interns</a></p>
             </div>
         </div>
     </div>
