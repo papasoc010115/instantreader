@@ -22,7 +22,7 @@
 </section>
 
 <!-- About the assessment -->
-<section class="pb-0" id="about-us">
+<section class="pb-0" id="about-reading-assessment">
     <div class="container">
         <div class="row">
             <div class="col-lg-6 wow fadeInLeft">
