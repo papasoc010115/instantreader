@@ -14,7 +14,7 @@ $(window).on("load", function () {
             .queue(function () {
                 $(this).removeClass("visible closing opening").dequeue();
             });
-    }, 400);
+    }, 200);
 });
 
 jQuery(function ($) {
