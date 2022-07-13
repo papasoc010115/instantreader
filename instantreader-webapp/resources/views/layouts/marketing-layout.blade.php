@@ -204,8 +204,8 @@
                 <div class="full-menu-detail hide-cursor">
                     <img src="{{ asset('marketing-site/assets/agency/img/default-profile-pic.png') }}" class="profile-pic" />
                     <h6 class="title">Guest</h6>
-                    <p><a href="#">Log In</a></p>
-                    <p><a href="#">Sign Up</a></p>
+                    <p><a href="{{ route('account.log-in') }}">Log In</a></p>
+                    <p><a href="{{ route('account.sign-up') }}">Sign Up</a></p>
                 </div>
                 <img src="{{ asset('marketing-site/assets/agency/img/shape-7.png') }}" alt="shape">
             </div>

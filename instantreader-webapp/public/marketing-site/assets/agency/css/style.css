@@ -3607,3 +3607,12 @@ input.inputerror, textarea.inputerror, select.inputerror {
         background-position: -10000px 0;
     }
 }
+
+.account-form{
+    margin: auto;
+    max-width: 1000px;
+}
+
+.center-button{
+    text-align: center;
+}
