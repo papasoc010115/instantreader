@@ -26,17 +26,17 @@
 
         <div class="row align-items-top">
 
-            <div class="col-lg-5 order-lg-2 wow fadeInRight">
+            <div class="col-lg-5 order-lg-2 wow">
                 <div class="contact-detail">
                     <div class="contact-dots" data-dots=""></div>
                     <!--Heading-->
-                    <div class="heading-area pb-5">
+                    <div class="heading-area pb-5 justify-content-center">
                         <h2 class="title mt-0 pb-1">Lorem Ipsum</h2>
-                        <p class="para">There are many variations of passages of Lorem Ipsum available, but the majority
+                        <p class="para" style="text-align:justify">There are many variations of passages of Lorem Ipsum available, but the majority
                             have suffered .</p>
                     </div>
 
-                    <div class="col-lg-10 wow fadeInRight">
+                    <div class="col-lg-12 wow">
                         <div class="half-img mt-4 pt-1 mt-lg-0 pt-lg-0">
                             <img alt="vector" src="{{ asset('marketing-site/assets/img/tutor-application.jpg') }}">
                         </div>
@@ -44,7 +44,7 @@
                 </div>
             </div>
 
-            <div class="col-lg-7 mt-4 pt-3 mt-lg-0 pt-lg-0 wow fadeInLeft">
+            <div class="col-lg-7 mt-4 pt-3 mt-lg-0 pt-lg-0 wow">
                 <!--Heading-->
                 <div class="heading-area pb-2">
                     <h2 class="title mt-0">Application Form</h2>
@@ -84,9 +84,9 @@
                         </div>
 
                         <div class="col-md-6">
-                            <select list="statuses" class="form-control" style="font-size: 80%"></input>
-                                <option value="full-time" selected style="font-size: 80%">Full-Time</option>
-                                <option value="part-time" style="font-size: 80%">Part-Time</option>
+                            <select list="statuses" class="form-control" style="font-size: 85%"></input>
+                                <option value="full-time" selected>Full-Time</option>
+                                <option value="part-time">Part-Time</option>
                             </select>
                         </div>
 
