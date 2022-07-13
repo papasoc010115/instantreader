@@ -58,7 +58,7 @@
                             <a href="{{ route('learn-more.program-overview') }}" id="nav-readingprogram">Reading Programs</a>
                             <a href="{{ route('learn-more.reading-assessment') }}" id="nav-readassess">Reading Assessment</a>
                             <a href="javascript:void(0)" id="nav-kidsclub">Kids Club</a>
-                            <a href="javascript:void(0)" id="nav-faq">FAQs</a>                            
+                            <a href="{{ route('learn-more.faq') }}" id="nav-faq">FAQs</a>                            
                         </div>
                     </div>
                     <div class="nav-link link menu-dropdown">
