@@ -64,8 +64,8 @@
                     <div class="nav-link link menu-dropdown">
                         <a class="unclickable">Contact Us</a>
                         <div class="menu-dropdown-content">
-                            <a href="javascript:void(0)" id="nav-bookconsultation">Book a FREE Consultation</a>
-                            <a href="javascript:void(0)" id="nav-application">Start a Career with Us</a>
+                            <a href="{{ route('contact-us.book-consultation') }}" id="nav-bookconsultation">Book a FREE Consultation</a>
+                            <a href="{{ route('contact-us.application') }}" id="nav-application">Start a Career with Us</a>
                         </div>
                     </div>          
                     <span class="menu-line"><i aria-hidden="true" class="fa fa-angle-down"></i></span>
@@ -107,21 +107,21 @@
             <div class="shape-left" id="shape-left">
                 <nav class="navbar full-menu-navigation left">
                     <ul class="list-unstyled">
-                        <li><a href="../index-agency.html#home" class="link unclickable">
+                        <li><a href="#" class="link unclickable">
                             <span class="anchor-circle"></span>
                             <span class="anchor-text">About Us</span>
                         </a></li>
                         <div class="list-unstyled">
-                            <li><a href="../index-agency.html#about-us" class="link sub-option">
+                            <li><a href="{{ route('about-us.founder') }}" class="link sub-option">
                                 <span class="anchor-circle"></span>
-                                <span class="anchor-text">Our Founder & CEO</span>
+                                <span class="anchor-text">Our Founder & Developer</span>
                             </a></li>
-                            <li><a href="../index-agency.html#portfolio" class="link sub-option">
+                            <li><a href="{{ route('about-us.founder') }}" class="link sub-option">
                                 <span class="anchor-circle"></span>
                                 <span class="anchor-text">Testimonials</span>
                             </a></li> 
                         </div>
-                        <li><a href="../index-agency.html#clients" class="link">
+                        <li><a href="{{ route('additional-resources') }}" class="link">
                             <span class="anchor-circle"></span>
                             <span class="anchor-text">Additional Resources</span>
                         </a></li>

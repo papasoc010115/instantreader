@@ -28,3 +28,23 @@ Route::get('/learn-more/reading-programs', function () {
 Route::get('/learn-more/faq', function () {
     return view('learn-more.faq');
 })->name('learn-more.faq');
+
+Route::get('/about-us/founder-and-developer', function () {
+    return view('about-us.founder');
+})->name('about-us.founder');
+
+Route::get('/about-us/testimonials', function () {
+    return view('about-us.testimonials');
+})->name('about-us.testimonials');
+
+Route::get('/contact-us/book-consultation', function () {
+    return view('contact-us.book-consultation');
+})->name('contact-us.book-consultation');
+
+Route::get('/contact-us/application', function () {
+    return view('contact-us.application');
+})->name('contact-us.application');
+
+Route::get('/additional-resources', function () {
+    return view('additional-resources');
+})->name('additional-resources');
