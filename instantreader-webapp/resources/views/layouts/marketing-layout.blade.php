@@ -64,8 +64,8 @@
                     <div class="nav-link link menu-dropdown">
                         <a class="unclickable">Contact Us</a>
                         <div class="menu-dropdown-content">
-                            <a href="{{ route('contact-us.book-consultation') }}" id="nav-bookconsultation">Book a FREE Consultation</a>
-                            <a href="{{ route('contact-us.application') }}" id="nav-application">Start a Career with Us</a>
+                            <a href="{{ route('contact-us.book-consultation') }}" id="nav-bookconsultation">Free Consultation</a>
+                            <a href="{{ route('contact-us.application') }}" id="nav-application">Careers</a>
                         </div>
                     </div>          
                     <span class="menu-line"><i aria-hidden="true" class="fa fa-angle-down"></i></span>
