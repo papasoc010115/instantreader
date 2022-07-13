@@ -50,7 +50,7 @@
 
         <div class="row align-items-top">
 
-            <div class="col-lg-12 mt-4 pt-3 mt-lg-0 pt-lg-0 wow fadeInLeft">
+            <div class="col-lg-12 mt-4 pt-3 mt-lg-0 pt-lg-0 wow">
                 <!--Heading-->
                 <div class="heading-area pb-2">
                     <h2 class="title mt-0">Booking Form</h2>
