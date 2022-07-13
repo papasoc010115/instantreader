@@ -19,74 +19,96 @@
 </section>
 <!--Banner End-->
 
-<!--Blog Start-->
+<!--Main Testimonials Start-->
 <section class="bg-light" id="blog">
     <div class="container">
-        <!--Row-->
-        <div class="row">
+         <!--Row of Heading-->
+         <div class="row">
             <div class="col-md-12 text-center">
-                <div class="heading-area mx-570 mb-lg-4 mb-3">
+                <div class="heading-area mx-570 mb-lg-4 mb-3 pb-2">
                     <span class="title">Join our growing family. </br>We have taught </span>
                     <h2 class="title"><span class="alt-color">999,999</span> </h2>
                     <span class="title">readers worldwide</span>
                 </div>
             </div>
         </div>
-        <!--Row-->
-        <div class="row wow fadeInUp">
-            <!--News Item-->
-            <div class="col-lg-4">
-                <div class="news-item">
-                    <div class="news-text-box text-center">
-                        <a class="author d-flex text-center">
-                            <img alt="image" class="bg-blue" src="{{ asset('marketing-site/assets/agency/img/avatar-1.png') }}">
-                            <h5>Hena Sword</h5>
-                        </a>
-                        <p class="para">There are many variations of passages of <span class="alt-color">Lorem Ipsum available</span>, but the majority
-                        have suffered alteration in some form, by injected humour, or randomised words which don't look
-                        even slightly believable. If you are going to use a passage of Lorem Ipsum.</p>
-                        
-                        <span class="date main-color">Mother of XXX</span>
+
+        <!-- Row of Testimonials -->
+        <div class="row text-center">
+            <div class="col-lg-4 d-flex align-items-stretch">
+                <div class="card">
+                    <div class="card-body">
+                        <img src="{{ asset('marketing-site/assets/agency/img/avatar-1.png') }}" class="rounded-circle shadow-1-strong" width="30%" height="30%" />
+                        <h5 class="card-title pt-3">Card title</h5>
+                        <p class="card-text">"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even <span class="alt-color">slightly believable</span>. If you are going to use a passage of Lorem Ipsum."</p>
+                    </div>
+                    <div class="card-footer gradient-bg1">
+                        <span class="text-white">Father of Xxx</span>
                     </div>
                 </div>
             </div>
-            <!--News Item-->
-            <div class="col-lg-4">
-                <div class="news-item">
-                    <div class="news-text-box text-center">
-                        <a class="author d-flex text-center">
-                            <img alt="image" class="bg-purple" src="{{ asset('marketing-site/assets/agency/img/avatar-1.png') }}">
-                            <h5>David Villas</h5>
-                        </a>
-                        <p class="para">There are many variations of passages of Lorem Ipsum available, but the majority
-                        have suffered alteration in some form, by injected humour, or <span class="alt-color">randomised words which don't look
-                        even slightly believable</span>. If you are going to use a passage of Lorem Ipsum.</p>
-                        <span class="date main-color">Guardian of XXXXX</span>
+            <div class="col-lg-4 d-flex align-items-stretch">
+                <div class="card">
+                    <div class="card-body">
+                        <img src="{{ asset('marketing-site/assets/agency/img/avatar-1.png') }}" class="rounded-circle shadow-1-strong" width="30%" height="30%" />
+                        <h5 class="card-title pt-3">Card title</h5>
+                        <p class="card-text">"There are many variations of passages of <span class="alt-color">Lorem Ipsum available</span>, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum."</p>
+                    </div>
+                    <div class="card-footer gradient-bg1">
+                        <span class="text-white">Guardian of Xxxxxx</span>
                     </div>
                 </div>
             </div>
-            <!--News Item-->
-            <div class="col-lg-4">
-                <div class="news-item">
-                    <div class="news-text-box text-center">
-                    <a class="author d-flex text-center">
-                            <img alt="image" class="bg-blue" src="{{ asset('marketing-site/assets/agency/img/avatar-1.png') }}">
-                            <h5>John Walker</h5>
-                        </a>
-                        <p class="para">There are many variations of passages of Lorem Ipsum available, but <span class="alt-color">the majority
-                        have suffered alteration in some form</span>, by injected humour, or randomised words which don't look
-                        even slightly believable. If you are going to use a passage of Lorem Ipsum.</p>
-                        <span class="date main-color">Father of XXXX</span>
+            <div class="col-lg-4 d-flex align-items-stretch">
+                <div class="card">
+                    <div class="card-body">
+                        <img src="{{ asset('marketing-site/assets/agency/img/avatar-1.png') }}" class="rounded-circle shadow-1-strong" width="30%" height="30%" />
+                        <h5 class="card-title pt-3">Card title</h5>
+                        <p class="card-text">"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or <span class="alt-color">randomised words</span> which don't look even slightly believable."</p>
+                    </div>
+                    <div class="card-footer gradient-bg1">
+                        <span class="text-white">Mother of Xxxx</span>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</section>
-<!--Blog End-->
 
-<!--Testimonial Start-->
-<section class="gradient-bg2 text-center" id="clients">
+</section>
+<!--Main Testimonials End-->
+
+<section>
+    <div class="container">
+        <div class="row justify-content-center">
+            <h2 class="title main-color">Testimonial Videos</h2>
+            <p class="para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tincidunt
+            egestas nunc, at pellentesque arcu sollicitudin et. Aliquam hendrerit diam quis ipsum
+            ultricies, quis ultricies arcu suscipit. Lorem ipsum dolor sit amet, consectetur adipiscing
+            elit. Fusce ut diam quis nulla faucibus venenatis. </p>
+        </div>
+
+        <div class="card-deck pt-5">
+            <div class="card">
+                <video id="player1" style="max-width: 100%" preload="none" controls poster="{{ asset('marketing-site/assets/agency/img/blog-news-1.jpg')}}" playsinline>
+                    <source src="{{ asset('marketing-site/assets/agency/img/video.mp4') }}" type="video/mp4">
+                </video>
+            </div>
+            <div class="card">
+                <video id="player1" style="max-width: 100%" preload="none" controls poster="{{ asset('marketing-site/assets/agency/img/blog-news-1.jpg')}}" playsinline>
+                    <source src="{{ asset('marketing-site/assets/agency/img/video.mp4') }}" type="video/mp4">
+                </video>
+            </div>
+            <div class="card">
+                <video id="player1" style="max-width: 100%" preload="none" controls poster="{{ asset('marketing-site/assets/agency/img/blog-news-1.jpg')}}" playsinline>
+                    <source src="{{ asset('marketing-site/assets/agency/img/video.mp4') }}" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--Other Testimonial Start-->
+<section class="gradient-bg1 text-center" id="clients">
     <div class="container">
         
         <!--Row-->
@@ -250,6 +272,6 @@
         </div>
     </div>
 </section>
-<!--Testimonial End-->
+<!--Other Testimonial End-->
 
 @endsection

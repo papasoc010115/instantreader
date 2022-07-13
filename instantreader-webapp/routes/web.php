@@ -52,3 +52,11 @@ Route::get('/contact-us/application', function () {
 Route::get('/additional-resources', function () {
     return view('additional-resources');
 })->name('additional-resources');
+
+Route::get('/log-in', function () {
+    return view('account.log-in');
+})->name('account.log-in');
+
+Route::get('/sign-up', function () {
+    return view('account.sign-up');
+})->name('account.sign-up');

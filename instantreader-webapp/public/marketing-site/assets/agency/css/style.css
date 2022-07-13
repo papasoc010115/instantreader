@@ -99,6 +99,7 @@ blockquote > cite {font-weight: 400;font-size: 14px;display: block;}
 .btn.btn-small {font-size:12px; padding: 4px 1.8em;}
 .btn.btn-medium {font-size:12px; padding: 6px 1.8em;}
 .btn.btn-large {font-size:14px; padding: 9px 34px; line-height: 1.8em;}
+.btn.btn-xlarge {font-size:20px; padding: 9px 34px; line-height: 4.0em;}
 .btn.btn-rounded {border-radius: 50px;}
 
 .btn.btn-slider {font-size:14px !important; padding: 9px 34px !important; line-height: 1.8em !important;}
@@ -864,8 +865,9 @@ header .nav-holder.active .shape-right {
 .nav-holder.style-2 .full-menu-navigation{
     position: absolute;
     height: auto;
-    right: 220px;
-    top: 350px;
+    /* this is where the menu details are positioned */
+    right: 150px;   /* how many pixels FROM THE RIGHT */
+    top: 200px;     /* how many pixels FROM THE TOP */
     opacity: 0;
     -webkit-transition: all .3s ease-in-out;
     -moz-transition: all .3s ease-in-out;
@@ -925,7 +927,7 @@ header .nav-holder.active .shape-right {
     display: block;
     margin: 0;
     padding: 15px 30px 15px 0;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 300;
     position: relative;
     text-decoration: none;
@@ -939,6 +941,63 @@ header .nav-holder.active .shape-right {
     line-height: 1.15;
     -webkit-tap-highlight-color: transparent;
     transition: all .3s;
+}
+
+.full-menu-main{
+    margin-left: 30px;
+    font-size: 25px;
+    font-weight: 300;
+}
+
+.full-menu-multiple-title{
+    color: inherit;
+    display: flexbox;
+    margin: 0;
+    padding: 15px 30px 15px 0;
+    position: relative;
+    text-decoration: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    outline: none!important;
+    overflow: hidden;
+    letter-spacing: 1px;
+    line-height: 1.15;
+    -webkit-tap-highlight-color: transparent;
+    transition: all .3s;
+    text-align: left;
+}
+
+.full-menu-multiple-option:hover .anchor-circle{
+    background-color: #fff;
+}
+
+.full-menu-multiple-option:before{
+    content: "";
+    width: 1px;
+    height: 46.5%;
+    position: absolute;
+    background-color: #FFFFFF;
+    opacity: 1;
+    left: auto;
+    right: 5px;
+}
+
+.full-menu-multiple-option:before{
+    left: 5px;
+    right: auto;
+}
+
+.line-multiple-options > a:before{
+    content: "";
+    width: 1px;
+    height: 50%;
+    position: absolute;
+    background-color: #FFFFFF;
+    opacity: 1;
+    left: 5px;
+    right: 5px;
 }
 
 .nav-holder .full-menu-navigation .anchor-circle {
@@ -980,7 +1039,7 @@ span.anchor-circle{
     height: 50%;
     position: absolute;
     background-color: #FFFFFF;
-    opacity: .5;
+    opacity: 1;
     left: auto;
     right: 5px;
 }
@@ -1324,8 +1383,17 @@ span.anchor-circle{
     position: relative;
 }
 
-.team-item .designation{
+.team-item > *{
     position: relative;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+.team-item:hover .about-people{
+    transform: translateY(5px);
     -webkit-transition: all .3s ease-in-out;
     -moz-transition: all .3s ease-in-out;
     -ms-transition: all .3s ease-in-out;
@@ -3392,7 +3460,7 @@ input.inputerror, textarea.inputerror, select.inputerror {
     Additional Stylings
    ====================================== */
 
-    /* NOTE: additional changes for .navbar-top-default, property "overflow: hidden" was commented out  -ecdcabalda */
+/* NOTE: additional changes for .navbar-top-default, property "overflow: hidden" was commented out  -ecdcabalda */
 
 .profile-pic{
     margin-top: 10px;
@@ -3409,17 +3477,21 @@ input.inputerror, textarea.inputerror, select.inputerror {
     cursor: default;
 }
 
-.sub-option > .anchor-text{
+.sub-option{
+    margin-left: 60px;
+}
+
+.sub-option > a{
+    display: inline-block;
+    text-align: left;
     padding-left: 10px;
-    padding-right: 10px;
+    width: 100%;
+    height: 100%;
 }
 
-.sub-option:hover > .anchor-circle{
+.sub-option:hover{
     background-color: #FFFFFF;
-}
-
-.sub-option:hover > .anchor-text{
-    background-color: #FFFFFF;
+    color: #00bcd4;;
 }
 
 .menu-dropdown{
@@ -3430,7 +3502,7 @@ input.inputerror, textarea.inputerror, select.inputerror {
 .menu-dropdown-content{
     display: none;
     position: absolute;
-    background-color: #f1f1f1;
+    background-color: #fff;
     min-width: 200px;
     z-index: 1;
 }
@@ -3449,4 +3521,156 @@ input.inputerror, textarea.inputerror, select.inputerror {
 
 .menu-dropdown-content a:hover {
     color: #00bcd4;
+}
+
+.live-parent-margin{
+    margin-bottom: 100px;
+}
+
+.person-margin{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.about-people{
+    text-align: justify;
+}
+
+.about-people-container{
+    display: flexbox;
+    justify-content: center;
+}
+
+.mapouter{
+    position: relative;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.gmap-canvas {
+    margin: auto;
+    background: none !important;
+    height: 800px;
+    width: 90%;
+}
+
+.area-juris-desc {
+    text-align: center;
+    margin: 20px;
+}
+
+.area-juris-book{
+    justify-content: center;
+}
+
+.scrolling-img-container{
+    overflow: hidden;
+}
+
+.scrolling-img{
+    background: url("../../img/ir-logo.png") repeat-x;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-repeat: repeat;
+    background-position: 0 0;
+    background-size: auto 100%;
+    animation: slide 100s linear infinite;
+}
+
+.ir-kids-avatar{
+    height: 700px;
+}
+
+.overlay-text{
+    text-align: center;
+    height: 100%;
+    background-color: rgba(35, 122, 254, .7);
+}
+
+.overlay-text > *{
+    margin-top: 90px;
+    margin-bottom: 90px;
+}
+
+.test > * {
+    vertical-align: middle;
+}
+
+@keyframes slide {
+    from {
+        background-position: 0 0;
+      }
+    to {
+        background-position: -10000px 0;
+    }
+}
+
+.account-form{
+    margin: auto;
+    max-width: 1000px;
+}
+
+.center-button{
+    text-align: center;
+}
+
+.full-menu-multiple-title{
+    margin: 0;
+    padding: 15px 30px 15px 0;
+    font-size: 25px;
+    font-weight: 300;
+    text-rendering: optimizeLegibility;
+    word-wrap: break-word;
+    position: relative;
+    color: #fff;
+}
+
+.sidebar-anchor-circle{
+    content: "";
+    position: absolute;
+    top: 50%;
+    border: 1px solid #FFFFFF;
+    border-radius: 100%;
+    overflow: hidden;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    transform: translateY(-5px);
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+.sidebar-anchor-text{
+    margin-left: 30px;
+}
+
+.sidebar-profile{
+    display: block;
+    text-align: center;
+}
+
+.user-title{
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.15;
+    text-rendering: optimizeLegibility;
+    word-wrap: break-word;
+    margin: 15px 0 25px;
+    position: relative;
+    color: #fff;
+}
+
+.sidebar-button{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.about-us-options{
+    margin:auto;
 }
