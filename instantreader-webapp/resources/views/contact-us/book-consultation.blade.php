@@ -35,7 +35,7 @@
             </div>
             <div class="col-lg-6 wow fadeInRight">
                 <div class="half-img mt-5 pt-4 mt-lg-0 pt-lg-0">
-                    <img alt="image" src="{{ asset('marketing-site/assets/agency/img/vector-art-4.png') }}">
+                    <img alt="image" src="{{ asset('marketing-site/assets/img/consultation.jpg') }}">
                 </div>
             </div>
         </div>
