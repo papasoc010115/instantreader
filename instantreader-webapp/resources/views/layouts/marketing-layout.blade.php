@@ -42,11 +42,10 @@
     <!--Navigation-->
     <nav class="navbar navbar-top-default navbar-expand-lg navbar-gradient nav-icon alt-font">
         <div class="container">
-            <a class="logo link scroll" href="/" title="Logo">
+            <a class="logo link scroll" href="#home" title="Logo">
                 <!--Logo Default-->
                 <img alt="logo" class="logo-dark default" src="{{ asset('marketing-site/assets/img/ir-logo.png') }}">
             </a>
-
 
             <!--Nav Links-->
             <div class="collapse navbar-collapse" id="agency">
@@ -107,20 +106,91 @@
             <div class="shape-left" id="shape-left">
                 <nav class="navbar full-menu-navigation left">
                     <ul class="list-unstyled">
-                        <li><a href="#" class="link unclickable">
+                        <!-- HOME -->
+                        <li><a href="/" class="link">
                             <span class="anchor-circle"></span>
-                            <span class="anchor-text">About Us</span>
+                            <span class="anchor-text">Home</span>
                         </a></li>
-                        <div class="list-unstyled">
-                            <li><a href="{{ route('about-us.founder') }}" class="link sub-option">
-                                <span class="anchor-circle"></span>
-                                <span class="anchor-text">Our Founder & Developer</span>
-                            </a></li>
-                            <li><a href="{{ route('about-us.testimonials') }}" class="link sub-option">
-                                <span class="anchor-circle"></span>
-                                <span class="anchor-text">Testimonials</span>
-                            </a></li> 
-                        </div>
+                        <!-- LEARN MORE -->
+                        <li>
+                            <div class="full-menu-multiple-option">
+                                <div>
+                                    <span class="anchor-circle"></span>
+                                    <div class="full-menu-multiple-title">
+                                        <a href="#" class="full-menu-main unclickable">  
+                                            <span class="anchor-text">Learn More</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="sub-option">
+                                    <a href="{{ route('learn-more.program-overview') }}" class="link"> 
+                                        <span class="anchor-text">Reading Programs Overview</span>
+                                    </a>
+                                </div>
+                                <div class="line-multiple-options sub-option">
+                                    <a href="{{ route('learn-more.reading-assessment') }}" class="link"> 
+                                        <span class="anchor-text">Online Reading Assessment</span>
+                                    </a>
+                                </div>
+                                <div class="sub-option">
+                                    <a href="#irkids" class="link"> 
+                                        <span class="anchor-text">Instant Reader Kids Club</span>
+                                    </a>
+                                </div>
+                                <div class="sub-option">
+                                    <a href="{{ route('learn-more.faq') }}" class="link"> 
+                                        <span class="anchor-text">FAQs</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- CONTACT US -->
+                        <li>
+                            <div class="full-menu-multiple-option">
+                                <div>
+                                    <span class="anchor-circle"></span>
+                                    <div class="full-menu-multiple-title">
+                                        <a href="#" class="full-menu-main unclickable">  
+                                            <span class="anchor-text">Contact Us</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="line-multiple-options sub-option">
+                                    <a href="{{ route('contact-us.book-consultation') }}" class="link"> 
+                                        <span class="anchor-text">Book a FREE Consultation</span>
+                                    </a>
+                                </div>
+                                <div class="sub-option">
+                                    <a href="{{ route('contact-us.application') }}" class="link"> 
+                                        <span class="anchor-text">Start a Career With Us</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- ABOUT US -->
+                        <li>
+                            <div class="full-menu-multiple-option">
+                                <div>
+                                    <span class="anchor-circle"></span>
+                                    <div class="full-menu-multiple-title">
+                                        <a href="#" class="full-menu-main unclickable">  
+                                            <span class="anchor-text">About Us</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="line-multiple-options sub-option">
+                                    <a href="{{ route('about-us.founder') }}" class="link"> 
+                                        <span class="anchor-text">Our Founder & Developer</span>
+                                    </a>
+                                </div>
+                                <div class="sub-option">
+                                    <a href="{{ route('about-us.testimonials') }}" class="link"> 
+                                        <span class="anchor-text">Testimonials</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- ADDITIONAL RESOURCES -->
                         <li><a href="{{ route('additional-resources') }}" class="link">
                             <span class="anchor-circle"></span>
                             <span class="anchor-text">Additional Resources</span>
