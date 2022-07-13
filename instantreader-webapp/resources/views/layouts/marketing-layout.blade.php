@@ -116,7 +116,7 @@
                                 <span class="anchor-circle"></span>
                                 <span class="anchor-text">Our Founder & Developer</span>
                             </a></li>
-                            <li><a href="{{ route('about-us.founder') }}" class="link sub-option">
+                            <li><a href="{{ route('about-us.testimonials') }}" class="link sub-option">
                                 <span class="anchor-circle"></span>
                                 <span class="anchor-text">Testimonials</span>
                             </a></li> 
