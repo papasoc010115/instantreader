@@ -51,21 +51,21 @@
             <!--Nav Links-->
             <div class="collapse navbar-collapse" id="agency">
                 <div class="navbar-nav ml-auto">
-                    <a class="nav-link link scroll active" href="/" id="nav-home">Home</a>
-                    <div class="nav-link link scroll menu-dropdown">
+                    <a class="nav-link link active" href="/" id="nav-home">Home</a>
+                    <div class="nav-link link menu-dropdown">
                         <a class="unclickable">Learn More</a>
                         <div class="menu-dropdown-content">
-                            <a href="#" id="nav-readingprogram">Reading Programs</a>
-                            <a href="#" id="nav-readassess">Reading Assessment</a>
-                            <a href="#" id="nav-kidsclub">Kids Club</a>
-                            <a href="#" id="nav-faq">FAQs</a>                            
+                            <a href="{{ route('learn-more.program-overview') }}" id="nav-readingprogram">Reading Programs</a>
+                            <a href="{{ route('learn-more.reading-assessment') }}" id="nav-readassess">Reading Assessment</a>
+                            <a href="javascript:void(0)" id="nav-kidsclub">Kids Club</a>
+                            <a href="javascript:void(0)" id="nav-faq">FAQs</a>                            
                         </div>
                     </div>
-                    <div class="nav-link link scroll menu-dropdown">
+                    <div class="nav-link link menu-dropdown">
                         <a class="unclickable">Contact Us</a>
                         <div class="menu-dropdown-content">
-                            <a href="#" id="nav-bookconsultation">Book a FREE Consultation</a>
-                            <a href="#" id="nav-application">Start a Career with Us</a>
+                            <a href="javascript:void(0)" id="nav-bookconsultation">Book a FREE Consultation</a>
+                            <a href="javascript:void(0)" id="nav-application">Start a Career with Us</a>
                         </div>
                     </div>          
                     <span class="menu-line"><i aria-hidden="true" class="fa fa-angle-down"></i></span>

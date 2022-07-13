@@ -96,33 +96,33 @@ jQuery(function ($) {
       Note: This was not really necessary, but for some reason, the links in the navbar (anchor tags) were not working.
       So, we manually configured them here.
      ====================================== */
-    document.getElementById("nav-home").onclick = function () {
-        location.href = "/";
-    };
+    // document.getElementById("nav-home").onclick = function () {
+    //     location.href = "/";
+    // };
 
-    document.getElementById("nav-readassess").onclick = function () {
-        location.href = "/learn-more/reading-assessment";
-    };
+    // document.getElementById("nav-readassess").onclick = function () {
+    //     location.href = "/learn-more/reading-assessment";
+    // };
 
-    document.getElementById("nav-kidsclub").onclick = function () {
-        location.href = "/learn-more/kids-club";
-    };
+    // document.getElementById("nav-kidsclub").onclick = function () {
+    //     location.href = "/learn-more/kids-club";
+    // };
 
-    document.getElementById("nav-faq").onclick = function () {
-        location.href = "/learn-more/faq";
-    };
+    // document.getElementById("nav-faq").onclick = function () {
+    //     location.href = "/learn-more/faq";
+    // };
 
-    document.getElementById("nav-readingprogram").onclick = function () {
-        location.href = "/learn-more/reading-programs";
-    };
+    // document.getElementById("nav-readingprogram").onclick = function () {
+    //     location.href = "/learn-more/reading-programs";
+    // };
 
-    document.getElementById("nav-bookconsultation").onclick = function () {
-        location.href = "/contact-us/book-consultation";
-    };
+    // document.getElementById("nav-bookconsultation").onclick = function () {
+    //     location.href = "/contact-us/book-consultation";
+    // };
 
-    document.getElementById("nav-application").onclick = function () {
-        location.href = "/contact-us/application";
-    };
+    // document.getElementById("nav-application").onclick = function () {
+    //     location.href = "/contact-us/application";
+    // };
 
 
     /* ===================================
