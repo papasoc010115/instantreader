@@ -29,6 +29,10 @@ Route::get('/learn-more/faq', function () {
     return view('learn-more.faq');
 })->name('learn-more.faq');
 
+Route::get('/learn-more/kids-club', function () {
+    return view('learn-more.kids-club');
+})->name('learn-more.kids-club');
+
 Route::get('/about-us/founder-and-developer', function () {
     return view('about-us.founder');
 })->name('about-us.founder');
