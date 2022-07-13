@@ -9,7 +9,7 @@
         margin-top: 3em;
         padding: 2em 1em 0em 1em;
     }
-    p {
+    .align-left, .card-text {
         text-align: left
     }
     .card {
@@ -157,7 +157,7 @@
             <img class="banner-img" src="{{ asset('marketing-site/assets/img/basic-banner-img.png') }}" alt="img">
             </div>
             <div class="col-md-6">
-                <p style="color: white">
+                <p class="align-left" style="color: white">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing diam donec adipiscing tristique risus nec feugiat. Rhoncus urna neque viverra justo nec ultrices dui sapien. Egestas sed tempus urna et pharetra pharetra massa massa ultricies. Donec ac odio tempor orci dapibus ultrices in iaculis nunc. Gravida rutrum quisque non tellus orci. Et egestas quis ipsum suspendisse ultrices gravida dictum. Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper. Ultrices dui sapien eget mi. Aliquam eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis. Netus et malesuada fames ac turpis egestas. Dolor sit amet consectetur adipiscing elit.
                 </p>
             </div>
@@ -173,7 +173,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <p style="color: #282525">
+                <p class="align-left" style="color: #282525">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing diam donec adipiscing tristique risus nec feugiat. Rhoncus urna neque viverra justo nec ultrices dui sapien. Egestas sed tempus urna et pharetra pharetra massa massa ultricies. Donec ac odio tempor orci dapibus ultrices in iaculis nunc. Gravida rutrum quisque non tellus orci. Et egestas quis ipsum suspendisse ultrices gravida dictum. Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper. Ultrices dui sapien eget mi. Aliquam eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis. Netus et malesuada fames ac turpis egestas. Dolor sit amet consectetur adipiscing elit.
                 </p>            
             </div>
@@ -195,7 +195,7 @@
             <img class="banner-img" src="{{ asset('marketing-site/assets/img/mastery-banner-img.png') }}" alt="img">
             </div>
             <div class="col-md-6">
-                <p style="color: white">
+                <p class="align-left" style="color: white">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing diam donec adipiscing tristique risus nec feugiat. Rhoncus urna neque viverra justo nec ultrices dui sapien. Egestas sed tempus urna et pharetra pharetra massa massa ultricies. Donec ac odio tempor orci dapibus ultrices in iaculis nunc. Gravida rutrum quisque non tellus orci. Et egestas quis ipsum suspendisse ultrices gravida dictum. Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper. Ultrices dui sapien eget mi. Aliquam eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis. Netus et malesuada fames ac turpis egestas. Dolor sit amet consectetur adipiscing elit.
                 </p>
             </div>
@@ -211,7 +211,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <p style="color: #282525">
+                <p class="align-left" style="color: #282525">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing diam donec adipiscing tristique risus nec feugiat. Rhoncus urna neque viverra justo nec ultrices dui sapien. Egestas sed tempus urna et pharetra pharetra massa massa ultricies. Donec ac odio tempor orci dapibus ultrices in iaculis nunc. Gravida rutrum quisque non tellus orci. Et egestas quis ipsum suspendisse ultrices gravida dictum. Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper. Ultrices dui sapien eget mi. Aliquam eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis. Netus et malesuada fames ac turpis egestas. Dolor sit amet consectetur adipiscing elit.
                 </p>            
             </div>
