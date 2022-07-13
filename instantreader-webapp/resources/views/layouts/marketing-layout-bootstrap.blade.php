@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="{{ asset('marketing-site/assets/vendor/css/bundle.min.css') }}">
     <link rel="stylesheet" href="{{ asset('marketing-site/assets/vendor/css/revolution-settings.min.css') }}">
     <!-- Plugin Css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ asset('marketing-site/assets/vendor/css/jquery.fancybox.min.css') }}">
     <link rel="stylesheet" href="{{ asset('marketing-site/assets/vendor/css/owl.carousel.min.css') }}">
     <link rel="stylesheet" href="{{ asset('marketing-site/assets/vendor/css/swiper.min.css') }}">
@@ -39,178 +40,118 @@
 <!--Header Start-->
 <header class="cursor-light">
 
+    <!-- Off Canvas Sidebar -->
+    <div class="offcanvas offcanvas-start gradient-bg2" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <button type="button" class="btn-close text-reset btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+
+        <div class="sidebar-profile text-white">
+            <img src="{{ asset('marketing-site/assets/agency/img/default-profile-pic.png') }}" class="profile-pic" />
+            <h6 class="user-title">Guest</h6>
+            <span><a class="alt-font sidebar-button" href="#">Log In</a></span>
+            <span><a class="alt-font sidebar-button" href="#">Sign Up</a></span>
+        </div>
+
+        <hr class="sidebar-divider">
+
+        <div class="offcanvas-body">
+            <div class="full-menu-multiple-title" >
+                <span class="sidebar-anchor-circle"></span>
+                <a data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    <span class="sidebar-anchor-text">About Us</span>
+                </a>
+            </div>
+            <div class="collapse" id="collapseExample">
+                <div class="card card-body">
+                    <ul class="about-us-options">
+                        <a href="{{ route('learn-more.program-overview') }}" class="link alt-font"> 
+                            <span>Our Founder & Developer</span>
+                        </a>
+                        <a href="{{ route('learn-more.program-overview') }}" class="link alt-font"> 
+                            <span>Testimonials</span>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+            <div class="full-menu-multiple-title" >
+                <span class="sidebar-anchor-circle"></span>
+                <a href="{{ route('learn-more.program-overview') }}" class="link alt-font">
+                    <span class="sidebar-anchor-text">Additional Resources</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
     <!--Navigation-->
     <nav class="navbar navbar-top-default navbar-expand-lg navbar-gradient nav-icon alt-font">
         <div class="container">
-            <a class="logo link scroll" href="#home" title="Logo">
-                <!--Logo Default-->
-                <img alt="logo" class="logo-dark default" src="{{ asset('marketing-site/assets/img/ir-logo.png') }}">
-            </a>
 
-            <!--Nav Links-->
-            <div class="collapse navbar-collapse" id="agency">
-                <div class="navbar-nav ml-auto">
-                    <a class="nav-link link active" href="/" id="nav-home">Home</a>
-                    <div class="nav-link link menu-dropdown">
-                        <a class="unclickable">Learn More</a>
-                        <div class="menu-dropdown-content">
-                            <a href="{{ route('learn-more.program-overview') }}" id="nav-readingprogram">Reading Programs</a>
-                            <a href="{{ route('learn-more.reading-assessment') }}" id="nav-readassess">Reading Assessment</a>
-                            <a href="javascript:void(0)" id="nav-kidsclub">Kids Club</a>
-                            <a href="{{ route('learn-more.faq') }}" id="nav-faq">FAQs</a>                            
-                        </div>
-                    </div>
-                    <div class="nav-link link menu-dropdown">
-                        <a class="unclickable">Contact Us</a>
-                        <div class="menu-dropdown-content">
-                            <a href="{{ route('contact-us.book-consultation') }}" id="nav-bookconsultation">Free Consultation</a>
-                            <a href="{{ route('contact-us.application') }}" id="nav-application">Careers</a>
-                        </div>
-                    </div>          
-                    <span class="menu-line"><i aria-hidden="true" class="fa fa-angle-down"></i></span>
-                </div>
-
-                <a data-fancybox data-animation-duration="500" data-src="#animatedModal" href="javascript:void(0);" class="btn btn-medium btn-rounded btn-transparent-white btn-hvr-white ml-3">Enroll Now
-                    <div class="btn-hvr-setting">
-                        <ul class="btn-hvr-setting-inner">
-                            <li class="btn-hvr-effect"></li>
-                            <li class="btn-hvr-effect"></li>
-                            <li class="btn-hvr-effect"></li>
-                            <li class="btn-hvr-effect"></li>
-                        </ul>
-                    </div>
-                </a>
-            </div>
-
-            <!--Menu Button-->
-            <button class="fullnav-toggler link" id="full-menu-1" type="button">
+            <button class="fullnav-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
                 <span class="line"></span>
                 <span class="line"></span>
                 <span class="line"></span>
             </button>
 
+            <a class="logo link" href="/">
+                <img src="{{ asset('marketing-site/assets/img/ir-logo.png') }}" title="Logo">
+            </a>
+
+            <!--Hidden Navbar Toggler -->
+            <button class="navbar-dark navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navigation Links -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <!-- Home -->
+                    <li class="nav-link nav-item">
+                        <a class="link active" aria-current="page" href="/">Home</a>
+                    </li>
+                    <!-- Learn More -->
+                    <li class="nav-link nav-item dropdown">
+                        <a class="link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Learn More
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="{{ route('learn-more.program-overview') }}">Reading Programs</a></li>
+                            <li><a class="dropdown-item" href="{{ route('learn-more.reading-assessment') }}">Online Reading Assessment</a></li>
+                            <li><a class="dropdown-item" href="#">Instant Reader Kids Club</a></li>
+                            <li><a class="dropdown-item" href="{{ route('learn-more.faq') }}">FAQs</a></li>
+                        </ul>
+                    </li>
+                    <!-- Contact Us -->
+                    <li class="nav-link nav-item dropdown">
+                        <a class="link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Contact Us
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="{{ route('contact-us.book-consultation') }}">Book FREE Online Consultation</a></li>
+                            <li><a class="dropdown-item" href="{{ route('contact-us.application') }}">Start a Career with Us</a></li>
+                        </ul>
+                    </li>
+                    <!-- Enroll Now -->
+                    <li class="nav-item">
+                        <a data-fancybox data-animation-duration="500" data-src="#animatedModal" href="javascript:void(0);" class="btn btn-medium btn-rounded btn-transparent-white btn-hvr-white ml-3">Enroll Now
+                            <div class="btn-hvr-setting">
+                                <ul class="btn-hvr-setting-inner">
+                                    <li class="btn-hvr-effect"></li>
+                                    <li class="btn-hvr-effect"></li>
+                                    <li class="btn-hvr-effect"></li>
+                                    <li class="btn-hvr-effect"></li>
+                                </ul>
+                            </div>
+                        </a>
+                    </li>
+                    <span class="menu-line"><i aria-hidden="true" class="fa fa-angle-down"></i></span>
+                </ul>
+            </div>
         </div>
     </nav>
 
     <!--Full menu-->
-    <div class="nav-holder alt style-2 alt-font">
-
-        <!--Menu Button-->
-        <button class="fullnav-close link" type="button">
-            <span class="line"></span>
-            <span class="line"></span>
-            <span class="line"></span>
-        </button>
-
-        <div class="container">
-            <div class="shape-left" id="shape-left">
-                <nav class="navbar full-menu-navigation left">
-                    <ul class="list-unstyled">
-                        <!-- HOME -->
-                        <li><a href="/" class="link">
-                            <span class="anchor-circle"></span>
-                            <span class="anchor-text">Home</span>
-                        </a></li>
-                        <!-- LEARN MORE -->
-                        <li>
-                            <div class="full-menu-multiple-option">
-                                <div>
-                                    <span class="anchor-circle"></span>
-                                    <div class="full-menu-multiple-title">
-                                        <a href="#" class="full-menu-main unclickable">  
-                                            <span class="anchor-text">Learn More</span>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="sub-option">
-                                    <a href="{{ route('learn-more.program-overview') }}" class="link"> 
-                                        <span class="anchor-text">Reading Programs Overview</span>
-                                    </a>
-                                </div>
-                                <div class="line-multiple-options sub-option">
-                                    <a href="{{ route('learn-more.reading-assessment') }}" class="link"> 
-                                        <span class="anchor-text">Online Reading Assessment</span>
-                                    </a>
-                                </div>
-                                <div class="sub-option">
-                                    <a href="#irkids" class="link"> 
-                                        <span class="anchor-text">Instant Reader Kids Club</span>
-                                    </a>
-                                </div>
-                                <div class="sub-option">
-                                    <a href="{{ route('learn-more.faq') }}" class="link"> 
-                                        <span class="anchor-text">FAQs</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                        <!-- CONTACT US -->
-                        <li>
-                            <div class="full-menu-multiple-option">
-                                <div>
-                                    <span class="anchor-circle"></span>
-                                    <div class="full-menu-multiple-title">
-                                        <a href="#" class="full-menu-main unclickable">  
-                                            <span class="anchor-text">Contact Us</span>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="line-multiple-options sub-option">
-                                    <a href="{{ route('contact-us.book-consultation') }}" class="link"> 
-                                        <span class="anchor-text">Book a FREE Consultation</span>
-                                    </a>
-                                </div>
-                                <div class="sub-option">
-                                    <a href="{{ route('contact-us.application') }}" class="link"> 
-                                        <span class="anchor-text">Start a Career With Us</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                        <!-- ABOUT US -->
-                        <li>
-                            <div class="full-menu-multiple-option">
-                                <div>
-                                    <span class="anchor-circle"></span>
-                                    <div class="full-menu-multiple-title">
-                                        <a href="#" class="full-menu-main unclickable">  
-                                            <span class="anchor-text">About Us</span>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="line-multiple-options sub-option">
-                                    <a href="{{ route('about-us.founder') }}" class="link"> 
-                                        <span class="anchor-text">Our Founder & Developer</span>
-                                    </a>
-                                </div>
-                                <div class="sub-option">
-                                    <a href="{{ route('about-us.testimonials') }}" class="link"> 
-                                        <span class="anchor-text">Testimonials</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                        <!-- ADDITIONAL RESOURCES -->
-                        <li><a href="{{ route('additional-resources') }}" class="link">
-                            <span class="anchor-circle"></span>
-                            <span class="anchor-text">Additional Resources</span>
-                        </a></li>
-                    </ul>
-                    <span class="full-menu-dot" style="transform: scale(0);"></span>
-                </nav>
-                <img src="{{ asset('marketing-site/assets/agency/img/shape-8.png') }}" alt="shape">
-            </div>
-            <div class="shape-right" id="shape-right">
-                <div class="full-menu-detail hide-cursor">
-                    <img src="{{ asset('marketing-site/assets/agency/img/default-profile-pic.png') }}" class="profile-pic" />
-                    <h6 class="title">Guest</h6>
-                    <p><a href="{{ route('account.log-in') }}">Log In</a></p>
-                    <p><a href="{{ route('account.sign-up') }}">Sign Up</a></p>
-                </div>
-                <img src="{{ asset('marketing-site/assets/agency/img/shape-7.png') }}" alt="shape">
-            </div>
-        </div>
-    </div>    
+   
 
     <!--Get Quote Model Popup-->
     <div id="animatedModal" class="animated-modal hidden quote-content">
@@ -360,6 +301,7 @@
 <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJRG4KqGVNvAPY4UcVDLcLNXMXk2ktNfY"></script> -->
 <script src="{{ asset('marketing-site/assets/agency/js/map.js') }}"></script>
 <!-- custom script -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 <script src="{{ asset('marketing-site/assets/vendor/js/contact_us.js') }}"></script>
 <script src="{{ asset('marketing-site/assets/agency/js/script.js') }}"></script>
 
