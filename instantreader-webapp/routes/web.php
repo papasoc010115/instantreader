@@ -24,3 +24,7 @@ Route::get('/learn-more/reading-assessment', function () {
 Route::get('/learn-more/reading-programs', function () {
     return view('learn-more.program-overview');
 })->name('learn-more.program-overview');
+
+Route::get('/learn-more/faq', function () {
+    return view('learn-more.faq');
+})->name('learn-more.faq');
