@@ -82,8 +82,12 @@
         <!--Row-->
         <div class="row">
             <div class="col-md-12 text-center">
-                <div class="heading-area mx-570 mb-lg-4 mb-3">
+                <div class="heading-area mb-lg-4 mb-3">
                     <span class="title">Our Story</span>
+                    <p class="para pt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tincidunt
+                    egestas nunc, at pellentesque arcu sollicitudin et. Aliquam hendrerit diam quis ipsum
+                    ultricies, quis ultricies arcu suscipit. Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit. Fusce ut diam quis nulla faucibus venenatis. </p>
                 </div>
             </div>
         </div>
