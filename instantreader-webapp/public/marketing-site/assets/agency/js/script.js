@@ -1,20 +1,6 @@
 $(window).on("load", function () {
     "use strict";
-
-    /* ===================================
-            Loading Timeout
-     ====================================== */
-
-    setTimeout(function () {
-        $(".preloader").fadeOut();
-
-        $(".cd-transition-layer")
-            .addClass("closing")
-            .delay(1000)
-            .queue(function () {
-                $(this).removeClass("visible closing opening").dequeue();
-            });
-    }, 200);
+    $(".preloader").fadeOut();
 });
 
 jQuery(function ($) {
