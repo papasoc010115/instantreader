@@ -1,6 +1,10 @@
 @extends('layouts.marketing-layout')
 
 @section('content')
+
+<!-- Set the current page variable for the navbar -->
+<?php $currentPage = 'additional-resources';?>
+
 <!--Banner Start-->
 <section class="page-title cursor-light">
     <!-- Pattern Layers -->

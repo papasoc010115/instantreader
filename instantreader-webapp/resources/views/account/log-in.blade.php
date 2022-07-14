@@ -1,7 +1,17 @@
 @extends('layouts.marketing-layout')
-
 @section('content')
 <!--PAGE CONTENT START-->
+
+<style>
+    .account-form{
+        margin: auto;
+        max-width: 1000px;
+    }
+
+    .center-button{
+        text-align: center;
+    }
+</style>
 
 <!--Banner Start-->
 <section class="page-title cursor-light">

@@ -307,10 +307,9 @@ header a.logo img {max-width: 50%;}
     top: 0;
     z-index: 98;
     /* overflow: hidden; */
-    height: 90px;
+    min-height: 90px;
     width: 100%;
     padding: 0;
-    /* margin-top: 20px; */
     -webkit-transition: all .1s ease;
     -moz-transition: all .1s ease;
     -ms-transition: all .1s ease;
@@ -339,7 +338,7 @@ header a.logo img {max-width: 50%;}
 
 
 .header-appear .navbar-top-default {
-    height: 80px;
+    min-height: 80px;
     position: fixed;
     z-index: 97;
     margin-top: 0;
@@ -1750,7 +1749,7 @@ span.anchor-circle{
 }
 
 .full-map{
-    height:500px;
+    height: 100%;
     width: 100%;
     overflow: hidden;
 }
@@ -3462,67 +3461,6 @@ input.inputerror, textarea.inputerror, select.inputerror {
 
 /* NOTE: additional changes for .navbar-top-default, property "overflow: hidden" was commented out  -ecdcabalda */
 
-.profile-pic{
-    margin-top: 10px;
-    margin-bottom: 10px;
-    height: 100px;
-    width: 100px;
-    object-fit: cover;
-    border-radius: 50%;
-    background-color: #FFFFFF;
-}
-
-.unclickable{
-    pointer-events: none;
-    cursor: default;
-}
-
-.sub-option{
-    margin-left: 60px;
-}
-
-.sub-option > a{
-    display: inline-block;
-    text-align: left;
-    padding-left: 10px;
-    width: 100%;
-    height: 100%;
-}
-
-.sub-option:hover{
-    background-color: #FFFFFF;
-    color: #00bcd4;;
-}
-
-.menu-dropdown{
-    position: relative;
-    display: inline-block;
-}
-
-.menu-dropdown-content{
-    display: none;
-    position: absolute;
-    background-color: #fff;
-    min-width: 200px;
-    z-index: 1;
-}
-
-.menu-dropdown-content a {
-    display: block;
-    color: #000;
-    padding: 12px 16px;
-    text-decoration: none;
-    text-align: left;
-}
-
-.menu-dropdown:hover .menu-dropdown-content{
-    display: block;
-}
-
-.menu-dropdown-content a:hover {
-    color: #00bcd4;
-}
-
 .live-parent-margin{
     margin-bottom: 100px;
 }
@@ -3530,54 +3468,6 @@ input.inputerror, textarea.inputerror, select.inputerror {
 .person-margin{
     margin-top: 50px;
     margin-bottom: 50px;
-}
-
-.about-people{
-    text-align: justify;
-}
-
-.about-people-container{
-    display: flexbox;
-    justify-content: center;
-}
-
-.mapouter{
-    position: relative;
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
-
-.gmap-canvas {
-    margin: auto;
-    background: none !important;
-    height: 800px;
-    width: 90%;
-}
-
-.area-juris-desc {
-    text-align: center;
-    margin: 20px;
-}
-
-.area-juris-book{
-    justify-content: center;
-}
-
-.scrolling-img-container{
-    overflow: hidden;
-}
-
-.scrolling-img{
-    background: url("../../img/ir-logo.png") repeat-x;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-repeat: repeat;
-    background-position: 0 0;
-    background-size: auto 100%;
-    animation: slide 100s linear infinite;
 }
 
 .ir-kids-avatar{
@@ -3593,84 +3483,4 @@ input.inputerror, textarea.inputerror, select.inputerror {
 .overlay-text > *{
     margin-top: 90px;
     margin-bottom: 90px;
-}
-
-.test > * {
-    vertical-align: middle;
-}
-
-@keyframes slide {
-    from {
-        background-position: 0 0;
-      }
-    to {
-        background-position: -10000px 0;
-    }
-}
-
-.account-form{
-    margin: auto;
-    max-width: 1000px;
-}
-
-.center-button{
-    text-align: center;
-}
-
-.full-menu-multiple-title{
-    margin: 0;
-    padding: 15px 30px 15px 0;
-    font-size: 25px;
-    font-weight: 300;
-    text-rendering: optimizeLegibility;
-    word-wrap: break-word;
-    position: relative;
-    color: #fff;
-}
-
-.sidebar-anchor-circle{
-    content: "";
-    position: absolute;
-    top: 50%;
-    border: 1px solid #FFFFFF;
-    border-radius: 100%;
-    overflow: hidden;
-    left: 0;
-    width: 10px;
-    height: 10px;
-    transform: translateY(-5px);
-    -webkit-transition: all .3s ease-in-out;
-    -moz-transition: all .3s ease-in-out;
-    -ms-transition: all .3s ease-in-out;
-    -o-transition: all .3s ease-in-out;
-    transition: all .3s ease-in-out;
-}
-
-.sidebar-anchor-text{
-    margin-left: 30px;
-}
-
-.sidebar-profile{
-    display: block;
-    text-align: center;
-}
-
-.user-title{
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 1.15;
-    text-rendering: optimizeLegibility;
-    word-wrap: break-word;
-    margin: 15px 0 25px;
-    position: relative;
-    color: #fff;
-}
-
-.sidebar-button{
-    margin-left: 10px;
-    margin-right: 10px;
-}
-
-.about-us-options{
-    margin:auto;
 }

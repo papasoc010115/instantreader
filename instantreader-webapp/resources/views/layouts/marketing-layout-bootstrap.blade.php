@@ -22,6 +22,153 @@
     <link rel="stylesheet" href="{{ asset('marketing-site/assets/vendor/css/cubeportfolio.min.css') }}">
     <!-- Style Sheet -->
     <link href="{{ asset('marketing-site/assets/agency/css/style.css') }}" rel="stylesheet">
+    <style>
+        .account-form{
+            margin: auto;
+            max-width: 1000px;
+        }
+
+        .center-button{
+            text-align: center;
+        }
+
+        .full-menu-multiple-title{
+            margin: 0;
+            padding: 15px 30px 15px 0;
+            font-size: 25px;
+            font-weight: 300;
+            text-rendering: optimizeLegibility;
+            word-wrap: break-word;
+            position: relative;
+            color: #fff;
+        }
+
+        .sidebar-anchor-circle{
+            content: "";
+            position: absolute;
+            top: 50%;
+            border: 1px solid #FFFFFF;
+            border-radius: 120%;
+            overflow: hidden;
+            left: 0;
+            width: 10px;
+            height: 10px;
+            transform: translateY(-5px);
+            -webkit-transition: all .3s ease-in-out;
+            -moz-transition: all .3s ease-in-out;
+            -ms-transition: all .3s ease-in-out;
+            -o-transition: all .3s ease-in-out;
+            transition: all .3s ease-in-out;
+        }
+
+        .sidebar-anchor-text{
+            margin-left: 30px;
+        }
+
+        .sidebar-profile{
+            display: block;
+            text-align: center;
+        }
+
+        .user-title{
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 1.15;
+            text-rendering: optimizeLegibility;
+            word-wrap: break-word;
+            margin: 15px 0 25px;
+            position: relative;
+            color: #fff;
+        }
+
+        .sidebar-button{
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        .about-us-options{
+            margin:auto;
+        }
+
+        .navbar-collapse{
+            min-height: 45px;
+        }
+
+        .offcanvas-toggler{
+            opacity: .5;
+            height: 65px;
+            width: 45px;
+            z-index: 30;
+            position: fixed; 
+            bottom: 50%; 
+            left: 0;
+            background: #7004bc;
+            border-top-right-radius: 60px;
+            border-bottom-right-radius: 60px;
+            -webkit-transition: all .5s ease;
+            -moz-transition: all .5s ease;
+            -ms-transition: all .5s ease;
+            -o-transition: all .5s ease;
+            transition: all .5s ease;
+        }
+
+        .offcanvas-toggler:hover{
+            opacity: 1;
+        }
+
+        .offcanvas-toggler > *{
+            vertical-align: center;
+        }
+
+        .fa-angle-right{
+            margin-left: 5px;
+            color: white;
+        }
+
+        @media only screen and (max-width: 991px) {
+            #menu-indicator {
+                display: none;
+            }
+        }
+
+        .main-link {
+            margin: 0px 10px 10px 10px;
+        }
+
+        .menu-line{
+            left: 10px;
+        }
+
+        .nav-icon .navbar-nav .nav-link:nth-child(1):active ~ .menu-line{
+            -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+        }
+
+        .nav-icon .navbar-nav .nav-link:nth-child(2).active ~ .menu-line{
+            -webkit-transform: translate3d(115%, 0, 0);
+            transform: translate3d(115%, 0, 0);
+        }
+
+        .nav-icon .navbar-nav .nav-link:nth-child(3).active ~ .menu-line{
+            -webkit-transform: translate3d(235%, 0, 0);
+            transform: translate3d(235%, 0, 0);
+        }
+
+        .nav-icon .navbar-nav .nav-link:nth-child(1):hover ~ .menu-line{
+            -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+        }
+
+        .nav-icon .navbar-nav .nav-link:nth-child(2):hover ~ .menu-line{
+            -webkit-transform: translate3d(115%, 0, 0);
+            transform: translate3d(115%, 0, 0);
+        }
+
+        .nav-icon .navbar-nav .nav-link:nth-child(3):hover ~ .menu-line{
+            -webkit-transform: translate3d(235%, 0, 0);
+            transform: translate3d(235%, 0, 0);
+        }
+    </style>
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="90">
@@ -39,6 +186,11 @@
 
 <!--Header Start-->
 <header class="cursor-light">
+
+    <!-- Off Canvas Toggler -->
+    <div class="offcanvas-toggler">
+        <i class="fa fa-4x fa-angle-right" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample"></i>
+    </div>
 
     <!-- Off Canvas Sidebar -->
     <div class="offcanvas offcanvas-start gradient-bg2" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
@@ -59,7 +211,7 @@
             <div class="full-menu-multiple-title" >
                 <span class="sidebar-anchor-circle"></span>
                 <a data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-                    <span class="sidebar-anchor-text">About Us</span>
+                    <span class="sidebar-anchor-text alt-font">About Us</span>
                 </a>
             </div>
             <div class="collapse" id="collapseExample">
@@ -87,12 +239,6 @@
     <nav class="navbar navbar-top-default navbar-expand-lg navbar-gradient nav-icon alt-font">
         <div class="container">
 
-            <button class="fullnav-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-                <span class="line"></span>
-                <span class="line"></span>
-                <span class="line"></span>
-            </button>
-
             <a class="logo link" href="/">
                 <img src="{{ asset('marketing-site/assets/img/ir-logo.png') }}" title="Logo">
             </a>
@@ -104,13 +250,13 @@
 
             <!-- Navigation Links -->
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <ul class="navbar-nav ms-auto">
                     <!-- Home -->
-                    <li class="nav-link nav-item">
-                        <a class="link active" aria-current="page" href="/">Home</a>
+                    <li class="nav-link nav-item main-link">
+                        <a class="link active" href="/">Home</a>
                     </li>
                     <!-- Learn More -->
-                    <li class="nav-link nav-item dropdown">
+                    <li class="nav-link nav-item main-link dropdown">
                         <a class="link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Learn More
                         </a>
@@ -122,7 +268,7 @@
                         </ul>
                     </li>
                     <!-- Contact Us -->
-                    <li class="nav-link nav-item dropdown">
+                    <li class="nav-link nav-item main-link dropdown">
                         <a class="link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Contact Us
                         </a>
@@ -132,8 +278,8 @@
                         </ul>
                     </li>
                     <!-- Enroll Now -->
-                    <li class="nav-item">
-                        <a data-fancybox data-animation-duration="500" data-src="#animatedModal" href="javascript:void(0);" class="btn btn-medium btn-rounded btn-transparent-white btn-hvr-white ml-3">Enroll Now
+                    <li class="nav-item main-link">
+                        <a data-fancybox data-animation-duration="500" data-src="#animatedModal" href="javascript:void(0);" class="btn btn-medium btn-rounded btn-transparent-white btn-hvr-white">Enroll Now
                             <div class="btn-hvr-setting">
                                 <ul class="btn-hvr-setting-inner">
                                     <li class="btn-hvr-effect"></li>
@@ -144,14 +290,11 @@
                             </div>
                         </a>
                     </li>
-                    <span class="menu-line"><i aria-hidden="true" class="fa fa-angle-down"></i></span>
+                    <span class="menu-line" id="menu-indicator"><i aria-hidden="true" class="fa fa-angle-down"></i></span>
                 </ul>
             </div>
         </div>
-    </nav>
-
-    <!--Full menu-->
-   
+    </nav> 
 
     <!--Get Quote Model Popup-->
     <div id="animatedModal" class="animated-modal hidden quote-content">

@@ -21,6 +21,68 @@
     <link rel="stylesheet" href="{{ asset('marketing-site/assets/vendor/css/cubeportfolio.min.css') }}">
     <!-- Style Sheet -->
     <link href="{{ asset('marketing-site/assets/agency/css/style.css') }}" rel="stylesheet">
+    <style>
+        .profile-pic{
+            margin-top: 10px;
+            margin-bottom: 10px;
+            height: 100px;
+            width: 100px;
+            object-fit: cover;
+            border-radius: 50%;
+            background-color: #FFFFFF;
+        }
+
+        .unclickable{
+            pointer-events: none;
+            cursor: default;
+        }
+
+        .sub-option{
+            margin-left: 60px;
+        }
+
+        .sub-option > a{
+            display: inline-block;
+            text-align: left;
+            padding-left: 10px;
+            width: 100%;
+            height: 100%;
+        }
+
+        .sub-option:hover{
+            background-color: #FFFFFF;
+            color: #00bcd4;;
+        }
+
+        .menu-dropdown{
+            position: relative;
+            display: inline-block;
+        }
+
+        .menu-dropdown-content{
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            min-width: 200px;
+            z-index: 1;
+        }
+
+        .menu-dropdown-content a {
+            display: block;
+            color: #000;
+            padding: 12px 16px;
+            text-decoration: none;
+            text-align: left;
+        }
+
+        .menu-dropdown:hover .menu-dropdown-content{
+            display: block;
+        }
+
+        .menu-dropdown-content a:hover {
+            color: #00bcd4;
+        }
+    </style>
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="90">
@@ -50,8 +112,8 @@
             <!--Nav Links-->
             <div class="collapse navbar-collapse" id="agency">
                 <div class="navbar-nav ml-auto">
-                    <a class="nav-link link active" href="/" id="nav-home">Home</a>
-                    <div class="nav-link link menu-dropdown">
+                    <a class="nav-link link {{ $currentPage == 'home' ? 'active' : '' }}" href="/" id="nav-home">Home</a>
+                    <div class="nav-link link menu-dropdown {{ $currentPage == 'learn-more' ? 'active' : '' }}">
                         <a class="unclickable">Learn More</a>
                         <div class="menu-dropdown-content">
                             <a href="{{ route('learn-more.program-overview') }}" id="nav-readingprogram">Reading Programs</a>
@@ -60,7 +122,7 @@
                             <a href="{{ route('learn-more.faq') }}" id="nav-faq">FAQs</a>                            
                         </div>
                     </div>
-                    <div class="nav-link link menu-dropdown">
+                    <div class="nav-link link menu-dropdown {{ $currentPage == 'contact-us' ? 'active' : '' }}">
                         <a class="unclickable">Contact Us</a>
                         <div class="menu-dropdown-content">
                             <a href="{{ route('contact-us.book-consultation') }}" id="nav-bookconsultation">Free Consultation</a>
@@ -196,7 +258,6 @@
                             <span class="anchor-text">Additional Resources</span>
                         </a></li>
                     </ul>
-                    <span class="full-menu-dot" style="transform: scale(0);"></span>
                 </nav>
                 <img src="{{ asset('marketing-site/assets/agency/img/shape-8.png') }}" alt="shape">
             </div>
@@ -357,7 +418,7 @@
 <script src="{{ asset('marketing-site/assets/vendor/js/extensions/revolution.extension.video.min.js') }}"></script>
 
 <!-- google map -->
-<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJRG4KqGVNvAPY4UcVDLcLNXMXk2ktNfY"></script> -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAyvJuilOzMOMFgfUa2pivMbmUyH2ev0JU"></script>
 <script src="{{ asset('marketing-site/assets/agency/js/map.js') }}"></script>
 <!-- custom script -->
 <script src="{{ asset('marketing-site/assets/vendor/js/contact_us.js') }}"></script>

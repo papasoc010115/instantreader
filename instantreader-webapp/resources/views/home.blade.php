@@ -1,7 +1,133 @@
-@extends('layouts.marketing-layout')
+@extends('layouts.marketing-layout-bootstrap')
 
 @section('content')
+
+<!-- Set the current page variable for the navbar -->
+<?php $currentPage = 'home';?>
+
 <!--PAGE CONTENT START-->
+
+<style>
+    .profile-pic{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        height: 100px;
+        width: 100px;
+        object-fit: cover;
+        border-radius: 50%;
+        background-color: #FFFFFF;
+    }
+
+    .about-people{
+        text-align: justify;
+    }
+
+    .about-people-container{
+        display: flexbox;
+        justify-content: center;
+    }
+
+    .mapouter{
+        position: relative;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .gmap-canvas {
+        margin: auto;
+        background: none !important;
+        height: 800px;
+        width: 90%;
+    }
+
+    .area-juris-desc {
+        text-align: center;
+        margin: 20px;
+    }
+
+    .area-juris-book{
+        justify-content: center;
+    }
+
+    .scrolling-img-container{
+        overflow: hidden;
+    }
+
+    .scrolling-img{
+        background: url("{{ asset('marketing-site/assets/img/ir-logo.png') }}") repeat-x;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-repeat: repeat;
+        background-position: 0 0;
+        background-size: auto 100%;
+        animation: slide 100s linear infinite;
+    }
+
+    .overlay-text{
+        text-align: center;
+        height: 100%;
+        background-color: rgba(35, 122, 254, .8);
+    }
+
+    .overlay-text > *{
+        margin-top: 90px;
+        margin-bottom: 90px;
+    }
+
+    @keyframes slide {
+        from {
+            background-position: 0 0;
+        }
+        to {
+            background-position: -10000px 0;
+        }
+    }
+
+    .orientation-container{
+        min-height: 100%;
+        min-height: 100vh;
+
+        display: flex;
+        align-items: center;
+    }
+
+    .text-container-content{
+        margin-bottom: 60px;
+    }
+
+    .first-title{
+        max-width: 650px; 
+        font-size: 70px; 
+        line-height: 80px; 
+        font-weight: 800; 
+        color: #ffffff; 
+        font-family:Montserrat;                
+    }
+
+    .second-title{
+        max-width: 650px; 
+        font-size: 70px; 
+        line-height: 70px; 
+        font-weight: 700; 
+        color: #ffffff; 
+        font-family:Montserrat;                
+    }
+
+    .video-desc{
+        max-width: 651px;
+        font-size: 20px;
+        line-height: 30px;
+        font-weight: 300;
+        color: #ffffff;
+        letter-spacing: 0px;
+        font-family: Roboto;
+    }
+
+</style>
+
 <!--Banner Start-->
 <section class="page-title cursor-light">
     <!-- Pattern Layers -->
@@ -20,158 +146,45 @@
 <!--Banner End-->
 
 <!--ORIENTATION VIDEO start-->
-<section class="p-0 no-transition cursor-light" id="home">
-    <h2 class="d-none">hidden</h2>
-    <div class="rev_slider_wrapper fullscreen-container" data-alias="megaone-agency-1" data-source="gallery"
-         id="rev_slider_17_1_wrapper" style="background:transparent;padding:0px;">
-        <!-- START REVOLUTION SLIDER 5.4.8.1 fullscreen mode -->
-        <div class="rev_slider fullscreenbanner" data-version="5.4.8.1" id="rev_slider_17_1" style="display:none;">
-            <ul>    <!-- SLIDE  -->
-                <li data-description="" data-easein="default" data-easeout="default" data-hideafterloop="0"
-                    data-hideslideonmobile="off" data-index="rs-43" data-masterspeed="default" data-param1=""
-                    data-param10="" data-param2="" data-param3="" data-param4="" data-param5=""
-                    data-param6="" data-param7="" data-param8="" data-param9="" data-rotate="0" data-saveperformance="off"
-                    data-slotamount="default" data-title="Slide" data-transition="fade">
-                    <!--OVERLAY-->
-                    <div class="gradient-bg1 bg-overlay"></div>
-
-                    <!-- LAYER NR. 9 (TITLE FIRST LINE)-->
-                    <div class="tp-caption tp-resizeme gradient-text1"
-                         data-fontsize="['70','65','60','50']"
-                         data-frames='[{"delay":660,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-height="none"
-                         data-hoffset="['320','250','0','0']" data-lineheight="['80','75','70','60']"
-                         data-paddingbottom="[0,0,0,0]"
-                         data-paddingleft="[0,0,0,0]"
-                         data-paddingright="[0,0,0,0]"
-                         data-paddingtop="[0,0,0,0]"
-                         data-responsive_offset="on"
-
-                         data-textAlign="['left','left','center','center']"
-                         data-type="text"
-
-                         data-voffset="['-125','-125','-125','-110']"
-                         data-whitespace="nowrap"
-                         data-width="['650','650','600','500']"
-                         data-x="['center','center','center','center']"
-                         data-y="['middle','middle','middle','middle']"
-                         id="slide-43-layer-13"
-
-                         style="z-index: 13; min-width: 650px; max-width: 650px; white-space: nowrap; font-size: 70px; line-height: 80px; font-weight: 800; color: #ffffff; letter-spacing: 0px;font-family:Montserrat;">
+<section class="p-0 no-transition cursor-light gradient-bg1" id="home">
+    <div class="container fullscreen-container orientation-container">
+        <div class="row">
+            <div class="col-lg-7 video-container">
+                <video id="player1" preload="none" controls poster="{{ asset('marketing-site/assets/agency/img/blog-news-1.jpg')}}" playsinline>
+                    <source src="{{ asset('marketing-site/assets/agency/img/video.mp4') }}" type="video/mp4">
+                </video>
+            </div>
+            <div class="col-lg-5">
+                <div class="text-container-content">
+                    <div class="gradient-text1 first-title">
                         Orientation
                     </div>
-
-                    <!-- LAYER NR. 10 (TITLE SECOND LINE)-->
-                    <div class="tp-caption   tp-resizeme"
-                         data-fontsize="['70','65','60','50']"
-                         data-frames='[{"delay":1840,"split":"chars","splitdelay":0.1,"speed":1000,"split_direction":"forward","frame":"0","from":"sX:0.8;sY:0.8;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"nothing"}]' data-height="none"
-                         data-hoffset="['320','250','0','0']" data-lineheight="['70','75','70','60']"
-                         data-paddingbottom="[0,0,0,0]"
-                         data-paddingleft="[0,0,0,0]"
-                         data-paddingright="[0,0,0,0]"
-                         data-paddingtop="[0,0,0,0]"
-                         data-responsive_offset="on"
-
-                         data-textAlign="['left','left','center','center']"
-                         data-type="text"
-
-                         data-voffset="['-40','-40','-40','-40']"
-                         data-whitespace="nowrap"
-                         data-width="['650','650','600','500']"
-                         data-x="['center','center','center','center']"
-                         data-y="['middle','middle','middle','middle']"
-                         id="slide-43-layer-11"
-
-                         style="z-index: 14; min-width: 650px; max-width: 650px; white-space: nowrap; font-size: 70px; line-height: 70px; font-weight: 700; color: #ffffff; letter-spacing: 0px;font-family:Montserrat;">
+                    <div class="second-title">
                         Video
                     </div>
-
-                    <!-- LAYER NR. 11 (DESCRIPTION)-->
-                    <div class="tp-caption   tp-resizeme"
-                         data-fontsize="['20','20','18','17']"
-                         data-frames='[{"delay":2360,"speed":1500,"frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-height="none"
-                         data-hoffset="['325','210','0','0']" data-paddingbottom="[0,0,0,0]"
-                         data-paddingleft="[0,0,0,0]"
-                         data-paddingright="[0,0,0,0]"
-                         data-paddingtop="[0,0,0,0]"
-                         data-responsive_offset="on"
-
-                         data-textAlign="['left','left','center','center']"
-                         data-type="text"
-
-                         data-voffset="['80','75','65','57']"
-                         data-whitespace="normal"
-                         data-width="['651','550','600','500']"
-                         data-x="['center','center','center','center']"
-                         data-y="['middle','middle','middle','middle']"
-                         id="slide-43-layer-14"
-
-                         style="z-index: 15; min-width: 651px; max-width: 651px; white-space: normal; font-size: 20px; line-height: 30px; font-weight: 300; color: #ffffff; letter-spacing: 0px;font-family:Roboto;">
+                </div>
+                <div class="text-container-content">
+                    <div class="video-desc">
                         Lorem ipsum is simply dummy text of the printing and typesetting. Lorem Ipsum has been the
                         industry’s standard dummy. Lorem Ipsum has been the industry’s standard dummy.
                     </div>
-
-                    <!-- LAYER NR. 12 (LEARN MORE)-->
-                    <div class="tp-caption   tp-resizeme"
-                         data-frames='[{"delay":2970,"speed":1500,"frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
-                         data-height="none" data-hoffset="['325','260','0','0']"
-                         data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"
-                         data-paddingright="[0,0,0,0]"
-                         data-paddingtop="[0,0,0,0]"
-                         data-responsive_offset="on"
-                         data-textAlign="['left','left','center','center']"
-                         data-type="text"
-                         data-voffset="['200','186','176','156']"
-                         data-whitespace="nowrap"
-                         data-width="['650','650','600','500']"
-                         data-x="['center','center','center','center']"
-                         data-y="['middle','middle','middle','middle']"
-                         id="slide-43-layer-15"
-
-                         style="z-index: 16; white-space: nowrap;">
-                        <a class="btn btn-slider btn-rounded btn-blue btn-hvr-white" href="javascript:void(0);">Learn
-                            More
-                            <div class="btn-hvr-setting">
-                                <ul class="btn-hvr-setting-inner">
-                                    <li class="btn-hvr-effect"></li>
-                                    <li class="btn-hvr-effect"></li>
-                                    <li class="btn-hvr-effect"></li>
-                                    <li class="btn-hvr-effect"></li>
-                                </ul>
-                            </div>
-                        </a>
-                    </div>
-
-                    <!-- LAYER NR. 13 (MAIN VIDEO)-->
-                    <div class="tp-caption   tp-resizeme"
-                         data-frames='[{"delay":990,"speed":1500,"frame":"0","from":"x:-50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
-                         data-height="none" data-hoffset="['0','0','-412','-412']"
-                         data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"
-                         data-paddingright="[0,0,0,0]"
-                         data-paddingtop="[0,0,0,0]"
-                         data-responsive_offset="on"
-                         data-textAlign="['inherit','inherit','inherit','inherit']"
-
-                         data-type="image"
-                         data-visibility="['on','on','off','off']"
-
-                         data-voffset="['-1','-1','72','72']"
-                         data-whitespace="nowrap"
-                         data-width="none"
-                         data-x="['left','left','left','left']"
-                         data-y="['middle','middle','middle','middle']"
-                         id="slide-43-layer-16"
-
-                         style="z-index: 17;">
-                        <div class="rs-looped rs-slideloop" data-easing="" data-speed="5" data-xe="15" data-xs="-10"
-                             data-ye="0" data-ys="0"><img alt="" data-hh="['604px','510','510','510']"
-                                                          data-no-retina
-                                                          data-ww="['434px','350','350','350']" src="{{ asset('marketing-site/assets/agency/img/vector-art-1.png') }}"></div>
-                    </div>
-                </li>
-            </ul>
-            <div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div>
+                </div>
+                <div class="button text-container-content">
+                    <a class="btn btn-slider btn-rounded btn-blue btn-hvr-white" href="javascript:void(0);">
+                        Learn More
+                        <div class="btn-hvr-setting">
+                            <ul class="btn-hvr-setting-inner">
+                                <li class="btn-hvr-effect"></li>
+                                <li class="btn-hvr-effect"></li>
+                                <li class="btn-hvr-effect"></li>
+                                <li class="btn-hvr-effect"></li>
+                            </ul>
+                        </div>
+                    </a>
+                </div>
+            </div>
         </div>
-    </div><!-- END REVOLUTION SLIDER -->
+    </div>
 </section>
 <!--ORIENTATION VIDEO End-->
 
@@ -181,7 +194,7 @@
         <div class="row">
             <div class="col-lg-6 wow fadeInLeft">
                 <div class="heading-area">
-                    <h2 class="title"><span class="alt-color js-rotating">LIVE, FREE</span> Parent Orentations</h2>
+                    <h2 class="title"><span class="alt-color js-rotating">LIVE, FREE</span> Parent Orientations</h2>
                     <h4 class="sub-title">Every <span class="alt-color js-rotating">Tuesday, Thursday, Saturday</span> 8 PM (PH Time)</h4>
                     <p class="para">There are many variations of passages of Lorem Ipsum available, but the majority
                         have suffered alteration in some form, by injected humour, or randomised words which don't look
@@ -224,7 +237,7 @@
         </div>
         <!--PEOPLE-->
         <div class="row wow fadeInUp about-people-container">
-            <div class="col-md-4">
+            <div class="col-md-6">
                 <div class="team-item">
                     <!--Team Image-->
                     <img alt="image" class="team-image" src="{{ asset('marketing-site/assets/agency/img/team-img1.png') }}">
@@ -245,7 +258,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-6">
                 <div class="team-item">
                     <!--Team Image-->
                     <img alt="image" class="team-image" src="{{ asset('marketing-site/assets/agency/img/team-img1.png') }}">
@@ -285,13 +298,11 @@
         </div>
     </div>
     <div class="gmap-canvas">
-        <iframe class="gmap" 
-            loading="lazy" 
-            allowfullscreen
-            referrerpolicy="no-referrer-when-downgrade" 
-            src="https://www.google.com/maps/d/u/2/embed?mid=1JiwHL7YTTdgTD0NWiZtuuIQr-TuC25s&ehbc=2E312F"  
-            height="750px">
+        <!-- NO API -->
+        <iframe class="gmap" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/d/u/2/embed?mid=1JiwHL7YTTdgTD0NWiZtuuIQr-TuC25s&ehbc=2E312F" height="750px">
         </iframe>
+        <!-- WITH GOOGLE API -->
+        <!-- <div class="full-map" id="map"></div> -->
     </div>
     <div class="row area-juris-book">
         <a class="btn btn-xlarge btn-rounded btn-pink btn-hvr-blue mt-3 book-ora" href="javascript:void(0);">Book Online Reading Assessment
@@ -486,7 +497,7 @@
                         <p class="text-white">The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 
                             from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions 
                             from the 1914 translation by H. Rackham.</p>
-                        <a class="btn btn-xlarge btn-rounded btn-pink btn-hvr-blue mt-3" href="javascript:void(0);">Book Online Reading Assessment
+                        <a class="btn btn-xlarge btn-rounded btn-pink btn-hvr-blue mt-3" href="javascript:void(0);">Join Kids Club Now
                             <div class="btn-hvr-setting">
                                 <ul class="btn-hvr-setting-inner">
                                     <li class="btn-hvr-effect"></li>
@@ -503,5 +514,6 @@
     </div>
 </section>
 <!--KIDS CLUB End-->
+
 <!--PAGE CONTENT END-->
 @endsection

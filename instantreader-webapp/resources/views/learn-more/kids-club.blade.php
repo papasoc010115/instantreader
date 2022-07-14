@@ -1,6 +1,10 @@
 @extends('layouts.marketing-layout')
 
 @section('content')
+
+<!-- Set the current page variable for the navbar -->
+<?php $currentPage = 'learn-more';?>
+
 <!--PAGE CONTENT START -->
 
 <!-- Style -->
@@ -99,10 +103,6 @@
     .overlay-text > *{
         margin-top: 90px;
         margin-bottom: 90px;
-    }
-
-    .test > * {
-        vertical-align: middle;
     }
 
     @keyframes slide {
