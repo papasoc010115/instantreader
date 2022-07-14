@@ -16,6 +16,8 @@
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         width: 18rem;
         margin-bottom: 1em;
+        margin-left: auto;
+        margin-right: auto;
     }
     .card-btn {
         padding-left: 1em; 
@@ -61,7 +63,7 @@
 <section class="pb-0" style="margin-top: 2em;">
     <div class="container" style="max-width: 80%">
         <div class="row">           
-            <div class="col-md-3">
+            <div class="col-lg-3">
                 <div class="card">
                     <img class="card-img-top" src="{{ asset('marketing-site/assets/img/basic-card-img.jpg') }}" alt="img">
                     <div class="card-body">
@@ -81,7 +83,7 @@
                 </div>
             </div>
             
-            <div class="col-md-3">
+            <div class="col-lg-3">
                 <div class="card">
                     <img class="card-img-top" src="{{ asset('marketing-site/assets/img/advanced-card-img.jpg') }}" alt="img">
                     <div class="card-body">
@@ -101,7 +103,7 @@
                 </div>
             </div>
             
-            <div class="col-md-3">
+            <div class="col-lg-3">
                 <div class="card">
                     <img class="card-img-top" src="{{ asset('marketing-site/assets/img/mastery-card-img.jpg') }}" alt="img">
                     <div class="card-body">
@@ -121,7 +123,7 @@
                 </div>
             </div>
             
-            <div class="col-md-3">
+            <div class="col-lg-3">
                 <div class="card">
                     <img class="card-img-top" src="{{ asset('marketing-site/assets/img/compass-card-img.jpg') }}" alt="img">
                     <div class="card-body">
