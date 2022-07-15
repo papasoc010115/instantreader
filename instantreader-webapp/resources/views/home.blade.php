@@ -1,4 +1,4 @@
-@extends('layouts.marketing-layout-bootstrap')
+@extends('layouts.marketing-layout')
 
 @section('content')
 
