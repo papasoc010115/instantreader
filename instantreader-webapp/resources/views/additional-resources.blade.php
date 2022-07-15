@@ -2,8 +2,14 @@
 
 @section('content')
 
-<!-- Set the current page variable for the navbar -->
-<?php $currentPage = 'additional-resources';?>
+<!-- Style Start -->
+<style>
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        margin-bottom: 1.5em;
+    }
+</style>
+<!-- Style End -->
 
 <!--Banner Start-->
 <section class="page-title cursor-light">
@@ -34,41 +40,47 @@
             </div>
         </div>
         <!--Row-->
-        <div class="card-deck wow fadeInUp">
-            <div class="card">
-                <img class="card-img-top" src="{{  asset('marketing-site/assets/agency/img/blog-news-1.jpg')  }}" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title pt-3">Web design is fun</h5>
-                    <p class="card-text">Hena Sword</p>
-                </div>
-                <div class="card-footer">
-                    <a class="wow" href="javascript:void(0);">
-                        <i class="icon fas fa-download" aria-hidden="true"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img-top" src="{{  asset('marketing-site/assets/agency/img/blog-news-2.jpg')  }}" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title pt-3">Digital Marketing</h5>
-                    <p class="card-text">David Villas</p>
-                </div>
-                <div class="card-footer">
-                    <a class="wow" href="javascript:void(0);">
-                        <i class="icon fas fa-download" aria-hidden="true"></i>
-                    </a>
+        <div class="row wow fadeInUp">
+            <div class="col-lg-4 d-flex align-items-stretch">
+                <div class="card">
+                    <img class="card-img-top" src="{{  asset('marketing-site/assets/agency/img/blog-news-1.jpg')  }}" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title pt-3 alt-color">Web design is fun</h5>
+                        <p class="card-text">Hena Sword</p>
+                    </div>
+                    <div class="card-footer">
+                        <a class="wow" href="javascript:void(0);">
+                            <i class="icon fas fa-download" aria-hidden="true"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <img class="card-img-top" src="{{  asset('marketing-site/assets/agency/img/blog-news-3.jpg')  }}" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title pt-3">Future of websites</h5>
-                    <p class="card-text">Jhon Walker</p>
+            <div class="col-lg-4 d-flex align-items-stretch">
+                <div class="card">
+                    <img class="card-img-top" src="{{  asset('marketing-site/assets/agency/img/blog-news-2.jpg')  }}" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title pt-3 alt-color">Digital Marketing</h5>
+                        <p class="card-text">David Villas</p>
+                    </div>
+                    <div class="card-footer">
+                        <a class="wow" href="javascript:void(0);">
+                            <i class="icon fas fa-download" aria-hidden="true"></i>
+                        </a>
+                    </div>
                 </div>
-                <div class="card-footer">
-                    <a class="wow" href="javascript:void(0);">
-                        <i class="icon fas fa-download" aria-hidden="true"></i>
-                    </a>
+            </div>
+            <div class="col-lg-4 d-flex align-items-stretch">
+                <div class="card">
+                    <img class="card-img-top" src="{{  asset('marketing-site/assets/agency/img/blog-news-3.jpg')  }}" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title pt-3 alt-color">Future of websites</h5>
+                        <p class="card-text">Jhon Walker</p>
+                    </div>
+                    <div class="card-footer">
+                        <a class="wow" href="javascript:void(0);">
+                            <i class="icon fas fa-download" aria-hidden="true"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -89,7 +101,7 @@
 <!--E-books/PDFs End-->
 
 <!--Blogs Start-->
-<section class="gradient-bg2" id="blog">
+<section  id="blog" style="background-color: #562FB7;">
     <div class="container">
         <!--Row-->
         <div class="row">
@@ -100,38 +112,44 @@
             </div>
         </div>
         <!--Row-->
-        <div class="card-deck wow fadeInUp">
-            <div class="card">
-                <img class="card-img-top" src="{{  asset('marketing-site/assets/agency/img/blog-news-1.jpg')  }}" alt="Card image cap">
-                <div class="card-body">
-                    <a href="agency/blog-list.html" class="card-text">Hena Sword</a>
-                    <a href="agency/blog-list.html"><h5 class="pt-2">Future of websites</h5></a>
-                    <p class="para">Lorem ipsum dolor sit amet consectetur adipiscing elit ipsum dolor sit am...</p>
-                </div>
-                <div class="card-footer">
-                    <span class="date main-color">October 29, 2020</span>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img-top" src="{{  asset('marketing-site/assets/agency/img/blog-news-2.jpg')  }}" alt="Card image cap">
-                <div class="card-body">
-                    <a href="agency/blog-list.html" class="card-text">David Villas</a>
-                    <a href="agency/blog-list.html"><h5 class="pt-2">Web design is fun</h5></a>
-                    <p class="para">Lorem ipsum dolor sit amet consectetur adipiscing elit ipsum dolor sit am...</p>
-                </div>
-                <div class="card-footer">
-                    <span class="date main-color">October 29, 2020</span>
+        <div class="row wow fadeInUp">
+            <div class="col-lg-4 d-flex align-items-stretch">
+                <div class="card">
+                    <img class="card-img-top" src="{{  asset('marketing-site/assets/agency/img/blog-news-1.jpg')  }}" alt="Card image cap">
+                    <div class="card-body">
+                        <a href="agency/blog-list.html" class="card-text">Hena Sword</a>
+                        <a href="agency/blog-list.html"><h5 class="pt-2">Future of websites</h5></a>
+                        <p class="para">Lorem ipsum dolor sit amet consectetur adipiscing elit ipsum dolor sit am...</p>
+                    </div>
+                    <div class="card-footer">
+                        <span class="date main-color">October 29, 2020</span>
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <img class="card-img-top" src="{{  asset('marketing-site/assets/agency/img/blog-news-3.jpg')  }}" alt="Card image cap">
-                <div class="card-body">
-                    <a href="agency/blog-list.html" class="card-text">Jhon Walker</a>
-                    <a href="agency/blog-list.html"><h5 class="pt-2">Lorem ipsum dolor sit amet consectetur</h5></a>
-                    <p class="para">Lorem ipsum dolor sit amet consectetur adipiscing elit ipsum dolor sit am...</p>
+            <div class="col-lg-4 d-flex align-items-stretch">
+                <div class="card">
+                    <img class="card-img-top" src="{{  asset('marketing-site/assets/agency/img/blog-news-2.jpg')  }}" alt="Card image cap">
+                    <div class="card-body">
+                        <a href="agency/blog-list.html" class="card-text">David Villas</a>
+                        <a href="agency/blog-list.html"><h5 class="pt-2">Web design is fun</h5></a>
+                        <p class="para">Lorem ipsum dolor sit amet consectetur adipiscing elit ipsum dolor sit am...</p>
+                    </div>
+                    <div class="card-footer">
+                        <span class="date main-color">October 29, 2020</span>
+                    </div>
                 </div>
-                <div class="card-footer">
-                    <span class="date main-color">October 29, 2020</span>
+            </div>
+            <div class="col-lg-4 d-flex align-items-stretch">
+                <div class="card">
+                    <img class="card-img-top" src="{{  asset('marketing-site/assets/agency/img/blog-news-3.jpg')  }}" alt="Card image cap">
+                    <div class="card-body">
+                        <a href="agency/blog-list.html" class="card-text">Jhon Walker</a>
+                        <a href="agency/blog-list.html"><h5 class="pt-2">Lorem ipsum dolor sit amet consectetur</h5></a>
+                        <p class="para">Lorem ipsum dolor sit amet consectetur adipiscing elit ipsum dolor sit am...</p>
+                    </div>
+                    <div class="card-footer">
+                        <span class="date main-color">October 29, 2020</span>
+                    </div>
                 </div>
             </div>
         </div>
