@@ -2,6 +2,15 @@
 
 @section('content')
 
+<!-- Style Start -->
+<style>
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        margin-bottom: 1.5em;
+    }
+</style>
+<!-- Style End -->
+
 <!--Banner Start-->
 <section class="page-title cursor-light">
     <!-- Pattern Layers -->
@@ -43,7 +52,7 @@
                         <h5 class="card-title pt-3">Card title</h5>
                         <p class="card-text">"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even <span class="alt-color">slightly believable</span>. If you are going to use a passage of Lorem Ipsum."</p>
                     </div>
-                    <div class="card-footer gradient-bg1">
+                    <div class="card-footer" style="background-color: #7004bc">
                         <span class="text-white">Father of Xxx</span>
                     </div>
                 </div>
@@ -55,7 +64,7 @@
                         <h5 class="card-title pt-3">Card title</h5>
                         <p class="card-text">"There are many variations of passages of <span class="alt-color">Lorem Ipsum available</span>, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum."</p>
                     </div>
-                    <div class="card-footer gradient-bg1">
+                    <div class="card-footer" style="background-color: #7004bc">
                         <span class="text-white">Guardian of Xxxxxx</span>
                     </div>
                 </div>
@@ -67,7 +76,7 @@
                         <h5 class="card-title pt-3">Card title</h5>
                         <p class="card-text">"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or <span class="alt-color">randomised words</span> which don't look even slightly believable."</p>
                     </div>
-                    <div class="card-footer gradient-bg1">
+                    <div class="card-footer" style="background-color: #7004bc">
                         <span class="text-white">Mother of Xxxx</span>
                     </div>
                 </div>
@@ -80,7 +89,7 @@
 
 <section>
     <div class="container">
-        <div class="row justify-content-center">
+        <div class="row justify-content-center"  style="margin-bottom: 2em;">
             <h2 class="title main-color">Testimonial Videos</h2>
             <p class="para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tincidunt
             egestas nunc, at pellentesque arcu sollicitudin et. Aliquam hendrerit diam quis ipsum
@@ -88,21 +97,41 @@
             elit. Fusce ut diam quis nulla faucibus venenatis. </p>
         </div>
 
-        <div class="card-deck pt-5">
-            <div class="card">
-                <video id="player1" style="max-width: 100%" preload="none" controls poster="{{ asset('marketing-site/assets/agency/img/blog-news-1.jpg')}}" playsinline>
-                    <source src="{{ asset('marketing-site/assets/agency/img/video.mp4') }}" type="video/mp4">
-                </video>
+        <!-- Row of Testimonials -->
+        <div class="row">
+            <div class="col-lg-4 d-flex align-items-stretch">
+                <div class="card">
+                    <video id="player1" style="max-width: 100%" preload="none" controls poster="{{ asset('marketing-site/assets/agency/img/blog-news-1.jpg')}}" playsinline>
+                        <source src="{{ asset('marketing-site/assets/agency/img/video.mp4') }}" type="video/mp4">
+                    </video>
+                </div>
             </div>
-            <div class="card">
-                <video id="player1" style="max-width: 100%" preload="none" controls poster="{{ asset('marketing-site/assets/agency/img/blog-news-1.jpg')}}" playsinline>
-                    <source src="{{ asset('marketing-site/assets/agency/img/video.mp4') }}" type="video/mp4">
-                </video>
+            <div class="col-lg-4 d-flex align-items-stretch">
+                <div class="card">
+                    <video id="player1" style="max-width: 100%" preload="none" controls poster="{{ asset('marketing-site/assets/agency/img/blog-news-1.jpg')}}" playsinline>
+                        <source src="{{ asset('marketing-site/assets/agency/img/video.mp4') }}" type="video/mp4">
+                    </video>
+                </div>
             </div>
-            <div class="card">
-                <video id="player1" style="max-width: 100%" preload="none" controls poster="{{ asset('marketing-site/assets/agency/img/blog-news-1.jpg')}}" playsinline>
-                    <source src="{{ asset('marketing-site/assets/agency/img/video.mp4') }}" type="video/mp4">
-                </video>
+            <div class="col-lg-4 d-flex align-items-stretch">
+                <div class="card">
+                    <video id="player1" style="max-width: 100%" preload="none" controls poster="{{ asset('marketing-site/assets/agency/img/blog-news-1.jpg')}}" playsinline>
+                        <source src="{{ asset('marketing-site/assets/agency/img/video.mp4') }}" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+
+        <div class="row pt-4">
+            <div class="col-sm-12">
+                <!--Pagination-->
+                <ul class="pagination justify-content-center top55 mb-4 mb-md-0 mb-sm-3" style="padding-top=5%">
+                    <li class="page-item"><a class="page-link disabled" href="#."><i class="fa fa-angle-left"></i></a></li>
+                    <li class="page-item active"><a class="page-link" href="#.">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#.">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#.">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#."><i class="fa fa-angle-right"></i></a></li>
+                </ul>
             </div>
         </div>
     </div>
