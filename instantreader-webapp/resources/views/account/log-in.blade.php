@@ -1,4 +1,5 @@
 @extends('layouts.marketing-layout')
+
 @section('content')
 <!--PAGE CONTENT START-->
 

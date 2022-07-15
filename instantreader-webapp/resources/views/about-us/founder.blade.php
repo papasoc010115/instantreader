@@ -2,9 +2,6 @@
 
 @section('content')
 
-<!-- Set the current page variable for the navbar -->
-<?php $currentPage = 'about-us';?>
-
 <!--Banner Start-->
 <section class="page-title cursor-light">
     <!-- Pattern Layers -->

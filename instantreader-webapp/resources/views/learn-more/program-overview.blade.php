@@ -2,9 +2,6 @@
 
 @section('content')
 
-<!-- Set the current page variable for the navbar -->
-<?php $currentPage = 'learn-more';?>
-
 <!--PAGE CONTENT START -->
 
 <!-- Style -->

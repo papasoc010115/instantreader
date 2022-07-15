@@ -112,8 +112,13 @@
             <!--Nav Links-->
             <div class="collapse navbar-collapse" id="agency">
                 <div class="navbar-nav ml-auto">
-                    <a class="nav-link link {{ $currentPage == 'home' ? 'active' : '' }}" href="/" id="nav-home">Home</a>
-                    <div class="nav-link link menu-dropdown {{ $currentPage == 'learn-more' ? 'active' : '' }}">
+                    <a class="nav-link link {{ request()->route()->getName() === 'home' ? 'active' : '' }}" href="/" id="nav-home">Home</a>
+                    <div class="nav-link link menu-dropdown 
+                        {{  request()->route()->getName() === 'learn-more.program-overview' || 
+                            request()->route()->getName() === 'learn-more.reading-assessment' ||
+                            request()->route()->getName() === 'learn-more.kids-club' ||
+                            request()->route()->getName() === 'learn-more.faq'
+                            ? 'active' : '' }}">
                         <a class="unclickable">Learn More</a>
                         <div class="menu-dropdown-content">
                             <a href="{{ route('learn-more.program-overview') }}" id="nav-readingprogram">Reading Programs</a>
@@ -122,7 +127,10 @@
                             <a href="{{ route('learn-more.faq') }}" id="nav-faq">FAQs</a>                            
                         </div>
                     </div>
-                    <div class="nav-link link menu-dropdown {{ $currentPage == 'contact-us' ? 'active' : '' }}">
+                    <div class="nav-link link menu-dropdown
+                        {{  request()->route()->getName() === 'contact-us.book-consultation' || 
+                            request()->route()->getName() === 'contact-us.application'
+                            ? 'active' : '' }}">
                         <a class="unclickable">Contact Us</a>
                         <div class="menu-dropdown-content">
                             <a href="{{ route('contact-us.book-consultation') }}" id="nav-bookconsultation">Free Consultation</a>
