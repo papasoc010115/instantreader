@@ -1,7 +1,6 @@
 @extends('layouts.marketing-layout')
 
 @section('content')
-
 <!--Banner Start-->
 <section class="page-title cursor-light">
     <!-- Pattern Layers -->
@@ -31,7 +30,7 @@
                 <div class="contact-detail">
                     <div class="contact-dots" data-dots=""></div>
                     <!--Heading-->
-                    <div class="heading-area pb-5 justify-content-center">
+                    <div class="heading-area justify-content-center" style="margin-bottom: 1em">
                         <h2 class="title mt-0 pb-1">Lorem Ipsum</h2>
                         <p class="para" style="text-align:justify">There are many variations of passages of Lorem Ipsum available, but the majority
                             have suffered .</p>
@@ -85,7 +84,7 @@
                         </div>
 
                         <div class="col-md-6">
-                            <select list="statuses" class="form-control" style="font-size: 85%"></input>
+                            <select list="statuses" class="form-control" style="font-size: 80%"></input>
                                 <option value="full-time" selected>Full-Time</option>
                                 <option value="part-time">Part-Time</option>
                             </select>
