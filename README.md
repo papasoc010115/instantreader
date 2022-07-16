@@ -1,15 +1,21 @@
 # InstantReader
 
-> This is the project that combines a marketing website and CRM system in a single web application.
+> This is the project that combines a marketing website (multiple pages) and CRM (single page application) system in a single web application.
 
 ## Layouts
 
-> 1. **views/layouts/marketing-layout.blade.php** - Layout for the marketing site (includes header and footer). Use `@section('content')` to put content in between the header and footer.
-> 2. **views/layouts/crm-layout.blade.php** - Layout for the CRM part of the project (includes header and footer). Use `@section('content')` to put content in between the header and footer.
+
+### For Non-SPA pages
+> **instantreader-webapp/resources/views/layouts/marketing-layout.blade.php** - Layout for the marketing site (includes header and footer). Use `@section('content')` to put content in between the header and footer.
+
+### For SPA pages
+> **instantreader-webapp/resources/views/app.blade.php** - ***DO NOT TOUCH THIS!*** This is the blank page that will be manipulated by *Vue JS*.
+
+> **DO NOT USE** `<a>` tags for routing in SPA (CRM). Use the `<Link>` component instead to dynamically render the page that you need based on the provided route. This helps in avoiding unnecessary requests to the server.
 
 ## Assets
-
-> 1. **public/marketing-site/assets** - This is where all the asstes for the marketing site are located.
+> 1. **Favicon.ico** - favicon of Instant Reader
+> 2. **public/marketing-site/assets** - This is where all the assets for the marketing site are located.
 
 
 *<insert notes/guide here>*
