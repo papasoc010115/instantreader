@@ -1,7 +1,7 @@
 <template>
     <!-- NAVIGATION -->
     <div class="container-fluid">
-        <nav class="navbar navbar-expand-md navbar-light">
+        <nav class="navbar navbar-expand-lg navbar-light">
             <Link href="crm" class="navbar-brand">
                 <img
                     src="./img/logo.png"
