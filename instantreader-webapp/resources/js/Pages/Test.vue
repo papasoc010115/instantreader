@@ -1,5 +1,7 @@
 <template>
-    <AppLayout> </AppLayout>
+    <AppLayout
+        ><h2><strong>Page Content</strong></h2></AppLayout
+    >
 </template>
 
 <script>
