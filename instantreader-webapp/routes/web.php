@@ -7,16 +7,21 @@ use Inertia\Inertia;
 /*--------------------------------------------------------------------------
 SPA ROUTES
 --------------------------------------------------------------------------*/
-Route::inertia('/test', 'Test');
+// These are also valid:
+// Route::inertia('/test', 'Test');
+// Route::inertia('/test2', 'Test2');
 
-Route::inertia('/test2', 'Test2');
+Route::get('/test', function () {
+    return Inertia::render('Test');
+});
+
+Route::get('/test2', function () {
+    return Inertia::render('Test2');
+});
 
 /*--------------------------------------------------------------------------
 Non-SPA ROUTES
 --------------------------------------------------------------------------*/
-Route::get('/test', function () {
-    return Inertia::render('Test');
-});
 
 Route::get('/', function () {
     return view('home');
