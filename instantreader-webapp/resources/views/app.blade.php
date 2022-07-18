@@ -18,6 +18,8 @@
         <style>
             body {
                 font-family: 'Sora', sans-serif;
+                margin: 0;
+                padding: 0;          
             }
         </style>
         <!-- JavaScript Bundle with Popper -->
