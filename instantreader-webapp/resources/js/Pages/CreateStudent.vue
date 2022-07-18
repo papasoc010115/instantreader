@@ -11,7 +11,9 @@
                         <Link href="#" class="btn btn-primary btn-circle">
                             <i class="fas fa-angle-left"></i>
                         </Link>
-                        <p class="h2 text-gray-900 form-title">CREATE STUDENT</p>
+                        <p class="h2 text-gray-900 form-title">
+                            CREATE STUDENT
+                        </p>
                     </div>
 
                     <!-- Form Proper -->
@@ -19,17 +21,28 @@
                         <!-- Name Fields -->
                         <div class="form-group row mb-3">
                             <div class="col-sm-6">
-                                <input type="text" class="form-control form-control-user" id="exampleFirstName"
-                                    placeholder="First Name">
+                                <input
+                                    type="text"
+                                    class="form-control form-control-user"
+                                    id="exampleFirstName"
+                                    placeholder="First Name"
+                                />
                             </div>
                             <div class="col-sm-6">
-                                <input type="text" class="form-control form-control-user" id="exampleLastName"
-                                    placeholder="Last Name">
+                                <input
+                                    type="text"
+                                    class="form-control form-control-user"
+                                    id="exampleLastName"
+                                    placeholder="Last Name"
+                                />
                             </div>
                         </div>
                         <!-- Level Selector -->
                         <div class="form-group input-group mb-3">
-                            <select class="custom-select" id="inputGroupSelect02">
+                            <select
+                                class="custom-select"
+                                id="inputGroupSelect02"
+                            >
                                 <option disabled selected>Level</option>
                                 <option value="1">Basic</option>
                                 <option value="2">Advanced</option>
@@ -39,7 +52,10 @@
                         </div>
                         <!-- Day Selector -->
                         <div class="form-group input-group mb-3">
-                            <select class="custom-select" id="inputGroupSelect02">
+                            <select
+                                class="custom-select"
+                                id="inputGroupSelect02"
+                            >
                                 <option disabled selected>Day</option>
                                 <option value="1">MWF</option>
                                 <option value="2">TTh</option>
@@ -47,7 +63,10 @@
                         </div>
                         <!-- Time Selector -->
                         <div class="form-group input-group mb-3">
-                            <select class="custom-select" id="inputGroupSelect02">
+                            <select
+                                class="custom-select"
+                                id="inputGroupSelect02"
+                            >
                                 <option disabled selected>Time</option>
                                 <option value="1">9:00 am - 10:00 am</option>
                                 <option value="2">10:00 am - 11:00 am</option>
@@ -56,17 +75,24 @@
                         </div>
                         <!-- Parent Field -->
                         <div class="form-group mb-3">
-                            <input type="text" class="form-control form-control-user" id="exampleLastName"
-                                placeholder="Parent">
+                            <input
+                                type="text"
+                                class="form-control form-control-user"
+                                id="exampleLastName"
+                                placeholder="Parent"
+                            />
                         </div>
                         <!-- Create Button -->
                         <div class="form-group">
-                            <Link href="#" class="btn btn-primary btn-user btn-block">
+                            <Link
+                                href="#"
+                                class="btn btn-primary btn-user btn-block"
+                            >
                                 Create
                             </Link>
                         </div>
                     </form>
-                </div>               
+                </div>
             </div>
         </div>
     </AppLayout>
@@ -80,36 +106,32 @@ export default {
         Link,
         AppLayout,
     },
-    data() {
-    },
-    methods: {
-    },
+    data() {},
+    methods: {},
 };
 </script>
 
 <style scoped>
+@import "../../../public/crm-site/assets/css/sb-admin-2.css";
 
-@import "../../../public/crm/assets/css/sb-admin-2.css";
-
-.form-container{
-  width: 100%;
+.form-container {
+    width: 100%;
 }
 
-.form-title-container{
-  display: flex;
-  margin: 0px 0px 40px 0px;
+.form-title-container {
+    display: flex;
+    margin: 0px 0px 40px 0px;
 }
 
-.form-title{
-  margin: 0px 0px 0px 20px;
+.form-title {
+    margin: 0px 0px 0px 20px;
 }
 
-.custom-select{
+.custom-select {
     font-size: 0.8rem;
     border-radius: 10rem;
-    height:50px;
+    height: 50px;
     color: #858796;
     opacity: 1;
 }
-
 </style>
