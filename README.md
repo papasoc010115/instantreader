@@ -12,7 +12,7 @@
 ### For SPA pages
 > **instantreader-webapp/resources/views/app.blade.php** - ***DO NOT TOUCH THIS!*** This is the blank page that will be manipulated by *Vue JS*.
 
->  **instantreader-webapp/resources/js/Pages/** - This is the directory where you create `.vue` files to make dynamic pages. 
+>  **instantreader-webapp/resources/js/Pages/** - This is the directory where you create `.vue` files to make dynamic pages. Use the `<AppLayout>` component.
 
 >**instantreader-webapp/resources/js/components/** - Create this folder (if not yet existing). This is where you can put your `.vue` files for your components.
 
