@@ -11,12 +11,8 @@ SPA ROUTES
 // Route::inertia('/test', 'Test');
 // Route::inertia('/test2', 'Test2');
 
-Route::get('/test', function () {
+Route::get('/crm', function () {
     return Inertia::render('Test');
-});
-
-Route::get('/test2', function () {
-    return Inertia::render('Test2');
 });
 
 /*--------------------------------------------------------------------------
