@@ -2,9 +2,12 @@
     <AppLayout>
       <div class="container">
           <div class="pt-5 pb-5">
-              <!-- Header -->
+              <!-- Header with Back Button-->
               <div class="d-flex">
-                <div>
+                <Link href="#" class="btn btn-primary btn-circle">
+                    <i class="fas fa-angle-left"></i>
+                </Link>
+                <div class="ml-3">
                     <p class="h2 text-gray-900 mb-4">VIEW PARENT</p>
                 </div>
               </div>
