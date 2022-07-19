@@ -6,7 +6,7 @@
             <!-- Sidebar -->
             <Sidebar />
             <!-- Page Content  -->
-            <div class="content col-sm p-3 min-vh-100">
+            <div class="content col-lg p-3 min-vh-100">
                 <slot />
             </div>
         </div>

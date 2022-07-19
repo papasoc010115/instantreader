@@ -1,10 +1,10 @@
 <template>
-    <div class="sidebar col-sm-auto bg-light sticky-top">
+    <div class="sidebar col-lg-auto bg-light sticky-top">
         <div
-            class="d-flex flex-sm-column flex-row flex-nowrap bg-light align-items-center sticky-top"
+            class="d-flex flex-lg-column flex-row flex-nowrap bg-light align-items-center sticky-top"
         >
             <ul
-                class="nav nav-pills nav-flush flex-sm-column flex-row flex-nowrap mb-auto mx-auto text-center align-items-center"
+                class="nav nav-pills nav-flush flex-lg-column flex-row flex-nowrap mb-auto mx-auto text-center align-items-center"
             >
                 <li class="nav-item">
                     <a href="#" class="nav-link" title="manage users">

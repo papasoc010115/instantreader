@@ -2,7 +2,7 @@
 
 <template>
     <AppLayout>
-        <div class="container">
+        <div class="container-fluid">
             <div class="pt-5 pb-5">
                 <!-- Header with Back Button, Search Bar -->
                 <div class="d-flex">
