@@ -28,6 +28,7 @@ export default {
 <style>
 .page {
     margin-top: 0.3%;
+    width: 100%;
 }
 .content {
     padding: 1rem 3rem !important;
