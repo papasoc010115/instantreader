@@ -61,10 +61,10 @@
                                 <td>10</td>
                                 <td>10</td>
                                 <td>
-                                    <Link href="#">View List</Link>
+                                    <Link href="/crm/admin/manage-classrooms/students">View List</Link>
                                 </td>
                                 <td>
-                                    <Link href="#"
+                                    <Link href="/crm/admin/manage-classrooms/students/edit-student"
                                         ><i class="fas fa-pen mr-3" id="edit-icon"></i
                                     ></Link>
                                     <Link href="#"
@@ -79,10 +79,10 @@
                                 <td>15</td>
                                 <td>5</td>
                                 <td>
-                                    <Link href="#">View List</Link>
+                                    <Link href="/crm/admin/manage-classrooms/students">View List</Link>
                                 </td>
                                 <td>
-                                    <Link href="#"
+                                    <Link href="/crm/admin/manage-classrooms/students/edit-student"
                                         ><i class="fas fa-pen mr-3" id="edit-icon"></i
                                     ></Link>
                                     <Link href="#"
@@ -97,10 +97,10 @@
                                 <td>17</td>
                                 <td>3</td>
                                 <td>
-                                    <Link href="#">View List</Link>
+                                    <Link href="/crm/admin/manage-classrooms/students">View List</Link>
                                 </td>
                                 <td>
-                                    <Link href="#"
+                                    <Link href="/crm/admin/manage-classrooms/students/edit-student"
                                         ><i class="fas fa-pen mr-3" id="edit-icon"></i
                                     ></Link>
                                     <Link href="#"
@@ -115,10 +115,10 @@
                                 <td>10</td>
                                 <td>10</td>
                                 <td>
-                                    <Link href="#">View List</Link>
+                                    <Link href="/crm/admin/manage-classrooms/students">View List</Link>
                                 </td>
                                 <td>
-                                    <Link href="#"
+                                    <Link href="/crm/admin/manage-classrooms/students/edit-student"
                                         ><i class="fas fa-pen mr-3" id="edit-icon"></i
                                     ></Link>
                                     <Link href="#"
@@ -133,10 +133,10 @@
                                 <td>15</td>
                                 <td>5</td>
                                 <td>
-                                    <Link href="#">View List</Link>
+                                    <Link href="/crm/admin/manage-classrooms/students">View List</Link>
                                 </td>
                                 <td>
-                                    <Link href="#"
+                                    <Link href="/crm/admin/manage-classrooms/students/edit-student"
                                         ><i class="fas fa-pen mr-3" id="edit-icon"></i
                                     ></Link>
                                     <Link href="#"
@@ -151,10 +151,10 @@
                                 <td>17</td>
                                 <td>3</td>
                                 <td>
-                                    <Link href="#">View List</Link>
+                                    <Link href="/crm/admin/manage-classrooms/students">View List</Link>
                                 </td>
                                 <td>
-                                    <Link href="#"
+                                    <Link href="/crm/admin/manage-classrooms/students/edit-student"
                                         ><i class="fas fa-pen mr-3" id="edit-icon"></i
                                     ></Link>
                                     <Link href="#"
@@ -169,10 +169,10 @@
                                 <td>10</td>
                                 <td>10</td>
                                 <td>
-                                    <Link href="#">View List</Link>
+                                    <Link href="/crm/admin/manage-classrooms/students">View List</Link>
                                 </td>
                                 <td>
-                                    <Link href="#"
+                                    <Link href="/crm/admin/manage-classrooms/students/edit-student"
                                         ><i class="fas fa-pen mr-3" id="edit-icon"></i
                                     ></Link>
                                     <Link href="#"
@@ -187,7 +187,7 @@
                 <!-- Add Class & Pagination -->
                 <div class="d-flex pt-3">
                     <div>
-                        <Link href="#" class="btn btn-primary btn-icon-split">
+                        <Link href="/crm/admin/manage-classrooms/create-classroom" class="btn btn-primary btn-icon-split">
                             <span class="icon text-white-50">
                                 <i class="fas fa-plus"></i>
                             </span>
