@@ -2,14 +2,14 @@
     <!-- NAVIGATION -->
     <div class="container-fluid">
         <nav class="navbar navbar-expand-lg navbar-light">
-            <Link href="crm" class="navbar-brand">
+            <span class="navbar-brand">
                 <img
                     src="./img/logo.png"
                     alt="logo"
                     class="d-inline-block align-top"
                     width="300"
                 />
-            </Link>
+            </span>
 
             <!-- toggler (mobile mode) -->
             <button
@@ -28,13 +28,30 @@
             <div class="collapse navbar-collapse" id="toggleMobileMenu">
                 <ul class="navbar-nav ms-auto text-center">
                     <li>
-                        <Link class="nav-link px-5">Sales & Marketing</Link>
+                        <Link
+                            href="/crm/sales/contact-management"
+                            class="nav-link px-5"
+                            :class="{ active: $page.url.includes('/sales') }"
+                            >Sales & Marketing</Link
+                        >
                     </li>
                     <li>
-                        <Link class="nav-link px-5">Operations</Link>
+                        <Link
+                            href="/crm/operations/bulletin-board"
+                            class="nav-link px-5"
+                            :class="{
+                                active: $page.url.includes('/operations'),
+                            }"
+                            >Operations</Link
+                        >
                     </li>
                     <li>
-                        <Link class="nav-link px-5 active">Admin</Link>
+                        <Link
+                            href="/crm/admin/manage-users"
+                            class="nav-link px-5"
+                            :class="{ active: $page.url.includes('/admin') }"
+                            >Admin</Link
+                        >
                     </li>
                 </ul>
             </div>

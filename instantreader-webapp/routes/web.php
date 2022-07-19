@@ -7,11 +7,62 @@ use Inertia\Inertia;
 /*--------------------------------------------------------------------------
 SPA ROUTES
 --------------------------------------------------------------------------*/
-// These are also valid:
-// Route::inertia('/test', 'Test');
-// Route::inertia('/test2', 'Test2');
+// Admin routes
+Route::get('/crm/admin/manage-users', function () {
+    return Inertia::render('Test');
+});
 
-Route::get('/crm', function () {
+Route::get('/crm/admin/manage-calendar', function () {
+    return Inertia::render('Test');
+});
+
+Route::get('/crm/admin/manage-classrooms', function () {
+    return Inertia::render('Test');
+});
+
+Route::get('/crm/admin/manage-tutors', function () {
+    return Inertia::render('Test');
+});
+
+// Operations routes
+Route::get('/crm/operations/bulletin-board', function () {
+    return Inertia::render('Test');
+});
+
+Route::get('/crm/operations/classrooms', function () {
+    return Inertia::render('Test');
+});
+
+Route::get('/crm/operations/tutor-lounge', function () {
+    return Inertia::render('Test');
+});
+
+Route::get('/crm/operations/ir-calendar', function () {
+    return Inertia::render('Test');
+});
+
+// Sales routes
+Route::get('/crm/sales/contact-management', function () {
+    return Inertia::render('Test');
+});
+
+Route::get('/crm/sales/client-interaction-tracking', function () {
+    return Inertia::render('Test');
+});
+
+Route::get('/crm/sales/lead-management', function () {
+    return Inertia::render('Test');
+});
+
+Route::get('/crm/sales/customer-analytics', function () {
+    return Inertia::render('Test');
+});
+
+Route::get('/crm/sales/sales-forecast', function () {
+    return Inertia::render('Test');
+});
+
+Route::get('/crm/sales/sales-activity', function () {
     return Inertia::render('Test');
 });
 
