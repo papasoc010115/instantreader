@@ -8,7 +8,7 @@
                 <div class="p-5 form-container">
                     <!-- Header with Back Button -->
                     <div class="form-title-container">
-                        <Link href="#" class="btn btn-primary btn-circle">
+                        <Link href="/crm/admin/manage-users" class="btn btn-circle" id="back-btn">
                             <i class="fas fa-angle-left"></i>
                         </Link>
                         <p class="h2 text-gray-900 form-title">CREATE USER</p>
@@ -128,5 +128,20 @@ export default {
 
 .file-upload {
     margin: 0px 0px 0px 20px;
+}
+
+#back-btn {
+    color: white;
+    background-color: #282525;
+
+} #back-btn:hover {
+    color: #fff;
+    background-color: #282525;
+    border-color: #282525;
+} #back-btn:focus {
+    color: #fff;
+    background-color: #282525;
+    border-color: #282525;
+    box-shadow: 0 0 0 0.1rem #9e9898;
 }
 </style>
