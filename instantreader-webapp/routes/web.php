@@ -32,6 +32,14 @@ Route::get('/crm/admin/manage-classrooms', function () {
     return Inertia::render('ManageClassrooms');
 });
 
+Route::get('/crm/admin/manage-classrooms/create-classroom', function () {
+    return Inertia::render('CreateClassroom');
+});
+
+Route::get('/crm/admin/manage-classrooms/edit-classroom', function () {
+    return Inertia::render('EditClassroom');
+});
+
 Route::get('/crm/admin/manage-classrooms/students', function () {
     return Inertia::render('ViewStudents');
 });
@@ -48,7 +56,7 @@ Route::get('/crm/admin/manage-classrooms/students/parent', function () {
     return Inertia::render('ViewParent');
 });
 
-Route::get('/crm/admin/manage-classrooms/students/edit-parent', function () {
+Route::get('/crm/admin/manage-classrooms/students/parent/edit-parent', function () {
     return Inertia::render('EditParent');
 });
 
