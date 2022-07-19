@@ -69,7 +69,7 @@
                                 <td v-if="index%2==0" class="align-middle"><i class="fas fa-check fa-lg" id="check-icon"></i></td>
                                 <td v-else class="align-middle"><i class="fas fa-xmark fa-lg" id="x-icon"></i></td>
                                 <td class="align-middle">
-                                    <Link href="#"
+                                    <Link href="/crm/admin/manage-users/edit-user"
                                         ><i class="fas fa-pen mr-3"></i
                                     ></Link>
                                     <Link href="#"
@@ -84,7 +84,7 @@
                 <!-- Add User & Pagination -->
                 <div class="d-flex pt-3">
                     <div>
-                        <Link href="#" class="btn btn-primary btn-icon-split">
+                        <Link href="/crm/admin/manage-users/create-user" class="btn btn-primary btn-icon-split">
                             <span class="icon text-white-50">
                                 <i class="fas fa-plus"></i>
                             </span>
@@ -148,7 +148,9 @@ export default {
 
 <style scoped>
 @import "../../../public/crm-site/assets/css/sb-admin-2.css";
-
+.h2 {
+    font-weight: bold;
+}
 tr {
     line-height: 50px;
     min-height: 50px;
