@@ -65,64 +65,10 @@
                                 </td>
                                 <td>
                                     <Link href="#"
-                                        ><i class="fas fa-pen mr-3"></i
+                                        ><i class="fas fa-pen mr-3" id="edit-icon"></i
                                     ></Link>
                                     <Link href="#"
-                                        ><i class="fas fa-trash ml-3"></i
-                                    ></Link>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>#21253</td>
-                                <td>Los Baños</td>
-                                <td>Reyna Santos</td>
-                                <td>15</td>
-                                <td>5</td>
-                                <td>
-                                    <Link href="#">View List</Link>
-                                </td>
-                                <td>
-                                    <Link href="#"
-                                        ><i class="fas fa-pen mr-3"></i
-                                    ></Link>
-                                    <Link href="#"
-                                        ><i class="fas fa-trash ml-3"></i
-                                    ></Link>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>#02496</td>
-                                <td>Cabuyao</td>
-                                <td>Yoru Kageyama</td>
-                                <td>17</td>
-                                <td>3</td>
-                                <td>
-                                    <Link href="#">View List</Link>
-                                </td>
-                                <td>
-                                    <Link href="#"
-                                        ><i class="fas fa-pen mr-3"></i
-                                    ></Link>
-                                    <Link href="#"
-                                        ><i class="fas fa-trash ml-3"></i
-                                    ></Link>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>#012345</td>
-                                <td>Calamba</td>
-                                <td>Sage Wong</td>
-                                <td>10</td>
-                                <td>10</td>
-                                <td>
-                                    <Link href="#">View List</Link>
-                                </td>
-                                <td>
-                                    <Link href="#"
-                                        ><i class="fas fa-pen mr-3"></i
-                                    ></Link>
-                                    <Link href="#"
-                                        ><i class="fas fa-trash ml-3"></i
+                                        ><i class="fas fa-trash ml-3" id="trash-icon"></i
                                     ></Link>
                                 </td>
                             </tr>
@@ -137,10 +83,10 @@
                                 </td>
                                 <td>
                                     <Link href="#"
-                                        ><i class="fas fa-pen mr-3"></i
+                                        ><i class="fas fa-pen mr-3" id="edit-icon"></i
                                     ></Link>
                                     <Link href="#"
-                                        ><i class="fas fa-trash ml-3"></i
+                                        ><i class="fas fa-trash ml-3" id="trash-icon"></i
                                     ></Link>
                                 </td>
                             </tr>
@@ -155,10 +101,10 @@
                                 </td>
                                 <td>
                                     <Link href="#"
-                                        ><i class="fas fa-pen mr-3"></i
+                                        ><i class="fas fa-pen mr-3" id="edit-icon"></i
                                     ></Link>
                                     <Link href="#"
-                                        ><i class="fas fa-trash ml-3"></i
+                                        ><i class="fas fa-trash ml-3" id="trash-icon"></i
                                     ></Link>
                                 </td>
                             </tr>
@@ -173,10 +119,64 @@
                                 </td>
                                 <td>
                                     <Link href="#"
-                                        ><i class="fas fa-pen mr-3"></i
+                                        ><i class="fas fa-pen mr-3" id="edit-icon"></i
                                     ></Link>
                                     <Link href="#"
-                                        ><i class="fas fa-trash ml-3"></i
+                                        ><i class="fas fa-trash ml-3" id="trash-icon"></i
+                                    ></Link>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#21253</td>
+                                <td>Los Baños</td>
+                                <td>Reyna Santos</td>
+                                <td>15</td>
+                                <td>5</td>
+                                <td>
+                                    <Link href="#">View List</Link>
+                                </td>
+                                <td>
+                                    <Link href="#"
+                                        ><i class="fas fa-pen mr-3" id="edit-icon"></i
+                                    ></Link>
+                                    <Link href="#"
+                                        ><i class="fas fa-trash ml-3" id="trash-icon"></i
+                                    ></Link>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#02496</td>
+                                <td>Cabuyao</td>
+                                <td>Yoru Kageyama</td>
+                                <td>17</td>
+                                <td>3</td>
+                                <td>
+                                    <Link href="#">View List</Link>
+                                </td>
+                                <td>
+                                    <Link href="#"
+                                        ><i class="fas fa-pen mr-3" id="edit-icon"></i
+                                    ></Link>
+                                    <Link href="#"
+                                        ><i class="fas fa-trash ml-3" id="trash-icon"></i
+                                    ></Link>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#012345</td>
+                                <td>Calamba</td>
+                                <td>Sage Wong</td>
+                                <td>10</td>
+                                <td>10</td>
+                                <td>
+                                    <Link href="#">View List</Link>
+                                </td>
+                                <td>
+                                    <Link href="#"
+                                        ><i class="fas fa-pen mr-3" id="edit-icon"></i
+                                    ></Link>
+                                    <Link href="#"
+                                        ><i class="fas fa-trash ml-3" id="trash-icon"></i
                                     ></Link>
                                 </td>
                             </tr>
@@ -251,10 +251,21 @@ export default {
 
 <style scoped>
 @import "../../../public/crm-site/assets/css/sb-admin-2.css";
-
+.h2 {
+    font-weight: bold;
+}
 tr {
     line-height: 75px;
     min-height: 75px;
     height: 75px;
+} #trash-icon {
+    margin-left: 2rem;
+    color: #757474;
+} #trash-icon:hover {
+    color: #000;
+} #edit-icon {
+    color: #757474;
+} #edit-icon:hover {
+    color: #000;
 }
 </style>
