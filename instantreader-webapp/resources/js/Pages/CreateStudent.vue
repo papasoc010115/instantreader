@@ -19,67 +19,78 @@
                     <form class="user p-5">
                         <!-- Name Fields -->
                         <div class="form-group row mb-3">
-                            <div class="col-sm-6">
+                            <div class="col-lg-6">
+                                <label class="ml-2">First Name</label>
                                 <input
                                     type="text"
                                     class="form-control form-control-user"
-                                    id="exampleFirstName"
-                                    placeholder="First Name"
+                                    id="studentFirstName"
+                                    placeholder="e.g. Juan"
                                 />
                             </div>
-                            <div class="col-sm-6">
+                            <div class="col-lg-6">
+                                <label class="ml-2">Last Name</label>
                                 <input
                                     type="text"
                                     class="form-control form-control-user"
-                                    id="exampleLastName"
-                                    placeholder="Last Name"
+                                    id="studentLastName"
+                                    placeholder="e.g. Dela Cruz"
                                 />
+                            </div>
+                        </div>
+                        <!-- Schedule Fields -->
+                        <div class="form-group row mb-3">
+                            <div class="col-lg-6">
+                                <label class="ml-2">Weekly Schedule</label>
+                                <select
+                                    class="custom-select"
+                                    id="inputGroupSelect02"
+                                >
+                                    <option disabled selected>Days</option>
+                                    <option value="1">MWF</option>
+                                    <option value="2">TTh</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-6">
+                                <label class="ml-2">Time</label>
+                                <select
+                                    class="custom-select"
+                                    id="inputGroupSelect02"
+                                >
+                                    <option disabled selected>Time</option>
+                                    <option value="1">9:00 am - 10:00 am</option>
+                                    <option value="2">10:00 am - 11:00 am</option>
+                                    <option value="3">11:00 am - 12:00 am</option>
+                                </select>
                             </div>
                         </div>
                         <!-- Level Selector -->
-                        <div class="form-group input-group mb-3">
-                            <select
-                                class="custom-select"
-                                id="inputGroupSelect02"
-                            >
-                                <option disabled selected>Level</option>
-                                <option value="1">Basic</option>
-                                <option value="2">Advanced</option>
-                                <option value="3">Mastery</option>
-                                <option value="3">Compass</option>
-                            </select>
-                        </div>
-                        <!-- Day Selector -->
-                        <div class="form-group input-group mb-3">
-                            <select
-                                class="custom-select"
-                                id="inputGroupSelect02"
-                            >
-                                <option disabled selected>Day</option>
-                                <option value="1">MWF</option>
-                                <option value="2">TTh</option>
-                            </select>
-                        </div>
-                        <!-- Time Selector -->
-                        <div class="form-group input-group mb-3">
-                            <select
-                                class="custom-select"
-                                id="inputGroupSelect02"
-                            >
-                                <option disabled selected>Time</option>
-                                <option value="1">9:00 am - 10:00 am</option>
-                                <option value="2">10:00 am - 11:00 am</option>
-                                <option value="3">11:00 am - 12:00 am</option>
-                            </select>
+                        <div class="form-group row mb-3">
+                            <div class="col-lg-6">
+                                <label class="ml-2">Reading Level</label>
+                                <select
+                                    class="custom-select"
+                                    id="inputGroupSelect02"
+                                >
+                                    <option disabled selected>Level</option>
+                                    <option value="1">Basic</option>
+                                    <option value="2">Advanced</option>
+                                    <option value="3">Mastery</option>
+                                    <option value="3">Compass</option>
+                                </select>
+                            </div>
                         </div>
                         <!-- Parent Field -->
-                        <div class="form-group mb-3">
-                            <input
-                                type="text"
-                                class="form-control form-control-user"
-                                id="exampleLastName"
-                                placeholder="Parent"
-                            />
+                        <div class="form-group row mb-5">
+                            <div class="col-lg-6">
+                                <label class="ml-2">Parent</label>
+                                <input
+                                    type="text"
+                                    class="form-control form-control-user"
+                                    id="studentParent"
+                                    placeholder="Parent"
+                                />
+                            </div>
                         </div>
                         <!-- Create Button -->
                         <div class="form-group">
@@ -105,7 +116,6 @@ export default {
         Link,
         AppLayout,
     },
-    data() {},
     methods: {},
 };
 </script>
@@ -132,5 +142,20 @@ export default {
     height: 50px;
     color: #858796;
     opacity: 1;
+}
+
+#back-btn {
+    color: white;
+    background-color: #282525;
+
+} #back-btn:hover {
+    color: #fff;
+    background-color: #282525;
+    border-color: #282525;
+} #back-btn:focus {
+    color: #fff;
+    background-color: #282525;
+    border-color: #282525;
+    box-shadow: 0 0 0 0.1rem #9e9898;
 }
 </style>
