@@ -8,7 +8,7 @@
                 <div class="p-5 form-container">
                     <!-- Header with Back Button -->
                     <div class="form-title-container">
-                        <Link href="#" class="btn btn-primary btn-circle">
+                        <Link href="/crm/admin/manage-classrooms/students" class="btn btn-circle" id="back-btn">
                             <i class="fas fa-angle-left"></i>
                         </Link>
                         <p class="h2 text-gray-900 form-title">
