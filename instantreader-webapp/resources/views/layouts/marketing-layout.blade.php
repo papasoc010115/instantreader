@@ -23,6 +23,17 @@
     <!-- Style Sheet -->
     <link href="{{ asset('marketing-site/assets/agency/css/style.css') }}" rel="stylesheet">
     <style>
+         body::-webkit-scrollbar {
+                width: 0.25rem;
+            }
+
+            body::-webkit-scrollbar-track {
+                background: #3c3d40;
+            }
+
+            body::-webkit-scrollbar-thumb {
+                background: white;
+            }
 
         .profile-pic{
             margin-top: 10px;
