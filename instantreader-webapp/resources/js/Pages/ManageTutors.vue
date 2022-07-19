@@ -70,7 +70,7 @@
                                 </td>
                                 <td class="align-middle">15</td>
                                 <td class="align-middle">
-                                    <Link href="#"
+                                    <Link href="/crm/admin/manage-tutors/edit-tutor"
                                         ><i class="fas fa-pen mr-3" id="edit-icon"></i>
                                     </Link>
                                     <Link href="#"
@@ -108,7 +108,7 @@
                 <!-- Add Tutor & Pagination -->
                 <div class="d-flex pt-3">
                     <div>
-                        <Link href="#" class="btn btn-primary btn-icon-split">
+                        <Link href="/crm/admin/manage-tutors/create-tutor" class="btn btn-primary btn-icon-split">
                             <span class="icon text-white-50">
                                 <i class="fas fa-plus"></i>
                             </span>
@@ -172,7 +172,9 @@ export default {
 
 <style scoped>
 @import "../../../public/crm-site/assets/css/sb-admin-2.css";
-
+.h2 {
+    font-weight: bold;
+}
 tr {
     line-height: 50px;
     min-height: 50px;
