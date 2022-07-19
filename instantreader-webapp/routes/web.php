@@ -8,21 +8,63 @@ use Inertia\Inertia;
 SPA ROUTES
 --------------------------------------------------------------------------*/
 // Admin routes
+
+//// Manage Users
 Route::get('/crm/admin/manage-users', function () {
-    return Inertia::render('Test');
+    return Inertia::render('ManageUsers');
 });
 
+Route::get('/crm/admin/manage-users/create-user', function () {
+    return Inertia::render('CreateUser');
+});
+
+Route::get('/crm/admin/manage-users/edit-user', function () {
+    return Inertia::render('EditUser');
+});
+
+//// Manage Calendar
 Route::get('/crm/admin/manage-calendar', function () {
     return Inertia::render('Test');
 });
 
+//// Manage Classrooms
 Route::get('/crm/admin/manage-classrooms', function () {
     return Inertia::render('ManageClassrooms');
 });
 
-Route::get('/crm/admin/manage-tutors', function () {
-    return Inertia::render('Test');
+Route::get('/crm/admin/manage-classrooms/students', function () {
+    return Inertia::render('ViewStudents');
 });
+
+Route::get('/crm/admin/manage-classrooms/students/create-student', function () {
+    return Inertia::render('CreateStudent');
+});
+
+Route::get('/crm/admin/manage-classrooms/students/edit-student', function () {
+    return Inertia::render('EditStudent');
+});
+
+Route::get('/crm/admin/manage-classrooms/students/parent', function () {
+    return Inertia::render('ViewParent');
+});
+
+Route::get('/crm/admin/manage-classrooms/students/edit-parent', function () {
+    return Inertia::render('EditParent');
+});
+
+//// Manage Tutors
+Route::get('/crm/admin/manage-tutors', function () {
+    return Inertia::render('ManageTutors');
+});
+
+Route::get('/crm/admin/manage-tutors/create-tutor', function () {
+    return Inertia::render('CreateTutor');
+});
+
+Route::get('/crm/admin/manage-tutors/edit-tutor', function () {
+    return Inertia::render('EditTutor');
+});
+
 
 // Operations routes
 Route::get('/crm/operations/bulletin-board', function () {
@@ -40,6 +82,7 @@ Route::get('/crm/operations/tutors-lounge', function () {
 Route::get('/crm/operations/ir-calendar', function () {
     return Inertia::render('Test');
 });
+
 
 // Sales routes
 Route::get('/crm/sales/contact-management', function () {
