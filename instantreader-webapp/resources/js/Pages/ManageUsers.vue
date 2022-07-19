@@ -161,14 +161,9 @@ tr {
     color: #29CB4D;
 } #x-icon {
     color: #FF6363;
-} #trash-icon {
-    margin-left: 2rem;
+} #trash-icon, #edit-icon {
     color: #757474;
-} #trash-icon:hover {
-    color: #000;
-} #edit-icon {
-    color: #757474;
-} #edit-icon:hover {
+} #trash-icon:hover, #edit-icon:hover {
     color: #000;
 }
 </style>

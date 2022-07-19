@@ -182,14 +182,9 @@ tr {
     border-radius: 50%;
     margin-left: 5%;
     margin-right: 5%;
-} #trash-icon {
-    margin-left: 2rem;
+} #trash-icon, #edit-icon {
     color: #757474;
-} #trash-icon:hover {
-    color: #000;
-} #edit-icon {
-    color: #757474;
-} #edit-icon:hover {
+} #trash-icon:hover, #edit-icon:hover {
     color: #000;
 }
 </style>
