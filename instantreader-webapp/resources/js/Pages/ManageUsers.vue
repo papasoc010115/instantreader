@@ -70,10 +70,10 @@
                                 <td v-else class="align-middle"><i class="fas fa-xmark fa-lg" id="x-icon"></i></td>
                                 <td class="align-middle">
                                     <Link href="/crm/admin/manage-users/edit-user"
-                                        ><i class="fas fa-pen mr-3"></i
+                                        ><i class="fas fa-pen mr-3" id="edit-icon"></i
                                     ></Link>
                                     <Link href="#"
-                                        ><i class="fas fa-trash ml-3"></i
+                                        ><i class="fas fa-trash ml-3" id="trash-icon"></i
                                     ></Link>
                                 </td>
                             </tr>
@@ -162,5 +162,14 @@ tr {
     color: #29CB4D;
 } #x-icon {
     color: #FF6363;
+} #trash-icon {
+    margin-left: 2rem;
+    color: #757474;
+} #trash-icon:hover {
+    color: #000;
+} #edit-icon {
+    color: #757474;
+} #edit-icon:hover {
+    color: #000;
 }
 </style>
