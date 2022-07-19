@@ -2,8 +2,7 @@
 
 <template>
     <AppLayout>
-        <div class="container">
-            <!-- Nested Row within Card Body -->
+        <div class="container-fluid">
             <div class="row">
                 <div class="p-5 form-container">
                     <!-- Header with Back Button -->

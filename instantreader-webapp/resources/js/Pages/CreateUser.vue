@@ -2,7 +2,7 @@
 
 <template>
     <AppLayout>
-        <div class="container">
+        <div class="container-fluid">
             <!-- Nested Row within Card Body -->
             <div class="row">
                 <div class="p-5 form-container">

@@ -17,7 +17,7 @@ Route::get('/crm/admin/manage-calendar', function () {
 });
 
 Route::get('/crm/admin/manage-classrooms', function () {
-    return Inertia::render('Test');
+    return Inertia::render('ManageClassrooms');
 });
 
 Route::get('/crm/admin/manage-tutors', function () {
@@ -26,7 +26,7 @@ Route::get('/crm/admin/manage-tutors', function () {
 
 // Operations routes
 Route::get('/crm/operations/bulletin-board', function () {
-    return Inertia::render('Test');
+    return Inertia::render('BulletinBoard');
 });
 
 Route::get('/crm/operations/classrooms', function () {
@@ -34,7 +34,7 @@ Route::get('/crm/operations/classrooms', function () {
 });
 
 Route::get('/crm/operations/tutors-lounge', function () {
-    return Inertia::render('Test');
+    return Inertia::render('TutorsLounge');
 });
 
 Route::get('/crm/operations/ir-calendar', function () {

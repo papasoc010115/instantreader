@@ -4,11 +4,8 @@
     <AppLayout>
         <div class="container-fluid">
             <div class="pt-5 pb-5">
-                <!-- Header with Back Button, Search Bar -->
+                <!-- Header with Search Bar -->
                 <div class="d-flex">
-                    <Link href="#" class="btn btn-primary btn-circle">
-                        <i class="fas fa-angle-left"></i>
-                    </Link>
                     <div class="ml-3">
                         <p class="h2 text-gray-900 mb-4">MANAGE CLASSROOMS</p>
                     </div>
