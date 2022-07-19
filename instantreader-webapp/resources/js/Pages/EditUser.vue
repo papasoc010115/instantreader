@@ -19,40 +19,66 @@
                     <form class="user p-5">
                         <!-- Name Fields -->
                         <div class="form-group row mb-3">
-                            <div class="col-sm-6">
+                            <div class="col-lg-6">
+                                <label class="ml-2">First Name</label>
                                 <input
                                     type="text"
                                     class="form-control form-control-user"
-                                    id="exampleFirstName"
-                                    value="Skye Kaye"
+                                    id="userFirstName"
+                                    value="Juan"
                                 />
                             </div>
-                            <div class="col-sm-6">
+                            <div class="col-lg-6">
+                                <label class="ml-2">Last Name</label>
                                 <input
                                     type="text"
                                     class="form-control form-control-user"
-                                    id="exampleLastName"
-                                    value="Ramos"
+                                    id="userLastName"
+                                    value="Dela Cruz"
                                 />
                             </div>
                         </div>
-                        <!-- Email Field -->
-                        <div class="form-group mb-3">
-                            <input
-                                type="email"
-                                class="form-control form-control-user"
-                                id="exampleInputEmail"
-                                value="email@email.com"
-                            />
+                        <!-- Nickname and Position Field -->
+                        <div class="form-group row mb-4">
+                            <div class="col-lg-6">
+                                <label class="ml-2">Nickname</label>
+                                <input
+                                    type="text"
+                                    class="form-control form-control-user"
+                                    id="userNickname"
+                                    value="Ju"
+                                />
+                            </div>
+                            <div class="col-lg-6">
+                                <label class="ml-2">Position</label>
+                                <input
+                                    type="text"
+                                    class="form-control form-control-user"
+                                    id="userEmail"
+                                    value="Manager"
+                                />
+                            </div>
                         </div>
-                        <!-- Position Field -->
-                        <div class="form-group mb-3">
-                            <input
-                                type="text"
-                                class="form-control form-control-user"
-                                id="exampleInputPosition"
-                                value="Back-end Developer"
-                            />
+                        <!-- Contacts Field -->
+                        <div class="form-group row mb-4">
+                            <div class="col-lg-6">
+                                <label class="ml-2">Contact No.</label>
+                                <input
+                                    type="text"
+                                    class="form-control form-control-user"
+                                    id="userContactNo"
+                                    value="09123456789"
+                                />
+                            </div>
+                            <div class="col-lg-6">
+                                <label class="ml-2">Email</label>
+                                <input
+                                    type="text"
+                                    class="form-control form-control-user"
+                                    id="userEmail"
+                                    value="email@email.com"
+                                />
+                            </div>
                         </div>
                         <!-- Admin Checkbox -->
                         <div class="form-group mb-3">
@@ -64,7 +90,7 @@
                                     id="flexCheckChecked"
                                 />
                                 <label
-                                    class="form-check-label"
+                                    class="form-check-label ml-2"
                                     for="flexCheckChecked"
                                 >
                                     Is Admin
@@ -72,16 +98,14 @@
                             </div>
                         </div>
                         <!-- Profile Picture -->
-                        <div class="form-group mb-3">
-                            <label for="exampleInputFile" class=""
-                                >Profile Picture</label
-                            >
-                            <input
-                                type="file"
-                                class="file-upload"
-                                id="exampleInputFile"
-                                placeholder="Profile Picture"
-                            />
+                        <div class="form-group mb-5 row">
+                            <label for="userProfilePicture" class="col-lg-2 col-form-label ml-2">Profile Picture</label>
+                            <div class="col-lg-3 custom-file">
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" id="customFile">
+                                    <label class="custom-file-label" for="customFile">Choose file</label>
+                                </div>
+                            </div>
                         </div>
                         <div class="form-group">
                             <Link
@@ -106,7 +130,6 @@ export default {
         Link,
         AppLayout,
     },
-    data() {},
     methods: {},
 };
 </script>
