@@ -6,7 +6,7 @@
             <div class="pt-5 pb-5">
                 <!-- Header with Back Button-->
                 <div class="d-flex">
-                    <Link href="#" class="btn btn-primary btn-circle">
+                    <Link href="/crm/admin/manage-classrooms/students" class="btn btn-circle" id="back-btn">
                         <i class="fas fa-angle-left"></i>
                     </Link>
                     <div class="ml-3">
@@ -40,11 +40,11 @@
                                 <td class="align-middle">juju@gmail.com</td>
                                 <td class="align-middle">Calamba, Laguna</td>
                                 <td class="align-middle">
-                                    <Link href="#"
-                                        ><i class="fas fa-pen mr-3"></i
+                                    <Link href="/crm/admin/manage-classrooms/students/parent/edit-parent"
+                                        ><i class="fas fa-pen mr-3" id="edit-icon"></i
                                     ></Link>
                                     <Link href="#"
-                                        ><i class="fas fa-trash ml-3"></i
+                                        ><i class="fas fa-trash ml-3" id="trash-icon"></i
                                     ></Link>
                                 </td>
                             </tr>
@@ -65,7 +65,6 @@ export default {
         Link,
         AppLayout,
     },
-    data() {},
     methods: {},
 };
 </script>
@@ -77,5 +76,23 @@ tr {
     line-height: 50px;
     min-height: 50px;
     height: 50px;
+} 
+#back-btn {
+    color: white;
+    background-color: #282525;
+
+} #back-btn:hover {
+    color: #fff;
+    background-color: #282525;
+    border-color: #282525;
+} #back-btn:focus {
+    color: #fff;
+    background-color: #282525;
+    border-color: #282525;
+    box-shadow: 0 0 0 0.1rem #9e9898;
+} #trash-icon, #edit-icon {
+    color: #757474;
+} #trash-icon:hover, #edit-icon:hover {
+    color: #000;
 }
 </style>
