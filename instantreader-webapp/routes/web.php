@@ -33,7 +33,7 @@ Route::get('/crm/operations/classrooms', function () {
     return Inertia::render('Test');
 });
 
-Route::get('/crm/operations/tutor-lounge', function () {
+Route::get('/crm/operations/tutors-lounge', function () {
     return Inertia::render('Test');
 });
 

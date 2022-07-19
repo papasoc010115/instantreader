@@ -1,5 +1,9 @@
 <template>
-    <div class="sidebar col-lg-auto bg-light sticky-top">
+    <!-- Admin Sidebar -->
+    <div
+        v-if="$page.url.includes('/admin')"
+        class="sidebar col-lg-auto bg-light sticky-top"
+    >
         <div
             class="d-flex flex-lg-column flex-row flex-nowrap bg-light align-items-center sticky-top"
         >
@@ -7,26 +11,250 @@
                 class="nav nav-pills nav-flush flex-lg-column flex-row flex-nowrap mb-auto mx-auto text-center align-items-center"
             >
                 <li class="nav-item">
-                    <a href="#" class="nav-link" title="manage users">
-                        <span title="Manage Users"
-                            ><i class="fas fa-users nav-icon"></i>
-                        </span>
-                    </a>
+                    <Link
+                        href="/crm/admin/manage-users"
+                        class="nav-link"
+                        title="Manage Users"
+                    >
+                        <i
+                            class="fas fa-users nav-icon"
+                            :class="{
+                                activeSection:
+                                    $page.url === '/crm/admin/manage-users',
+                            }"
+                        ></i>
+                    </Link>
                 </li>
                 <li>
-                    <a href="#" class="nav-link" title="manage calendar">
-                        <i class="fas fa-calendar nav-icon"></i>
-                    </a>
+                    <Link
+                        href="/crm/admin/manage-calendar"
+                        class="nav-link"
+                        title="Manage Calendar"
+                    >
+                        <i
+                            class="fas fa-calendar nav-icon"
+                            :class="{
+                                activeSection:
+                                    $page.url === '/crm/admin/manage-calendar',
+                            }"
+                        ></i>
+                    </Link>
                 </li>
                 <li>
-                    <a href="#" class="nav-link" title="manage classroom">
-                        <i class="fas fa-chalkboard nav-icon"></i>
-                    </a>
+                    <Link
+                        href="/crm/admin/manage-classrooms"
+                        class="nav-link"
+                        title="Manage Classroom"
+                    >
+                        <i
+                            class="fas fa-chalkboard nav-icon"
+                            :class="{
+                                activeSection:
+                                    $page.url ===
+                                    '/crm/admin/manage-classrooms',
+                            }"
+                        ></i>
+                    </Link>
                 </li>
                 <li>
-                    <a href="#" class="nav-link" title="manage tutors">
-                        <i class="fas fa-chalkboard-teacher nav-icon"></i>
-                    </a>
+                    <Link
+                        href="/crm/admin/manage-tutors"
+                        class="nav-link"
+                        title="Manage Tutors"
+                    >
+                        <i
+                            class="fas fa-chalkboard-teacher nav-icon"
+                            :class="{
+                                activeSection:
+                                    $page.url === '/crm/admin/manage-tutors',
+                            }"
+                        ></i>
+                    </Link>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Operations Sidebar -->
+    <div
+        v-if="$page.url.includes('/operations')"
+        class="sidebar col-lg-auto bg-light sticky-top"
+    >
+        <div
+            class="d-flex flex-lg-column flex-row flex-nowrap bg-light align-items-center sticky-top"
+        >
+            <ul
+                class="nav nav-pills nav-flush flex-lg-column flex-row flex-nowrap mb-auto mx-auto text-center align-items-center"
+            >
+                <li class="nav-item">
+                    <Link
+                        href="/crm/operations/bulletin-board"
+                        class="nav-link"
+                        title="Bulletin Board"
+                    >
+                        <i
+                            class="fas fa-clipboard-list nav-icon"
+                            :class="{
+                                activeSection:
+                                    $page.url ===
+                                    '/crm/operations/bulletin-board',
+                            }"
+                        ></i>
+                    </Link>
+                </li>
+                <li>
+                    <Link
+                        href="/crm/operations/classrooms"
+                        class="nav-link"
+                        title="Classrooms"
+                    >
+                        <i
+                            class="fas fa-graduation-cap nav-icon"
+                            :class="{
+                                activeSection:
+                                    $page.url === '/crm/operations/classrooms',
+                            }"
+                        ></i>
+                    </Link>
+                </li>
+                <li>
+                    <Link
+                        href="/crm/operations/tutors-lounge"
+                        class="nav-link"
+                        title="Tutor's Lounge"
+                    >
+                        <i
+                            class="fas fa-book-reader nav-icon"
+                            :class="{
+                                activeSection:
+                                    $page.url ===
+                                    '/crm/operations/tutors-lounge',
+                            }"
+                        ></i>
+                    </Link>
+                </li>
+                <li>
+                    <Link
+                        href="/crm/operations/ir-calendar"
+                        class="nav-link"
+                        title="IR Calendar"
+                    >
+                        <i
+                            class="fas fa-calendar-alt nav-icon"
+                            :class="{
+                                activeSection:
+                                    $page.url === '/crm/operations/ir-calendar',
+                            }"
+                        ></i>
+                    </Link>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Sales & Marketing -->
+    <div
+        v-if="$page.url.includes('/sales')"
+        class="sidebar col-lg-auto bg-light sticky-top"
+    >
+        <div
+            class="d-flex flex-lg-column flex-row flex-nowrap bg-light align-items-center sticky-top"
+        >
+            <ul
+                class="nav nav-pills nav-flush flex-lg-column flex-row flex-nowrap mb-auto mx-auto text-center align-items-center"
+            >
+                <li class="nav-item">
+                    <Link
+                        href="/crm/sales/contact-management"
+                        class="nav-link"
+                        title="Contact Management"
+                    >
+                        <i
+                            class="fas fa-address-book nav-icon"
+                            :class="{
+                                activeSection:
+                                    $page.url ===
+                                    '/crm/sales/contact-management',
+                            }"
+                        ></i>
+                    </Link>
+                </li>
+                <li>
+                    <Link
+                        href="/crm/sales/client-interaction-tracking"
+                        class="nav-link"
+                        title="Client Interaction Tracking"
+                    >
+                        <i
+                            class="fas fa-project-diagram nav-icon"
+                            :class="{
+                                activeSection:
+                                    $page.url ===
+                                    '/crm/sales/client-interaction-tracking',
+                            }"
+                        ></i>
+                    </Link>
+                </li>
+                <li>
+                    <Link
+                        href="/crm/sales/lead-management"
+                        class="nav-link"
+                        title="Lead Management"
+                    >
+                        <i
+                            class="fas fa-users-cog nav-con nav-icon"
+                            :class="{
+                                activeSection:
+                                    $page.url === '/crm/sales/lead-management',
+                            }"
+                        ></i>
+                    </Link>
+                </li>
+                <li>
+                    <Link
+                        href="/crm/sales/customer-analytics"
+                        class="nav-link"
+                        title="Customer Analytics"
+                    >
+                        <i
+                            class="fas fa-chart-line nav-icon"
+                            :class="{
+                                activeSection:
+                                    $page.url ===
+                                    '/crm/sales/customer-analytics',
+                            }"
+                        ></i>
+                    </Link>
+                </li>
+                <li>
+                    <Link
+                        href="/crm/sales/sales-forecast"
+                        class="nav-link"
+                        title="Sales and Forecast"
+                    >
+                        <i
+                            class="fas fa-funnel-dollar nav-icon"
+                            :class="{
+                                activeSection:
+                                    $page.url === '/crm/sales/sales-forecast',
+                            }"
+                        ></i>
+                    </Link>
+                </li>
+                <li>
+                    <Link
+                        href="/crm/sales/sales-activity"
+                        class="nav-link"
+                        title="Sales Activity Log"
+                    >
+                        <i
+                            class="fas fa-stream nav-icon"
+                            :class="{
+                                activeSection:
+                                    $page.url === '/crm/sales/sales-activity',
+                            }"
+                        ></i>
+                    </Link>
                 </li>
             </ul>
         </div>
@@ -34,7 +262,12 @@
 </template>
 
 <script>
-export default {};
+import { Link } from "@inertiajs/inertia-vue3";
+export default {
+    components: {
+        Link,
+    },
+};
 </script>
 
 <style scoped>
@@ -51,6 +284,7 @@ li {
 .nav-icon {
     font-size: 1.4rem;
     color: #757474;
+    cursor: pointer;
 }
 
 .nav-link {
@@ -62,8 +296,8 @@ li {
     color: #4b4b4a;
 }
 
-.active {
-    color: black !important;
+.activeSection {
+    color: #5a88ff !important;
 }
 
 @media only screen and (max-width: 575px) {
