@@ -93,9 +93,20 @@ Route::get('/crm/operations/ir-calendar', function () {
 
 
 // Sales routes
+
+//// Contact Management 
 Route::get('/crm/sales/contact-management', function () {
-    return Inertia::render('Test');
+    return Inertia::render('ContactManagement');
 });
+
+Route::get('/crm/sales/contact-management/CreateProspect', function () {
+    return Inertia::render('CreateProspect');
+});
+
+Route::get('/crm/sales/contact-management/CreateLead', function () {
+    return Inertia::render('CreateLead');
+});
+
 
 Route::get('/crm/sales/client-interaction-tracking', function () {
     return Inertia::render('Test');

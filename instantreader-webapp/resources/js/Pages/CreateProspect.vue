@@ -3,15 +3,16 @@
 <template>
     <AppLayout>
         <div class="container-fluid">
-            <!-- Nested Row within Card Body -->
             <div class="row">
                 <div class="p-5 form-container">
                     <!-- Header with Back Button -->
                     <div class="form-title-container">
-                        <Link href="/crm/admin/manage-users" class="btn btn-circle" id="back-btn">
+                        <Link href="#" class="btn btn-primary btn-circle">
                             <i class="fas fa-angle-left"></i>
                         </Link>
-                        <p class="h2 text-gray-900 form-title">CREATE USER</p>
+                        <p class="h2 text-gray-900 form-title">
+                            CREATE PROSPECT
+                        </p>
                     </div>
 
                     <!-- Form Proper -->
@@ -44,37 +45,50 @@
                                 placeholder="Email Address"
                             />
                         </div>
-                        <!-- Position Field -->
+                        <!-- Contact Number Field -->
                         <div class="form-group mb-3">
                             <input
-                                type="text"
+                                type="tel"
                                 class="form-control form-control-user"
-                                id="exampleInputPosition"
-                                placeholder="Position"
+                                id="exampleInputEmail"
+                                placeholder="Contact Number"
                             />
                         </div>
-                        <!-- Admin Checkbox -->
-                        <div class="form-group mb-3">
-                            <div class="form-check">
-                                <input
-                                    class="form-check-input"
-                                    type="checkbox"
-                                    value=""
-                                    id="flexCheckChecked"
-                                />
-                                <label
-                                    class="form-check-label ml-3"
-                                    for="flexCheckChecked"
-                                >
-                                    Is Admin
-                                </label>
+                        <!-- Assigned Users Field -->
+                        <div class="mb-3">
+                            <div class="d-flex border assigned-users rounded-pill">
+                                <div class="d-flex users-container ">
+                                    <div class="chip m-2">
+                                        Jenel Juju
+                                        <Link><i class="ml-2 fas fa-times"></i></Link>
+                                    </div>
+                                    <div class="chip m-2">
+                                        Sage Wong
+                                        <Link><i class="ml-2 fas fa-times"></i></Link>
+                                    </div>
+                                    <div class="chip m-2">
+                                        Yoru Kageyama
+                                        <Link><i class="ml-2 fas fa-times"></i></Link>
+                                    </div>
+                                    <div class="chip m-2">
+                                        Jenel Juju
+                                        <Link><i class="ml-2 fas fa-times"></i></Link>
+                                    </div>
+                                    <div class="chip m-2">
+                                        Sage Wong
+                                        <Link><i class="ml-2 fas fa-times"></i></Link>
+                                    </div>
+                                    <div class="chip m-2">
+                                        Yoru Kageyama
+                                        <Link><i class="ml-2 fas fa-times"></i></Link>
+                                    </div>
+                                </div>
+                                <div class="add-container border-start d-flex align-items-center justify-content-center">
+                                    <Link><i class="fas fa-2x fa-plus"></i></Link>
+                                </div>
                             </div>
                         </div>
-                        <!-- Profile Picture -->
-                        <div class="mb-3">
-                            <label for="formFile" class="form-label">Profile Picture</label>
-                            <input class="form-control rounded-pill" type="file" id="formFile">
-                        </div>
+                        <!-- Create Button -->
                         <div class="form-group">
                             <Link
                                 href="#"
@@ -106,6 +120,10 @@ export default {
 <style scoped>
 @import "../../../public/crm-site/assets/css/sb-admin-2.css";
 
+.test {
+    background-color: red;
+}
+
 .form-container {
     width: 100%;
 }
@@ -119,22 +137,48 @@ export default {
     margin: 0px 0px 0px 20px;
 }
 
-.file-upload {
-    margin: 0px 0px 0px 20px;
+.chip {
+    padding: 0 25px;
+    line-height: 40px;
+    border-radius: 25px;
+    background-color: #f1f1f1;
 }
 
-#back-btn {
+.users-container {
+    width: 90%;
+    flex-wrap: wrap;
+}
+
+.add-container {
+    width: 10%
+}
+
+.fa-times {
+    color: #757474;
+}
+
+.fa-times:hover{
+    color: #000;
+}
+
+.btn-circle {
     color: white;
     background-color: #282525;
+    border-color: #282525;
 
-} #back-btn:hover {
+} 
+
+.btn-circle:hover {
     color: #fff;
     background-color: #282525;
     border-color: #282525;
-} #back-btn:focus {
+}
+
+.btn-circle:focus {
     color: #fff;
     background-color: #282525;
     border-color: #282525;
     box-shadow: 0 0 0 0.1rem #9e9898;
 }
+
 </style>
