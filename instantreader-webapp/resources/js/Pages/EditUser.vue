@@ -150,10 +150,6 @@ export default {
     margin: 0px 0px 0px 20px;
 }
 
-.file-upload {
-    margin: 0px 0px 0px 20px;
-}
-
 #back-btn {
     color: white;
     background-color: #282525;

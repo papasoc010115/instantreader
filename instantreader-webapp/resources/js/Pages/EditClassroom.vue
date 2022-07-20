@@ -35,7 +35,6 @@
                             <label for="classroomTutor" class="col-lg-3 col-form-label ml-2">Tutor</label>
                             <div class="col-lg-6">
                                 <select class="custom-select" id="classroomTutor">
-                                    <label class="mr-3">Select Tutor</label>
                                     <option value="SkyeRamos">Skye Ramos</option>
                                     <option value="SageWong">Sage Wong</option>
                                     <option value="YoruKageyama" selected>Yoru Kageyama</option>
@@ -111,6 +110,14 @@ export default {
 
 .form-title {
     margin: 0px 0px 0px 20px;
+}
+
+.custom-select {
+    font-size: 0.8rem;
+    border-radius: 10rem;
+    height: 50px;
+    color: #858796;
+    opacity: 1;
 }
 
 .chip {
