@@ -18,40 +18,66 @@
                     <form class="user p-5">
                         <!-- Name Fields -->
                         <div class="form-group row mb-3">
-                            <div class="col-sm-6">
+                            <div class="col-lg-6">
+                                <label class="ml-2">First Name</label>
                                 <input
                                     type="text"
                                     class="form-control form-control-user"
-                                    id="exampleFirstName"
+                                    id="userFirstName"
                                     placeholder="First Name"
                                 />
                             </div>
-                            <div class="col-sm-6">
+                            <div class="col-lg-6">
+                                <label class="ml-2">Last Name</label>
                                 <input
                                     type="text"
                                     class="form-control form-control-user"
-                                    id="exampleLastName"
+                                    id="userLastName"
                                     placeholder="Last Name"
                                 />
                             </div>
                         </div>
-                        <!-- Email Field -->
-                        <div class="form-group mb-3">
-                            <input
-                                type="email"
-                                class="form-control form-control-user"
-                                id="exampleInputEmail"
-                                placeholder="Email Address"
-                            />
+                        <!-- Nickname and Position Field -->
+                        <div class="form-group row mb-4">
+                            <div class="col-lg-6">
+                                <label class="ml-2">Nickname</label>
+                                <input
+                                    type="text"
+                                    class="form-control form-control-user"
+                                    id="userNickname"
+                                    placeholder="Nickname"
+                                />
+                            </div>
+                            <div class="col-lg-6">
+                                <label class="ml-2">Position</label>
+                                <input
+                                    type="text"
+                                    class="form-control form-control-user"
+                                    id="userEmail"
+                                    placeholder="Position"
+                                />
+                            </div>
                         </div>
-                        <!-- Position Field -->
-                        <div class="form-group mb-3">
-                            <input
-                                type="text"
-                                class="form-control form-control-user"
-                                id="exampleInputPosition"
-                                placeholder="Position"
-                            />
+                        <!-- Contacts Field -->
+                        <div class="form-group row mb-4">
+                            <div class="col-lg-6">
+                                <label class="ml-2">Contact No.</label>
+                                <input
+                                    type="text"
+                                    class="form-control form-control-user"
+                                    id="userContactNo"
+                                    placeholder="Contact No."
+                                />
+                            </div>
+                            <div class="col-lg-6">
+                                <label class="ml-2">Email</label>
+                                <input
+                                    type="text"
+                                    class="form-control form-control-user"
+                                    id="userEmail"
+                                    placeholder="Email"
+                                />
+                            </div>
                         </div>
                         <!-- Admin Checkbox -->
                         <div class="form-group mb-3">
@@ -71,9 +97,14 @@
                             </div>
                         </div>
                         <!-- Profile Picture -->
-                        <div class="mb-3">
-                            <label for="formFile" class="form-label">Profile Picture</label>
-                            <input class="form-control rounded-pill" type="file" id="formFile">
+                        <div class="form-group mb-5 row">
+                            <label for="userProfilePicture" class="col-lg-2 col-form-label ml-2">Profile Picture</label>
+                            <div class="col-lg-3 custom-file">
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" id="customFile">
+                                    <label class="custom-file-label" for="customFile">Choose file</label>
+                                </div>
+                            </div>
                         </div>
                         <div class="form-group">
                             <Link

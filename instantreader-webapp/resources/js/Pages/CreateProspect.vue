@@ -7,7 +7,7 @@
                 <div class="p-5 form-container">
                     <!-- Header with Back Button -->
                     <div class="form-title-container">
-                        <Link href="#" class="btn btn-primary btn-circle">
+                        <Link href="/crm/sales/contact-management" class="btn btn-primary btn-circle">
                             <i class="fas fa-angle-left"></i>
                         </Link>
                         <p class="h2 text-gray-900 form-title">
@@ -20,44 +20,49 @@
                         <!-- Name Fields -->
                         <div class="form-group row mb-3">
                             <div class="col-sm-6">
+                                <label class="ml-2">First Name</label>
                                 <input
                                     type="text"
                                     class="form-control form-control-user"
-                                    id="exampleFirstName"
-                                    placeholder="First Name"
+                                    id="prospectFirstName"
+                                    placeholder="e.g. Juan"
                                 />
                             </div>
                             <div class="col-sm-6">
+                                <label class="ml-2">Last Name</label>
                                 <input
                                     type="text"
                                     class="form-control form-control-user"
-                                    id="exampleLastName"
-                                    placeholder="Last Name"
+                                    id="prospectLastName"
+                                    placeholder="e.g. Dela Cruz"
                                 />
                             </div>
                         </div>
                         <!-- Email Field -->
                         <div class="form-group mb-3">
+                            <label class="ml-2">Email</label>
                             <input
                                 type="email"
                                 class="form-control form-control-user"
-                                id="exampleInputEmail"
-                                placeholder="Email Address"
+                                id="prospectEmail"
+                                placeholder="e.g. email@email.com"
                             />
                         </div>
                         <!-- Contact Number Field -->
                         <div class="form-group mb-3">
+                            <label class="ml-2">Contact No.</label>
                             <input
                                 type="tel"
                                 class="form-control form-control-user"
-                                id="exampleInputEmail"
-                                placeholder="Contact Number"
+                                id="prospectContactNo"
+                                placeholder="e.g. 09123456789"
                             />
                         </div>
                         <!-- Assigned Users Field -->
                         <div class="mb-3">
+                            <label class="ml-2">Assigned Users</label>
                             <div class="d-flex border assigned-users rounded-pill">
-                                <div class="d-flex users-container ">
+                                <div class="d-flex users-container" id="prospectAssignedUsers">
                                     <div class="chip m-2">
                                         Jenel Juju
                                         <Link><i class="ml-2 fas fa-times"></i></Link>
