@@ -54,7 +54,7 @@
                                 <input
                                     type="text"
                                     class="form-control form-control-user"
-                                    id="userEmail"
+                                    id="userPosition"
                                     value="Manager"
                                 />
                             </div>
@@ -102,7 +102,7 @@
                             <label for="userProfilePicture" class="col-lg-2 col-form-label ml-2">Profile Picture</label>
                             <div class="col-lg-3 custom-file">
                                 <div class="custom-file">
-                                    <input type="file" class="custom-file-input" id="customFile">
+                                    <input type="file" class="custom-file-input" id="userProfilePicture">
                                     <label class="custom-file-label" for="customFile">Choose file</label>
                                 </div>
                             </div>

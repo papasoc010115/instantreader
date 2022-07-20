@@ -53,7 +53,7 @@
                                 <input
                                     type="text"
                                     class="form-control form-control-user"
-                                    id="userEmail"
+                                    id="userPosition"
                                     placeholder="Position"
                                 />
                             </div>
@@ -99,7 +99,7 @@
                         <!-- Profile Picture -->
                         <div class="form-group mb-5 row">
                             <label for="userProfilePicture" class="col-lg-2 col-form-label ml-2">Profile Picture</label>
-                            <div class="col-lg-3 custom-file">
+                            <div class="col-lg-3 custom-file" id="userProfilePicture">
                                 <div class="custom-file">
                                     <input type="file" class="custom-file-input" id="customFile">
                                     <label class="custom-file-label" for="customFile">Choose file</label>

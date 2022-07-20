@@ -63,7 +63,7 @@
                         <div class="form-group mb-4 row">
                             <label for="tutorBranch" class="col-lg-3 col-form-label ml-2">Branch</label>
                             <div class="col-lg-3">
-                                <select class="custom-select">
+                                <select class="custom-select" id="tutorBranch">
                                     <label class="mr-3">Branch</label>
                                     <option value="Cabuyao" selected>Cabuyao</option>
                                     <option value="Calamba">Calamba</option>
@@ -89,7 +89,7 @@
                             <label for="tutorProfilePicture" class="col-lg-3 col-form-label ml-2">Profile Picture</label>
                             <div class="col-lg-3 custom-file">
                                 <div class="custom-file">
-                                    <input type="file" class="custom-file-input" id="customFile">
+                                    <input type="file" class="custom-file-input" id="tutorProfilePicture">
                                     <label class="custom-file-label" for="customFile">Choose file</label>
                                 </div>
                             </div>

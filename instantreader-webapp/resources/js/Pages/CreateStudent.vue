@@ -44,7 +44,7 @@
                                 <label class="ml-2">Weekly Schedule</label>
                                 <select
                                     class="custom-select"
-                                    id="inputGroupSelect02"
+                                    id="weeklySchedule"
                                 >
                                     <option disabled selected>Days</option>
                                     <option value="1">MWF</option>
@@ -55,7 +55,7 @@
                                 <label class="ml-2">Time</label>
                                 <select
                                     class="custom-select"
-                                    id="inputGroupSelect02"
+                                    id="timeSchedule"
                                 >
                                     <option disabled selected>Time</option>
                                     <option value="1">9:00 am - 10:00 am</option>
@@ -70,7 +70,7 @@
                                 <label class="ml-2">Reading Level</label>
                                 <select
                                     class="custom-select"
-                                    id="inputGroupSelect02"
+                                    id="readingLevel"
                                 >
                                     <option disabled selected>Level</option>
                                     <option value="1">Basic</option>
