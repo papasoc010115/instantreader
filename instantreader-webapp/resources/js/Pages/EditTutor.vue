@@ -62,13 +62,13 @@
                         <!-- Branch Field -->
                         <div class="form-group mb-4 row">
                             <label for="tutorBranch" class="col-lg-3 col-form-label ml-2">Branch</label>
-                            <div class="col-lg-4">
+                            <div class="col-lg-3">
                                 <select class="custom-select">
                                     <label class="mr-3">Branch</label>
                                     <option value="Cabuyao" selected>Cabuyao</option>
                                     <option value="Calamba">Calamba</option>
                                     <option value="Los Banos">Los Banos</option>
-                                    <option value="Sta. Rosa">Sta/ Rosa</option>
+                                    <option value="Sta. Rosa">Sta. Rosa</option>
                                 </select>
                             </div>
                         </div>
