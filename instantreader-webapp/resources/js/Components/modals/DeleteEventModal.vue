@@ -12,7 +12,11 @@
             <div class="modal-body">
                 <p>Are you sure you want to delete this event?</p>
                 <div class="btn-container">
-                    <button type="button" class="btn btn-secondary">
+                    <button
+                        @click="removeModal"
+                        type="button"
+                        class="btn btn-secondary"
+                    >
                         Cancel
                     </button>
                     <button type="button" class="btn btn-danger">Delete</button>
