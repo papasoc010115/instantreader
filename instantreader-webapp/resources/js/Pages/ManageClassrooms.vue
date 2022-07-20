@@ -6,7 +6,7 @@
             <div class="pt-5 pb-5">
                 <!-- Header with Search Bar -->
                 <div class="d-flex">
-                    <div class="ml-3">
+                    <div>
                         <p class="h2 text-gray-900 mb-4">MANAGE CLASSROOMS</p>
                     </div>
                     <div class="ml-auto">

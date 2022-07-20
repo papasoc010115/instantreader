@@ -6,8 +6,8 @@
             <div class="pt-5 pb-5">          
                 <!-- Header with Search Bar -->
                 <div class="d-flex">
-                    <div class="ml-3">
-                        <p class="h2 text-gray-900 mb-4">CONTACT MANAGEMENT</p>
+                    <div>
+                        <p class="h2 text-gray-900 mb-4 font-weight-bold">CONTACT MANAGEMENT</p>
                     </div>
                     <div class="ml-auto">
                         <form
@@ -42,7 +42,7 @@
                         <div class="border border-dark">
                             <!-- Button to Add Prospect -->
                             <div class="m-3">
-                                <Link href="/crm/sales/contact-management/CreateProspect" class="btn btn-primary btn-block">Add Prospect</Link>
+                                <Link href="/crm/sales/contact-management/create-prospect" class="btn btn-primary btn-block">Add Prospect</Link>
                             </div>
                             <!-- Actual List of Prospects -->
                             <div>
@@ -50,7 +50,7 @@
                                     <div class="card-header py-3 d-flex">
                                         <div class="h6 m-0 font-weight-bold contact-name">First Name Last Name</div>
                                         <div class="ml-auto">
-                                            <Link href="#"
+                                            <Link href="/crm/sales/contact-management/edit-prospect"
                                                 ><i class="fas fa-pen mr-3"></i
                                             ></Link>
                                             <Link href="#"
@@ -98,7 +98,7 @@
                                     <div class="card-header py-3 d-flex">
                                         <div class="h6 m-0 font-weight-bold contact-name">First Name Last Name</div>
                                         <div class="ml-auto">
-                                            <Link href="#"
+                                            <Link href="/crm/sales/contact-management/edit-prospect"
                                                 ><i class="fas fa-pen mr-3"></i
                                             ></Link>
                                             <Link href="#"
@@ -145,7 +145,7 @@
                                     <div class="card-header py-3 d-flex">
                                         <div class="h6 m-0 font-weight-bold contact-name">First Name Last Name</div>
                                         <div class="ml-auto">
-                                            <Link href="#"
+                                            <Link href="/crm/sales/contact-management/edit-prospect"
                                                 ><i class="fas fa-pen mr-3"></i
                                             ></Link>
                                             <Link href="#"
@@ -232,7 +232,7 @@
                         <div class="border border-dark">
                             <!-- Button to Add Prospect -->
                             <div class="m-3">
-                                <Link href="/crm/sales/contact-management/CreateLead" class="btn btn-primary btn-block">Add Lead</Link>
+                                <Link href="/crm/sales/contact-management/create-lead" class="btn btn-primary btn-block">Add Lead</Link>
                             </div>
                             <!-- Actual List of Prospects -->
                             <div>
@@ -240,7 +240,7 @@
                                     <div class="card-header py-3 d-flex">
                                         <div class="h6 m-0 font-weight-bold contact-name">First Name Last Name</div>
                                         <div class="ml-auto">
-                                            <Link href="#"
+                                            <Link href="/crm/sales/contact-management/edit-lead"
                                                 ><i class="fas fa-pen mr-3"></i
                                             ></Link>
                                             <Link href="#"
@@ -288,7 +288,7 @@
                                     <div class="card-header py-3 d-flex">
                                         <div class="h6 m-0 font-weight-bold contact-name">First Name Last Name</div>
                                         <div class="ml-auto">
-                                            <Link href="#"
+                                            <Link href="/crm/sales/contact-management/edit-lead"
                                                 ><i class="fas fa-pen mr-3"></i
                                             ></Link>
                                             <Link href="#"
@@ -336,7 +336,7 @@
                                     <div class="card-header py-3 d-flex">
                                         <div class="h6 m-0 font-weight-bold contact-name">First Name Last Name</div>
                                         <div class="ml-auto">
-                                            <Link href="#"
+                                            <Link href="/crm/sales/contact-management/edit-lead"
                                                 ><i class="fas fa-pen mr-3"></i
                                             ></Link>
                                             <Link href="#"

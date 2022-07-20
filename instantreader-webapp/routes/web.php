@@ -99,12 +99,20 @@ Route::get('/crm/sales/contact-management', function () {
     return Inertia::render('ContactManagement');
 });
 
-Route::get('/crm/sales/contact-management/CreateProspect', function () {
+Route::get('/crm/sales/contact-management/create-prospect', function () {
     return Inertia::render('CreateProspect');
 });
 
-Route::get('/crm/sales/contact-management/CreateLead', function () {
+Route::get('/crm/sales/contact-management/create-lead', function () {
     return Inertia::render('CreateLead');
+});
+
+Route::get('/crm/sales/contact-management/edit-prospect', function () {
+    return Inertia::render('EditProspect');
+});
+
+Route::get('/crm/sales/contact-management/edit-lead', function () {
+    return Inertia::render('EditLead');
 });
 
 

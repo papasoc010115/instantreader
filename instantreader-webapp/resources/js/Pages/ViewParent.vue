@@ -18,7 +18,7 @@
                 <div class="table-responsive mt-5">
                     <table
                         class="table table-striped table-hover text-center"
-                        id="manageClassroomsTable"
+                        id="parentTable"
                         width="100%"
                         cellspacing="0"
                     >

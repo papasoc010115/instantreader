@@ -70,7 +70,7 @@
                         <div class="table-responsive">
                             <table
                                 class="table table-hover text-center"
-                                id="manageClassroomsTable"
+                                id="tutorsScheduleTable"
                                 width="100%"
                                 cellspacing="0"
                             >
@@ -136,7 +136,7 @@
                         <div class="table-responsive">
                             <table
                                 class="table table-hover text-center"
-                                id="manageClassroomsTable"
+                                id="tutorsScheduleTable"
                                 width="100%"
                                 cellspacing="0"
                             >
