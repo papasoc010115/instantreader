@@ -52,53 +52,85 @@
                 <!--Contact Form-->
                 <form class="contact-form" id="contact-form-data">
                     @csrf
-                    <div class="row">
-                        <!--Result-->
-                        <div class="col-12" id="result"></div>
+                    <div class="form-group row mb-3">
 
-                        <!--Left Column-->
-                        <div class="col-md-6">                    
-                            <div class="form-group">
-                                <input class="form-control" type="text" placeholder="First Name" required="true" style="font-size: 80%">
+                        <!-- Name Fields -->
+                        <div class="form-group row mb-3">
+                            <div class="col-md-6">
+                                <input
+                                    type="text"
+                                    class="form-control form-control-user"
+                                    id="applicantFirstName"
+                                    placeholder="First Name"
+                                />
                             </div>
-                            <div class="form-group">
-                                <input class="form-control" type="text" placeholder="Contact No." required="true" style="font-size: 80%">
-                            </div>
-                        </div>
-
-                        <!--Right Column-->
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <input class="form-control" type="email" placeholder="Last Name" required="true" style="font-size: 80%">
-                            </div>
-                            <div class="form-group">
-                                <input class="form-control" type="text" placeholder="Email" required="true" style="font-size: 80%">
+                            <div class="col-md-6">
+                                <input
+                                    type="text"
+                                    class="form-control form-control-user"
+                                    id="applicantLastName"
+                                    placeholder="Last Name"
+                                />
                             </div>
                         </div>
 
-                        <!--Full Column-->
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <input class="form-control" placeholder="Address" style="font-size: 80%"></input>
+                        <!-- Contact Fields -->
+                        <div class="form-group row mb-3">
+                            <div class="col-md-6">
+                                <input
+                                    type="text"
+                                    class="form-control form-control-user"
+                                    id="applicantContactNo"
+                                    placeholder="Contact No."
+                                />
+                            </div>
+                            <div class="col-md-6">
+                                <input
+                                    type="text"
+                                    class="form-control form-control-user"
+                                    id="applicantEmail"
+                                    placeholder="Email"
+                                />
                             </div>
                         </div>
 
-                        <div class="col-md-6">
-                            <select list="statuses" class="form-control" style="font-size: 80%"></input>
-                                <option value="full-time" selected>Full-Time</option>
-                                <option value="part-time">Part-Time</option>
-                            </select>
+                        <!-- Address Field -->
+                        <div class="form-group row mb-4">
+                            <div class="col-md-12">
+                                <input
+                                    type="text"
+                                    class="form-control form-control-user"
+                                    id="applicantAddress"
+                                    placeholder="Address"
+                                />
+                            </div>
                         </div>
 
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <span class="pr-4">Upload Résumé</span><input type="file" id="resumeFile">
+                        <!-- Status Field -->
+                        <div class="form-group mb-4 row">
+                            <label for="applicantStatus" class="col-lg-3 col-form-label ml-2">Status</label>
+                            <div class="col-md-3">
+                                <select class="custom-select">
+                                    <option value="fulltime" selected>Full-Time</option>
+                                    <option value="parttime">Part-Time</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <!-- Resume field -->
+                        <div class="form-group mb-5 row">
+                            <label for="applicantResume" class="col-lg-3 col-form-label ml-2">Upload Résumé/CV</label>
+                            <div class="col-md-4 custom-file">
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" id="resumeFile">
+                                    <label class="custom-file-label" for="customFile">Choose file</label>
+                                </div>
                             </div>
                         </div>
 
                         <!--Button-->
                         <div class="col-md-12">
-                            <a class="btn btn-large btn-rounded btn-purple btn-hvr-blue d-block mt-4 contact_btn" href="javascript:void(0);"
+                            <a class="btn btn-large btn-rounded btn-purple btn-hvr-blue d-block ontact_btn" href="javascript:void(0);"
                                id="apply_btn"><i class="fa fa-spinner fa-spin mr-2 d-none" aria-hidden="true"></i><b>Apply</b>
                                 <div class="btn-hvr-setting">
                                     <ul class="btn-hvr-setting-inner">
