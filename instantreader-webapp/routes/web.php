@@ -133,7 +133,7 @@ Route::get('/crm/sales/sales-forecast', function () {
 });
 
 Route::get('/crm/sales/sales-activity', function () {
-    return Inertia::render('Test');
+    return Inertia::render('SalesActivityLog');
 });
 
 /*--------------------------------------------------------------------------
