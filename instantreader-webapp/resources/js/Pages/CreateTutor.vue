@@ -72,6 +72,16 @@
                                 </select>
                             </div>
                         </div>
+                        <!-- Status Field -->
+                        <div class="form-group mb-4 row">
+                            <label for="tutorStatus" class="col-lg-3 col-form-label ml-2">Status</label>
+                            <div class="col-lg-3">
+                                <select class="custom-select" id="tutorStatus">
+                                    <option value="fullTime">Full-Time</option>
+                                    <option value="partTime">Part-Time</option>
+                                </select>
+                            </div>
+                        </div>
                         <!-- Max Students Field -->
                         <div class="form-group mb-4 row">
                             <label for="tutorMaxStudents" class="col-lg-3 col-form-label ml-2">Maximum Number of Students</label>
@@ -137,12 +147,12 @@ export default {
     margin: 0px 0px 0px 20px;
 }
 
-.file-upload {
-    margin: 0px 0px 0px 20px;
-}
-
-input, label {
-    display: block;
+.custom-select {
+    font-size: 0.8rem;
+    border-radius: 10rem;
+    height: 50px;
+    color: #858796;
+    opacity: 1;
 }
 
 #tutorMaxStudents {
