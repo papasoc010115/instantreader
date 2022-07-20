@@ -64,7 +64,7 @@
                                     <Link href="/crm/admin/manage-classrooms/students">View List</Link>
                                 </td>
                                 <td>
-                                    <Link href="/crm/admin/manage-classrooms/students/edit-student"
+                                    <Link href="/crm/admin/manage-classrooms/edit-classroom"
                                         ><i class="fas fa-pen mr-3" id="edit-icon"></i
                                     ></Link>
                                     <Link href="#"
@@ -82,7 +82,7 @@
                                     <Link href="/crm/admin/manage-classrooms/students">View List</Link>
                                 </td>
                                 <td>
-                                    <Link href="/crm/admin/manage-classrooms/students/edit-student"
+                                    <Link href="/crm/admin/manage-classrooms/edit-classroom"
                                         ><i class="fas fa-pen mr-3" id="edit-icon"></i
                                     ></Link>
                                     <Link href="#"
@@ -100,7 +100,7 @@
                                     <Link href="/crm/admin/manage-classrooms/students">View List</Link>
                                 </td>
                                 <td>
-                                    <Link href="/crm/admin/manage-classrooms/students/edit-student"
+                                    <Link href="/crm/admin/manage-classrooms/edit-classroom"
                                         ><i class="fas fa-pen mr-3" id="edit-icon"></i
                                     ></Link>
                                     <Link href="#"
@@ -118,7 +118,7 @@
                                     <Link href="/crm/admin/manage-classrooms/students">View List</Link>
                                 </td>
                                 <td>
-                                    <Link href="/crm/admin/manage-classrooms/students/edit-student"
+                                    <Link href="/crm/admin/manage-classrooms/edit-classroom"
                                         ><i class="fas fa-pen mr-3" id="edit-icon"></i
                                     ></Link>
                                     <Link href="#"
@@ -136,7 +136,7 @@
                                     <Link href="/crm/admin/manage-classrooms/students">View List</Link>
                                 </td>
                                 <td>
-                                    <Link href="/crm/admin/manage-classrooms/students/edit-student"
+                                    <Link href="/crm/admin/manage-classrooms/edit-classroom"
                                         ><i class="fas fa-pen mr-3" id="edit-icon"></i
                                     ></Link>
                                     <Link href="#"
@@ -154,7 +154,7 @@
                                     <Link href="/crm/admin/manage-classrooms/students">View List</Link>
                                 </td>
                                 <td>
-                                    <Link href="/crm/admin/manage-classrooms/students/edit-student"
+                                    <Link href="/crm/admin/manage-classrooms/edit-classroom"
                                         ><i class="fas fa-pen mr-3" id="edit-icon"></i
                                     ></Link>
                                     <Link href="#"
@@ -172,7 +172,7 @@
                                     <Link href="/crm/admin/manage-classrooms/students">View List</Link>
                                 </td>
                                 <td>
-                                    <Link href="/crm/admin/manage-classrooms/students/edit-student"
+                                    <Link href="/crm/admin/manage-classrooms/edit-classroom"
                                         ><i class="fas fa-pen mr-3" id="edit-icon"></i
                                     ></Link>
                                     <Link href="#"
