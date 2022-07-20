@@ -31,6 +31,7 @@ export default {
     width: 100%;
 }
 .content {
-    padding: 1rem 3rem !important;
+    padding: 0 !important;
+    margin: 0 !important;
 }
 </style>
