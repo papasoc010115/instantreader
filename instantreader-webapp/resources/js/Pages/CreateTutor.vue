@@ -77,7 +77,7 @@
                             <label for="tutorMaxStudents" class="col-lg-3 col-form-label ml-2">Maximum Number of Students</label>
                             <div class="col-lg-1">
                                 <input
-                                type="email"
+                                type="number"
                                 class="form-control form-control-user"
                                 id="tutorMaxStudents"
                                 placeholder="e.g. 1"
