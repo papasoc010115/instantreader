@@ -1,4 +1,5 @@
-<!-- by: ecdcabalda -->
+<!-- Template by: ecdcabalda -->
+<!-- Used by: sclee -->
 
 <template>
     <AppLayout>
@@ -8,10 +9,10 @@
                 <div class="p-5 form-container">
                     <!-- Header with Back Button -->
                     <div class="form-title-container">
-                        <Link href="/crm/admin/manage-users" class="btn btn-circle" id="back-btn">
+                        <Link href="/crm/admin/manage-tutors" class="btn btn-circle" id="back-btn">
                             <i class="fas fa-angle-left"></i>
                         </Link>
-                        <p class="h2 text-gray-900 form-title">CREATE USER</p>
+                        <p class="h2 text-gray-900 form-title">CREATE TUTOR</p>
                     </div>
 
                     <!-- Form Proper -->
@@ -23,8 +24,8 @@
                                 <input
                                     type="text"
                                     class="form-control form-control-user"
-                                    id="userFirstName"
-                                    placeholder="First Name"
+                                    id="tutorFirstName"
+                                    placeholder="e.g. Juan"
                                 />
                             </div>
                             <div class="col-lg-6">
@@ -32,29 +33,8 @@
                                 <input
                                     type="text"
                                     class="form-control form-control-user"
-                                    id="userLastName"
-                                    placeholder="Last Name"
-                                />
-                            </div>
-                        </div>
-                        <!-- Nickname and Position Field -->
-                        <div class="form-group row mb-4">
-                            <div class="col-lg-6">
-                                <label class="ml-2">Nickname</label>
-                                <input
-                                    type="text"
-                                    class="form-control form-control-user"
-                                    id="userNickname"
-                                    placeholder="Nickname"
-                                />
-                            </div>
-                            <div class="col-lg-6">
-                                <label class="ml-2">Position</label>
-                                <input
-                                    type="text"
-                                    class="form-control form-control-user"
-                                    id="userEmail"
-                                    placeholder="Position"
+                                    id="tutorLastName"
+                                    placeholder="e.g. Dela Cruz"
                                 />
                             </div>
                         </div>
@@ -65,8 +45,8 @@
                                 <input
                                     type="text"
                                     class="form-control form-control-user"
-                                    id="userContactNo"
-                                    placeholder="Contact No."
+                                    id="tutorContactNo"
+                                    placeholder="e.g. 09123456789"
                                 />
                             </div>
                             <div class="col-lg-6">
@@ -74,31 +54,39 @@
                                 <input
                                     type="text"
                                     class="form-control form-control-user"
-                                    id="userEmail"
-                                    placeholder="Email"
+                                    id="tutorEmail"
+                                    placeholder="e.g. email@email.com"
                                 />
                             </div>
                         </div>
-                        <!-- Admin Checkbox -->
-                        <div class="form-group mb-3">
-                            <div class="form-check">
+                        <!-- Branch Field -->
+                        <div class="form-group mb-4 row">
+                            <label for="tutorBranch" class="col-lg-3 col-form-label ml-2">Branch</label>
+                            <div class="col-lg-4">
+                                <select class="custom-select">
+                                    <label class="mr-3">Branch</label>
+                                    <option value="Cabuyao" selected>Cabuyao</option>
+                                    <option value="Calamba">Calamba</option>
+                                    <option value="Los Banos">Los Banos</option>
+                                    <option value="Sta. Rosa">Sta/ Rosa</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- Max Students Field -->
+                        <div class="form-group mb-4 row">
+                            <label for="tutorMaxStudents" class="col-lg-3 col-form-label ml-2">Maximum Number of Students</label>
+                            <div class="col-lg-1">
                                 <input
-                                    class="form-check-input"
-                                    type="checkbox"
-                                    value=""
-                                    id="flexCheckChecked"
+                                type="email"
+                                class="form-control form-control-user"
+                                id="tutorMaxStudents"
+                                placeholder="e.g. 1"
                                 />
-                                <label
-                                    class="form-check-label ml-3"
-                                    for="flexCheckChecked"
-                                >
-                                    Is Admin
-                                </label>
                             </div>
                         </div>
                         <!-- Profile Picture -->
                         <div class="form-group mb-5 row">
-                            <label for="userProfilePicture" class="col-lg-2 col-form-label ml-2">Profile Picture</label>
+                            <label for="tutorProfilePicture" class="col-lg-3 col-form-label ml-2">Profile Picture</label>
                             <div class="col-lg-3 custom-file">
                                 <div class="custom-file">
                                     <input type="file" class="custom-file-input" id="customFile">
@@ -129,7 +117,6 @@ export default {
         Link,
         AppLayout,
     },
-    data() {},
     methods: {},
 };
 </script>
@@ -152,6 +139,14 @@ export default {
 
 .file-upload {
     margin: 0px 0px 0px 20px;
+}
+
+input, label {
+    display: block;
+}
+
+#tutorMaxStudents {
+    text-align: center;
 }
 
 #back-btn {

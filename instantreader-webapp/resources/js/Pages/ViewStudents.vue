@@ -6,7 +6,7 @@
             <div class="pt-5 pb-5">
                 <!-- Header with Back Button, Search Bar -->
                 <div class="d-flex">
-                    <Link href="#" class="btn btn-primary btn-circle">
+                    <Link href="/crm/admin/manage-classrooms" class="btn btn-circle" id="back-btn">
                         <i class="fas fa-angle-left"></i>
                     </Link>
                     <div class="ml-3">
@@ -67,14 +67,14 @@
                                     <p class="m-0 p-0">10:00 am - 11:00 am</p>
                                 </td>
                                 <td class="align-middle">
-                                    <Link href="#">Jenel Juju</Link>
+                                    <Link href="/crm/admin/manage-classrooms/students/parent">Jenel Juju</Link>
                                 </td>
                                 <td class="align-middle">
-                                    <Link href="#"
-                                        ><i class="fas fa-pen mr-3"></i
+                                    <Link href="/crm/admin/manage-classrooms/students/edit-student"
+                                        ><i class="fas fa-pen mr-3" id="edit-icon"></i
                                     ></Link>
                                     <Link href="#"
-                                        ><i class="fas fa-trash ml-3"></i
+                                        ><i class="fas fa-trash ml-3" id="trash-icon"></i
                                     ></Link>
                                 </td>
                             </tr>
@@ -88,14 +88,14 @@
                                     <p class="m-0 p-0">10:00 am - 11:00 am</p>
                                 </td>
                                 <td class="align-middle">
-                                    <Link href="#">Aila Mae</Link>
+                                    <Link href="/crm/admin/manage-classrooms/students/parent">Aila Mae</Link>
                                 </td>
                                 <td class="align-middle">
-                                    <Link href="#"
-                                        ><i class="fas fa-pen mr-3"></i
+                                    <Link href="/crm/admin/manage-classrooms/students/edit-student"
+                                        ><i class="fas fa-pen mr-3" id="edit-icon"></i
                                     ></Link>
                                     <Link href="#"
-                                        ><i class="fas fa-trash ml-3"></i
+                                        ><i class="fas fa-trash ml-3" id="trash-icon"></i
                                     ></Link>
                                 </td>
                             </tr>
@@ -109,14 +109,14 @@
                                     <p class="m-0 p-0">9:00 am - 10:00 am</p>
                                 </td>
                                 <td class="align-middle">
-                                    <Link href="#">Kathleen Joyce</Link>
+                                    <Link href="/crm/admin/manage-classrooms/students/parent">Kathleen Joyce</Link>
                                 </td>
                                 <td class="align-middle">
-                                    <Link href="#"
-                                        ><i class="fas fa-pen mr-3"></i
+                                    <Link href="/crm/admin/manage-classrooms/students/edit-student"
+                                        ><i class="fas fa-pen mr-3" id="edit-icon"></i
                                     ></Link>
                                     <Link href="#"
-                                        ><i class="fas fa-trash ml-3"></i
+                                        ><i class="fas fa-trash ml-3" id="trash-icon"></i
                                     ></Link>
                                 </td>
                             </tr>
@@ -130,14 +130,14 @@
                                     <p class="m-0 p-0">10:00 am - 11:00 am</p>
                                 </td>
                                 <td class="align-middle">
-                                    <Link href="#">Jenel Juju</Link>
+                                    <Link href="/crm/admin/manage-classrooms/students/parent">Jenel Juju</Link>
                                 </td>
                                 <td class="align-middle">
-                                    <Link href="#"
-                                        ><i class="fas fa-pen mr-3"></i
+                                    <Link href="/crm/admin/manage-classrooms/students/edit-student"
+                                        ><i class="fas fa-pen mr-3" id="edit-icon"></i
                                     ></Link>
                                     <Link href="#"
-                                        ><i class="fas fa-trash ml-3"></i
+                                        ><i class="fas fa-trash ml-3" id="trash-icon"></i
                                     ></Link>
                                 </td>
                             </tr>
@@ -151,14 +151,14 @@
                                     <p class="m-0 p-0">10:00 am - 11:00 am</p>
                                 </td>
                                 <td class="align-middle">
-                                    <Link href="#">Aila Mae</Link>
+                                    <Link href="/crm/admin/manage-classrooms/students/parent">Aila Mae</Link>
                                 </td>
                                 <td class="align-middle">
-                                    <Link href="#"
-                                        ><i class="fas fa-pen mr-3"></i
+                                    <Link href="/crm/admin/manage-classrooms/students/edit-student"
+                                        ><i class="fas fa-pen mr-3" id="edit-icon"></i
                                     ></Link>
                                     <Link href="#"
-                                        ><i class="fas fa-trash ml-3"></i
+                                        ><i class="fas fa-trash ml-3" id="trash-icon"></i
                                     ></Link>
                                 </td>
                             </tr>
@@ -172,14 +172,14 @@
                                     <p class="m-0 p-0">9:00 am - 10:00 am</p>
                                 </td>
                                 <td class="align-middle">
-                                    <Link href="#">Kathleen Joyce</Link>
+                                    <Link href="/crm/admin/manage-classrooms/students/parent">Kathleen Joyce</Link>
                                 </td>
                                 <td class="align-middle">
-                                    <Link href="#"
-                                        ><i class="fas fa-pen mr-3"></i
+                                    <Link href="/crm/admin/manage-classrooms/students/edit-student"
+                                        ><i class="fas fa-pen mr-3" id="edit-icon"></i
                                     ></Link>
                                     <Link href="#"
-                                        ><i class="fas fa-trash ml-3"></i
+                                        ><i class="fas fa-trash ml-3" id="trash-icon"></i
                                     ></Link>
                                 </td>
                             </tr>
@@ -190,7 +190,7 @@
                 <!-- Add Student & Pagination -->
                 <div class="d-flex pt-3">
                     <div>
-                        <Link href="#" class="btn btn-primary btn-icon-split">
+                        <Link href="/crm/admin/manage-classrooms/students/create-student" class="btn btn-primary btn-icon-split">
                             <span class="icon text-white-50">
                                 <i class="fas fa-plus"></i>
                             </span>
@@ -259,5 +259,23 @@ tr {
     line-height: 50px;
     min-height: 50px;
     height: 50px;
+}
+#back-btn {
+    color: white;
+    background-color: #282525;
+
+} #back-btn:hover {
+    color: #fff;
+    background-color: #282525;
+    border-color: #282525;
+} #back-btn:focus {
+    color: #fff;
+    background-color: #282525;
+    border-color: #282525;
+    box-shadow: 0 0 0 0.1rem #9e9898;
+} #trash-icon, #edit-icon {
+    color: #757474;
+} #trash-icon:hover, #edit-icon:hover {
+    color: #000;
 }
 </style>

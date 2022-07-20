@@ -1,4 +1,5 @@
-<!-- by: ecdcabalda -->
+<!-- Template by: ecdcabalda -->
+<!-- Used by: sclee -->
 
 <template>
     <AppLayout>
@@ -11,7 +12,7 @@
                         <Link href="/crm/admin/manage-users" class="btn btn-circle" id="back-btn">
                             <i class="fas fa-angle-left"></i>
                         </Link>
-                        <p class="h2 text-gray-900 form-title">CREATE USER</p>
+                        <p class="h2 text-gray-900 form-title">EDIT USER</p>
                     </div>
 
                     <!-- Form Proper -->
@@ -24,7 +25,7 @@
                                     type="text"
                                     class="form-control form-control-user"
                                     id="userFirstName"
-                                    placeholder="First Name"
+                                    value="Juan"
                                 />
                             </div>
                             <div class="col-lg-6">
@@ -33,7 +34,7 @@
                                     type="text"
                                     class="form-control form-control-user"
                                     id="userLastName"
-                                    placeholder="Last Name"
+                                    value="Dela Cruz"
                                 />
                             </div>
                         </div>
@@ -45,7 +46,7 @@
                                     type="text"
                                     class="form-control form-control-user"
                                     id="userNickname"
-                                    placeholder="Nickname"
+                                    value="Ju"
                                 />
                             </div>
                             <div class="col-lg-6">
@@ -54,7 +55,7 @@
                                     type="text"
                                     class="form-control form-control-user"
                                     id="userEmail"
-                                    placeholder="Position"
+                                    value="Manager"
                                 />
                             </div>
                         </div>
@@ -66,7 +67,7 @@
                                     type="text"
                                     class="form-control form-control-user"
                                     id="userContactNo"
-                                    placeholder="Contact No."
+                                    value="09123456789"
                                 />
                             </div>
                             <div class="col-lg-6">
@@ -75,7 +76,7 @@
                                     type="text"
                                     class="form-control form-control-user"
                                     id="userEmail"
-                                    placeholder="Email"
+                                    value="email@email.com"
                                 />
                             </div>
                         </div>
@@ -89,7 +90,7 @@
                                     id="flexCheckChecked"
                                 />
                                 <label
-                                    class="form-check-label ml-3"
+                                    class="form-check-label ml-2"
                                     for="flexCheckChecked"
                                 >
                                     Is Admin
@@ -111,7 +112,7 @@
                                 href="#"
                                 class="btn btn-primary btn-user btn-block"
                             >
-                                Create
+                                Update
                             </Link>
                         </div>
                     </form>
@@ -129,7 +130,6 @@ export default {
         Link,
         AppLayout,
     },
-    data() {},
     methods: {},
 };
 </script>

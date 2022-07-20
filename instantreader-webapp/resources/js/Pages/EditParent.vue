@@ -1,4 +1,5 @@
-<!-- by: ecdcabalda -->
+<!-- Template by: ecdcabalda -->
+<!-- Used by: sclee -->
 
 <template>
     <AppLayout>
@@ -11,7 +12,7 @@
                             <i class="fas fa-angle-left"></i>
                         </Link>
                         <p class="h2 text-gray-900 form-title">
-                            CREATE STUDENT
+                            EDIT PARENT
                         </p>
                     </div>
 
@@ -24,8 +25,8 @@
                                 <input
                                     type="text"
                                     class="form-control form-control-user"
-                                    id="studentFirstName"
-                                    placeholder="e.g. Juan"
+                                    id="parentFirstName"
+                                    value="Juan"
                                 />
                             </div>
                             <div class="col-lg-6">
@@ -33,62 +34,41 @@
                                 <input
                                     type="text"
                                     class="form-control form-control-user"
-                                    id="studentLastName"
-                                    placeholder="e.g. Dela Cruz"
+                                    id="parentLastName"
+                                    value="Dela Cruz"
                                 />
                             </div>
                         </div>
-                        <!-- Schedule Fields -->
+                        <!-- Contact Fields -->
                         <div class="form-group row mb-3">
                             <div class="col-lg-6">
-                                <label class="ml-2">Weekly Schedule</label>
-                                <select
-                                    class="custom-select"
-                                    id="inputGroupSelect02"
-                                >
-                                    <option disabled selected>Days</option>
-                                    <option value="1">MWF</option>
-                                    <option value="2">TTh</option>
-                                </select>
+                                <label class="ml-2">Contact No.</label>
+                                <input
+                                    type="text"
+                                    class="form-control form-control-user"
+                                    id="parentContactNo"
+                                    value="09123456789"
+                                />
                             </div>
                             <div class="col-lg-6">
-                                <label class="ml-2">Time</label>
-                                <select
-                                    class="custom-select"
-                                    id="inputGroupSelect02"
-                                >
-                                    <option disabled selected>Time</option>
-                                    <option value="1">9:00 am - 10:00 am</option>
-                                    <option value="2">10:00 am - 11:00 am</option>
-                                    <option value="3">11:00 am - 12:00 am</option>
-                                </select>
-                            </div>
-                        </div>
-                        <!-- Level Selector -->
-                        <div class="form-group row mb-3">
-                            <div class="col-lg-6">
-                                <label class="ml-2">Reading Level</label>
-                                <select
-                                    class="custom-select"
-                                    id="inputGroupSelect02"
-                                >
-                                    <option disabled selected>Level</option>
-                                    <option value="1">Basic</option>
-                                    <option value="2">Advanced</option>
-                                    <option value="3">Mastery</option>
-                                    <option value="3">Compass</option>
-                                </select>
+                                <label class="ml-2">Email</label>
+                                <input
+                                    type="text"
+                                    class="form-control form-control-user"
+                                    id="parentEmail"
+                                    value="email@email.com"
+                                />
                             </div>
                         </div>
                         <!-- Parent Field -->
                         <div class="form-group row mb-5">
-                            <div class="col-lg-6">
-                                <label class="ml-2">Parent</label>
+                            <div class="col-lg-12">
+                                <label class="ml-2">Address</label>
                                 <input
                                     type="text"
                                     class="form-control form-control-user"
-                                    id="studentParent"
-                                    placeholder="Parent"
+                                    id="parentAddress"
+                                    value="Calamba, Laguna"
                                 />
                             </div>
                         </div>
@@ -98,7 +78,7 @@
                                 href="#"
                                 class="btn btn-primary btn-user btn-block"
                             >
-                                Create
+                                Update
                             </Link>
                         </div>
                     </form>

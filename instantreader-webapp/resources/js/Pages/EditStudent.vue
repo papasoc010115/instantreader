@@ -1,4 +1,5 @@
-<!-- by: ecdcabalda -->
+<!-- Template by: ecdcabalda -->
+<!-- Used by: sclee -->
 
 <template>
     <AppLayout>
@@ -11,7 +12,7 @@
                             <i class="fas fa-angle-left"></i>
                         </Link>
                         <p class="h2 text-gray-900 form-title">
-                            CREATE STUDENT
+                            EDIT STUDENT
                         </p>
                     </div>
 
@@ -25,7 +26,7 @@
                                     type="text"
                                     class="form-control form-control-user"
                                     id="studentFirstName"
-                                    placeholder="e.g. Juan"
+                                    value="Juan"
                                 />
                             </div>
                             <div class="col-lg-6">
@@ -34,7 +35,7 @@
                                     type="text"
                                     class="form-control form-control-user"
                                     id="studentLastName"
-                                    placeholder="e.g. Dela Cruz"
+                                    value="Dela Cruz"
                                 />
                             </div>
                         </div>
@@ -46,8 +47,7 @@
                                     class="custom-select"
                                     id="inputGroupSelect02"
                                 >
-                                    <option disabled selected>Days</option>
-                                    <option value="1">MWF</option>
+                                    <option value="1" selected>MWF</option>
                                     <option value="2">TTh</option>
                                 </select>
                             </div>
@@ -57,8 +57,7 @@
                                     class="custom-select"
                                     id="inputGroupSelect02"
                                 >
-                                    <option disabled selected>Time</option>
-                                    <option value="1">9:00 am - 10:00 am</option>
+                                    <option value="1" selected>9:00 am - 10:00 am</option>
                                     <option value="2">10:00 am - 11:00 am</option>
                                     <option value="3">11:00 am - 12:00 am</option>
                                 </select>
@@ -72,8 +71,7 @@
                                     class="custom-select"
                                     id="inputGroupSelect02"
                                 >
-                                    <option disabled selected>Level</option>
-                                    <option value="1">Basic</option>
+                                    <option value="1" selected>Basic</option>
                                     <option value="2">Advanced</option>
                                     <option value="3">Mastery</option>
                                     <option value="3">Compass</option>
@@ -88,7 +86,7 @@
                                     type="text"
                                     class="form-control form-control-user"
                                     id="studentParent"
-                                    placeholder="Parent"
+                                    value="Sage Ann Wong"
                                 />
                             </div>
                         </div>
@@ -98,7 +96,7 @@
                                 href="#"
                                 class="btn btn-primary btn-user btn-block"
                             >
-                                Create
+                                Update
                             </Link>
                         </div>
                     </form>

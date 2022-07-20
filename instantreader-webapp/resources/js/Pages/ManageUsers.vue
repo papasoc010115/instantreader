@@ -69,11 +69,11 @@
                                 <td v-if="index%2==0" class="align-middle"><i class="fas fa-check fa-lg" id="check-icon"></i></td>
                                 <td v-else class="align-middle"><i class="fas fa-xmark fa-lg" id="x-icon"></i></td>
                                 <td class="align-middle">
-                                    <Link href="#"
-                                        ><i class="fas fa-pen mr-3"></i
+                                    <Link href="/crm/admin/manage-users/edit-user"
+                                        ><i class="fas fa-pen mr-3" id="edit-icon"></i
                                     ></Link>
                                     <Link href="#"
-                                        ><i class="fas fa-trash ml-3"></i
+                                        ><i class="fas fa-trash ml-3" id="trash-icon"></i
                                     ></Link>
                                 </td>
                             </tr>
@@ -84,7 +84,7 @@
                 <!-- Add User & Pagination -->
                 <div class="d-flex pt-3">
                     <div>
-                        <Link href="#" class="btn btn-primary btn-icon-split">
+                        <Link href="/crm/admin/manage-users/create-user" class="btn btn-primary btn-icon-split">
                             <span class="icon text-white-50">
                                 <i class="fas fa-plus"></i>
                             </span>
@@ -141,14 +141,15 @@ export default {
         Link,
         AppLayout,
     },
-    data() {},
     methods: {},
 };
 </script>
 
 <style scoped>
 @import "../../../public/crm-site/assets/css/sb-admin-2.css";
-
+.h2 {
+    font-weight: bold;
+}
 tr {
     line-height: 50px;
     min-height: 50px;
@@ -160,5 +161,9 @@ tr {
     color: #29CB4D;
 } #x-icon {
     color: #FF6363;
+} #trash-icon, #edit-icon {
+    color: #757474;
+} #trash-icon:hover, #edit-icon:hover {
+    color: #000;
 }
 </style>

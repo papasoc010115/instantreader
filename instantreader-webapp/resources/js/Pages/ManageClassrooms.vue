@@ -61,68 +61,14 @@
                                 <td>10</td>
                                 <td>10</td>
                                 <td>
-                                    <Link href="#">View List</Link>
+                                    <Link href="/crm/admin/manage-classrooms/students">View List</Link>
                                 </td>
                                 <td>
-                                    <Link href="#"
-                                        ><i class="fas fa-pen mr-3"></i
+                                    <Link href="/crm/admin/manage-classrooms/students/edit-student"
+                                        ><i class="fas fa-pen mr-3" id="edit-icon"></i
                                     ></Link>
                                     <Link href="#"
-                                        ><i class="fas fa-trash ml-3"></i
-                                    ></Link>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>#21253</td>
-                                <td>Los Baños</td>
-                                <td>Reyna Santos</td>
-                                <td>15</td>
-                                <td>5</td>
-                                <td>
-                                    <Link href="#">View List</Link>
-                                </td>
-                                <td>
-                                    <Link href="#"
-                                        ><i class="fas fa-pen mr-3"></i
-                                    ></Link>
-                                    <Link href="#"
-                                        ><i class="fas fa-trash ml-3"></i
-                                    ></Link>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>#02496</td>
-                                <td>Cabuyao</td>
-                                <td>Yoru Kageyama</td>
-                                <td>17</td>
-                                <td>3</td>
-                                <td>
-                                    <Link href="#">View List</Link>
-                                </td>
-                                <td>
-                                    <Link href="#"
-                                        ><i class="fas fa-pen mr-3"></i
-                                    ></Link>
-                                    <Link href="#"
-                                        ><i class="fas fa-trash ml-3"></i
-                                    ></Link>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>#012345</td>
-                                <td>Calamba</td>
-                                <td>Sage Wong</td>
-                                <td>10</td>
-                                <td>10</td>
-                                <td>
-                                    <Link href="#">View List</Link>
-                                </td>
-                                <td>
-                                    <Link href="#"
-                                        ><i class="fas fa-pen mr-3"></i
-                                    ></Link>
-                                    <Link href="#"
-                                        ><i class="fas fa-trash ml-3"></i
+                                        ><i class="fas fa-trash ml-3" id="trash-icon"></i
                                     ></Link>
                                 </td>
                             </tr>
@@ -133,14 +79,14 @@
                                 <td>15</td>
                                 <td>5</td>
                                 <td>
-                                    <Link href="#">View List</Link>
+                                    <Link href="/crm/admin/manage-classrooms/students">View List</Link>
                                 </td>
                                 <td>
-                                    <Link href="#"
-                                        ><i class="fas fa-pen mr-3"></i
+                                    <Link href="/crm/admin/manage-classrooms/students/edit-student"
+                                        ><i class="fas fa-pen mr-3" id="edit-icon"></i
                                     ></Link>
                                     <Link href="#"
-                                        ><i class="fas fa-trash ml-3"></i
+                                        ><i class="fas fa-trash ml-3" id="trash-icon"></i
                                     ></Link>
                                 </td>
                             </tr>
@@ -151,14 +97,14 @@
                                 <td>17</td>
                                 <td>3</td>
                                 <td>
-                                    <Link href="#">View List</Link>
+                                    <Link href="/crm/admin/manage-classrooms/students">View List</Link>
                                 </td>
                                 <td>
-                                    <Link href="#"
-                                        ><i class="fas fa-pen mr-3"></i
+                                    <Link href="/crm/admin/manage-classrooms/students/edit-student"
+                                        ><i class="fas fa-pen mr-3" id="edit-icon"></i
                                     ></Link>
                                     <Link href="#"
-                                        ><i class="fas fa-trash ml-3"></i
+                                        ><i class="fas fa-trash ml-3" id="trash-icon"></i
                                     ></Link>
                                 </td>
                             </tr>
@@ -169,14 +115,68 @@
                                 <td>10</td>
                                 <td>10</td>
                                 <td>
-                                    <Link href="#">View List</Link>
+                                    <Link href="/crm/admin/manage-classrooms/students">View List</Link>
                                 </td>
                                 <td>
-                                    <Link href="#"
-                                        ><i class="fas fa-pen mr-3"></i
+                                    <Link href="/crm/admin/manage-classrooms/students/edit-student"
+                                        ><i class="fas fa-pen mr-3" id="edit-icon"></i
                                     ></Link>
                                     <Link href="#"
-                                        ><i class="fas fa-trash ml-3"></i
+                                        ><i class="fas fa-trash ml-3" id="trash-icon"></i
+                                    ></Link>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#21253</td>
+                                <td>Los Baños</td>
+                                <td>Reyna Santos</td>
+                                <td>15</td>
+                                <td>5</td>
+                                <td>
+                                    <Link href="/crm/admin/manage-classrooms/students">View List</Link>
+                                </td>
+                                <td>
+                                    <Link href="/crm/admin/manage-classrooms/students/edit-student"
+                                        ><i class="fas fa-pen mr-3" id="edit-icon"></i
+                                    ></Link>
+                                    <Link href="#"
+                                        ><i class="fas fa-trash ml-3" id="trash-icon"></i
+                                    ></Link>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#02496</td>
+                                <td>Cabuyao</td>
+                                <td>Yoru Kageyama</td>
+                                <td>17</td>
+                                <td>3</td>
+                                <td>
+                                    <Link href="/crm/admin/manage-classrooms/students">View List</Link>
+                                </td>
+                                <td>
+                                    <Link href="/crm/admin/manage-classrooms/students/edit-student"
+                                        ><i class="fas fa-pen mr-3" id="edit-icon"></i
+                                    ></Link>
+                                    <Link href="#"
+                                        ><i class="fas fa-trash ml-3" id="trash-icon"></i
+                                    ></Link>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#012345</td>
+                                <td>Calamba</td>
+                                <td>Sage Wong</td>
+                                <td>10</td>
+                                <td>10</td>
+                                <td>
+                                    <Link href="/crm/admin/manage-classrooms/students">View List</Link>
+                                </td>
+                                <td>
+                                    <Link href="/crm/admin/manage-classrooms/students/edit-student"
+                                        ><i class="fas fa-pen mr-3" id="edit-icon"></i
+                                    ></Link>
+                                    <Link href="#"
+                                        ><i class="fas fa-trash ml-3" id="trash-icon"></i
                                     ></Link>
                                 </td>
                             </tr>
@@ -187,7 +187,7 @@
                 <!-- Add Class & Pagination -->
                 <div class="d-flex pt-3">
                     <div>
-                        <Link href="#" class="btn btn-primary btn-icon-split">
+                        <Link href="/crm/admin/manage-classrooms/create-classroom" class="btn btn-primary btn-icon-split">
                             <span class="icon text-white-50">
                                 <i class="fas fa-plus"></i>
                             </span>
@@ -244,17 +244,22 @@ export default {
         Link,
         AppLayout,
     },
-    data() {},
     methods: {},
 };
 </script>
 
 <style scoped>
 @import "../../../public/crm-site/assets/css/sb-admin-2.css";
-
+.h2 {
+    font-weight: bold;
+}
 tr {
     line-height: 75px;
     min-height: 75px;
     height: 75px;
+} #trash-icon, #edit-icon {
+    color: #757474;
+} #trash-icon:hover, #edit-icon:hover {
+    color: #000;
 }
 </style>
