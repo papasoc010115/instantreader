@@ -78,7 +78,7 @@
                         <div class="form-group row mb-3">
                             <div class="col-md-6">
                                 <input
-                                    type="text"
+                                    type="tel"
                                     class="form-control form-control-user"
                                     id="applicantContactNo"
                                     placeholder="Contact No."
@@ -86,7 +86,7 @@
                             </div>
                             <div class="col-md-6">
                                 <input
-                                    type="text"
+                                    type="email"
                                     class="form-control form-control-user"
                                     id="applicantEmail"
                                     placeholder="Email"

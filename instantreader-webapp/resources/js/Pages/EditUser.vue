@@ -64,7 +64,7 @@
                             <div class="col-lg-6">
                                 <label class="ml-2">Contact No.</label>
                                 <input
-                                    type="text"
+                                    type="tel"
                                     class="form-control form-control-user"
                                     id="userContactNo"
                                     value="09123456789"
@@ -73,7 +73,7 @@
                             <div class="col-lg-6">
                                 <label class="ml-2">Email</label>
                                 <input
-                                    type="text"
+                                    type="email"
                                     class="form-control form-control-user"
                                     id="userEmail"
                                     value="email@email.com"
