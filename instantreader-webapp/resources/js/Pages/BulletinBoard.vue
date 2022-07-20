@@ -7,7 +7,7 @@
                 <!-- Header with Search Bar -->
                 <div class="d-flex">
                     <div class="ml-3">
-                        <p class="h2 text-gray-900 mb-4">BULLETIN BOARD</p>
+                        <p class="h2 text-gray-900 mb-4 font-weight-bold">BULLETIN BOARD</p>
                     </div>
                     <div class="ml-auto">
                         <form
@@ -35,16 +35,16 @@
                 </div>
 
                 <!-- Column Headers -->
-                <div class="column-header py-3">
+                <div class="column-header mt-5">
                     <div class="row text-center">
                         <div class="col-md-1">
                             <img hidden class="profile-pic" src="./../../../public/marketing-site/assets/agency/img/avatar-1.png" />
                         </div>
-                        <div class="col font-weight-bold text-primary">First Name</div>
-                        <div class="col font-weight-bold text-primary">Last Name</div>
-                        <div class="col font-weight-bold text-primary">Date</div>
-                        <div class="col font-weight-bold text-primary">Time</div>
-                        <div class="col-md-1 font-weight-bold text-primary">Status</div>
+                        <div class="col font-weight-bold">First Name</div>
+                        <div class="col font-weight-bold">Last Name</div>
+                        <div class="col font-weight-bold">Date</div>
+                        <div class="col font-weight-bold">Time</div>
+                        <div class="col-md-1 font-weight-bold">Status</div>
                     </div> 
                 </div>
                 
