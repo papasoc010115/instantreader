@@ -53,7 +53,7 @@
                                 <input
                                     type="text"
                                     class="form-control form-control-user"
-                                    id="userEmail"
+                                    id="userPosition"
                                     placeholder="Position"
                                 />
                             </div>
@@ -63,7 +63,7 @@
                             <div class="col-lg-6">
                                 <label class="ml-2">Contact No.</label>
                                 <input
-                                    type="text"
+                                    type="tel"
                                     class="form-control form-control-user"
                                     id="userContactNo"
                                     placeholder="Contact No."
@@ -72,7 +72,7 @@
                             <div class="col-lg-6">
                                 <label class="ml-2">Email</label>
                                 <input
-                                    type="text"
+                                    type="email"
                                     class="form-control form-control-user"
                                     id="userEmail"
                                     placeholder="Email"
@@ -99,7 +99,7 @@
                         <!-- Profile Picture -->
                         <div class="form-group mb-5 row">
                             <label for="userProfilePicture" class="col-lg-2 col-form-label ml-2">Profile Picture</label>
-                            <div class="col-lg-3 custom-file">
+                            <div class="col-lg-3 custom-file" id="userProfilePicture">
                                 <div class="custom-file">
                                     <input type="file" class="custom-file-input" id="customFile">
                                     <label class="custom-file-label" for="customFile">Choose file</label>
@@ -147,10 +147,6 @@ export default {
 }
 
 .form-title {
-    margin: 0px 0px 0px 20px;
-}
-
-.file-upload {
     margin: 0px 0px 0px 20px;
 }
 

@@ -8,7 +8,7 @@
                 <!-- Header and Search Bar -->
                 <div class="d-flex">
                     <div>
-                        <p class="h2 text-gray-900 mb-4">MANAGE USERS</p>
+                        <p class="h2 text-gray-900 mb-4">SALES ACTIVITY LOG</p>
                     </div>
                     <div class="ml-auto">
                         <form
@@ -39,58 +39,31 @@
                 <div class="table-responsive mt-5">
                     <table
                         class="table table-striped table-hover text-center"
-                        id="manageUsersTable"
+                        id="salesActivityLogTable"
                         width="100%"
                         cellspacing="0"
                     >
                         <thead>
                             <tr class="text-gray-900">
-                                <th>User</th>
-                                <th>First Name</th>
-                                <th>Last Name</th>
-                                <th>Position</th>
-                                <th>Last Activity</th>
-                                <th>Admin</th>
-                                <th></th>
+                                <th>Type</th>
+                                <th>Amount</th>
+                                <th>Date</th>
+                                <th class="text-left">Remarks</th>
                             </tr>
                         </thead>
                         <tbody class="text-gray-900" style="vertical-align: middle">
-                            <tr v-for="index in 6" :key="index">
-                                <td class="text-left" height=100 width=250>
-                                    <span>
-                                        <img src="./../../../public/marketing-site/assets/agency/img/avatar-1.png" height=100 width=100>
-                                    </span>
-                                    <span> Skye </span>
-                                </td>
-                                <td class="align-middle">Skye Kaye</td>
-                                <td class="align-middle">Ramos</td>
-                                <td class="align-middle">Full Stack Developer</td>
-                                <td class="align-middle">Create UI Design</td>
-                                <td v-if="index%2==0" class="align-middle"><i class="fas fa-check fa-lg" id="check-icon"></i></td>
-                                <td v-else class="align-middle"><i class="fas fa-times fa-lg" id="x-icon"></i></td>
-                                <td class="align-middle">
-                                    <Link href="/crm/admin/manage-users/edit-user"
-                                        ><i class="fas fa-pen mr-3" id="edit-icon"></i
-                                    ></Link>
-                                    <Link href="#"
-                                        ><i class="fas fa-trash ml-3" id="trash-icon"></i
-                                    ></Link>
-                                </td>
+                            <tr v-for="index in 8" :key="index">
+                                <td class="align-middle">Receive</td>
+                                <td class="align-middle">100.00</td>
+                                <td class="align-middle">July 11, 2022</td>
+                                <td class="align-middle text-justify">IR Kids Club Registration</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
 
-                <!-- Add User & Pagination -->
+                <!-- Pagination -->
                 <div class="d-flex pt-3">
-                    <div>
-                        <Link href="/crm/admin/manage-users/create-user" class="btn btn-primary btn-icon-split">
-                            <span class="icon text-white-50">
-                                <i class="fas fa-plus"></i>
-                            </span>
-                            <span class="text">Add User</span>
-                        </Link>
-                    </div>
                     <div class="ml-auto">
                         <nav class="text-center">
                             <ul class="pagination">
@@ -154,16 +127,5 @@ tr {
     line-height: 50px;
     min-height: 50px;
     height: 50px;
-} img {
-    border-radius: 50%;
-    margin-right: 5%;
-} #check-icon {
-    color: #29CB4D;
-} #x-icon {
-    color: #FF6363;
-} #trash-icon, #edit-icon {
-    color: #757474;
-} #trash-icon:hover, #edit-icon:hover {
-    color: #000;
 }
 </style>

@@ -99,12 +99,20 @@ Route::get('/crm/sales/contact-management', function () {
     return Inertia::render('ContactManagement');
 });
 
-Route::get('/crm/sales/contact-management/CreateProspect', function () {
+Route::get('/crm/sales/contact-management/create-prospect', function () {
     return Inertia::render('CreateProspect');
 });
 
-Route::get('/crm/sales/contact-management/CreateLead', function () {
+Route::get('/crm/sales/contact-management/create-lead', function () {
     return Inertia::render('CreateLead');
+});
+
+Route::get('/crm/sales/contact-management/edit-prospect', function () {
+    return Inertia::render('EditProspect');
+});
+
+Route::get('/crm/sales/contact-management/edit-lead', function () {
+    return Inertia::render('EditLead');
 });
 
 
@@ -113,7 +121,7 @@ Route::get('/crm/sales/client-interaction-tracking', function () {
 });
 
 Route::get('/crm/sales/lead-management', function () {
-    return Inertia::render('Test');
+    return Inertia::render('LeadManagement');
 });
 
 Route::get('/crm/sales/customer-analytics', function () {
@@ -125,7 +133,7 @@ Route::get('/crm/sales/sales-forecast', function () {
 });
 
 Route::get('/crm/sales/sales-activity', function () {
-    return Inertia::render('Test');
+    return Inertia::render('SalesActivityLog');
 });
 
 /*--------------------------------------------------------------------------

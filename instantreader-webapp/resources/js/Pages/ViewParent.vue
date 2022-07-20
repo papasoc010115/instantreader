@@ -10,7 +10,7 @@
                         <i class="fas fa-angle-left"></i>
                     </Link>
                     <div class="ml-3">
-                        <p class="h2 text-gray-900 mb-4">VIEW PARENT</p>
+                        <p class="h2 text-gray-900 mb-4 font-weight-bold">PARENT</p>
                     </div>
                 </div>
 
@@ -18,7 +18,7 @@
                 <div class="table-responsive mt-5">
                     <table
                         class="table table-striped table-hover text-center"
-                        id="manageClassroomsTable"
+                        id="parentTable"
                         width="100%"
                         cellspacing="0"
                     >

@@ -43,7 +43,7 @@
                             <div class="col-lg-6">
                                 <label class="ml-2">Contact No.</label>
                                 <input
-                                    type="text"
+                                    type="tel"
                                     class="form-control form-control-user"
                                     id="tutorContactNo"
                                     placeholder="e.g. 09123456789"
@@ -52,7 +52,7 @@
                             <div class="col-lg-6">
                                 <label class="ml-2">Email</label>
                                 <input
-                                    type="text"
+                                    type="email"
                                     class="form-control form-control-user"
                                     id="tutorEmail"
                                     placeholder="e.g. email@email.com"
@@ -62,13 +62,23 @@
                         <!-- Branch Field -->
                         <div class="form-group mb-4 row">
                             <label for="tutorBranch" class="col-lg-3 col-form-label ml-2">Branch</label>
-                            <div class="col-lg-4">
-                                <select class="custom-select">
+                            <div class="col-lg-3">
+                                <select class="custom-select" id="tutorBranch">
                                     <label class="mr-3">Branch</label>
                                     <option value="Cabuyao" selected>Cabuyao</option>
                                     <option value="Calamba">Calamba</option>
                                     <option value="Los Banos">Los Banos</option>
-                                    <option value="Sta. Rosa">Sta/ Rosa</option>
+                                    <option value="Sta. Rosa">Sta. Rosa</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- Status Field -->
+                        <div class="form-group mb-4 row">
+                            <label for="tutorStatus" class="col-lg-3 col-form-label ml-2">Status</label>
+                            <div class="col-lg-3">
+                                <select class="custom-select" id="tutorStatus">
+                                    <option value="fullTime">Full-Time</option>
+                                    <option value="partTime">Part-Time</option>
                                 </select>
                             </div>
                         </div>
@@ -77,7 +87,7 @@
                             <label for="tutorMaxStudents" class="col-lg-3 col-form-label ml-2">Maximum Number of Students</label>
                             <div class="col-lg-1">
                                 <input
-                                type="email"
+                                type="number"
                                 class="form-control form-control-user"
                                 id="tutorMaxStudents"
                                 placeholder="e.g. 1"
@@ -89,7 +99,7 @@
                             <label for="tutorProfilePicture" class="col-lg-3 col-form-label ml-2">Profile Picture</label>
                             <div class="col-lg-3 custom-file">
                                 <div class="custom-file">
-                                    <input type="file" class="custom-file-input" id="customFile">
+                                    <input type="file" class="custom-file-input" id="tutorProfilePicture">
                                     <label class="custom-file-label" for="customFile">Choose file</label>
                                 </div>
                             </div>
@@ -137,12 +147,12 @@ export default {
     margin: 0px 0px 0px 20px;
 }
 
-.file-upload {
-    margin: 0px 0px 0px 20px;
-}
-
-input, label {
-    display: block;
+.custom-select {
+    font-size: 0.8rem;
+    border-radius: 10rem;
+    height: 50px;
+    color: #858796;
+    opacity: 1;
 }
 
 #tutorMaxStudents {

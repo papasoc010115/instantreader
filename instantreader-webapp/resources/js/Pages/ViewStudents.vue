@@ -10,7 +10,7 @@
                         <i class="fas fa-angle-left"></i>
                     </Link>
                     <div class="ml-3">
-                        <p class="h2 text-gray-900 mb-4">VIEW STUDENTS</p>
+                        <p class="h2 text-gray-900 mb-4 font-weight-bold">STUDENTS</p>
                     </div>
                     <div class="ml-auto">
                         <form
@@ -41,7 +41,7 @@
                 <div class="table-responsive mt-5">
                     <table
                         class="table table-striped table-hover text-center"
-                        id="manageClassroomsTable"
+                        id="studentsTable"
                         width="100%"
                         cellspacing="0"
                     >
