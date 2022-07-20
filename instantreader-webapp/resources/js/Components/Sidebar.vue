@@ -270,6 +270,12 @@ export default {
 };
 </script>
 
+<style>
+.sidebar {
+    z-index: 1; /* This allows the sidebar to be behind modals' backgrounds */
+}
+</style>
+
 <style scoped>
 ul {
     padding: 1.5rem 0;
