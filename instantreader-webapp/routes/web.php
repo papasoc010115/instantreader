@@ -129,7 +129,7 @@ Route::get('/crm/sales/customer-analytics', function () {
 });
 
 Route::get('/crm/sales/sales-forecast', function () {
-    return Inertia::render('Test');
+    return Inertia::render('SalesForecast');
 });
 
 Route::get('/crm/sales/sales-activity', function () {
