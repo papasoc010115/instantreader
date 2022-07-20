@@ -67,7 +67,7 @@
                                 <td class="align-middle">Full Stack Developer</td>
                                 <td class="align-middle">Create UI Design</td>
                                 <td v-if="index%2==0" class="align-middle"><i class="fas fa-check fa-lg" id="check-icon"></i></td>
-                                <td v-else class="align-middle"><i class="fas fa-xmark fa-lg" id="x-icon"></i></td>
+                                <td v-else class="align-middle"><i class="fas fa-times fa-lg" id="x-icon"></i></td>
                                 <td class="align-middle">
                                     <Link href="/crm/admin/manage-users/edit-user"
                                         ><i class="fas fa-pen mr-3" id="edit-icon"></i
