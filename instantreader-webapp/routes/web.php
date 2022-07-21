@@ -125,7 +125,7 @@ Route::get('/crm/sales/lead-management', function () {
 });
 
 Route::get('/crm/sales/customer-analytics', function () {
-    return Inertia::render('Test');
+    return Inertia::render('CustomerAnalytics');
 });
 
 Route::get('/crm/sales/sales-forecast', function () {

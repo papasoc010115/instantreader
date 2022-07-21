@@ -2,6 +2,9 @@
 
 <template>
     <AppLayout>
+        <DeleteProspect :show="toggleProspect" @close="handleCloseProspectModal"/>
+        <DeleteLead :show="toggleLead" @close="handleCloseLeadModal"/>
+        <AddAssignedUser :show="toggleAddAssignedUser" @close="handleCloseAddAssignedUserModal" />
         <div class="container-fluid">
             <div class="pt-5 pb-5">          
                 <!-- Header with Search Bar -->
@@ -53,9 +56,7 @@
                                             <Link href="/crm/sales/contact-management/edit-prospect"
                                                 ><i class="fas fa-pen mr-3"></i
                                             ></Link>
-                                            <Link href="#"
-                                                ><i class="fas fa-trash ml-3"></i
-                                            ></Link>
+                                            <i @click="handleDelProspect" class="fas fa-trash ml-3"></i>
                                         </div>
                                     </div>
                                     <div class="card-body">
@@ -80,7 +81,7 @@
                                         <div class="d-flex my-3">
                                             <div class="w-50">
                                                 Assigned Users
-                                                <Link><i class="fas fa-plus ml-3"></i></Link>
+                                                <i @click="handleAddAssignedUser" class="fas fa-plus ml-3"></i>
                                             </div>
                                             <div class="w-50 text-center">
                                                 <ul class="list-unstyled">
@@ -101,9 +102,7 @@
                                             <Link href="/crm/sales/contact-management/edit-prospect"
                                                 ><i class="fas fa-pen mr-3"></i
                                             ></Link>
-                                            <Link href="#"
-                                                ><i class="fas fa-trash ml-3"></i
-                                            ></Link>
+                                            <i @click="handleDelProspect" class="fas fa-trash ml-3"></i>
                                         </div>
                                     </div>
                                     <div class="card-body">
@@ -128,7 +127,7 @@
                                         <div class="d-flex my-3">
                                             <div class="w-50">
                                                 Assigned Users
-                                                <Link><i class="fas fa-plus ml-3"></i></Link>
+                                                <i @click="handleAddAssignedUser" class="fas fa-plus ml-3"></i>
                                             </div>
                                             <div class="w-50 text-center">
                                                 <ul class="list-unstyled">
@@ -148,9 +147,7 @@
                                             <Link href="/crm/sales/contact-management/edit-prospect"
                                                 ><i class="fas fa-pen mr-3"></i
                                             ></Link>
-                                            <Link href="#"
-                                                ><i class="fas fa-trash ml-3"></i
-                                            ></Link>
+                                            <i @click="handleDelProspect" class="fas fa-trash ml-3"></i>
                                         </div>
                                     </div>
                                     <div class="card-body">
@@ -175,7 +172,7 @@
                                         <div class="d-flex my-3">
                                             <div class="w-50">
                                                 Assigned Users
-                                                <Link><i class="fas fa-plus ml-3"></i></Link>
+                                                <i @click="handleAddAssignedUser" class="fas fa-plus ml-3"></i>
                                             </div>
                                             <div class="w-50 text-center">
                                                 <ul class="list-unstyled">
@@ -243,9 +240,7 @@
                                             <Link href="/crm/sales/contact-management/edit-lead"
                                                 ><i class="fas fa-pen mr-3"></i
                                             ></Link>
-                                            <Link href="#"
-                                                ><i class="fas fa-trash ml-3"></i
-                                            ></Link>
+                                            <i @click="handleDelLead" class="fas fa-trash ml-3"></i>
                                         </div>
                                     </div>
                                     <div class="card-body">
@@ -270,7 +265,7 @@
                                         <div class="d-flex my-3">
                                             <div class="w-50">
                                                 Assigned Users
-                                                <Link><i class="fas fa-plus ml-3"></i></Link>
+                                                <i @click="handleAddAssignedUser" class="fas fa-plus ml-3"></i>
                                             </div>
                                             <div class="w-50 text-center">
                                                 <ul class="list-unstyled">
@@ -291,9 +286,7 @@
                                             <Link href="/crm/sales/contact-management/edit-lead"
                                                 ><i class="fas fa-pen mr-3"></i
                                             ></Link>
-                                            <Link href="#"
-                                                ><i class="fas fa-trash ml-3"></i
-                                            ></Link>
+                                            <i @click="handleDelLead" class="fas fa-trash ml-3"></i>
                                         </div>
                                     </div>
                                     <div class="card-body">
@@ -318,7 +311,7 @@
                                         <div class="d-flex my-3">
                                             <div class="w-50">
                                                 Assigned Users
-                                                <Link><i class="fas fa-plus ml-3"></i></Link>
+                                                <i @click="handleAddAssignedUser" class="fas fa-plus ml-3"></i>
                                             </div>
                                             <div class="w-50 text-center">
                                                 <ul class="list-unstyled">
@@ -339,9 +332,7 @@
                                             <Link href="/crm/sales/contact-management/edit-lead"
                                                 ><i class="fas fa-pen mr-3"></i
                                             ></Link>
-                                            <Link href="#"
-                                                ><i class="fas fa-trash ml-3"></i
-                                            ></Link>
+                                            <i @click="handleDelLead" class="fas fa-trash ml-3"></i>
                                         </div>
                                     </div>
                                     <div class="card-body">
@@ -366,7 +357,7 @@
                                         <div class="d-flex my-3">
                                             <div class="w-50">
                                                 Assigned Users
-                                                <Link><i class="fas fa-plus ml-3"></i></Link>
+                                                <i @click="handleAddAssignedUser" class="fas fa-plus ml-3"></i>
                                             </div>
                                             <div class="w-50 text-center">
                                                 <ul class="list-unstyled">
@@ -424,14 +415,45 @@
 <script>
 import { Link } from "@inertiajs/inertia-vue3";
 import AppLayout from "../Layouts/AppLayout.vue";
+import DeleteProspect from "../Components/modals/DeleteProspectModal.vue"
+import DeleteLead from "../Components/modals/DeleteLeadModal.vue"
+import AddAssignedUser from "../Components/modals/AddAssignedUserModal.vue"
 
 export default {
     components: {
         Link,
         AppLayout,
+        DeleteProspect,
+        DeleteLead,
+        AddAssignedUser,
     },
-    data() {},
-    methods: {},
+    data() {
+        return {
+            toggleProspect: false,
+            toggleLead: false,
+            toggleAddAssignedUser: false,
+        };
+    },
+    methods: {
+        handleDelProspect() {
+            this.toggleProspect = !this.toggleProspect;
+        },
+        handleDelLead() {
+            this.toggleLead = !this.toggleLead;
+        },
+        handleAddAssignedUser() {
+            this.toggleAddAssignedUser = !this.toggleAddAssignedUser
+        },
+        handleCloseProspectModal() {
+            this.toggleProspect = false;
+        },
+        handleCloseLeadModal() {
+            this.toggleLead = false;
+        },
+        handleCloseAddAssignedUserModal() {
+            this.toggleAddAssignedUser = false;
+        }
+    },
 };
 </script>
 
