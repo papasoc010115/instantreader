@@ -2,6 +2,9 @@
 
 <template>
     <AppLayout>
+        <AddAssignedUser :show="toggleAddAssignedUser" @close="handleCloseAddModal" />
+        <DelAssignedUser :show="toggleDelAssignedUser" @close="handleCloseDelModal" />
+        <EditAssignedUser :show="toggleEditAssignedUser" @close="handleCloseEditModal" />
         <div class="container-fluid">
             <div class="row">
                 <div class="p-5 form-container">
@@ -64,32 +67,32 @@
                             <div class="d-flex border assigned-users rounded-pill">
                                 <div class="d-flex users-container" id="leadAssignedUsers">
                                     <div class="chip m-2">
-                                        Jenel Juju
-                                        <Link><i class="ml-2 fas fa-times"></i></Link>
+                                        <span @click="handleEditAssignedUser">Jenel Juju</span>
+                                        <i @click="handleDeleteAssignedUser" class="ml-2 fas fa-times"></i>
                                     </div>
                                     <div class="chip m-2">
-                                        Sage Wong
-                                        <Link><i class="ml-2 fas fa-times"></i></Link>
+                                        <span @click="handleEditAssignedUser">Sage Wong</span>
+                                        <i @click="handleDeleteAssignedUser" class="ml-2 fas fa-times"></i>
                                     </div>
                                     <div class="chip m-2">
-                                        Yoru Kageyama
-                                        <Link><i class="ml-2 fas fa-times"></i></Link>
+                                        <span @click="handleEditAssignedUser">Yoru Kageyama</span>
+                                        <i @click="handleDeleteAssignedUser" class="ml-2 fas fa-times"></i>
                                     </div>
                                     <div class="chip m-2">
-                                        Jenel Juju
-                                        <Link><i class="ml-2 fas fa-times"></i></Link>
+                                        <span @click="handleEditAssignedUser">Jenel Juju</span>
+                                        <i @click="handleDeleteAssignedUser" class="ml-2 fas fa-times"></i>
                                     </div>
                                     <div class="chip m-2">
-                                        Sage Wong
-                                        <Link><i class="ml-2 fas fa-times"></i></Link>
+                                        <span @click="handleEditAssignedUser">Sage Wong</span>
+                                        <i @click="handleDeleteAssignedUser" class="ml-2 fas fa-times"></i>
                                     </div>
                                     <div class="chip m-2">
-                                        Yoru Kageyama
-                                        <Link><i class="ml-2 fas fa-times"></i></Link>
+                                        <span @click="handleEditAssignedUser">Yoru Kageyama</span>
+                                        <i @click="handleDeleteAssignedUser" class="ml-2 fas fa-times"></i>
                                     </div>
                                 </div>
                                 <div class="add-container border-start d-flex align-items-center justify-content-center">
-                                    <Link><i class="fas fa-2x fa-plus"></i></Link>
+                                    <i @click="handleAddAssignedUser" class="fas fa-2x fa-plus"></i>
                                 </div>
                             </div>
                         </div>
@@ -112,13 +115,45 @@
 <script>
 import { Link } from "@inertiajs/inertia-vue3";
 import AppLayout from "../Layouts/AppLayout.vue";
+import AddAssignedUser from "../Components/modals/AddAssignedUserModal.vue"
+import DelAssignedUser from "../Components/modals/DeleteAssignedUserModal.vue"
+import EditAssignedUser from "../Components/modals/EditAssignedUserModal.vue"
+
 export default {
     components: {
         Link,
         AppLayout,
+        AddAssignedUser,
+        DelAssignedUser,
+        EditAssignedUser,
     },
-    data() {},
-    methods: {},
+    data() {
+        return {
+            toggleAddAssignedUser: false,
+            toggleDelAssignedUser: false,
+            toggleEditAssignedUser: false,
+        };
+    },
+    methods: {
+        handleAddAssignedUser() {
+            this.toggleAddAssignedUser = !this.toggleAddAssignedUser;
+        },
+        handleDeleteAssignedUser() {
+            this.toggleDelAssignedUser = !this.toggleDelAssignedUser;
+        },
+        handleEditAssignedUser() {
+            this.toggleEditAssignedUser = !this.toggleEditAssignedUser;
+        },
+        handleCloseAddModal() {
+            this.toggleAddAssignedUser = false;
+        },
+        handleCloseDelModal() {
+            this.toggleDelAssignedUser = false;
+        },
+        handleCloseEditModal() {
+            this.toggleEditAssignedUser = false;
+        }
+    },
 };
 </script>
 
@@ -164,6 +199,18 @@ export default {
 
 .fa-times:hover{
     color: #000;
+}
+
+.fa-plus {
+    color: #4e73df;
+}
+
+.fa-plus:hover {
+    color: #224abe;
+}
+
+span, .fa-times, .fa-plus {
+    cursor: pointer;
 }
 
 .btn-circle {
