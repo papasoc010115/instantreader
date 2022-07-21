@@ -2,6 +2,7 @@
 
 <template>
     <AppLayout>
+        <DeleteParent :show="toggleParent" @close="handleCloseModal" />
         <div class="container-fluid">
             <div class="pt-5 pb-5">
                 <!-- Header with Back Button-->
@@ -43,9 +44,7 @@
                                     <Link href="/crm/admin/manage-classrooms/students/parent/edit-parent"
                                         ><i class="fas fa-pen mr-3" id="edit-icon"></i
                                     ></Link>
-                                    <Link href="#"
-                                        ><i class="fas fa-trash ml-3" id="trash-icon"></i
-                                    ></Link>
+                                    <i @click="handleDelParent" class="fas fa-trash ml-3" id="trash-icon"></i>
                                 </td>
                             </tr>
                         </tbody>
@@ -59,13 +58,27 @@
 <script>
 import { Link } from "@inertiajs/inertia-vue3";
 import AppLayout from "../Layouts/AppLayout.vue";
+import DeleteParent from "../Components/modals/DeleteParentModal.vue"
 
 export default {
     components: {
         Link,
         AppLayout,
+        DeleteParent,
     },
-    methods: {},
+    data() {
+        return {
+            toggleParent: false,
+        };
+    },
+    methods: {
+        handleDelParent() {
+            this.toggleParent = !this.toggleParent;
+        },
+        handleCloseModal() {
+            this.toggleParent = false;
+        },
+    },
 };
 </script>
 

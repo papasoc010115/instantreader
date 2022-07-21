@@ -2,6 +2,7 @@
 
 <template>
     <AppLayout>
+        <DeleteStudent :show="toggleStudent" @close="handleCloseModal" />
         <div class="container-fluid">
             <div class="pt-5 pb-5">
                 <!-- Header with Back Button, Search Bar -->
@@ -73,9 +74,7 @@
                                     <Link href="/crm/admin/manage-classrooms/students/edit-student"
                                         ><i class="fas fa-pen mr-3" id="edit-icon"></i
                                     ></Link>
-                                    <Link href="#"
-                                        ><i class="fas fa-trash ml-3" id="trash-icon"></i
-                                    ></Link>
+                                    <i @click="handleDelStudent" class="fas fa-trash ml-3" id="trash-icon"></i>
                                 </td>
                             </tr>
                             <tr>
@@ -94,9 +93,7 @@
                                     <Link href="/crm/admin/manage-classrooms/students/edit-student"
                                         ><i class="fas fa-pen mr-3" id="edit-icon"></i
                                     ></Link>
-                                    <Link href="#"
-                                        ><i class="fas fa-trash ml-3" id="trash-icon"></i
-                                    ></Link>
+                                    <i @click="handleDelStudent" class="fas fa-trash ml-3" id="trash-icon"></i>
                                 </td>
                             </tr>
                             <tr>
@@ -115,9 +112,7 @@
                                     <Link href="/crm/admin/manage-classrooms/students/edit-student"
                                         ><i class="fas fa-pen mr-3" id="edit-icon"></i
                                     ></Link>
-                                    <Link href="#"
-                                        ><i class="fas fa-trash ml-3" id="trash-icon"></i
-                                    ></Link>
+                                    <i @click="handleDelStudent" class="fas fa-trash ml-3" id="trash-icon"></i>
                                 </td>
                             </tr>
                             <tr>
@@ -136,9 +131,7 @@
                                     <Link href="/crm/admin/manage-classrooms/students/edit-student"
                                         ><i class="fas fa-pen mr-3" id="edit-icon"></i
                                     ></Link>
-                                    <Link href="#"
-                                        ><i class="fas fa-trash ml-3" id="trash-icon"></i
-                                    ></Link>
+                                    <i @click="handleDelStudent" class="fas fa-trash ml-3" id="trash-icon"></i>
                                 </td>
                             </tr>
                             <tr>
@@ -157,9 +150,7 @@
                                     <Link href="/crm/admin/manage-classrooms/students/edit-student"
                                         ><i class="fas fa-pen mr-3" id="edit-icon"></i
                                     ></Link>
-                                    <Link href="#"
-                                        ><i class="fas fa-trash ml-3" id="trash-icon"></i
-                                    ></Link>
+                                    <i @click="handleDelStudent" class="fas fa-trash ml-3" id="trash-icon"></i>
                                 </td>
                             </tr>
                             <tr>
@@ -178,9 +169,7 @@
                                     <Link href="/crm/admin/manage-classrooms/students/edit-student"
                                         ><i class="fas fa-pen mr-3" id="edit-icon"></i
                                     ></Link>
-                                    <Link href="#"
-                                        ><i class="fas fa-trash ml-3" id="trash-icon"></i
-                                    ></Link>
+                                    <i @click="handleDelStudent" class="fas fa-trash ml-3" id="trash-icon"></i>
                                 </td>
                             </tr>
                         </tbody>
@@ -241,14 +230,27 @@
 <script>
 import { Link } from "@inertiajs/inertia-vue3";
 import AppLayout from "../Layouts/AppLayout.vue";
+import DeleteStudent from "../Components/modals/DeleteStudentModal.vue";
 
 export default {
     components: {
         Link,
         AppLayout,
+        DeleteStudent,
     },
-    data() {},
-    methods: {},
+    data() {
+        return {
+            toggleStudent: false,
+        };
+    },
+    methods: {
+        handleDelStudent() {
+            this.toggleStudent = !this.toggleStudent;
+        },
+        handleCloseModal() {
+            this.toggleStudent = false;
+        },
+    },
 };
 </script>
 
