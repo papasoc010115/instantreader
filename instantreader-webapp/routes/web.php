@@ -80,7 +80,7 @@ Route::get('/crm/operations/bulletin-board', function () {
 });
 
 Route::get('/crm/operations/classrooms', function () {
-    return Inertia::render('Test');
+    return Inertia::render('Classrooms');
 });
 
 Route::get('/crm/operations/tutors-lounge', function () {
