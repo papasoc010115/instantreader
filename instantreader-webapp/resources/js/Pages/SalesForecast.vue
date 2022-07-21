@@ -5,7 +5,7 @@
                 <!-- Header and Add Goal Button -->
                 <div class="d-flex">
                     <div>
-                        <p class="h2 text-gray-900 mb-4">SALES, TARGET, CURRENT, AND FORECAST</p>
+                        <p class="h2 text-gray-900 mb-4 font-weight-bold">SALES, TARGET, CURRENT, AND FORECAST</p>
                     </div>
                     <div class="ml-auto">
                         <div>
@@ -199,14 +199,9 @@ export default {
 
 <style scoped>
 @import "../../../public/crm-site/assets/css/sb-admin-2.css";
-.h2 {
-    font-weight: bold;
-}
-
 .line-chart-container {
     width: 85%; 
     height: 15em; 
     margin: auto;
 }
-
 </style>

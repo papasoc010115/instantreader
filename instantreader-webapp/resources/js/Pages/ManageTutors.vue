@@ -9,7 +9,7 @@
                 <!-- Header and Search Bar -->
                 <div class="d-flex">
                     <div>
-                        <p class="h2 text-gray-900 mb-4">MANAGE TUTORS</p>
+                        <p class="h2 text-gray-900 mb-4 font-weight-bold">MANAGE TUTORS</p>
                     </div>
                     <div class="ml-auto">
                         <form
@@ -58,7 +58,7 @@
                         <tbody class="text-gray-900">
                             <tr v-for="index in 5" :key="index">
                                 <td class="text-left" height=100 width=250>
-                                    <span class="ml-2">
+                                    <span class="ml-4">
                                         <img src="./../../../public/marketing-site/assets/agency/img/avatar-1.png" height=100 width=100>
                                     </span>
                                     <span> Skye </span>
@@ -79,7 +79,7 @@
                             </tr>
                             <tr v-for="index in 1" :key="index">
                                 <td class="text-left"  height=100 width=300>
-                                    <span class="ml-2">
+                                    <span class="ml-4">
                                         <img src="./../../../public/marketing-site/assets/agency/img/avatar-1.png" height=100 width=100>
                                     </span>
                                     <span> Kageyamaaaaa </span>
@@ -182,19 +182,17 @@ export default {
 
 <style scoped>
 @import "../../../public/crm-site/assets/css/sb-admin-2.css";
-.h2 {
-    font-weight: bold;
-}
 tr {
     line-height: 50px;
     min-height: 50px;
     height: 50px;
 } 
+
 img {
     border-radius: 50%;
-    margin-left: 5%;
     margin-right: 5%;
 } 
+
 #trash-icon, #edit-icon {
     color: #757474;
 } 

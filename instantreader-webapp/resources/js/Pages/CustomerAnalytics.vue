@@ -5,7 +5,7 @@
                 <!-- Header and Add Goal Button -->
                 <div class="d-flex">
                     <div>
-                        <p class="h2 text-gray-900 mb-4">CUSTOMER ANALYTICS</p>
+                        <p class="h2 text-gray-900 mb-4 font-weight-bold">CUSTOMER ANALYTICS</p>
                     </div>
                 </div>
 
@@ -297,10 +297,6 @@ export default {
 
 <style scoped>
 @import "../../../public/crm-site/assets/css/sb-admin-2.css";
-.h2 {
-    font-weight: bold;
-}
-
 .border-left-yellow {
   border-left: 0.25rem solid #FEAC32 !important;
 }
@@ -324,5 +320,4 @@ export default {
 .text-green {
   color: #29CB4D !important;
 }
-
 </style>
