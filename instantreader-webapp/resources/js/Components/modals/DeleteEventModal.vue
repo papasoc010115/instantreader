@@ -62,8 +62,7 @@ button {
 .modal-content {
     position: relative;
     background-color: #f6f0f0;
-    margin: 100px auto;
-    width: 700px;
+    width: 500px;
     max-width: 85%;
 }
 
