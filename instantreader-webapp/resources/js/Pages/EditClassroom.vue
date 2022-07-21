@@ -54,21 +54,6 @@
                                 />
                             </div>
                         </div>
-                        <!-- List of Students Field -->
-                        <div class="mb-4">
-                            <label class="ml-2">Students</label>
-                            <div class="d-flex border assigned-users rounded-pill">
-                                <div class="d-flex users-container" id="prospectAssignedUsers">
-                                    <div class="chip m-2" v-for="index in 6" :key="index">
-                                        Jenel Juju
-                                        <Link><i class="ml-2 fas fa-times"></i></Link>
-                                    </div>
-                                </div>
-                                <div class="add-container border-start d-flex align-items-center justify-content-center">
-                                    <Link><i class="fas fa-2x fa-plus"></i></Link>
-                                </div>
-                            </div>
-                        </div>
                         <div class="form-group">
                             <Link
                                 href="#"
