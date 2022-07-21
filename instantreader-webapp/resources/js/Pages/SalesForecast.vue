@@ -142,6 +142,7 @@ export default {
             type: 'bar',
             data: barData,
             options: {
+                indexAxis: 'y',
                 maintainAspectRatio: false,
                 scales: {
                 y: {
