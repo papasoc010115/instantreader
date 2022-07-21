@@ -87,8 +87,10 @@
 </section>
 <!--Main Testimonials End-->
 
+<!--Video Testimonials Start-->
 <section>
     <div class="container">
+        <!-- Heading -->
         <div class="row justify-content-center"  style="margin-bottom: 2em;">
             <h2 class="title main-color">Testimonial Videos</h2>
             <p class="para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tincidunt
@@ -136,6 +138,7 @@
         </div>
     </div>
 </section>
+<!--Video Testimonials End-->
 
 <!--Other Testimonial Start-->
 <section class="gradient-bg1 text-center" id="clients">

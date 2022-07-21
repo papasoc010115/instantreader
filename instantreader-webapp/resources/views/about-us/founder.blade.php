@@ -2,6 +2,14 @@
 
 @section('content')
 
+<!-- Style Start -->
+<style>
+    #founder-video {
+        max-width: 60%
+    }
+</style>
+<!-- Style End -->
+
 <!--Banner Start-->
 <section class="page-title cursor-light">
     <!-- Pattern Layers -->
@@ -20,7 +28,7 @@
 </section>
 <!--Banner End-->
 
-<!--About Us-->
+<!--Main Information Start-->
 <section class="pb-0" id="about-us">
     <div class="container">
         <div class="row">
@@ -42,42 +50,42 @@
         </div>
     </div>
 </section>
-<!--About Us End-->
+<!--Main Information Start-->
 
-<!--Services Start-->
+<!--Social Media Links Start-->
 <section id="services">
     <div class="container">
         <div class="row">
             <div class="col-md-3">
                 <div class="process-wrapp">
-                    <span class="pro-step blue"><a class="wow fadeInUp" href="https://www.facebook.com/"><span class="fab fa-facebook-f" aria-hidden="true"></span></a></span>
+                    <a class="pro-step blue" href="https://www.facebook.com/"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
                     <h4 class="service-heading">Facebook</h4>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="process-wrapp">
-                    <span class="pro-step midnight"><a class="wow fadeInUp" href="https://www.twitter.com/"><i class="fab fa-twitter" aria-hidden="true"></i></a></span>
+                    <a class="pro-step midnight" href="https://www.twitter.com/"><i class="fab fa-twitter" aria-hidden="true"></i></a>
                     <h4 class="service-heading">Twitter</h4>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="process-wrapp">
-                    <span class="pro-step purple"><a class="wow fadeInUp" href="https://www.instagram.com/"><i class="fab fa-instagram" aria-hidden="true"></i></a></span>
+                    <a class="pro-step purple" href="https://www.instagram.com/"><i class="fab fa-instagram" aria-hidden="true"></i></a>
                     <h4 class="service-heading">Instagram</h4>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="process-wrapp">
-                    <span class="pro-step pink"><a class="wow fadeInUp" href="https://www.linkedin.com/"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a></span>
+                    <a class="pro-step pink" href="https://www.linkedin.com/"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
                     <h4 class="service-heading">Linked-In</h4>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<!--Services End-->
+<!--Social Media Links End-->
 
-<!--Blog Start-->
+<!--Video Start-->
 <section class="bg-light" id="founder_video">
     <div class="container">
         <!--Row-->
@@ -94,15 +102,15 @@
         </div>
         <!--Row-->
         <div class="row justify-content-center">
-            <video id="player1" style="max-width: 60%" preload="none" controls poster="{{ asset('marketing-site/assets/agency/img/blog-news-1.jpg')}}" playsinline>
+            <video id="founder-video" preload="none" controls poster="{{ asset('marketing-site/assets/agency/img/blog-news-1.jpg')}}" playsinline>
                 <source src="{{ asset('marketing-site/assets/agency/img/video.mp4') }}" type="video/mp4">
             </video>
         </div>
     </div>
 </section>
-<!--Blog End-->
+<!--Video End-->
 
-<!--Counters Start-->
+<!--Other Information Start-->
 <section id="counters">
     <div class="container">
         <div class="row">
@@ -140,6 +148,6 @@
         </div>
     </div>
 </section>
-<!--Counters End-->
+<!--Other Information End-->
 
 @endsection
