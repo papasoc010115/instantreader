@@ -11,9 +11,8 @@
 
                 <!-- Content Row -->
                 <div class="row">
-
                     <!-- Card -->
-                    <div class="col-xl-3 col-md-6 mb-4">
+                    <div class="col-lg-3 col-md-6 mb-4">
                         <div class="card border-left-primary shadow h-100 py-2">
                             <div class="card-body">
                                 <div class="row no-gutters align-items-center">
@@ -31,7 +30,7 @@
                     </div>
 
                     <!-- Card -->
-                    <div class="col-xl-3 col-md-6 mb-4">
+                    <div class="col-lg-3 col-md-6 mb-4">
                         <div class="card border-left-yellow shadow h-100 py-2">
                             <div class="card-body">
                                 <div class="row no-gutters align-items-center">
@@ -49,7 +48,7 @@
                     </div>
 
                     <!-- Card -->
-                    <div class="col-xl-3 col-md-6 mb-4">
+                    <div class="col-lg-3 col-md-6 mb-4">
                         <div class="card border-left-red shadow h-100 py-2">
                             <div class="card-body">
                                 <div class="row no-gutters align-items-center">
@@ -67,7 +66,7 @@
                     </div>
 
                     <!-- Card -->
-                    <div class="col-xl-3 col-md-6 mb-4">
+                    <div class="col-lg-3 col-md-6 mb-4">
                         <div class="card border-left-green shadow h-100 py-2">
                             <div class="card-body">
                                 <div class="row no-gutters align-items-center">
@@ -326,20 +325,4 @@ export default {
   color: #29CB4D !important;
 }
 
-.line-chart-container {
-    background-color: white;
-    width: 85%; 
-    height: 15em; 
-    margin: auto;
-}
-
-.bar-chart-container {
-     height :25em;
-     width: auto;
-}
-
-.donut-chart-container {
-     height: 23em;
-     width: auto;
-}
 </style>
