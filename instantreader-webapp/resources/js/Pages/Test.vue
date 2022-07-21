@@ -1,6 +1,8 @@
 <template>
     <AppLayout>
-        <FullCalendar :options="calendarOptions" />
+        <div class="calendar-container">
+            <FullCalendar :options="calendarOptions" />
+        </div>
     </AppLayout>
 </template>
 
@@ -27,4 +29,8 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.calendar-container {
+    padding: 2rem 3rem;
+}
+</style>
