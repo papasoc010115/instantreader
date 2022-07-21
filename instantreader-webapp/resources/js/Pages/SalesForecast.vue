@@ -19,65 +19,66 @@
                     </div>
                 </div>
 
-                <!-- Yearly/Monthly and Branch Selection -->
-                <div class="mb-4">
-                    <form>
-                        <div class="form-group row mb-3 ml-2">
-                            <div class="col-lg-2">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                                <label class="form-check-label" for="inlineRadio1">Yearly</label>
+                <div>
+                    <!-- Yearly/Monthly and Branch Selection -->
+                    <div class="mb-4">
+                        <form>
+                            <div class="form-group row mb-3 ml-2">
+                                <div class="col-lg-2">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                    <label class="form-check-label" for="inlineRadio1">Yearly</label>
+                                </div>
+                                <div class="col-lg-2">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                    <label class="form-check-label" for="inlineRadio2">Monthly</label>
+                                </div>
+                                <div class="col-lg-2">
+                                    <select class="custom-select" id="tutorBranch">
+                                        <label class="mr-3">Branch</label>
+                                        <option selected disabled>Branch</option>
+                                        <option value="Cabuyao">Cabuyao</option>
+                                        <option value="Calamba">Calamba</option>
+                                        <option value="Los Banos">Los Banos</option>
+                                        <option value="Sta. Rosa">Sta. Rosa</option>
+                                    </select>
+                                </div>
                             </div>
-                            <div class="col-lg-2">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                                <label class="form-check-label" for="inlineRadio2">Monthly</label>
-                            </div>
-                            <div class="col-lg-2">
-                                <select class="custom-select" id="tutorBranch">
-                                    <label class="mr-3">Branch</label>
-                                    <option selected disabled>Branch</option>
-                                    <option value="Cabuyao">Cabuyao</option>
-                                    <option value="Calamba">Calamba</option>
-                                    <option value="Los Banos">Los Banos</option>
-                                    <option value="Sta. Rosa">Sta. Rosa</option>
-                                </select>
-                            </div>
-                        </div>
-                    </form>
-                </div>
+                        </form>
+                    </div>
 
-                <!-- Income Goal vs Generated Profit -->
-                <div class="mb-5">
-                    <div>
-                        <p class="h3 text-gray-900 mb-4">Income Goal vs Generated Profit</p>
+                    <!-- Income Goal vs Generated Profit -->
+                    <div class="mb-5">
+                        <div>
+                            <p class="h4 text-gray-900 mb-4">Income Goal vs Generated Profit</p>
+                        </div>
+                        <div class="line-chart-container">
+                            <canvas id="lineChart"></canvas>
+                        </div>
                     </div>
-                    <div class="chart-container">
-                        <canvas id="lineChart" style="width:100%; height:auto"></canvas>
+                    
+                    <!-- Potential Revenue and Product Sales -->
+                    <div class="row mb-3">
+                        <div class="col col-lg-6">
+                            <div>
+                                <p class="h4 text-gray-900 mb-4">Potential Revenue</p>
+                            </div>
+                            <div class="bar-chart-container">
+                                <canvas id="barChart"></canvas>
+                            </div>
+                        </div>
+                        <div class="col col-lg-6">
+                            <div class="ml-5">
+                                <p class="h4 text-gray-900 mb-4">Product Sales</p>
+                            </div>
+                            <div class="donut-chart-container mb-3">
+                                <canvas id="donutChart"></canvas>
+                            </div>
+                            <div>
+                                <p class="h6 text-gray-900 text-center">Total Sales: 23,561</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                
-                <!-- Potential Revenue and Product Sales -->
-                <div class="row mb-3">
-                    <div class="col col-lg-6">
-                        <div>
-                            <p class="h3 text-gray-900 mb-4">Potential Revenue</p>
-                        </div>
-                        <div class="chart-container">
-                            <canvas id="barChart" style="height:25em; width: auto;"></canvas>
-                        </div>
-                    </div>
-                    <div class="col col-lg-6">
-                        <div class="ml-5">
-                            <p class="h3 text-gray-900 mb-4">Product Sales</p>
-                        </div>
-                        <div class="chart-container mb-3">
-                            <canvas id="donutChart" style="height:23em; width: auto;"></canvas>
-                        </div>
-                        <div>
-                            <p class="h6 text-gray-900 text-center">Total Sales: 23,561</p>
-                        </div>
-                    </div>
-                </div>
-                
             </div>
         </div>
     </AppLayout>
@@ -117,7 +118,10 @@ export default {
 
         const lineChart = new Chart(ctx1, {
             type: 'line',
-            data: lineData
+            data: lineData,
+            options: {
+                maintainAspectRatio: false,
+            }
         });
 
         const ctx2 = document.getElementById("barChart");
@@ -138,6 +142,7 @@ export default {
             type: 'bar',
             data: barData,
             options: {
+                indexAxis: 'y',
                 maintainAspectRatio: false,
                 scales: {
                 y: {
@@ -190,9 +195,19 @@ export default {
     font-weight: bold;
 }
 
-tr {
-    line-height: 50px;
-    min-height: 50px;
-    height: 50px;
+.line-chart-container {
+    width: 85%; 
+    height: 15em; 
+    margin: auto;
+}
+
+.bar-chart-container {
+     height :25em;
+     width: auto;
+}
+
+.donut-chart-container {
+     height: 23em;
+     width: auto;
 }
 </style>
