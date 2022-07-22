@@ -245,4 +245,8 @@ export default {
 .lead-container {
     height: 75vh
 }
+
+.input-group-append {
+    z-index: 0;
+}
 </style>

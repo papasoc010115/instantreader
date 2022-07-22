@@ -125,4 +125,8 @@ tr {
     min-height: 50px;
     height: 50px;
 }
+
+.input-group-append {
+    z-index: 0;
+}
 </style>

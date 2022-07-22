@@ -257,4 +257,7 @@ tr {
     padding: 0.75rem 1.25rem;
 }
 
+.input-group-append {
+    z-index: 0;
+}
 </style>
