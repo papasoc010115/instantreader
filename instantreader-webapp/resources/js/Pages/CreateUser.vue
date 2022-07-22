@@ -24,7 +24,7 @@
                                     type="text"
                                     class="form-control form-control-user"
                                     id="userFirstName"
-                                    placeholder="First Name"
+                                    placeholder="e.g. Juan"
                                 />
                             </div>
                             <div class="col-lg-6">
@@ -33,7 +33,7 @@
                                     type="text"
                                     class="form-control form-control-user"
                                     id="userLastName"
-                                    placeholder="Last Name"
+                                    placeholder="e.g. Dela Cruz"
                                 />
                             </div>
                         </div>
@@ -45,7 +45,7 @@
                                     type="text"
                                     class="form-control form-control-user"
                                     id="userNickname"
-                                    placeholder="Nickname"
+                                    placeholder="e.g. Ju"
                                 />
                             </div>
                             <div class="col-lg-6">
@@ -54,7 +54,7 @@
                                     type="text"
                                     class="form-control form-control-user"
                                     id="userPosition"
-                                    placeholder="Position"
+                                    placeholder="e.g. Manager"
                                 />
                             </div>
                         </div>
@@ -66,7 +66,7 @@
                                     type="tel"
                                     class="form-control form-control-user"
                                     id="userContactNo"
-                                    placeholder="Contact No."
+                                    placeholder="e.g. 09123456789"
                                 />
                             </div>
                             <div class="col-lg-6">
@@ -75,7 +75,7 @@
                                     type="email"
                                     class="form-control form-control-user"
                                     id="userEmail"
-                                    placeholder="Email"
+                                    placeholder="e.g. email@email.com"
                                 />
                             </div>
                         </div>
