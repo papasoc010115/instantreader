@@ -3,13 +3,15 @@
 
 <template>
     <AppLayout>
-        <DeleteTutor :show="toggleDelModal" @close="handleCloseModal"/>
+        <DeleteTutor :show="toggleDelModal" @close="handleCloseModal" />
         <div class="container-fluid">
             <div class="pt-5 pb-5">
                 <!-- Header and Search Bar -->
                 <div class="d-flex">
                     <div>
-                        <p class="h2 text-gray-900 mb-4 font-weight-bold">MANAGE TUTORS</p>
+                        <p class="h2 text-gray-900 mb-4 font-weight-bold">
+                            MANAGE TUTORS
+                        </p>
                     </div>
                     <div class="ml-auto">
                         <form
@@ -57,9 +59,12 @@
                         </thead>
                         <tbody class="text-gray-900">
                             <tr v-for="index in 5" :key="index">
-                                <td class="text-left" height=100 width=250>
+                                <td class="text-left" height="100" width="250">
                                     <span class="ml-4">
-                                        <img class="profile-pic" src="./../../../public/marketing-site/assets/agency/img/avatar-1.png">
+                                        <img
+                                            class="profile-pic"
+                                            src="./../../../public/marketing-site/assets/agency/img/avatar-1.png"
+                                        />
                                     </span>
                                     <span> Skye </span>
                                 </td>
@@ -71,16 +76,27 @@
                                 </td>
                                 <td class="align-middle">15</td>
                                 <td class="align-middle">
-                                    <Link href="/crm/admin/manage-tutors/edit-tutor"
-                                        ><i class="fas fa-pen mr-3" id="edit-icon"></i>
+                                    <Link
+                                        href="/crm/admin/manage-tutors/edit-tutor"
+                                        ><i
+                                            class="fas fa-pen mr-3"
+                                            id="edit-icon"
+                                        ></i>
                                     </Link>
-                                    <i @click="handleDelClick" class="fas fa-trash ml-3" id="trash-icon"></i>
+                                    <i
+                                        @click="handleDelClick"
+                                        class="fas fa-trash ml-3"
+                                        id="trash-icon"
+                                    ></i>
                                 </td>
                             </tr>
                             <tr v-for="index in 1" :key="index">
-                                <td class="text-left"  height=100 width=300>
+                                <td class="text-left" height="100" width="300">
                                     <span class="ml-4">
-                                        <img class="profile-pic" src="./../../../public/marketing-site/assets/agency/img/avatar-1.png">
+                                        <img
+                                            class="profile-pic"
+                                            src="./../../../public/marketing-site/assets/agency/img/avatar-1.png"
+                                        />
                                     </span>
                                     <span> Kageyamaaaaa </span>
                                 </td>
@@ -93,9 +109,16 @@
                                 <td class="align-middle">15</td>
                                 <td class="align-middle">
                                     <Link href="#"
-                                        ><i class="fas fa-pen mr-3" id="edit-icon"></i>
+                                        ><i
+                                            class="fas fa-pen mr-3"
+                                            id="edit-icon"
+                                        ></i>
                                     </Link>
-                                    <i @click="handleDelClick" class="fas fa-trash ml-3" id="trash-icon"></i>
+                                    <i
+                                        @click="handleDelClick"
+                                        class="fas fa-trash ml-3"
+                                        id="trash-icon"
+                                    ></i>
                                 </td>
                             </tr>
                         </tbody>
@@ -105,7 +128,10 @@
                 <!-- Add Tutor & Pagination -->
                 <div class="d-flex pt-3">
                     <div>
-                        <Link href="/crm/admin/manage-tutors/create-tutor" class="btn btn-primary btn-icon-split">
+                        <Link
+                            href="/crm/admin/manage-tutors/create-tutor"
+                            class="btn btn-primary btn-icon-split"
+                        >
                             <span class="icon text-white-50">
                                 <i class="fas fa-plus"></i>
                             </span>
@@ -156,7 +182,7 @@
 <script>
 import { Link } from "@inertiajs/inertia-vue3";
 import AppLayout from "../Layouts/AppLayout.vue";
-import DeleteTutor from  "../Components/modals/DeleteTutorModal.vue";
+import DeleteTutor from "../Components/modals/DeleteTutorModal.vue";
 
 export default {
     components: {
@@ -182,23 +208,28 @@ export default {
 
 <style scoped>
 @import "../../../public/crm-site/assets/css/sb-admin-2.css";
+button {
+    z-index: 1 !important; /* This allows the component to be behind modals' backgrounds */
+}
 tr {
     line-height: 50px;
     min-height: 50px;
     height: 50px;
-} 
+}
 
 .profile-pic {
     height: 100px;
     width: 100px;
     border-radius: 50%;
     margin-right: 5%;
-} 
+}
 
-#trash-icon, #edit-icon {
+#trash-icon,
+#edit-icon {
     color: #757474;
-} 
-#trash-icon:hover, #edit-icon:hover {
+}
+#trash-icon:hover,
+#edit-icon:hover {
     color: #000;
 }
 </style>
