@@ -21,12 +21,17 @@ by rmhizon
 /*--------------------------------------------------------------------------
 SPA ROUTES
 --------------------------------------------------------------------------*/
+Route::get('/crm', function () {
+    return redirect()->route('admin-manage-users');
+});
+
+
 // Admin routes
 
 //// Manage Users
 Route::get('/crm/admin/manage-users', function () {
     return Inertia::render('ManageUsers');
-});
+})->name('admin-manage-users');
 
 Route::get('/crm/admin/manage-users/create-user', function () {
     return Inertia::render('CreateUser');
