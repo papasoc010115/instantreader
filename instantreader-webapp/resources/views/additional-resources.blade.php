@@ -5,7 +5,6 @@
 <!-- Style Start -->
 <style>
     .card {
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         margin-bottom: 1.5em;
     }
 </style>
@@ -42,42 +41,42 @@
         <!--Row-->
         <div class="row wow fadeInUp">
             <div class="col-lg-4 d-flex align-items-stretch">
-                <div class="card">
+                <div class="card shadow">
                     <img class="card-img-top" src="{{  asset('marketing-site/assets/agency/img/blog-news-1.jpg')  }}" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title pt-3 alt-color">Web design is fun</h5>
                         <p class="card-text">Hena Sword</p>
                     </div>
-                    <div class="card-footer">
-                        <a class="wow" href="javascript:void(0);">
+                    <div class="card-footer d-flex">
+                        <a class="ml-auto" href="javascript:void(0);">
                             <i class="icon fas fa-download" aria-hidden="true"></i>
                         </a>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4 d-flex align-items-stretch">
-                <div class="card">
+                <div class="card shadow">
                     <img class="card-img-top" src="{{  asset('marketing-site/assets/agency/img/blog-news-2.jpg')  }}" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title pt-3 alt-color">Digital Marketing</h5>
                         <p class="card-text">David Villas</p>
                     </div>
-                    <div class="card-footer">
-                        <a class="wow" href="javascript:void(0);">
+                    <div class="card-footer d-flex">
+                        <a class="ml-auto" href="javascript:void(0);">
                             <i class="icon fas fa-download" aria-hidden="true"></i>
                         </a>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4 d-flex align-items-stretch">
-                <div class="card">
+                <div class="card shadow">
                     <img class="card-img-top" src="{{  asset('marketing-site/assets/agency/img/blog-news-3.jpg')  }}" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title pt-3 alt-color">Future of websites</h5>
                         <p class="card-text">Jhon Walker</p>
                     </div>
-                    <div class="card-footer">
-                        <a class="wow" href="javascript:void(0);">
+                    <div class="card-footer d-flex">
+                        <a class="ml-auto" href="javascript:void(0);">
                             <i class="icon fas fa-download" aria-hidden="true"></i>
                         </a>
                     </div>
@@ -88,11 +87,11 @@
             <div class="col-sm-12">
                 <!--Pagination-->
                 <ul class="pagination justify-content-center top55 mb-4 mb-md-0 mb-sm-3" style="padding-top=5%">
-                    <li class="page-item"><a class="page-link disabled" href="#."><i class="fa fa-angle-left"></i></a></li>
+                    <li class="page-item"><a class="page-link disabled" href="#.">&laquo;</i></a></li>
                     <li class="page-item active"><a class="page-link" href="#.">1</a></li>
                     <li class="page-item"><a class="page-link" href="#.">2</a></li>
                     <li class="page-item"><a class="page-link" href="#.">3</a></li>
-                    <li class="page-item"><a class="page-link" href="#."><i class="fa fa-angle-right"></i></a></li>
+                    <li class="page-item"><a class="page-link" href="#.">&raquo;</i></a></li>
                 </ul>
             </div>
         </div>
@@ -114,7 +113,7 @@
         <!--Row-->
         <div class="row wow fadeInUp">
             <div class="col-lg-4 d-flex align-items-stretch">
-                <div class="card">
+                <div class="card shadow">
                     <img class="card-img-top" src="{{  asset('marketing-site/assets/agency/img/blog-news-1.jpg')  }}" alt="Card image cap">
                     <div class="card-body">
                         <a href="agency/blog-list.html" class="card-text">Hena Sword</a>
@@ -127,7 +126,7 @@
                 </div>
             </div>
             <div class="col-lg-4 d-flex align-items-stretch">
-                <div class="card">
+                <div class="card shadow">
                     <img class="card-img-top" src="{{  asset('marketing-site/assets/agency/img/blog-news-2.jpg')  }}" alt="Card image cap">
                     <div class="card-body">
                         <a href="agency/blog-list.html" class="card-text">David Villas</a>
@@ -140,7 +139,7 @@
                 </div>
             </div>
             <div class="col-lg-4 d-flex align-items-stretch">
-                <div class="card">
+                <div class="card shadow">
                     <img class="card-img-top" src="{{  asset('marketing-site/assets/agency/img/blog-news-3.jpg')  }}" alt="Card image cap">
                     <div class="card-body">
                         <a href="agency/blog-list.html" class="card-text">Jhon Walker</a>
@@ -157,11 +156,11 @@
             <div class="col-sm-12">
                 <!--Pagination-->
                 <ul class="pagination justify-content-center top55 mb-4 mb-md-0 mb-sm-3" style="padding-top=5%">
-                    <li class="page-item"><a class="page-link disabled" href="#."><i class="fa fa-angle-left"></i></a></li>
+                    <li class="page-item"><a class="page-link disabled" href="#.">&laquo;</i></a></li>
                     <li class="page-item active"><a class="page-link" href="#.">1</a></li>
                     <li class="page-item"><a class="page-link" href="#.">2</a></li>
                     <li class="page-item"><a class="page-link" href="#.">3</a></li>
-                    <li class="page-item"><a class="page-link" href="#."><i class="fa fa-angle-right"></i></a></li>
+                    <li class="page-item"><a class="page-link" href="#.">&raquo;</i></a></li>
                 </ul>
             </div>
         </div>

@@ -25,8 +25,8 @@
                                     <label class="mr-3">Branch</label>
                                     <option value="Cabuyao" selected>Cabuyao</option>
                                     <option value="Calamba">Calamba</option>
-                                    <option value="Los Banos" selected>Los Banos</option>
-                                    <option value="Sta. Rosa">Sta/ Rosa</option>
+                                    <option value="Los Banos">Los Banos</option>
+                                    <option value="Sta. Rosa">Sta. Rosa</option>
                                 </select>
                             </div>
                         </div>
@@ -54,6 +54,7 @@
                                 />
                             </div>
                         </div>
+                        <!-- Update Button -->
                         <div class="form-group">
                             <Link
                                 href="#"
@@ -103,22 +104,6 @@ export default {
     height: 50px;
     color: #858796;
     opacity: 1;
-}
-
-.chip {
-    padding: 0 25px;
-    line-height: 40px;
-    border-radius: 25px;
-    background-color: #f1f1f1;
-}
-
-.users-container {
-    width: 90%;
-    flex-wrap: wrap;
-}
-
-.add-container {
-    width: 10%
 }
 
 .fa-times {

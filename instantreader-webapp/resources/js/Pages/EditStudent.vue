@@ -90,7 +90,7 @@
                                 />
                             </div>
                         </div>
-                        <!-- Create Button -->
+                        <!-- Update Button -->
                         <div class="form-group">
                             <Link
                                 href="#"
