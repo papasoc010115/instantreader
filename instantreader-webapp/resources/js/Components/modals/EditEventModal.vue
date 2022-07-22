@@ -40,13 +40,26 @@
                     </div>
 
                     <!-- Date -->
-                    <div class="col-md-12 py-3">
-                        <label class="form-label" for="event-date">Date </label>
+                    <div class="col-lg-4 py-3">
+                        <label class="form-label" for="event-date"
+                            >Start Date
+                        </label>
                         <input
                             type="date"
                             class="form-control picker"
-                            id="event-date"
-                            name="event-date"
+                            id="start-event-date"
+                            name="start-event-date"
+                        />
+                    </div>
+                    <div class="col-lg-8 py-3">
+                        <label class="form-label" for="event-date"
+                            >End Date
+                        </label>
+                        <input
+                            type="date"
+                            class="form-control picker"
+                            id="end-event-date"
+                            name="end-event-date"
                         />
                     </div>
 
@@ -54,7 +67,7 @@
                     <!-- Start time -->
                     <div class="col-lg-4">
                         <label class="form-label" for="start-time"
-                            >Start
+                            >Start Time
                         </label>
                         <input
                             type="time"
@@ -66,7 +79,9 @@
 
                     <!-- End time -->
                     <div class="col-lg-8">
-                        <label class="form-label" for="end-time">End </label>
+                        <label class="form-label" for="end-time"
+                            >End Time
+                        </label>
                         <input
                             type="time"
                             class="form-control picker"
