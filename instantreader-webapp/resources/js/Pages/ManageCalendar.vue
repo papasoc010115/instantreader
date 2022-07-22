@@ -30,6 +30,11 @@ export default {
                     listPlugin,
                     interactionPlugin,
                 ],
+                headerToolbar: {
+                    left: "prev,today,next",
+                    center: "title",
+                    right: "dayGridMonth,timeGridWeek,timeGridDay",
+                },
                 initialView: "dayGridMonth",
                 dateClick: this.handleDateClick,
             },
@@ -37,6 +42,7 @@ export default {
     },
 
     methods: {
+        // click handler for the calendar cells
         handleDateClick: function (arg) {
             alert("date click! " + arg.dateStr);
         },
