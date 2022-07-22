@@ -1,7 +1,10 @@
 <template>
     <AppLayout>
         <div class="calendar-container">
+            <!-- Main Calendar -->
             <FullCalendar :options="calendarOptions" />
+            <!-- Modal -->
+            <AddEventModal :show="toggle" @close="handleCloseModal" />
         </div>
     </AppLayout>
 </template>
@@ -14,14 +17,19 @@ import dayGridPlugin from "@fullcalendar/daygrid";
 import timeGridPlugin from "@fullcalendar/timegrid";
 import listPlugin from "@fullcalendar/list";
 import interactionPlugin from "@fullcalendar/interaction";
+import AddEventModalVue from "@/Components/modals/AddEventModal.vue";
+import AddEventModal from "@/Components/modals/AddEventModal.vue";
 
 export default {
     components: {
         AppLayout,
+        AddEventModalVue,
         FullCalendar,
+        AddEventModal,
     },
     data() {
         return {
+            toggle: false,
             calendarOptions: {
                 // These are calendar options
                 plugins: [
@@ -44,7 +52,13 @@ export default {
     methods: {
         // click handler for the calendar cells
         handleDateClick: function (arg) {
-            alert("date click! " + arg.dateStr);
+            this.toggle = true; // for opening the modal
+            console.log("date click! " + arg.dateStr);
+        },
+
+        // for closing the modal
+        handleCloseModal: function () {
+            this.toggle = false;
         },
     },
 };
