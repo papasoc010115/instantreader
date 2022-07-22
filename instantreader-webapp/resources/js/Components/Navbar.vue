@@ -1,3 +1,10 @@
+<!-- 
+    This is the topbar of the CRM. The sidebar will change according to the currently selected navigation link.
+    This uses bootstrap for the styling.
+
+    by rmhizon
+ -->
+
 <template>
     <!-- NAVIGATION -->
     <div class="container-fluid">

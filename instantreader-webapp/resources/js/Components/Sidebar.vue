@@ -1,3 +1,13 @@
+<!-- 
+    This is the Sidebar component for the CRM. 
+    This will be used to navigate to different pages under the different nav links of the topbar.
+    The set of nav links of the sidebar changes according to the selected nav link of the topbar.
+    This works by checking the path that the user is currently in.
+    Example:  <div v-if="$page.url.includes('/admin')">Render me if we are under /admin route </div>
+
+    by rmhizon
+ -->
+
 <template>
     <!-- Admin Sidebar -->
     <div
