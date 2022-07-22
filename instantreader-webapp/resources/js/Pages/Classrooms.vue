@@ -407,14 +407,6 @@ export default {
 <style scoped>
 @import "../../../public/crm-site/assets/css/sb-admin-2.css";
 
-.test {
-    background-color: red;
-}
-
-.test2 {
-    background-color: yellow;
-}
-
 .profile-pic{
     text-align: center;
     height: 50px;

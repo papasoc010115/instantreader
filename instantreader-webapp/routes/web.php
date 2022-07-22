@@ -117,7 +117,7 @@ Route::get('/crm/sales/contact-management/edit-lead', function () {
 
 
 Route::get('/crm/sales/client-interaction-tracking', function () {
-    return Inertia::render('Test');
+    return Inertia::render('ClientInteractionTracking');
 });
 
 Route::get('/crm/sales/lead-management', function () {
