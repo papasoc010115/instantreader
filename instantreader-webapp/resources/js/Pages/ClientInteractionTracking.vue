@@ -584,7 +584,7 @@ hr {
     color: #224abe;
 }
 
-.input-group-append {
-    z-index: 0;
+.input-group-append, .page-item {
+    z-index: 1;
 }
 </style>
