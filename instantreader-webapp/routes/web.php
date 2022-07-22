@@ -4,6 +4,20 @@ use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
+/*
+This is the routes file for both the marketing site (Non-SPA) and CRM (SPA).
+The comments divide the routes in sections according to their nature and use.
+Use the default laravel routing technique for Non-SPAs and use Inertia's routing technique for the SPA.
+
+Note: Using Inertia's technique, only one page is sent. 
+The SPA will utilize AJAX calls instead to fetch the needed data to render a screen dynamically.
+
+IMPORTANT: Do not use <a></a> tags for linking pages in SPAs. Use inertia's <Link></Link> tags instead.
+Please see the README file for more information.
+
+by rmhizon
+*/
+
 /*--------------------------------------------------------------------------
 SPA ROUTES
 --------------------------------------------------------------------------*/
@@ -24,7 +38,7 @@ Route::get('/crm/admin/manage-users/edit-user', function () {
 
 //// Manage Calendar
 Route::get('/crm/admin/manage-calendar', function () {
-    return Inertia::render('Test');
+    return Inertia::render('ManageCalendar');
 });
 
 //// Manage Classrooms
