@@ -1,3 +1,11 @@
+<!-- 
+    This will be the single page that VUE will use to dynamically render contents.
+    The configuration of font-family, initial margins and paddings, and scrollbar is written here.
+    Note: AVOID TOUCHING THIS FILE. Configure the views and components in resources/js directory.
+
+    by: rmhizon
+ -->
+
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>

@@ -1,3 +1,15 @@
+<!-- 
+    This is the layout of the single page application (SPA).
+    This includes the topbar and the sidebar for all views of the SPA.
+    This makes the margins and paddings 0 initially to give the other developers the freedom to set their own.
+    This sets a layer of abstraction for the other developers. This automatically places the pages on the content area.
+    How to use: Surround your content with this layout tags. 
+    Example: <AppLayout>Page Content</AppLayout>
+    Note: AVOID TOUCHING THIS FILE. Edit the views under resources/js/Pages and edit the components under resources/js/Components
+
+    by rmhizon  
+ -->
+
 <template>
     <Navbar />
 
