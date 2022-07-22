@@ -64,8 +64,8 @@
                             <label for="tutorBranch" class="col-lg-3 col-form-label ml-2">Branch</label>
                             <div class="col-lg-3">
                                 <select class="custom-select" id="tutorBranch">
-                                    <label class="mr-3">Branch</label>
-                                    <option value="Cabuyao" selected>Cabuyao</option>
+                                    <option selected disabled hidden>--Select one--</option>
+                                    <option value="Cabuyao">Cabuyao</option>
                                     <option value="Calamba">Calamba</option>
                                     <option value="Los Banos">Los Banos</option>
                                     <option value="Sta. Rosa">Sta. Rosa</option>
@@ -77,6 +77,7 @@
                             <label for="tutorStatus" class="col-lg-3 col-form-label ml-2">Status</label>
                             <div class="col-lg-3">
                                 <select class="custom-select" id="tutorStatus">
+                                    <option selected disabled hidden>--Select one--</option>
                                     <option value="fullTime">Full-Time</option>
                                     <option value="partTime">Part-Time</option>
                                 </select>
@@ -104,6 +105,7 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- Create Button -->
                         <div class="form-group">
                             <Link
                                 href="#"

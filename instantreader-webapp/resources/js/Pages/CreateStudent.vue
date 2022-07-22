@@ -46,7 +46,7 @@
                                     class="custom-select"
                                     id="weeklySchedule"
                                 >
-                                    <option disabled selected>Days</option>
+                                    <option selected disabled hidden>--Select one--</option>
                                     <option value="1">MWF</option>
                                     <option value="2">TTh</option>
                                 </select>
@@ -57,7 +57,7 @@
                                     class="custom-select"
                                     id="timeSchedule"
                                 >
-                                    <option disabled selected>Time</option>
+                                    <option selected disabled hidden>--Select one--</option>
                                     <option value="1">9:00 am - 10:00 am</option>
                                     <option value="2">10:00 am - 11:00 am</option>
                                     <option value="3">11:00 am - 12:00 am</option>
@@ -72,7 +72,7 @@
                                     class="custom-select"
                                     id="readingLevel"
                                 >
-                                    <option disabled selected>Level</option>
+                                    <option selected disabled hidden>--Select one--</option>
                                     <option value="1">Basic</option>
                                     <option value="2">Advanced</option>
                                     <option value="3">Mastery</option>

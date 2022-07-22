@@ -60,7 +60,7 @@
                                 />
                             </div>
                         </div>
-                        <!-- Parent Field -->
+                        <!-- Address Field -->
                         <div class="form-group row mb-5">
                             <div class="col-lg-12">
                                 <label class="ml-2">Address</label>
@@ -72,7 +72,7 @@
                                 />
                             </div>
                         </div>
-                        <!-- Create Button -->
+                        <!-- Update Button -->
                         <div class="form-group">
                             <Link
                                 href="#"

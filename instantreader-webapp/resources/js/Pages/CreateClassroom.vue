@@ -23,10 +23,11 @@
                             <div class="col-lg-6">
                                 <select class="custom-select" id="classroomBranch">
                                     <label class="mr-3">Branch</label>
-                                    <option value="Cabuyao" selected>Cabuyao</option>
+                                    <option selected disabled hidden>--Select one--</option>
+                                    <option value="Cabuyao" >Cabuyao</option>
                                     <option value="Calamba">Calamba</option>
                                     <option value="Los Banos">Los Banos</option>
-                                    <option value="Sta. Rosa">Sta/ Rosa</option>
+                                    <option value="Sta. Rosa">Sta. Rosa</option>
                                 </select>
                             </div>
                         </div>
@@ -35,7 +36,7 @@
                             <label for="classroomTutor" class="col-lg-3 col-form-label ml-2">Tutor</label>
                             <div class="col-lg-6">
                                 <select class="custom-select" id="classroomTutor">
-                                    <label class="mr-3">Select Tutor</label>
+                                    <option selected disabled hidden>--Select one--</option>
                                     <option value="SkyeRamos">Skye Ramos</option>
                                     <option value="SageWong">Sage Wong</option>
                                     <option value="YoruKageyama">Yoru Kageyama</option>
@@ -55,6 +56,7 @@
                                 />
                             </div>
                         </div>
+                        <!-- Create Button -->
                         <div class="form-group">
                             <Link
                                 href="#"
@@ -98,20 +100,12 @@ export default {
     margin: 0px 0px 0px 20px;
 }
 
-.chip {
-    padding: 0 25px;
-    line-height: 40px;
-    border-radius: 25px;
-    background-color: #f1f1f1;
-}
-
-.users-container {
-    width: 90%;
-    flex-wrap: wrap;
-}
-
-.add-container {
-    width: 10%
+.custom-select {
+    font-size: 0.8rem;
+    border-radius: 10rem;
+    height: 50px;
+    color: #858796;
+    opacity: 1;
 }
 
 .fa-times {
