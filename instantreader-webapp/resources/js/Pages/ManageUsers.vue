@@ -58,7 +58,7 @@
                             <tr v-for="index in 6" :key="index">
                                 <td class="text-left" height=100 width=250>
                                     <span class="ml-4">
-                                        <img src="./../../../public/marketing-site/assets/agency/img/avatar-1.png" height=100 width=100>
+                                        <img class="profile-pic" src="./../../../public/marketing-site/assets/agency/img/avatar-1.png">
                                     </span>
                                     <span> Skye </span>
                                 </td>
@@ -153,7 +153,9 @@ tr {
     height: 50px;
 } 
 
-img {
+.profile-pic {
+    height: 100px;
+    width: 100px;
     border-radius: 50%;
     margin-right: 5%;
 } 
