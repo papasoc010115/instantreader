@@ -107,6 +107,6 @@ export default {
 
 .fc-daygrid-day-frame:hover {
     cursor: pointer;
-    background-color: azure;
+    background-color: rgba(150, 235, 235, 0.4);
 }
 </style>
