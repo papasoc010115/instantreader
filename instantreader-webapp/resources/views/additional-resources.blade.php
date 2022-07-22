@@ -5,7 +5,6 @@
 <!-- Style Start -->
 <style>
     .card {
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         margin-bottom: 1.5em;
     }
 </style>
@@ -42,7 +41,7 @@
         <!--Row-->
         <div class="row wow fadeInUp">
             <div class="col-lg-4 d-flex align-items-stretch">
-                <div class="card">
+                <div class="card shadow">
                     <img class="card-img-top" src="{{  asset('marketing-site/assets/agency/img/blog-news-1.jpg')  }}" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title pt-3 alt-color">Web design is fun</h5>
@@ -56,7 +55,7 @@
                 </div>
             </div>
             <div class="col-lg-4 d-flex align-items-stretch">
-                <div class="card">
+                <div class="card shadow">
                     <img class="card-img-top" src="{{  asset('marketing-site/assets/agency/img/blog-news-2.jpg')  }}" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title pt-3 alt-color">Digital Marketing</h5>
@@ -70,7 +69,7 @@
                 </div>
             </div>
             <div class="col-lg-4 d-flex align-items-stretch">
-                <div class="card">
+                <div class="card shadow">
                     <img class="card-img-top" src="{{  asset('marketing-site/assets/agency/img/blog-news-3.jpg')  }}" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title pt-3 alt-color">Future of websites</h5>
@@ -114,7 +113,7 @@
         <!--Row-->
         <div class="row wow fadeInUp">
             <div class="col-lg-4 d-flex align-items-stretch">
-                <div class="card">
+                <div class="card shadow">
                     <img class="card-img-top" src="{{  asset('marketing-site/assets/agency/img/blog-news-1.jpg')  }}" alt="Card image cap">
                     <div class="card-body">
                         <a href="agency/blog-list.html" class="card-text">Hena Sword</a>
@@ -127,7 +126,7 @@
                 </div>
             </div>
             <div class="col-lg-4 d-flex align-items-stretch">
-                <div class="card">
+                <div class="card shadow">
                     <img class="card-img-top" src="{{  asset('marketing-site/assets/agency/img/blog-news-2.jpg')  }}" alt="Card image cap">
                     <div class="card-body">
                         <a href="agency/blog-list.html" class="card-text">David Villas</a>
@@ -140,7 +139,7 @@
                 </div>
             </div>
             <div class="col-lg-4 d-flex align-items-stretch">
-                <div class="card">
+                <div class="card shadow">
                     <img class="card-img-top" src="{{  asset('marketing-site/assets/agency/img/blog-news-3.jpg')  }}" alt="Card image cap">
                     <div class="card-body">
                         <a href="agency/blog-list.html" class="card-text">Jhon Walker</a>
