@@ -583,4 +583,8 @@ hr {
 .fa-paper-plane:hover {
     color: #224abe;
 }
+
+.input-group-append {
+    z-index: 0;
+}
 </style>

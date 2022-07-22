@@ -502,4 +502,8 @@ export default {
         width: 100% !important;
     }
 }
+
+.input-group-append {
+    z-index: 0;
+}
 </style>

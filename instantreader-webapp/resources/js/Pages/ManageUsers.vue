@@ -173,4 +173,8 @@ tr {
 #trash-icon:hover, #edit-icon:hover {
     color: #000;
 }
+
+.input-group-append {
+    z-index: 0;
+}
 </style>
