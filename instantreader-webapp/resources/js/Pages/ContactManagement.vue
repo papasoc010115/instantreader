@@ -38,9 +38,9 @@
                 </div>
 
                 <!-- Main Content -->
-                <div class="my-5 d-flex">
+                <div class="main-content my-5 d-flex">
                     <!-- List of Prospects Section -->
-                    <div class="mx-4 w-50"> 
+                    <div class="prospects-container px-4 w-50"> 
                         <p class="h3 text-gray-900 mb-4">List of Prospects</p>
                         <div class="border border-dark">
                             <!-- Button to Add Prospect -->
@@ -224,7 +224,7 @@
                     </div>
 
                     <!-- Potential Leads -->
-                    <div class="mx-4 w-50"> 
+                    <div class="leads-container px-4 w-50"> 
                         <p class="h3 text-gray-900 mb-4">Potential Leads</p>
                         <div class="border border-dark">
                             <!-- Button to Add Prospect -->
@@ -486,5 +486,20 @@ export default {
 
 .fa-plus:hover {
     color: #000;
+}
+
+@media only screen and (max-width: 992px) {
+    .main-content {
+        display: block !important;
+    }
+
+    .prospects-container {
+        width: 100% !important;
+    }
+
+    .leads-container {
+        margin: 50px 0px 0px 0px;
+        width: 100% !important;
+    }
 }
 </style>
