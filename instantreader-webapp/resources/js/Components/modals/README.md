@@ -8,6 +8,9 @@
 
 > The modal component emits when a cancel button is pressed (if there is any), or when the close button (x) is clicked. This is how its `@close` event works. Make sure to handle this event in order to exit/close the modal.
 
+> Make sure that the components that do not get behind the modals' backgrounds are modified to have a z-value of 1.
+> Example: `z-inndex: 1;` or `z-index: 1 !important;` if the former does not work.
+
 ## Example
 
 ```
