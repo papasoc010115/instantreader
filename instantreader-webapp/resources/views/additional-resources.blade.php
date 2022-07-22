@@ -48,8 +48,8 @@
                         <h5 class="card-title pt-3 alt-color">Web design is fun</h5>
                         <p class="card-text">Hena Sword</p>
                     </div>
-                    <div class="card-footer">
-                        <a class="wow" href="javascript:void(0);">
+                    <div class="card-footer d-flex">
+                        <a class="ml-auto" href="javascript:void(0);">
                             <i class="icon fas fa-download" aria-hidden="true"></i>
                         </a>
                     </div>
@@ -62,8 +62,8 @@
                         <h5 class="card-title pt-3 alt-color">Digital Marketing</h5>
                         <p class="card-text">David Villas</p>
                     </div>
-                    <div class="card-footer">
-                        <a class="wow" href="javascript:void(0);">
+                    <div class="card-footer d-flex">
+                        <a class="ml-auto" href="javascript:void(0);">
                             <i class="icon fas fa-download" aria-hidden="true"></i>
                         </a>
                     </div>
@@ -76,8 +76,8 @@
                         <h5 class="card-title pt-3 alt-color">Future of websites</h5>
                         <p class="card-text">Jhon Walker</p>
                     </div>
-                    <div class="card-footer">
-                        <a class="wow" href="javascript:void(0);">
+                    <div class="card-footer d-flex">
+                        <a class="ml-auto" href="javascript:void(0);">
                             <i class="icon fas fa-download" aria-hidden="true"></i>
                         </a>
                     </div>
