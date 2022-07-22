@@ -271,14 +271,14 @@
             </button>
 
             <!-- Navigation Links -->
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto">
+            <div class="collapse navbar-collapse p-3" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto d-flex align-items-center">
                     <!-- Home -->
-                    <li class="nav-link nav-item main-link">
+                    <li class="nav-link nav-item main-link my-auto">
                         <a class="link active" href="/">Home</a>
                     </li>
                     <!-- Learn More -->
-                    <li class="nav-link nav-item main-link dropdown 
+                    <li class="nav-link nav-item main-link dropdown my-auto
                         {{  request()->route()->getName() === 'learn-more.program-overview' || 
                             request()->route()->getName() === 'learn-more.reading-assessment' ||
                             request()->route()->getName() === 'learn-more.kids-club' ||
@@ -295,7 +295,7 @@
                         </ul>
                     </li>
                     <!-- Contact Us -->
-                    <li class="nav-link nav-item main-link dropdown
+                    <li class="nav-link nav-item main-link dropdown my-auto
                         {{  request()->route()->getName() === 'contact-us.book-consultation' || 
                             request()->route()->getName() === 'contact-us.application'
                             ? 'active' : '' }}">
@@ -308,7 +308,7 @@
                         </ul>
                     </li>
                     <!-- Enroll Now -->
-                    <li class="nav-item main-link">
+                    <li class="nav-item main-link my-auto">
                         <a data-fancybox data-animation-duration="500" data-src="#animatedModal" href="javascript:void(0);" class="btn btn-medium btn-rounded btn-transparent-white btn-hvr-white">Enroll Now
                             <div class="btn-hvr-setting">
                                 <ul class="btn-hvr-setting-inner">
@@ -320,7 +320,7 @@
                             </div>
                         </a>
                     </li>
-                    <span class="menu-line" id="menu-indicator"><i aria-hidden="true" class="fa fa-angle-down"></i></span>
+                    <span class="menu-line mt-2" id="menu-indicator"><i aria-hidden="true" class="fa fa-angle-down"></i></span>
                 </ul>
             </div>
         </div>

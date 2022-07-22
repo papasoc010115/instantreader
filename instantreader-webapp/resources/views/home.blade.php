@@ -154,7 +154,7 @@
                     <source src="{{ asset('marketing-site/assets/agency/img/video.mp4') }}" type="video/mp4">
                 </video>
             </div>
-            <div class="col-lg-5">
+            <div class="col-lg-5 pl-4">
                 <div class="text-container-content">
                     <div class="gradient-text1 first-title">
                         Orientation

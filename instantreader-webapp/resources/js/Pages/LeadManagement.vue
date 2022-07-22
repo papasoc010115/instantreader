@@ -202,11 +202,8 @@ export default {
 <style scoped>
 @import "../../../public/crm-site/assets/css/sb-admin-2.css";
 
-.test {
-    background-color: red;
-}
-
 .sales-funnel-stage {
+    min-width: 500px;
 }
 
 .sales-funnel-details {
