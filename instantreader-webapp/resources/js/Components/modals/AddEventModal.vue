@@ -41,7 +41,7 @@
 
                     <!-- Date -->
                     <div class="col-lg-4 py-3">
-                        <label class="form-label" for="event-date"
+                        <label class="form-label" for="start-event-date"
                             >Start Date
                         </label>
                         <input
@@ -52,7 +52,7 @@
                         />
                     </div>
                     <div class="col-lg-8 py-3">
-                        <label class="form-label" for="event-date"
+                        <label class="form-label" for="end-event-date"
                             >End Date
                         </label>
                         <input

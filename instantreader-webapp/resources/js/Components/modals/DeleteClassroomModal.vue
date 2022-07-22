@@ -5,23 +5,12 @@
         <div class="modal-content">
             <!-- Modal Header -->
             <div class="modal-header">
-                <h3>Edit Assigned User</h3>
+                <h3>Delete Classroom</h3>
                 <span class="close" @click="removeModal">&times</span>
             </div>
             <!-- Modal Body -->
             <div class="modal-body">
-                <form>
-                    <label class="form-label" for="assigned-user-email"
-                        >User's email</label
-                    >
-                    <input
-                        type="text"
-                        class="form-control"
-                        id="assigned-user-email"
-                        placeholder="e.g. example@email.com"
-                        required
-                    />
-                </form>
+                <p>Are you sure you want to delete this classroom?</p>
                 <div class="btn-container">
                     <button
                         @click="removeModal"
@@ -30,9 +19,7 @@
                     >
                         Cancel
                     </button>
-                    <button type="button" class="btn btn-primary">
-                        Update
-                    </button>
+                    <button type="button" class="btn btn-danger">Delete</button>
                 </div>
             </div>
         </div>
@@ -94,8 +81,11 @@ button {
     padding: 2rem 3rem;
 }
 
+.modal-body p {
+    text-align: center;
+}
+
 .btn-container {
-    margin-top: 1rem;
     display: flex;
     justify-content: center;
     gap: 1rem;

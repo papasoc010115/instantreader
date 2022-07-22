@@ -5,22 +5,44 @@
         <div class="modal-content">
             <!-- Modal Header -->
             <div class="modal-header">
-                <h3>Edit Assigned User</h3>
+                <h3>Monthly Goal</h3>
                 <span class="close" @click="removeModal">&times</span>
             </div>
             <!-- Modal Body -->
             <div class="modal-body">
-                <form>
-                    <label class="form-label" for="assigned-user-email"
-                        >User's email</label
-                    >
-                    <input
-                        type="text"
-                        class="form-control"
-                        id="assigned-user-email"
-                        placeholder="e.g. example@email.com"
-                        required
-                    />
+                <form class="row">
+                    <div class="col-md-12 py-3">
+                        <label class="form-label" for="month">Month</label>
+                        <select
+                            id="month"
+                            class="form-select"
+                            aria-label="select month"
+                        >
+                            <option selected disabled>Select Month</option>
+                            <option value="1">January</option>
+                            <option value="2">February</option>
+                            <option value="3">March</option>
+                            <option value="4">April</option>
+                            <option value="5">May</option>
+                            <option value="6">June</option>
+                            <option value="7">July</option>
+                            <option value="8">August</option>
+                            <option value="9">September</option>
+                            <option value="10">October</option>
+                            <option value="11">November</option>
+                            <option value="12">December</option>
+                        </select>
+                    </div>
+                    <div class="col-md-12 py-2">
+                        <label for="monthly-goal" class="form-label"
+                            >Goal</label
+                        >
+                        <input
+                            type="text"
+                            id="monthly-goal"
+                            class="form-control"
+                        />
+                    </div>
                 </form>
                 <div class="btn-container">
                     <button
@@ -31,7 +53,7 @@
                         Cancel
                     </button>
                     <button type="button" class="btn btn-primary">
-                        Update
+                        Add Goal
                     </button>
                 </div>
             </div>
