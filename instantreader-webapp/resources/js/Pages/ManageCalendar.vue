@@ -43,6 +43,36 @@ export default {
                     center: "title",
                     right: "dayGridMonth,timeGridWeek,timeGridDay",
                 },
+                events: [
+                    {
+                        title: "Meeting with interns",
+                        start: "2022-07-01T04:30:00",
+                        end: "2022-07-01T06:30:00",
+                    },
+                    {
+                        title: "Meeting with admins",
+                        start: "2022-07-01T06:30:00",
+                        end: "2022-07-01T07:30:00",
+                    },
+                    {
+                        title: "Deployment",
+                        start: "2022-07-06T04:30:00",
+                        end: "2022-07-07T06:30:00",
+                    },
+
+                    {
+                        title: "Project Planning",
+                        start: "2022-06-27",
+                        end: "2022-06-27",
+                        color: "#FFC100",
+                    },
+                    {
+                        title: "Celebration",
+                        start: "2022-07-09",
+                        end: "2022-07-09",
+                        color: "#FF1215",
+                    },
+                ],
                 initialView: "dayGridMonth",
                 dateClick: this.handleDateClick,
             },
