@@ -8,7 +8,7 @@
                 <!-- Header and Search Bar -->
                 <div class="d-flex">
                     <div>
-                        <p class="h2 text-gray-900 mb-4">SALES ACTIVITY LOG</p>
+                        <p class="h2 text-gray-900 mb-4 font-weight-bold">SALES ACTIVITY LOG</p>
                     </div>
                     <div class="ml-auto">
                         <form
@@ -120,9 +120,6 @@ export default {
 
 <style scoped>
 @import "../../../public/crm-site/assets/css/sb-admin-2.css";
-.h2 {
-    font-weight: bold;
-}
 tr {
     line-height: 50px;
     min-height: 50px;

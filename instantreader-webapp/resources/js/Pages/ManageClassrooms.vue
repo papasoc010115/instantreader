@@ -7,7 +7,7 @@
                 <!-- Header with Search Bar -->
                 <div class="d-flex">
                     <div>
-                        <p class="h2 text-gray-900 mb-4">MANAGE CLASSROOMS</p>
+                        <p class="h2 text-gray-900 mb-4 font-weight-bold">MANAGE CLASSROOMS</p>
                     </div>
                     <div class="ml-auto">
                         <form
@@ -250,16 +250,16 @@ export default {
 
 <style scoped>
 @import "../../../public/crm-site/assets/css/sb-admin-2.css";
-.h2 {
-    font-weight: bold;
-}
 tr {
     line-height: 75px;
     min-height: 75px;
     height: 75px;
-} #trash-icon, #edit-icon {
+} 
+
+#trash-icon, #edit-icon {
     color: #757474;
-} #trash-icon:hover, #edit-icon:hover {
+} 
+#trash-icon:hover, #edit-icon:hover {
     color: #000;
 }
 </style>

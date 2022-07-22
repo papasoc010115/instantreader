@@ -44,7 +44,7 @@
 </section>
 <!--Parallax End-->
 
-<!--Contact Start-->
+<!--Booking Form Start-->
 <section class="contact-us" id="consultation">
 
     <div class="container">
@@ -56,43 +56,80 @@
                 <div class="heading-area pb-2">
                     <h2 class="title mt-0">Booking Form</h2>
                 </div>
-                <!--Contact Form-->
-                <form class="contact-form" id="booking-form-data">
+                <!--Form-->
+                <form class="booking-form" id="booking-form-data">
                     @csrf
-                    <div class="row">
-                        <!--Result-->
-                        <div class="col-12" id="result"></div>
+                    <div class="form-group row mb-3">
 
-                        <!--Left Column-->
-                        <div class="col-md-6">                    
-                            <div class="form-group">
-                                <input class="form-control" type="text" placeholder="Parent's First Name" required="true">
+                        <!-- Parent's Name Fields -->
+                        <div class="form-group row mb-3">
+                            <div class="col-md-6">
+                                <input
+                                    type="text"
+                                    class="form-control form-control-user"
+                                    id="parentFirstName"
+                                    placeholder="Parent's First Name"
+                                />
                             </div>
-                            <div class="form-group">
-                                <input class="form-control" type="text" placeholder="Student's First Name" required="true">
-                            </div>
-                            <div class="form-group">
-                                <input class="form-control" type="text" placeholder="Contact No." required="true">
+                            <div class="col-md-6">
+                                <input
+                                    type="text"
+                                    class="form-control form-control-user"
+                                    id="parentLastName"
+                                    placeholder="Parents'Last Name"
+                                />
                             </div>
                         </div>
 
-                        <!--Right Column-->
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <input class="form-control" type="email" placeholder="Parent's Last Name" required="true">
+                        <!-- Child's Name Fields -->
+                        <div class="form-group row mb-3">
+                            <div class="col-md-6">
+                                <input
+                                    type="text"
+                                    class="form-control form-control-user"
+                                    id="childFirstName"
+                                    placeholder="Child's First Name"
+                                />
                             </div>
-                            <div class="form-group">
-                                <input class="form-control" type="email" placeholder="Student's Last Name" required="true">
-                            </div>
-                            <div class="form-group">
-                                <input class="form-control" type="text" placeholder="Email" required="true">
+                            <div class="col-md-6">
+                                <input
+                                    type="text"
+                                    class="form-control form-control-user"
+                                    id="childLastName"
+                                    placeholder="Child's Last Name"
+                                />
                             </div>
                         </div>
 
-                        <!--Full Column-->
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <input class="form-control" placeholder="Address"></input>
+                        <!-- Contact Fields -->
+                        <div class="form-group row mb-3">
+                            <div class="col-md-6">
+                                <input
+                                    type="tel"
+                                    class="form-control form-control-user"
+                                    id="parentContactNo"
+                                    placeholder="Contact No."
+                                />
+                            </div>
+                            <div class="col-md-6">
+                                <input
+                                    type="email"
+                                    class="form-control form-control-user"
+                                    id="parentntEmail"
+                                    placeholder="Email"
+                                />
+                            </div>
+                        </div>
+
+                        <!-- Address Field -->
+                        <div class="form-group row mb-4">
+                            <div class="col-md-12">
+                                <input
+                                    type="text"
+                                    class="form-control form-control-user"
+                                    id="parentAddress"
+                                    placeholder="Address"
+                                />
                             </div>
                         </div>
                         

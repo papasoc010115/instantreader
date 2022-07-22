@@ -1,6 +1,18 @@
 @extends('layouts.marketing-layout')
 
 @section('content')
+
+<!-- Style Start -->
+<style>
+    .heading-area.justify-content-center {
+        margin-bottom: 1em;
+    }
+    .para {
+        text-align: justify;
+    }
+</style>
+<!-- Style End -->
+
 <!--Banner Start-->
 <section class="page-title cursor-light">
     <!-- Pattern Layers -->
@@ -19,38 +31,40 @@
 </section>
 <!--Banner End-->
 
-<!--Contact Start-->
-<section class="application" id="contact">
+<!--Application Form Start-->
+<section class="application">
 
     <div class="container">
 
         <div class="row align-items-top">
 
+            <!-- Side Information -->
             <div class="col-lg-5 order-lg-2 wow">
-                <div class="contact-detail">
+                <div class="application-detail">
                     <div class="contact-dots" data-dots=""></div>
                     <!--Heading-->
-                    <div class="heading-area justify-content-center" style="margin-bottom: 1em">
+                    <div class="heading-area justify-content-center">
                         <h2 class="title mt-0 pb-1">Lorem Ipsum</h2>
-                        <p class="para" style="text-align:justify">There are many variations of passages of Lorem Ipsum available, but the majority
+                        <p class="para">There are many variations of passages of Lorem Ipsum available, but the majority
                             have suffered .</p>
                     </div>
 
                     <div class="col-lg-12 wow">
                         <div class="half-img mt-4 pt-1 mt-lg-0 pt-lg-0">
-                            <img alt="vector" src="{{ asset('marketing-site/assets/img/tutor-application.jpg') }}">
+                            <img alt="sample" src="{{ asset('marketing-site/assets/img/tutor-application.jpg') }}">
                         </div>
                     </div>
                 </div>
             </div>
 
+            <!--Application Form-->
             <div class="col-lg-7 mt-4 pt-3 mt-lg-0 pt-lg-0 wow">
                 <!--Heading-->
                 <div class="heading-area pb-2">
                     <h2 class="title mt-0">Application Form</h2>
                 </div>
-                <!--Contact Form-->
-                <form class="contact-form" id="contact-form-data">
+                <!--Actual Form-->
+                <form class="application-form" id="application-form-data">
                     @csrf
                     <div class="form-group row mb-3">
 

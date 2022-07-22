@@ -80,32 +80,22 @@
                                 />
                             </div>
                         </div>
-                        <!-- Admin Checkbox -->
-                        <div class="form-group mb-3">
-                            <div class="form-check">
-                                <input
-                                    class="form-check-input"
-                                    type="checkbox"
-                                    value=""
-                                    id="flexCheckChecked"
-                                />
-                                <label
-                                    class="form-check-label ml-2"
-                                    for="flexCheckChecked"
-                                >
-                                    Is Admin
-                                </label>
-                            </div>
-                        </div>
                         <!-- Profile Picture -->
-                        <div class="form-group mb-5 row">
+                        <div class="form-group mb-4 row">
                             <label for="userProfilePicture" class="col-lg-2 col-form-label ml-2">Profile Picture</label>
-                            <div class="col-lg-3 custom-file">
+                            <div class="col-lg-3 custom-file" id="userProfilePicture">
                                 <div class="custom-file">
-                                    <input type="file" class="custom-file-input" id="userProfilePicture">
+                                    <input type="file" class="custom-file-input" id="customFile">
                                     <label class="custom-file-label" for="customFile">Choose file</label>
                                 </div>
                             </div>
+                        </div>
+                        <!-- Admin Checkbox -->
+                        <div class="form-check ml-2 mb-5">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                            <label class="form-check-label ml-2" for="flexCheck">
+                                Admin
+                            </label>
                         </div>
                         <div class="form-group">
                             <Link

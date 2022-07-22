@@ -3,12 +3,13 @@
 
 <template>
     <AppLayout>
+        <DeleteTutor :show="toggleDelModal" @close="handleCloseModal"/>
         <div class="container-fluid">
             <div class="pt-5 pb-5">
                 <!-- Header and Search Bar -->
                 <div class="d-flex">
                     <div>
-                        <p class="h2 text-gray-900 mb-4">MANAGE TUTORS</p>
+                        <p class="h2 text-gray-900 mb-4 font-weight-bold">MANAGE TUTORS</p>
                     </div>
                     <div class="ml-auto">
                         <form
@@ -56,8 +57,8 @@
                         </thead>
                         <tbody class="text-gray-900">
                             <tr v-for="index in 5" :key="index">
-                                <td class="text-left" height=100 width=300>
-                                    <span>
+                                <td class="text-left" height=100 width=250>
+                                    <span class="ml-4">
                                         <img src="./../../../public/marketing-site/assets/agency/img/avatar-1.png" height=100 width=100>
                                     </span>
                                     <span> Skye </span>
@@ -73,14 +74,12 @@
                                     <Link href="/crm/admin/manage-tutors/edit-tutor"
                                         ><i class="fas fa-pen mr-3" id="edit-icon"></i>
                                     </Link>
-                                    <Link href="#"
-                                        ><i class="fas fa-trash ml-3" id="trash-icon"></i>
-                                    </Link>
+                                    <i @click="handleDelClick" class="fas fa-trash ml-3" id="trash-icon"></i>
                                 </td>
                             </tr>
                             <tr v-for="index in 1" :key="index">
                                 <td class="text-left"  height=100 width=300>
-                                    <span >
+                                    <span class="ml-4">
                                         <img src="./../../../public/marketing-site/assets/agency/img/avatar-1.png" height=100 width=100>
                                     </span>
                                     <span> Kageyamaaaaa </span>
@@ -96,9 +95,7 @@
                                     <Link href="#"
                                         ><i class="fas fa-pen mr-3" id="edit-icon"></i>
                                     </Link>
-                                    <Link href="#"
-                                        ><i class="fas fa-trash ml-3" id="trash-icon"></i>
-                                    </Link>
+                                    <i @click="handleDelClick" class="fas fa-trash ml-3" id="trash-icon"></i>
                                 </td>
                             </tr>
                         </tbody>
@@ -159,32 +156,47 @@
 <script>
 import { Link } from "@inertiajs/inertia-vue3";
 import AppLayout from "../Layouts/AppLayout.vue";
+import DeleteTutor from  "../Components/modals/DeleteTutorModal.vue";
 
 export default {
     components: {
         Link,
         AppLayout,
+        DeleteTutor,
     },
-    methods: {},
+    data() {
+        return {
+            toggleDelModal: false,
+        };
+    },
+    methods: {
+        handleDelClick() {
+            this.toggleDelModal = !this.toggleDelModal;
+        },
+        handleCloseModal() {
+            this.toggleDelModal = false;
+        },
+    },
 };
 </script>
 
 <style scoped>
 @import "../../../public/crm-site/assets/css/sb-admin-2.css";
-.h2 {
-    font-weight: bold;
-}
 tr {
     line-height: 50px;
     min-height: 50px;
     height: 50px;
-} img {
+} 
+
+img {
     border-radius: 50%;
-    margin-left: 5%;
     margin-right: 5%;
-} #trash-icon, #edit-icon {
+} 
+
+#trash-icon, #edit-icon {
     color: #757474;
-} #trash-icon:hover, #edit-icon:hover {
+} 
+#trash-icon:hover, #edit-icon:hover {
     color: #000;
 }
 </style>
