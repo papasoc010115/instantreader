@@ -71,9 +71,7 @@
                                 <td class="align-middle">Skye Kaye</td>
                                 <td class="align-middle">Ramos</td>
                                 <td class="align-middle">Los Baños</td>
-                                <td class="align-middle">
-                                    <Link href="#">5</Link>
-                                </td>
+                                <td class="align-middle">5</td>
                                 <td class="align-middle">15</td>
                                 <td class="align-middle">
                                     <Link
@@ -101,9 +99,7 @@
                                 <td class="align-middle">Skye Kaye</td>
                                 <td class="align-middle">Ramos</td>
                                 <td class="align-middle">Los Baños</td>
-                                <td class="align-middle">
-                                    <Link href="#">5</Link>
-                                </td>
+                                <td class="align-middle">5</td>
                                 <td class="align-middle">15</td>
                                 <td class="align-middle">
                                     <Link href="#"
