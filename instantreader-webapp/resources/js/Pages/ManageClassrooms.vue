@@ -2,6 +2,7 @@
 
 <template>
     <AppLayout>
+        <DeleteClassroom :show="toggleDelModal" @close="handleCloseModal" />
         <div class="container-fluid">
             <div class="pt-5 pb-5">
                 <!-- Header with Search Bar -->
@@ -54,130 +55,51 @@
                             </tr>
                         </thead>
                         <tbody class="text-gray-900">
-                            <tr>
-                                <td>#012345</td>
-                                <td>Calamba</td>
-                                <td>Sage Wong</td>
-                                <td>10</td>
-                                <td>10</td>
+                            <tr v-for="index in 7" :key="index">
+                                <!-- Code -->
+                                <td v-if="index%3==0">#02496</td>
+                                <td v-else-if="index%2==0">#21253</td>
+                                <td v-else>#012345</td>
+
+                                <!-- Branch -->
+                                <td v-if="index%3==0">Cabuyao</td>
+                                <td v-else-if="index%2==0">Los Baños</td>
+                                <td v-else>Calamba</td>
+
+                                <!-- Tutor -->
+                                <td v-if="index%3==0">Yoru Kageyama</td>
+                                <td v-else-if="index%2==0">Reyna Santos</td>
+                                <td v-else>Sage Wong</td>
+
+                                <!-- Booked Slots -->
+                                <td v-if="index%3==0">17</td>
+                                <td v-else-if="index%2==0">15</td>
+                                <td v-else>10</td>
+
+                                <!-- Available Slots -->
+                                <td v-if="index%3==0">3</td>
+                                <td v-else-if="index%2==0">5</td>
+                                <td v-else>10</td>
+
+                                <!-- Student List -->
                                 <td>
                                     <Link href="/crm/admin/manage-classrooms/students">View List</Link>
                                 </td>
+
+                                <!-- Actions -->
                                 <td>
-                                    <Link href="/crm/admin/manage-classrooms/edit-classroom"
-                                        ><i class="fas fa-pen mr-3" id="edit-icon"></i
+                                    <Link 
+                                        href="/crm/admin/manage-classrooms/edit-classroom"
+                                        ><i 
+                                            class="fas fa-pen mr-3" 
+                                            id="edit-icon">
+                                        </i
                                     ></Link>
-                                    <Link href="#"
-                                        ><i class="fas fa-trash ml-3" id="trash-icon"></i
-                                    ></Link>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>#21253</td>
-                                <td>Los Baños</td>
-                                <td>Reyna Santos</td>
-                                <td>15</td>
-                                <td>5</td>
-                                <td>
-                                    <Link href="/crm/admin/manage-classrooms/students">View List</Link>
-                                </td>
-                                <td>
-                                    <Link href="/crm/admin/manage-classrooms/edit-classroom"
-                                        ><i class="fas fa-pen mr-3" id="edit-icon"></i
-                                    ></Link>
-                                    <Link href="#"
-                                        ><i class="fas fa-trash ml-3" id="trash-icon"></i
-                                    ></Link>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>#02496</td>
-                                <td>Cabuyao</td>
-                                <td>Yoru Kageyama</td>
-                                <td>17</td>
-                                <td>3</td>
-                                <td>
-                                    <Link href="/crm/admin/manage-classrooms/students">View List</Link>
-                                </td>
-                                <td>
-                                    <Link href="/crm/admin/manage-classrooms/edit-classroom"
-                                        ><i class="fas fa-pen mr-3" id="edit-icon"></i
-                                    ></Link>
-                                    <Link href="#"
-                                        ><i class="fas fa-trash ml-3" id="trash-icon"></i
-                                    ></Link>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>#012345</td>
-                                <td>Calamba</td>
-                                <td>Sage Wong</td>
-                                <td>10</td>
-                                <td>10</td>
-                                <td>
-                                    <Link href="/crm/admin/manage-classrooms/students">View List</Link>
-                                </td>
-                                <td>
-                                    <Link href="/crm/admin/manage-classrooms/edit-classroom"
-                                        ><i class="fas fa-pen mr-3" id="edit-icon"></i
-                                    ></Link>
-                                    <Link href="#"
-                                        ><i class="fas fa-trash ml-3" id="trash-icon"></i
-                                    ></Link>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>#21253</td>
-                                <td>Los Baños</td>
-                                <td>Reyna Santos</td>
-                                <td>15</td>
-                                <td>5</td>
-                                <td>
-                                    <Link href="/crm/admin/manage-classrooms/students">View List</Link>
-                                </td>
-                                <td>
-                                    <Link href="/crm/admin/manage-classrooms/edit-classroom"
-                                        ><i class="fas fa-pen mr-3" id="edit-icon"></i
-                                    ></Link>
-                                    <Link href="#"
-                                        ><i class="fas fa-trash ml-3" id="trash-icon"></i
-                                    ></Link>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>#02496</td>
-                                <td>Cabuyao</td>
-                                <td>Yoru Kageyama</td>
-                                <td>17</td>
-                                <td>3</td>
-                                <td>
-                                    <Link href="/crm/admin/manage-classrooms/students">View List</Link>
-                                </td>
-                                <td>
-                                    <Link href="/crm/admin/manage-classrooms/edit-classroom"
-                                        ><i class="fas fa-pen mr-3" id="edit-icon"></i
-                                    ></Link>
-                                    <Link href="#"
-                                        ><i class="fas fa-trash ml-3" id="trash-icon"></i
-                                    ></Link>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>#012345</td>
-                                <td>Calamba</td>
-                                <td>Sage Wong</td>
-                                <td>10</td>
-                                <td>10</td>
-                                <td>
-                                    <Link href="/crm/admin/manage-classrooms/students">View List</Link>
-                                </td>
-                                <td>
-                                    <Link href="/crm/admin/manage-classrooms/edit-classroom"
-                                        ><i class="fas fa-pen mr-3" id="edit-icon"></i
-                                    ></Link>
-                                    <Link href="#"
-                                        ><i class="fas fa-trash ml-3" id="trash-icon"></i
-                                    ></Link>
+                                    <i 
+                                        @click="handleDelClick"
+                                        class="fas fa-trash ml-3" 
+                                        id="trash-icon"
+                                    ></i>
                                 </td>
                             </tr>
                         </tbody>
@@ -238,13 +160,27 @@
 <script>
 import { Link } from "@inertiajs/inertia-vue3";
 import AppLayout from "../Layouts/AppLayout.vue";
+import DeleteClassroom from "../Components/modals/DeleteClassroomModal.vue"
 
 export default {
     components: {
         Link,
         AppLayout,
+        DeleteClassroom,
     },
-    methods: {},
+    data () {
+        return {
+            toggleDelModal: false,
+        };
+    },
+    methods: {
+        handleDelClick () {
+            this.toggleDelModal = !this.toggleDelModal;
+        },
+        handleCloseModal () {
+            this.toggleDelModal = false;
+        }
+    },
 };
 </script>
 
