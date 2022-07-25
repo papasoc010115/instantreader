@@ -477,6 +477,7 @@ export default {
 }
 
 .fa-trash:hover {
+    cursor: pointer;
     color: #000;
 }
 
