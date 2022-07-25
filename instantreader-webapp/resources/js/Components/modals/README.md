@@ -11,6 +11,10 @@
 > Make sure that the components that do not get behind the modals' backgrounds are modified to have a z-value of 1.
 > Example: `z-inndex: 1;` or `z-index: 1 !important;` if the former does not work.
 
+## Note
+
+> Some modals may have specific props specifically designed for them. This guide only talks about the general use of the modal components.
+
 ## Example
 
 ```
