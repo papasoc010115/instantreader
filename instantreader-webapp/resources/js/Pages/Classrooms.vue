@@ -12,55 +12,17 @@
                     </div>
                     <div class="announcement-container overflow-auto">
                         <div class="announcement-list p-3">
-                            <div class="card shadow mb-4">
+                            <div 
+                                v-for="announcementIndex in 4" 
+                                :key="announcementIndex" 
+                                class="card shadow mb-4"
+                            >
                                 <div class="card-header py-3 d-flex align-items-center">
                                     <div class="img-container">
                                         <img class="profile-pic" src="./../../../public/marketing-site/assets/agency/img/avatar-1.png" />
                                     </div>
                                     <div class="ml-3 font-weight-bold">First Name Last Name</div>
                                     <div class="ml-auto">17:05, July 04, 2022</div>
-                                </div>
-                                <div class="card-body">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                    Ut enim ad minim veniam, quis nostrud exercitation
-                                </div>
-                            </div>
-                            <div class="card shadow mb-4">
-                                <div class="card-header py-3 d-flex align-items-center">
-                                    <div class="img-container">
-                                        <img class="profile-pic" src="./../../../public/marketing-site/assets/agency/img/avatar-1.png" />
-                                    </div>
-                                    <div class="ml-3 font-weight-bold">First Name Last Name</div>
-                                    <div class="ml-auto">9:05, July 02, 2022</div>
-                                </div>
-                                <div class="card-body">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                    Ut enim ad minim veniam, quis nostrud exercitation
-                                </div>
-                            </div>
-                            <div class="card shadow mb-4">
-                                <div class="card-header py-3 d-flex align-items-center">
-                                    <div class="img-container">
-                                        <img class="profile-pic" src="./../../../public/marketing-site/assets/agency/img/avatar-1.png" />
-                                    </div>
-                                    <div class="ml-3 font-weight-bold">First Name Last Name</div>
-                                    <div class="ml-auto">17:05, July 04, 2022</div>
-                                </div>
-                                <div class="card-body">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                    Ut enim ad minim veniam, quis nostrud exercitation
-                                </div>
-                            </div>
-                            <div class="card shadow mb-4">
-                                <div class="card-header py-3 d-flex align-items-center">
-                                    <div class="img-container">
-                                        <img class="profile-pic" src="./../../../public/marketing-site/assets/agency/img/avatar-1.png" />
-                                    </div>
-                                    <div class="ml-3 font-weight-bold">First Name Last Name</div>
-                                    <div class="ml-auto">9:05, July 02, 2022</div>
                                 </div>
                                 <div class="card-body">
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit,
@@ -80,96 +42,20 @@
                                 <i type="button" class="fas fa-3x fa-angle-left" data-bs-target="#sessionsCarousel" data-bs-slide="prev"></i>
                             </div>
                             <div class="carousel-inner h-100 px-5">
-                                <div class="carousel-item h-100 active">
+                                <div 
+                                    v-for="carouselSlideIndex in 3" 
+                                    :key="carouselSlideIndex" 
+                                    :class="{active : carouselSlideIndex==1}"
+                                    class="carousel-item h-100"
+                                >
                                     <div class="row h-100">
-                                        <div class="col-sm-3 px-3 h-100">
+                                        <div 
+                                            v-for="innerContentIndex in 4" 
+                                            :key="innerContentIndex" 
+                                            class="col-sm-3 px-3 h-100"
+                                        >
                                             <div class="carousel-card text-center d-flex align-items-center justify-content-center h-100">
-                                                Session 01  <br>
-                                                July 4, 2022<br>
-                                                8 AM        <br>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-3 px-3 h-100">
-                                            <div class="carousel-card text-center d-flex align-items-center justify-content-center h-100">
-                                                Session 02  <br>
-                                                July 4, 2022<br>
-                                                8 AM        <br>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-3 px-3 h-100">
-                                            <div class="carousel-card text-center d-flex align-items-center justify-content-center h-100">
-                                                Session 03  <br>
-                                                July 4, 2022<br>
-                                                8 AM        <br>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-3 px-3 h-100">
-                                            <div class="carousel-card text-center d-flex align-items-center justify-content-center h-100">
-                                                Session 04  <br>
-                                                July 4, 2022<br>
-                                                8 AM        <br>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="carousel-item h-100">
-                                    <div class="row h-100">
-                                        <div class="col-sm-3 px-3 h-100">
-                                            <div class="carousel-card text-center d-flex align-items-center justify-content-center h-100">
-                                                Session 05  <br>
-                                                July 4, 2022<br>
-                                                8 AM        <br>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-3 px-3 h-100">
-                                            <div class="carousel-card text-center d-flex align-items-center justify-content-center h-100">
-                                                Session 06  <br>
-                                                July 4, 2022<br>
-                                                8 AM        <br>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-3 px-3 h-100">
-                                            <div class="carousel-card text-center d-flex align-items-center justify-content-center h-100">
-                                                Session 07  <br>
-                                                July 4, 2022<br>
-                                                8 AM        <br>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-3 px-3 h-100">
-                                            <div class="carousel-card text-center d-flex align-items-center justify-content-center h-100">
-                                                Session 08  <br>
-                                                July 4, 2022<br>
-                                                8 AM        <br>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="carousel-item h-100">
-                                    <div class="row h-100">
-                                        <div class="col-sm-3 px-3 h-100">
-                                            <div class="carousel-card text-center d-flex align-items-center justify-content-center h-100">
-                                                Session 09  <br>
-                                                July 4, 2022<br>
-                                                8 AM        <br>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-3 px-3 h-100">
-                                            <div class="carousel-card text-center d-flex align-items-center justify-content-center h-100">
-                                                Session 10  <br>
-                                                July 4, 2022<br>
-                                                8 AM        <br>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-3 px-3 h-100">
-                                            <div class="carousel-card text-center d-flex align-items-center justify-content-center h-100">
-                                                Session 11  <br>
-                                                July 4, 2022<br>
-                                                8 AM        <br>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-3 px-3 h-100">
-                                            <div class="carousel-card text-center d-flex align-items-center justify-content-center h-100">
-                                                Session 12  <br>
+                                                Session {{(carouselSlideIndex-1) * 4  + innerContentIndex}}  <br>
                                                 July 4, 2022<br>
                                                 8 AM        <br>
                                             </div>
@@ -188,51 +74,21 @@
                     </div>
                     <div class="progress-report-container overflow-auto">
                         <div class="accordion" id="progressReportAccordion">
-                            <div class="accordion-item">
-                                <h5 class="accordion-header" id="headingOne">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                                        Progress Report 1
+                            <div 
+                                v-for="progressReportIndex in 4" 
+                                :key="progressReportIndex" 
+                                class="accordion-item"
+                            >
+                                <h5 class="accordion-header" :id="'heading'+progressReportIndex">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" :data-bs-target="'#collapse'+progressReportIndex" aria-expanded="false" :aria-controls="'collapse'+progressReportIndex">
+                                        Progress Report {{progressReportIndex}}
                                     </button>
                                 </h5>
-                                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#progressReportAccordion">
+                                <div :id="'collapse'+progressReportIndex" class="accordion-collapse collapse" :aria-labelledby="'heading'+progressReportIndex" data-bs-parent="#progressReportAccordion">
                                     <div class="accordion-body">
-                                        <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h5 class="accordion-header" id="headingTwo">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        Progress Report 2
-                                    </button>
-                                </h5>
-                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#progressReportAccordion">
-                                    <div class="accordion-body">
-                                        <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h5 class="accordion-header" id="headingThree">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                        Progress Report 3
-                                    </button>
-                                </h5>
-                                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#progressReportAccordion">
-                                    <div class="accordion-body">
-                                        <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h5 class="accordion-header" id="headingFour">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                        Progress Report 4
-                                    </button>
-                                </h5>
-                                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#progressReportAccordion">
-                                    <div class="accordion-body">
-                                        <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                        Ut enim ad minim veniam, quis nostrud exercitation
                                     </div>
                                 </div>
                             </div>
@@ -252,22 +108,16 @@
                         <div class="tutors-list p-3">
                             <div class="h5">Tutors</div>
                             <div>
-                                <ul class="list-unstyled">
-                                    <li class="py-3">
+                                <ul 
+                                    v-for="tutorsIndex in 2" 
+                                    :key="tutorsIndex" 
+                                    class="list-unstyled"
+                                >
+                                    <li class="py-2">
                                         <div class="d-flex align-items-center">
                                             <div class="img-container">
                                                 <img class="profile-pic" src="./../../../public/marketing-site/assets/agency/img/avatar-1.png" />
-                                                <img class="online-indicator" src="./../../../public/crm-site/assets/img/green-circle.png" />
-                                            </div>
-                                            <div class="ml-3">First Name Last Name</div>
-                                            <Link class="ml-auto"><i class="far fa-lg fa-comment-alt"></i></Link>
-                                        </div>
-                                    </li>
-                                    <li class="py-3">
-                                        <div class="d-flex align-items-center">
-                                            <div class="img-container">
-                                                <img class="profile-pic" src="./../../../public/marketing-site/assets/agency/img/avatar-1.png" />
-                                                <img hidden class="online-indicator" src="./../../../public/crm-site/assets/img/green-circle.png" />
+                                                <img v-if="tutorsIndex%2==1" class="online-indicator" src="./../../../public/crm-site/assets/img/green-circle.png" />
                                             </div>
                                             <div class="ml-3">First Name Last Name</div>
                                             <Link class="ml-auto"><i class="far fa-lg fa-comment-alt"></i></Link>
@@ -280,102 +130,16 @@
                         <div class="students-list p-3">
                             <div class="h5">Students</div>
                             <div>
-                                <ul class="list-unstyled">
-                                    <li class="py-3">
+                                <ul 
+                                    v-for="studentsIndex in 10" 
+                                    :key="studentsIndex" 
+                                    class="list-unstyled"
+                                >
+                                    <li class="py-2">
                                         <div class="d-flex align-items-center">
                                             <div class="img-container">
                                                 <img class="profile-pic" src="./../../../public/marketing-site/assets/agency/img/avatar-1.png" />
-                                                <img class="online-indicator" src="./../../../public/crm-site/assets/img/green-circle.png" />
-                                            </div>
-                                            <div class="ml-3">First Name Last Name</div>
-                                            <Link class="ml-auto"><i class="far fa-lg fa-comment-alt"></i></Link>
-                                        </div>
-                                    </li>
-                                    <li class="py-3">
-                                        <div class="d-flex align-items-center">
-                                            <div class="img-container">
-                                                <img class="profile-pic" src="./../../../public/marketing-site/assets/agency/img/avatar-1.png" />
-                                                <img hidden class="online-indicator" src="./../../../public/crm-site/assets/img/green-circle.png" />
-                                            </div>
-                                            <div class="ml-3">First Name Last Name</div>
-                                            <Link class="ml-auto"><i class="far fa-lg fa-comment-alt"></i></Link>
-                                        </div>
-                                    </li>
-                                    <li class="py-3">
-                                        <div class="d-flex align-items-center">
-                                            <div class="img-container">
-                                                <img class="profile-pic" src="./../../../public/marketing-site/assets/agency/img/avatar-1.png" />
-                                                <img class="online-indicator" src="./../../../public/crm-site/assets/img/green-circle.png" />
-                                            </div>
-                                            <div class="ml-3">First Name Last Name</div>
-                                            <Link class="ml-auto"><i class="far fa-lg fa-comment-alt"></i></Link>
-                                        </div>
-                                    </li>
-                                    <li class="py-3">
-                                        <div class="d-flex align-items-center">
-                                            <div class="img-container">
-                                                <img class="profile-pic" src="./../../../public/marketing-site/assets/agency/img/avatar-1.png" />
-                                                <img hidden class="online-indicator" src="./../../../public/crm-site/assets/img/green-circle.png" />
-                                            </div>
-                                            <div class="ml-3">First Name Last Name</div>
-                                            <Link class="ml-auto"><i class="far fa-lg fa-comment-alt"></i></Link>
-                                        </div>
-                                    </li>
-                                    <li class="py-3">
-                                        <div class="d-flex align-items-center">
-                                            <div class="img-container">
-                                                <img class="profile-pic" src="./../../../public/marketing-site/assets/agency/img/avatar-1.png" />
-                                                <img class="online-indicator" src="./../../../public/crm-site/assets/img/green-circle.png" />
-                                            </div>
-                                            <div class="ml-3">First Name Last Name</div>
-                                            <Link class="ml-auto"><i class="far fa-lg fa-comment-alt"></i></Link>
-                                        </div>
-                                    </li>
-                                    <li class="py-3">
-                                        <div class="d-flex align-items-center">
-                                            <div class="img-container">
-                                                <img class="profile-pic" src="./../../../public/marketing-site/assets/agency/img/avatar-1.png" />
-                                                <img hidden class="online-indicator" src="./../../../public/crm-site/assets/img/green-circle.png" />
-                                            </div>
-                                            <div class="ml-3">First Name Last Name</div>
-                                            <Link class="ml-auto"><i class="far fa-lg fa-comment-alt"></i></Link>
-                                        </div>
-                                    </li>
-                                    <li class="py-3">
-                                        <div class="d-flex align-items-center">
-                                            <div class="img-container">
-                                                <img class="profile-pic" src="./../../../public/marketing-site/assets/agency/img/avatar-1.png" />
-                                                <img class="online-indicator" src="./../../../public/crm-site/assets/img/green-circle.png" />
-                                            </div>
-                                            <div class="ml-3">First Name Last Name</div>
-                                            <Link class="ml-auto"><i class="far fa-lg fa-comment-alt"></i></Link>
-                                        </div>
-                                    </li>
-                                    <li class="py-3">
-                                        <div class="d-flex align-items-center">
-                                            <div class="img-container">
-                                                <img class="profile-pic" src="./../../../public/marketing-site/assets/agency/img/avatar-1.png" />
-                                                <img hidden class="online-indicator" src="./../../../public/crm-site/assets/img/green-circle.png" />
-                                            </div>
-                                            <div class="ml-3">First Name Last Name</div>
-                                            <Link class="ml-auto"><i class="far fa-lg fa-comment-alt"></i></Link>
-                                        </div>
-                                    </li>
-                                    <li class="py-3">
-                                        <div class="d-flex align-items-center">
-                                            <div class="img-container">
-                                                <img class="profile-pic" src="./../../../public/marketing-site/assets/agency/img/avatar-1.png" />
-                                                <img class="online-indicator" src="./../../../public/crm-site/assets/img/green-circle.png" />
-                                            </div>
-                                            <div class="ml-3">First Name Last Name</div>
-                                            <Link class="ml-auto"><i class="far fa-lg fa-comment-alt"></i></Link>
-                                        </div>
-                                    </li>
-                                    <li class="py-3">
-                                        <div class="d-flex align-items-center">
-                                            <div class="img-container">
-                                                <img class="profile-pic" src="./../../../public/marketing-site/assets/agency/img/avatar-1.png" />
-                                                <img hidden class="online-indicator" src="./../../../public/crm-site/assets/img/green-circle.png" />
+                                                <img v-if="studentsIndex%2==1" class="online-indicator" src="./../../../public/crm-site/assets/img/green-circle.png" />
                                             </div>
                                             <div class="ml-3">First Name Last Name</div>
                                             <Link class="ml-auto"><i class="far fa-lg fa-comment-alt"></i></Link>

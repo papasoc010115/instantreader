@@ -43,92 +43,15 @@
                         <div class="enrollees-container border border-dark overflow-auto">
                             <div>
                                 <ul class="list-unstyled">
-                                    <li class="py-3 px-3">
+                                    <li 
+                                        v-for="enrolleesIndex in 10" 
+                                        :key="enrolleesIndex" 
+                                        class="py-3 px-3"
+                                    >
                                         <div class="d-flex align-items-center">
                                             <div class="img-container">
                                                 <img class="profile-pic" src="./../../../public/marketing-site/assets/agency/img/avatar-1.png" />
-                                                <img class="online-indicator" src="./../../../public/crm-site/assets/img/green-circle.png" />
-                                            </div>
-                                            <div class="ml-3">First Name Last Name</div>
-                                        </div>
-                                    </li>
-                                    <li class="py-3 px-3">
-                                        <div class="d-flex align-items-center">
-                                            <div class="img-container">
-                                                <img class="profile-pic" src="./../../../public/marketing-site/assets/agency/img/avatar-1.png" />
-                                                <img hidden class="online-indicator" src="./../../../public/crm-site/assets/img/green-circle.png" />
-                                            </div>
-                                            <div class="ml-3">First Name Last Name</div>
-                                        </div>
-                                    </li>
-                                    <li class="py-3 px-3">
-                                        <div class="d-flex align-items-center">
-                                            <div class="img-container">
-                                                <img class="profile-pic" src="./../../../public/marketing-site/assets/agency/img/avatar-1.png" />
-                                                <img class="online-indicator" src="./../../../public/crm-site/assets/img/green-circle.png" />
-                                            </div>
-                                            <div class="ml-3">First Name Last Name</div>
-                                        </div>
-                                    </li>
-                                    <li class="py-3 px-3">
-                                        <div class="d-flex align-items-center">
-                                            <div class="img-container">
-                                                <img class="profile-pic" src="./../../../public/marketing-site/assets/agency/img/avatar-1.png" />
-                                                <img hidden class="online-indicator" src="./../../../public/crm-site/assets/img/green-circle.png" />
-                                            </div>
-                                            <div class="ml-3">First Name Last Name</div>
-                                        </div>
-                                    </li>
-                                    <li class="py-3 px-3">
-                                        <div class="d-flex align-items-center">
-                                            <div class="img-container">
-                                                <img class="profile-pic" src="./../../../public/marketing-site/assets/agency/img/avatar-1.png" />
-                                                <img class="online-indicator" src="./../../../public/crm-site/assets/img/green-circle.png" />
-                                            </div>
-                                            <div class="ml-3">First Name Last Name</div>
-                                        </div>
-                                    </li>
-                                    <li class="py-3 px-3">
-                                        <div class="d-flex align-items-center">
-                                            <div class="img-container">
-                                                <img class="profile-pic" src="./../../../public/marketing-site/assets/agency/img/avatar-1.png" />
-                                                <img hidden class="online-indicator" src="./../../../public/crm-site/assets/img/green-circle.png" />
-                                            </div>
-                                            <div class="ml-3">First Name Last Name</div>
-                                        </div>
-                                    </li>
-                                    <li class="py-3 px-3">
-                                        <div class="d-flex align-items-center">
-                                            <div class="img-container">
-                                                <img class="profile-pic" src="./../../../public/marketing-site/assets/agency/img/avatar-1.png" />
-                                                <img class="online-indicator" src="./../../../public/crm-site/assets/img/green-circle.png" />
-                                            </div>
-                                            <div class="ml-3">First Name Last Name</div>
-                                        </div>
-                                    </li>
-                                    <li class="py-3 px-3">
-                                        <div class="d-flex align-items-center">
-                                            <div class="img-container">
-                                                <img class="profile-pic" src="./../../../public/marketing-site/assets/agency/img/avatar-1.png" />
-                                                <img hidden class="online-indicator" src="./../../../public/crm-site/assets/img/green-circle.png" />
-                                            </div>
-                                            <div class="ml-3">First Name Last Name</div>
-                                        </div>
-                                    </li>
-                                    <li class="py-3 px-3">
-                                        <div class="d-flex align-items-center">
-                                            <div class="img-container">
-                                                <img class="profile-pic" src="./../../../public/marketing-site/assets/agency/img/avatar-1.png" />
-                                                <img class="online-indicator" src="./../../../public/crm-site/assets/img/green-circle.png" />
-                                            </div>
-                                            <div class="ml-3">First Name Last Name</div>
-                                        </div>
-                                    </li>
-                                    <li class="py-3 px-3">
-                                        <div class="d-flex align-items-center">
-                                            <div class="img-container">
-                                                <img class="profile-pic" src="./../../../public/marketing-site/assets/agency/img/avatar-1.png" />
-                                                <img hidden class="online-indicator" src="./../../../public/crm-site/assets/img/green-circle.png" />
+                                                <img v-if="enrolleesIndex%2==0" class="online-indicator" src="./../../../public/crm-site/assets/img/green-circle.png" />
                                             </div>
                                             <div class="ml-3">First Name Last Name</div>
                                         </div>
@@ -143,92 +66,15 @@
                         <div class="franchisees-container border border-dark overflow-auto">
                             <div>
                                 <ul class="list-unstyled">
-                                    <li class="py-3 px-3">
+                                    <li 
+                                        v-for="franchiseesIndex in 10" 
+                                        :key="franchiseesIndex" 
+                                        class="py-3 px-3"
+                                    >
                                         <div class="d-flex align-items-center">
                                             <div class="img-container">
                                                 <img class="profile-pic" src="./../../../public/marketing-site/assets/agency/img/avatar-1.png" />
-                                                <img class="online-indicator" src="./../../../public/crm-site/assets/img/green-circle.png" />
-                                            </div>
-                                            <div class="ml-3">First Name Last Name</div>
-                                        </div>
-                                    </li>
-                                    <li class="py-3 px-3">
-                                        <div class="d-flex align-items-center">
-                                            <div class="img-container">
-                                                <img class="profile-pic" src="./../../../public/marketing-site/assets/agency/img/avatar-1.png" />
-                                                <img hidden class="online-indicator" src="./../../../public/crm-site/assets/img/green-circle.png" />
-                                            </div>
-                                            <div class="ml-3">First Name Last Name</div>
-                                        </div>
-                                    </li>
-                                    <li class="py-3 px-3">
-                                        <div class="d-flex align-items-center">
-                                            <div class="img-container">
-                                                <img class="profile-pic" src="./../../../public/marketing-site/assets/agency/img/avatar-1.png" />
-                                                <img class="online-indicator" src="./../../../public/crm-site/assets/img/green-circle.png" />
-                                            </div>
-                                            <div class="ml-3">First Name Last Name</div>
-                                        </div>
-                                    </li>
-                                    <li class="py-3 px-3">
-                                        <div class="d-flex align-items-center">
-                                            <div class="img-container">
-                                                <img class="profile-pic" src="./../../../public/marketing-site/assets/agency/img/avatar-1.png" />
-                                                <img hidden class="online-indicator" src="./../../../public/crm-site/assets/img/green-circle.png" />
-                                            </div>
-                                            <div class="ml-3">First Name Last Name</div>
-                                        </div>
-                                    </li>
-                                    <li class="py-3 px-3">
-                                        <div class="d-flex align-items-center">
-                                            <div class="img-container">
-                                                <img class="profile-pic" src="./../../../public/marketing-site/assets/agency/img/avatar-1.png" />
-                                                <img class="online-indicator" src="./../../../public/crm-site/assets/img/green-circle.png" />
-                                            </div>
-                                            <div class="ml-3">First Name Last Name</div>
-                                        </div>
-                                    </li>
-                                    <li class="py-3 px-3">
-                                        <div class="d-flex align-items-center">
-                                            <div class="img-container">
-                                                <img class="profile-pic" src="./../../../public/marketing-site/assets/agency/img/avatar-1.png" />
-                                                <img hidden class="online-indicator" src="./../../../public/crm-site/assets/img/green-circle.png" />
-                                            </div>
-                                            <div class="ml-3">First Name Last Name</div>
-                                        </div>
-                                    </li>
-                                    <li class="py-3 px-3">
-                                        <div class="d-flex align-items-center">
-                                            <div class="img-container">
-                                                <img class="profile-pic" src="./../../../public/marketing-site/assets/agency/img/avatar-1.png" />
-                                                <img class="online-indicator" src="./../../../public/crm-site/assets/img/green-circle.png" />
-                                            </div>
-                                            <div class="ml-3">First Name Last Name</div>
-                                        </div>
-                                    </li>
-                                    <li class="py-3 px-3">
-                                        <div class="d-flex align-items-center">
-                                            <div class="img-container">
-                                                <img class="profile-pic" src="./../../../public/marketing-site/assets/agency/img/avatar-1.png" />
-                                                <img hidden class="online-indicator" src="./../../../public/crm-site/assets/img/green-circle.png" />
-                                            </div>
-                                            <div class="ml-3">First Name Last Name</div>
-                                        </div>
-                                    </li>
-                                    <li class="py-3 px-3">
-                                        <div class="d-flex align-items-center">
-                                            <div class="img-container">
-                                                <img class="profile-pic" src="./../../../public/marketing-site/assets/agency/img/avatar-1.png" />
-                                                <img class="online-indicator" src="./../../../public/crm-site/assets/img/green-circle.png" />
-                                            </div>
-                                            <div class="ml-3">First Name Last Name</div>
-                                        </div>
-                                    </li>
-                                    <li class="py-3 px-3">
-                                        <div class="d-flex align-items-center">
-                                            <div class="img-container">
-                                                <img class="profile-pic" src="./../../../public/marketing-site/assets/agency/img/avatar-1.png" />
-                                                <img hidden class="online-indicator" src="./../../../public/crm-site/assets/img/green-circle.png" />
+                                                <img v-if="franchiseesIndex%2==0" class="online-indicator" src="./../../../public/crm-site/assets/img/green-circle.png" />
                                             </div>
                                             <div class="ml-3">First Name Last Name</div>
                                         </div>
