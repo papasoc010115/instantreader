@@ -23,6 +23,7 @@
                             id="month"
                             class="form-select"
                             aria-label="select month"
+                            required
                         >
                             <option selected disabled>Select Month</option>
                             <option value="1">January</option>
@@ -47,6 +48,7 @@
                             type="text"
                             id="monthly-goal"
                             class="form-control"
+                            required
                         />
                     </div>
                 </form>

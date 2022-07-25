@@ -45,32 +45,8 @@
                         />
                     </div>
 
-                    <!-- Date -->
-                    <div class="col-lg-4 py-3">
-                        <label class="form-label" for="start-event-date"
-                            >Start Date
-                        </label>
-                        <input
-                            type="date"
-                            class="form-control picker"
-                            id="start-event-date"
-                            name="start-event-date"
-                        />
-                    </div>
-                    <div class="col-lg-8 py-3">
-                        <label class="form-label" for="end-event-date"
-                            >End Date
-                        </label>
-                        <input
-                            type="date"
-                            class="form-control picker"
-                            id="end-event-date"
-                            name="end-event-date"
-                        />
-                    </div>
-
                     <!-- All day or Not -->
-                    <div class="col-md-12 py-2">
+                    <div class="col-md-12 py-3">
                         <label>Time Duration</label>
                         <div class="radio-container py-2">
                             <label class="radio-inline">
@@ -78,6 +54,7 @@
                                     type="radio"
                                     name="dur-optradio"
                                     checked
+                                    required
                                     @click="allDay = true"
                                 />
                                 All Day
@@ -91,6 +68,36 @@
                                 Custom
                             </label>
                         </div>
+                    </div>
+
+                    <!-- Date -->
+                    <div class="col-lg-4 py-2">
+                        <label
+                            v-if="!allDay"
+                            class="form-label"
+                            for="start-event-date"
+                            >Start Date
+                        </label>
+                        <label v-else class="form-label" for="start-event-date"
+                            >Date
+                        </label>
+                        <input
+                            type="date"
+                            class="form-control picker"
+                            id="start-event-date"
+                            name="start-event-date"
+                        />
+                    </div>
+                    <div v-if="!allDay" class="col-lg-8 py-3">
+                        <label class="form-label" for="end-event-date"
+                            >End Date
+                        </label>
+                        <input
+                            type="date"
+                            class="form-control picker"
+                            id="end-event-date"
+                            name="end-event-date"
+                        />
                     </div>
 
                     <!-- Start time -->
