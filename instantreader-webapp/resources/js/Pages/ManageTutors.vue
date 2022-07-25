@@ -224,11 +224,15 @@ tr {
     margin-right: 5%;
 }
 
-#trash-icon,
-#edit-icon {
+#trash-icon, #edit-icon {
     color: #757474;
+} 
+
+#trash-icon:hover {
+    color: #000;
+    cursor: pointer;
 }
-#trash-icon:hover,
+
 #edit-icon:hover {
     color: #000;
 }
