@@ -195,7 +195,13 @@ tr {
 #trash-icon, #edit-icon {
     color: #757474;
 } 
-#trash-icon:hover, #edit-icon:hover {
+
+#trash-icon:hover {
+    color: #000;
+    cursor: pointer;
+}
+
+#edit-icon:hover {
     color: #000;
 }
 
