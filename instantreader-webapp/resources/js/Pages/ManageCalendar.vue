@@ -32,56 +32,69 @@ export default {
     data() {
         return {
             toggle: false,
+
+            // These are calendar options
             calendarOptions: {
-                // These are calendar options
+                //  plugins
                 plugins: [
                     dayGridPlugin,
                     timeGridPlugin,
                     listPlugin,
                     interactionPlugin,
                 ],
+
+                // header's widgets
                 headerToolbar: {
                     left: "prev,today,next",
                     center: "title",
                     right: "dayGridMonth,timeGridWeek,timeGridDay",
                 },
+                // events list
                 events: [
                     {
+                        id: "1",
                         title: "Meeting with interns",
                         start: "2022-07-01T04:30:00",
                         end: "2022-07-01T09:30:00",
                     },
                     {
+                        id: "2",
                         title: "Meeting with admins",
                         start: "2022-07-01T06:30:00",
                         end: "2022-07-01T07:30:00",
                     },
                     {
+                        id: "3",
                         title: "Meeting with teachers",
                         start: "2022-07-01T07:30:00",
                         end: "2022-07-01T08:30:00",
                     },
                     {
+                        id: "4",
                         title: "Meeting with students",
                         start: "2022-07-01T08:30:00",
                         end: "2022-07-01T09:30:00",
                     },
                     {
+                        id: "5",
                         title: "Meeting with investors",
                         start: "2022-07-01T09:30:00",
                         end: "2022-07-01T10:30:00",
                     },
                     {
+                        id: "6",
                         title: "Meeting with CEO",
                         start: "2022-07-01T10:30:00",
                         end: "2022-07-01T11:30:00",
                     },
                     {
+                        id: "7",
                         title: "Meeting with project manager",
                         start: "2022-07-01T11:30:00",
                         end: "2022-07-01T12:30:00",
                     },
                     {
+                        id: "8",
                         title: "Website Test (Click me)",
                         start: "2022-07-06T04:30:00",
                         end: "2022-07-07T06:30:00",
@@ -89,29 +102,38 @@ export default {
                     },
 
                     {
+                        id: "9",
                         title: "Project Planning",
                         start: "2022-06-27",
                         end: "2022-06-27",
                         color: "#FFC100",
                     },
                     {
+                        id: "10",
                         title: "Celebration",
                         start: "2022-07-09",
                         end: "2022-07-09",
                         color: "#fc3f3f",
                     },
                 ],
+
+                // views
                 initialView: "dayGridMonth",
-                dateClick: this.handleDateClick,
-                editable: true,
-                eventResizableFromStart: true,
-                dayMaxEventRows: true,
-                moreLinkClick: "day",
                 views: {
                     dayGrid: {
                         dayMaxEvents: true,
                     },
                 },
+                moreLinkClick: "day",
+
+                // for manipulation
+                dateClick: this.handleDateClick,
+                editable: true,
+                eventResizableFromStart: true,
+                dayMaxEventRows: true,
+                eventResize: this.handleEventChange,
+                eventDrop: this.handleEventChange,
+                navLinks: true,
             },
         };
     },
@@ -120,6 +142,26 @@ export default {
         // click handler for the calendar cells
         handleDateClick: function (arg) {
             // alert("date click! " + arg.dateStr);
+            console.log(arg.dateStr);
+        },
+
+        // for handling event changes
+        handleEventChange: function (info) {
+            // alert(
+            //     info.event.title + " end is now " + info.event.end.toISOString()
+            // );
+
+            // if (!confirm("is this okay?")) {
+            //     info.revert();
+            // }
+            console.log(
+                "ID: " +
+                    info.event.id +
+                    "\nstart: " +
+                    info.event.start +
+                    "\nend: " +
+                    info.event.end
+            );
         },
 
         // for closing the modal
