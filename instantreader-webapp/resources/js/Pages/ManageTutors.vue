@@ -80,13 +80,11 @@
                                         href="/crm/admin/manage-tutors/edit-tutor"
                                         ><i
                                             class="fas fa-pen mr-3"
-                                            id="edit-icon"
                                         ></i>
                                     </Link>
                                     <i
                                         @click="handleDelClick"
                                         class="fas fa-trash ml-3"
-                                        id="trash-icon"
                                     ></i>
                                 </td>
                             </tr>
@@ -111,13 +109,11 @@
                                     <Link href="#"
                                         ><i
                                             class="fas fa-pen mr-3"
-                                            id="edit-icon"
                                         ></i>
                                     </Link>
                                     <i
                                         @click="handleDelClick"
                                         class="fas fa-trash ml-3"
-                                        id="trash-icon"
                                     ></i>
                                 </td>
                             </tr>
@@ -224,17 +220,21 @@ tr {
     margin-right: 5%;
 }
 
-#trash-icon, #edit-icon {
+.fa-pen {
     color: #757474;
-} 
-
-#trash-icon:hover {
-    color: #000;
-    cursor: pointer;
 }
 
-#edit-icon:hover {
+.fa-trash {
+    color: #757474;
+}
+
+.fa-pen:hover {
     color: #000;
+}
+
+.fa-trash:hover {
+    color: #000;
+    cursor: pointer;
 }
 
 .input-group-append, .page-item {

@@ -91,14 +91,12 @@
                                     <Link 
                                         href="/crm/admin/manage-classrooms/edit-classroom"
                                         ><i 
-                                            class="fas fa-pen mr-3" 
-                                            id="edit-icon">
+                                            class="fas fa-pen mr-3">
                                         </i
                                     ></Link>
                                     <i 
                                         @click="handleDelClick"
-                                        class="fas fa-trash ml-3" 
-                                        id="trash-icon"
+                                        class="fas fa-trash ml-3"
                                     ></i>
                                 </td>
                             </tr>
@@ -190,19 +188,23 @@ tr {
     line-height: 75px;
     min-height: 75px;
     height: 75px;
-} 
-
-#trash-icon, #edit-icon {
-    color: #757474;
-} 
-
-#trash-icon:hover {
-    color: #000;
-    cursor: pointer;
 }
 
-#edit-icon:hover {
+.fa-pen {
+    color: #757474;
+}
+
+.fa-trash {
+    color: #757474;
+}
+
+.fa-pen:hover {
     color: #000;
+}
+
+.fa-trash:hover {
+    color: #000;
+    cursor: pointer;
 }
 
 .input-group-append, .page-item {
