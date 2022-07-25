@@ -49,7 +49,7 @@ export default {
                     {
                         title: "Meeting with interns",
                         start: "2022-07-01T04:30:00",
-                        end: "2022-07-01T06:30:00",
+                        end: "2022-07-01T09:30:00",
                     },
                     {
                         title: "Meeting with admins",
@@ -104,11 +104,9 @@ export default {
                 initialView: "dayGridMonth",
                 dateClick: this.handleDateClick,
                 editable: true,
-                eventStartEditable: true,
                 eventResizableFromStart: true,
-                eventDurationEditable: true,
                 dayMaxEventRows: true,
-                moreLinkClick: "popover",
+                moreLinkClick: "day",
                 views: {
                     dayGrid: {
                         dayMaxEvents: true,
@@ -121,7 +119,7 @@ export default {
     methods: {
         // click handler for the calendar cells
         handleDateClick: function (arg) {
-            alert("date click! " + arg.dateStr);
+            // alert("date click! " + arg.dateStr);
         },
 
         // for closing the modal
