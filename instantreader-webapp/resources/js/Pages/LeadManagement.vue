@@ -44,67 +44,11 @@
                         </div>
                         <!-- Customer List Box -->
                         <div class="border border-dark lead-container overflow-auto">
-                            <div class="customer d-flex p-3 align-items-center">
-                                <div>
-                                    <img class="profile-pic" src="./../../../public/marketing-site/assets/agency/img/avatar-1.png" />
-                                </div>
-                                <div class="ml-3">First Name Last Name</div>
-                            </div>
-                            <div class="customer d-flex p-3 align-items-center">
-                                <div>
-                                    <img class="profile-pic" src="./../../../public/marketing-site/assets/agency/img/avatar-1.png" />
-                                </div>
-                                <div class="ml-3">First Name Last Name</div>
-                            </div>
-                            <div class="customer d-flex p-3 align-items-center">
-                                <div>
-                                    <img class="profile-pic" src="./../../../public/marketing-site/assets/agency/img/avatar-1.png" />
-                                </div>
-                                <div class="ml-3">First Name Last Name</div>
-                            </div>
-                            <div class="customer active d-flex p-3 align-items-center">
-                                <div>
-                                    <img class="profile-pic" src="./../../../public/marketing-site/assets/agency/img/avatar-1.png" />
-                                </div>
-                                <div class="ml-3">First Name Last Name</div>
-                            </div>
-                            <div class="customer d-flex p-3 align-items-center">
-                                <div>
-                                    <img class="profile-pic" src="./../../../public/marketing-site/assets/agency/img/avatar-1.png" />
-                                </div>
-                                <div class="ml-3">First Name Last Name</div>
-                            </div>
-                            <div class="customer d-flex p-3 align-items-center">
-                                <div>
-                                    <img class="profile-pic" src="./../../../public/marketing-site/assets/agency/img/avatar-1.png" />
-                                </div>
-                                <div class="ml-3">First Name Last Name</div>
-                            </div>
-                            <div class="customer d-flex p-3 align-items-center">
-                                <div>
-                                    <img class="profile-pic" src="./../../../public/marketing-site/assets/agency/img/avatar-1.png" />
-                                </div>
-                                <div class="ml-3">First Name Last Name</div>
-                            </div>
-                            <div class="customer d-flex p-3 align-items-center">
-                                <div>
-                                    <img class="profile-pic" src="./../../../public/marketing-site/assets/agency/img/avatar-1.png" />
-                                </div>
-                                <div class="ml-3">First Name Last Name</div>
-                            </div>
-                            <div class="customer d-flex p-3 align-items-center">
-                                <div>
-                                    <img class="profile-pic" src="./../../../public/marketing-site/assets/agency/img/avatar-1.png" />
-                                </div>
-                                <div class="ml-3">First Name Last Name</div>
-                            </div>
-                            <div class="customer d-flex p-3 align-items-center">
-                                <div>
-                                    <img class="profile-pic" src="./../../../public/marketing-site/assets/agency/img/avatar-1.png" />
-                                </div>
-                                <div class="ml-3">First Name Last Name</div>
-                            </div>
-                            <div class="customer d-flex p-3 align-items-center">
+                            <div 
+                                v-for="customerIndex in 10" 
+                                :key="customerIndex" 
+                                class="customer d-flex p-3 align-items-center"
+                            >
                                 <div>
                                     <img class="profile-pic" src="./../../../public/marketing-site/assets/agency/img/avatar-1.png" />
                                 </div>

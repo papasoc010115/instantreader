@@ -50,73 +50,11 @@
                 
 
                 <!-- Main Cards -->
-                <div class="card shadow mb-4">
-                    <div class="card-header py-3">
-                        <div class="row text-center d-flex align-items-center">
-                            <div class="col-md-1">
-                                <img class="profile-pic" src="./../../../public/marketing-site/assets/agency/img/avatar-1.png" />
-                            </div>
-                            <div class="col">Sage Ann</div>
-                            <div class="col">Wong</div>
-                            <div class="col">Los Baños</div>
-                            <div class="col">3</div>
-                            <div class="col-md-1">
-                                <i  class="check-mark fas fa-lg fa-check"></i>
-                            </div>
-                        </div> 
-                    </div>
-                    <div class="card-body mx-4">
-                        <!-- Tutor's Schedule -->
-                        <div class="table-responsive">
-                            <table
-                                class="table table-hover text-center"
-                                id="tutorsScheduleTable"
-                                width="100%"
-                                cellspacing="0"
-                            >
-                                <thead>
-                                    <tr class="text-gray-900">
-                                        <th>Time</th>
-                                        <th>Dates</th>
-                                        <th>Days</th>
-                                        <th>Available Slots</th>
-                                        <th>Status</th>
-                                    </tr>
-                                </thead>
-                                <tbody class="text-gray-900">
-                                    <tr>
-                                        <td>8 am - 9 am</td>
-                                        <td>Jul 4 - Aug 26</td>
-                                        <td>MWF</td>
-                                        <td>0</td>
-                                        <td>
-                                            <i  class="x-mark fas fa-lg fa-times"></i>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>9 am - 10 am</td>
-                                        <td>Jul 4 - Aug 26</td>
-                                        <td>TTh</td>
-                                        <td>10</td>
-                                        <td>
-                                            <i  class="check-mark fas fa-lg fa-check"></i>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>10 am - 11 am</td>
-                                        <td>Jul 4 - Aug 26</td>
-                                        <td>MWF</td>
-                                        <td>0</td>
-                                        <td>
-                                            <i  class="x-mark fas fa-lg fa-times"></i>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-                <div class="card shadow mb-4">
+                <div 
+                    v-for="tutorIndex in 2" 
+                    :key="tutorIndex" 
+                    class="card shadow mb-4"
+                >
                     <div class="card-header py-3">
                         <div class="row text-center d-flex align-items-center">
                             <div class="col-md-1">
