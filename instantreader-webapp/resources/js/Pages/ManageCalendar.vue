@@ -9,8 +9,21 @@
         <div class="calendar-container">
             <!-- Main Calendar -->
             <FullCalendar :options="calendarOptions" />
-            <!-- Modal -->
+            <!-- Add Event Modal -->
             <AddEventModal :show="toggle" @close="handleCloseModal" />
+            <!-- Update Event Modal -->
+            <EditEventModal
+                :show="editToggle"
+                @close="handleCloseEditModal"
+                :id="event_buffer.id"
+                :title="event_buffer.title"
+                :allDayProp="event_buffer.allDayProp"
+                :startDate="event_buffer.startDate"
+                :endDate="event_buffer.endDate"
+                :startTime="event_buffer.startTime"
+                :endTime="event_buffer.endTime"
+                :color="event_buffer.backgroundColor"
+            />
             <!-- FLoating Action Button -->
             <FloatingActionButton @press="addEvent" :show="!toggle" />
         </div>
@@ -27,17 +40,31 @@ import timeGridPlugin from "@fullcalendar/timegrid";
 import listPlugin from "@fullcalendar/list";
 import interactionPlugin from "@fullcalendar/interaction";
 import AddEventModal from "@/Components/modals/AddEventModal.vue";
+import EditEventModal from "@/Components/modals/EditEventModal.vue";
 
 export default {
     components: {
         AppLayout,
         FullCalendar,
         AddEventModal,
+        EditEventModal,
         FloatingActionButton,
     },
     data() {
         return {
-            toggle: false,
+            toggle: false, // for AddEventModal
+            editToggle: false, // for EditEventModal
+            // event temporary holder (for parsing)
+            event_buffer: {
+                id: "",
+                title: "",
+                allDayProp: true,
+                startDate: "",
+                endDate: "",
+                startTime: "",
+                endTime: "",
+                backgroundColor: "",
+            },
 
             // These are calendar options
             calendarOptions: {
@@ -60,56 +87,64 @@ export default {
                     {
                         id: "1",
                         title: "Meeting with interns",
+                        allDay: false,
                         start: "2022-07-01T04:30:00",
                         end: "2022-07-01T09:30:00",
                     },
                     {
                         id: "2",
                         title: "Meeting with admins",
+                        allDay: false,
                         start: "2022-07-01T06:30:00",
                         end: "2022-07-01T07:30:00",
                     },
                     {
                         id: "3",
                         title: "Meeting with teachers",
+                        allDay: false,
                         start: "2022-07-01T07:30:00",
                         end: "2022-07-01T08:30:00",
                     },
                     {
                         id: "4",
                         title: "Meeting with students",
+                        allDay: false,
                         start: "2022-07-01T08:30:00",
                         end: "2022-07-01T09:30:00",
                     },
                     {
                         id: "5",
                         title: "Meeting with investors",
+                        allDay: false,
                         start: "2022-07-01T09:30:00",
                         end: "2022-07-01T10:30:00",
                     },
                     {
                         id: "6",
                         title: "Meeting with CEO",
+                        allDay: false,
                         start: "2022-07-01T10:30:00",
                         end: "2022-07-01T11:30:00",
                     },
                     {
                         id: "7",
                         title: "Meeting with project manager",
+                        allDay: false,
                         start: "2022-07-01T11:30:00",
                         end: "2022-07-01T12:30:00",
                     },
                     {
                         id: "8",
-                        title: "Website Test (Click me)",
+                        title: "Website Test",
+                        allDay: false,
                         start: "2022-07-06T04:30:00",
                         end: "2022-07-07T06:30:00",
-                        url: "/",
                     },
 
                     {
                         id: "9",
                         title: "Project Planning",
+                        allDay: true,
                         start: "2022-06-27",
                         end: "2022-06-27",
                         color: "#FFC100",
@@ -117,8 +152,9 @@ export default {
                     {
                         id: "10",
                         title: "Celebration",
+                        allDay: true,
                         start: "2022-07-09",
-                        end: "2022-07-09",
+                        end: null,
                         color: "#fc3f3f",
                     },
                 ],
@@ -130,7 +166,7 @@ export default {
                         dayMaxEvents: true,
                     },
                 },
-                moreLinkClick: "day",
+                moreLinkClick: "popover",
 
                 // for manipulation and other actions
                 dateClick: this.handleDateClick,
@@ -140,6 +176,7 @@ export default {
                 eventResize: this.handleEventChange,
                 eventDrop: this.handleEventChange,
                 navLinks: true,
+                eventClick: this.handleEventClick,
             },
         };
     },
@@ -170,11 +207,66 @@ export default {
             );
         },
 
-        // for closing the modal
+        // for handling event clicks
+        handleEventClick: function (arg) {
+            const temp = arg.event;
+            let updated_event = {
+                id: temp.id,
+                title: temp.title,
+                allDayProp: temp.allDay,
+                startDate: "",
+                endDate: "",
+                startTime: "",
+                endTime: "",
+                backgroundColor: temp.backgroundColor,
+            };
+            // parsing objects from the fullcalendar API
+            let getTime = false;
+            for (let i = 0; i < temp.startStr.length; i++) {
+                let curr = temp.startStr.charAt(i);
+                if (curr === "T") {
+                    getTime = true;
+                    continue;
+                }
+                if (!getTime) {
+                    updated_event.startDate = updated_event.startDate + curr;
+                } else if (curr === "+") {
+                    break;
+                } else {
+                    updated_event.startTime = updated_event.startTime + curr;
+                }
+            }
+            getTime = false;
+            for (let i = 0; i < temp.endStr.length; i++) {
+                let curr = temp.endStr.charAt(i);
+                if (curr === "T") {
+                    getTime = true;
+                    continue;
+                }
+                if (!getTime) {
+                    updated_event.endDate = updated_event.endDate + curr;
+                } else if (curr === "+") {
+                    break;
+                } else {
+                    updated_event.endTime = updated_event.endTime + curr;
+                }
+            }
+            this.event_buffer = updated_event;
+            console.log(temp);
+            this.editToggle = true;
+        },
+
+        // for closing the modal for adding events
         handleCloseModal: function () {
             this.toggle = false;
         },
 
+        // for closing the modal for editing events
+        handleCloseEditModal: function () {
+            this.editToggle = false;
+        },
+
+        // for showing modal for adding events
         addEvent: function () {
             this.toggle = true;
         },

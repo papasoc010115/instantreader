@@ -31,24 +31,10 @@
                         />
                     </div>
 
-                    <!-- Event Location -->
-                    <div class="col-md-12">
-                        <label class="form-label" for="event-location"
-                            >Location</label
-                        >
-                        <input
-                            type="text"
-                            class="form-control"
-                            id="event-location"
-                            placeholder="e.g. Chicago, USA"
-                            required
-                        />
-                    </div>
-
                     <!-- All day or Not -->
                     <div class="col-md-12 py-3">
                         <label>Time Duration</label>
-                        <div class="radio-container py-2">
+                        <div class="radio-container">
                             <label class="radio-inline">
                                 <input
                                     type="radio"
@@ -57,7 +43,7 @@
                                     required
                                     @click="allDay = true"
                                 />
-                                All Day
+                                One Whole Day
                             </label>
                             <label class="radio-inline">
                                 <input
@@ -86,6 +72,7 @@
                             class="form-control picker"
                             id="start-event-date"
                             name="start-event-date"
+                            required
                         />
                     </div>
                     <div v-if="!allDay" class="col-lg-8 py-3">
@@ -97,6 +84,7 @@
                             class="form-control picker"
                             id="end-event-date"
                             name="end-event-date"
+                            required
                         />
                     </div>
 
@@ -110,6 +98,7 @@
                             class="form-control picker"
                             id="start-time"
                             name="start-time"
+                            required
                         />
                     </div>
 
@@ -123,15 +112,21 @@
                             class="form-control picker"
                             id="end-time"
                             name="end-time"
+                            required
                         />
                     </div>
 
                     <!-- Color -->
                     <div class="col-md-12 py-3">
                         <label>Color</label>
-                        <div class="radio-container py-3">
+                        <div class="radio-container">
                             <label class="radio-inline">
-                                <input type="radio" name="optradio" checked />
+                                <input
+                                    type="radio"
+                                    name="optradio"
+                                    checked
+                                    required
+                                />
                                 Red
                             </label>
                             <label class="radio-inline">
@@ -147,7 +142,7 @@
                     <div class="col-md-12 py-2">
                         <button
                             type="submit"
-                            class="btn btn-primary btn-user btn-block"
+                            class="btn btn-dark btn-user btn-block"
                         >
                             <span class="btn-text">Add Event</span>
                         </button>
@@ -239,9 +234,14 @@ export default {
     gap: 1.4rem;
 }
 
-.btn {
-    background-color: #5a88ff;
-    color: white;
+.btn-dark {
+    background-color: rgb(27, 26, 26) !important;
+    color: #fff !important;
+}
+
+.btn-dark:hover {
+    background-color: black !important;
+    color: rgba(255, 255, 255, 0.945) !important;
 }
 
 .btn-text {
