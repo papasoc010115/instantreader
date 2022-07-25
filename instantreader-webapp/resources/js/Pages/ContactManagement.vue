@@ -486,6 +486,7 @@ export default {
 }
 
 .fa-plus:hover {
+    cursor: pointer;
     color: #000;
 }
 
