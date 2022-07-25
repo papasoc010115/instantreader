@@ -184,6 +184,7 @@ export default {
 
 .customer:hover {
     background-color: #D9D9D9;
+    cursor: pointer;
 }
 
 .lead-container {

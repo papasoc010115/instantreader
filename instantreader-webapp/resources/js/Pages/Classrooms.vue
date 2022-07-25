@@ -262,5 +262,6 @@ export default {
 .carousel-card:hover {
     color: white;
     background-color: #564F4F;
+    cursor: pointer;
 }
 </style>
