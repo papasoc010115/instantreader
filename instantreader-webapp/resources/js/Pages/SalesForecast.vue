@@ -1,6 +1,7 @@
 <template>
     <AppLayout>
         <div class="container-fluid">
+            <MonthlyGoal :show="toggleMGoalModal" @close="handleCloseMGoalModal"/>
             <div class="pt-5 pb-5">
                 <!-- Header and Add Goal Button -->
                 <div class="d-flex">
@@ -9,38 +10,73 @@
                     </div>
                     <div class="ml-auto">
                         <div>
-                            <Link href="/crm/admin/manage-users/create-user" class="btn btn-primary btn-icon-split">
+                            <button @click="handleMGoalClick" class="btn btn-primary btn-icon-split">
                                 <span class="icon text-white-50">
                                     <i class="fas fa-plus"></i>
                                 </span>
                                 <span class="text">Add Goal</span>
-                            </Link>
+                            </button>
                         </div>
                     </div>
                 </div>
             
-                <!-- Yearly/Monthly and Branch Selection -->
-                <div class="row mt-2 mb-4">
+                <!-- Specific Selection -->
+                <div class="mt-2 mb-2">
                     <form>
-                        <div class="form-group row mb-3 ml-2 col-lg-6">
-                            <div class="col-lg-3">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                        <!-- Yearly/Monthly and Branch Selection -->
+                        <div class="form-group row mb-3 ml-2 col-lg-12">
+                            <div class="col-lg-2">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="yearly" v-model="choice">
                                 <label class="form-check-label" for="inlineRadio1">Yearly</label>
                             </div>
-                            <div class="col-lg-3">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                            <div class="col-lg-2">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="monthly" v-model="choice">
                                 <label class="form-check-label" for="inlineRadio2">Monthly</label>
                             </div>
-                            <div class="col-lg-6">
-                                <select class="custom-select" id="tutorBranch">
-                                    <label class="mr-3">Branch</label>
-                                    <option selected disabled>Branch</option>
+                            <div class="col-lg-3">
+                                <select class="custom-select" id="salesBranch">
+                                    <option selected disabled>--Branch--</option>
                                     <option value="Cabuyao">Cabuyao</option>
                                     <option value="Calamba">Calamba</option>
                                     <option value="Los Banos">Los Banos</option>
                                     <option value="Sta. Rosa">Sta. Rosa</option>
                                 </select>
                             </div>
+                        </div>
+                        <!-- Year(s) Selection -->
+                        <div class="form-group row mb-4 col-lg-12 d-flex">
+                            <div class="col-lg-2" v-if="choice=='monthly'">
+                                <select class="custom-select" id="year">
+                                    <option selected disabled>--Year--</option>
+                                    <option value="2019">2019</option>
+                                    <option value="2020">2020</option>
+                                    <option value="2021">2021</option>
+                                    <option value="2022">2022</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-2" v-if="choice=='yearly'">
+                                <select class="custom-select" id="year-start">
+                                    <option selected disabled>--Year Start--</option>
+                                    <option value="2018">2018</option>
+                                    <option value="2019">2019</option>
+                                    <option value="2020">2020</option>
+                                    <option value="2021">2021</option>
+                                    <option value="2021">2022</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-2">
+                                <select  v-if="choice=='yearly'" class="custom-select" id="year-end">
+                                    <option selected disabled>--Year End--</option>
+                                    <option value="2019">2019</option>
+                                    <option value="2020">2020</option>
+                                    <option value="2021">2021</option>
+                                    <option value="2021">2022</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- Generate button -->
+                        <div class="col-lg-2 mb-5">
+                            <button class="btn btn-primary">Generate</button>
                         </div>
                     </form>
                 </div>
@@ -96,11 +132,27 @@
 import { Link } from "@inertiajs/inertia-vue3";
 import AppLayout from "../Layouts/AppLayout.vue";
 import Chart from 'chart.js/auto';
+import MonthlyGoal from "../Components/modals/AddMonthlyGoalModal.vue"
 
 export default {
     components: {
         Link,
         AppLayout,
+        MonthlyGoal,
+    },
+    data () {
+        return {
+            choice: "yearly",
+            toggleMGoalModal: false,
+        };
+    },
+    methods: {
+        handleMGoalClick() {
+            this.toggleMGoalModal = !this.toggleMGoalModal;
+        },
+        handleCloseMGoalModal() {
+            this.toggleMGoalModal = false;
+        }
     },
     mounted() {
         const ctx1 = document.getElementById("lineChart");
