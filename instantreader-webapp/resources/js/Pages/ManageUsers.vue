@@ -3,6 +3,7 @@
 
 <template>
     <AppLayout>
+        <DeleteUser :show="toggleDelModal" @close="handleCloseModal" />
         <div class="container-fluid">
             <div class="pt-5 pb-5">
                 <!-- Header and Search Bar -->
@@ -69,12 +70,18 @@
                                 <td v-if="index%2==0" class="align-middle"><i class="fas fa-check fa-lg" id="check-icon"></i></td>
                                 <td v-else class="align-middle"><i class="fas fa-times fa-lg" id="x-icon"></i></td>
                                 <td class="align-middle">
-                                    <Link href="/crm/admin/manage-users/edit-user"
-                                        ><i class="fas fa-pen mr-3" id="edit-icon"></i
+                                    <Link 
+                                        href="/crm/admin/manage-users/edit-user"
+                                        ><i 
+                                            class="fas fa-pen mr-3" 
+                                            id="edit-icon">
+                                        </i
                                     ></Link>
-                                    <Link href="#"
-                                        ><i class="fas fa-trash ml-3" id="trash-icon"></i
-                                    ></Link>
+                                    <i 
+                                        @click="handleDelClick" 
+                                        class="fas fa-trash ml-3" 
+                                        id="trash-icon"
+                                    ></i>
                                 </td>
                             </tr>
                         </tbody>
@@ -135,13 +142,27 @@
 <script>
 import { Link } from "@inertiajs/inertia-vue3";
 import AppLayout from "../Layouts/AppLayout.vue";
+import DeleteUser from "../Components/modals/DeleteUserModal.vue"
 
 export default {
     components: {
         Link,
         AppLayout,
+        DeleteUser,
     },
-    methods: {},
+    data () {
+        return {
+            toggleDelModal: false,
+        };
+    },
+    methods: {
+        handleDelClick () {
+            this.toggleDelModal = !this.toggleDelModal;
+        },
+        handleCloseModal () {
+            this.toggleDelModal = false;
+        }
+    },
 };
 </script>
 
