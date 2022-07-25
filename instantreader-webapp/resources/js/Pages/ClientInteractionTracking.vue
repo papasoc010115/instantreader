@@ -355,6 +355,7 @@ export default {
 
 li:hover {
     background-color: #d9d9d9;
+    cursor: pointer;
 }
 
 .message-container {
@@ -427,6 +428,7 @@ hr {
 }
 
 .fa-paper-plane:hover {
+    cursor: pointer;
     color: #224abe;
 }
 
