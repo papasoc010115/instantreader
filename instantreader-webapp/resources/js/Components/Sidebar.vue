@@ -5,7 +5,7 @@
     This works by checking the path that the user is currently in.
     Example:  <div v-if="$page.url.includes('/admin')">Render me if we are under /admin route </div>
 
-    by rmhizon
+    by: rmhizon
  -->
 
 <template>

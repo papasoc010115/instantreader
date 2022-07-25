@@ -1,3 +1,11 @@
+<!-- 
+    This is the floating action button component. This was mainly and initially created for the calendar page.
+    How to use: Just pass a true value to the 'show' prop to make the button visible. Pass false to make it gone.
+    This emits a 'press' event when clicked.
+
+    by: rmhizon
+ -->
+
 <template>
     <div v-if="show" class="float" @click="handleClick">
         <i class="btn-float fas fa-plus"></i>

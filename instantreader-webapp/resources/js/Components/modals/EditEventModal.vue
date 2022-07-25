@@ -1,3 +1,9 @@
+<!-- 
+	Please check the README inside the modals directory for the instructions/guide on using modal components.
+
+	by: rmhizon
+-->
+
 <template>
     <!-- Background -->
     <div class="background flex-container-center" v-if="show">

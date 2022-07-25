@@ -1,3 +1,9 @@
+<!-- 
+    This is the Calendar page for the admins. This is for creating, editing, viewing, and deleting events.
+
+    by: rmhizon
+ -->
+
 <template>
     <AppLayout>
         <div class="calendar-container">
@@ -117,7 +123,7 @@ export default {
                     },
                 ],
 
-                // views
+                // view configurations
                 initialView: "dayGridMonth",
                 views: {
                     dayGrid: {
@@ -126,7 +132,7 @@ export default {
                 },
                 moreLinkClick: "day",
 
-                // for manipulation
+                // for manipulation and other actions
                 dateClick: this.handleDateClick,
                 editable: true,
                 eventResizableFromStart: true,
