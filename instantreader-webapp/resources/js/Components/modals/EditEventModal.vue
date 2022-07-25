@@ -63,9 +63,32 @@
                         />
                     </div>
 
-                    <!-- Time -->
+                    <!-- All day or Not -->
+                    <div class="col-md-12 py-2">
+                        <label>Time Duration</label>
+                        <div class="radio-container py-2">
+                            <label class="radio-inline">
+                                <input
+                                    type="radio"
+                                    name="dur-optradio"
+                                    checked
+                                    @click="allDay = true"
+                                />
+                                All Day
+                            </label>
+                            <label class="radio-inline">
+                                <input
+                                    type="radio"
+                                    name="dur-optradio"
+                                    @click="allDay = false"
+                                />
+                                Custom
+                            </label>
+                        </div>
+                    </div>
+
                     <!-- Start time -->
-                    <div class="col-lg-4">
+                    <div v-if="!allDay" class="col-lg-4">
                         <label class="form-label" for="start-time"
                             >Start Time
                         </label>
@@ -78,7 +101,7 @@
                     </div>
 
                     <!-- End time -->
-                    <div class="col-lg-8">
+                    <div v-if="!allDay" class="col-lg-8">
                         <label class="form-label" for="end-time"
                             >End Time
                         </label>
@@ -95,17 +118,14 @@
                         <label>Color</label>
                         <div class="radio-container py-3">
                             <label class="radio-inline">
-                                <input
-                                    type="radio"
-                                    name="optradio"
-                                    checked
-                                />Red
+                                <input type="radio" name="optradio" checked />
+                                Red
                             </label>
                             <label class="radio-inline">
-                                <input type="radio" name="optradio" />Yellow
+                                <input type="radio" name="optradio" /> Yellow
                             </label>
                             <label class="radio-inline">
-                                <input type="radio" name="optradio" />Blue
+                                <input type="radio" name="optradio" /> Blue
                             </label>
                         </div>
                     </div>
@@ -128,6 +148,11 @@
 <script>
 export default {
     props: ["show"],
+    data() {
+        return {
+            allDay: true,
+        };
+    },
     methods: {
         removeModal() {
             this.$emit("close");
