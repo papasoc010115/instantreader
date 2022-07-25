@@ -50,124 +50,58 @@
                 
 
                 <!-- Main Cards -->
-                <div class="card shadow mb-4">
-                    <div class="card-header py-3">
-                        <div class="row text-center d-flex align-items-center">
-                            <div class="col-md-1">
-                                <img class="profile-pic" src="./../../../public/marketing-site/assets/agency/img/avatar-1.png" />
-                            </div>
-                            <div class="col">Sage Ann</div>
-                            <div class="col">Wong</div>
-                            <div class="col">July 5, 2022</div>
-                            <div class="col">8 AM</div>
-                            <div class="col-md-1">
-                                <i  class="check-mark fas fa-lg fa-check"></i>
-                            </div>
-                        </div> 
-                    </div>
-                    <div class="card-body mx-4">
-                        <h5>STATUS REPORT</h5>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                        </p>
-                    </div>
-                </div>
-                <div class="card shadow mb-4">
-                    <div class="card-header py-3">
-                        <div class="row text-center d-flex align-items-center">
-                            <div class="col-md-1">
-                                <img class="profile-pic" src="./../../../public/marketing-site/assets/agency/img/avatar-1.png" />
-                            </div>
-                            <div class="col">Sage Ann</div>
-                            <div class="col">Wong</div>
-                            <div class="col">July 5, 2022</div>
-                            <div class="col">8 AM</div>
-                            <div class="col-md-1">
-                                <i  class="x-mark fas fa-lg fa-times"></i>
-                            </div>
-                        </div> 
-                    </div>
-                    <div class="card-body mx-4" hidden>
-                        <h5>STATUS REPORT</h5>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                        </p>
-                    </div>
-                </div>
-                <div class="card shadow mb-4">
-                    <div class="card-header py-3">
-                        <div class="row text-center d-flex align-items-center">
-                            <div class="col-md-1">
-                                <img class="profile-pic" src="./../../../public/marketing-site/assets/agency/img/avatar-1.png" />
-                            </div>
-                            <div class="col">Sage Ann</div>
-                            <div class="col">Wong</div>
-                            <div class="col">July 5, 2022</div>
-                            <div class="col">8 AM</div>
-                            <div class="col-md-1">
-                                <i  class="x-mark fas fa-lg fa-times"></i>
-                            </div>
-                        </div> 
-                    </div>
-                    <div class="card-body mx-4" hidden>
-                        <h5>STATUS REPORT</h5>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                        </p>
-                    </div>
-                </div>
-                <div class="card shadow mb-4">
-                    <div class="card-header py-3">
-                        <div class="row text-center d-flex align-items-center">
-                            <div class="col-md-1">
-                                <img class="profile-pic" src="./../../../public/marketing-site/assets/agency/img/avatar-1.png" />
-                            </div>
-                            <div class="col">Sage Ann</div>
-                            <div class="col">Wong</div>
-                            <div class="col">July 5, 2022</div>
-                            <div class="col">8 AM</div>
-                            <div class="col-md-1">
-                                <i  class="check-mark fas fa-lg fa-check"></i>
-                            </div>
-                        </div> 
-                    </div>
-                    <div class="card-body mx-4">
-                        <h5>STATUS REPORT</h5>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                        </p>
-                    </div>
-                </div>
-                <div class="card shadow mb-4">
-                    <div class="card-header py-3">
-                        <div class="row text-center d-flex align-items-center">
-                            <div class="col-md-1">
-                                <img class="profile-pic" src="./../../../public/marketing-site/assets/agency/img/avatar-1.png" />
-                            </div>
-                            <div class="col">Sage Ann</div>
-                            <div class="col">Wong</div>
-                            <div class="col">July 5, 2022</div>
-                            <div class="col">8 AM</div>
-                            <div class="col-md-1">
-                                <i  class="x-mark fas fa-lg fa-times"></i>
-                            </div>
-                        </div> 
-                    </div>
-                    <div class="card-body mx-4" hidden>
-                        <h5>STATUS REPORT</h5>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                        </p>
+                <div 
+                    v-for="studentIndex in 5" 
+                    :key="studentIndex"
+                >
+                    <div class="card shadow mb-4">
+
+                        <!-- Student Details / Card Header -->
+                        <div class="card-header py-3">
+                            <div class="row text-center d-flex align-items-center">
+
+                                <!-- Picture -->
+                                <div class="col-md-1">
+                                    <img class="profile-pic" src="./../../../public/marketing-site/assets/agency/img/avatar-1.png" />
+                                </div>
+
+                                <!-- First Name -->
+                                <div class="col">Sage Ann</div>
+
+                                <!-- Last Name -->
+                                <div class="col">Wong</div>
+
+                                <!-- Date -->
+                                <div class="col">July 5, 2022</div>
+
+                                <!-- Time -->
+                                <div class="col">8 AM</div>
+
+                                <!-- Status -->
+                                <div 
+                                    v-if="studentIndex==1 || studentIndex==4" 
+                                    class="col-md-1"
+                                >
+                                    <i  class="check-mark fas fa-lg fa-check"></i>
+                                </div>
+                                <div v-else class="col-md-1">
+                                    <i  class="x-mark fas fa-lg fa-times"></i>
+                                </div>
+                            </div> 
+                        </div>
+
+                        <!-- Status Report / Card Body -->
+                        <div 
+                            v-if="studentIndex==1 || studentIndex==4" 
+                            class="card-body mx-4"
+                        >
+                            <h5>STATUS REPORT</h5>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                            </p>
+                        </div>
                     </div>
                 </div>
 

@@ -48,7 +48,10 @@
                                 <Link href="/crm/sales/contact-management/create-prospect" class="btn btn-primary btn-block">Add Prospect</Link>
                             </div>
                             <!-- Actual List of Prospects -->
-                            <div>
+                            <div 
+                                v-for="prospectsIndex in 3" 
+                                :key="prospectsIndex"
+                            >
                                 <div class="card shadow m-3">
                                     <div class="card-header py-3 d-flex">
                                         <div class="h6 m-0 font-weight-bold contact-name">First Name Last Name</div>
@@ -87,98 +90,7 @@
                                                 <ul class="list-unstyled">
                                                     <li>FirstName LastName</li>
                                                     <li>FirstName LastName</li>
-                                                    <li>FirstName LastName</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="card shadow m-3">
-                                    <div class="card-header py-3 d-flex">
-                                        <div class="h6 m-0 font-weight-bold contact-name">First Name Last Name</div>
-                                        <div class="ml-auto">
-                                            <Link href="/crm/sales/contact-management/edit-prospect"
-                                                ><i class="fas fa-pen mr-3"></i
-                                            ></Link>
-                                            <i @click="handleDelProspect" class="fas fa-trash ml-3"></i>
-                                        </div>
-                                    </div>
-                                    <div class="card-body">
-                                        <!-- Contact Number Row -->
-                                        <div class="d-flex my-3">
-                                            <div class="w-50">
-                                                Contact Number
-                                            </div>
-                                            <div class="w-50 text-center">
-                                                09123456789
-                                            </div>
-                                        </div>
-                                        <!-- Email Row -->
-                                        <div class="d-flex my-3">
-                                            <div class="w-50">
-                                                Email
-                                            </div>
-                                            <div class="w-50 text-center">
-                                                email@email.com
-                                            </div>
-                                        </div>
-                                        <div class="d-flex my-3">
-                                            <div class="w-50">
-                                                Assigned Users
-                                                <i @click="handleAddAssignedUser" class="fas fa-plus ml-3"></i>
-                                            </div>
-                                            <div class="w-50 text-center">
-                                                <ul class="list-unstyled">
-                                                    <li>FirstName LastName</li>
-                                                    <li>FirstName LastName</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="card shadow m-3">
-                                    <div class="card-header py-3 d-flex">
-                                        <div class="h6 m-0 font-weight-bold contact-name">First Name Last Name</div>
-                                        <div class="ml-auto">
-                                            <Link href="/crm/sales/contact-management/edit-prospect"
-                                                ><i class="fas fa-pen mr-3"></i
-                                            ></Link>
-                                            <i @click="handleDelProspect" class="fas fa-trash ml-3"></i>
-                                        </div>
-                                    </div>
-                                    <div class="card-body">
-                                        <!-- Contact Number Row -->
-                                        <div class="d-flex my-3">
-                                            <div class="w-50">
-                                                Contact Number
-                                            </div>
-                                            <div class="w-50 text-center">
-                                                09123456789
-                                            </div>
-                                        </div>
-                                        <!-- Email Row -->
-                                        <div class="d-flex my-3">
-                                            <div class="w-50">
-                                                Email
-                                            </div>
-                                            <div class="w-50 text-center">
-                                                email@email.com
-                                            </div>
-                                        </div>
-                                        <div class="d-flex my-3">
-                                            <div class="w-50">
-                                                Assigned Users
-                                                <i @click="handleAddAssignedUser" class="fas fa-plus ml-3"></i>
-                                            </div>
-                                            <div class="w-50 text-center">
-                                                <ul class="list-unstyled">
-                                                    <li>FirstName LastName</li>
-                                                    <li>FirstName LastName</li>
-                                                    <li>FirstName LastName</li>
+                                                    <li v-if="prospectsIndex%2==1">FirstName LastName</li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -232,7 +144,10 @@
                                 <Link href="/crm/sales/contact-management/create-lead" class="btn btn-primary btn-block">Add Lead</Link>
                             </div>
                             <!-- Actual List of Prospects -->
-                            <div>
+                            <div 
+                                v-for="leadsIndex in 3" 
+                                :key="leadsIndex"
+                            >
                                 <div class="card shadow m-3">
                                     <div class="card-header py-3 d-flex">
                                         <div class="h6 m-0 font-weight-bold contact-name">First Name Last Name</div>
@@ -271,98 +186,7 @@
                                                 <ul class="list-unstyled">
                                                     <li>FirstName LastName</li>
                                                     <li>FirstName LastName</li>
-                                                    <li>FirstName LastName</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="card shadow m-3">
-                                    <div class="card-header py-3 d-flex">
-                                        <div class="h6 m-0 font-weight-bold contact-name">First Name Last Name</div>
-                                        <div class="ml-auto">
-                                            <Link href="/crm/sales/contact-management/edit-lead"
-                                                ><i class="fas fa-pen mr-3"></i
-                                            ></Link>
-                                            <i @click="handleDelLead" class="fas fa-trash ml-3"></i>
-                                        </div>
-                                    </div>
-                                    <div class="card-body">
-                                        <!-- Contact Number Row -->
-                                        <div class="d-flex my-3">
-                                            <div class="w-50">
-                                                Contact Number
-                                            </div>
-                                            <div class="w-50 text-center">
-                                                09123456789
-                                            </div>
-                                        </div>
-                                        <!-- Email Row -->
-                                        <div class="d-flex my-3">
-                                            <div class="w-50">
-                                                Email
-                                            </div>
-                                            <div class="w-50 text-center">
-                                                email@email.com
-                                            </div>
-                                        </div>
-                                        <div class="d-flex my-3">
-                                            <div class="w-50">
-                                                Assigned Users
-                                                <i @click="handleAddAssignedUser" class="fas fa-plus ml-3"></i>
-                                            </div>
-                                            <div class="w-50 text-center">
-                                                <ul class="list-unstyled">
-                                                    <li>FirstName LastName</li>
-                                                    <li>FirstName LastName</li>
-                                                    <li>FirstName LastName</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="card shadow m-3">
-                                    <div class="card-header py-3 d-flex">
-                                        <div class="h6 m-0 font-weight-bold contact-name">First Name Last Name</div>
-                                        <div class="ml-auto">
-                                            <Link href="/crm/sales/contact-management/edit-lead"
-                                                ><i class="fas fa-pen mr-3"></i
-                                            ></Link>
-                                            <i @click="handleDelLead" class="fas fa-trash ml-3"></i>
-                                        </div>
-                                    </div>
-                                    <div class="card-body">
-                                        <!-- Contact Number Row -->
-                                        <div class="d-flex my-3">
-                                            <div class="w-50">
-                                                Contact Number
-                                            </div>
-                                            <div class="w-50 text-center">
-                                                09123456789
-                                            </div>
-                                        </div>
-                                        <!-- Email Row -->
-                                        <div class="d-flex my-3">
-                                            <div class="w-50">
-                                                Email
-                                            </div>
-                                            <div class="w-50 text-center">
-                                                email@email.com
-                                            </div>
-                                        </div>
-                                        <div class="d-flex my-3">
-                                            <div class="w-50">
-                                                Assigned Users
-                                                <i @click="handleAddAssignedUser" class="fas fa-plus ml-3"></i>
-                                            </div>
-                                            <div class="w-50 text-center">
-                                                <ul class="list-unstyled">
-                                                    <li>FirstName LastName</li>
-                                                    <li>FirstName LastName</li>
+                                                    <li v-if="leadsIndex%2==1">FirstName LastName</li>
                                                 </ul>
                                             </div>
                                         </div>
