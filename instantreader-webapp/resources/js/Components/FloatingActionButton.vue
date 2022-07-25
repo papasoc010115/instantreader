@@ -22,7 +22,7 @@ export default {
     height: 60px;
     bottom: 40px;
     right: 40px;
-    background-color: #5a88ff;
+    background-color: #2c3e50;
     color: #fff;
     border-radius: 50px;
     text-align: center;
@@ -31,7 +31,7 @@ export default {
 }
 
 .float:hover {
-    background-color: #5081fc;
+    background-color: #1a252f;
     color: rgba(255, 255, 255, 0.945);
     cursor: pointer;
 }
