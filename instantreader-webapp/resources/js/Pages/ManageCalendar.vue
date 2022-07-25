@@ -57,6 +57,31 @@ export default {
                         end: "2022-07-01T07:30:00",
                     },
                     {
+                        title: "Meeting with teachers",
+                        start: "2022-07-01T07:30:00",
+                        end: "2022-07-01T08:30:00",
+                    },
+                    {
+                        title: "Meeting with students",
+                        start: "2022-07-01T08:30:00",
+                        end: "2022-07-01T09:30:00",
+                    },
+                    {
+                        title: "Meeting with investors",
+                        start: "2022-07-01T09:30:00",
+                        end: "2022-07-01T10:30:00",
+                    },
+                    {
+                        title: "Meeting with CEO",
+                        start: "2022-07-01T10:30:00",
+                        end: "2022-07-01T11:30:00",
+                    },
+                    {
+                        title: "Meeting with project manager",
+                        start: "2022-07-01T11:30:00",
+                        end: "2022-07-01T12:30:00",
+                    },
+                    {
                         title: "Website Test (Click me)",
                         start: "2022-07-06T04:30:00",
                         end: "2022-07-07T06:30:00",
@@ -78,6 +103,17 @@ export default {
                 ],
                 initialView: "dayGridMonth",
                 dateClick: this.handleDateClick,
+                editable: true,
+                eventStartEditable: true,
+                eventResizableFromStart: true,
+                eventDurationEditable: true,
+                dayMaxEventRows: true,
+                moreLinkClick: "popover",
+                views: {
+                    dayGrid: {
+                        dayMaxEvents: true,
+                    },
+                },
             },
         };
     },
@@ -106,7 +142,7 @@ export default {
 }
 
 .fc-daygrid-day-frame:hover {
-    cursor: pointer;
-    background-color: rgba(150, 235, 235, 0.4);
+    /* cursor: pointer; */
+    background-color: #ebf8fb;
 }
 </style>
