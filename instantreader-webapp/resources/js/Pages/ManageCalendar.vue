@@ -10,14 +10,18 @@
             <!-- Main Calendar -->
             <FullCalendar :options="calendarOptions" />
             <!-- Add Event Modal -->
-            <AddEventModal :show="toggle" @close="handleCloseModal" />
+            <AddEventModal
+                :show="toggle"
+                :allDay="true"
+                @close="handleCloseModal"
+            />
             <!-- Update Event Modal -->
             <EditEventModal
                 :show="editToggle"
                 @close="handleCloseEditModal"
                 :id="event_buffer.id"
                 :title="event_buffer.title"
-                :allDayProp="event_buffer.allDayProp"
+                :allDay="event_buffer.allDay"
                 :startDate="event_buffer.startDate"
                 :endDate="event_buffer.endDate"
                 :startTime="event_buffer.startTime"
@@ -58,7 +62,7 @@ export default {
             event_buffer: {
                 id: "",
                 title: "",
-                allDayProp: true,
+                allDay: true,
                 startDate: "",
                 endDate: "",
                 startTime: "",
@@ -213,7 +217,7 @@ export default {
             let updated_event = {
                 id: temp.id,
                 title: temp.title,
-                allDayProp: temp.allDay,
+                allDay: temp.allDay,
                 startDate: "",
                 endDate: "",
                 startTime: "",

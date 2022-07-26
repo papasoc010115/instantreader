@@ -25,7 +25,7 @@
                         <input
                             type="text"
                             class="form-control"
-                            id="event-name"
+                            id="event-name2"
                             placeholder="e.g. Instant Reader 2.0 Launch"
                             :value="title"
                             required
@@ -39,19 +39,19 @@
                             <label class="radio-inline">
                                 <input
                                     type="radio"
-                                    name="dur-optradio"
-                                    :checked="allDayProp"
+                                    name="dur-optradio2"
+                                    :checked="allDay"
                                     required
-                                    @click="allDayProp = true"
+                                    @click="allDay = true"
                                 />
                                 One Whole Day
                             </label>
                             <label class="radio-inline">
                                 <input
                                     type="radio"
-                                    name="dur-optradio"
-                                    :checked="!allDayProp"
-                                    @click="allDayProp = false"
+                                    name="dur-optradio2"
+                                    :checked="!allDay"
+                                    @click="allDay = false"
                                 />
                                 Custom
                             </label>
@@ -61,7 +61,7 @@
                     <!-- Date -->
                     <div class="col-lg-4 py-2">
                         <label
-                            v-if="!allDayProp"
+                            v-if="!allDay"
                             class="form-label"
                             for="start-event-date"
                             >Start Date
@@ -72,51 +72,51 @@
                         <input
                             type="date"
                             class="form-control picker"
-                            id="start-event-date"
-                            name="start-event-date"
+                            id="start-event-date2"
+                            name="start-event-date2"
                             :value="startDate"
                             required
                         />
                     </div>
-                    <div v-if="!allDayProp" class="col-lg-8 py-3">
+                    <div v-if="!allDay" class="col-lg-8 py-2">
                         <label class="form-label" for="end-event-date"
                             >End Date
                         </label>
                         <input
                             type="date"
                             class="form-control picker"
-                            id="end-event-date"
-                            name="end-event-date"
+                            id="end-event-date2"
+                            name="end-event-date2"
                             :value="endDate"
                             required
                         />
                     </div>
 
                     <!-- Start time -->
-                    <div v-if="!allDayProp" class="col-lg-4">
+                    <div v-if="!allDay" class="col-lg-4">
                         <label class="form-label" for="start-time"
                             >Start Time
                         </label>
                         <input
                             type="time"
                             class="form-control picker"
-                            id="start-time"
-                            name="start-time"
+                            id="start-time2"
+                            name="start-time2"
                             :value="startTime"
                             required
                         />
                     </div>
 
                     <!-- End time -->
-                    <div v-if="!allDayProp" class="col-lg-8">
+                    <div v-if="!allDay" class="col-lg-8">
                         <label class="form-label" for="end-time"
                             >End Time
                         </label>
                         <input
                             type="time"
                             class="form-control picker"
-                            id="end-time"
-                            name="end-time"
+                            id="end-time2"
+                            name="end-time2"
                             :value="endTime"
                             required
                         />
@@ -129,7 +129,7 @@
                             <label class="radio-inline">
                                 <input
                                     type="radio"
-                                    name="optradio"
+                                    name="optradio2"
                                     :checked="color === red"
                                     required
                                 />
@@ -138,7 +138,7 @@
                             <label class="radio-inline">
                                 <input
                                     type="radio"
-                                    name="optradio"
+                                    name="optradio2"
                                     :checked="color === yellow"
                                 />
                                 Yellow
@@ -146,7 +146,7 @@
                             <label class="radio-inline">
                                 <input
                                     type="radio"
-                                    name="optradio"
+                                    name="optradio2"
                                     :checked="color === ''"
                                 />
                                 Blue
@@ -179,7 +179,7 @@ export default {
         "show",
         "id",
         "title",
-        "allDayProp",
+        "allDay",
         "startDate",
         "endDate",
         "startTime",

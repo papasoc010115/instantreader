@@ -25,7 +25,7 @@
                         <input
                             type="text"
                             class="form-control"
-                            id="event-name"
+                            id="event-name1"
                             placeholder="e.g. Instant Reader 2.0 Launch"
                             required
                         />
@@ -38,7 +38,7 @@
                             <label class="radio-inline">
                                 <input
                                     type="radio"
-                                    name="dur-optradio"
+                                    name="dur-optradio1"
                                     checked
                                     required
                                     @click="allDay = true"
@@ -48,7 +48,7 @@
                             <label class="radio-inline">
                                 <input
                                     type="radio"
-                                    name="dur-optradio"
+                                    name="dur-optradio1"
                                     @click="allDay = false"
                                 />
                                 Custom
@@ -70,20 +70,20 @@
                         <input
                             type="date"
                             class="form-control picker"
-                            id="start-event-date"
-                            name="start-event-date"
+                            id="start-event-date1"
+                            name="start-event-date1"
                             required
                         />
                     </div>
-                    <div v-if="!allDay" class="col-lg-8 py-3">
+                    <div v-if="!allDay" class="col-lg-8 py-2">
                         <label class="form-label" for="end-event-date"
                             >End Date
                         </label>
                         <input
                             type="date"
                             class="form-control picker"
-                            id="end-event-date"
-                            name="end-event-date"
+                            id="end-event-date1"
+                            name="end-event-date1"
                             required
                         />
                     </div>
@@ -96,8 +96,8 @@
                         <input
                             type="time"
                             class="form-control picker"
-                            id="start-time"
-                            name="start-time"
+                            id="start-time1"
+                            name="start-time1"
                             required
                         />
                     </div>
@@ -110,8 +110,8 @@
                         <input
                             type="time"
                             class="form-control picker"
-                            id="end-time"
-                            name="end-time"
+                            id="end-time1"
+                            name="end-time1"
                             required
                         />
                     </div>
@@ -123,17 +123,17 @@
                             <label class="radio-inline">
                                 <input
                                     type="radio"
-                                    name="optradio"
+                                    name="optradio1"
                                     checked
                                     required
                                 />
                                 Red
                             </label>
                             <label class="radio-inline">
-                                <input type="radio" name="optradio" /> Yellow
+                                <input type="radio" name="optradio1" /> Yellow
                             </label>
                             <label class="radio-inline">
-                                <input type="radio" name="optradio" /> Blue
+                                <input type="radio" name="optradio1" /> Blue
                             </label>
                         </div>
                     </div>
@@ -155,12 +155,7 @@
 
 <script>
 export default {
-    props: ["show"],
-    data() {
-        return {
-            allDay: true,
-        };
-    },
+    props: ["show", "allDay"],
     methods: {
         removeModal() {
             this.$emit("close");
