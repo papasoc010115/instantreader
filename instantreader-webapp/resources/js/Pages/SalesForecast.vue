@@ -167,7 +167,7 @@ export default {
                 borderColor: '#FFD874',
                 tension: 0.1
             },{
-                label: 'Generated Goal',
+                label: 'Generated Profit',
                 data: [1100000, 1400000, 1000000, 1300000, 1100000, 1250000, 1700000, 1240000, 2000000, 3000000, 3400000, 3800000],
                 fill: false,
                 borderColor: '#4ABACF',
