@@ -107,7 +107,7 @@ Route::get('/crm/operations/tutors-lounge', function () {
 });
 
 Route::get('/crm/operations/ir-calendar', function () {
-    return Inertia::render('Test');
+    return Inertia::render('IrCalendar');
 });
 
 
