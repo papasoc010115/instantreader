@@ -136,7 +136,7 @@
                         <!--Button-->
                         <div class="col-md-12">
                             <a class="btn btn-large btn-rounded btn-purple btn-hvr-blue d-block mt-4 contact_btn" href="javascript:void(0);"
-                               id="apply_btn"><i class="fa fa-spinner fa-spin mr-2 d-none" aria-hidden="true"></i><b>Apply</b>
+                               id="apply_btn"><i class="fa fa-spinner fa-spin mr-2 d-none" aria-hidden="true"></i><b>Book</b>
                                 <div class="btn-hvr-setting">
                                     <ul class="btn-hvr-setting-inner">
                                         <li class="btn-hvr-effect"></li>
