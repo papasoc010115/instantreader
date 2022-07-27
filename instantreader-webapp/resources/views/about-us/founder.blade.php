@@ -110,44 +110,103 @@
 </section>
 <!--Video End-->
 
-<!--Other Information Start-->
-<section id="counters">
+<!--Sign-Up for Newsletter Start-->
+<section class="application">
+
     <div class="container">
-        <div class="row">
-            <div class="col-lg-6 pl-lg-4 order-lg-2 wow fadeInRight">
-                <div class="heading-area">
-                    <span class="sub-title">We are megaone company</span>
-                    <h2 class="title">We have done some great <span class="js-rotating">stuff, idea</span>.
-                    </h2>
-                    <p class="para">There are many variations of passages of Lorem Ipsum available, but the
-                        majority have suffered alteration in some form, by injected.</p>
-                </div>
-                <ul class="counter-list list-unstyled">
-                    <li class="counter-item">
-                        <i aria-hidden="true" class="fas fa-users"></i>
-                        <h6 class="counter-number"><span class="count">500</span>+</h6>
-                        <p class="sub-title">Happy Clients</p>
-                    </li>
-                    <li class="counter-item">
-                        <i aria-hidden="true" class="fas fa-list-alt"></i>
-                        <h6 class="counter-number"><span class="count">1074</span>+</h6>
-                        <p class="sub-title">Lines Of Code</p>
-                    </li>
-                    <li class="counter-item">
-                        <i aria-hidden="true" class="fas fa-award"></i>
-                        <h6 class="counter-number"><span class="count">600</span>+</h6>
-                        <p class="sub-title">Project Completed</p>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-lg-6 wow fadeInLeft">
-                <div class="half-img mt-5 pt-4 mt-lg-0 pt-lg-0">
-                    <img alt="vector" src="{{ asset('marketing-site/assets/agency/img/vector-art-3.png')}}">
+
+        <div class="row align-items-top">
+
+            <!-- Side Information -->
+            <div class="col-lg-5 order-lg-2 wow">
+                <div class="application-detail">
+                    <div class="contact-dots" data-dots=""></div>
+                    <!--Heading-->
+                    <div class="heading-area justify-content-center">
+                        <h2 class="title mt-0 pb-1">Lorem Ipsum</h2>
+                        <p class="para">There are many variations of passages of Lorem Ipsum available, but the majority
+                            have suffered .</p>
+                    </div>
+
+                    <div class="col-lg-12 wow">
+                        <div class="half-img mt-4 pt-1 mt-lg-0 pt-lg-0">
+                            <img alt="sample" src="{{ asset('marketing-site/assets/img/tutor-application.jpg') }}">
+                        </div>
+                    </div>
                 </div>
             </div>
+
+            <!--Application Form-->
+            <div class="col-lg-7 mt-4 pt-3 mt-lg-0 pt-lg-0 wow">
+                <!--Heading-->
+                <div class="heading-area pb-2">
+                    <h2 class="title mt-0">Sign-up Now</h2>
+                </div>
+                <!--Actual Form-->
+                <form class="newsletter-form" id="newsletter-form-data">
+                    @csrf
+                    <div class="form-group row mb-3">
+
+                        <!-- Name Field -->
+                        <div class="form-group row mb-4">
+                            <div class="col-md-12">
+                                <input
+                                    type="text"
+                                    class="form-control form-control-user"
+                                    id="userFulltName"
+                                    placeholder="Full Name"
+                                />
+                            </div>
+                        </div>
+
+                        <!-- Email Field -->
+                        <div class="form-group row mb-4">
+                            <div class="col-md-12">
+                                <input
+                                    type="email"
+                                    class="form-control form-control-user"
+                                    id="userEmail"
+                                    placeholder="Email"
+                                />
+                            </div>
+                        </div>
+
+                        <!-- Address Field -->
+                        <div class="form-group row mb-4">
+                            <div class="col-md-12">
+                                <input
+                                    type="text"
+                                    class="form-control form-control-user"
+                                    id="userddress"
+                                    placeholder="Current Country/City"
+                                />
+                            </div>
+                        </div>
+
+                        <!--Button-->
+                        <div class="col-md-4 mt-4">
+                            <a class="btn btn-large btn-rounded btn-purple btn-hvr-blue d-block ontact_btn" href="javascript:void(0);"
+                               id="apply_btn"><i class="fa fa-spinner fa-spin mr-2 d-none" aria-hidden="true"></i><b>Apply</b>
+                                <div class="btn-hvr-setting">
+                                    <ul class="btn-hvr-setting-inner">
+                                        <li class="btn-hvr-effect"></li>
+                                        <li class="btn-hvr-effect"></li>
+                                        <li class="btn-hvr-effect"></li>
+                                        <li class="btn-hvr-effect"></li>
+                                    </ul>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+
         </div>
+
     </div>
+
 </section>
-<!--Other Information End-->
+<!--Sign-Up for Newsletter  End-->
 
 @endsection
