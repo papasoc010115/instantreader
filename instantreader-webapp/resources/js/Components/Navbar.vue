@@ -14,7 +14,7 @@
                     src="./img/logo.png"
                     alt="logo"
                     class="d-inline-block align-top"
-                    width="300"
+                    width="185"
                 />
             </span>
 
