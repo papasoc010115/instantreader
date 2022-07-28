@@ -39,18 +39,12 @@
 
 
 <script>    
-    ClassicEditor
-        .create( document.querySelector( '#foc-sect1' ), 
-            {
-                toolbar: {
-                    items: ['heading', '|', 'bold', 'italic', 'link', 'strikethrough', 'code', '|', 'undo', 'redo']
-    
-                }
-            }
-        )
-        .catch( error => {
-            console.error( error );
-    });   
+    tinymce.init({
+        selector: '#foc-sect1',
+        plugins: 'link',
+        menubar: false,
+        toolbar: 'undo redo | bold italic underline | link'
+    });
    
 </script>
 @endsection
