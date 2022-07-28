@@ -132,6 +132,29 @@
                                 />
                             </div>
                         </div>
+
+                        <!-- Inquiry Location Field -->
+                        <div class="form-group row mb-4">
+                            <div class="col-md-6">
+                                <select class="custom-select" id="location-select">
+                                    <option selected disabled>Location Where You Inquired From</option>
+                                    <option value="cabuyao">Instant Reader Cabuyao</option>
+                                    <option value="calamba">Instant Reader Calamba</option>
+                                    <option value="main">Instant Reader Main</option>
+                                    <option value="starosa">Instant Reader Sta.Rosa</option>
+                                    <option value="others">Others</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                            <input
+                                    type="text"
+                                    class="form-control form-control-user"
+                                    id="otherLocation"
+                                    placeholder="Others"
+                                    disabled
+                                />
+                            </div>
+                        </div>
                         
                         <!--Button-->
                         <div class="col-md-12">
@@ -157,4 +180,16 @@
     </div>
 
 </section>
+
+<script>
+    document.getElementById('location-select').addEventListener('change', function() {
+        if (this.value === "others"){
+            document.getElementById('otherLocation').disabled = false;
+        } else{
+            document.getElementById('otherLocation').value = "";
+            document.getElementById('otherLocation').disabled = true;
+        }
+    });
+</script>
+
 @endsection
