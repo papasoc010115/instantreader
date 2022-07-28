@@ -29,50 +29,47 @@
 
 <!--LOG IN FORM Start-->
 <section class="pb-0 account-form">
-    <form class="booking-form" id="booking-form-data">
+    <form class="form-group" id="log-in-form-data">
         @csrf
-        <div class="form-group row mb-3">
-
-            <!-- Email Field -->
-            <div class="form-group row mb-4">
-                <div class="col-md-12">
-                    <input
-                        type="text"
-                        class="form-control form-control-user"
-                        id="logInEmail"
-                        placeholder="Email"
-                    />
-                </div>
-            </div>
-
-            <!-- Password Field -->
-            <div class="form-group row mb-4">
-                <div class="col-md-12">
-                    <input
-                        type="text"
-                        class="form-control form-control-user"
-                        id="logInPassword"
-                        placeholder="Password"
-                    />
-                </div>
-            </div>
-            
-            <!--Button-->
+        <!-- Email Field -->
+        <div class="form-group row mb-4">
             <div class="col-md-12">
-                <a class="btn btn-large btn-rounded btn-purple btn-hvr-blue d-block mt-4 contact_btn" href="javascript:void(0);"
-                    id="log_in_btn"><i class="fa fa-spinner fa-spin mr-2 d-none" aria-hidden="true"></i><b>Log In</b>
-                    <div class="btn-hvr-setting">
-                        <ul class="btn-hvr-setting-inner">
-                            <li class="btn-hvr-effect"></li>
-                            <li class="btn-hvr-effect"></li>
-                            <li class="btn-hvr-effect"></li>
-                            <li class="btn-hvr-effect"></li>
-                        </ul>
-                    </div>
-                </a>
+                <input
+                    type="text"
+                    class="form-control form-control-user"
+                    name="logInEmail"
+                    placeholder="Email"
+                />
             </div>
-
         </div>
+
+        <!-- Password Field -->
+        <div class="form-group row mb-4">
+            <div class="col-md-12">
+                <input
+                    type="text"
+                    class="form-control form-control-user"
+                    name="logInPassword"
+                    placeholder="Password"
+                />
+            </div>
+        </div>
+        
+        <!--Button-->
+        <div class="col-md-12">
+            <button type="submit" class="btn btn-large btn-rounded btn-purple btn-hvr-blue d-block w-100"
+                id="log_in_btn"><b>Log In</b>
+                <div class="btn-hvr-setting">
+                    <ul class="btn-hvr-setting-inner">
+                        <li class="btn-hvr-effect"></li>
+                        <li class="btn-hvr-effect"></li>
+                        <li class="btn-hvr-effect"></li>
+                        <li class="btn-hvr-effect"></li>
+                    </ul>
+                </div>
+            </a>
+        </div>
+
     </form>
 </section>
 <!--LOG IN FORM End-->

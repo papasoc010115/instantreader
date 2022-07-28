@@ -4,6 +4,8 @@ use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
+use App\Http\Controllers\FormController;
+
 /*
 This is the routes file for both the marketing site (Non-SPA) and CRM (SPA).
 The comments divide the routes in sections according to their nature and use.
@@ -206,3 +208,5 @@ Route::get('/log-in', function () {
 Route::get('/sign-up', function () {
     return view('account.sign-up');
 })->name('account.sign-up');
+
+Route::post('/sign-up', [FormController::class, 'store_user'])->name('account.store_user');

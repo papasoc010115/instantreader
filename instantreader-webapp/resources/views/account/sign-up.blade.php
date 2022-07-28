@@ -29,83 +29,84 @@
 
 <!--SIGN UP FORM Start-->
 <section class="pb-0 account-form">
-    <form class="booking-form" id="booking-form-data">
+    <form action="{{ route('account.store_user') }}" method="POST" class="form-group" id="sign-up-form-data">
         @csrf
-        <div class="form-group row mb-3">
-
-            <!-- User Name Fields -->
-            <div class="form-group row mb-4">
-                <div class="col-md-6">
-                    <input
-                        type="text"
-                        class="form-control form-control-user"
-                        id="signUpFirstName"
-                        placeholder="First Name"
-                    />
-                </div>
-                <div class="col-md-6">
-                    <input
-                        type="text"
-                        class="form-control form-control-user"
-                        id="signUpLastName"
-                        placeholder="Last Name"
-                    />
-                </div>
+        <!-- User Name Fields -->
+        <div class="form-group row mb-4">
+            <div class="col-md-6">
+                <input
+                    type="text"
+                    class="form-control form-control-user"
+                    name="signUpFirstName"
+                    placeholder="First Name"
+                />
             </div>
-
-            <!-- Email Field -->
-            <div class="form-group row mb-4">
-                <div class="col-md-12">
-                    <input
-                        type="text"
-                        class="form-control form-control-user"
-                        id="signUpEmail"
-                        placeholder="Email"
-                    />
-                </div>
+            <div class="col-md-6">
+                <input
+                    type="text"
+                    class="form-control form-control-user"
+                    name="signUpLastName"
+                    placeholder="Last Name"
+                />
             </div>
+        </div>
 
-            <!-- Password Field -->
-            <div class="form-group row mb-4">
-                <div class="col-md-12">
-                    <input
-                        type="text"
-                        class="form-control form-control-user"
-                        id="signUpPassword"
-                        placeholder="Password"
-                    />
-                </div>
-            </div>
-
-            <!-- Confirm Password Field -->
-            <div class="form-group row mb-4">
-                <div class="col-md-12">
-                    <input
-                        type="text"
-                        class="form-control form-control-user"
-                        id="signUpConfirmPassword"
-                        placeholder="Confirm Password"
-                    />
-                </div>
-            </div>
-
-            <!-- INSERT CAPTCHA HERE -->
-            
-            <!--Button-->
+        <!-- Email Field -->
+        <div class="form-group row mb-4">
             <div class="col-md-12">
-                <a class="btn btn-large btn-rounded btn-purple btn-hvr-blue d-block mt-4 contact_btn" href="javascript:void(0);"
-                    id="sign_up_btn"><i class="fa fa-spinner fa-spin mr-2 d-none" aria-hidden="true"></i><b>Sign Up</b>
-                    <div class="btn-hvr-setting">
-                        <ul class="btn-hvr-setting-inner">
-                            <li class="btn-hvr-effect"></li>
-                            <li class="btn-hvr-effect"></li>
-                            <li class="btn-hvr-effect"></li>
-                            <li class="btn-hvr-effect"></li>
-                        </ul>
-                    </div>
-                </a>
+                <input
+                    type="text"
+                    class="form-control form-control-user"
+                    name="signUpEmail"
+                    placeholder="Email"
+                />
             </div>
+        </div>
 
+        <!-- Password Field -->
+        <div class="form-group row mb-4">
+            <div class="col-md-12">
+                <input
+                    type="text"
+                    class="form-control form-control-user"
+                    name="signUpPassword"
+                    placeholder="Password"
+                />
+            </div>
+        </div>
+
+        <!-- Confirm Password Field -->
+        <div class="form-group row mb-4">
+            <div class="col-md-12">
+                <input
+                    type="text"
+                    class="form-control form-control-user"
+                    name="signUpConfirmPassword"
+                    placeholder="Confirm Password"
+                />
+            </div>
+        </div>
+
+        <!-- Captcha-->
+        <div class="form-group row mb-4">
+            <div class="col-md-12 d-flex justify-content-center">
+                <div class="g-recaptcha" data-sitekey="6LdtbighAAAAAHhWzmWkWwkT53HNEcL5CPxg9PN_"></div>
+            </div>
+        </div>
+
+        <!--Button-->
+        <div class="col-md-12">
+            <button type="submit" class="btn btn-large btn-rounded btn-purple btn-hvr-blue d-block w-100">
+                <b>Sign Up</b>
+                <div class="btn-hvr-setting">
+                    <ul class="btn-hvr-setting-inner">
+                        <li class="btn-hvr-effect"></li>
+                        <li class="btn-hvr-effect"></li>
+                        <li class="btn-hvr-effect"></li>
+                        <li class="btn-hvr-effect"></li>
+                    </ul>
+                </div>
+            </button>
         </div>
     </form>
 </section>
