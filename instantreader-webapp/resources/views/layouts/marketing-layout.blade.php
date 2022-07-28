@@ -314,8 +314,7 @@
                     </li>
                     <!-- Enroll Now -->
                     <li class="nav-item main-link my-auto">
-                        <!-- NOTE: use this to open the modal data-src="#animatedModal" -->
-                        <a href="{{ route('learn-more.reading-assessment') }}" class="btn btn-medium btn-rounded btn-transparent-white btn-hvr-white">Enroll Now
+                        <a data-fancybox data-animation-duration="500" data-src="#animatedModal" href="javascript:void(0);" class="btn btn-medium btn-rounded btn-transparent-white btn-hvr-white">Enroll Now
                             <div class="btn-hvr-setting">
                                 <ul class="btn-hvr-setting-inner">
                                     <li class="btn-hvr-effect"></li>
@@ -330,81 +329,7 @@
                 </ul>
             </div>
         </div>
-    </nav> 
-
-    <!--Get Quote Model Popup-->
-    <div id="animatedModal" class="animated-modal hidden quote-content">
-        <!--Heading-->
-        <div class="heading-area pb-2 mx-570">
-            <span class="sub-title">Schedule an Online Assessment</span>
-            <h2 class="title mt-2">Read in <span class="alt-color js-rotating">20 days</span></h2>
-        </div>
-        <!--Contact Form-->
-        <form class="contact-form">
-            @csrf
-            <div class="row">
-                <!--Result-->
-                <div class="col-12" id="quote_result"></div>
-
-
-                <!--Left Column-->
-                <div class="col-md-6">                    
-                    <div class="form-group">
-                        <input class="form-control" type="text" placeholder="Parent's First Name" required="true">
-                    </div>
-                    <div class="form-group">
-                        <input class="form-control" type="text" placeholder="Student's First Name" required="true">
-                    </div>
-                    <div class="form-group">
-                        <input class="form-control" type="text" placeholder="Contact No." required="true">
-                    </div>
-                </div>
-
-                <!--Right Column-->
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <input class="form-control" type="email" placeholder="Parent's Last Name" required="true">
-                    </div>
-                    <div class="form-group">
-                        <input class="form-control" type="text" placeholder="Student's Last Name" required="true">
-                    </div>
-                    <div class="form-group">
-                        <input class="form-control" type="text" placeholder="Email" required="true">
-                    </div>
-                </div>
-
-                <!--Full Column-->
-                <div class="col-md-12">
-                    <div class="form-group">
-                        <input class="form-control" placeholder="Address"></input>
-                    </div>
-                </div>
-
-                <!--Button-->
-                <div class="col-md-12">
-
-                    <div class="form-check">
-                        <label class="checkbox-lable">Subscribe to newsletter
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                        </label>
-                    </div>
-
-                    <a href="javascript:void(0);" id="quote_submit_btn" class="btn btn-large btn-rounded btn-blue btn-hvr-pink">Enroll
-                        <div class="btn-hvr-setting">
-                            <ul class="btn-hvr-setting-inner">
-                                <li class="btn-hvr-effect"></li>
-                                <li class="btn-hvr-effect"></li>
-                                <li class="btn-hvr-effect"></li>
-                                <li class="btn-hvr-effect"></li>
-                            </ul>
-                        </div>
-                    </a>
-                </div>
-
-            </div>
-        </form>
-    </div>
+    </nav>
 
 </header>
 <!--Header End-->

@@ -199,7 +199,7 @@
                     <p class="para">There are many variations of passages of Lorem Ipsum available, but the majority
                         have suffered alteration in some form, by injected humour, or randomised words which don't look
                         even slightly believable. If you are going to use a passage of Lorem Ipsum.</p>
-                    <a class="btn btn-large btn-rounded btn-pink btn-hvr-blue mt-3" href="javascript:void(0);">Book Appointment for Live Agent
+                    <a data-fancybox data-animation-duration="500" data-src="#animatedModal" href="javascript:void(0);" class="btn btn-large btn-rounded btn-pink btn-hvr-blue mt-3">Book Appointment for Live Agent
                         <div class="btn-hvr-setting">
                             <ul class="btn-hvr-setting-inner">
                                 <li class="btn-hvr-effect"></li>
@@ -220,6 +220,82 @@
     </div>
 </section>
 <!--LIVE PARENT ORIENTATION End-->
+
+
+<!--Get Quote Model Popup-->
+<!-- NOTE: use these attributes to open the modal
+    data-fancybox data-animation-duration="500" data-src="#animatedModal" href="javascript:void(0);" 
+-->
+<div id="animatedModal" class="animated-modal hidden quote-content">
+    <!--Heading-->
+    <div class="heading-area pb-2 mx-570">
+        <span class="sub-title">Schedule Parent Orientation</span>
+        <h2 class="title mt-2">Read in <span class="alt-color">20 days</span></h2>
+    </div>
+    <!--Contact Form-->
+    <form class="contact-form">
+        @csrf
+        <div class="row">
+            <!--Left Column-->
+            <div class="col-md-6">                    
+                <div class="form-group">
+                    <input class="form-control" type="text" placeholder="Parent's First Name" required="true">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" placeholder="Student's First Name" required="true">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" placeholder="Contact No." required="true">
+                </div>
+            </div>
+
+            <!--Right Column-->
+            <div class="col-md-6">
+                <div class="form-group">
+                    <input class="form-control" type="email" placeholder="Parent's Last Name" required="true">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" placeholder="Student's Last Name" required="true">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" placeholder="Email" required="true">
+                </div>
+            </div>
+
+            <!--Full Column-->
+            <div class="col-md-12 mt-3">
+                <div class="form-group">
+                    <input class="form-control" placeholder="Address"></input>
+                </div>
+            </div>
+
+            <div class="col-md-12 mt-3">
+                <select class="form-control" id="scheduleSelect">
+                    <option selected hidden>Select a schedule that fits you</option>
+                    <option>mm/dd/yyyy | 6:00AM</option>
+                    <option>mm/dd/yyyy | 7:00AM</option>
+                    <option>mm/dd/yyyy | 8:00AM</option>
+                    <option>mm/dd/yyyy | 9:00AM</option>
+                </select>
+            </div>
+
+            <!--Button-->
+            <div class="col-md-12">
+                <a href="javascript:void(0);" id="quote_submit_btn" class="btn btn-large btn-rounded btn-blue btn-hvr-pink">Book Schedule
+                    <div class="btn-hvr-setting">
+                        <ul class="btn-hvr-setting-inner">
+                            <li class="btn-hvr-effect"></li>
+                            <li class="btn-hvr-effect"></li>
+                            <li class="btn-hvr-effect"></li>
+                            <li class="btn-hvr-effect"></li>
+                        </ul>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    </form>
+</div>
 
 <!--ABOUT PEOPLE Start-->
 <section class="text-center gradient-bg2" id="team">
