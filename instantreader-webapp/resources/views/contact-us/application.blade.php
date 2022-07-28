@@ -70,7 +70,7 @@
 
                         <!-- Name Fields -->
                         <div class="form-group row mb-3">
-                            <div class="col-md-6">
+                            <div class="col-md-6 mb-3">
                                 <input
                                     type="text"
                                     class="form-control form-control-user"
@@ -90,7 +90,7 @@
 
                         <!-- Contact Fields -->
                         <div class="form-group row mb-3">
-                            <div class="col-md-6">
+                            <div class="col-md-6 mb-3">
                                 <input
                                     type="tel"
                                     class="form-control form-control-user"
@@ -109,7 +109,7 @@
                         </div>
 
                         <!-- Address Field -->
-                        <div class="form-group row mb-4">
+                        <div class="form-group row mb-3">
                             <div class="col-md-12">
                                 <input
                                     type="text"
@@ -121,7 +121,7 @@
                         </div>
 
                         <!-- Status Field -->
-                        <div class="form-group mb-4 row">
+                        <div class="form-group row mb-3">
                             <label for="applicantStatus" class="col-lg-3 col-form-label ml-2">Status</label>
                             <div class="col-md-3">
                                 <select class="custom-select">
@@ -132,7 +132,7 @@
                         </div>
                         
                         <!-- Resume field -->
-                        <div class="form-group mb-5 row">
+                        <div class="form-group row mb-5">
                             <label for="applicantResume" class="col-lg-3 col-form-label ml-2">Upload Résumé/CV</label>
                             <div class="col-md-4 custom-file">
                                 <div class="custom-file">

@@ -63,7 +63,7 @@
 
                         <!-- Parent's Name Fields -->
                         <div class="form-group row mb-3">
-                            <div class="col-md-6">
+                            <div class="col-md-6 mb-3">
                                 <input
                                     type="text"
                                     class="form-control form-control-user"
@@ -83,7 +83,7 @@
 
                         <!-- Child's Name Fields -->
                         <div class="form-group row mb-3">
-                            <div class="col-md-6">
+                            <div class="col-md-6 mb-3">
                                 <input
                                     type="text"
                                     class="form-control form-control-user"
@@ -103,7 +103,7 @@
 
                         <!-- Contact Fields -->
                         <div class="form-group row mb-3">
-                            <div class="col-md-6">
+                            <div class="col-md-6 mb-3">
                                 <input
                                     type="tel"
                                     class="form-control form-control-user"
@@ -122,7 +122,7 @@
                         </div>
 
                         <!-- Address Field -->
-                        <div class="form-group row mb-4">
+                        <div class="form-group row mb-3">
                             <div class="col-md-12">
                                 <input
                                     type="text"
@@ -135,7 +135,7 @@
 
                         <!-- Inquiry Location Field -->
                         <div class="form-group row mb-4">
-                            <div class="col-md-6">
+                            <div class="col-md-6 mb-3">
                                 <select class="custom-select" id="location-select">
                                     <option selected disabled>Location Where You Inquired From</option>
                                     <option value="cabuyao">Instant Reader Cabuyao</option>
