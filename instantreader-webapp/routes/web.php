@@ -169,6 +169,8 @@ Route::get('/learn-more/reading-assessment', function () {
     return view('learn-more.reading-assessment');
 })->name('learn-more.reading-assessment');
 
+Route::post('/learn-more/reading-assessment', [FormController::class, 'store_ora'])->name('reading-assessment.store_ora');
+
 Route::get('/learn-more/reading-programs', function () {
     return view('learn-more.program-overview');
 })->name('learn-more.program-overview');

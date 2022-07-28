@@ -39,6 +39,7 @@
                     class="form-control form-control-user"
                     name="signUpFirstName"
                     placeholder="First Name"
+                    required="true"
                 />
             </div>
             <div class="col-md-6">
@@ -47,6 +48,7 @@
                     class="form-control form-control-user"
                     name="signUpLastName"
                     placeholder="Last Name"
+                    required="true"
                 />
             </div>
         </div>
@@ -59,6 +61,7 @@
                     class="form-control form-control-user"
                     name="signUpEmail"
                     placeholder="Email"
+                    required="true"
                 />
             </div>
         </div>
@@ -71,6 +74,7 @@
                     class="form-control form-control-user"
                     name="signUpPassword"
                     placeholder="Password"
+                    required="true"
                 />
             </div>
         </div>
@@ -83,6 +87,7 @@
                     class="form-control form-control-user"
                     name="signUpConfirmPassword"
                     placeholder="Confirm Password"
+                    required="true"
                 />
             </div>
         </div>
