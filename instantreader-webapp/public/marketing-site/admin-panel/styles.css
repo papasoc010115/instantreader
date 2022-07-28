@@ -16,3 +16,20 @@ body {
 .active {
     font-weight: 500;
 }
+
+.main-heading {
+    text-align: center;
+}
+
+.forms {
+    padding: 2rem;
+    margin-top: 4rem;
+}
+
+.content {
+    margin-top: 4rem;
+}
+
+.update-btn {
+    margin-top: 0.5rem;
+}

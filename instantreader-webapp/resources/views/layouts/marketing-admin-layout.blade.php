@@ -1,3 +1,9 @@
+<!-- 
+    This is the layout for the admin panel of the marketing site
+
+    by: rmhizon
+ -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,6 +23,8 @@
     <link rel="stylesheet" href="{{ asset('marketing-site/admin-panel/styles.css') }}">
     <!-- JavaScript Bundle with Popper (For Bootstrap) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <!-- What You See is What You Get -->
+    <script src="https://cdn.ckeditor.com/ckeditor5/34.2.0/classic/ckeditor.js"></script>
 </head>
 <body>
 <!-- NAVIGATION -->
@@ -93,8 +101,6 @@
     </div>
     <!-- END OF NAVIGATION -->
     @yield('content')
-
-
 
 <script src="{{ asset('marketing-site/admin-panel/script.js') }}"></script>
 </body>
