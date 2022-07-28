@@ -146,7 +146,7 @@
 <!--Banner End-->
 
 <!--ORIENTATION VIDEO start-->
-<section class="p-0 no-transition cursor-light gradient-bg1" id="home">
+<section class="cursor-light gradient-bg1" id="home">
     <div class="container fullscreen-container orientation-container">
         <div class="row">
             <div class="col-lg-7 video-container">
@@ -154,7 +154,7 @@
                     <source src="{{ asset('marketing-site/assets/agency/img/video.mp4') }}" type="video/mp4">
                 </video>
             </div>
-            <div class="col-lg-5 pl-4">
+            <div class="col-lg-5 pl-4 pt-4">
                 <div class="text-container-content">
                     <div class="gradient-text1 first-title">
                         Orientation
@@ -251,7 +251,7 @@
                     <!--Description-->
                     <p class="about-people text-white">The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
                     <!--Team Social-->
-                    <div class="team-social social-icon-bg-hvr">
+                    <div class="team-social social-icon-bg-hvr pb-4">
                         <a href="#"><i aria-hidden="true" class="fab fa-facebook-f text-white"></i></a>
                         <a href="#"><i aria-hidden="true" class="fab fa-linkedin-in text-white"></i></a>
                         <a href="#"><i aria-hidden="true" class="fab fa-twitter text-white"></i></a>
@@ -272,7 +272,7 @@
                     <!--Description-->
                     <p class="about-people text-white">The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
                     <!--Team Social-->
-                    <div class="team-social social-icon-bg-hvr">
+                    <div class="team-social social-icon-bg-hvr pb-4">
                         <a href="#"><i aria-hidden="true" class="fab fa-facebook-f text-white"></i></a>
                         <a href="#"><i aria-hidden="true" class="fab fa-linkedin-in text-white"></i></a>
                         <a href="#"><i aria-hidden="true" class="fab fa-twitter text-white"></i></a>
@@ -497,7 +497,7 @@
                         <p class="text-white">The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 
                             from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions 
                             from the 1914 translation by H. Rackham.</p>
-                        <a class="btn btn-xlarge btn-rounded btn-pink btn-hvr-blue mt-3" href="javascript:void(0);">Join Kids Club Now
+                        <a class="btn btn-xlarge btn-rounded btn-pink btn-hvr-blue mt-3" href="javascript:void(0);">Book Online Reading Assessment
                             <div class="btn-hvr-setting">
                                 <ul class="btn-hvr-setting-inner">
                                     <li class="btn-hvr-effect"></li>

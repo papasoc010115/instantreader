@@ -14,7 +14,7 @@
     }
 </style>
 
-<!--Banner Start-->
+<!--BANNER Start-->
 <section class="page-title cursor-light">
     <!-- Pattern Layers -->
     <div class="pattern-layers">
@@ -25,55 +25,57 @@
         <h2 class="hide-cursor">Log In</h2>
     </div>
 </section>
-<!--Banner End-->
+<!--BANNER End-->
 
-<!--LIVE PARENT ORIENTATION Start-->
+<!--LOG IN FORM Start-->
 <section class="pb-0 account-form">
-    <form class="contact-form ">
+    <form class="booking-form" id="booking-form-data">
         @csrf
-        <div class="row">
-            <!--Full Column-->
-            <div class="col-md-12">
-                <div class="form-group">
-                    <input class="form-control" placeholder="Email"></input>
+        <div class="form-group row mb-3">
+
+            <!-- Email Field -->
+            <div class="form-group row mb-4">
+                <div class="col-md-12">
+                    <input
+                        type="text"
+                        class="form-control form-control-user"
+                        id="logInEmail"
+                        placeholder="Email"
+                    />
                 </div>
             </div>
 
-            <div class="col-md-12">
-                <div class="form-group">
-                    <input class="form-control" placeholder="Password"></input>
+            <!-- Password Field -->
+            <div class="form-group row mb-4">
+                <div class="col-md-12">
+                    <input
+                        type="text"
+                        class="form-control form-control-user"
+                        id="logInPassword"
+                        placeholder="Password"
+                    />
                 </div>
             </div>
-
+            
             <!--Button-->
             <div class="col-md-12">
-
-                <div class="form-check">
-                    <label class="checkbox-lable">Remember Me
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                    </label>
-                    <br>
-                    <div class="mt-2">Don't have an account? <a href="{{ route('account.sign-up') }}">Sign Up</a></div>
-                </div>
-
-                <div class="center-button">
-                    <a href="javascript:void(0);" id="quote_submit_btn" class="btn btn-large btn-rounded btn-blue btn-hvr-pink m-3">Log In
-                        <div class="btn-hvr-setting">
-                            <ul class="btn-hvr-setting-inner">
-                                <li class="btn-hvr-effect"></li>
-                                <li class="btn-hvr-effect"></li>
-                                <li class="btn-hvr-effect"></li>
-                                <li class="btn-hvr-effect"></li>
-                            </ul>
-                        </div>
-                    </a>
-                </div>
+                <a class="btn btn-large btn-rounded btn-purple btn-hvr-blue d-block mt-4 contact_btn" href="javascript:void(0);"
+                    id="log_in_btn"><i class="fa fa-spinner fa-spin mr-2 d-none" aria-hidden="true"></i><b>Log In</b>
+                    <div class="btn-hvr-setting">
+                        <ul class="btn-hvr-setting-inner">
+                            <li class="btn-hvr-effect"></li>
+                            <li class="btn-hvr-effect"></li>
+                            <li class="btn-hvr-effect"></li>
+                            <li class="btn-hvr-effect"></li>
+                        </ul>
+                    </div>
+                </a>
             </div>
+
         </div>
     </form>
 </section>
-<!--LIVE PARENT ORIENTATION End-->
+<!--LOG IN FORM End-->
 
 <!--PAGE CONTENT END-->
 @endsection

@@ -227,8 +227,8 @@
         <div class="sidebar-profile text-white">
             <img src="{{ asset('marketing-site/assets/agency/img/default-profile-pic.png') }}" class="profile-pic" />
             <h6 class="user-title">Guest</h6>
-            <span><a class="alt-font sidebar-button" href="#">Log In</a></span>
-            <span><a class="alt-font sidebar-button" href="#">Sign Up</a></span>
+            <span><a class="alt-font sidebar-button" href="{{ route('account.log-in') }}">Log In</a></span>
+            <span><a class="alt-font sidebar-button" href="{{ route('account.sign-up') }}">Sign Up</a></span>
         </div>
 
         <hr class="sidebar-divider">
@@ -313,7 +313,8 @@
                     </li>
                     <!-- Enroll Now -->
                     <li class="nav-item main-link my-auto">
-                        <a data-fancybox data-animation-duration="500" data-src="#animatedModal" href="javascript:void(0);" class="btn btn-medium btn-rounded btn-transparent-white btn-hvr-white">Enroll Now
+                        <!-- NOTE: use this to open the modal data-src="#animatedModal" -->
+                        <a href="{{ route('learn-more.reading-assessment') }}" class="btn btn-medium btn-rounded btn-transparent-white btn-hvr-white">Enroll Now
                             <div class="btn-hvr-setting">
                                 <ul class="btn-hvr-setting-inner">
                                     <li class="btn-hvr-effect"></li>
