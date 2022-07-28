@@ -14,7 +14,7 @@
     }
 </style>
 
-<!--Banner Start-->
+<!--BANNER Start-->
 <section class="page-title cursor-light">
     <!-- Pattern Layers -->
     <div class="pattern-layers">
@@ -25,56 +25,91 @@
         <h2 class="hide-cursor">Sign Up</h2>
     </div>
 </section>
-<!--Banner End-->
+<!--BANNER End-->
 
-<!--LIVE PARENT ORIENTATION Start-->
+<!--SIGN UP FORM Start-->
 <section class="pb-0 account-form">
-    <form class="contact-form ">
+    <form class="booking-form" id="booking-form-data">
         @csrf
-        <div class="row">
-            <!--Full Column-->
-            <div class="col-md-12">
-                <div class="form-group">
-                    <input class="form-control" placeholder="Email"></input>
+        <div class="form-group row mb-3">
+
+            <!-- User Name Fields -->
+            <div class="form-group row mb-4">
+                <div class="col-md-6">
+                    <input
+                        type="text"
+                        class="form-control form-control-user"
+                        id="signUpFirstName"
+                        placeholder="First Name"
+                    />
+                </div>
+                <div class="col-md-6">
+                    <input
+                        type="text"
+                        class="form-control form-control-user"
+                        id="signUpLastName"
+                        placeholder="Last Name"
+                    />
                 </div>
             </div>
 
-            <div class="col-md-12">
-                <div class="form-group">
-                    <input class="form-control" placeholder="Password"></input>
+            <!-- Email Field -->
+            <div class="form-group row mb-4">
+                <div class="col-md-12">
+                    <input
+                        type="text"
+                        class="form-control form-control-user"
+                        id="signUpEmail"
+                        placeholder="Email"
+                    />
                 </div>
             </div>
 
-            <div class="col-md-12">
-                <div class="form-group">
-                    <input class="form-control" placeholder="Confirm Password"></input>
+            <!-- Password Field -->
+            <div class="form-group row mb-4">
+                <div class="col-md-12">
+                    <input
+                        type="text"
+                        class="form-control form-control-user"
+                        id="signUpPassword"
+                        placeholder="Password"
+                    />
                 </div>
             </div>
 
+            <!-- Confirm Password Field -->
+            <div class="form-group row mb-4">
+                <div class="col-md-12">
+                    <input
+                        type="text"
+                        class="form-control form-control-user"
+                        id="signUpConfirmPassword"
+                        placeholder="Confirm Password"
+                    />
+                </div>
+            </div>
+
+            <!-- INSERT CAPTCHA HERE -->
+            
             <!--Button-->
             <div class="col-md-12">
-
-                <div class="form-check">
-                    <div class="mt-2">Already have an account? <a href="{{ route('account.log-in') }}">Log In</a></div>
-                </div>
-
-                <div class="center-button">
-                    <a href="javascript:void(0);" id="quote_submit_btn" class="btn btn-large btn-rounded btn-blue btn-hvr-pink m-3">Sign Up
-                        <div class="btn-hvr-setting">
-                            <ul class="btn-hvr-setting-inner">
-                                <li class="btn-hvr-effect"></li>
-                                <li class="btn-hvr-effect"></li>
-                                <li class="btn-hvr-effect"></li>
-                                <li class="btn-hvr-effect"></li>
-                            </ul>
-                        </div>
-                    </a>
-                </div>
+                <a class="btn btn-large btn-rounded btn-purple btn-hvr-blue d-block mt-4 contact_btn" href="javascript:void(0);"
+                    id="sign_up_btn"><i class="fa fa-spinner fa-spin mr-2 d-none" aria-hidden="true"></i><b>Sign Up</b>
+                    <div class="btn-hvr-setting">
+                        <ul class="btn-hvr-setting-inner">
+                            <li class="btn-hvr-effect"></li>
+                            <li class="btn-hvr-effect"></li>
+                            <li class="btn-hvr-effect"></li>
+                            <li class="btn-hvr-effect"></li>
+                        </ul>
+                    </div>
+                </a>
             </div>
+
         </div>
     </form>
 </section>
-<!--LIVE PARENT ORIENTATION End-->
+<!--SIGN UP FORM End-->
 
 <!--PAGE CONTENT END-->
 @endsection
