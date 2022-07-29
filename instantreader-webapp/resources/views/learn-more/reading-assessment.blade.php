@@ -27,9 +27,9 @@
         <h2 class="hide-cursor">Online Reading Assessment</h2>
         <ul class="page-breadcrumb link">
             <li>
-                <a href="javascript:void(0)" id="scroll-to-form" class="card-btn btn btn-large btn-rounded btn-pink btn-hvr-blue mt-3">
+                <button id="scroll-to-form" class="card-btn btn btn-large btn-rounded btn-pink btn-hvr-blue mt-3">
                 Book Now <i class="fas fa-angle-double-down" style="font-size:0.8em"></i>                  
-                </a>
+                </button>
             </li>
         </ul>
     </div>
