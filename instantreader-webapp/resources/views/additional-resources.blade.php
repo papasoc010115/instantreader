@@ -7,6 +7,9 @@
     .card {
         margin-bottom: 1.5em;
     }
+    .ebook-resources {
+        background-color: #562FB7;
+    }
     .visuals-row {
         display: flex;
         flex-direction: row;
@@ -34,7 +37,7 @@
 <!--Banner End-->
 
 <!--Tips/Resources Library Start-->
-<section class="bg-light" id="blog">
+<section class="library bg-light">
     <div class="auto-container px-5">
          <!--Row of Heading-->
          <div class="row">
@@ -90,7 +93,7 @@
 <!--Tips/Resources Library End-->
 
 <!--E-books/PDFs Start-->
-<section id="blog" style="background-color: #562FB7;">
+<section class="ebook-resources">
     <div class="container">
         <!--Row-->
         <div class="row">
@@ -162,7 +165,7 @@
 <!--E-books/PDFs End-->
 
 <!--Blogs Start-->
-<section  class="bg-light" id="blog">
+<section  class="blog-resources bg-light">
     <div class="container">
         <!--Row-->
         <div class="row">
@@ -231,7 +234,7 @@
 <!--Blogs End-->
 
 <!--Video Resources Start-->
-<section class="gradient-bg2">
+<section class="video-resources gradient-bg2">
     <div class="auto-container px-5">
         <!-- Heading -->
         <div class="row text-center"  style="margin-bottom: 2em;">
@@ -284,10 +287,10 @@
 <!--Video Resources End-->
 
 <!--Visuals Start-->
-<section class="">
+<section class="visuals">
     <div class="auto-container px-5">
         <div class="row visuals-row">
-            <div class="col-md-7">
+            <div class="col-md-7 mb-3">
                 <div id="visuals-carousel" class="carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators">
                         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -315,7 +318,7 @@
                     </a>
                 </div>
             </div>
-            <div class="col-md-5 mt-5">
+            <div class="col-md-5">
                 <div class="heading-area">
                     <h2 class="title alt-color">Lorem Ipsum</h2>
                     <p class="para">There are many variations of passages of Lorem Ipsum available, but the majority
