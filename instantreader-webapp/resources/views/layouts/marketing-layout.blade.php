@@ -448,7 +448,7 @@
 <!--Animated Cursor End-->
 
 <!--Top Start-->
-<span class="scroll-top-arrow"><i class="fas fa-angle-up"></i></span>
+<span class="scroll-top-arrow" id="scroll-to-top"><i class="fas fa-angle-up"></i></span>
 <!--Top End-->
 
 <!-- JavaScript -->
