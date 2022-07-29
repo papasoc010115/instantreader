@@ -1,5 +1,5 @@
 <!-- 
-    This is the layout for the admin panel of the marketing site
+    This is the layout for the admin panel of the marketing site.
 
     by: rmhizon
  -->

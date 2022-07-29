@@ -37,3 +37,9 @@ body {
 .mce-statusbar {
     display: none !important;
 }
+
+.char-count {
+    float: right;
+    display: block;
+    font-size: 0.8rem;
+}
