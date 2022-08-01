@@ -127,7 +127,7 @@
     }
 
     .page-title{
-        background: url("{{ asset('marketing-site/assets/img/ir-logo.png') }}");
+        /* background: url("{{ asset('marketing-site/assets/img/ir-logo.png') }}"); */ /* will be assigned from admin panel */
         background-size: cover;
         background-position: center center;
         background-repeat: no-repeat;
