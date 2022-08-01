@@ -92,7 +92,7 @@
                 <h2 class="title mt-0">Application Form</h2>
             </div>
             <!--Actual Form-->
-            <form class="application-form" id="application-form-data">
+            <form action="{{ route('contact-us.store_application') }}" method="POST" class="application-form" id="application-form-data">
                 @csrf
                 <div class="form-group row mb-3">
 
@@ -100,6 +100,7 @@
                     <div class="form-group row mb-3">
                         <div class="col-md-6 mb-3">
                             <input
+                                name="applicationFirstName"
                                 type="text"
                                 class="form-control form-control-user"
                                 id="firstName"
@@ -109,6 +110,7 @@
                         </div>
                         <div class="col-md-6">
                             <input
+                                name="applicationLastName"
                                 type="text"
                                 class="form-control form-control-user"
                                 id="lastName"
@@ -122,6 +124,7 @@
                     <div class="form-group row mb-3">
                         <div class="col-md-6 mb-3">
                             <input
+                                name="applicationContactNum"
                                 type="tel"
                                 class="form-control form-control-user"
                                 id="contactNo"
@@ -131,6 +134,7 @@
                         </div>
                         <div class="col-md-6">
                             <input
+                                name="applicationEmail"
                                 type="email"
                                 class="form-control form-control-user"
                                 id="email"
@@ -144,6 +148,7 @@
                     <div class="form-group row mb-3">
                         <div class="col-md-6 mb-3">
                             <input
+                                name="applicationAddress"
                                 type="text"
                                 class="form-control form-control-user"
                                 id="address"
@@ -158,9 +163,16 @@
                         <label for="applicantResume" class="col-md-2 col-form-label">Upload Résumé/CV</label>
                         <div class="col-md-4 custom-file">
                             <div class="custom-file">
-                                <input type="file" class="custom-file-input" id="resumeFile" required="true">
+                                <input name="applicationResume" type="file" class="custom-file-input" id="resumeFile" required="true">
                                 <label class="custom-file-label" for="customFile">Choose file</label>
                             </div>
+                        </div>
+                    </div>
+
+                    <!-- Captcha Field -->
+                    <div class="row">
+                        <div class="col-md-12 d-flex justify-content-center">
+                            <div class="g-recaptcha" data-sitekey="6LdtbighAAAAAHhWzmWkWwkT53HNEcL5CPxg9PN_"></div>
                         </div>
                     </div>
 

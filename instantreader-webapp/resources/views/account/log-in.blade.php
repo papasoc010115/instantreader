@@ -47,7 +47,7 @@
         <div class="form-group row mb-4">
             <div class="col-md-12">
                 <input
-                    type="text"
+                    type="password"
                     class="form-control form-control-user"
                     name="logInPassword"
                     placeholder="Password"

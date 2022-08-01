@@ -115,7 +115,7 @@
             </div>
             <!--Form-->
 
-            <form class="booking-form" id="booking-form-data">
+            <form action="{{ route('contact-us.store_consultation') }}" method="POST" class="booking-form" id="booking-form-data">
                 @csrf
                 <div class="form-group row mb-3">
 
@@ -123,20 +123,22 @@
                     <div class="form-group row mb-3">
                         <div class="col-md-6 mb-3">
                             <input
+                                name="bookConsultationParentFirstName"
                                 type="text"
                                 class="form-control form-control-user"
                                 id="parentFirstName"
                                 placeholder="Parent's First Name"
-                                required="true"
+                                
                             />
                         </div>
                         <div class="col-md-6">
                             <input
+                                name="bookConsultationParentLastName"
                                 type="text"
                                 class="form-control form-control-user"
                                 id="parentLastName"
                                 placeholder="Parent's Last Name"
-                                required="true"
+                                
                             />
                         </div>
                     </div>
@@ -145,20 +147,22 @@
                     <div class="form-group row mb-3">
                         <div class="col-md-6 mb-3">
                             <input
+                                name="bookConsultationContactNum"
                                 type="tel"
                                 class="form-control form-control-user"
                                 id="contactNo"
                                 placeholder="Contact No. (WhatsApp/Viber)"
-                                required="true"
+                                
                             />
                         </div>
                         <div class="col-md-6">
                             <input
+                                name="bookConsultationEmail"
                                 type="email"
                                 class="form-control form-control-user"
                                 id="email"
                                 placeholder="Email"
-                                required="true"
+                                
                             />
                         </div>
                     </div>
@@ -167,20 +171,22 @@
                     <div class="form-group row mb-3">
                         <div class="col-md-6 mb-3">
                             <input
+                                name="bookConsultationChildFirstName"
                                 type="text"
                                 class="form-control form-control-user"
                                 id="childFirstName"
                                 placeholder="Child's First Name"
-                                required="true"
+                                
                             />
                         </div>
                         <div class="col-md-6">
                             <input
+                                name="bookConsultationChildLastName"
                                 type="text"
                                 class="form-control form-control-user"
                                 id="childLastName"
                                 placeholder="Child's Last Name"
-                                required="true"
+                                
                             />
                         </div>
                     </div>
@@ -189,20 +195,22 @@
                     <div class="form-group row mb-3">
                         <div class="col-md-6 mb-3">
                             <input
+                                name="bookConsultationCityCountry"
                                 type="text"
                                 class="form-control form-control-user"
                                 id="address"
                                 placeholder="City, Country"
-                                required="true"
+                                
                             />
                         </div>
                         <div class="col-md-2">
                             <input
+                                name="bookConsultationChildAge"
                                 type="number"
                                 class="form-control form-control-user"
                                 id="age"
                                 placeholder="Child's Age"
-                                required="true"
+                                
                             />
                         </div>
                     </div>
@@ -210,7 +218,14 @@
                     <!-- Concerns/Goals Location Field -->
                     <div class="form-group row mb-3">
                         <div class="col-md-12">
-                            <textarea class="form-control" id="concernsGoals" rows="3" placeholder="Concerns/Goals for Child" required="true"></textarea>
+                            <textarea name="bookConsultationConcernsGoals" class="form-control" id="concernsGoals" rows="3" placeholder="Concerns/Goals for Child" ></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Captcha Field -->
+                    <div class="row">
+                        <div class="col-md-12 d-flex justify-content-center">
+                            <div class="g-recaptcha" data-sitekey="6LdtbighAAAAAHhWzmWkWwkT53HNEcL5CPxg9PN_"></div>
                         </div>
                     </div>
 

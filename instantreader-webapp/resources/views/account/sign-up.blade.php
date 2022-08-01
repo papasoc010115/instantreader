@@ -70,7 +70,7 @@
         <div class="form-group row mb-4">
             <div class="col-md-12">
                 <input
-                    type="text"
+                    type="password"
                     class="form-control form-control-user"
                     name="signUpPassword"
                     placeholder="Password"
@@ -83,7 +83,7 @@
         <div class="form-group row mb-4">
             <div class="col-md-12">
                 <input
-                    type="text"
+                    type="password"
                     class="form-control form-control-user"
                     name="signUpConfirmPassword"
                     placeholder="Confirm Password"

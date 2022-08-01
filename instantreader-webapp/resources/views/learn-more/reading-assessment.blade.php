@@ -93,7 +93,7 @@
                         <input class="form-control" name="oraContactNum" type="tel" placeholder="Contact No. (WhatsApp/Viber)" required="true">
                     </div>
                     <div class="form-group">
-                        <input class="form-control" name="oraCountryCity" type="text" placeholder="Country, City" required="true">
+                        <input class="form-control" name="oraCityCountry" type="text" placeholder="City, Country" required="true">
                     </div>
                 </div>
 

@@ -220,9 +220,13 @@ Route::get('/contact-us/book-consultation', function () {
     return view('contact-us.book-consultation');
 })->name('contact-us.book-consultation');
 
+Route::post('/learn-more/book-consultation', [FormController::class, 'store_consultation'])->name('contact-us.store_consultation');
+
 Route::get('/contact-us/application', function () {
     return view('contact-us.application');
 })->name('contact-us.application');
+
+Route::post('/learn-more/application', [FormController::class, 'store_application'])->name('contact-us.store_application');
 
 Route::get('/additional-resources', function () {
     return view('additional-resources');
