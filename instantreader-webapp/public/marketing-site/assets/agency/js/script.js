@@ -25,39 +25,44 @@ jQuery(function ($) {
         else $(".scroll-top-arrow").fadeOut("slow");
     });
 
-    //Click event to scroll to top
-    $(document).on("click", ".scroll-top-arrow", function () {
-        $("html, body").animate({ scrollTop: 0 }, 800);
-        return false;
-    });
+    //Click event to scroll to top (ORIGINAL CODE FROM TEMPLATE)
+    // $(document).on("click", ".scroll-top-arrow", function () {
+    //     $("html, body").animate({ scrollTop: 0 }, 800);
+    //     return false;
+    // });
 
-    $(".scroll").on("click", function (event) {
-        event.preventDefault();
-        $("html,body").animate(
-            {
-                scrollTop: $(this.hash).offset().top - 60,
-            },
-            1200
-        );
-    });
+    // $(".scroll").on("click", function (event) {
+    //     event.preventDefault();
+    //     $("html,body").animate(
+    //         {
+    //             scrollTop: $(this.hash).offset().top - 60,
+    //         },
+    //         1200
+    //     );
+    // });
 
-    $(".count").each(function () {
-        $(this).appear(function () {
-            $(this)
-                .prop("Counter", 0)
-                .animate(
-                    {
-                        Counter: $(this).text(),
-                    },
-                    {
-                        duration: 3000,
-                        easing: "swing",
-                        step: function (now) {
-                            $(this).text(Math.ceil(now));
-                        },
-                    }
-                );
-        });
+    // $(".count").each(function () {
+    //     $(this).appear(function () {
+    //         $(this)
+    //             .prop("Counter", 0)
+    //             .animate(
+    //                 {
+    //                     Counter: $(this).text(),
+    //                 },
+    //                 {
+    //                     duration: 3000,
+    //                     easing: "swing",
+    //                     step: function (now) {
+    //                         $(this).text(Math.ceil(now));
+    //                     },
+    //                 }
+    //             );
+    //     });
+    // });
+
+    // Click event to scroll to top (by rmhizon)
+    document.getElementById("scroll-to-top").addEventListener("click", () => {
+        window.scrollTo(0, 0);
     });
 
     /* ===================================

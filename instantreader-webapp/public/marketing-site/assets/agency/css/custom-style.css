@@ -1,0 +1,141 @@
+html {
+    scroll-padding-top: 78px;
+}
+
+body::-webkit-scrollbar {
+    width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track {
+    background: #3c3d40;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: white;
+}
+
+.profile-pic {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    background-color: #ffffff;
+}
+
+.account-form {
+    margin: auto;
+    max-width: 1000px;
+}
+
+.active-navlink {
+    font-weight: 700;
+}
+
+.center-button {
+    text-align: center;
+}
+
+.full-menu-multiple-title {
+    margin: 0;
+    padding: 15px 30px 15px 0;
+    font-size: 25px;
+    font-weight: 300;
+    text-rendering: optimizeLegibility;
+    word-wrap: break-word;
+    position: relative;
+    color: #fff;
+}
+
+.sidebar-anchor-circle {
+    content: "";
+    position: absolute;
+    top: 50%;
+    border: 1px solid #ffffff;
+    border-radius: 120%;
+    overflow: hidden;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    transform: translateY(-5px);
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.sidebar-anchor-text {
+    margin-left: 30px;
+}
+
+.sidebar-profile {
+    display: block;
+    text-align: center;
+}
+
+.user-title {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.15;
+    text-rendering: optimizeLegibility;
+    word-wrap: break-word;
+    margin: 15px 0 25px;
+    position: relative;
+    color: #fff;
+}
+
+.sidebar-button {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.about-us-options {
+    margin: auto;
+}
+
+.navbar-collapse {
+    min-height: 45px;
+}
+
+.offcanvas-toggler {
+    opacity: 0.5;
+    height: 65px;
+    width: 45px;
+    z-index: 30;
+    position: fixed;
+    bottom: 50%;
+    left: 0;
+    background: #7004bc;
+    border-top-right-radius: 60px;
+    border-bottom-right-radius: 60px;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.offcanvas-toggler:hover {
+    opacity: 1;
+}
+
+.offcanvas-toggler > * {
+    vertical-align: center;
+}
+
+.fa-angle-right {
+    margin-left: 5px;
+    color: white;
+}
+
+@media only screen and (max-width: 991px) {
+    #menu-indicator {
+        display: none;
+    }
+}
+
+.main-link {
+    margin: 0px 10px 10px 10px;
+}

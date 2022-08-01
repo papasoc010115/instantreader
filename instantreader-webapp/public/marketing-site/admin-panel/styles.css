@@ -1,0 +1,45 @@
+body {
+    font-family: "Sora", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-container {
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.navbar-brand {
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.active {
+    font-weight: 500;
+}
+
+.main-heading {
+    text-align: center;
+}
+
+.forms {
+    padding: 2rem;
+    margin-top: 4rem;
+}
+
+.content {
+    margin-top: 4rem;
+}
+
+.update-btn {
+    margin-top: 0.5rem;
+}
+
+.mce-statusbar {
+    display: none !important;
+}
+
+.char-count {
+    float: right;
+    display: block;
+    font-size: 0.8rem;
+}

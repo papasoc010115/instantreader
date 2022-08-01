@@ -4,198 +4,25 @@
 <head>
     <!-- Meta Tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    @yield('metadata')
     <!-- Page Title -->
     <title>Instant Reader</title>
     <!-- Favicon -->
     <link rel="icon" href="{{ asset('favicon.ico') }}">
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.css">
-    <!-- Bundle -->
+    <!-- From Template -->
     <link rel="stylesheet" href="{{ asset('marketing-site/assets/vendor/css/bundle.min.css') }}">
     <link rel="stylesheet" href="{{ asset('marketing-site/assets/vendor/css/revolution-settings.min.css') }}">
-    <!-- Plugin Css -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ asset('marketing-site/assets/vendor/css/jquery.fancybox.min.css') }}">
     <link rel="stylesheet" href="{{ asset('marketing-site/assets/vendor/css/owl.carousel.min.css') }}">
     <link rel="stylesheet" href="{{ asset('marketing-site/assets/vendor/css/swiper.min.css') }}">
     <link rel="stylesheet" href="{{ asset('marketing-site/assets/vendor/css/cubeportfolio.min.css') }}">
-    <!-- Style Sheet -->
-    <link href="{{ asset('marketing-site/assets/agency/css/style.css') }}" rel="stylesheet">
-    <style>
-        html {
-            scroll-padding-top: 78px;
-        }
-
-        body::-webkit-scrollbar {
-            width: 0.25rem;
-        }
-
-        body::-webkit-scrollbar-track {
-            background: #3c3d40;
-        }
-
-        body::-webkit-scrollbar-thumb {
-            background: white;
-        }
-
-        .profile-pic{
-            margin-top: 10px;
-            margin-bottom: 10px;
-            height: 100px;
-            width: 100px;
-            object-fit: cover;
-            border-radius: 50%;
-            background-color: #FFFFFF;
-        }
-
-        .account-form{
-            margin: auto;
-            max-width: 1000px;
-        }
-
-        .center-button{
-            text-align: center;
-        }
-
-        .full-menu-multiple-title{
-            margin: 0;
-            padding: 15px 30px 15px 0;
-            font-size: 25px;
-            font-weight: 300;
-            text-rendering: optimizeLegibility;
-            word-wrap: break-word;
-            position: relative;
-            color: #fff;
-        }
-
-        .sidebar-anchor-circle{
-            content: "";
-            position: absolute;
-            top: 50%;
-            border: 1px solid #FFFFFF;
-            border-radius: 120%;
-            overflow: hidden;
-            left: 0;
-            width: 10px;
-            height: 10px;
-            transform: translateY(-5px);
-            -webkit-transition: all .3s ease-in-out;
-            -moz-transition: all .3s ease-in-out;
-            -ms-transition: all .3s ease-in-out;
-            -o-transition: all .3s ease-in-out;
-            transition: all .3s ease-in-out;
-        }
-
-        .sidebar-anchor-text{
-            margin-left: 30px;
-        }
-
-        .sidebar-profile{
-            display: block;
-            text-align: center;
-        }
-
-        .user-title{
-            font-size: 20px;
-            font-weight: 400;
-            line-height: 1.15;
-            text-rendering: optimizeLegibility;
-            word-wrap: break-word;
-            margin: 15px 0 25px;
-            position: relative;
-            color: #fff;
-        }
-
-        .sidebar-button{
-            margin-left: 10px;
-            margin-right: 10px;
-        }
-
-        .about-us-options{
-            margin:auto;
-        }
-
-        .navbar-collapse{
-            min-height: 45px;
-        }
-
-        .offcanvas-toggler{
-            opacity: .5;
-            height: 65px;
-            width: 45px;
-            z-index: 30;
-            position: fixed; 
-            bottom: 50%; 
-            left: 0;
-            background: #7004bc;
-            border-top-right-radius: 60px;
-            border-bottom-right-radius: 60px;
-            -webkit-transition: all .5s ease;
-            -moz-transition: all .5s ease;
-            -ms-transition: all .5s ease;
-            -o-transition: all .5s ease;
-            transition: all .5s ease;
-        }
-
-        .offcanvas-toggler:hover{
-            opacity: 1;
-        }
-
-        .offcanvas-toggler > *{
-            vertical-align: center;
-        }
-
-        .fa-angle-right{
-            margin-left: 5px;
-            color: white;
-        }
-
-        @media only screen and (max-width: 991px) {
-            #menu-indicator {
-                display: none;
-            }
-        }
-
-        .main-link {
-            margin: 0px 10px 10px 10px;
-        }
-
-        .menu-line{
-            left: 10px;
-        }
-
-        .nav-icon .navbar-nav .nav-link:nth-child(1):active ~ .menu-line{
-            -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0);
-        }
-
-        .nav-icon .navbar-nav .nav-link:nth-child(2).active ~ .menu-line{
-            -webkit-transform: translate3d(115%, 0, 0);
-            transform: translate3d(115%, 0, 0);
-        }
-
-        .nav-icon .navbar-nav .nav-link:nth-child(3).active ~ .menu-line{
-            -webkit-transform: translate3d(235%, 0, 0);
-            transform: translate3d(235%, 0, 0);
-        }
-
-        .nav-icon .navbar-nav .nav-link:nth-child(1):hover ~ .menu-line{
-            -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0);
-        }
-
-        .nav-icon .navbar-nav .nav-link:nth-child(2):hover ~ .menu-line{
-            -webkit-transform: translate3d(115%, 0, 0);
-            transform: translate3d(115%, 0, 0);
-        }
-
-        .nav-icon .navbar-nav .nav-link:nth-child(3):hover ~ .menu-line{
-            -webkit-transform: translate3d(235%, 0, 0);
-            transform: translate3d(235%, 0, 0);
-        }
-    </style>
+    <link rel="stylesheet" href="{{ asset('marketing-site/assets/agency/css/style.css') }}" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ asset('marketing-site/assets/agency/css/custom-style.css') }}">
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="90">
@@ -204,12 +31,6 @@
 <div class="preloader">
     <div class="box"></div>
 </div>
-
-<!-- Ink Transition -->
-<!-- <div class="cd-transition-layer visible opening">
-    <div class="bg-layer"></div>
-</div> -->
-<!--/Preloader -->
 
 <!--Header Start-->
 <header class="cursor-light">
@@ -280,19 +101,14 @@
                 <ul class="navbar-nav ms-auto d-flex align-items-center">
                     <!-- Home -->
                     <li class="nav-link nav-item main-link my-auto">
-                        <a class="link active" href="/">Home</a>
+                        <a class="link topbar-link" id="home-link" href="/">Home</a>
                     </li>
                     <!-- Learn More -->
-                    <li class="nav-link nav-item main-link dropdown my-auto
-                        {{  request()->route()->getName() === 'learn-more.program-overview' || 
-                            request()->route()->getName() === 'learn-more.reading-assessment' ||
-                            request()->route()->getName() === 'learn-more.kids-club' ||
-                            request()->route()->getName() === 'learn-more.faq'
-                            ? 'active' : '' }}">
-                        <a class="link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <li class="nav-link nav-item main-link dropdown my-auto">
+                        <a class="link dropdown-toggle topbar-link" id="lm-link" href="#" id="navbarDropdown1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Learn More
                         </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
                             <li><a class="dropdown-item" href="{{ route('learn-more.program-overview') }}">Reading Programs</a></li>
                             <li><a class="dropdown-item" href="{{ route('learn-more.reading-assessment') }}">Online Reading Assessment</a></li>
                             <li><a class="dropdown-item" href="{{ route('learn-more.kids-club') }}">Instant Reader Kids Club</a></li>
@@ -300,14 +116,11 @@
                         </ul>
                     </li>
                     <!-- Contact Us -->
-                    <li class="nav-link nav-item main-link dropdown my-auto
-                        {{  request()->route()->getName() === 'contact-us.book-consultation' || 
-                            request()->route()->getName() === 'contact-us.application'
-                            ? 'active' : '' }}">
-                        <a class="link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <li class="nav-link nav-item main-link dropdown my-auto topbar-link">
+                        <a class="link dropdown-toggle" id="cu-link" href="#" id="navbarDropdown2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Contact Us
                         </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
                             <li><a class="dropdown-item" href="{{ route('contact-us.book-consultation') }}">Book FREE Online Consultation</a></li>
                             <li><a class="dropdown-item" href="{{ route('contact-us.application') }}">Start a Career with Us</a></li>
                         </ul>
@@ -325,12 +138,10 @@
                             </div>
                         </a>
                     </li>
-                    <span class="menu-line mt-2" id="menu-indicator"><i aria-hidden="true" class="fa fa-angle-down"></i></span>
                 </ul>
             </div>
         </div>
-    </nav>
-
+    </nav> 
 </header>
 <!--Header End-->
 
@@ -373,10 +184,10 @@
 <!--Animated Cursor End-->
 
 <!--Top Start-->
-<span class="scroll-top-arrow"><i class="fas fa-angle-up"></i></span>
+<span class="scroll-top-arrow" id="scroll-to-top"><i class="fas fa-angle-up"></i></span>
 <!--Top End-->
 
-<!-- JavaScript -->
+<!-- JAVASCRIPT FROM TEMPLATE -->
 <script src="{{ asset('marketing-site/assets/vendor/js/bundle.min.js') }}"></script>
 <!-- Plugin Js -->
 <script src="{{ asset('marketing-site/assets/vendor/js/jquery.appear.js') }}"></script>
@@ -387,10 +198,10 @@
 <script src="{{ asset('marketing-site/assets/vendor/js/TweenMax.min.js') }}"></script>
 <script src="{{ asset('marketing-site/assets/vendor/js/wow.min.js') }}"></script>
 <script src="{{ asset('marketing-site/assets/vendor/js/jquery.cubeportfolio.min.js') }}"></script>
-<!-- REVOLUTION JS FILES -->
+<!-- Revolution -->
 <script src="{{ asset('marketing-site/assets/vendor/js/jquery.themepunch.tools.min.js') }}"></script>
 <script src="{{ asset('marketing-site/assets/vendor/js/jquery.themepunch.revolution.min.js') }}"></script>
-<!-- SLIDER REVOLUTION EXTENSIONS -->
+<!-- Slider revolution extensions -->
 <script src="{{ asset('marketing-site/assets/vendor/js/extensions/revolution.extension.actions.min.js') }}"></script>
 <script src="{{ asset('marketing-site/assets/vendor/js/extensions/revolution.extension.carousel.min.js') }}"></script>
 <script src="{{ asset('marketing-site/assets/vendor/js/extensions/revolution.extension.kenburn.min.js') }}"></script>
@@ -401,14 +212,17 @@
 <script src="{{ asset('marketing-site/assets/vendor/js/extensions/revolution.extension.slideanims.min.js') }}"></script>
 <script src="{{ asset('marketing-site/assets/vendor/js/extensions/revolution.extension.video.min.js') }}"></script>
 
-<!-- google map -->
-<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJRG4KqGVNvAPY4UcVDLcLNXMXk2ktNfY"></script> -->
-<script src="{{ asset('marketing-site/assets/agency/js/map.js') }}"></script>
-<!-- custom script -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+<!-- Other scripts from template -->
 <script src="{{ asset('marketing-site/assets/vendor/js/contact_us.js') }}"></script>
 <script src="{{ asset('marketing-site/assets/agency/js/script.js') }}"></script>
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
+<!-- SCRIPTS ADDED (NOT FROM TEMPLATE) -->
+<!-- google map -->
+<script src="{{ asset('marketing-site/assets/agency/js/map.js') }}"></script>
+<!-- Bootstrap js -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+<!-- Custom script -->
+<script src="{{ asset('marketing-site/assets/agency/js/topbar.js') }}"></script>
 </body>
 </html>
