@@ -82,7 +82,7 @@
             @csrf
             <div class="row">
                 <!--Left Column-->
-                <div class="col-md-6">                    
+                <div class="col-md-6 mb-4">                    
                     <div class="form-group">
                         <input class="form-control" name="oraParentFirstName" type="text" placeholder="Parent's First Name" required="true">
                     </div>
@@ -90,12 +90,15 @@
                         <input class="form-control" name="oraStudentFirstName" type="text" placeholder="Student's First Name" required="true">
                     </div>
                     <div class="form-group">
-                        <input class="form-control" name="oraContactNum"type="text" placeholder="Contact No." required="true">
+                        <input class="form-control" name="oraContactNum" type="tel" placeholder="Contact No. (WhatsApp/Viber)" required="true">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" name="oraCountryCity" type="text" placeholder="Country, City" required="true">
                     </div>
                 </div>
 
                 <!--Right Column-->
-                <div class="col-md-6">
+                <div class="col-md-6 mb-3">
                     <div class="form-group">
                         <input class="form-control" name="oraParentLastName" type="text" placeholder="Parent's Last Name" required="true">
                     </div>
@@ -108,28 +111,16 @@
                 </div>
             </div>
 
-            <div class="row mt-3">
-                <div class="col-md-12">
-                    <label class="alt-font" for="sel1" style="color: white">Select a schedule that fits you</label>
-                    <select class="form-control" name="oraSchedule" id="sel1">
-                        <option>mm/dd/yyyy | 9:00AM</option>
-                        <option>mm/dd/yyyy | 9:00AM</option>
-                        <option>mm/dd/yyyy | 9:00AM</option>
-                        <option>mm/dd/yyyy | 9:00AM</option>
-                    </select>
-                </div>
-            </div>     
-
             <div class="row mt-4">
                 <div class="col-md-12 d-flex justify-content-center">
                     <div class="g-recaptcha" data-sitekey="6LdtbighAAAAAHhWzmWkWwkT53HNEcL5CPxg9PN_"></div>
                 </div>
             </div>
 
-            <div class="row mt-4">
-                <div class="col-md-12">
-                    <button type="submit" class="btn btn-large btn-rounded btn-pink btn-hvr-blue w-100">                    
-                        <b>Submit</b>
+            <div class="row">
+                <div class="col">
+                    <button class="btn btn-large btn-rounded btn-pink btn-hvr-blue mt-3">                    
+                        Submit
                         <div class="btn-hvr-setting">
                             <ul class="btn-hvr-setting-inner">
                                 <li class="btn-hvr-effect"></li>

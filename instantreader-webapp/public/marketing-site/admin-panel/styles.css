@@ -34,8 +34,13 @@ body {
     margin-top: 0.5rem;
 }
 
-.mce-statusbar {
+.tox-statusbar {
     display: none !important;
+}
+
+.tox {
+    border-color: #ced4da !important;
+    border-width: 0.05rem !important;
 }
 
 .char-count {
