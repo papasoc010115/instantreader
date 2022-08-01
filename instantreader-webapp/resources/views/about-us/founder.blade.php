@@ -14,6 +14,13 @@
         text-align: center;
     }
     @media only screen and (min-width: 768px) {
+        .half-para { /* for col-md-6 paragraphs in desktop-view (left-aligned)*/
+            text-align: justify;
+        }
+        .half-para-right { /* for col-md-6 paragraphs in desktop-view (right-aligned)*/
+            text-align: justify;
+            text-align-last: right;
+        }
         .mission-img {
             max-width: 50%;
         }
@@ -30,7 +37,10 @@
         justify-content: center;
         align-items: center;
     }
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 767px) {
+        .para {
+            text-align: justify;
+        }
         .info2-img {
             order: 2;
         }
@@ -74,7 +84,7 @@
                     <span class="sub-title">We are megaone company</span>
                     <h2 class="title">We are making <span class="alt-color js-rotating">design, ideas</span> better for
                         everyone</h2>
-                    <p class="para">There are many variations of passages of Lorem Ipsum available, but the majority
+                    <p class="para half-para">There are many variations of passages of Lorem Ipsum available, but the majority
                         have suffered alteration in some form, by injected humour, or randomised words which don't look
                         even slightly believable. If you are going to use a passage of Lorem Ipsum.</p>
                 </div>
@@ -129,7 +139,7 @@
         <div class="row">
             <div class="col-md-12 text-center">
                 <div class="heading-area mb-lg-4 mb-3">
-                    <h2 class="title">Instant Reader History</h2>
+                    <h1 class="title">Instant Reader History</h1>
                     <p class="para pt-2" style="color: #282525;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tincidunt
                     egestas nunc, at pellentesque arcu sollicitudin et. Aliquam hendrerit diam quis ipsum
                     ultricies, quis ultricies arcu suscipit. Lorem ipsum dolor sit amet, consectetur adipiscing
@@ -150,7 +160,7 @@
             <div class="col-md-6">
                 <div class="heading-area history1-heading">
                     <h2 class="title alt-color">Title</h2>
-                    <p class="para" style="color: #282525;">There are many variations of passages of Lorem Ipsum available, but the majority
+                    <p class="para half-para-right" style="color: #282525;">There are many variations of passages of Lorem Ipsum available, but the majority
                         have suffered alteration in some form, by injected humour, or randomised words which don't look
                         even slightly believable. If you are going to use a passage of Lorem Ipsum.</p>
                 </div>
@@ -173,7 +183,7 @@
             <div class="col-md-6 info2-text">
                 <div class="heading-area">
                     <h2 class="title main-color">Title</h2>
-                    <p class="para" style="color: #282525;">There are many variations of passages of Lorem Ipsum available, but the majority
+                    <p class="para half-para" style="color: #282525;">There are many variations of passages of Lorem Ipsum available, but the majority
                         have suffered alteration in some form, by injected humour, or randomised words which don't look
                         even slightly believable. If you are going to use a passage of Lorem Ipsum.</p>
                 </div>
@@ -189,8 +199,8 @@
         <div class="row">
             <div class="col-md-6 wow">
                 <div class="heading-area  vision-heading">
-                    <h2 class="title text-white">Our Vision</h2>
-                    <p class="para text-white">There are many variations of passages of Lorem Ipsum available, but the majority
+                    <h1 class="title text-white">Our Vision</h1>
+                    <p class="para half-para-right text-white">There are many variations of passages of Lorem Ipsum available, but the majority
                         have suffered alteration in some form, by injected humour, or randomised words which don't look
                         even slightly believable. If you are going to use a passage of Lorem Ipsum.</p>
                 </div>
@@ -209,7 +219,7 @@
 <section>
     <div class="container">
         <div class="heading-area text-center mb-4">
-            <h2 class="title">Our Mission</h2>
+            <h1 class="title">Our Mission</h1>
             <p class="para">There are many variations of passages of Lorem Ipsum available, but the majority
                 have suffered alteration in some form.</p>
         </div>
@@ -228,7 +238,7 @@
         <div class="row">
             <div class="col-md-12 text-center mb-5">
                 <div class="heading-area mb-lg-4 mb-3">
-                    <h2 class="title text-white">Project VIRAC</h2>
+                    <h1 class="title text-white">Project VIRAC</h1>
                 </div>
             </div>
         </div>
@@ -263,8 +273,8 @@
             </div>
             <div class="col-md-6">
                 <div class="heading-area">
-                    <h3 style="color: #282525;">Lorem Ipsum</h3>
-                    <p class="para text-white">There are many variations of passages of Lorem Ipsum available, but the majority
+                    <h2 style="color: #282525;">Lorem Ipsum</h2>
+                    <p class="para half-para text-white">There are many variations of passages of Lorem Ipsum available, but the majority
                         have suffered alteration in some form, by injected humour, or randomised words which don't look
                         even slightly believable.</p>
                 </div>
@@ -276,8 +286,8 @@
         <div class="row virac-vid-row" style="text-align: right;">
             <div class="col-md-6 mb-3 virac-vid-text">
                 <div class="heading-area">
-                    <h3 style="color: #282525;">Lorem Ipsum</h3>
-                    <p class="para text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tincidunt
+                    <h2 style="color: #282525;">Lorem Ipsum</h2>
+                    <p class="para half-para-right text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tincidunt
                     egestas nunc, at pellentesque arcu sollicitudin et. Aliquam hendrerit diam quis ipsum
                     ultricies, quis ultricies arcu suscipit. Lorem ipsum dolor sit amet, consectetur adipiscing
                     elit. Fusce ut diam quis nulla faucibus venenatis. </p>
@@ -294,7 +304,7 @@
         </div>
     </div>
 </section>
-<!--Vision End-->
+<!--Project VIRAC End-->
 
 <!--Sign-Up for Newsletter Start-->
 <section class="application">
@@ -308,9 +318,9 @@
                 <div class="application-detail">
                     <div class="contact-dots" data-dots=""></div>
                     <!--Heading-->
-                    <div class="heading-area justify-content-center">
+                    <div class="heading-area justify-content-center mb-3">
                         <h2 class="title mt-0 pb-1">Lorem Ipsum</h2>
-                        <p class="para">There are many variations of passages of Lorem Ipsum available, but the majority
+                        <p class="para half-para">There are many variations of passages of Lorem Ipsum available, but the majority
                             have suffered .</p>
                     </div>
 
