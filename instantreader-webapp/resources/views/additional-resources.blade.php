@@ -16,6 +16,11 @@
         justify-content: center;
         align-items: center;
     }
+    @media only screen and (max-width: 767px) {
+        .para {
+            text-align: justify;
+        }
+    }
 </style>
 <!-- Style End -->
 
@@ -43,7 +48,7 @@
          <div class="row">
             <div class="col-md-12 text-center">
                 <div class="heading-area mx-570 mb-md-4 mb-3 pb-2">
-                    <h2 class="title alt-color">Tips and Resources</h2>
+                    <h1 class="title alt-color">Tips and Resources</h1>
                 </div>
             </div>
         </div>
@@ -99,7 +104,7 @@
         <div class="row">
             <div class="col-md-12 text-center">
                 <div class="heading-area mx-570 pb-md-5 mb-3">
-                    <h2 class="title mb-0 text-white">E-books and PDFs</h2>
+                    <h1 class="title mb-0 text-white">E-books and PDFs</h1>
                 </div>
             </div>
         </div>
@@ -171,7 +176,7 @@
         <div class="row">
             <div class="col-md-12 text-center">
                 <div class="heading-area mx-570 pb-md-5 mb-3">
-                    <h2 class="title mb-0 main-color">Blogs</h2>
+                    <h1 class="title mb-0 main-color">Blogs</h1>
                 </div>
             </div>
         </div>
@@ -238,7 +243,7 @@
     <div class="auto-container px-5">
         <!-- Heading -->
         <div class="row text-center"  style="margin-bottom: 2em;">
-            <h2 class="title text-white">Video Resources</h2>
+            <h1 class="title text-white mb-3">Video Resources</h1>
             <p class="para text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tincidunt
             egestas nunc, at pellentesque arcu sollicitudin et. Aliquam hendrerit diam quis ipsum
             ultricies, quis ultricies arcu suscipit. Lorem ipsum dolor sit amet, consectetur adipiscing
@@ -291,36 +296,36 @@
     <div class="auto-container px-5">
         <div class="row visuals-row">
             <div class="col-md-7 mb-3">
-                <div id="visuals-carousel" class="carousel slide" data-ride="carousel">
-                    <ol class="carousel-indicators">
-                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                    </ol>
+                <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                        <img class="d-block w-100" src="{{  asset('marketing-site/assets/agency/img/blog-news-2.jpg')  }}" alt="First slide">
+                        <img src="{{ asset('marketing-site/assets/img/tutor-application.jpg') }}" class="d-block w-100" alt="...">
                         </div>
                         <div class="carousel-item">
-                        <img class="d-block w-100" src="{{  asset('marketing-site/assets/agency/img/blog-news-2.jpg')  }}" alt="Second slide">
+                        <img src="{{ asset('marketing-site/assets/img/consultation.jpg') }}" class="d-block w-100" alt="...">
                         </div>
                         <div class="carousel-item">
-                        <img class="d-block w-100" src="{{  asset('marketing-site/assets/agency/img/blog-news-2.jpg')  }}" alt="Third slide">
+                        <img src="{{ asset('marketing-site/assets/img/tutor-application.jpg') }}" class="d-block w-100" alt="...">
                         </div>
                     </div>
-                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
+                        <span class="visually-hidden">Next</span>
+                    </button>
                 </div>
             </div>
             <div class="col-md-5">
                 <div class="heading-area">
-                    <h2 class="title alt-color">Lorem Ipsum</h2>
+                    <h1 class="title alt-color">Lorem Ipsum</h1>
                     <p class="para">There are many variations of passages of Lorem Ipsum available, but the majority
                         have suffered alteration in some form, by injected humour, or randomised words which don't look
                         even slightly believable.</p>

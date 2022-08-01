@@ -2,6 +2,19 @@
 
 @section('content')
 
+<!-- Style Start -->
+<style>
+    @media only screen and (max-width: 767px) {
+        .btn-col {
+            text-align: center;
+        }
+        .form-heading {
+            text-align: center;
+        }
+    }
+</style>
+<!-- Style End -->
+
 <!--Banner Start-->
 <section class="page-title cursor-light">
     <!-- Pattern Layers -->
@@ -95,140 +108,132 @@
 
     <div class="container">
 
-        <div class="row align-items-top">
-
-            <div class="col-md-12 mt-4 pt-3 mt-lg-0 pt-lg-0 wow">
-                <!--Heading-->
-                <div class="heading-area pb-2">
-                    <h2 class="title mt-0">Booking Form</h2>
-                </div>
-                <!--Form-->
-                <form class="booking-form" id="booking-form-data">
-                    @csrf
-                    <div class="form-group row mb-3">
-
-                        <!-- Parent's Name Fields -->
-                        <div class="form-group row mb-3">
-                            <div class="col-md-6 mb-3">
-                                <input
-                                    type="text"
-                                    class="form-control form-control-user"
-                                    id="parentFirstName"
-                                    placeholder="Parent's First Name"
-                                />
-                            </div>
-                            <div class="col-md-6">
-                                <input
-                                    type="text"
-                                    class="form-control form-control-user"
-                                    id="parentLastName"
-                                    placeholder="Parent's Last Name"
-                                />
-                            </div>
-                        </div>
-
-                        <!-- Contact Fields -->
-                        <div class="form-group row mb-3">
-                            <div class="col-md-6 mb-3">
-                                <input
-                                    type="tel"
-                                    class="form-control form-control-user"
-                                    id="contactNo"
-                                    placeholder="Contact No. (WhatsApp/Viber)"
-                                />
-                            </div>
-                            <div class="col-md-6">
-                                <input
-                                    type="email"
-                                    class="form-control form-control-user"
-                                    id="email"
-                                    placeholder="Email"
-                                />
-                            </div>
-                        </div>
-
-                        <!-- Child's Name Fields -->
-                        <div class="form-group row mb-3">
-                            <div class="col-md-6 mb-3">
-                                <input
-                                    type="text"
-                                    class="form-control form-control-user"
-                                    id="childFirstName"
-                                    placeholder="Child's First Name"
-                                />
-                            </div>
-                            <div class="col-md-6">
-                                <input
-                                    type="text"
-                                    class="form-control form-control-user"
-                                    id="childLastName"
-                                    placeholder="Child's Last Name"
-                                />
-                            </div>
-                        </div>
-
-                        <!-- Location and Child's Age Field -->
-                        <div class="form-group row mb-3">
-                            <div class="col-md-6 mb-3">
-                                <input
-                                    type="text"
-                                    class="form-control form-control-user"
-                                    id="address"
-                                    placeholder="City, Country"
-                                />
-                            </div>
-                            <div class="col-md-2">
-                                <input
-                                    type="number"
-                                    class="form-control form-control-user"
-                                    id="age"
-                                    placeholder="Child's Age"
-                                    size="40"
-                                />
-                            </div>
-                        </div>
-
-                        <!-- Inquiry Location Field -->
-                        <div class="form-group row mb-3">
-                            <div class="col-md-12">
-                            <textarea class="form-control" id="concernsGoals" rows="3" placeholder="Concerns/Goals for Child"></textarea>
-                            </div>
-                        </div>
-                        
-                        <!--Button-->
-                        <div class="col-md-12">
-                            <a class="btn btn-large btn-rounded btn-purple btn-hvr-blue d-block mt-4 contact_btn" href="javascript:void(0);"
-                               id="apply_btn"><i class="fa fa-spinner fa-spin mr-2 d-none" aria-hidden="true"></i><b>Book</b>
-                                <div class="btn-hvr-setting">
-                                    <ul class="btn-hvr-setting-inner">
-                                        <li class="btn-hvr-effect"></li>
-                                        <li class="btn-hvr-effect"></li>
-                                        <li class="btn-hvr-effect"></li>
-                                        <li class="btn-hvr-effect"></li>
-                                    </ul>
-                                </div>
-                            </a>
-                        </div>
-
-                    </div>
-                </form>
+        <div class="col-md-12 mt-4 pt-3 mt-lg-0 pt-lg-0 wow">
+            <!--Heading-->
+            <div class="heading-area pb-2 form-heading">
+                <h2 class="title mt-0">Booking Form</h2>
             </div>
+            <!--Form-->
 
+            <form class="booking-form" id="booking-form-data">
+                @csrf
+                <div class="form-group row mb-3">
+
+                    <!-- Parent's Name Fields -->
+                    <div class="form-group row mb-3">
+                        <div class="col-md-6 mb-3">
+                            <input
+                                type="text"
+                                class="form-control form-control-user"
+                                id="parentFirstName"
+                                placeholder="Parent's First Name"
+                                required="true"
+                            />
+                        </div>
+                        <div class="col-md-6">
+                            <input
+                                type="text"
+                                class="form-control form-control-user"
+                                id="parentLastName"
+                                placeholder="Parent's Last Name"
+                                required="true"
+                            />
+                        </div>
+                    </div>
+
+                    <!-- Contact Fields -->
+                    <div class="form-group row mb-3">
+                        <div class="col-md-6 mb-3">
+                            <input
+                                type="tel"
+                                class="form-control form-control-user"
+                                id="contactNo"
+                                placeholder="Contact No. (WhatsApp/Viber)"
+                                required="true"
+                            />
+                        </div>
+                        <div class="col-md-6">
+                            <input
+                                type="email"
+                                class="form-control form-control-user"
+                                id="email"
+                                placeholder="Email"
+                                required="true"
+                            />
+                        </div>
+                    </div>
+
+                    <!-- Child's Name Fields -->
+                    <div class="form-group row mb-3">
+                        <div class="col-md-6 mb-3">
+                            <input
+                                type="text"
+                                class="form-control form-control-user"
+                                id="childFirstName"
+                                placeholder="Child's First Name"
+                                required="true"
+                            />
+                        </div>
+                        <div class="col-md-6">
+                            <input
+                                type="text"
+                                class="form-control form-control-user"
+                                id="childLastName"
+                                placeholder="Child's Last Name"
+                                required="true"
+                            />
+                        </div>
+                    </div>
+
+                    <!-- Location and Child's Age Field -->
+                    <div class="form-group row mb-3">
+                        <div class="col-md-6 mb-3">
+                            <input
+                                type="text"
+                                class="form-control form-control-user"
+                                id="address"
+                                placeholder="City, Country"
+                                required="true"
+                            />
+                        </div>
+                        <div class="col-md-2">
+                            <input
+                                type="number"
+                                class="form-control form-control-user"
+                                id="age"
+                                placeholder="Child's Age"
+                                required="true"
+                            />
+                        </div>
+                    </div>
+
+                    <!-- Concerns/Goals Location Field -->
+                    <div class="form-group row mb-3">
+                        <div class="col-md-12">
+                            <textarea class="form-control" id="concernsGoals" rows="3" placeholder="Concerns/Goals for Child" required="true"></textarea>
+                        </div>
+                    </div>
+
+                    <!--Button-->
+                    <div class="col btn-col">
+                        <button class="btn btn-large btn-rounded btn-pink btn-hvr-blue">                    
+                            Book
+                            <div class="btn-hvr-setting">
+                                <ul class="btn-hvr-setting-inner">
+                                    <li class="btn-hvr-effect"></li>
+                                    <li class="btn-hvr-effect"></li>
+                                    <li class="btn-hvr-effect"></li>
+                                    <li class="btn-hvr-effect"></li>
+                                </ul>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </form>
         </div>
 
     </div>
 
 </section>
-
-<script>
-    document.getElementById('location-select').addEventListener('change', function() {
-        if (this.value === "others"){
-            document.getElementById('otherLocation').disabled = false;
-        } else{
-            document.getElementById('otherLocation').value = "";
-            document.getElementById('otherLocation').disabled = true;
-        }
-    });
-</script>
 
 @endsection
