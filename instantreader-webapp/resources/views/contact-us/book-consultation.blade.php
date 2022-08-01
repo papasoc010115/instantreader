@@ -2,6 +2,19 @@
 
 @section('content')
 
+<!-- Style Start -->
+<style>
+    @media only screen and (max-width: 767px) {
+        .btn-col {
+            text-align: center;
+        }
+        .form-heading {
+            text-align: center;
+        }
+    }
+</style>
+<!-- Style End -->
+
 <!--Banner Start-->
 <section class="page-title cursor-light">
     <!-- Pattern Layers -->
@@ -97,7 +110,7 @@
 
         <div class="col-md-12 mt-4 pt-3 mt-lg-0 pt-lg-0 wow">
             <!--Heading-->
-            <div class="heading-area pb-2">
+            <div class="heading-area pb-2 form-heading">
                 <h2 class="title mt-0">Booking Form</h2>
             </div>
             <!--Form-->
@@ -200,10 +213,10 @@
                             <textarea class="form-control" id="concernsGoals" rows="3" placeholder="Concerns/Goals for Child" required="true"></textarea>
                         </div>
                     </div>
-                    
+
                     <!--Button-->
-                    <div class="col">
-                        <button class="btn btn-large btn-rounded btn-pink btn-hvr-blue mt-3">                    
+                    <div class="col btn-col">
+                        <button class="btn btn-large btn-rounded btn-pink btn-hvr-blue">                    
                             Book
                             <div class="btn-hvr-setting">
                                 <ul class="btn-hvr-setting-inner">
@@ -215,7 +228,6 @@
                             </div>
                         </button>
                     </div>
-
                 </div>
             </form>
         </div>
@@ -223,16 +235,5 @@
     </div>
 
 </section>
-
-<script>
-    document.getElementById('location-select').addEventListener('change', function() {
-        if (this.value === "others"){
-            document.getElementById('otherLocation').disabled = false;
-        } else{
-            document.getElementById('otherLocation').value = "";
-            document.getElementById('otherLocation').disabled = true;
-        }
-    });
-</script>
 
 @endsection

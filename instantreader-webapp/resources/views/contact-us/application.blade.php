@@ -4,11 +4,16 @@
 
 <!-- Style Start -->
 <style>
-    .heading-area.justify-content-center {
-        margin-bottom: 1em;
-    }
     .para {
         text-align: justify;
+    }
+    @media only screen and (max-width: 767px) {
+        .btn-col {
+            text-align: center;
+        }
+        .form-heading {
+            text-align: center;
+        }
     }
 </style>
 <!-- Style End -->
@@ -83,7 +88,7 @@
 
         <div class="col-md-12 mt-4 pt-3 mt-lg-0 pt-lg-0 wow">
             <!--Heading-->
-            <div class="heading-area pb-2">
+            <div class="heading-area pb-2 form-heading">
                 <h2 class="title mt-0">Application Form</h2>
             </div>
             <!--Actual Form-->
@@ -160,7 +165,7 @@
                     </div>
 
                     <!--Button-->
-                    <div class="col">
+                    <div class="col btn-col">
                         <button class="btn btn-large btn-rounded btn-pink btn-hvr-blue">                    
                             Apply
                             <div class="btn-hvr-setting">
