@@ -31,34 +31,58 @@
 </section>
 <!--Banner End-->
 
-<!--Application Form Start-->
-<section class="application">
-
-    <div class="container">
-
-        <div class="row align-items-top">
-
-            <!-- Side Information -->
-            <div class="col-lg-5 order-lg-2 wow">
-                <div class="application-detail">
-                    <div class="contact-dots" data-dots=""></div>
-                    <!--Heading-->
-                    <div class="heading-area justify-content-center">
-                        <h2 class="title mt-0 pb-1">Lorem Ipsum</h2>
-                        <p class="para">There are many variations of passages of Lorem Ipsum available, but the majority
-                            have suffered .</p>
-                    </div>
-
-                    <div class="col-lg-12 wow">
-                        <div class="half-img mt-4 pt-1 mt-lg-0 pt-lg-0">
-                            <img alt="sample" src="{{ asset('marketing-site/assets/img/tutor-application.jpg') }}">
-                        </div>
-                    </div>
+<!--Section 1 Start-->
+<!--Job Description Start-->
+<section class="bg-light">
+    <div class="container desc-2">
+        <div class="row">
+            <div class="col-md-6 wow fadeInLeft">
+                <div class="half-img mt-5 pt-4 mt-lg-0 pt-lg-0">
+                    <img alt="image" src="{{ asset('marketing-site/assets/img/consultation.jpg') }}">
                 </div>
             </div>
+            <div class="col-md-6 wow fadeInRight">
+                <div class="heading-area">
+                    <h2 class="title">Job Description</h2>
+                    <p class="para">There are many variations of passages of Lorem Ipsum available, but the majority
+                        have suffered alteration in some form, by injected humour, or randomised words which don't look
+                        even slightly believable. If you are going to use a passage of Lorem Ipsum.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--Job Description End-->
 
-            <!--Application Form-->
-            <div class="col-lg-7 mt-4 pt-3 mt-lg-0 pt-lg-0 wow">
+<!--Job Requirements Start-->
+<section class="gradient-bg1">
+    <div class="container d-flex">
+        <div class="row">
+            <div class="col-md-6 wow">
+                <div class="heading-area">
+                    <h2 class="title text-white">Job Requirements</h2>
+                    <p class="para text-white">There are many variations of passages of Lorem Ipsum available, but the majority
+                        have suffered alteration in some form, by injected humour, or randomised words which don't look
+                        even slightly believable. If you are going to use a passage of Lorem Ipsum.</p>
+                </div>
+            </div>
+            <div class="col-md-6 wow fadeInRight">
+                <div class="half-img mt-5 pt-4 mt-lg-0 pt-lg-0">
+                    <img alt="image" src="{{ asset('marketing-site/assets/img/consultation.jpg') }}">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--Job Requirements End-->
+<!--Section 1 End-->
+
+<!--Application Form Start-->
+<section class="contact-us" id="consultation">
+    <div class="container">
+        <div class="row align-items-top">
+
+            <div class="col-md-12 mt-4 pt-3 mt-lg-0 pt-lg-0 wow">
                 <!--Heading-->
                 <div class="heading-area pb-2">
                     <h2 class="title mt-0">Application Form</h2>
@@ -74,7 +98,7 @@
                                 <input
                                     type="text"
                                     class="form-control form-control-user"
-                                    id="applicantFirstName"
+                                    id="firstName"
                                     placeholder="First Name"
                                 />
                             </div>
@@ -82,7 +106,7 @@
                                 <input
                                     type="text"
                                     class="form-control form-control-user"
-                                    id="applicantLastName"
+                                    id="lastName"
                                     placeholder="Last Name"
                                 />
                             </div>
@@ -94,7 +118,7 @@
                                 <input
                                     type="tel"
                                     class="form-control form-control-user"
-                                    id="applicantContactNo"
+                                    id="contactNo"
                                     placeholder="Contact No."
                                 />
                             </div>
@@ -102,7 +126,7 @@
                                 <input
                                     type="email"
                                     class="form-control form-control-user"
-                                    id="applicantEmail"
+                                    id="email"
                                     placeholder="Email"
                                 />
                             </div>
@@ -110,30 +134,19 @@
 
                         <!-- Address Field -->
                         <div class="form-group row mb-3">
-                            <div class="col-md-12">
+                            <div class="col-md-6 mb-3">
                                 <input
                                     type="text"
                                     class="form-control form-control-user"
-                                    id="applicantAddress"
-                                    placeholder="Address"
+                                    id="address"
+                                    placeholder="City, Country"
                                 />
-                            </div>
-                        </div>
-
-                        <!-- Status Field -->
-                        <div class="form-group row mb-3">
-                            <label for="applicantStatus" class="col-lg-3 col-form-label ml-2">Status</label>
-                            <div class="col-md-3">
-                                <select class="custom-select">
-                                    <option value="fulltime" selected>Full-Time</option>
-                                    <option value="parttime">Part-Time</option>
-                                </select>
                             </div>
                         </div>
                         
                         <!-- Resume field -->
                         <div class="form-group row mb-5">
-                            <label for="applicantResume" class="col-lg-3 col-form-label ml-2">Upload Résumé/CV</label>
+                            <label for="applicantResume" class="col-md-2 col-form-label">Upload Résumé/CV</label>
                             <div class="col-md-4 custom-file">
                                 <div class="custom-file">
                                     <input type="file" class="custom-file-input" id="resumeFile">
