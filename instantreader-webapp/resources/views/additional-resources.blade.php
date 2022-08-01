@@ -16,6 +16,11 @@
         justify-content: center;
         align-items: center;
     }
+    @media only screen and (max-width: 767px) {
+        .para {
+            text-align: justify;
+        }
+    }
 </style>
 <!-- Style End -->
 
@@ -43,7 +48,7 @@
          <div class="row">
             <div class="col-md-12 text-center">
                 <div class="heading-area mx-570 mb-md-4 mb-3 pb-2">
-                    <h2 class="title alt-color">Tips and Resources</h2>
+                    <h1 class="title alt-color">Tips and Resources</h1>
                 </div>
             </div>
         </div>
@@ -99,7 +104,7 @@
         <div class="row">
             <div class="col-md-12 text-center">
                 <div class="heading-area mx-570 pb-md-5 mb-3">
-                    <h2 class="title mb-0 text-white">E-books and PDFs</h2>
+                    <h1 class="title mb-0 text-white">E-books and PDFs</h1>
                 </div>
             </div>
         </div>
@@ -171,7 +176,7 @@
         <div class="row">
             <div class="col-md-12 text-center">
                 <div class="heading-area mx-570 pb-md-5 mb-3">
-                    <h2 class="title mb-0 main-color">Blogs</h2>
+                    <h1 class="title mb-0 main-color">Blogs</h1>
                 </div>
             </div>
         </div>
@@ -238,7 +243,7 @@
     <div class="auto-container px-5">
         <!-- Heading -->
         <div class="row text-center"  style="margin-bottom: 2em;">
-            <h2 class="title text-white">Video Resources</h2>
+            <h1 class="title text-white mb-3">Video Resources</h1>
             <p class="para text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tincidunt
             egestas nunc, at pellentesque arcu sollicitudin et. Aliquam hendrerit diam quis ipsum
             ultricies, quis ultricies arcu suscipit. Lorem ipsum dolor sit amet, consectetur adipiscing
@@ -320,7 +325,7 @@
             </div>
             <div class="col-md-5">
                 <div class="heading-area">
-                    <h2 class="title alt-color">Lorem Ipsum</h2>
+                    <h1 class="title alt-color">Lorem Ipsum</h1>
                     <p class="para">There are many variations of passages of Lorem Ipsum available, but the majority
                         have suffered alteration in some form, by injected humour, or randomised words which don't look
                         even slightly believable.</p>
