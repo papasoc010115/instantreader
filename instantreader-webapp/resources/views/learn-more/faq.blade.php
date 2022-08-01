@@ -2,8 +2,6 @@
 
 @section('content')
 
-<!-- by: rmhizon -->
-
 <!--PAGE CONTENT START -->
 
 <!-- Style -->

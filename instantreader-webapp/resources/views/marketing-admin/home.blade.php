@@ -1,8 +1,4 @@
-<!-- 
-    Page editor
-
-    by: rmhizon
- -->
+<!-- Page editor -->
 
 @extends('layouts.marketing-admin-layout')
 
