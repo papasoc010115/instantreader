@@ -80,100 +80,97 @@
 <!--Application Form Start-->
 <section class="contact-us" id="consultation">
     <div class="container">
-        <div class="row align-items-top">
 
-            <div class="col-md-12 mt-4 pt-3 mt-lg-0 pt-lg-0 wow">
-                <!--Heading-->
-                <div class="heading-area pb-2">
-                    <h2 class="title mt-0">Application Form</h2>
-                </div>
-                <!--Actual Form-->
-                <form class="application-form" id="application-form-data">
-                    @csrf
-                    <div class="form-group row mb-3">
-
-                        <!-- Name Fields -->
-                        <div class="form-group row mb-3">
-                            <div class="col-md-6 mb-3">
-                                <input
-                                    type="text"
-                                    class="form-control form-control-user"
-                                    id="firstName"
-                                    placeholder="First Name"
-                                />
-                            </div>
-                            <div class="col-md-6">
-                                <input
-                                    type="text"
-                                    class="form-control form-control-user"
-                                    id="lastName"
-                                    placeholder="Last Name"
-                                />
-                            </div>
-                        </div>
-
-                        <!-- Contact Fields -->
-                        <div class="form-group row mb-3">
-                            <div class="col-md-6 mb-3">
-                                <input
-                                    type="tel"
-                                    class="form-control form-control-user"
-                                    id="contactNo"
-                                    placeholder="Contact No."
-                                />
-                            </div>
-                            <div class="col-md-6">
-                                <input
-                                    type="email"
-                                    class="form-control form-control-user"
-                                    id="email"
-                                    placeholder="Email"
-                                />
-                            </div>
-                        </div>
-
-                        <!-- Address Field -->
-                        <div class="form-group row mb-3">
-                            <div class="col-md-6 mb-3">
-                                <input
-                                    type="text"
-                                    class="form-control form-control-user"
-                                    id="address"
-                                    placeholder="City, Country"
-                                />
-                            </div>
-                        </div>
-                        
-                        <!-- Resume field -->
-                        <div class="form-group row mb-5">
-                            <label for="applicantResume" class="col-md-2 col-form-label">Upload Résumé/CV</label>
-                            <div class="col-md-4 custom-file">
-                                <div class="custom-file">
-                                    <input type="file" class="custom-file-input" id="resumeFile">
-                                    <label class="custom-file-label" for="customFile">Choose file</label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!--Button-->
-                        <div class="col-md-12">
-                            <a class="btn btn-large btn-rounded btn-purple btn-hvr-blue d-block ontact_btn" href="javascript:void(0);"
-                               id="apply_btn"><i class="fa fa-spinner fa-spin mr-2 d-none" aria-hidden="true"></i><b>Apply</b>
-                                <div class="btn-hvr-setting">
-                                    <ul class="btn-hvr-setting-inner">
-                                        <li class="btn-hvr-effect"></li>
-                                        <li class="btn-hvr-effect"></li>
-                                        <li class="btn-hvr-effect"></li>
-                                        <li class="btn-hvr-effect"></li>
-                                    </ul>
-                                </div>
-                            </a>
-                        </div>
-
-                    </div>
-                </form>
+        <div class="col-md-12 mt-4 pt-3 mt-lg-0 pt-lg-0 wow">
+            <!--Heading-->
+            <div class="heading-area pb-2">
+                <h2 class="title mt-0">Application Form</h2>
             </div>
+            <!--Actual Form-->
+            <form class="application-form" id="application-form-data">
+                @csrf
+                <div class="form-group row mb-3">
 
+                    <!-- Name Fields -->
+                    <div class="form-group row mb-3">
+                        <div class="col-md-6 mb-3">
+                            <input
+                                type="text"
+                                class="form-control form-control-user"
+                                id="firstName"
+                                placeholder="First Name"
+                            />
+                        </div>
+                        <div class="col-md-6">
+                            <input
+                                type="text"
+                                class="form-control form-control-user"
+                                id="lastName"
+                                placeholder="Last Name"
+                            />
+                        </div>
+                    </div>
+
+                    <!-- Contact Fields -->
+                    <div class="form-group row mb-3">
+                        <div class="col-md-6 mb-3">
+                            <input
+                                type="tel"
+                                class="form-control form-control-user"
+                                id="contactNo"
+                                placeholder="Contact No."
+                            />
+                        </div>
+                        <div class="col-md-6">
+                            <input
+                                type="email"
+                                class="form-control form-control-user"
+                                id="email"
+                                placeholder="Email"
+                            />
+                        </div>
+                    </div>
+
+                    <!-- Address Field -->
+                    <div class="form-group row mb-3">
+                        <div class="col-md-6 mb-3">
+                            <input
+                                type="text"
+                                class="form-control form-control-user"
+                                id="address"
+                                placeholder="City, Country"
+                            />
+                        </div>
+                    </div>
+                    
+                    <!-- Resume field -->
+                    <div class="form-group row mb-5">
+                        <label for="applicantResume" class="col-md-2 col-form-label">Upload Résumé/CV</label>
+                        <div class="col-md-4 custom-file">
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" id="resumeFile">
+                                <label class="custom-file-label" for="customFile">Choose file</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Button-->
+                    <div class="col">
+                        <button class="btn btn-large btn-rounded btn-pink btn-hvr-blue">                    
+                            Apply
+                            <div class="btn-hvr-setting">
+                                <ul class="btn-hvr-setting-inner">
+                                    <li class="btn-hvr-effect"></li>
+                                    <li class="btn-hvr-effect"></li>
+                                    <li class="btn-hvr-effect"></li>
+                                    <li class="btn-hvr-effect"></li>
+                                </ul>
+                            </div>
+                        </button>
+                    </div>
+
+                </div>
+            </form>
         </div>
 
     </div>
