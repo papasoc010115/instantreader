@@ -99,6 +99,7 @@
                                 class="form-control form-control-user"
                                 id="firstName"
                                 placeholder="First Name"
+                                required="true"
                             />
                         </div>
                         <div class="col-md-6">
@@ -107,6 +108,7 @@
                                 class="form-control form-control-user"
                                 id="lastName"
                                 placeholder="Last Name"
+                                required="true"
                             />
                         </div>
                     </div>
@@ -119,6 +121,7 @@
                                 class="form-control form-control-user"
                                 id="contactNo"
                                 placeholder="Contact No."
+                                required="true"
                             />
                         </div>
                         <div class="col-md-6">
@@ -127,6 +130,7 @@
                                 class="form-control form-control-user"
                                 id="email"
                                 placeholder="Email"
+                                required="true"
                             />
                         </div>
                     </div>
@@ -139,6 +143,7 @@
                                 class="form-control form-control-user"
                                 id="address"
                                 placeholder="City, Country"
+                                required="true"
                             />
                         </div>
                     </div>
@@ -148,7 +153,7 @@
                         <label for="applicantResume" class="col-md-2 col-form-label">Upload Résumé/CV</label>
                         <div class="col-md-4 custom-file">
                             <div class="custom-file">
-                                <input type="file" class="custom-file-input" id="resumeFile">
+                                <input type="file" class="custom-file-input" id="resumeFile" required="true">
                                 <label class="custom-file-label" for="customFile">Choose file</label>
                             </div>
                         </div>
