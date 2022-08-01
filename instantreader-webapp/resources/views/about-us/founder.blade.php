@@ -380,9 +380,9 @@
                         </div>
 
                         <!--Button-->
-                        <div class="col-md-4 mt-4">
-                            <a class="btn btn-large btn-rounded btn-purple btn-hvr-blue d-block ontact_btn" href="javascript:void(0);"
-                               id="apply_btn"><i class="fa fa-spinner fa-spin mr-2 d-none" aria-hidden="true"></i><b>Apply</b>
+                        <div class="col btn-col">
+                            <button class="btn btn-large btn-rounded btn-purple btn-hvr-blue">                    
+                                Submit
                                 <div class="btn-hvr-setting">
                                     <ul class="btn-hvr-setting-inner">
                                         <li class="btn-hvr-effect"></li>
@@ -391,7 +391,7 @@
                                         <li class="btn-hvr-effect"></li>
                                     </ul>
                                 </div>
-                            </a>
+                            </button>
                         </div>
 
                     </div>
