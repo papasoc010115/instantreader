@@ -163,12 +163,12 @@
 <section id="highlight-video-section" class="cursor-light gradient-bg1" >
     <div class="container fullscreen-container orientation-container">
         <div class="row d-flex align-items-center">
-            <div class="col-lg-7 video-container">
+            <div class="col-lg-7 video-container wow fadeInLeft">
                 <video id="highlight-video-player" preload="none" controls poster="{{ asset('marketing-site/assets/agency/img/blog-news-1.jpg')}}" playsinline>
                     <source id="highlight-video-source" src="{{ asset('marketing-site/assets/agency/img/video.mp4') }}" type="video/mp4">
                 </video>
             </div>
-            <div class="col-lg-5 pl-4 pt-4">
+            <div class="col-lg-5 pl-4 pt-4 wow fadeInRight">
                 <div class="text-container-content">
                     <div id="highlight-title-one" class="gradient-text1 first-title">
                         Highlight
@@ -200,7 +200,7 @@
                     <p id="parent-orientation-paragraph" class="para">There are many variations of passages of Lorem Ipsum available, but the majority
                         have suffered alteration in some form, by injected humour, or randomised words which don't look
                         even slightly believable. If you are going to use a passage of Lorem Ipsum.</p>
-                    <a class="btn btn-large btn-rounded btn-pink btn-hvr-blue mt-3" href="javascript:void(0);">Book Appointment for Live Agent
+                    <a class="btn btn-large btn-rounded btn-pink btn-hvr-blue my-3" href="javascript:void(0);">Book Appointment for Live Agent
                         <div class="btn-hvr-setting">
                             <ul class="btn-hvr-setting-inner">
                                 <li class="btn-hvr-effect"></li>
@@ -250,7 +250,7 @@
     <div class="container">
         <!--TITLE-->
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-12 wow fadeInUp">
                 <div class="heading-area mx-570 mb-5">
                     <h2 id="about-people-title" class="title text-white">We have some <span class="main-color js-rotating">great, ideal</span> talented
                         staff</h2>
@@ -310,7 +310,7 @@
 <section id="area-jurisdiction-section">
     <div class="mapouter">
         <div class="row area-juris-desc">
-            <div class="col-md-12">
+            <div class="col-md-12 wow fadeInUp">
                 <div class="heading-area mx-570 mb-5">
                     <h1 class="title alt-color"><span class="main-color">AREA</span> JURISDICTIONS</h2>
                     <h4 class="title alt-color"> We have branches in</h4>
@@ -320,7 +320,7 @@
                 </div>
             </div>
         </div>
-        <div class="gmap-canvas">
+        <div class="gmap-canvas wow zoomIn">
             <!-- NO API -->
             <iframe class="gmap" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/d/u/2/embed?mid=1JiwHL7YTTdgTD0NWiZtuuIQr-TuC25s&ehbc=2E312F" height="750px">
             </iframe>
@@ -515,7 +515,7 @@
     <div class="scrolling-img-container">
         <div class="scrolling-img">
             <div class="row overlay-text">
-                <div class="col-md-12">
+                <div class="col-md-12 wow fadeInUp">
                     <div class="heading-area mx-570 mb-5">
                         <h1 class="text-white">Join the Instant Reader <span class="main-color">Kids Club</span></h1>
                         <p class="text-white">The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 
@@ -540,28 +540,32 @@
 <!--KIDS CLUB End-->
 
 <!-- ENROLL NOW Start -->
-<section id="enroll-now-section" class="p-0">
-    <div class="row d-flex align-items-center">
-        <div class="col-7">
-            <img id="enroll-now-image" class="h-100" src="{{ asset('marketing-site/assets/agency/img/vector-art-2.png') }}" alt="Second slide">            
-        </div>
-        <div class="col-5 px-5 enroll-now-detail">
-            <h1 id="enroll-now-heading" class="alt-color font-weight-bold">ENROLL NOW!</h1>
-            <p id="enroll-now-paragraph">
-                There are many variations of passages of Lorem Ipsum available, but the majority
-                have suffered alteration in some form, by injected humour, or randomised words which don't look
-                even slightly believable. If you are going to use a passage of Lorem Ipsum.
-            </p>
-            <a class="btn btn-xlarge btn-rounded btn-pink btn-hvr-blue mt-3" href="{{ route('learn-more.reading-assessment') }}">Book Online Reading Assessment
-                <div class="btn-hvr-setting">
-                    <ul class="btn-hvr-setting-inner">
-                        <li class="btn-hvr-effect"></li>
-                        <li class="btn-hvr-effect"></li>
-                        <li class="btn-hvr-effect"></li>
-                        <li class="btn-hvr-effect"></li>
-                    </ul>
+<section id="enroll-now-section">
+    <div class="container">
+        <div class="row d-flex align-items-center">
+            <div class="col-xxl-7 wow fadeInLeft">
+                <img id="enroll-now-image" class="h-100" src="{{ asset('marketing-site/assets/agency/img/vector-art-2.png') }}" alt="Second slide">            
+            </div>
+            <div class="col-xxl-5 wow fadeInRight p-5 enroll-now-detail">
+                <div class="heading-area">
+                    <h1 id="enroll-now-heading" class="alt-color font-weight-bold">ENROLL NOW!</h1>
+                    <p id="enroll-now-paragraph">
+                        There are many variations of passages of Lorem Ipsum available, but the majority
+                        have suffered alteration in some form, by injected humour, or randomised words which don't look
+                        even slightly believable. If you are going to use a passage of Lorem Ipsum.
+                    </p>
+                    <a class="btn btn-xlarge btn-rounded btn-pink btn-hvr-blue mt-3" href="{{ route('learn-more.reading-assessment') }}">Book Online Reading Assessment
+                        <div class="btn-hvr-setting">
+                            <ul class="btn-hvr-setting-inner">
+                                <li class="btn-hvr-effect"></li>
+                                <li class="btn-hvr-effect"></li>
+                                <li class="btn-hvr-effect"></li>
+                                <li class="btn-hvr-effect"></li>
+                            </ul>
+                        </div>
+                    </a>
                 </div>
-            </a>
+            </div>
         </div>
     </div>
 </section>
