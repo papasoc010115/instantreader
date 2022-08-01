@@ -73,6 +73,50 @@
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>                    
                 </div>
             </form>
+            <!-- End of Metadata -->
+            
+            <br>
+
+            <!-- Sction 1: Instant Reader Welcome Screen -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3>Section 1</h3>
+                </div>
+            </div>
+
+            <!-- Opening Sentence -->
+            <form action="">
+                @csrf
+                <div class="form-group py-3">
+                    <label for="sect1-opening-sentence">Opening Sentence</label>
+                    <textarea class="form-control" name="sect1-opening-sentence" id="sect1-opening-sentence"></textarea>
+                    <small id="keywordsHelp" class="form-text text-muted" style="display:block; float: right;">Recommended length: 1 sentence</small>
+                    <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
+                </div>
+            </form>
+            <script>    
+                tinymce.init({
+                    height: "10rem",
+                    selector: '#sect1-opening-sentence',
+                    placeholder: "e.g. Welcome to Instant Reader!",
+                    plugins: 'link',
+                    menubar: false,
+                    toolbar: 'undo redo | bold italic underline | link'
+                });            
+            </script>
+
+            <!-- Opening Image -->
+            <form action="">
+                @csrf
+                <div class="mb-3 py-3">
+                    <label for="sect1-opening-image" class="form-label">Opening Image</label>
+                    <input class="form-control" type="file" id="sect1-opening-image">
+                    <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
+                </div>                
+            </form>
+            <!-- End of Section 1 -->
+
+            
         </div>
     </section>
 </div>
