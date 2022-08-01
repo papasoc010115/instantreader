@@ -6,6 +6,11 @@ body {
 
 .navbar-container {
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    position: fixed !important;
+    top: 0 !important;
+    width: 100% !important;
+    background: white;
+    z-index: 2;
 }
 
 .navbar-brand {
@@ -18,6 +23,7 @@ body {
 }
 
 .main-heading {
+    padding-top: 3rem;
     text-align: center;
 }
 
@@ -43,8 +49,8 @@ body {
     border-width: 0.05rem !important;
 }
 
+small,
 .char-count {
     float: right;
-    display: block;
     font-size: 0.8rem;
 }
