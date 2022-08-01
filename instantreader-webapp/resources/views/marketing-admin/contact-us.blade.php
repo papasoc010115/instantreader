@@ -21,7 +21,7 @@
             <!-- Metadata -->
             <div class="row">
                 <div class="col-lg-12">
-                    <h3>Metadata</h3>
+                    <h2>Metadata</h2>
                 </div>
             </div>
             <!-- 
@@ -76,17 +76,4 @@
         </div>
     </section>
 </div>
-
-
-
-
-<!-- <script>    
-    tinymce.init({
-        selector: '#foc-sect1',
-        plugins: 'link',
-        menubar: false,
-        toolbar: 'undo redo | bold italic underline | link'
-    });
-   
-</script> -->
 @endsection
