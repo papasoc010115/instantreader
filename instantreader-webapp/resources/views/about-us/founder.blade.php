@@ -7,15 +7,10 @@
     .founder-video {
         max-width: 100%;
     }
-    .center {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
     .mission-img {
         max-width: 100%;
     }
-    .history1-heading, .vision-heading,  .virac-vid-heading {
+    .history1-heading, .vision-heading,  .virac-vid-heading, .virac-vid-text {
         text-align: center;
     }
     @media only screen and (min-width: 768px) {
@@ -25,7 +20,7 @@
         .founder-video {
             max-width: 50%;
         }
-        .history1-heading, .vision-heading,  .virac-vid-heading {
+        .history1-heading, .vision-heading,  .virac-vid-heading, .virac-vid-text {
             text-align: right;
         }
     }
@@ -34,6 +29,20 @@
         flex-direction: row;
         justify-content: center;
         align-items: center;
+    }
+    @media only screen and (max-width: 768px) {
+        .info2-img {
+            order: 2;
+        }
+        .info2-text {
+            order: 1;
+        }
+        .virac-vid-text {
+            order: 2;
+        }
+        .virac-vid {
+            order: 1;
+        }
     }
 </style>
 <!-- Style End -->
@@ -81,7 +90,7 @@
 <!--Main Information Start-->
 
 <!--Social Media Links Start-->
-<section id="services">
+<section id="socmedlinks">
     <div class="container">
         <div class="row">
             <div class="col-md-3">
@@ -121,7 +130,7 @@
             <div class="col-md-12 text-center">
                 <div class="heading-area mb-lg-4 mb-3">
                     <h2 class="title">Instant Reader History</h2>
-                    <p class="para pt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tincidunt
+                    <p class="para pt-2" style="color: #282525;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tincidunt
                     egestas nunc, at pellentesque arcu sollicitudin et. Aliquam hendrerit diam quis ipsum
                     ultricies, quis ultricies arcu suscipit. Lorem ipsum dolor sit amet, consectetur adipiscing
                     elit. Fusce ut diam quis nulla faucibus venenatis. </p>
@@ -138,16 +147,16 @@
     <div class="container d-flex mb-5">
         <!-- First Information Row -->
         <div class="row">
-            <div class="col-md-6 wow">
+            <div class="col-md-6">
                 <div class="heading-area history1-heading">
                     <h2 class="title alt-color">Title</h2>
-                    <p class="para">There are many variations of passages of Lorem Ipsum available, but the majority
+                    <p class="para" style="color: #282525;">There are many variations of passages of Lorem Ipsum available, but the majority
                         have suffered alteration in some form, by injected humour, or randomised words which don't look
                         even slightly believable. If you are going to use a passage of Lorem Ipsum.</p>
                 </div>
             </div>
             <div class="col-md-6 wow fadeInRight">
-                <div class="half-img mt-5 pt-4 mt-lg-0 pt-lg-0">
+                <div class="half-img mt-2 pt-4 mt-lg-0 pt-lg-0">
                     <img alt="image" src="{{ asset('marketing-site/assets/img/consultation.jpg') }}">
                 </div>
             </div>
@@ -156,15 +165,15 @@
     <div class="container d-flex">
         <!-- Second Information Row -->
         <div class="row">
-            <div class="col-md-6 wow fadeInLeft">
-                <div class="half-img mt-5 pt-4 mt-lg-0 pt-lg-0">
+            <div class="col-md-6 wow fadeInLeft info2-img">
+                <div class="half-img mt-2 pt-4 mt-lg-0 pt-lg-0">
                     <img alt="image" src="{{ asset('marketing-site/assets/img/consultation.jpg') }}">
                 </div>
             </div>
-            <div class="col-md-6 wow">
+            <div class="col-md-6 info2-text">
                 <div class="heading-area">
                     <h2 class="title main-color">Title</h2>
-                    <p class="para">There are many variations of passages of Lorem Ipsum available, but the majority
+                    <p class="para" style="color: #282525;">There are many variations of passages of Lorem Ipsum available, but the majority
                         have suffered alteration in some form, by injected humour, or randomised words which don't look
                         even slightly believable. If you are going to use a passage of Lorem Ipsum.</p>
                 </div>
@@ -197,14 +206,14 @@
 <!--Vision End-->
 
 <!--Mission Start-->
-<section class="bg-light">
+<section>
     <div class="container">
-        <div class="heading-area text-center mb-5">
+        <div class="heading-area text-center mb-4">
             <h2 class="title">Our Mission</h2>
             <p class="para">There are many variations of passages of Lorem Ipsum available, but the majority
                 have suffered alteration in some form.</p>
         </div>
-        <!--Video Row-->
+        <!--Image Row-->
         <div class="row justify-content-center">
             <img class="mission-img" alt="image" src="{{ asset('marketing-site/assets/img/consultation.jpg') }}">
         </div>
@@ -214,7 +223,7 @@
 
 <!--Project VIRAC Start-->
 <section class="gradient-bg2">
-    <div class="auto-container px-5 mb-5">
+    <div class="container mb-5">
         <!--Heading Row-->
         <div class="row">
             <div class="col-md-12 text-center mb-5">
@@ -254,7 +263,7 @@
             </div>
             <div class="col-md-6">
                 <div class="heading-area">
-                    <h2 class="title">Lorem Ipsum</h2>
+                    <h3 style="color: #282525;">Lorem Ipsum</h3>
                     <p class="para text-white">There are many variations of passages of Lorem Ipsum available, but the majority
                         have suffered alteration in some form, by injected humour, or randomised words which don't look
                         even slightly believable.</p>
@@ -262,19 +271,19 @@
             </div>
         </div>
     </div>
-    <div class="auto-container px-5">
+    <div class="container">
         <!--Heading Row-->
-        <div class="row virac-vid-row">
-            <div class="col-md-6 mb-3">
-                <div class="heading-area mb-lg-4 mb-3 virac-vid-heading">
-                    <h2 class="title">Lorem Ipsum</h2>
-                    <p class="para pt-2 text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tincidunt
+        <div class="row virac-vid-row" style="text-align: right;">
+            <div class="col-md-6 mb-3 virac-vid-text">
+                <div class="heading-area">
+                    <h3 style="color: #282525;">Lorem Ipsum</h3>
+                    <p class="para text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tincidunt
                     egestas nunc, at pellentesque arcu sollicitudin et. Aliquam hendrerit diam quis ipsum
                     ultricies, quis ultricies arcu suscipit. Lorem ipsum dolor sit amet, consectetur adipiscing
                     elit. Fusce ut diam quis nulla faucibus venenatis. </p>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 mb-3 virac-vid">
                 <!--Video Row-->
                 <div class="row justify-content-center">
                     <video class="virac-video" preload="none" controls poster="{{ asset('marketing-site/assets/agency/img/blog-news-1.jpg')}}" playsinline>
