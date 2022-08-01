@@ -139,6 +139,51 @@
         background-color: rgba(35, 122, 254, .9);
     }
 
+    :root {
+        --marquee-width: 100vw;
+        --marquee-height: 70vh;
+        --marquee-elements-displayed: 2;
+        --marquee-element-width: calc(var(--marquee-width)/var(--marquee-elements-displayed));
+        --marquee-animation-duration: calc(var(--marquee-elements) * 2s);
+    }
+
+    .marquee{
+        overflow: hidden;
+        width: var(--marquee-width);
+        height: var(--marquee-height);
+    }
+
+    .marquee-content{
+        list-style: none;
+        height: 100%;
+        animation: scrolling var(--marquee-animation-duration) linear infinite;
+    }
+
+    .marquee-content li {
+        white-space: no-wrap;
+        width: var(--marquee-element-width);
+        flex-shrink: 1;
+    }
+
+    @keyframes scrolling{
+        0% {
+            transform: translateX(100);
+        }
+        100% {
+            transform: translateX(calc(-1*var(--marquee-element-width)*var(--marquee-elements-displayed)));
+        }
+    }
+
+    .ir-kids-club-description-section{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 70vh;
+        z-index: 2;
+        background-color: rgba(35, 122, 254, .9);
+    }
+
 </style>
 
 <!--WELCOME Start-->
@@ -511,8 +556,8 @@
 <!--TESTIMONIES End-->
 
 <!--KIDS CLUB Start-->
-<section id="kids-club-section" class="ir-kids-avatar">
-    <div class="scrolling-img-container">
+<section id="kids-club-section" class="ir-kids-avatar p-0 m-0">
+    <!-- <div class="scrolling-img-container">
         <div class="scrolling-img">
             <div class="row overlay-text">
                 <div class="col-md-12 wow fadeInUp">
@@ -533,6 +578,43 @@
                         </a>
                     </div>
                 </div> 
+            </div>
+        </div>
+    </div> -->
+
+    <!-- Marquee -->
+    <div class="marquee d-flex align-items-center justify-content-center">
+        <ul id="ir-kids-club-list" class="marquee-content d-flex align-items-center justify-content-center">
+            <li class="d-flex align-items-center justify-content-center"><img src="{{ asset('marketing-site/assets/agency/img/vector-art-2.png') }}" /></li>
+            <li class="d-flex align-items-center justify-content-center"><img src="{{ asset('marketing-site/assets/agency/img/vector-art-2.png') }}" /></li>
+            <li class="d-flex align-items-center justify-content-center"><img src="{{ asset('marketing-site/assets/agency/img/vector-art-2.png') }}" /></li>
+            <li class="d-flex align-items-center justify-content-center"><img src="{{ asset('marketing-site/assets/agency/img/vector-art-2.png') }}" /></li>
+            <li class="d-flex align-items-center justify-content-center"><img src="{{ asset('marketing-site/assets/agency/img/vector-art-2.png') }}" /></li>
+            <li class="d-flex align-items-center justify-content-center"><img src="{{ asset('marketing-site/assets/agency/img/vector-art-2.png') }}" /></li>
+        
+        </ul>
+    </div>
+
+    <!-- IR Kids Description -->
+    <div class="ir-kids-club-description-section d-flex align-items-center justify-content-center">
+        <div class="row">
+            <div class="col-md-12 wow fadeInUp">
+                <div class="heading-area mx-570 mb-5 text-center">
+                    <h1 class="text-white font-weight-bold">Join the Instant Reader <span class="main-color">Kids Club</span></h1>
+                    <p class="text-white">The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 
+                        from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions 
+                        from the 1914 translation by H. Rackham.</p>
+                    <a class="btn btn-xlarge btn-rounded btn-pink btn-hvr-blue mt-3" href="{{ route('learn-more.reading-assessment') }}">Book Online Reading Assessment
+                        <div class="btn-hvr-setting">
+                            <ul class="btn-hvr-setting-inner">
+                                <li class="btn-hvr-effect"></li>
+                                <li class="btn-hvr-effect"></li>
+                                <li class="btn-hvr-effect"></li>
+                                <li class="btn-hvr-effect"></li>
+                            </ul>
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
@@ -570,6 +652,19 @@
     </div>
 </section>
 <!-- ENROLL NOW End -->
+
+<script>
+    const root = document.documentElement;
+    const marqueeElementDisplayed = getComputedStyle(root).getPropertyValue("--marquee-elements-displayed");
+    const marqueeContent = document.querySelector(".marquee-content");
+
+    console.log(root);
+
+    root.style.setProperty("--marquee-elements", marqueeContent.children.length);
+    for (let i=0; i<marqueeElementDisplayed+1; i++){
+        marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true));
+    }
+</script>
 
 <!--PAGE CONTENT END-->
 @endsection
