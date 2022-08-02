@@ -43,7 +43,7 @@
 
 <!--Tips/Resources Library Start-->
 <section class="library bg-light">
-    <div class="auto-container px-5">
+    <div class="container">
          <!--Row of Heading-->
          <div class="row">
             <div class="col-md-12 text-center">
