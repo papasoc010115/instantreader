@@ -14,6 +14,12 @@
         .form-heading {
             text-align: center;
         }
+        .desc-img {
+            order: 2;
+        }
+        .desc-text {
+            order: 1;
+        }
     }
 </style>
 <!-- Style End -->
@@ -41,12 +47,12 @@
 <section class="bg-light">
     <div class="container desc-2">
         <div class="row">
-            <div class="col-md-6 wow fadeInLeft">
-                <div class="half-img mt-5 pt-4 mt-lg-0 pt-lg-0">
+            <div class="col-md-6 wow fadeInLeft desc-img">
+                <div class="half-img mt-3 pt-4 mt-lg-2 pt-lg-0">
                     <img alt="image" src="{{ asset('marketing-site/assets/img/consultation.jpg') }}">
                 </div>
             </div>
-            <div class="col-md-6 wow fadeInRight">
+            <div class="col-md-6 wow fadeInRight desc-text">
                 <div class="heading-area">
                     <h2 class="title">Job Description</h2>
                     <p class="para">There are many variations of passages of Lorem Ipsum available, but the majority
@@ -63,7 +69,7 @@
 <section class="gradient-bg1">
     <div class="container d-flex">
         <div class="row">
-            <div class="col-md-6 wow">
+            <div class="col-md-6 reqs-text">
                 <div class="heading-area">
                     <h2 class="title text-white">Job Requirements</h2>
                     <p class="para text-white">There are many variations of passages of Lorem Ipsum available, but the majority
@@ -71,8 +77,8 @@
                         even slightly believable. If you are going to use a passage of Lorem Ipsum.</p>
                 </div>
             </div>
-            <div class="col-md-6 wow fadeInRight">
-                <div class="half-img mt-5 pt-4 mt-lg-0 pt-lg-0">
+            <div class="col-md-6 wow fadeInRight reqs-img">
+                <div class="half-img mt-3 pt-4 mt-lg-3 pt-lg-0">
                     <img alt="image" src="{{ asset('marketing-site/assets/img/consultation.jpg') }}">
                 </div>
             </div>
