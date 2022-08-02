@@ -2,8 +2,6 @@
 
 @section('content')
 
-<!-- by: rmhizon -->
-
 <!--PAGE CONTENT START -->
 
 <!-- Style -->
@@ -112,6 +110,27 @@
             background-position: -10000px 0;
         }
     }
+    @media only screen and (min-width: 768px) {
+        .carousel-text {
+            text-align: right;
+        }
+        .half-para { /* for col-md-6 paragraphs in desktop-view (left-aligned)*/
+            text-align: justify;
+        }
+        .half-para-right { /* for col-md-6 paragraphs in desktop-view (right-aligned)*/
+            text-align: justify;
+            text-align-last: right;
+        }
+    }
+    @media only screen and (max-width: 767px) {
+        .carousel-text {
+            order: 2;
+            text-align: center;
+        }
+        .carousel-imgs {
+            order: 1;
+        }
+    }
 </style>
 
 <!-- Introduction -->
@@ -125,16 +144,59 @@
 </section>
 
 <section>
-    <div class="container">
+    <div class="container mb-5">
         <div class="row">            
             <div class="col-md-6">
-                <img src="{{ asset('marketing-site/assets/img/kids-club-img1.png') }}" alt="img">
+                <!--Video Row-->
+                <div class="row mb-3">
+                    <video class="kidsclub-video" preload="none" controls poster="{{ asset('marketing-site/assets/agency/img/blog-news-1.jpg')}}" playsinline>
+                        <source src="{{ asset('marketing-site/assets/agency/img/video.mp4') }}" type="video/mp4">
+                    </video>
+                </div>
             </div>  
-            <div class="col-md-6">
+            <div class="col-md-6 video-text">
                 <h1>The Metaverse</h1>
-                <p class="align-left" style="color: #282525">
+                <p class="half-para" style="color: #282525;">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing diam donec adipiscing tristique risus nec feugiat. Rhoncus urna neque viverra justo nec ultrices dui sapien. Egestas sed tempus urna et pharetra pharetra massa massa ultricies. Donec ac odio tempor orci dapibus ultrices in iaculis nunc. Gravida rutrum quisque non tellus orci. Et egestas quis ipsum suspendisse ultrices gravida dictum. Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper. Ultrices dui sapien eget mi. Aliquam eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis. Netus et malesuada fames ac turpis egestas. Dolor sit amet consectetur adipiscing elit.
                 </p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 carousel-text">
+                <h1>Lorem Ipsum</h1>
+                <p class="half-para-right" style="color: #282525">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing diam donec adipiscing tristique risus nec feugiat. Rhoncus urna neque viverra justo nec ultrices dui sapien. Egestas sed tempus urna et pharetra pharetra massa massa ultricies. Donec ac odio tempor orci dapibus ultrices in iaculis nunc. Gravida rutrum quisque non tellus orci. Et egestas quis ipsum suspendisse ultrices gravida dictum. Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper. Ultrices dui sapien eget mi. Aliquam eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis.
+                </p>
+            </div>
+            <div class="col-md-6 mb-3 carousel-imgs">
+                <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                        <img src="{{ asset('marketing-site/assets/img/tutor-application.jpg') }}" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                        <img src="{{ asset('marketing-site/assets/img/consultation.jpg') }}" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                        <img src="{{ asset('marketing-site/assets/img/tutor-application.jpg') }}" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
             </div>
         </div>
     </div>
