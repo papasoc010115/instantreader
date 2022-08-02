@@ -55,7 +55,7 @@
                 <ul class="navbar-nav ms-auto text-center">
                     <li>
                         <a
-                            href="/admin/home"
+                            href="{{ route('marketing-admin.home') }}"
                             class="nav-link px-5"
                             id="home-link"
                             >Home</a
@@ -63,7 +63,7 @@
                     </li>
                     <li>
                         <a
-                            href="/admin/learn-more"
+                            href="{{ route('marketing-admin.learn-more') }}"
                             class="nav-link px-5"
                             id="learn-more-link"
                             >Learn More</a
@@ -71,19 +71,20 @@
                     </li>
                     <li>
                         <a
-                            href="/admin/contact-us"
+                            href="{{ route('marketing-admin.contact-us') }}"
                             class="nav-link px-5"
                             id="contact-us-link"
                             >Contact Us</a
                         >
                     </li>
-                    <li>
-                        <a
-                            href="/admin/about-us"
-                            class="nav-link px-5"
-                            id="about-us-link"
-                            >About Us</a
-                        >
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="about-us-link" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            About Us
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="about-us-link">
+                            <li><a class="dropdown-item" href="{{ route('marketing-admin.about-us.founder') }}">Founders and Developers</a></li>
+                            <li><a class="dropdown-item" href="{{ route('marketing-admin.about-us.testimonials') }}">Testimonials</a></li>
+                        </ul>
                     </li>
                     <li>
                         <a

@@ -13,30 +13,18 @@ window.onload = function () {
         }
 
         var path = window.location.pathname; // current path
-        switch (path) {
-            case "/admin/home":
-                document.getElementById("home-link").classList.add("active");
-                break;
-            case "/admin/learn-more":
-                document
-                    .getElementById("learn-more-link")
-                    .classList.add("active");
-                break;
-            case "/admin/contact-us":
-                document
-                    .getElementById("contact-us-link")
-                    .classList.add("active");
-                break;
-            case "/admin/about-us":
-                document
-                    .getElementById("about-us-link")
-                    .classList.add("active");
-                break;
-            case "/admin/additional-resources":
-                document
-                    .getElementById("additional-resources-link")
-                    .classList.add("active");
-                break;
+        if (path === "/admin/home") {
+            document.getElementById("home-link").classList.add("active");
+        } else if (path.includes("/admin/learn-more")) {
+            document.getElementById("learn-more-link").classList.add("active");
+        } else if (path.includes("/admin/contact-us")) {
+            document.getElementById("contact-us-link").classList.add("active");
+        } else if (path.includes("/admin/about-us")) {
+            document.getElementById("about-us-link").classList.add("active");
+        } else if (path.includes("/admin/additional-resources")) {
+            document
+                .getElementById("additional-resources-link")
+                .classList.add("active");
         }
     } catch {}
 };
