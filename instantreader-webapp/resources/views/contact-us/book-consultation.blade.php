@@ -35,7 +35,7 @@
 
 <!--Section 1 Start-->
 <!--Description 1 Start-->
-<section class="gradient-bg1">
+<section>
     <div class="container desc-2">
         <div class="row">
             <div class="col-md-6 wow fadeInLeft">
@@ -45,9 +45,9 @@
             </div>
             <div class="col-md-6 wow fadeInRight">
                 <div class="heading-area">
-                    <h2 class="title text-white"><span class="main-color js-rotating">Robust Design, Creative Idea</span> and
+                    <h2 class="title"><span class="alt-color js-rotating">Robust Design, Creative Idea</span> and
                         Development Solutions</h2>
-                    <p class="para text-white">There are many variations of passages of Lorem Ipsum available, but the majority
+                    <p class="para">There are many variations of passages of Lorem Ipsum available, but the majority
                         have suffered alteration in some form, by injected humour, or randomised words which don't look
                         even slightly believable. If you are going to use a passage of Lorem Ipsum.</p>
                 </div>
@@ -82,7 +82,7 @@
 <!--Section 1 End-->
 
 <!--Section 2 Start-->
-<section class="gradient-bg2">
+<section>
     <div class="container desc-2">
         <div class="row">
             <div class="col-md-6 wow fadeInLeft">
@@ -92,8 +92,8 @@
             </div>
             <div class="col-md-6 wow fadeInRight">
                 <div class="heading-area">
-                    <h2 class="title text-white">Calendar</h2>
-                    <p class="para text-white">There are many variations of passages of Lorem Ipsum available, but the majority
+                    <h2 class="title alt-color">Calendar</h2>
+                    <p class="para">There are many variations of passages of Lorem Ipsum available, but the majority
                         have suffered alteration in some form, by injected humour, or randomised words which don't look
                         even slightly believable. If you are going to use a passage of Lorem Ipsum.</p>
                 </div>
@@ -104,14 +104,14 @@
 <!--Section 2 End-->
 
 <!--Booking Form Start-->
-<section class="contact-us" id="consultation">
+<section class="contact-us" id="consultation" style="background-color: #562FB7;">
 
     <div class="container">
 
         <div class="col-md-12 mt-4 pt-3 mt-lg-0 pt-lg-0 wow">
             <!--Heading-->
             <div class="heading-area pb-2 form-heading">
-                <h2 class="title mt-0">Booking Form</h2>
+                <h3 class="title text-white mt-0">Booking Form</h3>
             </div>
             <!--Form-->
 
@@ -208,7 +208,7 @@
                     </div>
 
                     <!-- Concerns/Goals Location Field -->
-                    <div class="form-group row mb-3">
+                    <div class="form-group row mb-4">
                         <div class="col-md-12">
                             <textarea class="form-control" id="concernsGoals" rows="3" placeholder="Concerns/Goals for Child" required="true"></textarea>
                         </div>
