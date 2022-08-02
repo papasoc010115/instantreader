@@ -161,8 +161,12 @@
     .marquee-content li {
         white-space: no-wrap;
         width: var(--marquee-element-width);
-        flex-shrink: 1;
+        flex-shrink: 0;
     }
+
+    /* .marquee-content img {
+        object-fit: cover;
+    } */
 
     @keyframes scrolling{
         0% {
@@ -193,8 +197,8 @@
         <div class="layer-two"></div>
     </div> -->
     <div class="auto-container">
-        <h2 class="hide-cursor" id="welcome-title">Welcome to Instant Reader!</h2>
-        <p class="text-white" id="welcome-paragraph">
+        <h2 class="hide-cursor px-3" id="welcome-title">Welcome to Instant Reader!</h2>
+        <p class="text-white px-3" id="welcome-paragraph">
             There are many variations of passages of Lorem Ipsum available, but the majority
             have suffered alteration in some form, by injected humour, or randomised words which don't look
             even slightly believable.
@@ -245,7 +249,7 @@
                         have suffered alteration in some form, by injected humour, or randomised words which don't look
                         even slightly believable. If you are going to use a passage of Lorem Ipsum.
                     </p>
-                    <a data-fancybox data-animation-duration="500" data-src="#animatedModal" href="javascript:void(0);" class="btn btn-large btn-rounded btn-pink btn-hvr-blue mt-3">Book Appointment for Live Agent
+                    <a data-fancybox data-animation-duration="500" data-src="#animatedModal" href="javascript:void(0);" class="btn btn-large btn-rounded btn-pink btn-hvr-blue my-3">Book Appointment for Live Agent
                         <div class="btn-hvr-setting">
                             <ul class="btn-hvr-setting-inner">
                                 <li class="btn-hvr-effect"></li>
@@ -666,12 +670,12 @@
     <!-- Marquee -->
     <div class="marquee d-flex align-items-center justify-content-center">
         <ul id="ir-kids-club-list" class="marquee-content d-flex align-items-center justify-content-center">
-            <li class="d-flex align-items-center justify-content-center"><img src="{{ asset('marketing-site/assets/agency/img/vector-art-2.png') }}" /></li>
-            <li class="d-flex align-items-center justify-content-center"><img src="{{ asset('marketing-site/assets/agency/img/vector-art-2.png') }}" /></li>
-            <li class="d-flex align-items-center justify-content-center"><img src="{{ asset('marketing-site/assets/agency/img/vector-art-2.png') }}" /></li>
-            <li class="d-flex align-items-center justify-content-center"><img src="{{ asset('marketing-site/assets/agency/img/vector-art-2.png') }}" /></li>
-            <li class="d-flex align-items-center justify-content-center"><img src="{{ asset('marketing-site/assets/agency/img/vector-art-2.png') }}" /></li>
-            <li class="d-flex align-items-center justify-content-center"><img src="{{ asset('marketing-site/assets/agency/img/vector-art-2.png') }}" /></li>
+            <li class="d-flex align-items-center justify-content-center"><img class="marquee-image" src="{{ asset('marketing-site/assets/agency/img/vector-art-2.png') }}" /></li>
+            <li class="d-flex align-items-center justify-content-center"><img class="marquee-image" src="{{ asset('marketing-site/assets/agency/img/vector-art-2.png') }}" /></li>
+            <li class="d-flex align-items-center justify-content-center"><img class="marquee-image" src="{{ asset('marketing-site/assets/agency/img/vector-art-2.png') }}" /></li>
+            <li class="d-flex align-items-center justify-content-center"><img class="marquee-image" src="{{ asset('marketing-site/assets/agency/img/vector-art-2.png') }}" /></li>
+            <li class="d-flex align-items-center justify-content-center"><img class="marquee-image" src="{{ asset('marketing-site/assets/agency/img/vector-art-2.png') }}" /></li>
+            <li class="d-flex align-items-center justify-content-center"><img class="marquee-image" src="{{ asset('marketing-site/assets/agency/img/vector-art-2.png') }}" /></li>
         
         </ul>
     </div>

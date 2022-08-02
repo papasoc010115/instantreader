@@ -1,12 +1,19 @@
 <?php
 
-namespace App\Http\Controllers;
+// by: ecdcabalda
 
+// This is where the forms from different pages are validated.
+// So far, only the captcha field is being checked.
+// To check the data being passed to this controller, uncomment 'dd($request->all())' 
+//      inside the appropriate function 
+
+namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 class FormController extends Controller
 {
 
+    // SIGN-UP form validation
     public function store_user(Request $request)
     {
         $request->validate([
@@ -25,10 +32,14 @@ class FormController extends Controller
                 }]
         ]);
 
+        // uncomment the next line of code to check the 
+        // dd($request->all());
+
         // if captcha is successful, redirect to home page
         return redirect()->route('home');
     }
 
+    // ONLINE READING ASSESSMENT form validation
     public function store_ora(Request $request)
     {
         $request->validate([
@@ -47,10 +58,14 @@ class FormController extends Controller
                 }]
         ]);
 
+        // uncomment the next line of code to check the 
+        // dd($request->all());
+
         // if captcha is successful, redirect to home page
         return redirect()->route('home');
     }
 
+    // JOB APPLICATION form validation
     public function store_application(Request $request)
     {
         $request->validate([
@@ -69,10 +84,14 @@ class FormController extends Controller
                 }]
         ]);
 
+        // uncomment the next line of code to check the 
+        // dd($request->all());
+
         // if captcha is successful, redirect to home page
         return redirect()->route('home');
     }
 
+    // ONLINE CONSULTATION form validation
     public function store_consultation(Request $request)
     {
         $request->validate([
@@ -91,10 +110,14 @@ class FormController extends Controller
                 }]
         ]);
 
+        // uncomment the next line of code to check the 
+        // dd($request->all());
+
         // if captcha is successful, redirect to home page
         return redirect()->route('home');
     }
 
+    // PARENT ORIENTATION form validation
     public function store_orientation(Request $request)
     {
         $request->validate([
@@ -113,10 +136,14 @@ class FormController extends Controller
                 }]
         ]);
 
+        // uncomment the next line of code to check the 
+        // dd($request->all());
+
         // if captcha is successful, redirect to home page
         return redirect()->route('learn-more.reading-assessment');
     }
 
+    // FOUNDER NEWSLETTER form validation
     public function store_founder(Request $request)
     {
         $request->validate([
@@ -134,6 +161,9 @@ class FormController extends Controller
                     $response = json_decode($response);
                 }]
         ]);
+
+        // uncomment the next line of code to check the 
+        // dd($request->all());
 
         // if captcha is successful, redirect to home page
         return redirect()->route('home');
