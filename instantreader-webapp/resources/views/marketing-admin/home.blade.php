@@ -71,12 +71,12 @@
             </form>
             <!-- End of Metadata -->
             
-            <br><br>
+            <br><br><br>
 
             <!-- Section 1: Instant Reader Welcome Screen -->
             <div class="row">
                 <div class="col-lg-12">
-                    <h2>Section 1</h2>
+                    <h2>Section 1: Instant Reader Welcome Screen</h2>
                 </div>
             </div>
 
@@ -123,12 +123,12 @@
             </form>
             <!-- End of Section 1 -->
 
-            <br><br>
+            <br><br><br>
 
             <!-- Section 2: Highlight Video -->
             <div class="row">
                 <div class="col-lg-12">
-                    <h2>Section 2</h2>
+                    <h2>Section 2: Highlight Video</h2>
                 </div>
             </div>
 
@@ -175,12 +175,12 @@
             </form>
             <!-- End of Section 2 -->
 
-            <br><br>
+            <br><br><br>
 
             <!-- Section 3: Live Parent Orientation -->
             <div class="row">
                 <div class="col-lg-12">
-                    <h2>Section 3</h2>
+                    <h2>Section 3: Live Parent Orientation</h2>
                 </div>
             </div>
 
@@ -227,12 +227,12 @@
             </form>
             <!-- End of Section 3 -->
 
-            <br><br>
+            <br><br><br>
 
             <!-- Section 4: T. Vicki & Likha -->
             <div class="row">
                 <div class="col-lg-12">
-                    <h2>Section 4</h2>
+                    <h2>Section 4: Teacher Vicki & Likha</h2>
                 </div>
             </div>
 
@@ -311,12 +311,12 @@
             </form>
             <!-- End of Section 4 -->
 
-            <br><br>
+            <br><br><br>
 
             <!-- Section 5: Area Jurisdictions -->
             <div class="row">
                 <div class="col-lg-12">
-                    <h2>Section 5</h2>
+                    <h2>Section 5: Area Jurisdictions</h2>
                 </div>
             </div>
             
@@ -352,12 +352,12 @@
             </script>
             <!-- End of Section 5 -->
 
-            <br><br>
+            <br><br><br>
 
             <!-- Section 6: Testimonies -->
             <div class="row">
                 <div class="col-lg-12">
-                    <h2>Section 6</h2>
+                    <h2>Section 6: Testimonies</h2>
                 </div>
             </div>
             
@@ -404,12 +404,12 @@
             </form>
             <!-- End of Section 6 -->
 
-            <br><br>
+            <br><br><br>
 
             <!-- Section 7: Instant Reader Kids Club -->
             <div class="row">
                 <div class="col-lg-12">
-                    <h2>Section 7</h2>
+                    <h2>Section 7: Instant Reader Kids Club</h2>
                 </div>
             </div>
 
@@ -456,12 +456,12 @@
             </form>
             <!-- End of Section 7 -->
 
-            <br><br>
+            <br><br><br>
 
             <!-- Section 8: Enroll Now -->
             <div class="row">
                 <div class="col-lg-12">
-                    <h2>Section 8</h2>
+                    <h2>Section 8: Enroll Now</h2>
                 </div>
             </div>
 
