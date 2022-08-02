@@ -28,7 +28,7 @@
 <!--BANNER End-->
 
 <!--LOG IN FORM Start-->
-<section class="pb-0 account-form">
+<section class="px-3 account-form">
     <form class="form-group" id="log-in-form-data">
         @csrf
         <!-- Email Field -->

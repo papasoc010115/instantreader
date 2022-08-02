@@ -28,12 +28,12 @@
 <!--BANNER End-->
 
 <!--SIGN UP FORM Start-->
-<section class="pb-0 account-form">
+<section class="px-3 account-form">
     <form action="{{ route('account.store_user') }}" method="POST" class="form-group" id="sign-up-form-data">
         @csrf
         <!-- User Name Fields -->
         <div class="form-group row mb-4">
-            <div class="col-md-6">
+            <div class="col-md-6 mt-4">
                 <input
                     type="text"
                     class="form-control form-control-user"
@@ -42,7 +42,7 @@
                     required="true"
                 />
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 mt-4">
                 <input
                     type="text"
                     class="form-control form-control-user"

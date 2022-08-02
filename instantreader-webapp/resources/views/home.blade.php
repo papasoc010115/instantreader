@@ -164,9 +164,6 @@
         flex-shrink: 0;
     }
 
-    /* .marquee-content img {
-        object-fit: cover;
-    } */
 
     @keyframes scrolling{
         0% {
@@ -182,7 +179,7 @@
         top: 0;
         left: 0;
         width: 100vw;
-        height: 70vh;
+        min-height: 70vh;
         z-index: 2;
         background-color: rgba(35, 122, 254, .9);
     }
@@ -241,7 +238,7 @@
 <section id="parent-orientation-section" class="pb-0">
     <div class="container live-parent-margin white-text">
         <div class="row d-flex align-items-center">
-            <div class="col-lg-6 wow fadeInLeft">
+            <div class="col-lg-6 wow fadeInLeft mb-4">
                 <div class="heading-area">
                     <h2 class="title"><span class="main-color js-rotating">LIVE, FREE</span> Parent Orientations</h2>
                     <h4 class="sub-title">Every <span class="alt-color js-rotating">Tuesday, Thursday, Saturday</span> 8 PM (PH Time)</h4>
@@ -667,42 +664,45 @@
         </div>
     </div> -->
 
-    <!-- Marquee -->
-    <div class="marquee d-flex align-items-center justify-content-center">
-        <ul id="ir-kids-club-list" class="marquee-content d-flex align-items-center justify-content-center">
-            <li class="d-flex align-items-center justify-content-center"><img class="marquee-image" src="{{ asset('marketing-site/assets/agency/img/vector-art-2.png') }}" /></li>
-            <li class="d-flex align-items-center justify-content-center"><img class="marquee-image" src="{{ asset('marketing-site/assets/agency/img/vector-art-2.png') }}" /></li>
-            <li class="d-flex align-items-center justify-content-center"><img class="marquee-image" src="{{ asset('marketing-site/assets/agency/img/vector-art-2.png') }}" /></li>
-            <li class="d-flex align-items-center justify-content-center"><img class="marquee-image" src="{{ asset('marketing-site/assets/agency/img/vector-art-2.png') }}" /></li>
-            <li class="d-flex align-items-center justify-content-center"><img class="marquee-image" src="{{ asset('marketing-site/assets/agency/img/vector-art-2.png') }}" /></li>
-            <li class="d-flex align-items-center justify-content-center"><img class="marquee-image" src="{{ asset('marketing-site/assets/agency/img/vector-art-2.png') }}" /></li>
-        
-        </ul>
-    </div>
+    <div class="container-fluid m-0 p-0">
+        <!-- Marquee -->
+        <div class="marquee d-flex align-items-center justify-content-center">
+            <ul id="ir-kids-club-list" class="marquee-content d-flex align-items-center justify-content-center">
+                <li class="d-flex align-items-center justify-content-center"><img class="marquee-image" src="{{ asset('marketing-site/assets/agency/img/vector-art-2.png') }}" /></li>
+                <li class="d-flex align-items-center justify-content-center"><img class="marquee-image" src="{{ asset('marketing-site/assets/agency/img/vector-art-2.png') }}" /></li>
+                <li class="d-flex align-items-center justify-content-center"><img class="marquee-image" src="{{ asset('marketing-site/assets/agency/img/vector-art-2.png') }}" /></li>
+                <li class="d-flex align-items-center justify-content-center"><img class="marquee-image" src="{{ asset('marketing-site/assets/agency/img/vector-art-2.png') }}" /></li>
+                <li class="d-flex align-items-center justify-content-center"><img class="marquee-image" src="{{ asset('marketing-site/assets/agency/img/vector-art-2.png') }}" /></li>
+                <li class="d-flex align-items-center justify-content-center"><img class="marquee-image" src="{{ asset('marketing-site/assets/agency/img/vector-art-2.png') }}" /></li>
+            
+            </ul>
+        </div>
 
-    <!-- IR Kids Description -->
-    <div class="ir-kids-club-description-section d-flex align-items-center justify-content-center">
-        <div class="row">
-            <div class="col-md-12 wow fadeInUp">
-                <div class="heading-area mx-570 mb-5 text-center">
-                    <h1 class="text-white font-weight-bold">Join the Instant Reader <span class="main-color">Kids Club</span></h1>
-                    <p class="text-white">The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 
-                        from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions 
-                        from the 1914 translation by H. Rackham.</p>
-                    <a class="btn btn-xlarge btn-rounded btn-pink btn-hvr-blue mt-3" href="{{ route('learn-more.reading-assessment') }}">Book Online Reading Assessment
-                        <div class="btn-hvr-setting">
-                            <ul class="btn-hvr-setting-inner">
-                                <li class="btn-hvr-effect"></li>
-                                <li class="btn-hvr-effect"></li>
-                                <li class="btn-hvr-effect"></li>
-                                <li class="btn-hvr-effect"></li>
-                            </ul>
-                        </div>
-                    </a>
+        <!-- IR Kids Description -->
+        <div class="ir-kids-club-description-section d-flex align-items-center justify-content-center p-5">
+            <div class="row">
+                <div class="col-md-12 wow fadeInUp">
+                    <div class="heading-area mx-570 mb-5 text-center">
+                        <h1 class="text-white font-weight-bold pb-5">Join the Instant Reader <span class="main-color">Kids Club</span></h1>
+                        <p class="text-white">The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 
+                            from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions 
+                            from the 1914 translation by H. Rackham.</p>
+                        <a class="btn btn-xlarge btn-rounded btn-pink btn-hvr-blue mt-3" href="{{ route('learn-more.reading-assessment') }}">Book Online Reading Assessment
+                            <div class="btn-hvr-setting">
+                                <ul class="btn-hvr-setting-inner">
+                                    <li class="btn-hvr-effect"></li>
+                                    <li class="btn-hvr-effect"></li>
+                                    <li class="btn-hvr-effect"></li>
+                                    <li class="btn-hvr-effect"></li>
+                                </ul>
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    
 </section>
 <!--KIDS CLUB End-->
 
