@@ -7,6 +7,9 @@
     .founder-video {
         max-width: 100%;
     }
+    hr {
+        border-top: 1px solid;
+    }
     .mission-img {
         max-width: 100%;
     }
@@ -154,9 +157,10 @@
             </video>
         </div>
     </div>
+    <hr class="alt-color"/>
     <div class="container d-flex mb-5">
         <!-- First Information Row -->
-        <div class="row">
+        <div class="row mt-4">
             <div class="col-md-6">
                 <div class="heading-area history1-heading">
                     <h2 class="title alt-color">Title</h2>
@@ -172,9 +176,10 @@
             </div>
         </div>
     </div>
+    <hr class="alt-color"/>
     <div class="container d-flex">
         <!-- Second Information Row -->
-        <div class="row">
+        <div class="row mt-4">
             <div class="col-md-6 wow fadeInLeft info2-img">
                 <div class="half-img mt-2 pt-4 mt-lg-0 pt-lg-0">
                     <img alt="image" src="{{ asset('marketing-site/assets/img/consultation.jpg') }}">
@@ -182,7 +187,7 @@
             </div>
             <div class="col-md-6 info2-text">
                 <div class="heading-area">
-                    <h2 class="title main-color">Title</h2>
+                    <h2 class="title alt-color">Title</h2>
                     <p class="para half-para" style="color: #282525;">There are many variations of passages of Lorem Ipsum available, but the majority
                         have suffered alteration in some form, by injected humour, or randomised words which don't look
                         even slightly believable. If you are going to use a passage of Lorem Ipsum.</p>
