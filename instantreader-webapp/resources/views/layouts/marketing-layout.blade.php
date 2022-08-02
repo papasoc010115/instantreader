@@ -127,7 +127,6 @@
                     </li>
                     <!-- Enroll Now -->
                     <li class="nav-item main-link my-auto">
-                        <!-- NOTE: use this to open the modal data-src="#animatedModal" -->
                         <a href="{{ route('learn-more.reading-assessment') }}" class="btn btn-medium btn-rounded btn-transparent-white btn-hvr-white">Enroll Now
                             <div class="btn-hvr-setting">
                                 <ul class="btn-hvr-setting-inner">
@@ -216,6 +215,7 @@
 <!-- Other scripts from template -->
 <script src="{{ asset('marketing-site/assets/vendor/js/contact_us.js') }}"></script>
 <script src="{{ asset('marketing-site/assets/agency/js/script.js') }}"></script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 <!-- SCRIPTS ADDED (NOT FROM TEMPLATE) -->
 <!-- google map -->

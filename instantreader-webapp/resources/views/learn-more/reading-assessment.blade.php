@@ -76,36 +76,42 @@
         <h2 style="color: white; margin-bottom: 1em">
             Booking Form
         </h2>
-        <form class="contact-form">
+        <form action="{{ route('learn-more.store_ora') }}" method="POST" class="contact-form">
             @csrf
             <div class="row">
                 <!--Left Column-->
                 <div class="col-md-6 mb-4">                    
                     <div class="form-group">
-                        <input class="form-control" type="text" placeholder="Parent's First Name" required="true">
+                        <input class="form-control" name="oraParentFirstName" type="text" placeholder="Parent's First Name" required="true">
                     </div>
                     <div class="form-group">
-                        <input class="form-control" type="text" placeholder="Student's First Name" required="true">
+                        <input class="form-control" name="oraStudentFirstName" type="text" placeholder="Student's First Name" required="true">
                     </div>
                     <div class="form-group">
-                        <input class="form-control" type="tel" placeholder="Contact No. (WhatsApp/Viber)" required="true">
+                        <input class="form-control" name="oraContactNum" type="tel" placeholder="Contact No. (WhatsApp/Viber)" required="true">
                     </div>
                     <div class="form-group">
-                        <input class="form-control" type="text" placeholder="Country, City" required="true">
+                        <input class="form-control" name="oraCityCountry" type="text" placeholder="City, Country" required="true">
                     </div>
                 </div>
 
                 <!--Right Column-->
                 <div class="col-md-6 mb-3">
                     <div class="form-group">
-                        <input class="form-control" type="email" placeholder="Parent's Last Name" required="true">
+                        <input class="form-control" name="oraParentLastName" type="text" placeholder="Parent's Last Name" required="true">
                     </div>
                     <div class="form-group">
-                        <input class="form-control" type="text" placeholder="Student's Last Name" required="true">
+                        <input class="form-control" name="oraStudentLastName" type="text" placeholder="Student's Last Name" required="true">
                     </div>
                     <div class="form-group">
-                        <input class="form-control" type="email" placeholder="Email" required="true">
+                        <input class="form-control" name="oraEmail" type="email" placeholder="Email" required="true">
                     </div>
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col-md-12 d-flex justify-content-center">
+                    <div class="g-recaptcha" data-sitekey="6LdtbighAAAAAHhWzmWkWwkT53HNEcL5CPxg9PN_"></div>
                 </div>
             </div>
 
