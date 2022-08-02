@@ -42,13 +42,13 @@
 <!--Banner End-->
 
 <!--Tips/Resources Library Start-->
-<section class="library bg-light">
+<section class="library">
     <div class="container">
          <!--Row of Heading-->
          <div class="row">
             <div class="col-md-12 text-center">
                 <div class="heading-area mx-570 mb-md-4 mb-3 pb-2">
-                    <h1 class="title alt-color">Tips and Resources</h1>
+                    <h1 class="title" style="color: #562FB7;">Tips and Resources</h1>
                 </div>
             </div>
         </div>
@@ -170,7 +170,7 @@
 <!--E-books/PDFs End-->
 
 <!--Blogs Start-->
-<section  class="blog-resources bg-light">
+<section class="blog-resources">
     <div class="container">
         <!--Row-->
         <div class="row">
@@ -239,7 +239,7 @@
 <!--Blogs End-->
 
 <!--Video Resources Start-->
-<section class="video-resources gradient-bg2">
+<section class="video-resources" style="background-color: #4287f5">
     <div class="auto-container px-5">
         <!-- Heading -->
         <div class="row text-center"  style="margin-bottom: 2em;">
@@ -325,7 +325,7 @@
             </div>
             <div class="col-md-5">
                 <div class="heading-area">
-                    <h1 class="title alt-color">Lorem Ipsum</h1>
+                    <h1 class="title" style="color: #562FB7;">Lorem Ipsum</h1>
                     <p class="para">There are many variations of passages of Lorem Ipsum available, but the majority
                         have suffered alteration in some form, by injected humour, or randomised words which don't look
                         even slightly believable.</p>
