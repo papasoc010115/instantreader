@@ -50,10 +50,10 @@
         .info2-text {
             order: 1;
         }
-        .virac-vid-text {
+        .virac-imgs-text {
             order: 2;
         }
-        .virac-vid {
+        .virac-imgs {
             order: 1;
         }
     }
@@ -158,9 +158,9 @@
         </div>
     </div>
     <hr/>
-    <div class="container d-flex mb-5">
+    <div class="container d-flex mb-5 pb-3">
         <!-- First Information Row -->
-        <div class="row mt-4">
+        <div class="row mt-lg-5 pt-4 mb-lg-4">
             <div class="col-md-6">
                 <div class="heading-area history1-heading">
                     <h2 style="color: #562FB7;">Title</h2>
@@ -179,7 +179,7 @@
     <hr/>
     <div class="container d-flex">
         <!-- Second Information Row -->
-        <div class="row mt-4">
+        <div class="row mt-lg-5 pt-4">
             <div class="col-md-6 wow fadeInLeft info2-img">
                 <div class="half-img mt-2 pt-4 mt-lg-0 pt-lg-0">
                     <img alt="image" src="{{ asset('marketing-site/assets/img/consultation.jpg') }}">
@@ -247,8 +247,37 @@
                 </div>
             </div>
         </div>
+        <!--Video Row-->
+        <div class="row virac-vid-row" style="text-align: right;">
+            <!-- Video -->
+            <div class="col-md-6 mb-4 virac-vid">
+                <div class="row justify-content-center">
+                    <video class="virac-video" preload="none" controls poster="{{ asset('marketing-site/assets/agency/img/blog-news-1.jpg')}}" playsinline>
+                        <source src="{{ asset('marketing-site/assets/agency/img/video.mp4') }}" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <!-- Text -->
+            <div class="col-md-6 virac-vid-text">
+                <div class="heading-area">
+                    <p class="para half-para-right text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tincidunt
+                    egestas nunc, at pellentesque arcu sollicitudin et. Aliquam hendrerit diam quis ipsum
+                    ultricies, quis ultricies arcu suscipit. Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit. Fusce ut diam quis nulla faucibus venenatis. </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
         <div class="row virac-img-row">
-            <div class="col-md-6 mb-3">
+            <div class="col-md-6 virac-imgs-text">
+                <div class="heading-area">
+                    <p class="para half-para text-white">There are many variations of passages of Lorem Ipsum available, but the majority
+                        have suffered alteration in some form, by injected humour, or randomised words which don't look
+                        even slightly believable.</p>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4 mt-4 virac-imgs">
                 <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel">
                     <div class="carousel-indicators">
                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -274,34 +303,6 @@
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Next</span>
                     </button>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="heading-area">
-                    <p class="para half-para text-white">There are many variations of passages of Lorem Ipsum available, but the majority
-                        have suffered alteration in some form, by injected humour, or randomised words which don't look
-                        even slightly believable.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <!--Heading Row-->
-        <div class="row virac-vid-row" style="text-align: right;">
-            <div class="col-md-6 mb-3 virac-vid-text">
-                <div class="heading-area">
-                    <p class="para half-para-right text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tincidunt
-                    egestas nunc, at pellentesque arcu sollicitudin et. Aliquam hendrerit diam quis ipsum
-                    ultricies, quis ultricies arcu suscipit. Lorem ipsum dolor sit amet, consectetur adipiscing
-                    elit. Fusce ut diam quis nulla faucibus venenatis. </p>
-                </div>
-            </div>
-            <div class="col-md-6 mb-3 virac-vid">
-                <!--Video Row-->
-                <div class="row justify-content-center">
-                    <video class="virac-video" preload="none" controls poster="{{ asset('marketing-site/assets/agency/img/blog-news-1.jpg')}}" playsinline>
-                        <source src="{{ asset('marketing-site/assets/agency/img/video.mp4') }}" type="video/mp4">
-                    </video>
                 </div>
             </div>
         </div>
@@ -354,6 +355,7 @@
                                     class="form-control form-control-user"
                                     id="userFulltName"
                                     placeholder="Full Name"
+                                    required="true"
                                 />
                             </div>
                         </div>
@@ -366,6 +368,7 @@
                                     class="form-control form-control-user"
                                     id="userEmail"
                                     placeholder="Email"
+                                    required="true"
                                 />
                             </div>
                         </div>
@@ -378,6 +381,7 @@
                                     class="form-control form-control-user"
                                     id="userddress"
                                     placeholder="Current Country/City"
+                                    required="true"
                                 />
                             </div>
                         </div>
