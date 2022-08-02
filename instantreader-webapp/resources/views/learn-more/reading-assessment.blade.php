@@ -76,7 +76,7 @@
         <h2 style="color: white; margin-bottom: 1em">
             Booking Form
         </h2>
-        <form action="{{ route('reading-assessment.store_ora') }}" method="POST" class="contact-form">
+        <form action="{{ route('learn-more.store_ora') }}" method="POST" class="contact-form">
             @csrf
             <div class="row">
                 <!--Left Column-->

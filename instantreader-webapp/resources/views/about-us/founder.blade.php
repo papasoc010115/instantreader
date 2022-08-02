@@ -339,7 +339,7 @@
                     <h2 class="title mt-0">Sign-up Now</h2>
                 </div>
                 <!--Actual Form-->
-                <form class="newsletter-form" id="newsletter-form-data">
+                <form action="{{ route('about-us.store_founder') }}" method="POST" class="newsletter-form" id="newsletter-form-data">
                     @csrf
                     <div class="form-group row mb-3">
 
@@ -347,10 +347,12 @@
                         <div class="form-group row mb-4">
                             <div class="col-md-12">
                                 <input
+                                    name="founderName"
                                     type="text"
                                     class="form-control form-control-user"
-                                    id="userFulltName"
+                                    id="userFullName"
                                     placeholder="Full Name"
+                                    required="true"
                                 />
                             </div>
                         </div>
@@ -359,10 +361,12 @@
                         <div class="form-group row mb-4">
                             <div class="col-md-12">
                                 <input
+                                    name="founderEmail"
                                     type="email"
                                     class="form-control form-control-user"
                                     id="userEmail"
                                     placeholder="Email"
+                                    required="true"
                                 />
                             </div>
                         </div>
@@ -371,17 +375,26 @@
                         <div class="form-group row mb-4">
                             <div class="col-md-12">
                                 <input
+                                    name="founderAddress"
                                     type="text"
                                     class="form-control form-control-user"
-                                    id="userddress"
+                                    id="userAddress"
                                     placeholder="Current Country/City"
+                                    required="true"
                                 />
+                            </div>
+                        </div>
+
+                        <!-- Captcha Field -->
+                        <div class="row mb-4">
+                            <div class="col-md-12 d-flex justify-content-center">
+                                <div class="g-recaptcha" data-sitekey="6LdtbighAAAAAHhWzmWkWwkT53HNEcL5CPxg9PN_"></div>
                             </div>
                         </div>
 
                         <!--Button-->
                         <div class="col btn-col">
-                            <button class="btn btn-large btn-rounded btn-purple btn-hvr-blue">                    
+                            <button type="submit" class="btn btn-large btn-rounded btn-purple btn-hvr-blue">                    
                                 Submit
                                 <div class="btn-hvr-setting">
                                     <ul class="btn-hvr-setting-inner">

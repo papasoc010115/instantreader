@@ -159,7 +159,7 @@
                     </div>
                     
                     <!-- Resume field -->
-                    <div class="form-group row mb-5">
+                    <div class="form-group row mb-4">
                         <label for="applicantResume" class="col-md-2 col-form-label">Upload Résumé/CV</label>
                         <div class="col-md-4 custom-file">
                             <div class="custom-file">
@@ -170,7 +170,7 @@
                     </div>
 
                     <!-- Captcha Field -->
-                    <div class="row">
+                    <div class="row mb-4">
                         <div class="col-md-12 d-flex justify-content-center">
                             <div class="g-recaptcha" data-sitekey="6LdtbighAAAAAHhWzmWkWwkT53HNEcL5CPxg9PN_"></div>
                         </div>
@@ -178,7 +178,7 @@
 
                     <!--Button-->
                     <div class="col btn-col">
-                        <button class="btn btn-large btn-rounded btn-pink btn-hvr-blue">                    
+                        <button type="submit" class="btn btn-large btn-rounded btn-pink btn-hvr-blue">                    
                             Apply
                             <div class="btn-hvr-setting">
                                 <ul class="btn-hvr-setting-inner">

@@ -127,7 +127,6 @@
     }
 
     .page-title{
-        /* background: url("{{ asset('marketing-site/assets/img/ir-logo.png') }}"); */ /* will be assigned from admin panel */
         background-size: cover;
         background-position: center center;
         background-repeat: no-repeat;
@@ -259,7 +258,7 @@
                 </div>
             </div>
             <div class="col-lg-6 wow fadeInRight">
-                <div id="parent-orientation-carousel" class="carousel slide" data-ride="carousel">
+                <div id="parent-orientation-carousel" class="carousel slide carousel-fade" data-ride="carousel">
                     <ol class="carousel-indicators">
                         <li data-target="#parent-orientation-carousel" data-slide-to="0" class="active"></li>
                         <li data-target="#parent-orientation-carousel" data-slide-to="1"></li>
@@ -303,45 +302,44 @@
         <h2 class="title mt-2">Read in <span class="alt-color">20 days</span></h2>
     </div>
     <!--Contact Form-->
-    <form class="contact-form">
+    <form action="{{ route('home.store_orientation') }}" method="POST" class="contact-form">
         @csrf
         <div class="row">
             <!--Left Column-->
             <div class="col-md-6">                    
                 <div class="form-group">
-                    <input class="form-control" type="text" placeholder="Parent's First Name" required="true">
+                    <input name="orientationParentFirstName" class="form-control" type="text" placeholder="Parent's First Name" required="true">
                 </div>
                 <div class="form-group">
-                    <input class="form-control" type="text" placeholder="Student's First Name" required="true">
+                    <input name="orientationStudentFirstName" class="form-control" type="text" placeholder="Student's First Name" required="true">
                 </div>
                 <div class="form-group">
-                    <input class="form-control" type="text" placeholder="Contact No." required="true">
+                    <input name="orientationContactNum" class="form-control" type="tel" placeholder="Contact No." required="true">
                 </div>
             </div>
 
             <!--Right Column-->
             <div class="col-md-6">
                 <div class="form-group">
-                    <input class="form-control" type="email" placeholder="Parent's Last Name" required="true">
+                    <input name="orientationParentLastName" class="form-control" type="text" placeholder="Parent's Last Name" required="true">
                 </div>
                 <div class="form-group">
-                    <input class="form-control" type="text" placeholder="Student's Last Name" required="true">
+                    <input name="orientationStudentLastName" class="form-control" type="text" placeholder="Student's Last Name" required="true">
                 </div>
                 <div class="form-group">
-                    <input class="form-control" type="text" placeholder="Email" required="true">
+                    <input name="orientationEmail" class="form-control" type="email" placeholder="Email" required="true">
                 </div>
             </div>
 
             <!--Full Column-->
             <div class="col-md-12 mt-3">
                 <div class="form-group">
-                    <input class="form-control" placeholder="Address"></input>
+                    <input name="orientationAddress" class="form-control" placeholder="Address"></input>
                 </div>
             </div>
 
             <div class="col-md-12 mt-3">
-                <select class="form-control" id="scheduleSelect">
-                    <option selected hidden>Select a schedule that fits you</option>
+                <select name="orientationSchedule" class="form-control" id="scheduleSelect" required>
                     <option>mm/dd/yyyy | 6:00AM</option>
                     <option>mm/dd/yyyy | 7:00AM</option>
                     <option>mm/dd/yyyy | 8:00AM</option>
@@ -349,9 +347,16 @@
                 </select>
             </div>
 
+            <!-- Captcha Field -->
+            <div class="row mt-4">
+                <div class="col-md-12 d-flex justify-content-center">
+                    <div class="g-recaptcha" data-sitekey="6LdtbighAAAAAHhWzmWkWwkT53HNEcL5CPxg9PN_"></div>
+                </div>
+            </div>
+
             <!--Button-->
             <div class="col-md-12">
-                <a href="javascript:void(0);" id="quote_submit_btn" class="btn btn-large btn-rounded btn-blue btn-hvr-pink">Book Schedule
+                <button type="submit" id="quote_submit_btn" class="btn btn-large btn-rounded btn-blue btn-hvr-pink">Book Schedule
                     <div class="btn-hvr-setting">
                         <ul class="btn-hvr-setting-inner">
                             <li class="btn-hvr-effect"></li>
@@ -360,9 +365,8 @@
                             <li class="btn-hvr-effect"></li>
                         </ul>
                     </div>
-                </a>
+                </button>
             </div>
-
         </div>
     </form>
 </div>

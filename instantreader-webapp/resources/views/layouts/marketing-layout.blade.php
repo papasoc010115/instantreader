@@ -127,7 +127,7 @@
                     </li>
                     <!-- Enroll Now -->
                     <li class="nav-item main-link my-auto">
-                        <a data-fancybox data-animation-duration="500" data-src="#animatedModal" href="javascript:void(0);" class="btn btn-medium btn-rounded btn-transparent-white btn-hvr-white">Enroll Now
+                        <a href="{{ route('learn-more.reading-assessment') }}" class="btn btn-medium btn-rounded btn-transparent-white btn-hvr-white">Enroll Now
                             <div class="btn-hvr-setting">
                                 <ul class="btn-hvr-setting-inner">
                                     <li class="btn-hvr-effect"></li>

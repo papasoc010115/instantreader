@@ -190,11 +190,13 @@ Route::get('/', function () {
     return view('home');
 })->name('home');
 
+Route::post('/', [FormController::class, 'store_orientation'])->name('home.store_orientation');
+
 Route::get('/learn-more/reading-assessment', function () {
     return view('learn-more.reading-assessment');
 })->name('learn-more.reading-assessment');
 
-Route::post('/learn-more/reading-assessment', [FormController::class, 'store_ora'])->name('reading-assessment.store_ora');
+Route::post('/learn-more/reading-assessment', [FormController::class, 'store_ora'])->name('learn-more.store_ora');
 
 Route::get('/learn-more/reading-programs', function () {
     return view('learn-more.program-overview');
@@ -211,6 +213,8 @@ Route::get('/learn-more/kids-club', function () {
 Route::get('/about-us/founder-and-developer', function () {
     return view('about-us.founder');
 })->name('about-us.founder');
+
+Route::post('/about-us/founder-and-developer', [FormController::class, 'store_founder'])->name('about-us.store_founder');
 
 Route::get('/about-us/testimonials', function () {
     return view('about-us.testimonials');
