@@ -4,6 +4,8 @@ use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
+use App\Http\Controllers\FormController;
+
 /*
 This is the routes file for both the marketing site (Non-SPA) and CRM (SPA).
 The comments divide the routes in sections according to their nature and use.
@@ -196,9 +198,13 @@ Route::get('/', function () {
     return view('home');
 })->name('home');
 
+Route::post('/', [FormController::class, 'store_orientation'])->name('home.store_orientation');
+
 Route::get('/learn-more/reading-assessment', function () {
     return view('learn-more.reading-assessment');
 })->name('learn-more.reading-assessment');
+
+Route::post('/learn-more/reading-assessment', [FormController::class, 'store_ora'])->name('learn-more.store_ora');
 
 Route::get('/learn-more/reading-programs', function () {
     return view('learn-more.program-overview');
@@ -216,6 +222,8 @@ Route::get('/about-us/founder-and-developer', function () {
     return view('about-us.founder');
 })->name('about-us.founder');
 
+Route::post('/about-us/founder-and-developer', [FormController::class, 'store_founder'])->name('about-us.store_founder');
+
 Route::get('/about-us/testimonials', function () {
     return view('about-us.testimonials');
 })->name('about-us.testimonials');
@@ -224,9 +232,13 @@ Route::get('/contact-us/book-consultation', function () {
     return view('contact-us.book-consultation');
 })->name('contact-us.book-consultation');
 
+Route::post('/learn-more/book-consultation', [FormController::class, 'store_consultation'])->name('contact-us.store_consultation');
+
 Route::get('/contact-us/application', function () {
     return view('contact-us.application');
 })->name('contact-us.application');
+
+Route::post('/learn-more/application', [FormController::class, 'store_application'])->name('contact-us.store_application');
 
 Route::get('/additional-resources', function () {
     return view('additional-resources');
@@ -239,3 +251,5 @@ Route::get('/log-in', function () {
 Route::get('/sign-up', function () {
     return view('account.sign-up');
 })->name('account.sign-up');
+
+Route::post('/sign-up', [FormController::class, 'store_user'])->name('account.store_user');

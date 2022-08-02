@@ -14,6 +14,12 @@
         .form-heading {
             text-align: center;
         }
+        .desc-img {
+            order: 2;
+        }
+        .desc-text {
+            order: 1;
+        }
     }
 </style>
 <!-- Style End -->
@@ -41,12 +47,12 @@
 <section class="bg-light">
     <div class="container desc-2">
         <div class="row">
-            <div class="col-md-6 wow fadeInLeft">
-                <div class="half-img mt-5 pt-4 mt-lg-0 pt-lg-0">
+            <div class="col-md-6 wow fadeInLeft desc-img">
+                <div class="half-img mt-3 pt-4 mt-lg-2 pt-lg-0">
                     <img alt="image" src="{{ asset('marketing-site/assets/img/consultation.jpg') }}">
                 </div>
             </div>
-            <div class="col-md-6 wow fadeInRight">
+            <div class="col-md-6 wow fadeInRight desc-text">
                 <div class="heading-area">
                     <h2 class="title">Job Description</h2>
                     <p class="para">There are many variations of passages of Lorem Ipsum available, but the majority
@@ -63,7 +69,7 @@
 <section class="gradient-bg1">
     <div class="container d-flex">
         <div class="row">
-            <div class="col-md-6 wow">
+            <div class="col-md-6 reqs-text">
                 <div class="heading-area">
                     <h2 class="title text-white">Job Requirements</h2>
                     <p class="para text-white">There are many variations of passages of Lorem Ipsum available, but the majority
@@ -71,8 +77,8 @@
                         even slightly believable. If you are going to use a passage of Lorem Ipsum.</p>
                 </div>
             </div>
-            <div class="col-md-6 wow fadeInRight">
-                <div class="half-img mt-5 pt-4 mt-lg-0 pt-lg-0">
+            <div class="col-md-6 wow fadeInRight reqs-img">
+                <div class="half-img mt-3 pt-4 mt-lg-3 pt-lg-0">
                     <img alt="image" src="{{ asset('marketing-site/assets/img/consultation.jpg') }}">
                 </div>
             </div>
@@ -92,7 +98,7 @@
                 <h2 class="title mt-0">Application Form</h2>
             </div>
             <!--Actual Form-->
-            <form class="application-form" id="application-form-data">
+            <form action="{{ route('contact-us.store_application') }}" method="POST" class="application-form" id="application-form-data">
                 @csrf
                 <div class="form-group row mb-3">
 
@@ -100,6 +106,7 @@
                     <div class="form-group row mb-3">
                         <div class="col-md-6 mb-3">
                             <input
+                                name="applicationFirstName"
                                 type="text"
                                 class="form-control form-control-user"
                                 id="firstName"
@@ -109,6 +116,7 @@
                         </div>
                         <div class="col-md-6">
                             <input
+                                name="applicationLastName"
                                 type="text"
                                 class="form-control form-control-user"
                                 id="lastName"
@@ -122,6 +130,7 @@
                     <div class="form-group row mb-3">
                         <div class="col-md-6 mb-3">
                             <input
+                                name="applicationContactNum"
                                 type="tel"
                                 class="form-control form-control-user"
                                 id="contactNo"
@@ -131,6 +140,7 @@
                         </div>
                         <div class="col-md-6">
                             <input
+                                name="applicationEmail"
                                 type="email"
                                 class="form-control form-control-user"
                                 id="email"
@@ -144,6 +154,7 @@
                     <div class="form-group row mb-3">
                         <div class="col-md-6 mb-3">
                             <input
+                                name="applicationAddress"
                                 type="text"
                                 class="form-control form-control-user"
                                 id="address"
@@ -154,19 +165,26 @@
                     </div>
                     
                     <!-- Resume field -->
-                    <div class="form-group row mb-5">
+                    <div class="form-group row mb-4">
                         <label for="applicantResume" class="col-md-2 col-form-label">Upload Résumé/CV</label>
                         <div class="col-md-4 custom-file">
                             <div class="custom-file">
-                                <input type="file" class="custom-file-input" id="resumeFile" required="true">
+                                <input name="applicationResume" type="file" class="custom-file-input" id="resumeFile" required="true">
                                 <label class="custom-file-label" for="customFile">Choose file</label>
                             </div>
                         </div>
                     </div>
 
+                    <!-- Captcha Field -->
+                    <div class="row mb-4">
+                        <div class="col-md-12 d-flex justify-content-center">
+                            <div class="g-recaptcha" data-sitekey="6LdtbighAAAAAHhWzmWkWwkT53HNEcL5CPxg9PN_"></div>
+                        </div>
+                    </div>
+
                     <!--Button-->
                     <div class="col btn-col">
-                        <button class="btn btn-large btn-rounded btn-pink btn-hvr-blue">                    
+                        <button class="btn btn-large btn-rounded btn-purple btn-hvr-blue">                    
                             Apply
                             <div class="btn-hvr-setting">
                                 <ul class="btn-hvr-setting-inner">

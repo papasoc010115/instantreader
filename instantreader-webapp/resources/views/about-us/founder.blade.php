@@ -7,6 +7,9 @@
     .founder-video {
         max-width: 100%;
     }
+    hr {
+        border-top: 1px solid;
+    }
     .mission-img {
         max-width: 100%;
     }
@@ -47,10 +50,10 @@
         .info2-text {
             order: 1;
         }
-        .virac-vid-text {
+        .virac-imgs-text {
             order: 2;
         }
-        .virac-vid {
+        .virac-imgs {
             order: 1;
         }
     }
@@ -76,7 +79,7 @@
 <!--Banner End-->
 
 <!--Main Information Start-->
-<section class="pb-0" id="about-us">
+<section class="pb-0 bg-light" id="about-us">
     <div class="container">
         <div class="row">
             <div class="col-lg-6 wow fadeInLeft">
@@ -100,7 +103,7 @@
 <!--Main Information Start-->
 
 <!--Social Media Links Start-->
-<section id="socmedlinks">
+<section class="bg-light" id="socmedlinks">
     <div class="container">
         <div class="row">
             <div class="col-md-3">
@@ -133,7 +136,7 @@
 <!--Social Media Links End-->
 
 <!--History Start-->
-<section class="bg-light" id="ir-history">
+<section id="ir-history">
     <div class="container mb-5">
         <!--Heading Row-->
         <div class="row">
@@ -154,13 +157,14 @@
             </video>
         </div>
     </div>
-    <div class="container d-flex mb-5">
+    <hr/>
+    <div class="container d-flex mb-5 pb-3">
         <!-- First Information Row -->
-        <div class="row">
+        <div class="row mt-lg-5 pt-4 mb-lg-4">
             <div class="col-md-6">
                 <div class="heading-area history1-heading">
-                    <h2 class="title alt-color">Title</h2>
-                    <p class="para half-para-right" style="color: #282525;">There are many variations of passages of Lorem Ipsum available, but the majority
+                    <h2 style="color: #562FB7;">Title</h2>
+                    <p class="para half-para-right pt-3" style="color: #282525;">There are many variations of passages of Lorem Ipsum available, but the majority
                         have suffered alteration in some form, by injected humour, or randomised words which don't look
                         even slightly believable. If you are going to use a passage of Lorem Ipsum.</p>
                 </div>
@@ -172,9 +176,10 @@
             </div>
         </div>
     </div>
+    <hr/>
     <div class="container d-flex">
         <!-- Second Information Row -->
-        <div class="row">
+        <div class="row mt-lg-5 pt-4">
             <div class="col-md-6 wow fadeInLeft info2-img">
                 <div class="half-img mt-2 pt-4 mt-lg-0 pt-lg-0">
                     <img alt="image" src="{{ asset('marketing-site/assets/img/consultation.jpg') }}">
@@ -182,8 +187,8 @@
             </div>
             <div class="col-md-6 info2-text">
                 <div class="heading-area">
-                    <h2 class="title main-color">Title</h2>
-                    <p class="para half-para" style="color: #282525;">There are many variations of passages of Lorem Ipsum available, but the majority
+                    <h2 style="color: #562FB7;">Title</h2>
+                    <p class="para half-para pt-3" style="color: #282525;">There are many variations of passages of Lorem Ipsum available, but the majority
                         have suffered alteration in some form, by injected humour, or randomised words which don't look
                         even slightly believable. If you are going to use a passage of Lorem Ipsum.</p>
                 </div>
@@ -232,7 +237,7 @@
 <!--Mission End-->
 
 <!--Project VIRAC Start-->
-<section class="gradient-bg2">
+<section style="background-color: #562FB7;">
     <div class="container mb-5">
         <!--Heading Row-->
         <div class="row">
@@ -242,8 +247,37 @@
                 </div>
             </div>
         </div>
+        <!--Video Row-->
+        <div class="row virac-vid-row" style="text-align: right;">
+            <!-- Video -->
+            <div class="col-md-6 mb-4 virac-vid">
+                <div class="row justify-content-center">
+                    <video class="virac-video" preload="none" controls poster="{{ asset('marketing-site/assets/agency/img/blog-news-1.jpg')}}" playsinline>
+                        <source src="{{ asset('marketing-site/assets/agency/img/video.mp4') }}" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <!-- Text -->
+            <div class="col-md-6 virac-vid-text">
+                <div class="heading-area">
+                    <p class="para half-para-right text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tincidunt
+                    egestas nunc, at pellentesque arcu sollicitudin et. Aliquam hendrerit diam quis ipsum
+                    ultricies, quis ultricies arcu suscipit. Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit. Fusce ut diam quis nulla faucibus venenatis. </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
         <div class="row virac-img-row">
-            <div class="col-md-6 mb-3">
+            <div class="col-md-6 virac-imgs-text">
+                <div class="heading-area">
+                    <p class="para half-para text-white">There are many variations of passages of Lorem Ipsum available, but the majority
+                        have suffered alteration in some form, by injected humour, or randomised words which don't look
+                        even slightly believable.</p>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4 mt-4 virac-imgs">
                 <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel">
                     <div class="carousel-indicators">
                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -269,36 +303,6 @@
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Next</span>
                     </button>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="heading-area">
-                    <h2  class="title">Lorem Ipsum</h2>
-                    <p class="para half-para text-white">There are many variations of passages of Lorem Ipsum available, but the majority
-                        have suffered alteration in some form, by injected humour, or randomised words which don't look
-                        even slightly believable.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <!--Heading Row-->
-        <div class="row virac-vid-row" style="text-align: right;">
-            <div class="col-md-6 mb-3 virac-vid-text">
-                <div class="heading-area">
-                    <h2 class="title">Lorem Ipsum</h2>
-                    <p class="para half-para-right text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tincidunt
-                    egestas nunc, at pellentesque arcu sollicitudin et. Aliquam hendrerit diam quis ipsum
-                    ultricies, quis ultricies arcu suscipit. Lorem ipsum dolor sit amet, consectetur adipiscing
-                    elit. Fusce ut diam quis nulla faucibus venenatis. </p>
-                </div>
-            </div>
-            <div class="col-md-6 mb-3 virac-vid">
-                <!--Video Row-->
-                <div class="row justify-content-center">
-                    <video class="virac-video" preload="none" controls poster="{{ asset('marketing-site/assets/agency/img/blog-news-1.jpg')}}" playsinline>
-                        <source src="{{ asset('marketing-site/assets/agency/img/video.mp4') }}" type="video/mp4">
-                    </video>
                 </div>
             </div>
         </div>
@@ -339,7 +343,7 @@
                     <h2 class="title mt-0">Sign-up Now</h2>
                 </div>
                 <!--Actual Form-->
-                <form class="newsletter-form" id="newsletter-form-data">
+                <form action="{{ route('about-us.store_founder') }}" method="POST" class="newsletter-form" id="newsletter-form-data">
                     @csrf
                     <div class="form-group row mb-3">
 
@@ -347,10 +351,12 @@
                         <div class="form-group row mb-4">
                             <div class="col-md-12">
                                 <input
+                                    name="founderName"
                                     type="text"
                                     class="form-control form-control-user"
-                                    id="userFulltName"
+                                    id="userFullName"
                                     placeholder="Full Name"
+                                    required="true"
                                 />
                             </div>
                         </div>
@@ -359,10 +365,12 @@
                         <div class="form-group row mb-4">
                             <div class="col-md-12">
                                 <input
+                                    name="founderEmail"
                                     type="email"
                                     class="form-control form-control-user"
                                     id="userEmail"
                                     placeholder="Email"
+                                    required="true"
                                 />
                             </div>
                         </div>
@@ -371,17 +379,26 @@
                         <div class="form-group row mb-4">
                             <div class="col-md-12">
                                 <input
+                                    name="founderAddress"
                                     type="text"
                                     class="form-control form-control-user"
-                                    id="userddress"
+                                    id="userAddress"
                                     placeholder="Current Country/City"
+                                    required="true"
                                 />
+                            </div>
+                        </div>
+
+                        <!-- Captcha Field -->
+                        <div class="row mb-4">
+                            <div class="col-md-12 d-flex justify-content-center">
+                                <div class="g-recaptcha" data-sitekey="6LdtbighAAAAAHhWzmWkWwkT53HNEcL5CPxg9PN_"></div>
                             </div>
                         </div>
 
                         <!--Button-->
                         <div class="col btn-col">
-                            <button class="btn btn-large btn-rounded btn-purple btn-hvr-blue">                    
+                            <button type="submit" class="btn btn-large btn-rounded btn-purple btn-hvr-blue">                    
                                 Submit
                                 <div class="btn-hvr-setting">
                                     <ul class="btn-hvr-setting-inner">

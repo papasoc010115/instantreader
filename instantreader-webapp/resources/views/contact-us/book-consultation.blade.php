@@ -35,7 +35,7 @@
 
 <!--Section 1 Start-->
 <!--Description 1 Start-->
-<section class="gradient-bg1">
+<section>
     <div class="container desc-2">
         <div class="row">
             <div class="col-md-6 wow fadeInLeft">
@@ -45,9 +45,9 @@
             </div>
             <div class="col-md-6 wow fadeInRight">
                 <div class="heading-area">
-                    <h2 class="title text-white"><span class="main-color js-rotating">Robust Design, Creative Idea</span> and
+                    <h2 class="title"><span class="alt-color js-rotating">Robust Design, Creative Idea</span> and
                         Development Solutions</h2>
-                    <p class="para text-white">There are many variations of passages of Lorem Ipsum available, but the majority
+                    <p class="para">There are many variations of passages of Lorem Ipsum available, but the majority
                         have suffered alteration in some form, by injected humour, or randomised words which don't look
                         even slightly believable. If you are going to use a passage of Lorem Ipsum.</p>
                 </div>
@@ -82,7 +82,7 @@
 <!--Section 1 End-->
 
 <!--Section 2 Start-->
-<section class="gradient-bg2">
+<section>
     <div class="container desc-2">
         <div class="row">
             <div class="col-md-6 wow fadeInLeft">
@@ -92,8 +92,8 @@
             </div>
             <div class="col-md-6 wow fadeInRight">
                 <div class="heading-area">
-                    <h2 class="title text-white">Calendar</h2>
-                    <p class="para text-white">There are many variations of passages of Lorem Ipsum available, but the majority
+                    <h2 class="title alt-color">Calendar</h2>
+                    <p class="para">There are many variations of passages of Lorem Ipsum available, but the majority
                         have suffered alteration in some form, by injected humour, or randomised words which don't look
                         even slightly believable. If you are going to use a passage of Lorem Ipsum.</p>
                 </div>
@@ -104,18 +104,18 @@
 <!--Section 2 End-->
 
 <!--Booking Form Start-->
-<section class="contact-us" id="consultation">
+<section class="contact-us" id="consultation" style="background-color: #562FB7;">
 
     <div class="container">
 
         <div class="col-md-12 mt-4 pt-3 mt-lg-0 pt-lg-0 wow">
             <!--Heading-->
             <div class="heading-area pb-2 form-heading">
-                <h2 class="title mt-0">Booking Form</h2>
+                <h3 class="title text-white mt-0">Booking Form</h3>
             </div>
             <!--Form-->
 
-            <form class="booking-form" id="booking-form-data">
+            <form action="{{ route('contact-us.store_consultation') }}" method="POST" class="booking-form" id="booking-form-data">
                 @csrf
                 <div class="form-group row mb-3">
 
@@ -123,20 +123,22 @@
                     <div class="form-group row mb-3">
                         <div class="col-md-6 mb-3">
                             <input
+                                name="bookConsultationParentFirstName"
                                 type="text"
                                 class="form-control form-control-user"
                                 id="parentFirstName"
                                 placeholder="Parent's First Name"
-                                required="true"
+                                
                             />
                         </div>
                         <div class="col-md-6">
                             <input
+                                name="bookConsultationParentLastName"
                                 type="text"
                                 class="form-control form-control-user"
                                 id="parentLastName"
                                 placeholder="Parent's Last Name"
-                                required="true"
+                                
                             />
                         </div>
                     </div>
@@ -145,20 +147,22 @@
                     <div class="form-group row mb-3">
                         <div class="col-md-6 mb-3">
                             <input
+                                name="bookConsultationContactNum"
                                 type="tel"
                                 class="form-control form-control-user"
                                 id="contactNo"
                                 placeholder="Contact No. (WhatsApp/Viber)"
-                                required="true"
+                                
                             />
                         </div>
                         <div class="col-md-6">
                             <input
+                                name="bookConsultationEmail"
                                 type="email"
                                 class="form-control form-control-user"
                                 id="email"
                                 placeholder="Email"
-                                required="true"
+                                
                             />
                         </div>
                     </div>
@@ -167,20 +171,22 @@
                     <div class="form-group row mb-3">
                         <div class="col-md-6 mb-3">
                             <input
+                                name="bookConsultationChildFirstName"
                                 type="text"
                                 class="form-control form-control-user"
                                 id="childFirstName"
                                 placeholder="Child's First Name"
-                                required="true"
+                                
                             />
                         </div>
                         <div class="col-md-6">
                             <input
+                                name="bookConsultationChildLastName"
                                 type="text"
                                 class="form-control form-control-user"
                                 id="childLastName"
                                 placeholder="Child's Last Name"
-                                required="true"
+                                
                             />
                         </div>
                     </div>
@@ -189,34 +195,43 @@
                     <div class="form-group row mb-3">
                         <div class="col-md-6 mb-3">
                             <input
+                                name="bookConsultationCityCountry"
                                 type="text"
                                 class="form-control form-control-user"
                                 id="address"
                                 placeholder="City, Country"
-                                required="true"
+                                
                             />
                         </div>
                         <div class="col-md-2">
                             <input
+                                name="bookConsultationChildAge"
                                 type="number"
                                 class="form-control form-control-user"
                                 id="age"
                                 placeholder="Child's Age"
-                                required="true"
+                                
                             />
                         </div>
                     </div>
 
                     <!-- Concerns/Goals Location Field -->
-                    <div class="form-group row mb-3">
+                    <div class="form-group row mb-4">
                         <div class="col-md-12">
-                            <textarea class="form-control" id="concernsGoals" rows="3" placeholder="Concerns/Goals for Child" required="true"></textarea>
+                            <textarea name="bookConsultationConcernsGoals" class="form-control" id="concernsGoals" rows="3" placeholder="Concerns/Goals for Child" ></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Captcha Field -->
+                    <div class="row mb-3">
+                        <div class="col-md-12 d-flex justify-content-center">
+                            <div class="g-recaptcha" data-sitekey="6LdtbighAAAAAHhWzmWkWwkT53HNEcL5CPxg9PN_"></div>
                         </div>
                     </div>
 
                     <!--Button-->
                     <div class="col btn-col">
-                        <button class="btn btn-large btn-rounded btn-pink btn-hvr-blue">                    
+                        <button type="submit" class="btn btn-large btn-rounded btn-pink btn-hvr-blue">                    
                             Book
                             <div class="btn-hvr-setting">
                                 <ul class="btn-hvr-setting-inner">
