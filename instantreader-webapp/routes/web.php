@@ -158,6 +158,8 @@ Route::get('/crm/sales/sales-activity', function () {
 /*--------------------------------------------------------------------------
 Non-SPA ROUTES
 --------------------------------------------------------------------------*/
+
+// admin routes
 Route::get('/admin', function () {
     return redirect()->route('marketing-admin.home');
 });
@@ -175,15 +177,21 @@ Route::get('/admin/contact-us', function () {
 })->name('marketing-admin.contact-us');
 
 Route::get('/admin/about-us', function () {
-    return view('marketing-admin.about-us');
-})->name('marketing-admin.about-us');
+    return redirect()->route('marketing-admin.about-us.founder');
+});
+Route::get('/admin/about-us/founder', function () {
+    return view('marketing-admin.about-us.founder');
+})->name('marketing-admin.about-us.founder');
+
+Route::get('/admin/about-us/testimonials', function () {
+    return view('marketing-admin.about-us.testimonials');
+})->name('marketing-admin.about-us.testimonials');
 
 Route::get('/admin/additional-resources', function () {
     return view('marketing-admin.additional-resources');
 })->name('marketing-admin.additional-resources');
 
-// Route::get('/admin/home', AdminController@home)->name('marketing.admin.home');
-
+// main site
 Route::get('/', function () {
     return view('home');
 })->name('home');
