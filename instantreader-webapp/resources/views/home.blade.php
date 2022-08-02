@@ -161,7 +161,8 @@
     .marquee-content li {
         white-space: no-wrap;
         width: var(--marquee-element-width);
-        flex-shrink: 0;
+        height: 70vh;
+        flex-shrink: 1;
     }
 
 
@@ -182,6 +183,10 @@
         min-height: 70vh;
         z-index: 2;
         background-color: rgba(35, 122, 254, .9);
+    }
+
+    .test{
+        background-color: yellow;
     }
 
 </style>
@@ -296,81 +301,84 @@
 <!-- NOTE: use these attributes to open the modal
     data-fancybox data-animation-duration="500" data-src="#animatedModal" href="javascript:void(0);" 
 -->
-<div id="animatedModal" class="animated-modal hidden quote-content">
-    <!--Heading-->
-    <div class="heading-area pb-2 mx-570">
-        <span class="sub-title">Schedule Parent Orientation</span>
-        <h2 class="title mt-2">Read in <span class="alt-color">20 days</span></h2>
-    </div>
-    <!--Contact Form-->
-    <form action="{{ route('home.store_orientation') }}" method="POST" class="contact-form">
-        @csrf
-        <div class="row">
-            <!--Left Column-->
-            <div class="col-md-6">                    
-                <div class="form-group">
-                    <input name="orientationParentFirstName" class="form-control" type="text" placeholder="Parent's First Name" required="true">
-                </div>
-                <div class="form-group">
-                    <input name="orientationStudentFirstName" class="form-control" type="text" placeholder="Student's First Name" required="true">
-                </div>
-                <div class="form-group">
-                    <input name="orientationContactNum" class="form-control" type="tel" placeholder="Contact No." required="true">
-                </div>
-            </div>
-
-            <!--Right Column-->
-            <div class="col-md-6">
-                <div class="form-group">
-                    <input name="orientationParentLastName" class="form-control" type="text" placeholder="Parent's Last Name" required="true">
-                </div>
-                <div class="form-group">
-                    <input name="orientationStudentLastName" class="form-control" type="text" placeholder="Student's Last Name" required="true">
-                </div>
-                <div class="form-group">
-                    <input name="orientationEmail" class="form-control" type="email" placeholder="Email" required="true">
-                </div>
-            </div>
-
-            <!--Full Column-->
-            <div class="col-md-12 mt-3">
-                <div class="form-group">
-                    <input name="orientationAddress" class="form-control" placeholder="Address"></input>
-                </div>
-            </div>
-
-            <div class="col-md-12 mt-3">
-                <select name="orientationSchedule" class="form-control" id="scheduleSelect" required>
-                    <option>mm/dd/yyyy | 6:00AM</option>
-                    <option>mm/dd/yyyy | 7:00AM</option>
-                    <option>mm/dd/yyyy | 8:00AM</option>
-                    <option>mm/dd/yyyy | 9:00AM</option>
-                </select>
-            </div>
-
-            <!-- Captcha Field -->
-            <div class="row mt-4">
-                <div class="col-md-12 d-flex justify-content-center">
-                    <div class="g-recaptcha" data-sitekey="6LdtbighAAAAAHhWzmWkWwkT53HNEcL5CPxg9PN_"></div>
-                </div>
-            </div>
-
-            <!--Button-->
-            <div class="col-md-12">
-                <button type="submit" id="quote_submit_btn" class="btn btn-large btn-rounded btn-blue btn-hvr-pink">Book Schedule
-                    <div class="btn-hvr-setting">
-                        <ul class="btn-hvr-setting-inner">
-                            <li class="btn-hvr-effect"></li>
-                            <li class="btn-hvr-effect"></li>
-                            <li class="btn-hvr-effect"></li>
-                            <li class="btn-hvr-effect"></li>
-                        </ul>
-                    </div>
-                </button>
-            </div>
+<section id="parent-orientation-booking-modal">
+    <div id="animatedModal" class="animated-modal hidden quote-content">
+        <!--Heading-->
+        <div class="heading-area pb-2 mx-570">
+            <span class="sub-title">Schedule Parent Orientation</span>
+            <h2 class="title mt-2">Read in <span class="alt-color">20 days</span></h2>
         </div>
-    </form>
-</div>
+        <!--Contact Form-->
+        <form action="{{ route('home.store_orientation') }}" method="POST" class="contact-form">
+            @csrf
+            <div class="row">
+                <!--Left Column-->
+                <div class="col-md-6">                    
+                    <div class="form-group">
+                        <input name="orientationParentFirstName" class="form-control" type="text" placeholder="Parent's First Name" required="true">
+                    </div>
+                    <div class="form-group">
+                        <input name="orientationStudentFirstName" class="form-control" type="text" placeholder="Student's First Name" required="true">
+                    </div>
+                    <div class="form-group">
+                        <input name="orientationContactNum" class="form-control" type="tel" placeholder="Contact No." required="true">
+                    </div>
+                </div>
+
+                <!--Right Column-->
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <input name="orientationParentLastName" class="form-control" type="text" placeholder="Parent's Last Name" required="true">
+                    </div>
+                    <div class="form-group">
+                        <input name="orientationStudentLastName" class="form-control" type="text" placeholder="Student's Last Name" required="true">
+                    </div>
+                    <div class="form-group">
+                        <input name="orientationEmail" class="form-control" type="email" placeholder="Email" required="true">
+                    </div>
+                </div>
+
+                <!--Full Column-->
+                <div class="col-md-12 mt-3">
+                    <div class="form-group">
+                        <input name="orientationAddress" class="form-control" placeholder="Address"></input>
+                    </div>
+                </div>
+
+                <div class="col-md-12 mt-3">
+                    <select name="orientationSchedule" class="form-control" id="scheduleSelect" required>
+                        <option>mm/dd/yyyy | 6:00AM</option>
+                        <option>mm/dd/yyyy | 7:00AM</option>
+                        <option>mm/dd/yyyy | 8:00AM</option>
+                        <option>mm/dd/yyyy | 9:00AM</option>
+                    </select>
+                </div>
+
+                <!-- Captcha Field -->
+                <div class="row mt-4">
+                    <div class="col-md-12 d-flex justify-content-center">
+                        <div class="g-recaptcha" data-sitekey="6LdtbighAAAAAHhWzmWkWwkT53HNEcL5CPxg9PN_"></div>
+                    </div>
+                </div>
+
+                <!--Button-->
+                <div class="col-md-12">
+                    <button type="submit" id="quote_submit_btn" class="btn btn-large btn-rounded btn-blue btn-hvr-pink">Book Schedule
+                        <div class="btn-hvr-setting">
+                            <ul class="btn-hvr-setting-inner">
+                                <li class="btn-hvr-effect"></li>
+                                <li class="btn-hvr-effect"></li>
+                                <li class="btn-hvr-effect"></li>
+                                <li class="btn-hvr-effect"></li>
+                            </ul>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+
 
 <!--ABOUT PEOPLE Start-->
 <section id="about-people-section" class="text-center gradient-bg2">
@@ -638,7 +646,7 @@
 <!--TESTIMONIES End-->
 
 <!--KIDS CLUB Start-->
-<section id="kids-club-section" class="ir-kids-avatar p-0 m-0">
+<section id="kids-club-section" class="p-0 m-0">
     <!-- <div class="scrolling-img-container">
         <div class="scrolling-img">
             <div class="row overlay-text">
@@ -664,7 +672,7 @@
         </div>
     </div> -->
 
-    <div class="container-fluid m-0 p-0">
+    <div class="container m-0 p-0">
         <!-- Marquee -->
         <div class="marquee d-flex align-items-center justify-content-center">
             <ul id="ir-kids-club-list" class="marquee-content d-flex align-items-center justify-content-center">
@@ -679,15 +687,15 @@
         </div>
 
         <!-- IR Kids Description -->
-        <div class="ir-kids-club-description-section d-flex align-items-center justify-content-center p-5">
-            <div class="row">
-                <div class="col-md-12 wow fadeInUp">
-                    <div class="heading-area mx-570 mb-5 text-center">
-                        <h1 class="text-white font-weight-bold pb-5">Join the Instant Reader <span class="main-color">Kids Club</span></h1>
+        <div class="ir-kids-club-description-section d-flex align-items-center justify-content-center">
+            <div class="row w-75">
+                <div class="col-lg-12 wow fadeInUp">
+                    <div class="heading-area my-3 text-center my-5">
+                        <h1 class="text-white font-weight-bold mb-3">Join the Instant Reader <span class="main-color">Kids Club</span></h1>
                         <p class="text-white">The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 
                             from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions 
                             from the 1914 translation by H. Rackham.</p>
-                        <a class="btn btn-xlarge btn-rounded btn-pink btn-hvr-blue mt-3" href="{{ route('learn-more.reading-assessment') }}">Book Online Reading Assessment
+                        <a class="btn btn-xlarge btn-rounded btn-pink btn-hvr-blue" href="{{ route('learn-more.reading-assessment') }}">Join IR Kids Club
                             <div class="btn-hvr-setting">
                                 <ul class="btn-hvr-setting-inner">
                                     <li class="btn-hvr-effect"></li>
@@ -707,13 +715,13 @@
 <!--KIDS CLUB End-->
 
 <!-- ENROLL NOW Start -->
-<section id="enroll-now-section">
+<section id="enroll-now-section" class="p-0 my-5">
     <div class="container">
         <div class="row d-flex align-items-center">
-            <div class="col-xxl-7 wow fadeInLeft">
+            <div class="col-xl-6 wow fadeInLeft">
                 <img id="enroll-now-image" class="h-100" src="{{ asset('marketing-site/assets/agency/img/vector-art-2.png') }}" alt="Second slide">            
             </div>
-            <div class="col-xxl-5 wow fadeInRight p-5 enroll-now-detail">
+            <div class="col-xl-6 wow fadeInRight py-5 enroll-now-detail">
                 <div class="heading-area">
                     <h1 id="enroll-now-heading" class="alt-color font-weight-bold">ENROLL NOW!</h1>
                     <p id="enroll-now-paragraph">
@@ -721,7 +729,7 @@
                         have suffered alteration in some form, by injected humour, or randomised words which don't look
                         even slightly believable. If you are going to use a passage of Lorem Ipsum.
                     </p>
-                    <a class="btn btn-xlarge btn-rounded btn-pink btn-hvr-blue mt-3" href="{{ route('learn-more.reading-assessment') }}">Book Online Reading Assessment
+                    <a class="btn btn-xlarge btn-rounded btn-pink btn-hvr-blue p-auto" href="{{ route('learn-more.reading-assessment') }}">Book Online Reading Assessment
                         <div class="btn-hvr-setting">
                             <ul class="btn-hvr-setting-inner">
                                 <li class="btn-hvr-effect"></li>
