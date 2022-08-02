@@ -134,7 +134,7 @@
 </style>
 
 <!-- Introduction -->
-<section class="nocursor introduction page-title cursor-light" style="background-color: white" id="intro">
+<section class="nocursor introduction page-title cursor-light bg-light" id="intro">
     <div class="introduction-content fadeIn">
         <h2>Welcome to Instant Reader Kids Club!</h2>
         <p>
@@ -143,8 +143,8 @@
     </div>
 </section>
 
-<section>
-    <div class="container mb-5">
+<section class="bg-light">
+    <div class="container">
         <div class="row">            
             <div class="col-md-6">
                 <!--Video Row-->
@@ -162,6 +162,9 @@
             </div>
         </div>
     </div>
+</section>
+
+<section>
     <div class="container">
         <div class="row">
             <div class="col-md-6 carousel-text">
@@ -202,13 +205,12 @@
     </div>
 </section>
 
-
 <section class="nocursor cursor-light ir-kids-avatar">
     <div class="scrolling-img-container">
         <div class="scrolling-img" style="background-image: {{ asset('marketing-site/assets/img/kids-club-img1.png') }}">
             <div class="row overlay-text">
                 <div class="col-md-12">
-                    <div class="heading-area mx-570 mb-5">
+                    <div class="heading-area mx-570 mb-5 lg-mb-0 lg-pb-0">
                         <h1 class="text-white"><strong>Millions of Kids Have Already Joined</strong></h1>
                         <br>
                         <p class="text-white">

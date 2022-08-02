@@ -79,7 +79,7 @@
 <!--Banner End-->
 
 <!--Main Information Start-->
-<section class="pb-0" id="about-us">
+<section class="pb-0 bg-light" id="about-us">
     <div class="container">
         <div class="row">
             <div class="col-lg-6 wow fadeInLeft">
@@ -103,7 +103,7 @@
 <!--Main Information Start-->
 
 <!--Social Media Links Start-->
-<section id="socmedlinks">
+<section class="bg-light" id="socmedlinks">
     <div class="container">
         <div class="row">
             <div class="col-md-3">
@@ -136,7 +136,7 @@
 <!--Social Media Links End-->
 
 <!--History Start-->
-<section class="bg-light" id="ir-history">
+<section id="ir-history">
     <div class="container mb-5">
         <!--Heading Row-->
         <div class="row">
@@ -157,14 +157,14 @@
             </video>
         </div>
     </div>
-    <hr class="alt-color"/>
+    <hr/>
     <div class="container d-flex mb-5">
         <!-- First Information Row -->
         <div class="row mt-4">
             <div class="col-md-6">
                 <div class="heading-area history1-heading">
-                    <h2 class="title alt-color">Title</h2>
-                    <p class="para half-para-right" style="color: #282525;">There are many variations of passages of Lorem Ipsum available, but the majority
+                    <h2 style="color: #562FB7;">Title</h2>
+                    <p class="para half-para-right pt-3" style="color: #282525;">There are many variations of passages of Lorem Ipsum available, but the majority
                         have suffered alteration in some form, by injected humour, or randomised words which don't look
                         even slightly believable. If you are going to use a passage of Lorem Ipsum.</p>
                 </div>
@@ -176,7 +176,7 @@
             </div>
         </div>
     </div>
-    <hr class="alt-color"/>
+    <hr/>
     <div class="container d-flex">
         <!-- Second Information Row -->
         <div class="row mt-4">
@@ -187,8 +187,8 @@
             </div>
             <div class="col-md-6 info2-text">
                 <div class="heading-area">
-                    <h2 class="title alt-color">Title</h2>
-                    <p class="para half-para" style="color: #282525;">There are many variations of passages of Lorem Ipsum available, but the majority
+                    <h2 style="color: #562FB7;">Title</h2>
+                    <p class="para half-para pt-3" style="color: #282525;">There are many variations of passages of Lorem Ipsum available, but the majority
                         have suffered alteration in some form, by injected humour, or randomised words which don't look
                         even slightly believable. If you are going to use a passage of Lorem Ipsum.</p>
                 </div>
@@ -237,7 +237,7 @@
 <!--Mission End-->
 
 <!--Project VIRAC Start-->
-<section class="gradient-bg2">
+<section style="background-color: #562FB7;">
     <div class="container mb-5">
         <!--Heading Row-->
         <div class="row">
@@ -278,7 +278,6 @@
             </div>
             <div class="col-md-6">
                 <div class="heading-area">
-                    <h2  class="title">Lorem Ipsum</h2>
                     <p class="para half-para text-white">There are many variations of passages of Lorem Ipsum available, but the majority
                         have suffered alteration in some form, by injected humour, or randomised words which don't look
                         even slightly believable.</p>
@@ -291,7 +290,6 @@
         <div class="row virac-vid-row" style="text-align: right;">
             <div class="col-md-6 mb-3 virac-vid-text">
                 <div class="heading-area">
-                    <h2 class="title">Lorem Ipsum</h2>
                     <p class="para half-para-right text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tincidunt
                     egestas nunc, at pellentesque arcu sollicitudin et. Aliquam hendrerit diam quis ipsum
                     ultricies, quis ultricies arcu suscipit. Lorem ipsum dolor sit amet, consectetur adipiscing
