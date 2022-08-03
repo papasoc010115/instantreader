@@ -69,13 +69,14 @@
                             >Learn More</a
                         >
                     </li>
-                    <li>
-                        <a
-                            href="{{ route('marketing-admin.contact-us') }}"
-                            class="nav-link px-5"
-                            id="contact-us-link"
-                            >Contact Us</a
-                        >
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="contact-us-link" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Contact Us
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="contact-us-link">
+                            <li><a class="dropdown-item" href="{{ route('marketing-admin.contact-us.consultation') }}">Book FREE Online Consultation</a></li>
+                            <li><a class="dropdown-item" href="{{ route('marketing-admin.contact-us.career') }}">Start a Career with Us</a></li>
+                        </ul>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="about-us-link" role="button" data-bs-toggle="dropdown" aria-expanded="false">

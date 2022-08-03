@@ -70,6 +70,7 @@
                 </div>
             </form>
         </div>
+        <!-- End of Metadata -->
 
         <br><br><br>
 
