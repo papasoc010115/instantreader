@@ -82,34 +82,86 @@
                 <!--Left Column-->
                 <div class="col-md-6 mb-4">                    
                     <div class="form-group">
-                        <input class="form-control" name="oraParentFirstName" type="text" placeholder="Parent's First Name" required="true">
+                        <input 
+                            class="form-control" 
+                            name="oraParentFirstName" 
+                            type="text" 
+                            placeholder="Parent's First Name" 
+                            required="true"
+                        />
                     </div>
                     <div class="form-group">
-                        <input class="form-control" name="oraStudentFirstName" type="text" placeholder="Student's First Name" required="true">
+                        <input 
+                            class="form-control" 
+                            name="oraStudentFirstName" 
+                            type="text" 
+                            placeholder="Student's First Name" 
+                            required="true"
+                        />
                     </div>
                     <div class="form-group">
-                        <input class="form-control" name="oraContactNum" type="tel" placeholder="Contact No. (WhatsApp/Viber)" required="true">
+                        <input 
+                            class="form-control" 
+                            name="oraContactNum" 
+                            type="tel" 
+                            placeholder="Contact No. (WhatsApp/Viber)" 
+                            required="true" 
+                        />
                     </div>
                     <div class="form-group">
-                        <input class="form-control" name="oraCityCountry" type="text" placeholder="City, Country" required="true">
+                        <input 
+                            class="form-control" 
+                            name="oraCityCountry" 
+                            type="text" 
+                            placeholder="City, Country" 
+                            required="true"
+                        />
                     </div>
                 </div>
 
                 <!--Right Column-->
                 <div class="col-md-6 mb-3">
                     <div class="form-group">
-                        <input class="form-control" name="oraParentLastName" type="text" placeholder="Parent's Last Name" required="true">
+                        <input 
+                            class="form-control" 
+                            name="oraParentLastName" 
+                            type="text" 
+                            placeholder="Parent's Last Name" 
+                            required="true" 
+                        />
                     </div>
                     <div class="form-group">
-                        <input class="form-control" name="oraStudentLastName" type="text" placeholder="Student's Last Name" required="true">
+                        <input 
+                            class="form-control" 
+                            name="oraStudentLastName" 
+                            type="text" 
+                            placeholder="Student's Last Name" 
+                            required="true" 
+                        />
                     </div>
                     <div class="form-group">
-                        <input class="form-control" name="oraEmail" type="email" placeholder="Email" required="true">
+                        <input 
+                            class="form-control" 
+                            name="oraEmail" 
+                            type="email" 
+                            placeholder="Email" 
+                            required="true" 
+                        />
+                    </div>
+                    <div class="form-group">
+                        <input
+                            name="oraChildAge"
+                            type="number"
+                            class="form-control form-control-user"
+                            id="age"
+                            placeholder="Child's Age"
+                            required="true"
+                        />
                     </div>
                 </div>
             </div>
 
-            <div class="row mt-4">
+            <div class="row mb-4">
                 <div class="col-md-12 d-flex justify-content-center">
                     <div class="g-recaptcha" data-sitekey="6LdtbighAAAAAHhWzmWkWwkT53HNEcL5CPxg9PN_"></div>
                 </div>
@@ -117,7 +169,7 @@
 
             <div class="row">
                 <div class="col">
-                    <button class="btn btn-large btn-rounded btn-pink btn-hvr-blue mt-3">                    
+                    <button class="btn btn-large btn-rounded btn-pink btn-hvr-blue">                    
                         Submit
                         <div class="btn-hvr-setting">
                             <ul class="btn-hvr-setting-inner">
