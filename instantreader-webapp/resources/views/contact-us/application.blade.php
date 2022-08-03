@@ -184,7 +184,7 @@
 
                     <!--Button-->
                     <div class="col btn-col">
-                        <button class="btn btn-large btn-rounded btn-purple btn-hvr-blue">                    
+                        <button type="submit" class="btn btn-large btn-rounded btn-purple btn-hvr-blue">                    
                             Apply
                             <div class="btn-hvr-setting">
                                 <ul class="btn-hvr-setting-inner">

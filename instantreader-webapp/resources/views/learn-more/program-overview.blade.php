@@ -29,15 +29,43 @@
         width: 100%;
         height: auto;
     }
+
     #about-basic {
-        background-color: #562FB7;
+        background-color: #483BF7;
     }
-    #about-advanced, #about-compass {
-        background-color: white;
+
+    #about-advanced {
+        background-color: #E68F15;
     }
+
     #about-mastery {
-        background-color: #AB2685;
+        background-color: #FA3C3C;
     }
+
+    #about-compass {
+        background-color: #AB3AFC;
+    }
+
+    @media only screen and (min-width: 768px) {
+        .half-paragraph-left-align {
+            text-align: justify;
+        }
+        .half-paragraph-right-align {
+            text-align: justify;
+            text-align-last: right;
+        }
+    }
+
+    @media only screen and (max-width: 767px) {
+        .media-content {
+            order: 1;
+        }
+
+        .text-content {
+            order: 2;
+        }
+    }
+
 </style>
 
 <!-- Banner -->
@@ -63,13 +91,18 @@
 <!-- Cards -->
 <section class="pb-0" style="margin-top: 2em;">
     <div class="container" style="max-width: 80%">
-        <div class="row">           
+        <div class="row">        
+
+            <!-- Basic Card -->
             <div class="col-lg-3">
                 <div class="card">
                     <img class="card-img-top" src="{{ asset('marketing-site/assets/img/basic-card-img.jpg') }}" alt="img">
                     <div class="card-body">
                         <h5 class="card-title">Basic</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <p class="card-text">
+                            Some quick example text to build on the card title and make up the bulk of the card's content.
+                            Some quick example text to build on the card title and make up the bulk of the card's content.
+                        </p>
                         <button class="card-btn btn btn-large btn-rounded btn-pink btn-hvr-blue mt-3" id="card-btn-basic">Read More
                         <div class="btn-hvr-setting">
                             <ul class="btn-hvr-setting-inner">
@@ -84,12 +117,16 @@
                 </div>
             </div>
             
+            <!-- Advanced Card -->
             <div class="col-lg-3">
                 <div class="card">
                     <img class="card-img-top" src="{{ asset('marketing-site/assets/img/advanced-card-img.jpg') }}" alt="img">
                     <div class="card-body">
                         <h5 class="card-title">Advanced</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <p class="card-text">
+                            Some quick example text to build on the card title and make up the bulk of the card's content.
+                            Some quick example text to build on the card title and make up the bulk of the card's content.
+                        </p>
                         <button class="card-btn btn btn-large btn-rounded btn-pink btn-hvr-blue mt-3" id="card-btn-advanced">Read More
                         <div class="btn-hvr-setting">
                             <ul class="btn-hvr-setting-inner">
@@ -104,12 +141,16 @@
                 </div>
             </div>
             
+            <!-- Mastery Card -->
             <div class="col-lg-3">
                 <div class="card">
                     <img class="card-img-top" src="{{ asset('marketing-site/assets/img/mastery-card-img.jpg') }}" alt="img">
                     <div class="card-body">
                         <h5 class="card-title">Mastery</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <p class="card-text">
+                            Some quick example text to build on the card title and make up the bulk of the card's content.
+                            Some quick example text to build on the card title and make up the bulk of the card's content.
+                        </p>
                         <button class="card-btn btn btn-large btn-rounded btn-pink btn-hvr-blue mt-3" id="card-btn-mastery">Read More
                         <div class="btn-hvr-setting">
                             <ul class="btn-hvr-setting-inner">
@@ -124,12 +165,16 @@
                 </div>
             </div>
             
+            <!-- Compass Card -->
             <div class="col-lg-3">
                 <div class="card">
                     <img class="card-img-top" src="{{ asset('marketing-site/assets/img/compass-card-img.jpg') }}" alt="img">
                     <div class="card-body">
-                        <h5 class="card-title">Compass</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <h5 class="card-title">COMPASS</h5>
+                        <p class="card-text">
+                            Some quick example text to build on the card title and make up the bulk of the card's content.
+                            Some quick example text to build on the card title and make up the bulk of the card's content.
+                        </p>
                         <button class="card-btn btn btn-large btn-rounded btn-pink btn-hvr-blue mt-3" id="card-btn-compass">Read More
                         <div class="btn-hvr-setting">
                             <ul class="btn-hvr-setting-inner">
@@ -150,19 +195,63 @@
 </section>
 
 <!-- About Basic -->
-<section class="reading-program page-title" id="about-basic"">
+<section class="reading-program page-title" id="about-basic">
     <div class="auto-container">
         <h2 class="hide-cursor" style="margin-bottom: 0.5em">Basic</h2>
     </div>
     <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-            <img class="banner-img" src="{{ asset('marketing-site/assets/img/basic-banner-img.png') }}" alt="img">
+        <div class="row py-4 d-flex align-items-center wow fadeInLeft">
+            <div class="col-md-6 media-content">
+                <div id="about-basic-carousel" class="carousel slide carousel-fade" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#about-basic-carousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#about-basic-carousel" data-slide-to="1"></li>
+                        <li data-target="#about-basic-carousel" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img id="about-basic-image-1" class="d-block w-100" src="{{ asset('marketing-site/assets/img/consultation.jpg') }}" alt="First slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img id="about-basic-image-2" class="d-block w-100" src="{{ asset('marketing-site/assets/img/tutor-application.jpg') }}" alt="Second slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img id="about-basic-image-3" class="d-block w-100" src="{{ asset('marketing-site/assets/img/consultation.jpg') }}" alt="Third slide">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#about-basic-carousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#about-basic-carousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
             </div>
-            <div class="col-md-6">
-                <p class="align-left" style="color: white">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing diam donec adipiscing tristique risus nec feugiat. Rhoncus urna neque viverra justo nec ultrices dui sapien. Egestas sed tempus urna et pharetra pharetra massa massa ultricies. Donec ac odio tempor orci dapibus ultrices in iaculis nunc. Gravida rutrum quisque non tellus orci. Et egestas quis ipsum suspendisse ultrices gravida dictum. Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper. Ultrices dui sapien eget mi. Aliquam eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis. Netus et malesuada fames ac turpis egestas. Dolor sit amet consectetur adipiscing elit.
+            <div class="col-md-6 text-content">
+                <p id="about-basic-paragraph-1" class="half-paragraph-left-align py-2" style="color: white">
+                    Paragraph 1 orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.   
                 </p>
+                <p id="about-basic-paragraph-2" class="half-paragraph-left-align py-2" style="color: white">
+                    Paragraph 2 orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                </p>
+                <p id="about-basic-paragraph-3" class="half-paragraph-left-align py-2" style="color: white">
+                    Paragraph 3 orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+            </div>
+        </div>
+        <div class="row py-4">
+            <div class="col-md-12">
+                <a href="{{ route('learn-more.reading-assessment') }}" class="card-btn btn btn-xlarge btn-rounded btn-pink btn-hvr-blue mt-3">
+                    Join Basic Program                    
+                </a>  
             </div>
         </div>
     </div>
@@ -171,36 +260,124 @@
 <!-- About Advanced -->
 <section class="reading-program page-title" id="about-advanced">
     <div class="auto-container">
-        <h2 class="hide-cursor" style="margin-bottom: 0.5em; color: #282525">Advanced</h2>
+        <h2 class="hide-cursor" style="margin-bottom: 0.5em; color: white">Advanced</h2>
     </div>
     <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <p class="align-left" style="color: #282525">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing diam donec adipiscing tristique risus nec feugiat. Rhoncus urna neque viverra justo nec ultrices dui sapien. Egestas sed tempus urna et pharetra pharetra massa massa ultricies. Donec ac odio tempor orci dapibus ultrices in iaculis nunc. Gravida rutrum quisque non tellus orci. Et egestas quis ipsum suspendisse ultrices gravida dictum. Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper. Ultrices dui sapien eget mi. Aliquam eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis. Netus et malesuada fames ac turpis egestas. Dolor sit amet consectetur adipiscing elit.
-                </p>            
+        <div class="row py-4 d-flex align-items-center wow fadeInRight">
+            <div class="col-md-6 text-content">
+                <p id="about-advanced-paragraph-1" class="half-paragraph-right-align py-2" style="color: white">
+                    Paragraph 1 orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.     
+                </p>
+                <p id="about-advanced-paragraph-2" class="half-paragraph-right-align py-2" style="color: white">
+                    Paragraph 2 orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+                <p id="about-advanced-paragraph-3" class="half-paragraph-right-align py-2" style="color: white">
+                    Paragraph 3 orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>         
             </div>
-            <div class="col-md-6">
-                <img class="banner-img" src="{{ asset('marketing-site/assets/img/advanced-banner-img.png') }}" alt="img">
+            <div class="col-md-6 media-content">
+                <div id="about-advanced-carousel" class="carousel slide carousel-fade" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#about-advanced-carousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#about-advanced-carousel" data-slide-to="1"></li>
+                        <li data-target="#about-advanced-carousel" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img id="about-advanced-image-1" class="d-block w-100" src="{{ asset('marketing-site/assets/img/tutor-application.jpg') }}" alt="First slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img id="about-advanced-image-2" class="d-block w-100" src="{{ asset('marketing-site/assets/img/consultation.jpg') }}" alt="Second slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img id="about-advanced-image-3" class="d-block w-100" src="{{ asset('marketing-site/assets/img/tutor-application.jpg') }}" alt="Third slide">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#about-advanced-carousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#about-advanced-carousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row py-4">
+            <div class="col-md-12">
+                <a href="{{ route('learn-more.reading-assessment') }}" class="card-btn btn btn-xlarge btn-rounded btn-pink btn-hvr-blue mt-3">
+                    Join Advanced Program                    
+                </a>  
             </div>
         </div>
     </div>
 </section>
 
 <!-- About Mastery -->
-<section class="reading-program page-title" id="about-mastery"">
+<section class="reading-program page-title" id="about-mastery">
     <div class="auto-container">
         <h2 class="hide-cursor" style="margin-bottom: 0.5em">Mastery</h2>
     </div>
     <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-            <img class="banner-img" src="{{ asset('marketing-site/assets/img/mastery-banner-img.png') }}" alt="img">
+        <div class="row py-4 d-flex align-items-center wow fadeInLeft">
+            <div class="col-md-6 media-content">
+                <div id="about-mastery-carousel" class="carousel slide carousel-fade" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#about-mastery-carousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#about-mastery-carousel" data-slide-to="1"></li>
+                        <li data-target="#about-mastery-carousel" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img id="about-mastery-image-1" class="d-block w-100" src="{{ asset('marketing-site/assets/img/consultation.jpg') }}" alt="First slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img id="about-mastery-image-2" class="d-block w-100" src="{{ asset('marketing-site/assets/img/tutor-application.jpg') }}" alt="Second slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img id="about-mastery-image-3" class="d-block w-100" src="{{ asset('marketing-site/assets/img/consultation.jpg') }}" alt="Third slide">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#about-mastery-carousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#about-mastery-carousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
             </div>
-            <div class="col-md-6">
-                <p class="align-left" style="color: white">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing diam donec adipiscing tristique risus nec feugiat. Rhoncus urna neque viverra justo nec ultrices dui sapien. Egestas sed tempus urna et pharetra pharetra massa massa ultricies. Donec ac odio tempor orci dapibus ultrices in iaculis nunc. Gravida rutrum quisque non tellus orci. Et egestas quis ipsum suspendisse ultrices gravida dictum. Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper. Ultrices dui sapien eget mi. Aliquam eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis. Netus et malesuada fames ac turpis egestas. Dolor sit amet consectetur adipiscing elit.
+            <div class="col-md-6 text-content">
+                <p id="about-mastery-paragraph-1" class="half-paragraph-left-align py-2" style="color: white">
+                    Paragraph 1 orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.    
                 </p>
+                <p id="about-mastery-paragraph-2" class="half-paragraph-left-align py-2" style="color: white">
+                    Paragraph 2 orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+                <p id="about-mastery-paragraph-3" class="half-paragraph-left-align py-2" style="color: white">
+                    Paragraph 3 orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p> 
+            </div>
+        </div>
+        <div class="row py-4">
+            <div class="col-md-12">
+                <a href="{{ route('learn-more.reading-assessment') }}" class="card-btn btn btn-xlarge btn-rounded btn-blue btn-hvr-pink mt-3">
+                    Join Mastery Program                    
+                </a>  
             </div>
         </div>
     </div>
@@ -209,17 +386,93 @@
 <!-- About Compass -->
 <section class="reading-program page-title" id="about-compass">
     <div class="auto-container">
-        <h2 class="hide-cursor" style="margin-bottom: 0.5em; color: #282525">Compass</h2>
+        <h2 class="hide-cursor" style="margin-bottom: 0.5em; color: white">COMPASS</h2>
     </div>
     <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <p class="align-left" style="color: #282525">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing diam donec adipiscing tristique risus nec feugiat. Rhoncus urna neque viverra justo nec ultrices dui sapien. Egestas sed tempus urna et pharetra pharetra massa massa ultricies. Donec ac odio tempor orci dapibus ultrices in iaculis nunc. Gravida rutrum quisque non tellus orci. Et egestas quis ipsum suspendisse ultrices gravida dictum. Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper. Ultrices dui sapien eget mi. Aliquam eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis. Netus et malesuada fames ac turpis egestas. Dolor sit amet consectetur adipiscing elit.
+        <div class="row py-4 d-flex align-items-center wow fadeInRight">
+            <div class="col-md-6 text-content">
+                <p id="about-compass-paragraph-1" class="half-paragraph-right-align py-2" style="color: white">
+                    Paragraph 1 orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.    
+                </p>
+                <p id="about-compass-paragraph-2" class="half-paragraph-right-align py-2" style="color: white">
+                    Paragraph 2 orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+                <p id="about-compass-paragraph-3" class="half-paragraph-right-align py-2" style="color: white">
+                    Paragraph 3 orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </p>            
             </div>
-            <div class="col-md-6">
-                <img class="banner-img" src="{{ asset('marketing-site/assets/img/compass-banner-img.png') }}" alt="img">
+            <div class="col-md-6 media-content">
+                <video preload="none" controls poster="{{ asset('marketing-site/assets/img/consultation.jpg') }}" playsinline>
+                    <source src="{{ asset('marketing-site/assets/agency/img/video.mp4') }}" type="video/mp4">
+                </video>
+            </div>
+        </div>
+        <div class="row py-4 d-flex align-items-center wow fadeInLeft">
+            <div class="col-md-6 media-content">
+                <div id="about-compass-carousel" class="carousel slide carousel-fade" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#about-compass-carousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#about-compass-carousel" data-slide-to="1"></li>
+                        <li data-target="#about-compass-carousel" data-slide-to="2"></li>
+                        <li data-target="#about-compass-carousel" data-slide-to="3"></li>
+                        <li data-target="#about-compass-carousel" data-slide-to="4"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img id="about-compass-image-1" class="d-block w-100" src="{{ asset('marketing-site/assets/img/tutor-application.jpg') }}" alt="First slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img id="about-compass-image-2" class="d-block w-100" src="{{ asset('marketing-site/assets/img/consultation.jpg') }}" alt="Second slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img id="about-compass-image-3" class="d-block w-100" src="{{ asset('marketing-site/assets/img/tutor-application.jpg') }}" alt="Third slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img id="about-compass-image-4" class="d-block w-100" src="{{ asset('marketing-site/assets/img/consultation.jpg') }}" alt="Fourth slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img id="about-compass-image-5" class="d-block w-100" src="{{ asset('marketing-site/assets/img/tutor-application.jpg') }}" alt="Fifth slide">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#about-compass-carousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#about-compass-carousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-6 text-content">
+                <p id="about-compass-paragraph-4" class="half-paragraph-left-align py-2" style="color: white">
+                    Paragraph 4 orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  
+                </p>
+                <p id="about-compass-paragraph-5" class="half-paragraph-left-align py-2" style="color: white">
+                    Paragraph 5 orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+                <p id="about-compass-paragraph-6" class="half-paragraph-left-align py-2" style="color: white">
+                    Paragraph 6 orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>   
+            </div>
+        </div>
+        <div class="row py-4">
+            <div class="col-md-12">
+                <a href="{{ route('learn-more.reading-assessment') }}" class="card-btn btn btn-xlarge btn-rounded btn-blue btn-hvr-pink mt-3">
+                    Join COMPASS Program                    
+                </a>  
             </div>
         </div>
     </div>
