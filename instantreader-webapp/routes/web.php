@@ -5,6 +5,11 @@ use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
 use App\Http\Controllers\FormController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\LearnMoreController;
+use App\Http\Controllers\ContactUsController;
+use App\Http\Controllers\AboutUsController;
+use App\Http\Controllers\AddtlResourcesController;
 
 /*
 This is the routes file for both the marketing site (Non-SPA) and CRM (SPA).
@@ -181,9 +186,7 @@ Route::get('/admin/learn-more', function () {
 });
 
 //// Routes
-Route::get('/admin/home', function () {
-    return view('marketing-admin.home');
-})->name('marketing-admin.home');
+Route::get('/admin/home', [HomeController::class, 'admin_index'])->name('marketing-admin.home');
 
 Route::get('/admin/learn-more/reading-assessment', function () {
     return view('marketing-admin.learn-more.reading-assessment');
@@ -201,76 +204,46 @@ Route::get('/admin/learn-more/faq', function () {
     return view('marketing-admin.learn-more.faq');
 })->name('marketing-admin.learn-more.faq');
 
-Route::get('/admin/contact-us/consultation', function () {
-    return view('marketing-admin.contact-us.consultation');
-})->name('marketing-admin.contact-us.consultation');
+Route::get('/admin/contact-us/consultation', [ContactUsController::class, 'book_consultation_admin_index'])->name('marketing-admin.contact-us.consultation');
 
-Route::get('/admin/contact-us/career', function () {
-    return view('marketing-admin.contact-us.career');
-})->name('marketing-admin.contact-us.career');
+Route::get('/admin/contact-us/career', [ContactUsController::class, 'application_admin_index'])->name('marketing-admin.contact-us.career');
 
-Route::get('/admin/about-us/founder', function () {
-    return view('marketing-admin.about-us.founder');
-})->name('marketing-admin.about-us.founder');
+Route::get('/admin/about-us/founder', [AboutUsController::class, 'founder_admin_index'])->name('marketing-admin.about-us.founder');
 
-Route::get('/admin/about-us/testimonials', function () {
-    return view('marketing-admin.about-us.testimonials');
-})->name('marketing-admin.about-us.testimonials');
+Route::get('/admin/about-us/testimonials', [AboutUsController::class, 'testimonials_admin_index'])->name('marketing-admin.about-us.testimonials');
 
-Route::get('/admin/additional-resources', function () {
-    return view('marketing-admin.additional-resources');
-})->name('marketing-admin.additional-resources');
+Route::get('/admin/additional-resources', [AddtlResourcesController::class, 'admin_index'])->name('marketing-admin.additional-resources');
 
 // main site
-Route::get('/', function () {
-    return view('home');
-})->name('home');
+Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::post('/', [FormController::class, 'store_orientation'])->name('home.store_orientation');
 
-Route::get('/learn-more/reading-assessment', function () {
-    return view('learn-more.reading-assessment');
-})->name('learn-more.reading-assessment');
+Route::get('/learn-more/reading-assessment', [LearnMoreController::class, 'reading_assessment_index'])->name('learn-more.reading-assessment');
 
 Route::post('/learn-more/reading-assessment', [FormController::class, 'store_ora'])->name('learn-more.store_ora');
 
-Route::get('/learn-more/reading-programs', function () {
-    return view('learn-more.program-overview');
-})->name('learn-more.program-overview');
+Route::get('/learn-more/reading-programs', [LearnMoreController::class, 'reading_program_index'])->name('learn-more.program-overview');
 
-Route::get('/learn-more/faq', function () {
-    return view('learn-more.faq');
-})->name('learn-more.faq');
+Route::get('/learn-more/faq', [LearnMoreController::class, 'faq_index'])->name('learn-more.faq');
 
-Route::get('/learn-more/kids-club', function () {
-    return view('learn-more.kids-club');
-})->name('learn-more.kids-club');
+Route::get('/learn-more/kids-club', [LearnMoreController::class, 'kids_club_index'])->name('learn-more.kids-club');
 
-Route::get('/about-us/founder-and-developer', function () {
-    return view('about-us.founder');
-})->name('about-us.founder');
+Route::get('/about-us/founder-and-developer', [AboutUsController::class, 'founder_index'])->name('about-us.founder');
 
 Route::post('/about-us/founder-and-developer', [FormController::class, 'store_founder'])->name('about-us.store_founder');
 
-Route::get('/about-us/testimonials', function () {
-    return view('about-us.testimonials');
-})->name('about-us.testimonials');
+Route::get('/about-us/testimonials', [AboutUsController::class, 'testimonials_index'])->name('about-us.testimonials');
 
-Route::get('/contact-us/book-consultation', function () {
-    return view('contact-us.book-consultation');
-})->name('contact-us.book-consultation');
+Route::get('/contact-us/book-consultation', [ContactUsController::class, 'book_consultation_index'])->name('contact-us.book-consultation');
 
 Route::post('/learn-more/book-consultation', [FormController::class, 'store_consultation'])->name('contact-us.store_consultation');
 
-Route::get('/contact-us/application', function () {
-    return view('contact-us.application');
-})->name('contact-us.application');
+Route::get('/contact-us/application', [ContactUsController::class, 'application_index'])->name('contact-us.application');
 
 Route::post('/learn-more/application', [FormController::class, 'store_application'])->name('contact-us.store_application');
 
-Route::get('/additional-resources', function () {
-    return view('additional-resources');
-})->name('additional-resources');
+Route::get('/additional-resources', [AddtlResourcesController::class, 'index'])->name('additional-resources');
 
 Route::get('/log-in', function () {
     return view('account.log-in');
