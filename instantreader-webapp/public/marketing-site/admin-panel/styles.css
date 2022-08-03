@@ -18,6 +18,11 @@ body {
     margin-right: 30px;
 }
 
+.dropdown {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
 .active {
     font-weight: 500;
 }
