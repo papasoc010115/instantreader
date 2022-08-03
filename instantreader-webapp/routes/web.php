@@ -162,10 +162,21 @@ Non-SPA ROUTES
 --------------------------------------------------------------------------*/
 
 // admin routes
+
+//// Redirect
 Route::get('/admin', function () {
     return redirect()->route('marketing-admin.home');
 });
 
+Route::get('/admin/about-us', function () {
+    return redirect()->route('marketing-admin.about-us.founder');
+});
+
+Route::get('/admin/contact-us', function () {
+    return redirect()->route('marketing-admin.contact-us.consultation');
+});
+
+//// Routes
 Route::get('/admin/home', function () {
     return view('marketing-admin.home');
 })->name('marketing-admin.home');
@@ -174,13 +185,14 @@ Route::get('/admin/learn-more', function () {
     return view('marketing-admin.learn-more');
 })->name('marketing-admin.learn-more');
 
-Route::get('/admin/contact-us', function () {
-    return view('marketing-admin.contact-us');
-})->name('marketing-admin.contact-us');
+Route::get('/admin/contact-us/consultation', function () {
+    return view('marketing-admin.contact-us.consultation');
+})->name('marketing-admin.contact-us.consultation');
 
-Route::get('/admin/about-us', function () {
-    return redirect()->route('marketing-admin.about-us.founder');
-});
+Route::get('/admin/contact-us/career', function () {
+    return view('marketing-admin.contact-us.career');
+})->name('marketing-admin.contact-us.career');
+
 Route::get('/admin/about-us/founder', function () {
     return view('marketing-admin.about-us.founder');
 })->name('marketing-admin.about-us.founder');
