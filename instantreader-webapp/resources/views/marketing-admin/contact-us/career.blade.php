@@ -69,92 +69,93 @@
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>                    
                 </div>
             </form>
+
+            <!-- End of Metadata -->
+
+            <br><br><br>
+
+            <!-- Section 1:  Job Description & Requirements -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2>Section 1:  Job Description & Requirements</h2>
+                </div>
+            </div>
+
+            <!-- Heading of Section 1 -->
+            <form action="">
+                @csrf
+                <div class="form-group py-3">
+                    <label for="sect1-heading">Section Heading/Title</label>                    
+                    <input type="text" class="form-control" id="sect1-heading" placeholder="e.g. The Best Reading Course">
+                    <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>                    
+                </div>
+            </form>
+
+            <!-- Paragraph 1 -->
+            <form action="">
+                @csrf
+                <div class="form-group py-3">
+                    <label for="sect1-paragraph1">Paragraph 1</label>
+                    <textarea class="form-control" name="sect1-paragraph1" aria-describedby="sect1Paragraph1Help" id="sect1-paragraph1"></textarea>
+                    <small id="sect1Paragraph1Help" class="form-text text-muted">Recommended length: 3-5 sentences</small>
+                    <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
+                </div>
+            </form>
+            <script>    
+                tinymce.init({
+                    height: "10rem",
+                    selector: '#sect1-paragraph1',
+                    placeholder: "e.g. Tell something about this section.",
+                    plugins: 'link',
+                    menubar: false,
+                    toolbar: 'undo redo | bold italic underline | link'
+                });            
+            </script>
+
+            <!-- Paragraph 2 -->
+            <form action="">
+                @csrf
+                <div class="form-group py-3">
+                    <label for="sect1-paragraph2">Paragraph 2</label>
+                    <textarea class="form-control" name="sect1-paragraph2" aria-describedby="sect1Paragraph2Help" id="sect1-paragraph2"></textarea>
+                    <small id="sect1Paragraph2Help" class="form-text text-muted">Recommended length: 3-5 sentences</small>
+                    <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
+                </div>
+            </form>
+            <script>    
+                tinymce.init({
+                    height: "10rem",
+                    selector: '#sect1-paragraph2',
+                    placeholder: "e.g. Tell something about this section.",
+                    plugins: 'link',
+                    menubar: false,
+                    toolbar: 'undo redo | bold italic underline | link'
+                });            
+            </script>
+
+            <!-- Image 1 -->
+            <form action="">
+                @csrf
+                <div class="mb-3 py-3">
+                    <label for="sect1-image1" class="form-label">Image 1</label>
+                    <input class="form-control form-control-sm" type="file" id="sect1-image1" aria-describedby="sect1Image1Help">
+                    <small id="sect1Image1Help" class="form-text text-muted">Recommended image size: WxH</small>
+                    <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
+                </div>                
+            </form>
+
+            <!-- Image 2 -->
+            <form action="">
+                @csrf
+                <div class="mb-3 py-3">
+                    <label for="sect1-image2" class="form-label">Image 2</label>
+                    <input class="form-control form-control-sm" type="file" id="sect1-image2" aria-describedby="sect1Image2Help">
+                    <small id="sect1Image2Help" class="form-text text-muted">Recommended image size: WxH</small>
+                    <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
+                </div>                
+            </form>
+            <!-- End of Section 1 -->
         </div>
-        <!-- End of Metadata -->
-
-        <br><br><br>
-
-        <!-- Section 1:  Job Description & Requirements -->
-        <div class="row">
-            <div class="col-lg-12">
-                <h2>Section 1:  Job Description & Requirements</h2>
-            </div>
-        </div>
-
-        <!-- Heading of Section 1 -->
-        <form action="">
-            @csrf
-            <div class="form-group py-3">
-                <label for="sect1-heading">Section Heading/Title</label>                    
-                <input type="text" class="form-control" id="sect1-heading" placeholder="e.g. The Best Reading Course">
-                <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>                    
-            </div>
-        </form>
-
-        <!-- Paragraph 1 -->
-        <form action="">
-            @csrf
-            <div class="form-group py-3">
-                <label for="sect1-paragraph1">Paragraph 1</label>
-                <textarea class="form-control" name="sect1-paragraph1" aria-describedby="sect1Paragraph1Help" id="sect1-paragraph1"></textarea>
-                <small id="sect1Paragraph1Help" class="form-text text-muted">Recommended length: 3-5 sentences</small>
-                <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
-            </div>
-        </form>
-        <script>    
-            tinymce.init({
-                height: "10rem",
-                selector: '#sect1-paragraph1',
-                placeholder: "e.g. Tell something about this section.",
-                plugins: 'link',
-                menubar: false,
-                toolbar: 'undo redo | bold italic underline | link'
-            });            
-        </script>
-
-        <!-- Paragraph 2 -->
-        <form action="">
-            @csrf
-            <div class="form-group py-3">
-                <label for="sect1-paragraph2">Paragraph 2</label>
-                <textarea class="form-control" name="sect1-paragraph2" aria-describedby="sect1Paragraph2Help" id="sect1-paragraph2"></textarea>
-                <small id="sect1Paragraph2Help" class="form-text text-muted">Recommended length: 3-5 sentences</small>
-                <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
-            </div>
-        </form>
-        <script>    
-            tinymce.init({
-                height: "10rem",
-                selector: '#sect1-paragraph2',
-                placeholder: "e.g. Tell something about this section.",
-                plugins: 'link',
-                menubar: false,
-                toolbar: 'undo redo | bold italic underline | link'
-            });            
-        </script>
-
-        <!-- Image 1 -->
-        <form action="">
-            @csrf
-            <div class="mb-3 py-3">
-                <label for="sect1-image1" class="form-label">Image 1</label>
-                <input class="form-control form-control-sm" type="file" id="sect1-image1" aria-describedby="sect1Image1Help">
-                <small id="sect1Image1Help" class="form-text text-muted">Recommended image size: WxH</small>
-                <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
-            </div>                
-        </form>
-
-        <!-- Image 2 -->
-        <form action="">
-            @csrf
-            <div class="mb-3 py-3">
-                <label for="sect1-image2" class="form-label">Image 2</label>
-                <input class="form-control form-control-sm" type="file" id="sect1-image2" aria-describedby="sect1Image2Help">
-                <small id="sect1Image2Help" class="form-text text-muted">Recommended image size: WxH</small>
-                <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
-            </div>                
-        </form>
-        <!-- End of Section 1 -->
     </section>
 </div>
 @endsection

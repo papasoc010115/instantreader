@@ -6,8 +6,8 @@
 <div class="content">
     <!-- Intro -->
     <section class="main-heading">
-        <h1 class="display-3">ADDITIONAL RESOURCES</h1> 
-        <p>Edit content of webpages under "Additional Resources" here.</p>  
+        <h1 class="display-3">READING PROGRAMS</h1> 
+        <p>Edit content of "Reading Programs" here.</p>  
     </section> 
     
     <!-- Forms -->
@@ -69,7 +69,8 @@
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>                    
                 </div>
             </form>
-        </div>
+            <!-- End of Metadata -->
+        </div>        
     </section>
 </div>
 @endsection

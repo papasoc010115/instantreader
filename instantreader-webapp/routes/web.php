@@ -176,14 +176,30 @@ Route::get('/admin/contact-us', function () {
     return redirect()->route('marketing-admin.contact-us.consultation');
 });
 
+Route::get('/admin/learn-more', function () {
+    return redirect()->route('marketing-admin.learn-more.reading-assessment');
+});
+
 //// Routes
 Route::get('/admin/home', function () {
     return view('marketing-admin.home');
 })->name('marketing-admin.home');
 
-Route::get('/admin/learn-more', function () {
-    return view('marketing-admin.learn-more');
-})->name('marketing-admin.learn-more');
+Route::get('/admin/learn-more/reading-assessment', function () {
+    return view('marketing-admin.learn-more.reading-assessment');
+})->name('marketing-admin.learn-more.reading-assessment');
+
+Route::get('/admin/learn-more/reading-programs', function () {
+    return view('marketing-admin.learn-more.reading-programs');
+})->name('marketing-admin.learn-more.reading-programs');
+
+Route::get('/admin/learn-more/kids-club', function () {
+    return view('marketing-admin.learn-more.kids-club');
+})->name('marketing-admin.learn-more.kids-club');
+
+Route::get('/admin/learn-more/faq', function () {
+    return view('marketing-admin.learn-more.faq');
+})->name('marketing-admin.learn-more.faq');
 
 Route::get('/admin/contact-us/consultation', function () {
     return view('marketing-admin.contact-us.consultation');

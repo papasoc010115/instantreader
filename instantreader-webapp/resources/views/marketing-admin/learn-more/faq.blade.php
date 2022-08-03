@@ -6,8 +6,8 @@
 <div class="content">
     <!-- Intro -->
     <section class="main-heading">
-        <h1 class="display-3">ADDITIONAL RESOURCES</h1> 
-        <p>Edit content of webpages under "Additional Resources" here.</p>  
+        <h1 class="display-3">Frequently Asked Questions</h1> 
+        <p>Edit content of "FAQs" here.</p>  
     </section> 
     
     <!-- Forms -->
@@ -70,6 +70,7 @@
                 </div>
             </form>
         </div>
+        <!-- End of Metadata -->
     </section>
 </div>
 @endsection

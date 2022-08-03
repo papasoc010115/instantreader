@@ -61,13 +61,16 @@
                             >Home</a
                         >
                     </li>
-                    <li>
-                        <a
-                            href="{{ route('marketing-admin.learn-more') }}"
-                            class="nav-link px-5"
-                            id="learn-more-link"
-                            >Learn More</a
-                        >
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="learn-more-link" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Learn More
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="contact-us-link">
+                            <li><a class="dropdown-item" href="{{ route('marketing-admin.learn-more.reading-programs') }}">Reading Programs</a></li>
+                            <li><a class="dropdown-item" href="{{ route('marketing-admin.learn-more.reading-assessment') }}">Online Reading Assessment</a></li>                            
+                            <li><a class="dropdown-item" href="{{ route('marketing-admin.learn-more.kids-club') }}">Instant Reader Kids Club</a></li>
+                            <li><a class="dropdown-item" href="{{ route('marketing-admin.learn-more.faq') }}">FAQs</a></li>
+                        </ul>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="contact-us-link" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -83,7 +86,7 @@
                             About Us
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="about-us-link">
-                            <li><a class="dropdown-item" href="{{ route('marketing-admin.about-us.founder') }}">Founders and Developers</a></li>
+                            <li><a class="dropdown-item" href="{{ route('marketing-admin.about-us.founder') }}">Our Founder and Developer</a></li>
                             <li><a class="dropdown-item" href="{{ route('marketing-admin.about-us.testimonials') }}">Testimonials</a></li>
                         </ul>
                     </li>
