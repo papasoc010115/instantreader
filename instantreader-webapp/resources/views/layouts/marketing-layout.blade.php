@@ -59,7 +59,7 @@
             <div class="full-menu-multiple-title" >
                 <span class="sidebar-anchor-circle"></span>
                 <a data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-                    <span class="sidebar-anchor-text alt-font">About Us</span>
+                    <span class="sidebar-anchor-text alt-font link">About Us</span>
                 </a>
             </div>
             <div class="collapse" id="collapseExample">

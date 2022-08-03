@@ -140,7 +140,7 @@
 
     :root {
         --marquee-width: 100vw;
-        --marquee-height: 70vh;
+        --marquee-height: 60vh;
         --marquee-elements-displayed: 2;
         --marquee-element-width: calc(var(--marquee-width)/var(--marquee-elements-displayed));
         --marquee-animation-duration: calc(var(--marquee-elements) * 2s);
@@ -165,6 +165,9 @@
         flex-shrink: 1;
     }
 
+    .marquee-image {
+        object-fit: cover;
+    }
 
     @keyframes scrolling{
         0% {
@@ -676,13 +679,12 @@
         <!-- Marquee -->
         <div class="marquee d-flex align-items-center justify-content-center">
             <ul id="ir-kids-club-list" class="marquee-content d-flex align-items-center justify-content-center">
-                <li class="d-flex align-items-center justify-content-center"><img class="marquee-image" src="{{ asset('marketing-site/assets/agency/img/vector-art-2.png') }}" /></li>
-                <li class="d-flex align-items-center justify-content-center"><img class="marquee-image" src="{{ asset('marketing-site/assets/agency/img/vector-art-2.png') }}" /></li>
-                <li class="d-flex align-items-center justify-content-center"><img class="marquee-image" src="{{ asset('marketing-site/assets/agency/img/vector-art-2.png') }}" /></li>
-                <li class="d-flex align-items-center justify-content-center"><img class="marquee-image" src="{{ asset('marketing-site/assets/agency/img/vector-art-2.png') }}" /></li>
-                <li class="d-flex align-items-center justify-content-center"><img class="marquee-image" src="{{ asset('marketing-site/assets/agency/img/vector-art-2.png') }}" /></li>
-                <li class="d-flex align-items-center justify-content-center"><img class="marquee-image" src="{{ asset('marketing-site/assets/agency/img/vector-art-2.png') }}" /></li>
-            
+                <li class="d-flex align-items-center justify-content-center"><img class="marquee-image" src="{{ asset('marketing-site/assets/img/tutor-application.jpg') }}" /></li>
+                <li class="d-flex align-items-center justify-content-center"><img class="marquee-image" src="{{ asset('marketing-site/assets/img/consultation.jpg') }}" /></li>
+                <li class="d-flex align-items-center justify-content-center"><img class="marquee-image" src="{{ asset('marketing-site/assets/img/tutor-application.jpg') }}" /></li>
+                <li class="d-flex align-items-center justify-content-center"><img class="marquee-image" src="{{ asset('marketing-site/assets/img/consultation.jpg') }}" /></li>
+                <li class="d-flex align-items-center justify-content-center"><img class="marquee-image" src="{{ asset('marketing-site/assets/img/tutor-application.jpg') }}" /></li>
+                <li class="d-flex align-items-center justify-content-center"><img class="marquee-image" src="{{ asset('marketing-site/assets/img/consultation.jpg') }}" /></li>
             </ul>
         </div>
 
@@ -695,7 +697,7 @@
                         <p class="text-white">The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 
                             from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions 
                             from the 1914 translation by H. Rackham.</p>
-                        <a class="btn btn-xlarge btn-rounded btn-pink btn-hvr-blue" href="{{ route('learn-more.reading-assessment') }}">Join IR Kids Club
+                        <a class="btn btn-large btn-rounded btn-pink btn-hvr-blue" href="{{ route('learn-more.kids-club') }}">Join IR Kids Club
                             <div class="btn-hvr-setting">
                                 <ul class="btn-hvr-setting-inner">
                                     <li class="btn-hvr-effect"></li>
