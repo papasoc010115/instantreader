@@ -34,13 +34,13 @@
 </section>
 
 <!-- About the assessment -->
-<section class="pb-0" id="about-reading-assessment">
+<section id="about-reading-assessment">
     <div class="container">
         <div class="row">
             <div class="col-lg-6 wow fadeInLeft">
                 <div class="heading-area">
                     <span class="sub-title">Know what program fits.</span>
-                    <h2 class="title">Each child has a different level of <span class="alt-color js-rotating">skill</span></h2>
+                    <h2 class="title">Each child has a different level of <span class="alt-color">skill</span></h2>
                     <p class="para">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                         Adipiscing diam donec adipiscing tristique risus nec feugiat. Rhoncus urna neque viverra justo nec ultrices dui sapien. 
@@ -70,8 +70,24 @@
 </section>
 <!--About the assessment End-->
 
+<!-- Calendar Start -->
+<section class="bg-light pb-0 pt-4 m-0" id="calendar-reading-assessment">
+    <div class="container">
+        <div class="pt-5">
+            <h2>Find the right schedule</h2>
+            <p class="para">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                Adipiscing diam donec adipiscing tristique risus nec feugiat. Rhoncus urna neque viverra justo nec ultrices dui sapien. 
+                Egestas sed tempus urna et pharetra pharetra massa massa ultricies. Donec ac odio tempor orci dapibus ultrices in iaculis nunc.         
+            </p>
+        </div>
+        <div id="oraCalendar" class="my-5"></div>
+    </div>
+</section>
+<!-- Calendar End -->
+
 <!-- Booking Form -->
-<section id="book-reading-assessment-form">
+<section id="book-reading-assessment-form" class=" m-0">
     <div class="container">
         <h2 style="color: white; margin-bottom: 1em">
             Booking Form
@@ -186,8 +202,99 @@
     </div>
 </section>
 
-<!-- script for scrolling down -->
+<!-- jQuery CDN for Calendar -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>
+    // script for rendering the calendar
+    $(document).ready(function() {
+        $("#oraCalendar").fullCalendar({
+
+            // list of events
+            events: [
+
+                // August 7 events
+                {
+                    id: "1",
+                    title: "Booked",
+                    allDay: false,
+                    start: "2022-08-07T08:00:00",
+                    end: "2022-08-07T09:00:00",
+                    color: "#fc3f3f",
+                    textColor: "#ffffff"
+                },
+                {
+                    id: "2",
+                    title: "Available",
+                    allDay: false,
+                    start: "2022-08-07T09:00:00",
+                    end: "2022-08-07T10:00:00",
+                    textColor: "#ffffff"
+                },
+                {
+                    id: "3",
+                    title: "Booked",
+                    allDay: false,
+                    start: "2022-08-07T10:00:00",
+                    end: "2022-08-07T11:00:00",
+                    color: "#fc3f3f",
+                    textColor: "#ffffff"
+                },
+                {
+                    id: "4",
+                    title: "Available",
+                    allDay: false,
+                    start: "2022-08-07T11:00:00",
+                    end: "2022-08-07T12:00:00",
+                    textColor: "#ffffff"
+                },
+                {
+                    id: "5",
+                    title: "Available",
+                    allDay: false,
+                    start: "2022-08-07T13:00:00",
+                    end: "2022-08-07T14:00:00",
+                    textColor: "#ffffff"
+                },
+                {
+                    id: "6",
+                    title: "Booked",
+                    allDay: false,
+                    start: "2022-08-07T14:00:00",
+                    end: "2022-08-07T15:00:00",
+                    color: "#fc3f3f",
+                    textColor: "#ffffff"
+                },
+
+                // August 8 Events
+                {
+                    id: "7",
+                    title: "Available",
+                    allDay: false,
+                    start: "2022-08-08T09:00:00",
+                    end: "2022-08-08T10:00:00",
+                    textColor: "#ffffff"
+                },
+                {
+                    id: "8",
+                    title: "Available",
+                    allDay: false,
+                    start: "2022-08-08T11:00:00",
+                    end: "2022-08-08T12:00:00",
+                    textColor: "#ffffff"
+                },
+                {
+                    id: "9",
+                    title: "Available",
+                    allDay: false,
+                    start: "2022-08-08T13:00:00",
+                    end: "2022-08-08T14:00:00",
+                    textColor: "#ffffff"
+                },
+            ],
+        })
+    })
+
+    // script for scrolling down
     document.getElementById("scroll-to-form").onclick = function () {
         document.getElementById("book-reading-assessment-form").scrollIntoView({behavior: 'smooth'});
     };
