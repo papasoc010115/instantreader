@@ -24,11 +24,11 @@
                 Page Title. 
                 According to Montti (2021), Moz’s title tag length recommendation is 50 – 60 characters. (reference: https://www.searchenginejournal.com/google-title-tag-length/400682/#close)
             -->
-            <form action="">
+            <form action="{{ route('contact-us.update_consultation_page_title') }}" method="POST">
                 @csrf
                 <div class="form-group py-3">
                     <label for="title-editor">Page Title</label>
-                    <input type="text" class="form-control" id="title-editor" maxlength="60" placeholder="Enter page title">
+                    <input type="text" class="form-control" id="title-editor" maxlength="60" placeholder="Enter page title" name="page-title" value="{{$consultation_data->consultation_page_title}}">
                     <small class="form-text char-count" id="title-editor-char-counter">0/60</small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
                 </div>
@@ -37,11 +37,11 @@
                 Description.
                 According to ContentKing (2021), 155 is a good maximum character length for description. (reference: https://www.contentkingapp.com/academy/meta-description/#:~:text=Meta%20Description%20have%3F-,Length,70%20characters%20or%20430%20pixels)
             -->
-            <form action="">
+            <form action="{{ route('contact-us.update_consultation_page_desc') }}" method="POST">
                 @csrf
                 <div class="form-group py-3">
                     <label for="description-editor">Page Description</label>
-                    <textarea class="form-control" id="description-editor" placeholder="Enter page description" maxlength="155" rows="3"></textarea>
+                    <textarea class="form-control" id="description-editor" placeholder="Enter page description" name="page-desc" maxlength="155" rows="3">{{$consultation_data->consultation_page_desc}}</textarea>
                     <small class="form-text char-count" id="description-editor-char-counter">0/155</small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
                 </div>
@@ -49,11 +49,11 @@
             <!-- 
                 Keywords
              -->
-            <form action="">
+            <form action="{{ route('contact-us.update_consultation_page_keywords') }}" method="POST">
                 @csrf
                 <div class="form-group py-3">
                     <label for="keywords-editor">Keywords</label>                    
-                    <input type="text" class="form-control" id="keywords-editor"  aria-describedby="keywordsHelp" placeholder="e.g. read, learn, students">
+                    <input type="text" class="form-control" id="keywords-editor"  aria-describedby="keywordsHelp" placeholder="e.g. read, learn, students" name="page-keywords" value="{{$consultation_data->consultation_page_keywords}}">
                     <small id="keywordsHelp" class="form-text text-muted" style="display:block; float: right;">Separate keywords with comma</small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>                    
                 </div>
@@ -61,11 +61,11 @@
             <!-- 
                 Author
             -->
-            <form action="">
+            <form action="{{ route('contact-us.update_consultation_page_author') }}" method="POST">
                 @csrf
                 <div class="form-group py-3">
                     <label for="author-editor">Author</label>                    
-                    <input type="text" class="form-control" id="author-editor" placeholder="John Doe">
+                    <input type="text" class="form-control" id="author-editor" placeholder="John Doe" name="page-author" value="{{$consultation_data->consultation_page_author}}">
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>                    
                 </div>
             </form>
@@ -82,21 +82,21 @@
             </div>
 
             <!-- Heading of Section 1 -->
-            <form action="">
+            <form action="{{ route('contact-us.update_consultation_sect1_title1') }}" method="POST">
                 @csrf
                 <div class="form-group py-3">
                     <label for="sect1-heading">Section Heading/Title</label>                    
-                    <input type="text" class="form-control" id="sect1-heading" placeholder="e.g. The Best Reading Course">
+                    <input type="text" class="form-control" id="sect1-heading" placeholder="e.g. The Best Reading Course" name="sect1-title1" value="{{$consultation_data->consultation_sect1_title1}}">
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>                    
                 </div>
             </form>
 
             <!-- Paragraph 1 -->
-            <form action="">
+            <form action="{{ route('contact-us.update_consultation_sect1_para1') }}" method="POST">
                 @csrf
                 <div class="form-group py-3">
                     <label for="sect1-paragraph1">Paragraph 1</label>
-                    <textarea class="form-control" name="sect1-paragraph1" aria-describedby="sect1Paragraph1Help" id="sect1-paragraph1"></textarea>
+                    <textarea class="form-control" name="sect1-paragraph1" aria-describedby="sect1Paragraph1Help" id="sect1-paragraph1">{{$consultation_data->consultation_sect1_para1}}</textarea>
                     <small id="sect1Paragraph1Help" class="form-text text-muted">Recommended length: 3-5 sentences</small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
                 </div>
@@ -113,11 +113,11 @@
             </script>
 
             <!-- Paragraph 2 -->
-            <form action="">
+            <form action="{{ route('contact-us.update_consultation_sect1_para2') }}" method="POST">
                 @csrf
                 <div class="form-group py-3">
                     <label for="sect1-paragraph2">Paragraph 2</label>
-                    <textarea class="form-control" name="sect1-paragraph2" aria-describedby="sect1Paragraph2Help" id="sect1-paragraph2"></textarea>
+                    <textarea class="form-control" name="sect1-paragraph2" aria-describedby="sect1Paragraph2Help" id="sect1-paragraph2"  value="{{$consultation_data->consultation_sect1_para2}}">{{$consultation_data->consultation_sect1_para2}}</textarea>
                     <small id="sect1Paragraph2Help" class="form-text text-muted">Recommended length: 3-5 sentences</small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
                 </div>
@@ -166,21 +166,21 @@
             </div>
 
             <!-- Heading of Section 2 -->
-            <form action="">
+            <form action="{{ route('contact-us.update_consultation_sect2_title') }}" method="POST">
                 @csrf
                 <div class="form-group py-3">
                     <label for="sect2-heading">Section Heading/Title</label>                    
-                    <input type="text" class="form-control" id="sect2-heading" placeholder="e.g. The Best Reading Course">
+                    <input type="text" class="form-control" id="sect2-heading" placeholder="e.g. The Best Reading Course" name="sect2-title" value="{{$consultation_data->consultation_sect2_title}}">
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>                    
                 </div>
             </form>
 
             <!-- Paragraph -->
-            <form action="">
+            <form action="{{ route('contact-us.update_consultation_sect2_para') }}" method="POST">
                 @csrf
                 <div class="form-group py-3">
                     <label for="sect2-paragraph">Paragraph</label>
-                    <textarea class="form-control" name="sect2-paragraph" aria-describedby="sect2ParagraphHelp" id="sect2-paragraph"></textarea>
+                    <textarea class="form-control" name="sect2-paragraph" aria-describedby="sect2ParagraphHelp" id="sect2-paragraph">{{$consultation_data->consultation_sect2_para}}</textarea>
                     <small id="sect2ParagraphHelp" class="form-text text-muted">Recommended length: 3-5 sentences</small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
                 </div>
