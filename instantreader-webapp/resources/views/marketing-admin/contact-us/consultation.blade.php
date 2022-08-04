@@ -22,7 +22,7 @@
             </div>
             <!-- 
                 Page Title. 
-                According to Montti (2021), Moz’s title tag length recommendation is 50 – 60 characters. (reference: https://www.searchenginejournal.com/google-title-tag-length/400682/#close)
+                According to Montti (2021), Moz's title tag length recommendation is 50 - 60 characters. (reference: https://www.searchenginejournal.com/google-title-tag-length/400682/#close)
             -->
             <form action="{{ route('contact-us.update_consultation_page_title') }}" method="POST">
                 @csrf
