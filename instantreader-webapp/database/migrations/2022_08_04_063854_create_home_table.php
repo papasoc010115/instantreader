@@ -16,7 +16,22 @@ return new class extends Migration
         Schema::create('home', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+
+            $table->string('page_title', 60)->default('');
+            $table->string('page_desc', 155)->default('');
+            $table->string('page_keywords', 155)->default('');
+            $table->string('page_author', 60)->default('');
         });
+        
+        // Insert empty values
+        DB::table('home')->insert(
+            array(
+                'page_title' => '',
+                'page_desc' => '',
+                'page_keywords' => '',
+                'page_author' => ''
+            )
+        );
     }
 
     /**

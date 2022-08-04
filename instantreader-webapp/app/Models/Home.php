@@ -10,4 +10,6 @@ class Home extends Model
     protected $table = 'home';
     
     use HasFactory;
+
+    protected $fillable = ['page_title', 'page_desc', 'page_keywords', 'page_author'];
 }

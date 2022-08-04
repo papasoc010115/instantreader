@@ -6,8 +6,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     @yield('metadata')
-    <!-- Page Title -->
-    <title>Instant Reader</title>
     <!-- Favicon -->
     <link rel="icon" href="{{ asset('favicon.ico') }}">
     <!-- Icons -->

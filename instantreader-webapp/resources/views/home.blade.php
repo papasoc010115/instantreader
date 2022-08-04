@@ -1,5 +1,14 @@
 @extends('layouts.marketing-layout')
 
+@section('metadata')
+<!-- Page title -->
+<title>{{ $home->page_title }}</title>
+<!-- Other metadata -->
+<meta name="description" content="{{ $home->page_desc }}">
+<meta name="keywords" content="{{ $home->page_keywords }}">
+<meta name="author" content="{{ $home->page_author }}">
+@endsection
+
 @section('content')
 
 <!-- Set the current page variable for the navbar -->

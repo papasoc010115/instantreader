@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class ContactUs extends Model
 {
     use HasFactory;
+    
     protected $fillable = ['consultation_page_title', 'consultation_page_desc', 'consultation_page_keywords', 'consultation_page_author', 
     'consultation_sect1_heading', 'consultation_sect1_para1', 'consultation_sect1_image1',
     'consultation_sect1_para2', 'consultation_sect1_image2',

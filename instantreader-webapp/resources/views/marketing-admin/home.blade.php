@@ -24,11 +24,11 @@
                 Page Title. 
                 According to Montti (2021), Moz’s title tag length recommendation is 50 – 60 characters. (reference: https://www.searchenginejournal.com/google-title-tag-length/400682/#close)
             -->
-            <form action="">
+            <form action="{{ route('home.update_page_title') }}" method="POST">
                 @csrf
                 <div class="form-group py-3">
                     <label for="title-editor">Page Title</label>
-                    <input type="text" class="form-control" id="title-editor" maxlength="60" placeholder="Enter page title">
+                    <input type="text" class="form-control" id="title-editor" maxlength="60" name="page-title" placeholder="Enter page title" value="{{ $home->page_title }}">
                     <small class="form-text char-count" id="title-editor-char-counter">0/60</small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
                 </div>
@@ -37,11 +37,11 @@
                 Description.
                 According to ContentKing (2021), 155 is a good maximum character length for description. (reference: https://www.contentkingapp.com/academy/meta-description/#:~:text=Meta%20Description%20have%3F-,Length,70%20characters%20or%20430%20pixels)
             -->
-            <form action="">
+            <form action="{{ route('home.update_page_desc') }}" method="POST">
                 @csrf
                 <div class="form-group py-3">
                     <label for="description-editor">Page Description</label>
-                    <textarea class="form-control" id="description-editor" placeholder="Enter page description" maxlength="155" rows="3"></textarea>
+                    <textarea class="form-control" id="description-editor" name="page-desc" placeholder="Enter page description" maxlength="155" rows="3">{{ $home->page_desc }}</textarea>
                     <small class="form-text char-count" id="description-editor-char-counter">0/155</small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
                 </div>
@@ -49,11 +49,11 @@
             <!-- 
                 Keywords
              -->
-            <form action="">
+            <form action="{{ route('home.update_page_keywords') }}" method="POST">
                 @csrf
                 <div class="form-group py-3">
                     <label for="keywords-editor">Keywords</label>                    
-                    <input type="text" class="form-control" id="keywords-editor"  aria-describedby="keywordsHelp" placeholder="e.g. read, learn, students">
+                    <input type="text" class="form-control" id="keywords-editor" aria-describedby="keywordsHelp" name="page-keywords" placeholder="e.g. read, learn, students" value="{{ $home->page_keywords }}">
                     <small id="keywordsHelp" class="form-text text-muted">Separate keywords with comma</small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>                    
                 </div>
@@ -61,11 +61,11 @@
             <!-- 
                 Author
             -->
-            <form action="">
+            <form action="{{ route('home.update_page_author') }}" method="POST">
                 @csrf
                 <div class="form-group py-3">
                     <label for="author-editor">Author</label>                    
-                    <input type="text" class="form-control" id="author-editor" placeholder="John Doe">
+                    <input type="text" class="form-control" id="author-editor" name="page-author" placeholder="John Doe" value="{{ $home->page_author }}">
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>                    
                 </div>
             </form>

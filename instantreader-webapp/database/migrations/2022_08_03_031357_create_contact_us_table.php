@@ -19,15 +19,15 @@ return new class extends Migration
 
             $table->string('consultation_page_title', 60)->default('');
             $table->string('consultation_page_desc', 155)->default('');
-            $table->string('consultation_page_keywords')->default('');
+            $table->string('consultation_page_keywords', 155)->default('');
             $table->string('consultation_page_author', 60)->default('');
             $table->string('consultation_sect1_heading')->default('');
-            $table->string('consultation_sect1_para1', 600)->default('');
+            $table->string('consultation_sect1_para1', 500)->default('');
             $table->string('consultation_sect1_image1')->default('');
-            $table->string('consultation_sect1_para2', 600)->default('');
+            $table->string('consultation_sect1_para2', 500)->default('');
             $table->string('consultation_sect1_image2')->default('');
             $table->string('consultation_sect2_heading')->default('');
-            $table->string('consultation_sect2_para', 600)->default('');
+            $table->string('consultation_sect2_para', 500)->default('');
             
             $table->string('career_page_title', 60)->default('');
             $table->string('career_page_desc', 155)->default('');
@@ -35,10 +35,10 @@ return new class extends Migration
             $table->string('career_page_author', 60)->default('');
             $table->string('career_sect1_heading')->default('');
             $table->string('career_sect1_title1')->default('');
-            $table->string('career_sect1_para1', 600)->default('');
+            $table->string('career_sect1_para1', 500)->default('');
             $table->string('career_sect1_image1')->default('');
             $table->string('career_sect1_title2')->default('');
-            $table->string('career_sect1_para2', 600)->default('');
+            $table->string('career_sect1_para2', 500)->default('');
             $table->string('career_sect1_image2')->default('');
         });
         

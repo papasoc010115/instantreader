@@ -187,6 +187,10 @@ Route::get('/admin/learn-more', function () {
 
 //// Routes
 Route::get('/admin/home', [HomeController::class, 'admin_index'])->name('marketing-admin.home');
+Route::post('/admin/home/update-page-title', [HomeController::class, 'update_home_page_title'])->name('home.update_page_title');
+Route::post('/admin/home/update-page-desc', [HomeController::class, 'update_home_page_desc'])->name('home.update_page_desc');
+Route::post('/admin/home/update-page-keywords', [HomeController::class, 'update_home_page_keywords'])->name('home.update_page_keywords');
+Route::post('/admin/home/update-page-author', [HomeController::class, 'update_home_page_author'])->name('home.update_page_author');
 
 Route::get('/admin/learn-more/reading-assessment', [LearnMoreController::class, 'reading_assessment_admin_index'])->name('marketing-admin.learn-more.reading-assessment');
 
