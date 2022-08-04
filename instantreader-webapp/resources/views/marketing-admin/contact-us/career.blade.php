@@ -69,7 +69,6 @@
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>                    
                 </div>
             </form>
-
             <!-- End of Metadata -->
 
             <br><br><br>
@@ -86,7 +85,27 @@
                 @csrf
                 <div class="form-group py-3">
                     <label for="sect1-heading">Section Heading/Title</label>                    
-                    <input type="text" class="form-control" id="sect1-heading" name="sect1-title1" placeholder="e.g. The Best Reading Course" value="{{$career_data->career_sect1_title1}}">
+                    <input type="text" class="form-control" id="sect1-heading" name="sect1-title1" placeholder="e.g. The Best Reading Course" value="{{$career_data->career_sect1_heading}}">
+                    <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>                    
+                </div>
+            </form>
+
+            <!-- Title 1 -->
+            <form action="{{ route('contact-us.update_career_sect1_title1') }}" method="POST">
+                @csrf
+                <div class="form-group py-3">
+                    <label for="sect1-title1">Title 1 (For Paragraph 1)</label>                    
+                    <input type="text" class="form-control" id="sect1-title1" name="sect1-title1" placeholder="e.g. The Best Reading Course" value="{{$career_data->career_sect1_title1}}">
+                    <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>                    
+                </div>
+            </form>
+
+            <!-- Title 2 -->
+            <form action="{{ route('contact-us.update_career_sect1_title2') }}" method="POST">
+                @csrf
+                <div class="form-group py-3">
+                    <label for="sect1-title2">Title 2 (For Paragraph 2)</label>                    
+                    <input type="text" class="form-control" id="sect1-title2" name="sect1-title2" placeholder="e.g. The Best Reading Course" value="{{$career_data->career_sect1_title2}}">
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>                    
                 </div>
             </form>
