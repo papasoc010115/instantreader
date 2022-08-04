@@ -82,11 +82,11 @@
             </div>
 
             <!-- Heading of Section 1 -->
-            <form action="{{ route('contact-us.update_consultation_sect1_title1') }}" method="POST">
+            <form action="{{ route('contact-us.update_consultation_sect1_heading') }}" method="POST">
                 @csrf
                 <div class="form-group py-3">
                     <label for="sect1-heading">Section Heading/Title</label>                    
-                    <input type="text" class="form-control" id="sect1-heading" placeholder="e.g. The Best Reading Course" name="sect1-title1" value="{{$consultation_data->consultation_sect1_title1}}">
+                    <input type="text" class="form-control" id="sect1-heading" placeholder="e.g. The Best Reading Course" name="sect1-heading" value="{{$consultation_data->consultation_sect1_heading}}">
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>                    
                 </div>
             </form>
@@ -166,11 +166,11 @@
             </div>
 
             <!-- Heading of Section 2 -->
-            <form action="{{ route('contact-us.update_consultation_sect2_title') }}" method="POST">
+            <form action="{{ route('contact-us.update_consultation_sect2_heading') }}" method="POST">
                 @csrf
                 <div class="form-group py-3">
                     <label for="sect2-heading">Section Heading/Title</label>                    
-                    <input type="text" class="form-control" id="sect2-heading" placeholder="e.g. The Best Reading Course" name="sect2-title" value="{{$consultation_data->consultation_sect2_title}}">
+                    <input type="text" class="form-control" id="sect2-heading" placeholder="e.g. The Best Reading Course" name="sect2-heading" value="{{$consultation_data->consultation_sect2_heading}}">
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>                    
                 </div>
             </form>

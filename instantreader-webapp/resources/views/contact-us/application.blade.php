@@ -43,9 +43,14 @@
 <!--Banner End-->
 
 <!--Section 1 Start-->
-<!--Job Description Start-->
 <section class="bg-light">
-    <div class="container desc-2">
+    <!--Heading-->
+    <div class="heading-area pb-2 text-center">
+        <h2 class="title mt-0">{{$career_data->career_sect1_heading}}</h2>
+    </div>
+
+    <!--Job Description-->
+    <div class="container desc-2 mb-5">
         <div class="row">
             <div class="col-md-6 wow fadeInLeft desc-img">
                 <div class="half-img mt-3 pt-4 mt-lg-2 pt-lg-0">
@@ -54,23 +59,20 @@
             </div>
             <div class="col-md-6 wow fadeInRight desc-text">
                 <div class="heading-area">
-                    <h2 class="title">{{$application_data->sect1_title1}}</h2>
-                    <p class="para">{{$application_data->sect1_title}}</p>
+                    <h2 class="title">{{$career_data->sect1_title1}}</h2>
+                    <p class="para">{{$career_data->sect1_para1}}</p>
                 </div>
             </div>
-        </div>
+            </div>
     </div>
-</section>
-<!--Job Description End-->
 
-<!--Job Requirements Start-->
-<section class="gradient-bg1">
+    <!--Job Requirements-->
     <div class="container d-flex">
         <div class="row">
             <div class="col-md-6 reqs-text">
                 <div class="heading-area">
-                    <h2 class="title text-white">{{$application_data->sect1_title2}}</h2>
-                    <p class="para text-white">{{$application_data->sect1_para2}}</p>
+                    <h2 class="title text-white">{{$career_data->sect1_title2}}</h2>
+                    <p class="para text-white">{{$career_data->sect1_para2}}</p>
                 </div>
             </div>
             <div class="col-md-6 wow fadeInRight reqs-img">
@@ -81,17 +83,16 @@
         </div>
     </div>
 </section>
-<!--Job Requirements End-->
 <!--Section 1 End-->
 
 <!--Application Form Start-->
-<section class="contact-us" id="consultation">
+<section class="contact-us" id="consultation" style="background-color: #562FB7;">
     <div class="container">
 
         <div class="col-md-12 mt-4 pt-3 mt-lg-0 pt-lg-0 wow">
             <!--Heading-->
             <div class="heading-area pb-2 form-heading">
-                <h2 class="title mt-0">Application Form</h2>
+                <h2 class="title mt-0 text-white">Application Form</h2>
             </div>
             <!--Actual Form-->
             <form action="{{ route('contact-us.store_application') }}" method="POST" class="application-form" id="application-form-data">
@@ -162,7 +163,7 @@
                     
                     <!-- Resume field -->
                     <div class="form-group row mb-4">
-                        <label for="applicantResume" class="col-md-2 col-form-label">Upload Résumé/CV</label>
+                        <label for="applicantResume" class="col-md-2 col-form-label text-white">Upload Résumé/CV</label>
                         <div class="col-md-4 custom-file">
                             <div class="custom-file">
                                 <input name="applicationResume" type="file" class="custom-file-input" id="resumeFile" required="true">
@@ -180,7 +181,7 @@
 
                     <!--Button-->
                     <div class="col btn-col">
-                        <button type="submit" class="btn btn-large btn-rounded btn-purple btn-hvr-blue">                    
+                        <button type="submit" class="btn btn-large btn-rounded btn-pink btn-hvr-blue">                    
                             Apply
                             <div class="btn-hvr-setting">
                                 <ul class="btn-hvr-setting-inner">

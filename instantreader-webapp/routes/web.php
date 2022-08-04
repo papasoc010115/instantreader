@@ -201,11 +201,10 @@ Route::post('/admin/contact-us/consultation/update-page-title', [ContactUsContro
 Route::post('/admin/contact-us/consultation/update-page-desc', [ContactUsController::class, 'update_consultation_page_desc'])->name('contact-us.update_consultation_page_desc');
 Route::post('/admin/contact-us/consultation/update-page-keywords', [ContactUsController::class, 'update_consultation_page_keywords'])->name('contact-us.update_consultation_page_keywords');
 Route::post('/admin/contact-us/consultation/update-page-author', [ContactUsController::class, 'update_consultation_page_author'])->name('contact-us.update_consultation_page_author');
-Route::post('/admin/contact-us/consultation/update-sect1-title1', [ContactUsController::class, 'update_consultation_sect1_title1'])->name('contact-us.update_consultation_sect1_title1');
+Route::post('/admin/contact-us/consultation/update-sect1-heading', [ContactUsController::class, 'update_consultation_sect1_heading'])->name('contact-us.update_consultation_sect1_heading');
 Route::post('/admin/contact-us/consultation/update-sect1-para1', [ContactUsController::class, 'update_consultation_sect1_para1'])->name('contact-us.update_consultation_sect1_para1');
-Route::post('/admin/contact-us/consultation/update-sect1-title2', [ContactUsController::class, 'update_consultation_sect1_title2'])->name('contact-us.update_consultation_sect1_title2');
 Route::post('/admin/contact-us/consultation/update-sect1-para2', [ContactUsController::class, 'update_consultation_sect1_para2'])->name('contact-us.update_consultation_sect1_para2');
-Route::post('/admin/contact-us/consultation/update-sect2-title', [ContactUsController::class, 'update_consultation_sect2_title'])->name('contact-us.update_consultation_sect2_title');
+Route::post('/admin/contact-us/consultation/update-sect2-heading', [ContactUsController::class, 'update_consultation_sect2_heading'])->name('contact-us.update_consultation_sect2_heading');
 Route::post('/admin/contact-us/consultation/update-sect2-para', [ContactUsController::class, 'update_consultation_sect2_para'])->name('contact-us.update_consultation_sect2_para');
 
 Route::get('/admin/contact-us/career', [ContactUsController::class, 'career_admin_index'])->name('marketing-admin.contact-us.career');
@@ -213,6 +212,7 @@ Route::post('/admin/contact-us/career/update-page-title', [ContactUsController::
 Route::post('/admin/contact-us/career/update-page-desc', [ContactUsController::class, 'update_career_page_desc'])->name('contact-us.update_career_page_desc');
 Route::post('/admin/contact-us/career/update-page-keywords', [ContactUsController::class, 'update_career_page_keywords'])->name('contact-us.update_career_page_keywords');
 Route::post('/admin/contact-us/career/update-page-author', [ContactUsController::class, 'update_career_page_author'])->name('contact-us.update_career_page_author');
+Route::post('/admin/contact-us/career/update-sect1-heading', [ContactUsController::class, 'update_career_sect1_heading'])->name('contact-us.update_career_sect1_heading');
 Route::post('/admin/contact-us/career/update-sect1-title1', [ContactUsController::class, 'update_career_sect1_title1'])->name('contact-us.update_career_sect1_title1');
 Route::post('/admin/contact-us/career/update-sect1-para1', [ContactUsController::class, 'update_career_sect1_para1'])->name('contact-us.update_career_sect1_para1');
 Route::post('/admin/contact-us/career/update-sect1-title2', [ContactUsController::class, 'update_career_sect1_title2'])->name('contact-us.update_career_sect1_title2');

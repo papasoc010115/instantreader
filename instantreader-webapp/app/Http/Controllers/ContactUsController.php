@@ -12,9 +12,9 @@ class ContactUsController extends Controller
         //get necessary data from table
         $consultation_data = ContactUs::select(
             'consultation_page_title', 'consultation_page_desc', 'consultation_page_keywords', 'consultation_page_author', 
-            'consultation_sect1_title1', 'consultation_sect1_para1', 'consultation_sect1_image1',
-            'consultation_sect1_title2', 'consultation_sect1_para2', 'consultation_sect1_image2',
-            'consultation_sect2_title', 'consultation_sect2_para'
+            'consultation_sect1_heading', 'consultation_sect1_para1', 'consultation_sect1_image1',
+            'consultation_sect1_para2', 'consultation_sect1_image2',
+            'consultation_sect2_heading', 'consultation_sect2_para'
         )->first();
 
         return view('marketing-admin.contact-us.consultation', ['consultation_data' => $consultation_data]);
@@ -25,9 +25,9 @@ class ContactUsController extends Controller
         //get necessary data from table
         $consultation_data = ContactUs::select(
             'consultation_page_title', 'consultation_page_desc', 'consultation_page_keywords', 'consultation_page_author', 
-            'consultation_sect1_title1', 'consultation_sect1_para1', 'consultation_sect1_image1',
-            'consultation_sect1_title2', 'consultation_sect1_para2', 'consultation_sect1_image2',
-            'consultation_sect2_title', 'consultation_sect2_para'
+            'consultation_sect1_heading', 'consultation_sect1_para1', 'consultation_sect1_image1',
+            'consultation_sect1_para2', 'consultation_sect1_image2',
+            'consultation_sect2_heading', 'consultation_sect2_para'
         )->first();
 
         return view('contact-us.book-consultation', ['consultation_data' => $consultation_data]);
@@ -53,8 +53,8 @@ class ContactUsController extends Controller
         return redirect()->route("marketing-admin.contact-us.consultation");
     }
 
-    public function update_consultation_sect1_title1() {
-        ContactUs::first()->update(['consultation_sect1_title1' => request('sect1-title1')]);
+    public function update_consultation_sect1_heading() {
+        ContactUs::first()->update(['consultation_sect1_heading' => request('sect1-heading')]);
         return redirect()->route("marketing-admin.contact-us.consultation");
     }
 
@@ -63,18 +63,13 @@ class ContactUsController extends Controller
         return redirect()->route("marketing-admin.contact-us.consultation");
     }
 
-    public function update_consultation_sect1_title2() {
-        ContactUs::first()->update(['consultation_sect1_title2' => request('sect1-title2')]);
-        return redirect()->route("marketing-admin.contact-us.consultation");
-    }
-
     public function update_consultation_sect1_para2() {
         ContactUs::first()->update(['consultation_sect1_para2' => request('sect1-paragraph2')]);
         return redirect()->route("marketing-admin.contact-us.consultation");
     }
 
-    public function update_consultation_sect2_title() {
-        ContactUs::first()->update(['consultation_sect2_title' => request('sect2-title')]);
+    public function update_consultation_sect2_heading() {
+        ContactUs::first()->update(['consultation_sect2_heading' => request('sect2-heading')]);
         return redirect()->route("marketing-admin.contact-us.consultation");
     }
 
@@ -88,7 +83,7 @@ class ContactUsController extends Controller
         //get necessary data from table
         $career_data = ContactUs::select(
             'career_page_title', 'career_page_desc', 'career_page_keywords', 'career_page_author', 
-            'career_sect1_title1', 'career_sect1_para1', 'career_sect1_image1',
+            'career_sect1_heading', 'career_sect1_title1', 'career_sect1_para1', 'career_sect1_image1',
             'career_sect1_title2', 'career_sect1_para2', 'career_sect1_image2'
         )->first();
 
@@ -100,7 +95,7 @@ class ContactUsController extends Controller
         //get necessary data from table
         $career_data = ContactUs::select(
             'career_page_title', 'career_page_desc', 'career_page_keywords', 'career_page_author', 
-            'career_sect1_title1', 'career_sect1_para1', 'career_sect1_image1',
+            'career_sect1_heading', 'career_sect1_title1', 'career_sect1_para1', 'career_sect1_image1',
             'career_sect1_title2', 'career_sect1_para2', 'career_sect1_image2'
         )->first();
         
@@ -124,6 +119,31 @@ class ContactUsController extends Controller
 
     public function update_career_page_author() {
         ContactUs::first()->update(['career_page_author' => request('page-author')]);
+        return redirect()->route("marketing-admin.contact-us.career");
+    }
+
+    public function update_career_sect1_heading() {
+        ContactUs::first()->update(['career_sect1_heading' => request('sect1-heading')]);
+        return redirect()->route("marketing-admin.contact-us.career");
+    }
+
+    public function update_career_sect1_title1() {
+        ContactUs::first()->update(['career_sect1_title1' => request('sect1-title1')]);
+        return redirect()->route("marketing-admin.contact-us.career");
+    }
+
+    public function update_career_sect1_title2() {
+        ContactUs::first()->update(['career_sect1_title2' => request('sect1-title2')]);
+        return redirect()->route("marketing-admin.contact-us.career");
+    }
+
+    public function update_career_sect1_para1() {
+        ContactUs::first()->update(['career_sect1_para1' => request('sect1-paragraph1')]);
+        return redirect()->route("marketing-admin.contact-us.career");
+    }
+
+    public function update_career_sect1_para2() {
+        ContactUs::first()->update(['career_sect1_para2' => request('sect1-paragraph2')]);
         return redirect()->route("marketing-admin.contact-us.career");
     }
 }

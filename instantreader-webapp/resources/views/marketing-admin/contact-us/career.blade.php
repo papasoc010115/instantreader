@@ -81,11 +81,11 @@
             </div>
 
             <!-- Heading of Section 1 -->
-            <form action="{{ route('contact-us.update_career_sect1_title1') }}" method="POST">
+            <form action="{{ route('contact-us.update_career_sect1_heading') }}" method="POST">
                 @csrf
                 <div class="form-group py-3">
                     <label for="sect1-heading">Section Heading/Title</label>                    
-                    <input type="text" class="form-control" id="sect1-heading" name="sect1-title1" placeholder="e.g. The Best Reading Course" value="{{$career_data->career_sect1_heading}}">
+                    <input type="text" class="form-control" id="sect1-heading" name="sect1-heading" placeholder="e.g. The Best Reading Course" value="{{$career_data->career_sect1_heading}}">
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>                    
                 </div>
             </form>
