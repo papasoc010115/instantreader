@@ -188,21 +188,13 @@ Route::get('/admin/learn-more', function () {
 //// Routes
 Route::get('/admin/home', [HomeController::class, 'admin_index'])->name('marketing-admin.home');
 
-Route::get('/admin/learn-more/reading-assessment', function () {
-    return view('marketing-admin.learn-more.reading-assessment');
-})->name('marketing-admin.learn-more.reading-assessment');
+Route::get('/admin/learn-more/reading-assessment', [LearnMoreController::class, 'reading_assessment_admin_index'])->name('marketing-admin.learn-more.reading-assessment');
 
-Route::get('/admin/learn-more/reading-programs', function () {
-    return view('marketing-admin.learn-more.reading-programs');
-})->name('marketing-admin.learn-more.reading-programs');
+Route::get('/admin/learn-more/reading-programs', [LearnMoreController::class, 'reading_programs_admin_index'])->name('marketing-admin.learn-more.reading-programs');
 
-Route::get('/admin/learn-more/kids-club', function () {
-    return view('marketing-admin.learn-more.kids-club');
-})->name('marketing-admin.learn-more.kids-club');
+Route::get('/admin/learn-more/kids-club', [LearnMoreController::class, 'kids_club_admin_index'])->name('marketing-admin.learn-more.kids-club');
 
-Route::get('/admin/learn-more/faq', function () {
-    return view('marketing-admin.learn-more.faq');
-})->name('marketing-admin.learn-more.faq');
+Route::get('/admin/learn-more/faq', [LearnMoreController::class, 'faq_admin_index'])->name('marketing-admin.learn-more.faq');
 
 Route::get('/admin/contact-us/consultation', [ContactUsController::class, 'book_consultation_admin_index'])->name('marketing-admin.contact-us.consultation');
 Route::post('/admin/contact-us/consultation/update-page-title', [ContactUsController::class, 'update_consultation_page_title'])->name('contact-us.update_consultation_page_title');
@@ -241,7 +233,7 @@ Route::get('/learn-more/reading-assessment', [LearnMoreController::class, 'readi
 
 Route::post('/learn-more/reading-assessment', [FormController::class, 'store_ora'])->name('learn-more.store_ora');
 
-Route::get('/learn-more/reading-programs', [LearnMoreController::class, 'reading_program_index'])->name('learn-more.program-overview');
+Route::get('/learn-more/reading-programs', [LearnMoreController::class, 'reading_programs_index'])->name('learn-more.program-overview');
 
 Route::get('/learn-more/faq', [LearnMoreController::class, 'faq_index'])->name('learn-more.faq');
 
