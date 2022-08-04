@@ -69,8 +69,39 @@
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>                    
                 </div>
             </form>
-        </div>
-        <!-- End of Metadata -->
+            <!-- End of Metadata -->
+
+            <br><br><br>
+
+            <!-- Section 1: Questions Display -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2>Section 1: Questions Display</h2>
+                </div>
+            </div>
+
+            <!-- Heading of Section 1 -->
+            <form action="">
+                @csrf
+                <div class="form-group py-3">
+                    <label for="sect1-heading">Section Heading/Title</label>                    
+                    <input type="text" class="form-control" id="sect1-heading" placeholder="e.g. The Best Reading Course">
+                    <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>                    
+                </div>
+            </form>
+
+            <form action="">
+                @csrf
+                <div class="form-group py-3">
+                    <label for="sect1-question">Question</label>                    
+                    <input type="text" class="form-control" id="sect1-question">
+                    <label for="sect1-answer">Answer</label>                    
+                    <input type="text" class="form-control" id="sect1-answer">
+                    <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Add FAQ</span></button>                    
+                </div>
+            </form>
+            <!-- End of Section 1 -->
+        </div>        
     </section>
 </div>
 @endsection
