@@ -13,15 +13,25 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('addtl_resources', function (Blueprint $table) {
+        Schema::create('testimonials', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
 
             $table->string('page_title', 60);
             $table->string('page_desc', 155);
-            $table->string('page_keywords');
+            $table->string('page_keywords', 155);
             $table->string('page_author', 60);
         });
+
+        // Insert empty values
+        DB::table('testimonials')->insert(
+            array(
+                'page_title' => '',
+                'page_desc' => '',
+                'page_keywords' => '',
+                'page_author' => '',
+            )
+        );
     }
 
     /**
@@ -31,6 +41,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('addtl_resources');
+        Schema::dropIfExists('testimonials');
     }
 };

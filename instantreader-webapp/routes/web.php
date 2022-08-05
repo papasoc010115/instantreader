@@ -6,10 +6,15 @@ use Inertia\Inertia;
 
 use App\Http\Controllers\FormController;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\LearnMoreController;
-use App\Http\Controllers\ContactUsController;
-use App\Http\Controllers\AboutUsController;
-use App\Http\Controllers\AddtlResourcesController;
+use App\Http\Controllers\ReadingProgramController;
+use App\Http\Controllers\ReadingAssessmentController;
+use App\Http\Controllers\KidsClubController;
+use App\Http\Controllers\FaqController;
+use App\Http\Controllers\ConsultationController;
+use App\Http\Controllers\CareerController;
+use App\Http\Controllers\FounderController;
+use App\Http\Controllers\TestimonialController;
+use App\Http\Controllers\AdditionalResourceController;
 
 /*
 This is the routes file for both the marketing site (Non-SPA) and CRM (SPA).
@@ -187,77 +192,45 @@ Route::get('/admin/learn-more', function () {
 
 //// Routes
 Route::get('/admin/home', [HomeController::class, 'admin_index'])->name('marketing-admin.home');
-Route::post('/admin/home/update-page-title', [HomeController::class, 'update_home_page_title'])->name('home.update_page_title');
-Route::post('/admin/home/update-page-desc', [HomeController::class, 'update_home_page_desc'])->name('home.update_page_desc');
-Route::post('/admin/home/update-page-keywords', [HomeController::class, 'update_home_page_keywords'])->name('home.update_page_keywords');
-Route::post('/admin/home/update-page-author', [HomeController::class, 'update_home_page_author'])->name('home.update_page_author');
 
-Route::get('/admin/learn-more/reading-assessment', [LearnMoreController::class, 'reading_assessment_admin_index'])->name('marketing-admin.learn-more.reading-assessment');
+Route::get('/admin/learn-more/reading-assessment', [ReadingAssessmentController::class, 'admin_index'])->name('marketing-admin.learn-more.reading-assessment');
 
-Route::get('/admin/learn-more/reading-programs', [LearnMoreController::class, 'reading_programs_admin_index'])->name('marketing-admin.learn-more.reading-programs');
+Route::get('/admin/learn-more/reading-programs', [ReadingProgramController::class, 'admin_index'])->name('marketing-admin.learn-more.reading-programs');
 
-Route::get('/admin/learn-more/kids-club', [LearnMoreController::class, 'kids_club_admin_index'])->name('marketing-admin.learn-more.kids-club');
+Route::get('/admin/learn-more/kids-club', [KidsClubController::class, 'admin_index'])->name('marketing-admin.learn-more.kids-club');
 
-Route::get('/admin/learn-more/faq', [LearnMoreController::class, 'faq_admin_index'])->name('marketing-admin.learn-more.faq');
+Route::get('/admin/learn-more/faq', [FaqController::class, 'admin_index'])->name('marketing-admin.learn-more.faq');
 
-Route::get('/admin/contact-us/consultation', [ContactUsController::class, 'book_consultation_admin_index'])->name('marketing-admin.contact-us.consultation');
-Route::post('/admin/contact-us/consultation/update-page-title', [ContactUsController::class, 'update_consultation_page_title'])->name('contact-us.update_consultation_page_title');
-Route::post('/admin/contact-us/consultation/update-page-desc', [ContactUsController::class, 'update_consultation_page_desc'])->name('contact-us.update_consultation_page_desc');
-Route::post('/admin/contact-us/consultation/update-page-keywords', [ContactUsController::class, 'update_consultation_page_keywords'])->name('contact-us.update_consultation_page_keywords');
-Route::post('/admin/contact-us/consultation/update-page-author', [ContactUsController::class, 'update_consultation_page_author'])->name('contact-us.update_consultation_page_author');
-Route::post('/admin/contact-us/consultation/update-sect1-heading', [ContactUsController::class, 'update_consultation_sect1_heading'])->name('contact-us.update_consultation_sect1_heading');
-Route::post('/admin/contact-us/consultation/update-sect1-para1', [ContactUsController::class, 'update_consultation_sect1_para1'])->name('contact-us.update_consultation_sect1_para1');
-Route::post('/admin/contact-us/consultation/update-sect1-para2', [ContactUsController::class, 'update_consultation_sect1_para2'])->name('contact-us.update_consultation_sect1_para2');
-Route::post('/admin/contact-us/consultation/update-sect2-heading', [ContactUsController::class, 'update_consultation_sect2_heading'])->name('contact-us.update_consultation_sect2_heading');
-Route::post('/admin/contact-us/consultation/update-sect2-para', [ContactUsController::class, 'update_consultation_sect2_para'])->name('contact-us.update_consultation_sect2_para');
+Route::get('/admin/contact-us/consultation', [ConsultationController::class, 'admin_index'])->name('marketing-admin.contact-us.consultation');
 
-Route::get('/admin/contact-us/career', [ContactUsController::class, 'career_admin_index'])->name('marketing-admin.contact-us.career');
-Route::post('/admin/contact-us/career/update-page-title', [ContactUsController::class, 'update_career_page_title'])->name('contact-us.update_career_page_title');
-Route::post('/admin/contact-us/career/update-page-desc', [ContactUsController::class, 'update_career_page_desc'])->name('contact-us.update_career_page_desc');
-Route::post('/admin/contact-us/career/update-page-keywords', [ContactUsController::class, 'update_career_page_keywords'])->name('contact-us.update_career_page_keywords');
-Route::post('/admin/contact-us/career/update-page-author', [ContactUsController::class, 'update_career_page_author'])->name('contact-us.update_career_page_author');
-Route::post('/admin/contact-us/career/update-sect1-heading', [ContactUsController::class, 'update_career_sect1_heading'])->name('contact-us.update_career_sect1_heading');
-Route::post('/admin/contact-us/career/update-sect1-title1', [ContactUsController::class, 'update_career_sect1_title1'])->name('contact-us.update_career_sect1_title1');
-Route::post('/admin/contact-us/career/update-sect1-para1', [ContactUsController::class, 'update_career_sect1_para1'])->name('contact-us.update_career_sect1_para1');
-Route::post('/admin/contact-us/career/update-sect1-title2', [ContactUsController::class, 'update_career_sect1_title2'])->name('contact-us.update_career_sect1_title2');
-Route::post('/admin/contact-us/career/update-sect1-para2', [ContactUsController::class, 'update_career_sect1_para2'])->name('contact-us.update_career_sect1_para2');
+Route::get('/admin/contact-us/career', [CareerController::class, 'admin_index'])->name('marketing-admin.contact-us.career');
 
-Route::get('/admin/about-us/founder', [AboutUsController::class, 'founder_admin_index'])->name('marketing-admin.about-us.founder');
+Route::get('/admin/about-us/founder', [FounderController::class, 'admin_index'])->name('marketing-admin.about-us.founder');
 
-Route::get('/admin/about-us/testimonials', [AboutUsController::class, 'testimonials_admin_index'])->name('marketing-admin.about-us.testimonials');
+Route::get('/admin/about-us/testimonials', [TestimonialController::class, 'admin_index'])->name('marketing-admin.about-us.testimonials');
 
-Route::get('/admin/additional-resources', [AddtlResourcesController::class, 'admin_index'])->name('marketing-admin.additional-resources');
+Route::get('/admin/additional-resources', [AdditionalResourceController::class, 'admin_index'])->name('marketing-admin.additional-resources');
 
 // main site
 Route::get('/', [HomeController::class, 'index'])->name('home');
-
 Route::post('/', [FormController::class, 'store_orientation'])->name('home.store_orientation');
 
-Route::get('/learn-more/reading-assessment', [LearnMoreController::class, 'reading_assessment_index'])->name('learn-more.reading-assessment');
-
+Route::get('/learn-more/reading-assessment', [ReadingAssessmentController::class, 'index'])->name('learn-more.reading-assessment');
 Route::post('/learn-more/reading-assessment', [FormController::class, 'store_ora'])->name('learn-more.store_ora');
+Route::get('/learn-more/reading-programs', [ReadingProgramController::class, 'index'])->name('learn-more.program-overview');
+Route::get('/learn-more/faq', [FaqController::class, 'index'])->name('learn-more.faq');
+Route::get('/learn-more/kids-club', [KidsClubController::class, 'index'])->name('learn-more.kids-club');
 
-Route::get('/learn-more/reading-programs', [LearnMoreController::class, 'reading_programs_index'])->name('learn-more.program-overview');
-
-Route::get('/learn-more/faq', [LearnMoreController::class, 'faq_index'])->name('learn-more.faq');
-
-Route::get('/learn-more/kids-club', [LearnMoreController::class, 'kids_club_index'])->name('learn-more.kids-club');
-
-Route::get('/about-us/founder-and-developer', [AboutUsController::class, 'founder_index'])->name('about-us.founder');
-
+Route::get('/about-us/founder-and-developer', [FounderController::class, 'index'])->name('about-us.founder');
 Route::post('/about-us/founder-and-developer', [FormController::class, 'store_founder'])->name('about-us.store_founder');
+Route::get('/about-us/testimonials', [TestimonialController::class, 'index'])->name('about-us.testimonials');
 
-Route::get('/about-us/testimonials', [AboutUsController::class, 'testimonials_index'])->name('about-us.testimonials');
-
-Route::get('/contact-us/book-consultation', [ContactUsController::class, 'book_consultation_index'])->name('contact-us.book-consultation');
-
+Route::get('/contact-us/book-consultation', [ConsultationController::class, 'index'])->name('contact-us.book-consultation');
 Route::post('/learn-more/book-consultation', [FormController::class, 'store_consultation'])->name('contact-us.store_consultation');
-
-Route::get('/contact-us/application', [ContactUsController::class, 'career_index'])->name('contact-us.application');
-
+Route::get('/contact-us/application', [CareerController::class, 'index'])->name('contact-us.application');
 Route::post('/learn-more/application', [FormController::class, 'store_application'])->name('contact-us.store_application');
 
-Route::get('/additional-resources', [AddtlResourcesController::class, 'index'])->name('additional-resources');
+Route::get('/additional-resources', [AdditionalResourceController::class, 'index'])->name('additional-resources');
 
 Route::get('/log-in', function () {
     return view('account.log-in');
@@ -268,3 +241,17 @@ Route::get('/sign-up', function () {
 })->name('account.sign-up');
 
 Route::post('/sign-up', [FormController::class, 'store_user'])->name('account.store_user');
+
+/*--------------------------------------------------------------------------
+API ENDPOINTS
+--------------------------------------------------------------------------*/
+Route::post('/api/home/update-page', [HomeController::class, 'update_page'])->name('home.update_page');
+Route::post('/api/learn-more/assessment/update-page', [ReadingAssessmentController::class, 'update_page'])->name('learn-more.assessment.update_page');
+Route::post('/api/learn-more/reading-programs/update-page', [ReadingProgramController::class, 'update_page'])->name('learn-more.reading-programs.update_page');
+Route::post('/api/learn-more/kids-club/update-page', [KidsClubController::class, 'update_page'])->name('learn-more.kids-club.update_page');
+Route::post('/api/learn-more/faq/update-page', [FaqController::class, 'update_page'])->name('learn-more.faq.update_page');
+Route::post('/api/about-us/founder/update-page', [FounderController::class, 'update_page'])->name('about-us.founder.update_page');
+Route::post('/api/about-us/testimonials/update-page', [TestimonialController::class, 'update_page'])->name('about-us.testimonials.update_page');
+Route::post('/api/contact-us/consultation/update-page', [ConsultationController::class, 'update_page'])->name('contact-us.consultation.update_page');
+Route::post('/api/contact-us/career/update-page', [CareerController::class, 'update_page'])->name('contact-us.career.update_page');
+Route::post('/api/additional-resources/update-page', [AdditionalResourceController::class, 'update_page'])->name('additional-resources.update_page');

@@ -2,11 +2,11 @@
 
 @section('metadata')
 <!-- Page title -->
-<title>{{ $home->page_title }}</title>
+<title>{{ $data->page_title }}</title>
 <!-- Other metadata -->
-<meta name="description" content="{{ $home->page_desc }}">
-<meta name="keywords" content="{{ $home->page_keywords }}">
-<meta name="author" content="{{ $home->page_author }}">
+<meta name="description" content="{{ $data->page_desc }}">
+<meta name="keywords" content="{{ $data->page_keywords }}">
+<meta name="author" content="{{ $data->page_author }}">
 @endsection
 
 @section('content')

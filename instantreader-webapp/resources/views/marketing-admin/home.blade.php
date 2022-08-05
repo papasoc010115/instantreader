@@ -24,11 +24,11 @@
                 Page Title. 
                 According to Montti (2021), Moz’s title tag length recommendation is 50 – 60 characters. (reference: https://www.searchenginejournal.com/google-title-tag-length/400682/#close)
             -->
-            <form action="{{ route('home.update_page_title') }}" method="POST">
+            <form data-route="{{ route('home.update_page') }}">
                 @csrf
                 <div class="form-group py-3">
                     <label for="title-editor">Page Title</label>
-                    <input type="text" class="form-control" id="title-editor" maxlength="60" name="page-title" placeholder="Enter page title" value="{{ $home->page_title }}">
+                    <input required data-fieldtype="big" type="text" class="form-control" id="title-editor" maxlength="60" name="page_title" placeholder="Enter page title" value="{{ $data->page_title }}">
                     <small class="form-text char-count" id="title-editor-char-counter">0/60</small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
                 </div>
@@ -37,11 +37,11 @@
                 Description.
                 According to ContentKing (2021), 155 is a good maximum character length for description. (reference: https://www.contentkingapp.com/academy/meta-description/#:~:text=Meta%20Description%20have%3F-,Length,70%20characters%20or%20430%20pixels)
             -->
-            <form action="{{ route('home.update_page_desc') }}" method="POST">
+            <form data-route="{{ route('home.update_page') }}">
                 @csrf
                 <div class="form-group py-3">
                     <label for="description-editor">Page Description</label>
-                    <textarea class="form-control" id="description-editor" name="page-desc" placeholder="Enter page description" maxlength="155" rows="3">{{ $home->page_desc }}</textarea>
+                    <textarea required data-fieldtype="big" class="form-control" id="description-editor" name="page_desc" placeholder="Enter page description" maxlength="155" rows="3">{{ $data->page_desc }}</textarea>
                     <small class="form-text char-count" id="description-editor-char-counter">0/155</small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
                 </div>
@@ -49,11 +49,11 @@
             <!-- 
                 Keywords
              -->
-            <form action="{{ route('home.update_page_keywords') }}" method="POST">
+            <form data-route="{{ route('home.update_page') }}">
                 @csrf
                 <div class="form-group py-3">
                     <label for="keywords-editor">Keywords</label>                    
-                    <input type="text" class="form-control" id="keywords-editor" aria-describedby="keywordsHelp" name="page-keywords" placeholder="e.g. read, learn, students" value="{{ $home->page_keywords }}">
+                    <input required data-fieldtype="big" type="text" class="form-control" id="keywords-editor" aria-describedby="keywordsHelp" name="page_keywords" placeholder="e.g. read, learn, students" value="{{ $data->page_keywords }}">
                     <small id="keywordsHelp" class="form-text text-muted">Separate keywords with comma</small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>                    
                 </div>
@@ -61,11 +61,11 @@
             <!-- 
                 Author
             -->
-            <form action="{{ route('home.update_page_author') }}" method="POST">
+            <form data-route="{{ route('home.update_page') }}">
                 @csrf
                 <div class="form-group py-3">
                     <label for="author-editor">Author</label>                    
-                    <input type="text" class="form-control" id="author-editor" name="page-author" placeholder="John Doe" value="{{ $home->page_author }}">
+                    <input required data-fieldtype="big" type="text" class="form-control" id="author-editor" name="page_author" placeholder="John Doe" value="{{ $data->page_author }}">
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>                    
                 </div>
             </form>
@@ -85,7 +85,7 @@
                 @csrf
                 <div class="form-group py-3">
                     <label for="sect1-heading">Section Heading/Title</label>                    
-                    <input type="text" class="form-control" id="sect1-heading" placeholder="e.g. The Best Reading Course">
+                    <input required data-fieldtype="big" type="text" class="form-control" id="sect1-heading" placeholder="e.g. The Best Reading Course">
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>                    
                 </div>
             </form>
@@ -95,7 +95,7 @@
                 @csrf
                 <div class="form-group py-3">
                     <label for="sect1-opening-statement">Opening Statement</label>
-                    <textarea class="form-control" name="sect1-opening-statement" aria-describedby="sect1SentenceHelp" id="sect1-opening-statement"></textarea>
+                    <textarea data-fieldtype="tiny" class="form-control" name="sect1-opening-statement" aria-describedby="sect1SentenceHelp" id="sect1-opening-statement"></textarea>
                     <small id="sect1SentenceHelp" class="form-text text-muted">Recommended length: 1 sentence</small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
                 </div>
@@ -137,7 +137,7 @@
                 @csrf
                 <div class="form-group py-3">
                     <label for="sect2-heading">Section Heading/Title</label>                    
-                    <input type="text" class="form-control" id="sect2-heading" placeholder="e.g. The Best Reading Course">
+                    <input required data-fieldtype="big" type="text" class="form-control" id="sect2-heading" placeholder="e.g. The Best Reading Course">
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>                    
                 </div>
             </form>
@@ -147,7 +147,7 @@
                 @csrf
                 <div class="form-group py-3">
                     <label for="sect2-paragraph">Paragraph</label>
-                    <textarea class="form-control" name="sect2-paragraph" aria-describedby="sect2ParagraphHelp" id="sect2-paragraph"></textarea>
+                    <textarea data-fieldtype="tiny" class="form-control" name="sect2-paragraph" aria-describedby="sect2ParagraphHelp" id="sect2-paragraph"></textarea>
                     <small id="sect2ParagraphHelp" class="form-text text-muted">Recommended length: 3-5 sentences</small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
                 </div>
@@ -189,7 +189,7 @@
                 @csrf
                 <div class="form-group py-3">
                     <label for="sect3-heading">Section Heading/Title</label>                    
-                    <input type="text" class="form-control" id="sect3-heading" placeholder="e.g. The Best Reading Course">
+                    <input required data-fieldtype="big" type="text" class="form-control" id="sect3-heading" placeholder="e.g. The Best Reading Course">
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>                    
                 </div>
             </form>
@@ -199,7 +199,7 @@
                 @csrf
                 <div class="form-group py-3">
                     <label for="sect3-paragraph">Paragraph</label>
-                    <textarea class="form-control" name="sect3-paragraph" aria-describedby="sect3ParagraphHelp" id="sect3-paragraph"></textarea>
+                    <textarea data-fieldtype="tiny" class="form-control" name="sect3-paragraph" aria-describedby="sect3ParagraphHelp" id="sect3-paragraph"></textarea>
                     <small id="sect3ParagraphHelp" class="form-text text-muted">Recommended length: 3-5 sentences</small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
                 </div>
@@ -241,7 +241,7 @@
                 @csrf
                 <div class="form-group py-3">
                     <label for="sect4-heading">Section Heading/Title</label>                    
-                    <input type="text" class="form-control" id="sect4-heading" placeholder="e.g. The Best Reading Course">
+                    <input required data-fieldtype="big" type="text" class="form-control" id="sect4-heading" placeholder="e.g. The Best Reading Course">
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>                    
                 </div>
             </form>
@@ -251,7 +251,7 @@
                 @csrf
                 <div class="form-group py-3">
                     <label for="sect4-paragraph1">Paragraph for Teacer Vicki</label>
-                    <textarea class="form-control" name="sect4-paragraph1" aria-describedby="sect4Paragraph1Help" id="sect4-paragraph1"></textarea>
+                    <textarea data-fieldtype="tiny" class="form-control" name="sect4-paragraph1" aria-describedby="sect4Paragraph1Help" id="sect4-paragraph1"></textarea>
                     <small id="sect4Paragraph1Help" class="form-text text-muted">Recommended length: 3-5 sentences</small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
                 </div>
@@ -272,7 +272,7 @@
                 @csrf
                 <div class="form-group py-3">
                     <label for="sect4-paragraph2">Paragraph for Likha</label>
-                    <textarea class="form-control" name="sect4-paragraph2" aria-describedby="sect4Paragraph2Help" id="sect4-paragraph2"></textarea>
+                    <textarea data-fieldtype="tiny" class="form-control" name="sect4-paragraph2" aria-describedby="sect4Paragraph2Help" id="sect4-paragraph2"></textarea>
                     <small id="sect4Paragraph2Help" class="form-text text-muted">Recommended length: 3-5 sentences</small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
                 </div>
@@ -325,7 +325,7 @@
                 @csrf
                 <div class="form-group py-3">
                     <label for="sect5-heading">Section Heading/Title</label>                    
-                    <input type="text" class="form-control" id="sect5-heading" placeholder="e.g. The Best Reading Course">
+                    <input required data-fieldtype="big" type="text" class="form-control" id="sect5-heading" placeholder="e.g. The Best Reading Course">
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>                    
                 </div>
             </form>          
@@ -335,7 +335,7 @@
                 @csrf
                 <div class="form-group py-3">
                     <label for="sect5-statement">Statement</label>
-                    <textarea class="form-control" name="sect5-statement" aria-describedby="sect5SentenceHelp" id="sect5-statement"></textarea>
+                    <textarea data-fieldtype="tiny" class="form-control" name="sect5-statement" aria-describedby="sect5SentenceHelp" id="sect5-statement"></textarea>
                     <small id="sect5SentenceHelp" class="form-text text-muted">Recommended length: 1 sentence</small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
                 </div>
@@ -366,7 +366,7 @@
                 @csrf
                 <div class="form-group py-3">
                     <label for="sect6-heading">Section Heading/Title</label>                    
-                    <input type="text" class="form-control" id="sect6-heading" placeholder="e.g. The Best Reading Course">
+                    <input required data-fieldtype="big" type="text" class="form-control" id="sect6-heading" placeholder="e.g. The Best Reading Course">
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>                    
                 </div>
             </form>  
@@ -376,7 +376,7 @@
                 @csrf
                 <div class="form-group py-3">
                     <label for="sect6-statement">Statement</label>
-                    <textarea class="form-control" name="sect6-statement" aria-describedby="sect6SentenceHelp" id="sect6-statement"></textarea>
+                    <textarea data-fieldtype="tiny" class="form-control" name="sect6-statement" aria-describedby="sect6SentenceHelp" id="sect6-statement"></textarea>
                     <small id="sect6SentenceHelp" class="form-text text-muted">Recommended length: 1 sentence</small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
                 </div>
@@ -418,7 +418,7 @@
                 @csrf
                 <div class="form-group py-3">
                     <label for="sect7-heading">Section Heading/Title</label>                    
-                    <input type="text" class="form-control" id="sect7-heading" placeholder="e.g. The Best Reading Course">
+                    <input required data-fieldtype="big" type="text" class="form-control" id="sect7-heading" placeholder="e.g. The Best Reading Course">
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>                    
                 </div>
             </form> 
@@ -428,7 +428,7 @@
                 @csrf
                 <div class="form-group py-3">
                     <label for="sect7-statement">Statement</label>
-                    <textarea class="form-control" name="sect7-statement" aria-describedby="sect7SentenceHelp" id="sect7-statement"></textarea>
+                    <textarea data-fieldtype="tiny" class="form-control" name="sect7-statement" aria-describedby="sect7SentenceHelp" id="sect7-statement"></textarea>
                     <small id="sect7SentenceHelp" class="form-text text-muted">Recommended length: 2 sentence</small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
                 </div>
@@ -470,7 +470,7 @@
                 @csrf
                 <div class="form-group py-3">
                     <label for="sect8-heading">Section Heading/Title</label>                    
-                    <input type="text" class="form-control" id="sect8-heading" placeholder="e.g. The Best Reading Course">
+                    <input required data-fieldtype="big" type="text" class="form-control" id="sect8-heading" placeholder="e.g. The Best Reading Course">
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>                    
                 </div>
             </form> 
@@ -480,7 +480,7 @@
                 @csrf
                 <div class="form-group py-3">
                     <label for="sect8-statement">Statement</label>
-                    <textarea class="form-control" name="sect8-statement" aria-describedby="sect8SentenceHelp" id="sect8-statement"></textarea>
+                    <textarea data-fieldtype="tiny" class="form-control" name="sect8-statement" aria-describedby="sect8SentenceHelp" id="sect8-statement"></textarea>
                     <small id="sect8SentenceHelp" class="form-text text-muted">Recommended length: 1 sentence</small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
                 </div>
