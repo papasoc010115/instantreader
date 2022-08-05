@@ -94,7 +94,7 @@
             </div>
             <div class="col-lg-6 wow fadeInRight">
                 <div class="half-img mt-4 pt-3 mt-lg-0 pt-lg-0">
-                    <img alt="vector" src="{{ asset('marketing-site/assets/img/teacher-vicki.png') }}">
+                    <img alt="vector" src="{{ url($founder_data->founder_teacher_vicki_image) }}">
                 </div>
             </div>
         </div>
@@ -171,7 +171,7 @@
             </div>
             <div class="col-md-6 wow fadeInRight">
                 <div class="half-img mt-2 pt-4 mt-lg-0 pt-lg-0">
-                    <img alt="image" src="{{ asset('marketing-site/assets/img/consultation.jpg') }}">
+                    <img alt="image" src="{{ url($founder_data->founder_ir_history_image1) }}">
                 </div>
             </div>
         </div>
@@ -182,7 +182,7 @@
         <div class="row mt-lg-5 pt-4">
             <div class="col-md-6 wow fadeInLeft info2-img">
                 <div class="half-img mt-2 pt-4 mt-lg-0 pt-lg-0">
-                    <img alt="image" src="{{ asset('marketing-site/assets/img/consultation.jpg') }}">
+                    <img alt="image" src="{{ url($founder_data->founder_ir_history_image2) }}">
                 </div>
             </div>
             <div class="col-md-6 info2-text">
@@ -212,7 +212,7 @@
             </div>
             <div class="col-md-6 wow fadeInRight">
                 <div class="half-img mt-5 pt-4 mt-lg-0 pt-lg-0">
-                    <img alt="image" src="{{ asset('marketing-site/assets/img/consultation.jpg') }}">
+                    <img alt="image" src="{{ url($founder_data->founder_ir_vision_image) }}">
                 </div>
             </div>
         </div>
@@ -230,7 +230,7 @@
         </div>
         <!--Image Row-->
         <div class="row justify-content-center">
-            <img class="mission-img" alt="image" src="{{ asset('marketing-site/assets/img/consultation.jpg') }}">
+            <img class="mission-img" alt="image" src="{{ url($founder_data->founder_ir_mission_image) }}">
         </div>
     </div>
 </section>

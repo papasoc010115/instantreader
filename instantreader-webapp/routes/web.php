@@ -228,8 +228,21 @@ Route::post('/admin/contact-us/career/update-sect1-image2', [ContactUsController
 
 
 Route::get('/admin/about-us/founder', [AboutUsController::class, 'founder_admin_index'])->name('marketing-admin.about-us.founder');
+Route::post('/admin/about-us/founder/update-sect1-image', [AboutUsController::class, 'update_founder_sect1_image'])->name('about-us.update_founder_sect1_image');
+Route::post('/admin/about-us/founder/update-sect2-image1', [AboutUsController::class, 'update_founder_sect2_image1'])->name('about-us.update_founder_sect2_image1');
+Route::post('/admin/about-us/founder/update-sect2-image2', [AboutUsController::class, 'update_founder_sect2_image2'])->name('about-us.update_founder_sect2_image2');
+Route::post('/admin/about-us/founder/update-sect3-image', [AboutUsController::class, 'update_founder_sect3_image'])->name('about-us.update_founder_sect3_image');
+Route::post('/admin/about-us/founder/update-sect4-image', [AboutUsController::class, 'update_founder_sect4_image'])->name('about-us.update_founder_sect4_image');
 
 Route::get('/admin/about-us/testimonials', [AboutUsController::class, 'testimonials_admin_index'])->name('marketing-admin.about-us.testimonials');
+Route::post('/admin/about-us/testimonials/update-sect1-image1', [AboutUsController::class, 'update_testimonials_sect1_image1'])->name('about-us.update_testimonials_sect1_image1');
+Route::post('/admin/about-us/testimonials/update-sect1-image2', [AboutUsController::class, 'update_testimonials_sect1_image2'])->name('about-us.update_testimonials_sect1_image2');
+Route::post('/admin/about-us/testimonials/update-sect1-image3', [AboutUsController::class, 'update_testimonials_sect1_image3'])->name('about-us.update_testimonials_sect1_image3');
+Route::post('/admin/about-us/testimonials/update-sect1-image4', [AboutUsController::class, 'update_testimonials_sect1_image4'])->name('about-us.update_testimonials_sect1_image4');
+Route::post('/admin/about-us/testimonials/update-sect2-image1', [AboutUsController::class, 'update_testimonials_sect2_image1'])->name('about-us.update_testimonials_sect2_image1');
+Route::post('/admin/about-us/testimonials/update-sect2-image2', [AboutUsController::class, 'update_testimonials_sect2_image2'])->name('about-us.update_testimonials_sect2_image2');
+Route::post('/admin/about-us/testimonials/update-sect2-image3', [AboutUsController::class, 'update_testimonials_sect2_image3'])->name('about-us.update_testimonials_sect2_image3');
+Route::post('/admin/about-us/testimonials/update-sect2-image4', [AboutUsController::class, 'update_testimonials_sect2_image4'])->name('about-us.update_testimonials_sect2_image4');
 
 Route::get('/admin/additional-resources', [AddtlResourcesController::class, 'admin_index'])->name('marketing-admin.additional-resources');
 
