@@ -385,11 +385,11 @@
         </script>
 
          <!-- Images of Section 5 -->
-         <form action="">
+         <form action="{{ route('about-us.update_founder_sect5_images') }}" method="POST">
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect5-images" class="form-label">Images (Select 5 only)</label>
-                <input class="form-control form-control-sm" type="file" id="sect5-images" aria-describedby="sect5ImagesHelp" multiple>
+                <input class="form-control form-control-sm" name="founder-project-virac-images[]" type="file" id="sect5-images" aria-describedby="sect5ImagesHelp" multiple>
                 <small id="sect5ImagesHelp" class="form-text text-muted">Recommended image size: WxH</small>
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
             </div>                

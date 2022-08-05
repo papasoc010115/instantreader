@@ -17,7 +17,8 @@ class AboutUsController extends Controller
             'founder_ir_history_image1', 'founder_ir_history_image2', 'founder_ir_history_video',
             'founder_ir_vision_title', 'founder_ir_vision_para', 'founder_ir_vision_image', 
             'founder_ir_mission_title', 'founder_ir_mission_para', 'founder_ir_mission_image',
-            'founder_virac_para1', 'founder_virac_para2', 'founder_virac_video'
+            'founder_virac_para1', 'founder_virac_para2', 'founder_virac_video', 'founder_virac_image1',
+            'founder_virac_image2', 'founder_virac_image3', 'founder_virac_image4', 'founder_virac_image5' 
         )->first();
 
         return view('marketing-admin.about-us.founder', ['founder_data' => $founder_data]);
@@ -33,7 +34,8 @@ class AboutUsController extends Controller
             'founder_ir_history_image1', 'founder_ir_history_image2', 'founder_ir_history_video',
             'founder_ir_vision_title', 'founder_ir_vision_para', 'founder_ir_vision_image', 
             'founder_ir_mission_title', 'founder_ir_mission_para', 'founder_ir_mission_image',
-            'founder_virac_para1', 'founder_virac_para2', 'founder_virac_video'
+            'founder_virac_para1', 'founder_virac_para2', 'founder_virac_video', 'founder_virac_image1',
+            'founder_virac_image2', 'founder_virac_image3', 'founder_virac_image4', 'founder_virac_image5' 
         )->first();
 
         return view('about-us.founder', ['founder_data' => $founder_data]);
@@ -64,6 +66,17 @@ class AboutUsController extends Controller
         return redirect()->route("marketing-admin.about-us.founder");
     }
 
+    public function update_founder_sect5_images() {
+        if (count(request('founder-project-virac-images')) <= 5){
+            AboutUs::first()->update(['founder_virac_image1' => "/marketing-site/assets/img/" . request('founder-project-virac-images')[0] ]);
+            AboutUs::first()->update(['founder_virac_image2' => "/marketing-site/assets/img/" . request('founder-project-virac-images')[1] ]);
+            AboutUs::first()->update(['founder_virac_image3' => "/marketing-site/assets/img/" . request('founder-project-virac-images')[2] ]);
+            AboutUs::first()->update(['founder_virac_image4' => "/marketing-site/assets/img/" . request('founder-project-virac-images')[3] ]);
+            AboutUs::first()->update(['founder_virac_image5' => "/marketing-site/assets/img/" . request('founder-project-virac-images')[4] ]);
+        }
+        return redirect()->route("marketing-admin.about-us.founder");
+    }
+
     //Testimonials Admin View
     public function testimonials_admin_index() {
         //get necessary data from table
@@ -73,7 +86,8 @@ class AboutUsController extends Controller
             'parental_concerns_image1', 'parental_concerns_image2', 'parental_concerns_image3', 'parental_concerns_image4',
             'parental_goals_para1', 'parental_goals_para2', 'parental_goals_para3', 'parental_goals_para4', 
             'parental_goals_image1', 'parental_goals_image2', 'parental_goals_image3', 'parental_goals_image4',
-            'testimonials_para1', 'testimonials_para2', 'testimonials_para3', 'testimonials_para4'
+            'testimonials_para1', 'testimonials_para2', 'testimonials_para3', 'testimonials_para4', 'testimonials_image1',
+            'testimonials_image2', 'testimonials_image3', 'testimonials_image4'
         )->first();
 
         return view('marketing-admin.about-us.testimonials', ['testimonials_data' => $testimonials_data]);
@@ -88,7 +102,8 @@ class AboutUsController extends Controller
             'parental_concerns_image1', 'parental_concerns_image2', 'parental_concerns_image3', 'parental_concerns_image4',
             'parental_goals_para1', 'parental_goals_para2', 'parental_goals_para3', 'parental_goals_para4', 
             'parental_goals_image1', 'parental_goals_image2', 'parental_goals_image3', 'parental_goals_image4',
-            'testimonials_para1', 'testimonials_para2', 'testimonials_para3', 'testimonials_para4'
+            'testimonials_para1', 'testimonials_para2', 'testimonials_para3', 'testimonials_para4', 'testimonials_image1',
+            'testimonials_image2', 'testimonials_image3', 'testimonials_image4'
         )->first();
 
         return view('about-us.testimonials', ['testimonials_data' => $testimonials_data]);
@@ -132,5 +147,15 @@ class AboutUsController extends Controller
     public function update_testimonials_sect2_image4() {
         AboutUs::first()->update(['parental_goals_image4' => "/marketing-site/assets/img/" . request('sect2-image4')]);
         return redirect()->route("marketing-admin.about-us.testimonials");
+    }
+
+    public function update_testimonials_sect3_images() {
+        if (count(request('other-testimonials-images')) == 4){
+            AboutUs::first()->update(['testimonials_image1' => "/marketing-site/assets/img/" . request('other-testimonials-images')[0] ]);
+            AboutUs::first()->update(['testimonials_image2' => "/marketing-site/assets/img/" . request('other-testimonials-images')[1] ]);
+            AboutUs::first()->update(['testimonials_image3' => "/marketing-site/assets/img/" . request('other-testimonials-images')[2] ]);
+            AboutUs::first()->update(['testimonials_image4' => "/marketing-site/assets/img/" . request('other-testimonials-images')[3] ]);
+        }
+        return redirect()->route("marketing-admin.about-us.founder");
     }
 }

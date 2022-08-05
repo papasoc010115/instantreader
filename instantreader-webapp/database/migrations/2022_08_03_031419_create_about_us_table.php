@@ -39,6 +39,11 @@ return new class extends Migration
             $table->string('founder_virac_para1');
             $table->string('founder_virac_para2');
             $table->string('founder_virac_video');
+            $table->string('founder_virac_image1');
+            $table->string('founder_virac_image2');
+            $table->string('founder_virac_image3');
+            $table->string('founder_virac_image4');
+            $table->string('founder_virac_image5');
 
             $table->string('testimonials_page_title', 60);
             $table->string('testimonials_page_desc', 155);
@@ -64,6 +69,10 @@ return new class extends Migration
             $table->string('testimonials_para2');
             $table->string('testimonials_para3');
             $table->string('testimonials_para4');
+            $table->string('testimonials_image1');
+            $table->string('testimonials_image2');
+            $table->string('testimonials_image3');
+            $table->string('testimonials_image4');
         });
 
         // Insert empty values
@@ -91,6 +100,11 @@ return new class extends Migration
                 'founder_virac_para1' => '',
                 'founder_virac_para2' => '',
                 'founder_virac_video' => '',
+                'founder_virac_image1' => '',
+                'founder_virac_image2' => '',
+                'founder_virac_image3' => '',
+                'founder_virac_image4' => '',
+                'founder_virac_image5' => '',
                 
                 'testimonials_page_title' => '',
                 'testimonials_page_desc' => '',
@@ -115,7 +129,11 @@ return new class extends Migration
                 'testimonials_para1' => '',
                 'testimonials_para2' => '',
                 'testimonials_para3' => '',
-                'testimonials_para4' => ''
+                'testimonials_para4' => '',
+                'testimonials_image1' => '',
+                'testimonials_image2' => '',
+                'testimonials_image3' => '',
+                'testimonials_image4' => ''
 
             )
         );

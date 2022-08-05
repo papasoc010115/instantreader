@@ -472,11 +472,11 @@
         </script>
 
         <!-- Images of Section 3 -->
-        <form action="">
+        <form action="{{ route('about-us.update_testimonials_sect3_images') }}" method="POST">
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect3-images" class="form-label">Images (Select at least 4 photos)</label>
-                <input class="form-control form-control-sm" type="file" id="sect3-images" aria-describedby="sect3ImagesHelp" multiple>
+                <input class="form-control form-control-sm" name="other-testimonials-images[]" type="file" id="sect3-images" aria-describedby="sect3ImagesHelp" multiple>
                 <small id="sect3ImagesHelp" class="form-text text-muted">Recommended image size: WxH</small>
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
             </div>                
