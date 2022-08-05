@@ -296,7 +296,7 @@
                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
                     </div>
                     <div class="carousel-inner">
-                        <div class="carousel-item active">
+                        <!-- <div class="carousel-item active">
                         <img src="{{ url($founder_data->founder_virac_image1) }}" class="d-block w-100" alt="...">
                         </div>
                         <div class="carousel-item">
@@ -310,7 +310,7 @@
                         </div>
                         <div class="carousel-item">
                         <img src="{{ url($founder_data->founder_virac_image5) }}" class="d-block w-100" alt="...">
-                        </div>
+                        </div> -->
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>

@@ -201,6 +201,7 @@ Route::get('/admin/learn-more/kids-club', [KidsClubController::class, 'admin_ind
 
 Route::get('/admin/learn-more/faq', [FaqController::class, 'admin_index'])->name('marketing-admin.learn-more.faq');
 
+<<<<<<< HEAD
 Route::get('/admin/contact-us/consultation', [ConsultationController::class, 'admin_index'])->name('marketing-admin.contact-us.consultation');
 
 Route::get('/admin/contact-us/career', [CareerController::class, 'admin_index'])->name('marketing-admin.contact-us.career');
@@ -208,6 +209,53 @@ Route::get('/admin/contact-us/career', [CareerController::class, 'admin_index'])
 Route::get('/admin/about-us/founder', [FounderController::class, 'admin_index'])->name('marketing-admin.about-us.founder');
 
 Route::get('/admin/about-us/testimonials', [TestimonialController::class, 'admin_index'])->name('marketing-admin.about-us.testimonials');
+=======
+Route::get('/admin/contact-us/consultation', [ContactUsController::class, 'book_consultation_admin_index'])->name('marketing-admin.contact-us.consultation');
+Route::post('/admin/contact-us/consultation/update-page-title', [ContactUsController::class, 'update_consultation_page_title'])->name('contact-us.update_consultation_page_title');
+Route::post('/admin/contact-us/consultation/update-page-desc', [ContactUsController::class, 'update_consultation_page_desc'])->name('contact-us.update_consultation_page_desc');
+Route::post('/admin/contact-us/consultation/update-page-keywords', [ContactUsController::class, 'update_consultation_page_keywords'])->name('contact-us.update_consultation_page_keywords');
+Route::post('/admin/contact-us/consultation/update-page-author', [ContactUsController::class, 'update_consultation_page_author'])->name('contact-us.update_consultation_page_author');
+Route::post('/admin/contact-us/consultation/update-sect1-heading', [ContactUsController::class, 'update_consultation_sect1_heading'])->name('contact-us.update_consultation_sect1_heading');
+Route::post('/admin/contact-us/consultation/update-sect1-para1', [ContactUsController::class, 'update_consultation_sect1_para1'])->name('contact-us.update_consultation_sect1_para1');
+Route::post('/admin/contact-us/consultation/update-sect1-para2', [ContactUsController::class, 'update_consultation_sect1_para2'])->name('contact-us.update_consultation_sect1_para2');
+Route::post('/admin/contact-us/consultation/update-sect2-heading', [ContactUsController::class, 'update_consultation_sect2_heading'])->name('contact-us.update_consultation_sect2_heading');
+Route::post('/admin/contact-us/consultation/update-sect2-para', [ContactUsController::class, 'update_consultation_sect2_para'])->name('contact-us.update_consultation_sect2_para');
+Route::post('/admin/contact-us/consultation/update-sect1-image1', [ContactUsController::class, 'update_consultation_sect1_image1'])->name('contact-us.update_consultation_sect1_image1');
+Route::post('/admin/contact-us/consultation/update-sect1-image2', [ContactUsController::class, 'update_consultation_sect1_image2'])->name('contact-us.update_consultation_sect1_image2');
+
+Route::get('/admin/contact-us/career', [ContactUsController::class, 'career_admin_index'])->name('marketing-admin.contact-us.career');
+Route::post('/admin/contact-us/career/update-page-title', [ContactUsController::class, 'update_career_page_title'])->name('contact-us.update_career_page_title');
+Route::post('/admin/contact-us/career/update-page-desc', [ContactUsController::class, 'update_career_page_desc'])->name('contact-us.update_career_page_desc');
+Route::post('/admin/contact-us/career/update-page-keywords', [ContactUsController::class, 'update_career_page_keywords'])->name('contact-us.update_career_page_keywords');
+Route::post('/admin/contact-us/career/update-page-author', [ContactUsController::class, 'update_career_page_author'])->name('contact-us.update_career_page_author');
+Route::post('/admin/contact-us/career/update-sect1-heading', [ContactUsController::class, 'update_career_sect1_heading'])->name('contact-us.update_career_sect1_heading');
+Route::post('/admin/contact-us/career/update-sect1-title1', [ContactUsController::class, 'update_career_sect1_title1'])->name('contact-us.update_career_sect1_title1');
+Route::post('/admin/contact-us/career/update-sect1-para1', [ContactUsController::class, 'update_career_sect1_para1'])->name('contact-us.update_career_sect1_para1');
+Route::post('/admin/contact-us/career/update-sect1-title2', [ContactUsController::class, 'update_career_sect1_title2'])->name('contact-us.update_career_sect1_title2');
+Route::post('/admin/contact-us/career/update-sect1-para2', [ContactUsController::class, 'update_career_sect1_para2'])->name('contact-us.update_career_sect1_para2');
+Route::post('/admin/contact-us/career/update-sect1-image1', [ContactUsController::class, 'update_career_sect1_image1'])->name('contact-us.update_career_sect1_image1');
+Route::post('/admin/contact-us/career/update-sect1-image2', [ContactUsController::class, 'update_career_sect1_image2'])->name('contact-us.update_career_sect1_image2');
+
+
+Route::get('/admin/about-us/founder', [AboutUsController::class, 'founder_admin_index'])->name('marketing-admin.about-us.founder');
+Route::post('/admin/about-us/founder/update-sect1-image', [AboutUsController::class, 'update_founder_sect1_image'])->name('about-us.update_founder_sect1_image');
+Route::post('/admin/about-us/founder/update-sect2-image1', [AboutUsController::class, 'update_founder_sect2_image1'])->name('about-us.update_founder_sect2_image1');
+Route::post('/admin/about-us/founder/update-sect2-image2', [AboutUsController::class, 'update_founder_sect2_image2'])->name('about-us.update_founder_sect2_image2');
+Route::post('/admin/about-us/founder/update-sect3-image', [AboutUsController::class, 'update_founder_sect3_image'])->name('about-us.update_founder_sect3_image');
+Route::post('/admin/about-us/founder/update-sect4-image', [AboutUsController::class, 'update_founder_sect4_image'])->name('about-us.update_founder_sect4_image');
+Route::post('/admin/about-us/founder/update-sect5-images', [AboutUsController::class, 'update_founder_sect5_images'])->name('about-us.update_founder_sect5_images');
+
+Route::get('/admin/about-us/testimonials', [AboutUsController::class, 'testimonials_admin_index'])->name('marketing-admin.about-us.testimonials');
+Route::post('/admin/about-us/testimonials/update-sect1-image1', [AboutUsController::class, 'update_testimonials_sect1_image1'])->name('about-us.update_testimonials_sect1_image1');
+Route::post('/admin/about-us/testimonials/update-sect1-image2', [AboutUsController::class, 'update_testimonials_sect1_image2'])->name('about-us.update_testimonials_sect1_image2');
+Route::post('/admin/about-us/testimonials/update-sect1-image3', [AboutUsController::class, 'update_testimonials_sect1_image3'])->name('about-us.update_testimonials_sect1_image3');
+Route::post('/admin/about-us/testimonials/update-sect1-image4', [AboutUsController::class, 'update_testimonials_sect1_image4'])->name('about-us.update_testimonials_sect1_image4');
+Route::post('/admin/about-us/testimonials/update-sect2-image1', [AboutUsController::class, 'update_testimonials_sect2_image1'])->name('about-us.update_testimonials_sect2_image1');
+Route::post('/admin/about-us/testimonials/update-sect2-image2', [AboutUsController::class, 'update_testimonials_sect2_image2'])->name('about-us.update_testimonials_sect2_image2');
+Route::post('/admin/about-us/testimonials/update-sect2-image3', [AboutUsController::class, 'update_testimonials_sect2_image3'])->name('about-us.update_testimonials_sect2_image3');
+Route::post('/admin/about-us/testimonials/update-sect2-image4', [AboutUsController::class, 'update_testimonials_sect2_image4'])->name('about-us.update_testimonials_sect2_image4');
+Route::post('/admin/about-us/testimonials/update-sect3-images', [AboutUsController::class, 'update_testimonials_sect3_images'])->name('about-us.update_testimonials_sect3_images');
+>>>>>>> 46f9318678b28b5df5a240fcde16fa70b54fd659
 
 Route::get('/admin/additional-resources', [AdditionalResourceController::class, 'admin_index'])->name('marketing-admin.additional-resources');
 

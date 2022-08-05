@@ -259,7 +259,7 @@
                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 3"></button>
                     </div>
                     <div class="carousel-inner">
-                        <div class="carousel-item active">
+                        <!-- <div class="carousel-item active">
                         <img src="{{ url($testimonials_data->testimonials_image1) }}" class="d-block w-100" alt="...">
                         </div>
                         <div class="carousel-item">
@@ -270,7 +270,7 @@
                         </div>
                         <div class="carousel-item">
                         <img src="{{ url($testimonials_data->testimonials_image4) }}" class="d-block w-100" alt="...">
-                        </div>
+                        </div> -->
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
