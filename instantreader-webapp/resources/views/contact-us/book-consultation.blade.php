@@ -52,7 +52,7 @@
         <div class="row vertical-align-center">
             <div class="col-md-6 wow fadeInLeft">
                 <div class="half-img mt-5 pt-4 mt-lg-0 pt-lg-0">
-                    <img alt="image" src="{{ asset('marketing-site/assets/img/consultation.jpg') }}">
+                    <img alt="image" src="{{ url($consultation_data->consultation_sect1_image1) }}">
                 </div>
             </div>
             <div class="col-md-6 wow fadeInRight">
@@ -73,7 +73,7 @@
             </div>
             <div class="col-md-6 wow fadeInRight">
                 <div class="half-img mt-5 pt-4 mt-lg-0 pt-lg-0">
-                    <img alt="image" src="{{ asset('marketing-site/assets/img/consultation.jpg') }}">
+                    <img alt="image" src="{{ url($consultation_data->consultation_sect1_image2) }}">
                 </div>
             </div>
         </div>

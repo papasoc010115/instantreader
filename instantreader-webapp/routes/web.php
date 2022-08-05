@@ -210,6 +210,8 @@ Route::post('/admin/contact-us/consultation/update-sect1-para1', [ContactUsContr
 Route::post('/admin/contact-us/consultation/update-sect1-para2', [ContactUsController::class, 'update_consultation_sect1_para2'])->name('contact-us.update_consultation_sect1_para2');
 Route::post('/admin/contact-us/consultation/update-sect2-heading', [ContactUsController::class, 'update_consultation_sect2_heading'])->name('contact-us.update_consultation_sect2_heading');
 Route::post('/admin/contact-us/consultation/update-sect2-para', [ContactUsController::class, 'update_consultation_sect2_para'])->name('contact-us.update_consultation_sect2_para');
+Route::post('/admin/contact-us/consultation/update-sect1-image1', [ContactUsController::class, 'update_consultation_sect1_image1'])->name('contact-us.update_consultation_sect1_image1');
+Route::post('/admin/contact-us/consultation/update-sect1-image2', [ContactUsController::class, 'update_consultation_sect1_image2'])->name('contact-us.update_consultation_sect1_image2');
 
 Route::get('/admin/contact-us/career', [ContactUsController::class, 'career_admin_index'])->name('marketing-admin.contact-us.career');
 Route::post('/admin/contact-us/career/update-page-title', [ContactUsController::class, 'update_career_page_title'])->name('contact-us.update_career_page_title');
@@ -221,6 +223,9 @@ Route::post('/admin/contact-us/career/update-sect1-title1', [ContactUsController
 Route::post('/admin/contact-us/career/update-sect1-para1', [ContactUsController::class, 'update_career_sect1_para1'])->name('contact-us.update_career_sect1_para1');
 Route::post('/admin/contact-us/career/update-sect1-title2', [ContactUsController::class, 'update_career_sect1_title2'])->name('contact-us.update_career_sect1_title2');
 Route::post('/admin/contact-us/career/update-sect1-para2', [ContactUsController::class, 'update_career_sect1_para2'])->name('contact-us.update_career_sect1_para2');
+Route::post('/admin/contact-us/career/update-sect1-image1', [ContactUsController::class, 'update_career_sect1_image1'])->name('contact-us.update_career_sect1_image1');
+Route::post('/admin/contact-us/career/update-sect1-image2', [ContactUsController::class, 'update_career_sect1_image2'])->name('contact-us.update_career_sect1_image2');
+
 
 Route::get('/admin/about-us/founder', [AboutUsController::class, 'founder_admin_index'])->name('marketing-admin.about-us.founder');
 

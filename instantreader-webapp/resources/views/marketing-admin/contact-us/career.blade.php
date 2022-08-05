@@ -153,22 +153,22 @@
             </script>
 
             <!-- Image 1 -->
-            <form action="">
+            <form action="{{ route('contact-us.update_career_sect1_image1') }}" method="POST">
                 @csrf
                 <div class="mb-3 py-3">
                     <label for="sect1-image1" class="form-label">Image 1</label>
-                    <input class="form-control form-control-sm" type="file" id="sect1-image1" aria-describedby="sect1Image1Help">
+                    <input class="form-control form-control-sm" name="sect1-image1" type="file" id="sect1-image1" aria-describedby="sect1Image1Help">
                     <small id="sect1Image1Help" class="form-text text-muted">Recommended image size: WxH</small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
                 </div>                
             </form>
 
             <!-- Image 2 -->
-            <form action="">
+            <form action="{{ route('contact-us.update_career_sect1_image2') }}" method="POST">
                 @csrf
                 <div class="mb-3 py-3">
                     <label for="sect1-image2" class="form-label">Image 2</label>
-                    <input class="form-control form-control-sm" type="file" id="sect1-image2" aria-describedby="sect1Image2Help">
+                    <input class="form-control form-control-sm" name="sect1-image2" type="file" id="sect1-image2" aria-describedby="sect1Image2Help">
                     <small id="sect1Image2Help" class="form-text text-muted">Recommended image size: WxH</small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
                 </div>                

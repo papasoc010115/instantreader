@@ -114,7 +114,7 @@
 <!--About the assessment End-->
 
 <!-- Calendar Start -->
-<section class="bg-light pb-0 pt-4 m-0" id="calendar-reading-assessment">
+<section class="bg-light pb-0 pt-4 m-0 wow fadeInUp" id="calendar-reading-assessment">
     <div class="container">
 
         <!-- Calendar Paragraph -->

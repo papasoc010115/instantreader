@@ -78,6 +78,21 @@ class ContactUsController extends Controller
         return redirect()->route("marketing-admin.contact-us.consultation");
     }
 
+    public function update_consultation_sect1_para() {
+        ContactUs::first()->update(['consultation_sect2_para' => request('sect2-paragraph')]);
+        return redirect()->route("marketing-admin.contact-us.consultation");
+    }
+
+    public function update_consultation_sect1_image1() {
+        ContactUs::first()->update(['consultation_sect1_image1' => "/marketing-site/assets/img/" . request('sect1-image1')]);
+        return redirect()->route("marketing-admin.contact-us.consultation");
+    }
+
+    public function update_consultation_sect1_image2() {
+        ContactUs::first()->update(['consultation_sect1_image2' => "/marketing-site/assets/img/" . request('sect1-image2')]);
+        return redirect()->route("marketing-admin.contact-us.consultation");
+    }
+
     //Start a Career With Us Admin View
     public function career_admin_index() {
         //get necessary data from table
@@ -144,6 +159,16 @@ class ContactUsController extends Controller
 
     public function update_career_sect1_para2() {
         ContactUs::first()->update(['career_sect1_para2' => request('sect1-paragraph2')]);
+        return redirect()->route("marketing-admin.contact-us.career");
+    }
+    
+    public function update_career_sect1_image1() {
+        ContactUs::first()->update(['career_sect1_image1' => "/marketing-site/assets/img/" . request('sect1-image1')]);
+        return redirect()->route("marketing-admin.contact-us.career");
+    }
+
+    public function update_career_sect1_image2() {
+        ContactUs::first()->update(['career_sect1_image2' => "/marketing-site/assets/img/" . request('sect1-image2')]);
         return redirect()->route("marketing-admin.contact-us.career");
     }
 }
