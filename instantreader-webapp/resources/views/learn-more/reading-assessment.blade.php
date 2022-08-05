@@ -46,6 +46,11 @@
     .carousel-card:hover, .general-time-card:hover, .specific-time-card:hover {
         cursor: pointer;
         color: white;
+        background-color: #564F4F;
+    }
+
+    .is-active{
+        color: white;
         background-color: #483BF7;
     }
 
@@ -132,8 +137,8 @@
             <div id="reading-assessment-carousel" class="carousel slide h-100">
                 <div class="carousel-inner h-100">
                     <div class="carousel-item h-100 active">
-                        <div class="row m-auto h-100">
-                            <div class="col-3 py-3 h-100" >
+                        <ul class="row m-auto h-100 list-unstyled">
+                            <li class="col-3 py-3 h-100" >
                                 <div class="carousel-card h-100 d-flex align-items-center justify-content-center text-center">
                                     <p>
                                         August 05, 2022
@@ -141,8 +146,8 @@
                                         Available Slots
                                     </p>
                                 </div>
-                            </div>
-                            <div class="col-3 py-3 h-100">
+                            </li>
+                            <li class="col-3 py-3 h-100">
                                 <div class="carousel-card h-100 d-flex align-items-center justify-content-center text-center">
                                     <p>
                                         August 06, 2022
@@ -150,8 +155,8 @@
                                         Available Slots
                                     </p>
                                 </div>
-                            </div>
-                            <div class="col-3 py-3 h-100">
+                            </li>
+                            <li class="col-3 py-3 h-100">
                                 <div class="carousel-card h-100 d-flex align-items-center justify-content-center text-center">
                                     <p>
                                         August 07, 2022
@@ -159,8 +164,8 @@
                                         Available Slots
                                     </p>
                                 </div>
-                            </div>
-                            <div class="col-3 py-3 h-100">
+                            </li>
+                            <li class="col-3 py-3 h-100">
                                 <div class="carousel-card h-100 d-flex align-items-center justify-content-center text-center">
                                     <p>
                                         August 08, 2022
@@ -168,8 +173,8 @@
                                         Available Slots
                                     </p>
                                 </div>
-                            </div>
-                        </div>
+                            </li>
+                        </ul>
                     </div>
                     <div class="carousel-item h-100">
                         <div class="row m-auto h-100">
@@ -366,7 +371,51 @@
     </div>
 </section>
 
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script>
+
+    // jquery for selecting day cards
+    $(".carousel-card").on("click",function() {
+        if($(this).hasClass("is-active")){
+            // if the card is active, remove the class
+            $(this).removeClass("is-active");
+            $(".general-time-card.is-active").removeClass("is-active");
+            $(".specific-time-card.is-active").removeClass("is-active");
+        } else{
+            // else remove all currently active cards, then set current card as active
+            $(".carousel-card.is-active").removeClass("is-active");
+            $(".general-time-card.is-active").removeClass("is-active");
+            $(".specific-time-card.is-active").removeClass("is-active");
+            $(this).addClass("is-active");
+        }
+    });
+
+    // jquery for selecting general time cards
+    $(".general-time-card").on("click",function() {
+        if($(this).hasClass("is-active")){
+            // if the card is active, remove the class
+            $(this).removeClass("is-active");
+            $(".specific-time-card.is-active").removeClass("is-active");
+        } else {
+            // else remove all currently active cards, then set current card as active
+            $(".general-time-card.is-active").removeClass("is-active");
+            $(".specific-time-card.is-active").removeClass("is-active");
+            $(this).addClass("is-active");
+        }
+    });
+
+    // jquery for selecting specific time cards
+    $(".specific-time-card").on("click",function() {
+        if($(this).hasClass("is-active")){
+            // if the card is active, remove the class
+            $(this).removeClass("is-active");
+        } else{
+            // else remove all currently active cards, then set current card as active
+            $(".specific-time-card.is-active").removeClass("is-active");
+            $(this).addClass("is-active");
+        }
+    });
+
     // script for scrolling down
     document.getElementById("scroll-to-form").onclick = function () {
         document.getElementById("book-reading-assessment-form").scrollIntoView({behavior: 'smooth'});
