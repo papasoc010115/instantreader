@@ -103,7 +103,7 @@
             </div>
             <div class="col-lg-6 wow fadeInRight">
                 <div class="half-img mt-4 pt-3 mt-lg-0 pt-lg-0">
-                    <img alt="vector" src="{{ asset('marketing-site/assets/img/teacher-vicki.png') }}">
+                    <img alt="vector" src="{{ url($founder_data->founder_teacher_vicki_image) }}">
                 </div>
             </div>
         </div>
@@ -180,7 +180,7 @@
             </div>
             <div class="col-md-6 wow fadeInRight">
                 <div class="half-img mt-2 pt-4 mt-lg-0 pt-lg-0">
-                    <img alt="image" src="{{ asset('marketing-site/assets/img/consultation.jpg') }}">
+                    <img alt="image" src="{{ url($founder_data->founder_ir_history_image1) }}">
                 </div>
             </div>
         </div>
@@ -191,7 +191,7 @@
         <div class="row mt-lg-5 pt-4">
             <div class="col-md-6 wow fadeInLeft info2-img">
                 <div class="half-img mt-2 pt-4 mt-lg-0 pt-lg-0">
-                    <img alt="image" src="{{ asset('marketing-site/assets/img/consultation.jpg') }}">
+                    <img alt="image" src="{{ url($founder_data->founder_ir_history_image2) }}">
                 </div>
             </div>
             <div class="col-md-6 info2-text">
@@ -221,7 +221,7 @@
             </div>
             <div class="col-md-6 wow fadeInRight">
                 <div class="half-img mt-5 pt-4 mt-lg-0 pt-lg-0">
-                    <img alt="image" src="{{ asset('marketing-site/assets/img/consultation.jpg') }}">
+                    <img alt="image" src="{{ url($founder_data->founder_ir_vision_image) }}">
                 </div>
             </div>
         </div>
@@ -239,7 +239,7 @@
         </div>
         <!--Image Row-->
         <div class="row justify-content-center">
-            <img class="mission-img" alt="image" src="{{ asset('marketing-site/assets/img/consultation.jpg') }}">
+            <img class="mission-img" alt="image" src="{{ url($founder_data->founder_ir_mission_image) }}">
         </div>
     </div>
 </section>
@@ -292,16 +292,24 @@
                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
                     </div>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                        <img src="{{ asset('marketing-site/assets/img/tutor-application.jpg') }}" class="d-block w-100" alt="...">
+                        <img src="{{ url($founder_data->founder_virac_image1) }}" class="d-block w-100" alt="...">
                         </div>
                         <div class="carousel-item">
-                        <img src="{{ asset('marketing-site/assets/img/consultation.jpg') }}" class="d-block w-100" alt="...">
+                        <img src="{{ url($founder_data->founder_virac_image2) }}" class="d-block w-100" alt="...">
                         </div>
                         <div class="carousel-item">
-                        <img src="{{ asset('marketing-site/assets/img/tutor-application.jpg') }}" class="d-block w-100" alt="...">
+                        <img src="{{ url($founder_data->founder_virac_image3) }}" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                        <img src="{{ url($founder_data->founder_virac_image4) }}" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                        <img src="{{ url($founder_data->founder_virac_image5) }}" class="d-block w-100" alt="...">
                         </div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">

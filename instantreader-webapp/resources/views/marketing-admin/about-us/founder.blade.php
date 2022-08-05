@@ -112,11 +112,11 @@
         </script>
 
         <!-- Image -->
-        <form action="">
+        <form action="{{ route('about-us.update_founder_sect1_image') }}" method="POST">
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect1-image" class="form-label">Image</label>
-                <input class="form-control form-control-sm" type="file" id="sect1-image" aria-describedby="sect1ImageHelp">
+                <input class="form-control form-control-sm" name="founder-teacher-vicki-image" type="file" id="sect1-image" aria-describedby="sect1ImageHelp">
                 <small id="sect1ImageHelp" class="form-text text-muted">Recommended image size: WxH</small>
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
             </div>                
@@ -185,22 +185,22 @@
         </script>
 
         <!-- Image 1 -->
-        <form action="">
+        <form action="{{ route('about-us.update_founder_sect2_image1') }}" method="POST">
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect2-image1" class="form-label">Image 1</label>
-                <input class="form-control form-control-sm" type="file" id="sect2-image1" aria-describedby="sect2Image1Help">
+                <input class="form-control form-control-sm" name="founder-ir-history-image1" type="file" id="sect2-image1" aria-describedby="sect2Image1Help">
                 <small id="sect2Image1Help" class="form-text text-muted">Recommended image size: WxH</small>
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
             </div>                
         </form>
 
         <!-- Image 2 -->
-        <form action="">
+        <form action="{{ route('about-us.update_founder_sect2_image2') }}" method="POST">
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect2-image2" class="form-label">Image 2</label>
-                <input class="form-control form-control-sm" type="file" id="sect2-image2" aria-describedby="sect2Image2Help">
+                <input class="form-control form-control-sm" name="founder-ir-history-image2" type="file" id="sect2-image2" aria-describedby="sect2Image2Help">
                 <small id="sect2Image2Help" class="form-text text-muted">Recommended image size: WxH</small>
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
             </div>                
@@ -259,11 +259,11 @@
         </script>
 
         <!-- Image -->
-        <form action="">
+        <form action="{{ route('about-us.update_founder_sect3_image') }}" method="POST">
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect3-image" class="form-label">Image</label>
-                <input class="form-control form-control-sm" type="file" id="sect3-image" aria-describedby="sect3ImageHelp">
+                <input class="form-control form-control-sm" name="founder-ir-vision-image" type="file" id="sect3-image" aria-describedby="sect3ImageHelp">
                 <small id="sect3ImageHelp" class="form-text text-muted">Recommended image size: WxH</small>
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
             </div>                
@@ -311,11 +311,11 @@
         </script>
 
         <!-- Image -->
-        <form action="">
+        <form action="{{ route('about-us.update_founder_sect4_image') }}" method="POST">
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect4-image" class="form-label">Image</label>
-                <input class="form-control form-control-sm" type="file" id="sect4-image" aria-describedby="sect4ImageHelp">
+                <input class="form-control form-control-sm" name="founder-ir-mission-image" type="file" id="sect4-image" aria-describedby="sect4ImageHelp">
                 <small id="sect4ImageHelp" class="form-text text-muted">Recommended image size: WxH</small>
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
             </div>                
@@ -384,11 +384,11 @@
         </script>
 
          <!-- Images of Section 5 -->
-         <form action="">
+         <form action="{{ route('about-us.update_founder_sect5_images') }}" method="POST">
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect5-images" class="form-label">Images (Select 5 only)</label>
-                <input class="form-control form-control-sm" type="file" id="sect5-images" aria-describedby="sect5ImagesHelp" multiple>
+                <input class="form-control form-control-sm" name="founder-project-virac-images[]" type="file" id="sect5-images" aria-describedby="sect5ImagesHelp" multiple>
                 <small id="sect5ImagesHelp" class="form-text text-muted">Recommended image size: WxH</small>
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
             </div>                
