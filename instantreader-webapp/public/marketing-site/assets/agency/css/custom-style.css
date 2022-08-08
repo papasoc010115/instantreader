@@ -139,3 +139,7 @@ body::-webkit-scrollbar-thumb {
 .main-link {
     margin: 0px 10px 10px 10px;
 }
+
+.para-div p {
+    color: white;
+}
