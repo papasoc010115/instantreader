@@ -136,6 +136,7 @@
     }
 
     .page-title{
+        background: url("{{ url( $data->welcome_image) }}");
         background-size: cover;
         background-position: center center;
         background-repeat: no-repeat;
@@ -263,7 +264,7 @@
                         have suffered alteration in some form, by injected humour, or randomised words which don't look
                         even slightly believable. If you are going to use a passage of Lorem Ipsum.
                     </p>
-                    <a data-fancybox data-animation-duration="500" data-src="#animatedModal" href="javascript:void(0);" class="btn btn-large btn-rounded btn-pink btn-hvr-blue my-3">Book Appointment for Live Agent
+                    <a class="btn btn-large btn-rounded btn-pink btn-hvr-blue my-3"  href="{{ route('contact-us.book-consultation') }}">Book Appointment for Live Agent
                         <div class="btn-hvr-setting">
                             <ul class="btn-hvr-setting-inner">
                                 <li class="btn-hvr-effect"></li>
@@ -409,7 +410,7 @@
             <div class="col-md-6">
                 <div class="team-item">
                     <!--Team Image-->
-                    <img id="vicki-image" alt="image" class="team-image" src="{{ asset('marketing-site/assets/agency/img/team-img1.png') }}">
+                    <img id="vicki-image" alt="Teacher Vicki" class="team-image" src="{{ url( $data->vicki_image) }}">
                     <!--Name-->
                     <div class="name">
                         <img alt="shape" src="{{ asset('marketing-site/assets/agency/img/shape-11.png') }}">
@@ -430,7 +431,7 @@
             <div class="col-md-6">
                 <div class="team-item">
                     <!--Team Image-->
-                    <img id="likha-image" alt="image" class="team-image" src="{{ asset('marketing-site/assets/agency/img/team-img1.png') }}">
+                    <img id="likha-image" alt="Sir Likha" class="team-image" src="{{ url( $data->likha_image) }}">
                     <!--Name-->
                     <div class="name">
                         <img alt="shape" src="{{ asset('marketing-site/assets/agency/img/shape-11.png') }}">
@@ -730,7 +731,7 @@
     <div class="container">
         <div class="row d-flex align-items-center">
             <div class="col-xl-6 wow fadeInLeft">
-                <img id="enroll-now-image" class="h-100" src="{{ asset('marketing-site/assets/agency/img/vector-art-2.png') }}" alt="Second slide">            
+                <img id="enroll-now-image" class="h-100" src="{{ url( $data->enroll_image) }}" alt="Enroll Now">            
             </div>
             <div class="col-xl-6 wow fadeInRight py-5 enroll-now-detail">
                 <div class="heading-area">
@@ -758,16 +759,16 @@
 <!-- ENROLL NOW End -->
 
 <script>
+    // SCRIPT FOR KIDS CLUB MARQUEE -- Start 
     const root = document.documentElement;
     const marqueeElementDisplayed = getComputedStyle(root).getPropertyValue("--marquee-elements-displayed");
     const marqueeContent = document.querySelector(".marquee-content");
-
-    console.log(root);
 
     root.style.setProperty("--marquee-elements", marqueeContent.children.length);
     for (let i=0; i<marqueeElementDisplayed+1; i++){
         marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true));
     }
+    // SCRIPT FOR KIDS CLUB MARQUEE -- End
 </script>
 
 <!--PAGE CONTENT END-->
