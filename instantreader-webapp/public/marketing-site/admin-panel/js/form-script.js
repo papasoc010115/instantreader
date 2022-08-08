@@ -16,6 +16,7 @@ const infoGetter = (el) => {
     }
 };
 
+// Function for checking if input is all whitespaces only
 const isEmpty = (str, type) => {
     if (type === "big") {
         // remove whitespaces
