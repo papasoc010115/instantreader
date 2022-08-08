@@ -11,9 +11,6 @@
 
 @section('content')
 
-<!-- Set the current page variable for the navbar -->
-<?php $currentPage = 'home';?>
-
 <!--PAGE CONTENT START-->
 
 <style>
