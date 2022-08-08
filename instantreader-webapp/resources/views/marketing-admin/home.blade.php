@@ -112,11 +112,11 @@
             </script>
 
             <!-- Image -->
-            <form action="">
+            <form data-route="{{ route('home.update_page') }}">
                 @csrf
                 <div class="mb-3 py-3">
                     <label for="sect1-opening-image" class="form-label">Image</label>
-                    <input class="form-control form-control-sm" type="file" id="sect1-opening-image" aria-describedby="sect1ImageHelp">
+                    <input class="form-control form-control-sm" data-fieldtype="big" name="welcome_image" type="file" id="sect1-opening-image" aria-describedby="sect1ImageHelp" value="{{ $data->welcome_image }}">
                     <small id="sect1ImageHelp" class="form-text text-muted">Recommended image size: WxH</small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
                 </div>                
@@ -216,11 +216,11 @@
             </script>
 
             <!-- Images of Section 3 -->
-            <form action="">
+            <form data-route="{{ route('home.update_page') }}">
                 @csrf
                 <div class="mb-3 py-3">
                     <label for="sect3-images" class="form-label">Images (Select 3 only)</label>
-                    <input class="form-control form-control-sm" type="file" id="sect3-images" aria-describedby="sect3ImagesHelp" multiple>
+                    <input class="form-control form-control-sm" data-fieldtype="big" name="orientation_images" type="file" id="sect3-images" aria-describedby="sect3ImagesHelp" multiple value="{{ $data->orientation_images }}">
                     <small id="sect3ImagesHelp" class="form-text text-muted">Recommended image size: WxH</small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
                 </div>                
@@ -289,22 +289,22 @@
             </script>
 
             <!-- Image for Teacher Vicki -->
-            <form action="">
+            <form data-route="{{ route('home.update_page') }}">
                 @csrf
                 <div class="mb-3 py-3">
                     <label for="sect4-image1" class="form-label">Image for Teacher Vicki</label>
-                    <input class="form-control form-control-sm" type="file" id="sect4-image1" aria-describedby="sect4Image1Help">
+                    <input class="form-control form-control-sm" data-fieldtype="big" name="vicki_image" type="file" id="sect4-image1" aria-describedby="sect4Image1Help" value="{{ $data->vicki_image }}">
                     <small id="sect4Image1Help" class="form-text text-muted">Recommended image size: WxH</small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
                 </div>                
             </form>
 
             <!-- Image for Likha-->
-            <form action="">
+            <form data-route="{{ route('home.update_page') }}">
                 @csrf
                 <div class="mb-3 py-3">
                     <label for="sect4-image2" class="form-label">Image for Likha</label>
-                    <input class="form-control form-control-sm" type="file" id="sect4-image2" aria-describedby="sect4Image2Help">
+                    <input class="form-control form-control-sm" data-fieldtype="big" name="likha_image" type="file" id="sect4-image2" aria-describedby="sect4Image2Help" value="{{ $data->likha_image }}">
                     <small id="sect4Image2Help" class="form-text text-muted">Recommended image size: WxH</small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
                 </div>                
@@ -393,11 +393,11 @@
             </script>
 
              <!-- Images of Section 6 -->
-             <form action="">
+             <form data-route="{{ route('home.update_page') }}">
                 @csrf
                 <div class="mb-3 py-3">
                     <label for="sect6-images" class="form-label">Images (Select at least 3 photos)</label>
-                    <input class="form-control form-control-sm" type="file" id="sect6-images" aria-describedby="sect6ImagesHelp" multiple>
+                    <input class="form-control form-control-sm" data-fieldtype="big" name="testimonies_images" type="file" id="sect6-images" aria-describedby="sect6ImagesHelp" multiple value="{{ $data->testimonies_images }}">
                     <small id="sect6ImagesHelp" class="form-text text-muted">Recommended image size: WxH</small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
                 </div>                
@@ -445,11 +445,11 @@
             </script>
 
              <!-- Images of Section 7 -->
-             <form action="">
+             <form data-route="{{ route('home.update_page') }}">
                 @csrf
                 <div class="mb-3 py-3">
                     <label for="sect7-images" class="form-label">Images (Select at least 3 photos)</label>
-                    <input class="form-control form-control-sm" type="file" id="sect7-images" aria-describedby="sect7ImagesHelp" multiple>
+                    <input class="form-control form-control-sm" data-fieldtype="big" name="kids_club_images" type="file" id="sect7-images" aria-describedby="sect7ImagesHelp" multiple value="{{ $data->kids_club_images }}">
                     <small id="sect7ImagesHelp" class="form-text text-muted">Recommended image size: WxH</small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
                 </div>                
@@ -496,12 +496,12 @@
                 });            
             </script>
 
-             <!-- Images of Section 7 -->
-             <form action="">
+            <!-- Images of Section 8 -->
+            <form data-route="{{ route('home.update_page') }}">
                 @csrf
                 <div class="mb-3 py-3">
                     <label for="sect8-images" class="form-label">Image</label>
-                    <input class="form-control form-control-sm" type="file" id="sect8-images" aria-describedby="sect8ImagesHelp" multiple>
+                    <input class="form-control form-control-sm" data-fieldtype="big" name="enroll_image" type="file" id="sect8-images" aria-describedby="sect8ImagesHelp" multiple value="{{ $data->enroll_image }}">
                     <small id="sect8ImagesHelp" class="form-text text-muted">Recommended image size: WxH</small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
                 </div>                
