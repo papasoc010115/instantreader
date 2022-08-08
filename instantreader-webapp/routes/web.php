@@ -254,4 +254,4 @@ Route::post('/api/about-us/founder/update-page', [FounderController::class, 'upd
 Route::post('/api/about-us/testimonials/update-page', [TestimonialController::class, 'update_page'])->name('about-us.testimonials.update_page');
 Route::post('/api/contact-us/consultation/update-page', [ConsultationController::class, 'update_page'])->name('contact-us.consultation.update_page');
 Route::post('/api/contact-us/career/update-page', [CareerController::class, 'update_page'])->name('contact-us.career.update_page');
-Route::post('/api/additional-resources/update-page', [AdditionalResourceController::class, 'update_page'])->name('additional-resources.update_page');
+Route::post('/api/additional-resources/update-page', [AdditionalResourceController::class, 'update_page'])->name('additional-resources.update_page'); 
