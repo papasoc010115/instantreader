@@ -3,10 +3,15 @@
 
     by: rmhizon
 */
+// for counting current characters in title editor
+let title_editor = document.getElementById("title-editor");
+let title_char_counter = document.getElementById("title-editor-char-counter");
 
-// for setting initial active nav link
+// for setting initial active nav link and counters
 window.onload = function () {
     try {
+        getCurrentTitleCount();
+        getCurrentTitleCount();
         var current = document.getElementsByClassName("active"); // get current active class
         if (current.length > 0) {
             current[0].className = current[0].className.replace(" active", ""); // remove current active class
@@ -46,9 +51,6 @@ const getCurrentDescCount = () => {
     desc_char_counter.textContent = curr + "/" + maxDesc;
 };
 
-// for counting current characters in title editor
-let title_editor = document.getElementById("title-editor");
-let title_char_counter = document.getElementById("title-editor-char-counter");
 const maxTitle = 60; // maximum character count for title
 
 const getCurrentTitleCount = () => {
