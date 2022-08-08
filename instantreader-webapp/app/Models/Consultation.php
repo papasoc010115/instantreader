@@ -11,5 +11,17 @@ class Consultation extends Model
 
     use HasFactory;
 
-    protected $fillable = ['page_title', 'page_desc', 'page_keywords', 'page_author'];
+    protected $fillable = [
+        'page_title', 
+        'page_desc', 
+        'page_keywords', 
+        'page_author',
+        'sect1_heading',
+        'sect1_para1',
+        'sect1_image1',
+        'sect1_para2',
+        'sect1_image2',
+        'sect2_heading',
+        'sect2_para',
+    ];
 }

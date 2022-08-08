@@ -63,7 +63,7 @@
         <div class="row">
             <div class="col-md-6 wow fadeInLeft desc-img">
                 <div class="half-img mt-3 pt-4 mt-lg-2 pt-lg-0">
-                    <img alt="image" src="{{ url($career_data->career_sect1_image1) }}">
+                    <img alt="image" src="{{ url($data->sect1_image1) }}">
                 </div>
             </div>
             <div class="col-md-6 wow fadeInRight desc-text">
@@ -86,7 +86,7 @@
             </div>
             <div class="col-md-6 wow fadeInRight reqs-img">
                 <div class="half-img mt-3 pt-4 mt-lg-3 pt-lg-0">
-                    <img alt="image" src="{{ url($career_data->career_sect1_image2) }}">
+                    <img alt="image" src="{{ url($data->sect1_image2) }}">
                 </div>
             </div>
         </div>

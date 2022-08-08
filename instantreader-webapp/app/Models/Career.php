@@ -11,5 +11,17 @@ class Career extends Model
 
     use HasFactory;
 
-    protected $fillable = ['page_title', 'page_desc', 'page_keywords', 'page_author'];
+    protected $fillable = [
+        'page_title',
+        'page_desc', 
+        'page_keywords', 
+        'page_author',
+        'sect1_heading',
+        'sect1_title1',
+        'sect1_para1',
+        'sect1_image1',
+        'sect1_title2',
+        'sect1_para2',
+        'sect1_image2',
+    ];
 }
