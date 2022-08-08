@@ -18,6 +18,7 @@ for (let i = 0; i < forms.length; i++) {
                     ? input_element.value
                           .replace(/\s+/g, " ") // removes whitespaces in between words
                           .replace(/^\s+|\s+$/g, "") // removes whitespaces at the start and at the end of the string
+                          .replace(/C:\\fakepath\\/g, "/marketing-site/assets/img/") //gets file name for images
                     : tinymce.get(input_element.id).getContent(), // we don't have to remove whitespaces since this is WYSIWYG
         };
         console.log(api_route);
