@@ -60,7 +60,7 @@
             <div class="col-md-3 d-flex align-items-stretch">
                 <div class="card shadow">
                     <div class="card-body bg-white">
-                        <img src="{{ url($testimonials_data->parental_concerns_image1) }}" class="rounded-circle shadow-1-strong" width="30%" height="30%" />
+                        <img src="{{ url($data->parental_concerns_image1) }}" class="rounded-circle shadow-1-strong" width="30%" height="30%" />
                         <h5 class="card-title pt-3 text-white">Card title</h5>
                         <p class="card-text">"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even <span class="alt-color">slightly believable</span>. If you are going to use a passage of Lorem Ipsum."</p>
                     </div>
@@ -72,7 +72,7 @@
             <div class="col-md-3 d-flex align-items-stretch">
                 <div class="card shadow">
                     <div class="card-body bg-white">
-                        <img src="{{ url($testimonials_data->parental_concerns_image2) }}" class="rounded-circle shadow-1-strong" width="30%" height="30%" />
+                        <img src="{{ url($data->parental_concerns_image2) }}" class="rounded-circle shadow-1-strong" width="30%" height="30%" />
                         <h5 class="card-title pt-3">Card title</h5>
                         <p class="card-text">"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even <span class="alt-color">slightly believable</span>. If you are going to use a passage of Lorem Ipsum."</p>
                     </div>
@@ -84,7 +84,7 @@
             <div class="col-md-3 d-flex align-items-stretch">
                 <div class="card shadow">
                     <div class="card-body bg-white">
-                        <img src="{{ url($testimonials_data->parental_concerns_image3) }}" class="rounded-circle shadow-1-strong" width="30%" height="30%" />
+                        <img src="{{ url($data->parental_concerns_image3) }}" class="rounded-circle shadow-1-strong" width="30%" height="30%" />
                         <h5 class="card-title pt-3 text-white">Card title</h5>
                         <p class="card-text">"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even <span class="alt-color">slightly believable</span>. If you are going to use a passage of Lorem Ipsum."</p>
                     </div>
@@ -96,7 +96,7 @@
             <div class="col-md-3 d-flex align-items-stretch">
                 <div class="card shadow">
                     <div class="card-body bg-white">
-                        <img src="{{ url($testimonials_data->parental_concerns_image4) }}" class="rounded-circle shadow-1-strong" width="30%" height="30%" />
+                        <img src="{{ url($data->parental_concerns_image4) }}" class="rounded-circle shadow-1-strong" width="30%" height="30%" />
                         <h5 class="card-title pt-3 text-white">Card title</h5>
                         <p class="card-text">"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even <span class="alt-color">slightly believable</span>. If you are going to use a passage of Lorem Ipsum."</p>
                     </div>
@@ -128,7 +128,7 @@
             <div class="col-md-3 d-flex align-items-stretch">
                 <div class="card">
                     <div class="card-body">
-                        <img src="{{ url($testimonials_data->parental_goals_image1) }}" class="rounded-circle shadow-1-strong" width="30%" height="30%" />
+                        <img src="{{ url($data->parental_goals_image1) }}" class="rounded-circle shadow-1-strong" width="30%" height="30%" />
                         <h5 class="card-title pt-3">Card title</h5>
                         <p class="card-text">"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even <span class="alt-color">slightly believable</span>. If you are going to use a passage of Lorem Ipsum."</p>
                     </div>
@@ -140,7 +140,7 @@
             <div class="col-md-3 d-flex align-items-stretch">
                 <div class="card">
                     <div class="card-body">
-                        <img src="{{ url($testimonials_data->parental_goals_image2) }}" class="rounded-circle shadow-1-strong" width="30%" height="30%" />
+                        <img src="{{ url($data->parental_goals_image2) }}" class="rounded-circle shadow-1-strong" width="30%" height="30%" />
                         <h5 class="card-title pt-3">Card title</h5>
                         <p class="card-text">"There are many variations of passages of <span class="alt-color">Lorem Ipsum available</span>, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum."</p>
                     </div>
@@ -152,7 +152,7 @@
             <div class="col-md-3 d-flex align-items-stretch">
                 <div class="card">
                     <div class="card-body">
-                        <img src="{{ url($testimonials_data->parental_goals_image3) }}" class="rounded-circle shadow-1-strong" width="30%" height="30%" />
+                        <img src="{{ url($data->parental_goals_image3) }}" class="rounded-circle shadow-1-strong" width="30%" height="30%" />
                         <h5 class="card-title pt-3">Card title</h5>
                         <p class="card-text">"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or <span class="alt-color">randomised words</span> which don't look even slightly believable."</p>
                     </div>
@@ -164,7 +164,7 @@
             <div class="col-md-3 d-flex align-items-stretch">
                 <div class="card">
                     <div class="card-body">
-                        <img src="{{ url($testimonials_data->parental_goals_image4) }}" class="rounded-circle shadow-1-strong" width="30%" height="30%" />
+                        <img src="{{ url($data->parental_goals_image4) }}" class="rounded-circle shadow-1-strong" width="30%" height="30%" />
                         <h5 class="card-title pt-3">Card title</h5>
                         <p class="card-text">"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or <span class="alt-color">randomised words</span> which don't look even slightly believable."</p>
                     </div>
@@ -259,18 +259,7 @@
                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 3"></button>
                     </div>
                     <div class="carousel-inner">
-                        <!-- <div class="carousel-item active">
-                        <img src="{{ url($testimonials_data->testimonials_image1) }}" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                        <img src="{{ url($testimonials_data->testimonials_image2) }}" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                        <img src="{{ url($testimonials_data->testimonials_image3) }}" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                        <img src="{{ url($testimonials_data->testimonials_image4) }}" class="d-block w-100" alt="...">
-                        </div> -->
+
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
