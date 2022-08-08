@@ -81,21 +81,21 @@
         </div>
 
         <!-- Heading of Section 1 -->
-        <form action="">
+        <form data-route="{{ route('about-us.testimonials.update_page') }}">
             @csrf
             <div class="form-group py-3">
                 <label for="sect1-heading">Section Heading/Title</label>                    
-                <input type="text" class="form-control" id="sect1-heading" placeholder="e.g. The Best Reading Course">
+                <input required data-fieldtype="big" type="text" class="form-control" id="sect1-heading" placeholder="e.g. The Best Reading Course">
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>                    
             </div>
         </form>
         
         <!-- Paragraph 1 -->
-        <form action="">
+        <form data-route="{{ route('about-us.testimonials.update_page') }}">
             @csrf
             <div class="form-group py-3">
                 <label for="sect1-paragraph1">Paragraph 1</label>
-                <textarea class="form-control" name="sect1-paragraph1" aria-describedby="sect1Paragraph1Help" id="sect1-paragraph1"></textarea>
+                <textarea data-fieldtype="tiny" class="form-control" name="sect1-paragraph1" aria-describedby="sect1Paragraph1Help" id="sect1-paragraph1"></textarea>
                 <small id="sect1Paragraph1Help" class="form-text text-muted">Recommended length: 3-5 sentences</small>
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
             </div>
@@ -112,11 +112,11 @@
         </script>
 
         <!-- Paragraph 2 -->
-        <form action="">
+        <form data-route="{{ route('about-us.testimonials.update_page') }}">
             @csrf
             <div class="form-group py-3">
                 <label for="sect1-paragraph2">Paragraph 2</label>
-                <textarea class="form-control" name="sect1-paragraph2" aria-describedby="sect1Paragraph2Help" id="sect1-paragraph2"></textarea>
+                <textarea data-fieldtype="tiny" class="form-control" name="sect1-paragraph2" aria-describedby="sect1Paragraph2Help" id="sect1-paragraph2"></textarea>
                 <small id="sect1Paragraph2Help" class="form-text text-muted">Recommended length: 3-5 sentences</small>
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
             </div>
@@ -133,11 +133,11 @@
         </script>
 
         <!-- Paragraph 3 -->
-        <form action="">
+        <form data-route="{{ route('about-us.testimonials.update_page') }}">
             @csrf
             <div class="form-group py-3">
                 <label for="sect1-paragraph3">Paragraph 3</label>
-                <textarea class="form-control" name="sect1-paragraph3" aria-describedby="sect1Paragraph3Help" id="sect1-paragraph3"></textarea>
+                <textarea data-fieldtype="tiny" class="form-control" name="sect1-paragraph3" aria-describedby="sect1Paragraph3Help" id="sect1-paragraph3"></textarea>
                 <small id="sect1Paragraph3Help" class="form-text text-muted">Recommended length: 3-5 sentences</small>
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
             </div>
@@ -154,11 +154,11 @@
         </script>
 
         <!-- Paragraph 4 -->
-        <form action="">
+        <form data-route="{{ route('about-us.testimonials.update_page') }}">
             @csrf
             <div class="form-group py-3">
                 <label for="sect1-paragraph4">Paragraph 4</label>
-                <textarea class="form-control" name="sect1-paragraph4" aria-describedby="sect1Paragraph4Help" id="sect1-paragraph4"></textarea>
+                <textarea data-fieldtype="tiny" class="form-control" name="sect1-paragraph4" aria-describedby="sect1Paragraph4Help" id="sect1-paragraph4"></textarea>
                 <small id="sect1Paragraph4Help" class="form-text text-muted">Recommended length: 3-5 sentences</small>
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
             </div>
@@ -179,7 +179,7 @@
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect1-image1" class="form-label">Image 1</label>
-                <input class="form-control form-control-sm" data-fieldtype="big" name="parental_concerns_image1" type="file" id="sect1-image1" aria-describedby="sect1Image1Help" value="{{ $data->parental_concerns_image1 }}">
+                <input  required data-fieldtype="media"class="form-control form-control-sm" data-fieldtype="big" name="parental_concerns_image1" type="file" id="sect1-image1" aria-describedby="sect1Image1Help" value="{{ $data->parental_concerns_image1 }}">
                 <small id="sect1Image1Help" class="form-text text-muted">Recommended image size: WxH</small>
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
             </div>                
@@ -190,7 +190,7 @@
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect1-image2" class="form-label">Image 2</label>
-                <input class="form-control form-control-sm" data-fieldtype="big" name="parental_concerns_image2" type="file" id="sect1-image2" aria-describedby="sect1Image2Help" value="{{ $data->parental_concerns_image2 }}">
+                <input  required data-fieldtype="media"class="form-control form-control-sm" data-fieldtype="big" name="parental_concerns_image2" type="file" id="sect1-image2" aria-describedby="sect1Image2Help" value="{{ $data->parental_concerns_image2 }}">
                 <small id="sect1Image2Help" class="form-text text-muted">Recommended image size: WxH</small>
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
             </div>                
@@ -201,7 +201,7 @@
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect1-image3" class="form-label">Image 3</label>
-                <input class="form-control form-control-sm" data-fieldtype="big" name="parental_concerns_image3" type="file" id="sect1-image3" aria-describedby="sect1Image3Help" value="{{ $data->parental_concerns_image3 }}">
+                <input  required data-fieldtype="media"class="form-control form-control-sm" data-fieldtype="big" name="parental_concerns_image3" type="file" id="sect1-image3" aria-describedby="sect1Image3Help" value="{{ $data->parental_concerns_image3 }}">
                 <small id="sect1Image3Help" class="form-text text-muted">Recommended image size: WxH</small>
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
             </div>                
@@ -212,7 +212,7 @@
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect1-image4" class="form-label">Image 4</label>
-                <input class="form-control form-control-sm" data-fieldtype="big" name="parental_concerns_image4" type="file" id="sect1-image4" aria-describedby="sect1Image4Help" value="{{ $data->parental_concerns_image4 }}">
+                <input  required data-fieldtype="media"class="form-control form-control-sm" data-fieldtype="big" name="parental_concerns_image4" type="file" id="sect1-image4" aria-describedby="sect1Image4Help" value="{{ $data->parental_concerns_image4 }}">
                 <small id="sect1Image4Help" class="form-text text-muted">Recommended image size: WxH</small>
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
             </div>                
@@ -229,21 +229,21 @@
         </div>
 
         <!-- Heading of Section 2 -->
-        <form action="">
+        <form data-route="{{ route('about-us.testimonials.update_page') }}">
             @csrf
             <div class="form-group py-3">
                 <label for="sect2-heading">Section Heading/Title</label>                    
-                <input type="text" class="form-control" id="sect2-heading" placeholder="e.g. The Best Reading Course">
+                <input required data-fieldtype="big" type="text" class="form-control" id="sect2-heading" placeholder="e.g. The Best Reading Course">
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>                    
             </div>
         </form>
         
         <!-- Paragraph 1 -->
-        <form action="">
+        <form data-route="{{ route('about-us.testimonials.update_page') }}">
             @csrf
             <div class="form-group py-3">
                 <label for="sect2-paragraph1">Paragraph 1</label>
-                <textarea class="form-control" name="sect2-paragraph1" aria-describedby="sect2Paragraph1Help" id="sect2-paragraph1"></textarea>
+                <textarea data-fieldtype="tiny" class="form-control" name="sect2-paragraph1" aria-describedby="sect2Paragraph1Help" id="sect2-paragraph1"></textarea>
                 <small id="sect2Paragraph1Help" class="form-text text-muted">Recommended length: 3-5 sentences</small>
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
             </div>
@@ -260,11 +260,11 @@
         </script>
 
         <!-- Paragraph 2 -->
-        <form action="">
+        <form data-route="{{ route('about-us.testimonials.update_page') }}">
             @csrf
             <div class="form-group py-3">
                 <label for="sect2-paragraph2">Paragraph 2</label>
-                <textarea class="form-control" name="sect2-paragraph2" aria-describedby="sect2Paragraph2Help" id="sect2-paragraph2"></textarea>
+                <textarea data-fieldtype="tiny" class="form-control" name="sect2-paragraph2" aria-describedby="sect2Paragraph2Help" id="sect2-paragraph2"></textarea>
                 <small id="sect2Paragraph2Help" class="form-text text-muted">Recommended length: 3-5 sentences</small>
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
             </div>
@@ -281,11 +281,11 @@
         </script>
 
         <!-- Paragraph 3 -->
-        <form action="">
+        <form data-route="{{ route('about-us.testimonials.update_page') }}">
             @csrf
             <div class="form-group py-3">
                 <label for="sect2-paragraph3">Paragraph 3</label>
-                <textarea class="form-control" name="sect2-paragraph3" aria-describedby="sect2Paragraph3Help" id="sect2-paragraph3"></textarea>
+                <textarea data-fieldtype="tiny" class="form-control" name="sect2-paragraph3" aria-describedby="sect2Paragraph3Help" id="sect2-paragraph3"></textarea>
                 <small id="sect2Paragraph3Help" class="form-text text-muted">Recommended length: 3-5 sentences</small>
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
             </div>
@@ -302,11 +302,11 @@
         </script>
 
         <!-- Paragraph 4 -->
-        <form action="">
+        <form data-route="{{ route('about-us.testimonials.update_page') }}">
             @csrf
             <div class="form-group py-3">
                 <label for="sect2-paragraph4">Paragraph 4</label>
-                <textarea class="form-control" name="sect2-paragraph4" aria-describedby="sect2Paragraph4Help" id="sect2-paragraph4"></textarea>
+                <textarea data-fieldtype="tiny" class="form-control" name="sect2-paragraph4" aria-describedby="sect2Paragraph4Help" id="sect2-paragraph4"></textarea>
                 <small id="sect2Paragraph4Help" class="form-text text-muted">Recommended length: 3-5 sentences</small>
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
             </div>
@@ -327,7 +327,7 @@
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect2-image1" class="form-label">Image 1</label>
-                <input class="form-control form-control-sm" data-fieldtype="big" name="parental_goals_image1" type="file" id="sect2-image1" aria-describedby="sect2Image1Help" value="{{ $data->parental_goals_image1 }}">
+                <input required data-fieldtype="media" class="form-control form-control-sm" data-fieldtype="big" name="parental_goals_image1" type="file" id="sect2-image1" aria-describedby="sect2Image1Help" value="{{ $data->parental_goals_image1 }}">
                 <small id="sect2Image1Help" class="form-text text-muted">Recommended image size: WxH</small>
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
             </div>                
@@ -338,7 +338,7 @@
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect2-image2" class="form-label">Image 2</label>
-                <input class="form-control form-control-sm" data-fieldtype="big" name="parental_goals_image2" type="file" id="sect2-image2" aria-describedby="sect2Image2Help" value="{{ $data->parental_goals_image2 }}">
+                <input required data-fieldtype="media" class="form-control form-control-sm" data-fieldtype="big" name="parental_goals_image2" type="file" id="sect2-image2" aria-describedby="sect2Image2Help" value="{{ $data->parental_goals_image2 }}">
                 <small id="sect2Image2Help" class="form-text text-muted">Recommended image size: WxH</small>
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
             </div>                
@@ -349,7 +349,7 @@
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect2-image3" class="form-label">Image 3</label>
-                <input class="form-control form-control-sm" data-fieldtype="big" name="parental_goals_image3" type="file" id="sect2-image3" aria-describedby="sect2Image3Help" value="{{ $data->parental_goals_image3 }}">
+                <input required data-fieldtype="media" class="form-control form-control-sm" data-fieldtype="big" name="parental_goals_image3" type="file" id="sect2-image3" aria-describedby="sect2Image3Help" value="{{ $data->parental_goals_image3 }}">
                 <small id="sect2Image3Help" class="form-text text-muted">Recommended image size: WxH</small>
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
             </div>                
@@ -360,7 +360,7 @@
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect2-image4" class="form-label">Image 4</label>
-                <input class="form-control form-control-sm" data-fieldtype="big" name="parental_goals_image4" type="file" id="sect2-image4" aria-describedby="sect2Image4Help" value="{{ $data->parental_goals_image4 }}">
+                <input required data-fieldtype="media" class="form-control form-control-sm" data-fieldtype="big" name="parental_goals_image4" type="file" id="sect2-image4" aria-describedby="sect2Image4Help" value="{{ $data->parental_goals_image4 }}">
                 <small id="sect2Image4Help" class="form-text text-muted">Recommended image size: WxH</small>
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
             </div>                
@@ -377,21 +377,21 @@
         </div>
 
         <!-- Heading of Section 3 -->
-        <form action="">
+        <form data-route="{{ route('about-us.testimonials.update_page') }}">
             @csrf
             <div class="form-group py-3">
                 <label for="sect3-heading">Section Heading/Title</label>                    
-                <input type="text" class="form-control" id="sect3-heading" placeholder="e.g. The Best Reading Course">
+                <input required data-fieldtype="big" type="text" class="form-control" id="sect3-heading" placeholder="e.g. The Best Reading Course">
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>                    
             </div>
         </form>
         
         <!-- Paragraph 1 -->
-        <form action="">
+        <form data-route="{{ route('about-us.testimonials.update_page') }}">
             @csrf
             <div class="form-group py-3">
                 <label for="sect3-paragraph1">Paragraph 1</label>
-                <textarea class="form-control" name="sect3-paragraph1" aria-describedby="sect2Paragraph1Help" id="sect3-paragraph1"></textarea>
+                <textarea data-fieldtype="tiny" class="form-control" name="sect3-paragraph1" aria-describedby="sect2Paragraph1Help" id="sect3-paragraph1"></textarea>
                 <small id="sect2Paragraph1Help" class="form-text text-muted">Recommended length: 3-5 sentences</small>
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
             </div>
@@ -408,11 +408,11 @@
         </script>
 
         <!-- Paragraph 2 -->
-        <form action="">
+        <form data-route="{{ route('about-us.testimonials.update_page') }}">
             @csrf
             <div class="form-group py-3">
                 <label for="sect3-paragraph2">Paragraph 2</label>
-                <textarea class="form-control" name="sect3-paragraph2" aria-describedby="sect3Paragraph2Help" id="sect3-paragraph2"></textarea>
+                <textarea data-fieldtype="tiny" class="form-control" name="sect3-paragraph2" aria-describedby="sect3Paragraph2Help" id="sect3-paragraph2"></textarea>
                 <small id="sect3Paragraph2Help" class="form-text text-muted">Recommended length: 3-5 sentences</small>
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
             </div>
@@ -429,11 +429,11 @@
         </script>
 
         <!-- Paragraph 3 -->
-        <form action="">
+        <form data-route="{{ route('about-us.testimonials.update_page') }}">
             @csrf
             <div class="form-group py-3">
                 <label for="sect3-paragraph3">Paragraph 3</label>
-                <textarea class="form-control" name="sect3-paragraph3" aria-describedby="sect3Paragraph3Help" id="sect3-paragraph3"></textarea>
+                <textarea data-fieldtype="tiny" class="form-control" name="sect3-paragraph3" aria-describedby="sect3Paragraph3Help" id="sect3-paragraph3"></textarea>
                 <small id="sect3Paragraph3Help" class="form-text text-muted">Recommended length: 3-5 sentences</small>
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
             </div>
@@ -450,11 +450,11 @@
         </script>
 
         <!-- Paragraph 4 -->
-        <form action="">
+        <form data-route="{{ route('about-us.testimonials.update_page') }}">
             @csrf
             <div class="form-group py-3">
                 <label for="sect3-paragraph4">Paragraph 4</label>
-                <textarea class="form-control" name="sect3-paragraph4" aria-describedby="sect3Paragraph4Help" id="sect3-paragraph4"></textarea>
+                <textarea data-fieldtype="tiny" class="form-control" name="sect3-paragraph4" aria-describedby="sect3Paragraph4Help" id="sect3-paragraph4"></textarea>
                 <small id="sect3Paragraph4Help" class="form-text text-muted">Recommended length: 3-5 sentences</small>
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
             </div>
@@ -475,7 +475,7 @@
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect3-images" class="form-label">Images (Select at least 4 photos)</label>
-                <input class="form-control form-control-sm" data-fieldtype="big" name="testimonials_images" type="file" id="sect3-images" aria-describedby="sect3ImagesHelp" multiple value="{{ $data->testimonials_images }}">
+                <input required data-fieldtype="media" class="form-control form-control-sm" name="testimonials_images" type="file" id="sect3-images" aria-describedby="sect3ImagesHelp" multiple value="{{ $data->testimonials_images }}">
                 <small id="sect3ImagesHelp" class="form-text text-muted">Recommended image size: WxH</small>
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
             </div>                

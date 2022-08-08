@@ -116,7 +116,7 @@
                 @csrf
                 <div class="mb-3 py-3">
                     <label for="sect1-image" class="form-label">Image</label>
-                    <input class="form-control form-control-sm" type="file" id="sect1-image" aria-describedby="sect1ImageHelp">
+                    <input required data-fieldtype="media" class="form-control form-control-sm" type="file" id="sect1-image" aria-describedby="sect1ImageHelp">
                     <small id="sect1ImageHelp" class="form-text text-muted">Recommended image size: WxH</small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
                 </div>                

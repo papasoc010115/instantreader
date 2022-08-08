@@ -179,7 +179,7 @@
                 @csrf
                 <div class="mb-3 py-3">
                     <label for="sect1-image1" class="form-label">Image 1</label>
-                    <input class="form-control form-control-sm" type="file" id="sect1-image1" aria-describedby="sect1Image1Help">
+                    <input required data-fieldtype="media" class="form-control form-control-sm" type="file" id="sect1-image1" aria-describedby="sect1Image1Help">
                     <small id="sect1Image1Help" class="form-text text-muted">Recommended image size: WxH</small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
                 </div>                
@@ -190,7 +190,7 @@
                 @csrf
                 <div class="mb-3 py-3">
                     <label for="sect1-image2" class="form-label">Image 2</label>
-                    <input class="form-control form-control-sm" type="file" id="sect1-image2" aria-describedby="sect1Image2Help">
+                    <input required data-fieldtype="media" class="form-control form-control-sm" type="file" id="sect1-image2" aria-describedby="sect1Image2Help">
                     <small id="sect1Image2Help" class="form-text text-muted">Recommended image size: WxH</small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
                 </div>                
@@ -201,7 +201,7 @@
                 @csrf
                 <div class="mb-3 py-3">
                     <label for="sect1-image3" class="form-label">Image 3</label>
-                    <input class="form-control form-control-sm" type="file" id="sect1-image3" aria-describedby="sect1Image3Help">
+                    <input required data-fieldtype="media" class="form-control form-control-sm" type="file" id="sect1-image3" aria-describedby="sect1Image3Help">
                     <small id="sect1Image3Help" class="form-text text-muted">Recommended image size: WxH</small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
                 </div>                
@@ -212,7 +212,7 @@
                 @csrf
                 <div class="mb-3 py-3">
                     <label for="sect1-image4" class="form-label">Image 4</label>
-                    <input class="form-control form-control-sm" type="file" id="sect1-image4" aria-describedby="sect1Image4Help">
+                    <input required data-fieldtype="media" class="form-control form-control-sm" type="file" id="sect1-image4" aria-describedby="sect1Image4Help">
                     <small id="sect1Image4Help" class="form-text text-muted">Recommended image size: WxH</small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
                 </div>                
@@ -306,7 +306,7 @@
                 @csrf
                 <div class="mb-3 py-3">
                     <label for="sect2-image1" class="form-label">Image 1</label>
-                    <input class="form-control form-control-sm" type="file" id="sect2-image1" aria-describedby="sect2Image1Help">
+                    <input required data-fieldtype="media" class="form-control form-control-sm" type="file" id="sect2-image1" aria-describedby="sect2Image1Help">
                     <small id="sect2Image1Help" class="form-text text-muted">Recommended image size: WxH</small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
                 </div>                
@@ -317,7 +317,7 @@
                 @csrf
                 <div class="mb-3 py-3">
                     <label for="sect2-image2" class="form-label">Image 2</label>
-                    <input class="form-control form-control-sm" type="file" id="sect2-image2" aria-describedby="sect2Image2Help">
+                    <input required data-fieldtype="media" class="form-control form-control-sm" type="file" id="sect2-image2" aria-describedby="sect2Image2Help">
                     <small id="sect2Image2Help" class="form-text text-muted">Recommended image size: WxH</small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
                 </div>                
@@ -328,7 +328,7 @@
                 @csrf
                 <div class="mb-3 py-3">
                     <label for="sect2-image3" class="form-label">Image 3</label>
-                    <input class="form-control form-control-sm" type="file" id="sect2-image3" aria-describedby="sect2Image3Help">
+                    <input required data-fieldtype="media" class="form-control form-control-sm" type="file" id="sect2-image3" aria-describedby="sect2Image3Help">
                     <small id="sect2Image3Help" class="form-text text-muted">Recommended image size: WxH</small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
                 </div>                
@@ -422,7 +422,7 @@
                 @csrf
                 <div class="mb-3 py-3">
                     <label for="sect3-image1" class="form-label">Image 1</label>
-                    <input class="form-control form-control-sm" type="file" id="sect3-image1" aria-describedby="sect3Image1Help">
+                    <input required data-fieldtype="media" required data-fieldtype="media" class="form-control form-control-sm" type="file" id="sect3-image1" aria-describedby="sect3Image1Help">
                     <small id="sect3Image1Help" class="form-text text-muted">Recommended image size: WxH</small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
                 </div>                
@@ -433,7 +433,7 @@
                 @csrf
                 <div class="mb-3 py-3">
                     <label for="sect3-image2" class="form-label">Image 2</label>
-                    <input class="form-control form-control-sm" type="file" id="sect3-image2" aria-describedby="sect3Image2Help">
+                    <input required data-fieldtype="media" class="form-control form-control-sm" type="file" id="sect3-image2" aria-describedby="sect3Image2Help">
                     <small id="sect3Image2Help" class="form-text text-muted">Recommended image size: WxH</small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
                 </div>                
@@ -444,7 +444,7 @@
                 @csrf
                 <div class="mb-3 py-3">
                     <label for="sect3-image3" class="form-label">Image 3</label>
-                    <input class="form-control form-control-sm" type="file" id="sect3-image3" aria-describedby="sect3Image3Help">
+                    <input required data-fieldtype="media" class="form-control form-control-sm" type="file" id="sect3-image3" aria-describedby="sect3Image3Help">
                     <small id="sect3Image3Help" class="form-text text-muted">Recommended image size: WxH</small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
                 </div>                
@@ -538,7 +538,7 @@
                 @csrf
                 <div class="mb-3 py-3">
                     <label for="sect4-image1" class="form-label">Image 1</label>
-                    <input class="form-control form-control-sm" type="file" id="sect4-image1" aria-describedby="sect4Image1Help">
+                    <input required data-fieldtype="media" class="form-control form-control-sm" type="file" id="sect4-image1" aria-describedby="sect4Image1Help">
                     <small id="sect4Image1Help" class="form-text text-muted">Recommended image size: WxH</small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
                 </div>                
@@ -549,7 +549,7 @@
                 @csrf
                 <div class="mb-3 py-3">
                     <label for="sect4-image2" class="form-label">Image 2</label>
-                    <input class="form-control form-control-sm" type="file" id="sect4-image2" aria-describedby="sect4Image2Help">
+                    <input required data-fieldtype="media" class="form-control form-control-sm" type="file" id="sect4-image2" aria-describedby="sect4Image2Help">
                     <small id="sect4Image2Help" class="form-text text-muted">Recommended image size: WxH</small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
                 </div>                
@@ -560,7 +560,7 @@
                 @csrf
                 <div class="mb-3 py-3">
                     <label for="sect4-image3" class="form-label">Image 3</label>
-                    <input class="form-control form-control-sm" type="file" id="sect4-image3" aria-describedby="sect4Image3Help">
+                    <input required data-fieldtype="media" class="form-control form-control-sm" type="file" id="sect4-image3" aria-describedby="sect4Image3Help">
                     <small id="sect4Image3Help" class="form-text text-muted">Recommended image size: WxH</small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
                 </div>                
@@ -717,7 +717,7 @@
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect5-image1" class="form-label">Image 1</label>
-                <input class="form-control form-control-sm" type="file" id="sect5-image1" aria-describedby="sect5Image1Help">
+                <input required data-fieldtype="media" class="form-control form-control-sm" type="file" id="sect5-image1" aria-describedby="sect5Image1Help">
                 <small id="sect5Image1Help" class="form-text text-muted">Recommended image size: WxH</small>
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
             </div>                
@@ -728,7 +728,7 @@
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect5-image2" class="form-label">Image 2</label>
-                <input class="form-control form-control-sm" type="file" id="sect5-image2" aria-describedby="sect5Image2Help">
+                <input required data-fieldtype="media" class="form-control form-control-sm" type="file" id="sect5-image2" aria-describedby="sect5Image2Help">
                 <small id="sect5Image2Help" class="form-text text-muted">Recommended image size: WxH</small>
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
             </div>                
@@ -739,7 +739,7 @@
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect5-image3" class="form-label">Image 3</label>
-                <input class="form-control form-control-sm" type="file" id="sect5-image3" aria-describedby="sect5Image3Help">
+                <input required data-fieldtype="media" class="form-control form-control-sm" type="file" id="sect5-image3" aria-describedby="sect5Image3Help">
                 <small id="sect5Image3Help" class="form-text text-muted">Recommended image size: WxH</small>
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
             </div>                
@@ -750,7 +750,7 @@
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect5-image4" class="form-label">Image 4</label>
-                <input class="form-control form-control-sm" type="file" id="sect5-image4" aria-describedby="sect5Image4Help">
+                <input required data-fieldtype="media" class="form-control form-control-sm" type="file" id="sect5-image4" aria-describedby="sect5Image4Help">
                 <small id="sect5Image4Help" class="form-text text-muted">Recommended image size: WxH</small>
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
             </div>  
@@ -761,7 +761,7 @@
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect5-image5" class="form-label">Image 5</label>
-                <input class="form-control form-control-sm" type="file" id="sect5-image5" aria-describedby="sect5Image5Help">
+                <input required data-fieldtype="media" class="form-control form-control-sm" type="file" id="sect5-image5" aria-describedby="sect5Image5Help">
                 <small id="sect5Image5Help" class="form-text text-muted">Recommended image size: WxH</small>
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
             </div>  
@@ -772,7 +772,7 @@
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect5-video" class="form-label">Video</label>
-                <input class="form-control form-control-sm" type="file" id="sect5-video" aria-describedby="sect5Video">
+                <input required data-fieldtype="media" class="form-control form-control-sm" type="file" id="sect5-video" aria-describedby="sect5Video">
                 <small id="sect5Video" class="form-text text-muted">Recommended video size: WxH</small>
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
             </div>  
