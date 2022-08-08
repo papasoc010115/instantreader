@@ -133,7 +133,6 @@
     }
 
     .page-title{
-        background: url("{{ url( $data->welcome_image) }}");
         background-size: cover;
         background-position: center center;
         background-repeat: no-repeat;
@@ -407,7 +406,7 @@
             <div class="col-md-6">
                 <div class="team-item">
                     <!--Team Image-->
-                    <img id="vicki-image" alt="Teacher Vicki" class="team-image" src="{{ url( $data->vicki_image) }}">
+                    <!-- <img id="vicki-image" alt="Teacher Vicki" class="team-image" src="{{ url( $data->vicki_image) }}"> -->
                     <!--Name-->
                     <div class="name">
                         <img alt="shape" src="{{ asset('marketing-site/assets/agency/img/shape-11.png') }}">
@@ -427,8 +426,8 @@
             </div>
             <div class="col-md-6">
                 <div class="team-item">
-                    <!--Team Image-->
-                    <img id="likha-image" alt="Sir Likha" class="team-image" src="{{ url( $data->likha_image) }}">
+                    <!--Team Image (will be fixed after once file import and form programs are complete)-->
+                    <!-- <img id="likha-image" alt="Sir Likha" class="team-image" src="{{ url( $data->likha_image) }}"> --> 
                     <!--Name-->
                     <div class="name">
                         <img alt="shape" src="{{ asset('marketing-site/assets/agency/img/shape-11.png') }}">
@@ -728,7 +727,7 @@
     <div class="container">
         <div class="row d-flex align-items-center">
             <div class="col-xl-6 wow fadeInLeft">
-                <img id="enroll-now-image" class="h-100" src="{{ url( $data->enroll_image) }}" alt="Enroll Now">            
+                <!-- <img id="enroll-now-image" class="h-100" src="{{ url( $data->enroll_image) }}" alt="Enroll Now">             -->
             </div>
             <div class="col-xl-6 wow fadeInRight py-5 enroll-now-detail">
                 <div class="heading-area">
