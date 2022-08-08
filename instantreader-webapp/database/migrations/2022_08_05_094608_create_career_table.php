@@ -23,10 +23,10 @@ return new class extends Migration
             $table->string('page_author', 60)->default('');
             $table->string('sect1_heading')->default('');
             $table->string('sect1_title1')->default('');
-            $table->string('sect1_para1', 500)->default('');
+            $table->string('sect1_para1', env('MAX_PARAGRAPH_CHAR'))->default('');
             $table->string('sect1_image1')->default('');
             $table->string('sect1_title2')->default('');
-            $table->string('sect1_para2', 500)->default('');
+            $table->string('sect1_para2', env('MAX_PARAGRAPH_CHAR'))->default('');
             $table->string('sect1_image2')->default('');
         });
         
