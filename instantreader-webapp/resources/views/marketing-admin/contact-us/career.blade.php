@@ -85,7 +85,7 @@
                 @csrf
                 <div class="form-group py-3">
                     <label for="sect1-heading">Section Heading/Title</label>                    
-                    <input type="text" class="form-control" id="sect1-heading" name="sect1-heading" placeholder="e.g. The Best Reading Course" value="">
+                    <input required data-fieldtype="big" type="text" class="form-control" id="sect1-heading" name="sect1_heading" placeholder="e.g. The Best Reading Course" value="">
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>                    
                 </div>
             </form>
@@ -95,7 +95,7 @@
                 @csrf
                 <div class="form-group py-3">
                     <label for="sect1-title1">Title 1 (For Paragraph 1)</label>                    
-                    <input type="text" class="form-control" id="sect1-title1" name="sect1-title1" placeholder="e.g. The Best Reading Course" value="">
+                    <input required data-fieldtype="big" type="text" class="form-control" id="sect1-title1" name="sect1_title1" placeholder="e.g. The Best Reading Course" value="">
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>                    
                 </div>
             </form>
@@ -105,7 +105,7 @@
                 @csrf
                 <div class="form-group py-3">
                     <label for="sect1-title2">Title 2 (For Paragraph 2)</label>                    
-                    <input type="text" class="form-control" id="sect1-title2" name="sect1-title2" placeholder="e.g. The Best Reading Course" value="">
+                    <input required data-fieldtype="big" type="text" class="form-control" id="sect1-title2" name="sect1_title2" placeholder="e.g. The Best Reading Course" value="">
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>                    
                 </div>
             </form>
@@ -115,7 +115,7 @@
                 @csrf
                 <div class="form-group py-3">
                     <label for="sect1-paragraph1">Paragraph 1</label>
-                    <textarea class="form-control" name="sect1-paragraph1" aria-describedby="sect1Paragraph1Help" id="sect1-paragraph1">{{$data->sect1_para1}}</textarea>
+                    <textarea data-fieldtype="tiny" class="form-control" name="sect1_para1" aria-describedby="sect1Paragraph1Help" id="sect1-paragraph1">{{ $data->sect1_para1 }}</textarea>
                     <small id="sect1Paragraph1Help" class="form-text text-muted">Recommended length: 3-5 sentences</small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
                 </div>
@@ -132,11 +132,11 @@
             </script>
 
             <!-- Paragraph 2 -->
-            <form action="">
+            <form data-route="{{ route('contact-us.career.update_page') }}">
                 @csrf
                 <div data-route="{{ route('contact-us.career.update_page') }}">
                     <label for="sect1-paragraph2">Paragraph 2</label>
-                    <textarea class="form-control" name="sect1-paragraph2" aria-describedby="sect1Paragraph2Help" id="sect1-paragraph2">{{$data->sect1_para2}}</textarea>
+                    <textarea data-fieldtype="tiny" class="form-control" name="sect1_para2" aria-describedby="sect1Paragraph2Help" id="sect1-paragraph2">{{ $data->sect1_para2 }}</textarea>
                     <small id="sect1Paragraph2Help" class="form-text text-muted">Recommended length: 3-5 sentences</small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
                 </div>
@@ -157,7 +157,7 @@
                 @csrf
                 <div class="mb-3 py-3">
                     <label for="sect1-image1" class="form-label">Image 1</label>
-                    <input class="form-control form-control-sm" data-fieldtype="big" name="sect1_image1" type="file" id="sect1-image1" aria-describedby="sect1Image1Help" value="{{ $data->sect1_image1 }}">
+                    <input required data-fieldtype="media" class="form-control form-control-sm" data-fieldtype="big" name="sect1_image1" type="file" id="sect1-image1" aria-describedby="sect1Image1Help" value="{{ $data->sect1_image1 }}">
                     <small id="sect1Image1Help" class="form-text text-muted">Recommended image size: WxH</small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
                 </div>                
@@ -168,7 +168,7 @@
                 @csrf
                 <div class="mb-3 py-3">
                     <label for="sect1-image2" class="form-label">Image 2</label>
-                    <input class="form-control form-control-sm" data-fieldtype="big" name="sect1_image2" type="file" id="sect1-image2" aria-describedby="sect1Image2Help" value="{{ $data->sect1_image2 }}">
+                    <input required data-fieldtype="media" class="form-control form-control-sm" data-fieldtype="big" name="sect1_image2" type="file" id="sect1-image2" aria-describedby="sect1Image2Help" value="{{ $data->sect1_image2 }}">
                     <small id="sect1Image2Help" class="form-text text-muted">Recommended image size: WxH</small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
                 </div>                
