@@ -17,10 +17,10 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
 
-            $table->string('page_title', 60)->default('');
-            $table->string('page_desc', 155)->default('');
-            $table->string('page_keywords', 155)->default('');
-            $table->string('page_author', 60)->default('');
+            $table->string('page_title', 60);
+            $table->string('page_desc', 155);
+            $table->string('page_keywords', 155);
+            $table->string('page_author', 60);
         });
         
         // Insert empty values

@@ -24,34 +24,34 @@ return new class extends Migration
             $table->string('page_author', 60);
             
             // Section 1: Parental Concerns
-            $table->string('parental_concerns_title');
-            $table->string('parental_concerns_para1');
-            $table->string('parental_concerns_para2');
-            $table->string('parental_concerns_para3');
-            $table->string('parental_concerns_para4');
-            $table->string('parental_concerns_image1');
-            $table->string('parental_concerns_image2');
-            $table->string('parental_concerns_image3');
-            $table->string('parental_concerns_image4');
+            $table->string('sect1_heading');
+            $table->string('sect1_para1');
+            $table->string('sect1_para2');
+            $table->string('sect1_para3');
+            $table->string('sect1_para4');
+            $table->string('sect1_image1');
+            $table->string('sect1_image2');
+            $table->string('sect1_image3');
+            $table->string('sect1_image4');
 
             // Section 2: Parental Goals
-            $table->string('parental_goals_title');
-            $table->string('parental_goals_para1');
-            $table->string('parental_goals_para2');
-            $table->string('parental_goals_para3');
-            $table->string('parental_goals_para4');
-            $table->string('parental_goals_image1');
-            $table->string('parental_goals_image2');
-            $table->string('parental_goals_image3');
-            $table->string('parental_goals_image4');
+            $table->string('sect2_heading');
+            $table->string('sect2_para1');
+            $table->string('sect2_para2');
+            $table->string('sect2_para3');
+            $table->string('sect2_para4');
+            $table->string('sect2_image1');
+            $table->string('sect2_image2');
+            $table->string('sect2_image3');
+            $table->string('sect2_image4');
 
             // Section 3: Testimonials Gallery
-            $table->string('testimonials_title');
-            $table->string('testimonials_para1');
-            $table->string('testimonials_para2');
-            $table->string('testimonials_para3');
-            $table->string('testimonials_para4');
-            $table->string('testimonials_images');
+            $table->string('sect3_heading');
+            $table->string('sect3_para1');
+            $table->string('sect3_para2');
+            $table->string('sect3_para3');
+            $table->string('sect3_para4');
+            $table->string('sect3_images');
         });
 
         // Insert empty values
@@ -64,34 +64,34 @@ return new class extends Migration
                 'page_author' => '',
                 
                 // Section 1: Parental Concerns
-                'parental_concerns_title' => '',
-                'parental_concerns_para1' => '',
-                'parental_concerns_para2' => '',
-                'parental_concerns_para3' => '',
-                'parental_concerns_para4' => '',
-                'parental_concerns_image1' => '',
-                'parental_concerns_image2' => '',
-                'parental_concerns_image3' => '',
-                'parental_concerns_image4' => '',
+                'sect1_heading' => '',
+                'sect1_para1' => '',
+                'sect1_para2' => '',
+                'sect1_para3' => '',
+                'sect1_para4' => '',
+                'sect1_image1' => '',
+                'sect1_image2' => '',
+                'sect1_image3' => '',
+                'sect1_image4' => '',
 
                 // Section 2: Parental Goals
-                'parental_goals_title' => '',
-                'parental_goals_para1' => '',
-                'parental_goals_para2' => '',
-                'parental_goals_para3' => '',
-                'parental_goals_para4' => '',
-                'parental_goals_image1' => '',
-                'parental_goals_image2' => '',
-                'parental_goals_image3' => '',
-                'parental_goals_image4' => '',
+                'sect2_heading' => '',
+                'sect2_para1' => '',
+                'sect2_para2' => '',
+                'sect2_para3' => '',
+                'sect2_para4' => '',
+                'sect2_image1' => '',
+                'sect2_image2' => '',
+                'sect2_image3' => '',
+                'sect2_image4' => '',
 
                 // Section 3: Testimonials Gallery
-                'testimonials_title' => '',
-                'testimonials_para1' => '',
-                'testimonials_para2' => '',
-                'testimonials_para3' => '',
-                'testimonials_para4' => '',
-                'testimonials_images' => '',
+                'sect3_heading' => '',
+                'sect3_para1' => '',
+                'sect3_para2' => '',
+                'sect3_para3' => '',
+                'sect3_para4' => '',
+                'sect3_images' => '',
             )
         );
     }

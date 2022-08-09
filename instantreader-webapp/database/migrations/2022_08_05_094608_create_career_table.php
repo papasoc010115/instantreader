@@ -17,17 +17,17 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
 
-            $table->string('page_title', 60)->default('');
-            $table->string('page_desc', 155)->default('');
-            $table->string('page_keywords', 155)->default('');
-            $table->string('page_author', 60)->default('');
-            $table->string('sect1_heading')->default('');
-            $table->string('sect1_title1')->default('');
-            $table->string('sect1_para1', env('MAX_PARAGRAPH_CHAR'))->default('');
-            $table->string('sect1_image1')->default('');
-            $table->string('sect1_title2')->default('');
-            $table->string('sect1_para2', env('MAX_PARAGRAPH_CHAR'))->default('');
-            $table->string('sect1_image2')->default('');
+            $table->string('page_title', 60);
+            $table->string('page_desc', 155);
+            $table->string('page_keywords', 155);
+            $table->string('page_author', 60);
+            $table->string('sect1_heading');
+            $table->string('sect1_title1');
+            $table->string('sect1_para1', env('MAX_PARAGRAPH_CHAR'));
+            $table->string('sect1_image1');
+            $table->string('sect1_title2');
+            $table->string('sect1_para2', env('MAX_PARAGRAPH_CHAR'));
+            $table->string('sect1_image2');
         });
         
         // Insert empty values
