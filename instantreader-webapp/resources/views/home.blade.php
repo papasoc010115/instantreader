@@ -202,11 +202,6 @@
 
 <!--WELCOME Start-->
 <section id="welcome-section" class="page-title cursor-light p-0">
-    <!-- Pattern Layers -->
-    <!-- <div class="pattern-layers">
-        <div class="layer-one"></div>
-        <div class="layer-two"></div>
-    </div> -->
     <div class="auto-container">
         <h2 class="hide-cursor px-3" id="welcome-title">Welcome to Instant Reader!</h2>
         <p class="text-white px-3" id="welcome-paragraph">
@@ -406,7 +401,7 @@
             <div class="col-md-6">
                 <div class="team-item">
                     <!--Team Image-->
-                    <!-- <img id="vicki-image" alt="Teacher Vicki" class="team-image" src="{{ url( $data->vicki_image) }}"> -->
+                    <img id="vicki-image" alt="Teacher Vicki" class="team-image" src="{{ asset('marketing-site/assets/agency/img/vector-art-2.png') }}">
                     <!--Name-->
                     <div class="name">
                         <img alt="shape" src="{{ asset('marketing-site/assets/agency/img/shape-11.png') }}">
@@ -427,7 +422,7 @@
             <div class="col-md-6">
                 <div class="team-item">
                     <!--Team Image (will be fixed after once file import and form programs are complete)-->
-                    <!-- <img id="likha-image" alt="Sir Likha" class="team-image" src="{{ url( $data->likha_image) }}"> --> 
+                    <img id="likha-image" alt="Sir Likha" class="team-image" src="{{ asset('marketing-site/assets/agency/img/vector-art-2.png') }}"> 
                     <!--Name-->
                     <div class="name">
                         <img alt="shape" src="{{ asset('marketing-site/assets/agency/img/shape-11.png') }}">
@@ -727,7 +722,7 @@
     <div class="container">
         <div class="row d-flex align-items-center">
             <div class="col-xl-6 wow fadeInLeft">
-                <!-- <img id="enroll-now-image" class="h-100" src="{{ url( $data->enroll_image) }}" alt="Enroll Now">             -->
+                <img id="enroll-now-image" class="h-100" src="{{ asset('marketing-site/assets/agency/img/vector-art-2.png') }}" alt="Enroll Now">            
             </div>
             <div class="col-xl-6 wow fadeInRight py-5 enroll-now-detail">
                 <div class="heading-area">
