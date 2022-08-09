@@ -13,6 +13,10 @@
 
 <!-- Style Start -->
 <style>
+    .heading-area {
+        margin-bottom: 2rem; 
+    }
+
     @media only screen and (max-width: 767px) {
         .btn-col {
             text-align: center;
@@ -102,7 +106,7 @@
             <div class="col-md-6 wow fadeInRight">
                 <div class="heading-area">
                     <h2 class="title text-white">{!! $data->sect2_heading !!}</h2>
-                    <div class="para-div">{!! $data->sect2_para !!}</div>
+                    <p class="para text-white">{!! $data->sect2_para !!}</p>
                 </div>
             </div>
         </div>
