@@ -21,6 +21,8 @@ return new class extends Migration
             $table->string('page_desc', 155);
             $table->string('page_keywords', 155);
             $table->string('page_author', 60);
+                
+            // Section 1: Job Description & Requirements
             $table->string('sect1_heading');
             $table->string('sect1_title1');
             $table->string('sect1_para1', env('MAX_PARAGRAPH_CHAR'));
@@ -37,6 +39,8 @@ return new class extends Migration
                 'page_desc' => '',
                 'page_keywords' => '',
                 'page_author' => '',
+                
+                // Section 1: Job Description & Requirements
                 'sect1_heading' => '',
                 'sect1_title1' => '',
                 'sect1_para1' => '',

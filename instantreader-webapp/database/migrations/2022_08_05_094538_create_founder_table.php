@@ -18,7 +18,7 @@ return new class extends Migration
             $table->timestamps();
             
             // Metadata
-            $table->string('page_heading', 60);
+            $table->string('page_title', 60);
             $table->string('page_desc', 155);
             $table->string('page_keywords', 155);
             $table->string('page_author', 60);
@@ -57,7 +57,7 @@ return new class extends Migration
         // Insert empty values
         DB::table('founder')->insert(
             array(
-                'page_heading' => '',
+                'page_title' => '',
                 'page_desc' => '',
                 'page_keywords' => '',
                 'page_author' => '',
