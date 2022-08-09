@@ -96,7 +96,7 @@
                 <div class="form-group py-3">
                     <label for="sect1-paragraph1">Paragraph 1</label>
                     <textarea data-fieldtype="tiny" class="form-control" name="sect1_para1" aria-describedby="sect1Paragraph1Help" id="sect1-paragraph1"></textarea>
-                    <small id="sect1Paragraph1Help" class="form-text text-muted">Recommended length: 3-5 sentences</small>
+                    <small id="sect1Paragraph1Help" class="form-text text-muted">Recommended length: 3 sentences</small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
                 </div>
             </form>
@@ -117,7 +117,7 @@
                 <div class="form-group py-3">
                     <label for="sect1-paragraph2">Paragraph 2</label>
                     <textarea data-fieldtype="tiny" class="form-control" name="sect1_para2" aria-describedby="sect1Paragraph2Help" id="sect1-paragraph2"></textarea>
-                    <small id="sect1Paragraph2Help" class="form-text text-muted">Recommended length: 3-5 sentences</small>
+                    <small id="sect1Paragraph2Help" class="form-text text-muted">Recommended length: 3 sentences</small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
                 </div>
             </form>
@@ -138,7 +138,7 @@
                 <div class="form-group py-3">
                     <label for="sect1-paragraph3">Paragraph 3</label>
                     <textarea data-fieldtype="tiny" class="form-control" name="sect1_para3" aria-describedby="sect1Paragraph3Help" id="sect1-paragraph3"></textarea>
-                    <small id="sect1Paragraph3Help" class="form-text text-muted">Recommended length: 3-5 sentences</small>
+                    <small id="sect1Paragraph3Help" class="form-text text-muted">Recommended length: 3 sentences</small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
                 </div>
             </form>
@@ -322,7 +322,7 @@
                 </div>
             </form>
 
-            <!-- Paragraph 1 -->
+            <!-- Paragraph -->
             <form action="">
                 @csrf
                 <div class="form-group py-3">
@@ -374,7 +374,7 @@
             </div>
         </form>
 
-        <!-- Paragraph 1 -->
+        <!-- Paragraph -->
         <form action="">
             @csrf
             <div class="form-group py-3">
