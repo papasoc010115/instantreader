@@ -229,7 +229,7 @@
                 </div>
                 <div class="text-container-content">
                     <div id="highlight-paragraph" class="video-desc">
-                        {{ $data->sect2_para }}
+                        {!! $data->sect2_para !!}
                     </div>
                 </div>
             </div>

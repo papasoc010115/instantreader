@@ -86,7 +86,7 @@
     </div>
 
     <div class="auto-container">
-        <h2 class="hide-cursor">Instant Reader Programs</h2>
+        <h2 class="hide-cursor">{{ $data->sect1_heading }}</h2>
         <ul class="page-breadcrumb link">
             <li>
                 <a href="{{ route('learn-more.reading-assessment') }}" class="card-btn btn btn-large btn-rounded btn-pink btn-hvr-blue mt-3">
@@ -108,10 +108,7 @@
                     <img class="card-img-top" src="{{ asset('marketing-site/assets/img/basic-card-img.jpg') }}" alt="img">
                     <div class="card-body">
                         <h5 class="card-title">Basic</h5>
-                        <p class="card-text">
-                            Some quick example text to build on the card title and make up the bulk of the card's content.
-                            Some quick example text to build on the card title and make up the bulk of the card's content.
-                        </p>
+                        <p class="card-text">{!! $data->sect1_para1 !!}</p>
                         <button class="card-btn btn btn-large btn-rounded btn-pink btn-hvr-blue mt-3" id="card-btn-basic">Read More
                         <div class="btn-hvr-setting">
                             <ul class="btn-hvr-setting-inner">
@@ -132,10 +129,7 @@
                     <img class="card-img-top" src="{{ asset('marketing-site/assets/img/advanced-card-img.jpg') }}" alt="img">
                     <div class="card-body">
                         <h5 class="card-title">Advanced</h5>
-                        <p class="card-text">
-                            Some quick example text to build on the card title and make up the bulk of the card's content.
-                            Some quick example text to build on the card title and make up the bulk of the card's content.
-                        </p>
+                        <p class="card-text">{!! $data->sect1_para2 !!}</p>
                         <button class="card-btn btn btn-large btn-rounded btn-pink btn-hvr-blue mt-3" id="card-btn-advanced">Read More
                         <div class="btn-hvr-setting">
                             <ul class="btn-hvr-setting-inner">
@@ -156,10 +150,7 @@
                     <img class="card-img-top" src="{{ asset('marketing-site/assets/img/mastery-card-img.jpg') }}" alt="img">
                     <div class="card-body">
                         <h5 class="card-title">Mastery</h5>
-                        <p class="card-text">
-                            Some quick example text to build on the card title and make up the bulk of the card's content.
-                            Some quick example text to build on the card title and make up the bulk of the card's content.
-                        </p>
+                        <p class="card-text">{!! $data->sect1_para3 !!}</p>
                         <button class="card-btn btn btn-large btn-rounded btn-pink btn-hvr-blue mt-3" id="card-btn-mastery">Read More
                         <div class="btn-hvr-setting">
                             <ul class="btn-hvr-setting-inner">
@@ -180,10 +171,7 @@
                     <img class="card-img-top" src="{{ asset('marketing-site/assets/img/compass-card-img.jpg') }}" alt="img">
                     <div class="card-body">
                         <h5 class="card-title">COMPASS</h5>
-                        <p class="card-text">
-                            Some quick example text to build on the card title and make up the bulk of the card's content.
-                            Some quick example text to build on the card title and make up the bulk of the card's content.
-                        </p>
+                        <p class="card-text">{!! $data->sect1_para4 !!}</p>
                         <button class="card-btn btn btn-large btn-rounded btn-pink btn-hvr-blue mt-3" id="card-btn-compass">Read More
                         <div class="btn-hvr-setting">
                             <ul class="btn-hvr-setting-inner">
@@ -206,7 +194,7 @@
 <!-- About Basic -->
 <section class="reading-program page-title" id="about-basic">
     <div class="auto-container">
-        <h2 class="hide-cursor" style="margin-bottom: 0.5em">Basic</h2>
+        <h2 class="hide-cursor" style="margin-bottom: 0.5em">{{ $data->sect2_heading }}</h2>
     </div>
     <div class="container">
         <div class="row py-4 d-flex align-items-center wow fadeInLeft">
@@ -239,21 +227,9 @@
                 </div>
             </div>
             <div class="col-md-6 text-content">
-                <p id="about-basic-paragraph-1" class="half-paragraph-left-align py-2" style="color: white">
-                    Paragraph 1 orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.   
-                </p>
-                <p id="about-basic-paragraph-2" class="half-paragraph-left-align py-2" style="color: white">
-                    Paragraph 2 orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                </p>
-                <p id="about-basic-paragraph-3" class="half-paragraph-left-align py-2" style="color: white">
-                    Paragraph 3 orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
+                <p id="about-basic-paragraph-1" class="half-paragraph-left-align py-2" style="color: white">{!! $data->sect2_para1 !!}</p>
+                <p id="about-basic-paragraph-2" class="half-paragraph-left-align py-2" style="color: white">{!! $data->sect2_para2 !!}</p>
+                <p id="about-basic-paragraph-3" class="half-paragraph-left-align py-2" style="color: white">{!! $data->sect2_para3 !!}</p>
             </div>
         </div>
         <div class="row py-4">
@@ -269,26 +245,14 @@
 <!-- About Advanced -->
 <section class="reading-program page-title" id="about-advanced">
     <div class="auto-container">
-        <h2 class="hide-cursor" style="margin-bottom: 0.5em; color: white">Advanced</h2>
+        <h2 class="hide-cursor" style="margin-bottom: 0.5em; color: white">{{ $data->sect3_heading }}</h2>
     </div>
     <div class="container">
         <div class="row py-4 d-flex align-items-center wow fadeInRight">
             <div class="col-md-6 text-content">
-                <p id="about-advanced-paragraph-1" class="half-paragraph-right-align py-2" style="color: white">
-                    Paragraph 1 orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.     
-                </p>
-                <p id="about-advanced-paragraph-2" class="half-paragraph-right-align py-2" style="color: white">
-                    Paragraph 2 orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
-                <p id="about-advanced-paragraph-3" class="half-paragraph-right-align py-2" style="color: white">
-                    Paragraph 3 orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>         
+                <p id="about-advanced-paragraph-1" class="half-paragraph-right-align py-2" style="color: white">{!! $data->sect3_para1 !!}</p>
+                <p id="about-advanced-paragraph-2" class="half-paragraph-right-align py-2" style="color: white">{!! $data->sect3_para2 !!}</p>
+                <p id="about-advanced-paragraph-3" class="half-paragraph-right-align py-2" style="color: white">{!! $data->sect3_para3 !!}</p>         
             </div>
             <div class="col-md-6 media-content">
                 <div id="about-advanced-carousel" class="carousel slide carousel-fade" data-ride="carousel">
@@ -332,7 +296,7 @@
 <!-- About Mastery -->
 <section class="reading-program page-title" id="about-mastery">
     <div class="auto-container">
-        <h2 class="hide-cursor" style="margin-bottom: 0.5em">Mastery</h2>
+        <h2 class="hide-cursor" style="margin-bottom: 0.5em">{{ $data->sect4_heading }}</h2>
     </div>
     <div class="container">
         <div class="row py-4 d-flex align-items-center wow fadeInLeft">
@@ -365,21 +329,9 @@
                 </div>
             </div>
             <div class="col-md-6 text-content">
-                <p id="about-mastery-paragraph-1" class="half-paragraph-left-align py-2" style="color: white">
-                    Paragraph 1 orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.    
-                </p>
-                <p id="about-mastery-paragraph-2" class="half-paragraph-left-align py-2" style="color: white">
-                    Paragraph 2 orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
-                <p id="about-mastery-paragraph-3" class="half-paragraph-left-align py-2" style="color: white">
-                    Paragraph 3 orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p> 
+                <p id="about-mastery-paragraph-1" class="half-paragraph-left-align py-2" style="color: white">{!! $data->sect4_para1 !!}</p>
+                <p id="about-mastery-paragraph-2" class="half-paragraph-left-align py-2" style="color: white">{!! $data->sect4_para2 !!}</p>
+                <p id="about-mastery-paragraph-3" class="half-paragraph-left-align py-2" style="color: white">{!! $data->sect4_para3 !!}</p> 
             </div>
         </div>
         <div class="row py-4">
@@ -395,26 +347,14 @@
 <!-- About Compass -->
 <section class="reading-program page-title" id="about-compass">
     <div class="auto-container">
-        <h2 class="hide-cursor" style="margin-bottom: 0.5em; color: white">COMPASS</h2>
+        <h2 class="hide-cursor" style="margin-bottom: 0.5em; color: white">{{ $data->sect5_heading }}</h2>
     </div>
     <div class="container">
         <div class="row py-4 d-flex align-items-center wow fadeInRight">
             <div class="col-md-6 text-content">
-                <p id="about-compass-paragraph-1" class="half-paragraph-right-align py-2" style="color: white">
-                    Paragraph 1 orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.    
-                </p>
-                <p id="about-compass-paragraph-2" class="half-paragraph-right-align py-2" style="color: white">
-                    Paragraph 2 orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
-                <p id="about-compass-paragraph-3" class="half-paragraph-right-align py-2" style="color: white">
-                    Paragraph 3 orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>            
+                <p id="about-compass-paragraph-1" class="half-paragraph-right-align py-2" style="color: white">{!! $data->sect5_para1 !!}</p>
+                <p id="about-compass-paragraph-2" class="half-paragraph-right-align py-2" style="color: white">{!! $data->sect5_para2 !!}</p>
+                <p id="about-compass-paragraph-3" class="half-paragraph-right-align py-2" style="color: white">{!! $data->sect5_para3 !!}</p>            
             </div>
             <div class="col-md-6 media-content">
                 <video preload="none" controls poster="{{ asset('marketing-site/assets/img/consultation.jpg') }}" playsinline>
@@ -460,21 +400,9 @@
                 </div>
             </div>
             <div class="col-md-6 text-content">
-                <p id="about-compass-paragraph-4" class="half-paragraph-left-align py-2" style="color: white">
-                    Paragraph 4 orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  
-                </p>
-                <p id="about-compass-paragraph-5" class="half-paragraph-left-align py-2" style="color: white">
-                    Paragraph 5 orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
-                <p id="about-compass-paragraph-6" class="half-paragraph-left-align py-2" style="color: white">
-                    Paragraph 6 orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>   
+                <p id="about-compass-paragraph-4" class="half-paragraph-left-align py-2" style="color: white">{!! $data->sect5_para4 !!}</p>
+                <p id="about-compass-paragraph-5" class="half-paragraph-left-align py-2" style="color: white">{!! $data->sect5_para5 !!}</p>
+                <p id="about-compass-paragraph-6" class="half-paragraph-left-align py-2" style="color: white">{!! $data->sect5_para6 !!}</p>   
             </div>
         </div>
         <div class="row py-4">
