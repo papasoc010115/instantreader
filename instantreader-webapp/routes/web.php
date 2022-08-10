@@ -246,7 +246,8 @@ Route::post('/sign-up', [FormController::class, 'store_user'])->name('account.st
 API ENDPOINTS
 --------------------------------------------------------------------------*/
 Route::post('/api/home/update-page', [HomeController::class, 'update_page'])->name('home.update_page');
-Route::post('/api/home/upload-media', [HomeController::class, 'store_media_single'])->name('home.store_media_single');
+Route::post('/api/home/upload-media-single', [HomeController::class, 'store_media_single'])->name('home.store_media_single');
+Route::post('/api/home/upload-media-mutiple', [HomeController::class, 'store_media_multiple'])->name('home.store_media_multiple');
 Route::post('/api/learn-more/assessment/update-page', [ReadingAssessmentController::class, 'update_page'])->name('learn-more.assessment.update_page');
 Route::post('/api/learn-more/reading-programs/update-page', [ReadingProgramController::class, 'update_page'])->name('learn-more.reading-programs.update_page');
 Route::post('/api/learn-more/kids-club/update-page', [KidsClubController::class, 'update_page'])->name('learn-more.kids-club.update_page');

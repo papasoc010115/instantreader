@@ -37,14 +37,14 @@ return new class extends Migration
             // // Section 3: Live Parent Orientation
             // $table->string('sect3_heading');
             // $table->string('sect3_para');
-            // $table->string('sect3_images');
+            $table->string('sect3_images');
 
             // // Section 4: Teacher Vicki & Likha
             // $table->string('sect4_heading');
             // $table->string('sect4_para1');
-            // $table->string('sect4_image1');
+            $table->string('sect4_image1');
             // $table->string('sect4_para2');
-            // $table->string('sect4_image2');
+            $table->string('sect4_image2');
 
             // // Section 5: Area Jurisdictions
             // $table->string('sect5_heading');
@@ -53,17 +53,17 @@ return new class extends Migration
             // // Section 6: Testimonies
             // $table->string('sect6_heading');
             // $table->string('sect6_para');
-            // $table->string('sect6_images');
+            $table->string('sect6_images');
 
             // // Section 7: IR Kids Club
             // $table->string('sect7_heading');
             // $table->string('sect7_para');
-            // $table->string('sect7_images');
+            $table->string('sect7_images');
 
             // // Section 8: Enroll Now
             // $table->string('sect8_heading');
             // $table->string('sect8_para');
-            // $table->string('sect8_image');
+            $table->string('sect8_image');
         });
         
         // Insert empty values
@@ -89,14 +89,14 @@ return new class extends Migration
                 // // Section 3: Live Parent Orientation
                 // 'sect3_heading' => '',
                 // 'sect3_para' => '',
-                // 'sect3_images' => '',
+                'sect3_images' => '',
 
                 // // Section 4: Teacher Vicki & Likha
                 // 'sect4_heading' => '',
                 // 'sect4_para1' => '',
-                // 'sect4_image1' => '',
+                'sect4_image1' => '',
                 // 'sect4_para2' => '',
-                // 'sect4_image2' => '',
+                'sect4_image2' => '',
 
                 // // Section 5: Area Jurisdictions
                 // 'sect5_heading' => '',
@@ -105,17 +105,17 @@ return new class extends Migration
                 // // Section 6: Testimonies
                 // 'sect6_heading' => '',
                 // 'sect6_para' => '',
-                // 'sect6_images' => '',
+                'sect6_images' => '',
 
                 // // Section 7: IR Kids Club
                 // 'sect7_heading' => '',
                 // 'sect7_para' => '',
-                // 'sect7_images' => '',
+                'sect7_images' => '',
 
                 // // Section 8: Enroll Now
                 // 'sect8_heading' => '',
                 // 'sect8_para' => '',
-                // 'sect8_image' => '',
+                'sect8_image' => '',
             )
         );
     }
