@@ -57,7 +57,7 @@
 <section>
     <!--Heading-->
     <div class="heading-area pb-2 text-center">
-        <h2 class="title mt-0">{!! $data->sect1_heading !!}</h2>
+        <h2 class="title mt-0">{{ $data->sect1_heading }}</h2>
     </div>
     
     <!--Description 1-->
@@ -105,7 +105,7 @@
             </div>
             <div class="col-md-6 wow fadeInRight">
                 <div class="heading-area">
-                    <h2 class="title text-white">{!! $data->sect2_heading !!}</h2>
+                    <h2 class="title text-white">{{ $data->sect2_heading }}</h2>
                     <p class="para text-white">{!! $data->sect2_para !!}</p>
                 </div>
             </div>

@@ -13,6 +13,11 @@
 
 <!-- Style Start -->
 <style>
+
+    .heading-area {
+        margin-bottom: 2rem; 
+    }
+
     .para {
         text-align: justify;
     }
@@ -55,7 +60,7 @@
 <section class="bg-light">
     <!--Heading-->
     <div class="heading-area pb-2 text-center">
-        <h2 class="title mt-0">{!! $data->sect1_heading !!}</h2>
+        <h2 class="title mt-0">{{ $data->sect1_heading }}</h2>
     </div>
 
     <!--Job Description-->
@@ -67,8 +72,8 @@
                 </div>
             </div>
             <div class="col-md-6 wow fadeInRight desc-text">
-                <div class="heading-area">
-                    <h2 class="title">{!! $data->sect1_title1 !!}</h2>
+                <div>
+                    <h3>{{ $data->sect1_title1 }}</h3>
                     <p class="para">{!! $data->sect1_para1 !!}</p>
                 </div>
             </div>
@@ -79,8 +84,8 @@
     <div class="container d-flex">
         <div class="row">
             <div class="col-md-6 reqs-text">
-                <div class="heading-area">
-                    <h2 class="title">{!! $data->sect1_title2 !!}</h2>
+                <div>
+                    <h3>{{ $data->sect1_title2 }}</h3>
                     <p class="para">{!! $data->sect1_para2 !!}</p>
                 </div>
             </div>
