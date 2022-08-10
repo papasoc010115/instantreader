@@ -203,12 +203,8 @@
 <!--WELCOME Start-->
 <section id="welcome-section" class="page-title cursor-light p-0">
     <div class="auto-container">
-        <h2 class="hide-cursor px-3" id="welcome-title">Welcome to Instant Reader!</h2>
-        <p class="text-white px-3" id="welcome-paragraph">
-            There are many variations of passages of Lorem Ipsum available, but the majority
-            have suffered alteration in some form, by injected humour, or randomised words which don't look
-            even slightly believable.
-        </p>
+        <h2 class="hide-cursor px-3" id="welcome-title">{{ $data->sect1_heading }}</h2>
+        <p class="text-white px-3" id="welcome-paragraph">{!! $data->sect1_para !!}</p>
     </div>
 </section>
 <!--WELCOME End-->
@@ -225,16 +221,15 @@
             <div class="col-lg-5 pl-4 pt-4 wow fadeInRight">
                 <div class="text-container-content">
                     <div id="highlight-title-one" class="gradient-text1 first-title">
-                        Highlight
+                        {{ $data->sect2_heading1 }}
                     </div>
                     <div id="highlight-title-two" class="second-title">
-                        Video
+                        {{ $data->sect2_heading2 }}
                     </div>
                 </div>
                 <div class="text-container-content">
                     <div id="highlight-paragraph" class="video-desc">
-                        Lorem ipsum is simply dummy text of the printing and typesetting. Lorem Ipsum has been the
-                        industry’s standard dummy. Lorem Ipsum has been the industry’s standard dummy.
+                        {{ $data->sect2_para }}
                     </div>
                 </div>
             </div>
@@ -249,12 +244,8 @@
         <div class="row d-flex align-items-center">
             <div class="col-lg-6 wow fadeInLeft mb-4">
                 <div class="heading-area">
-                    <h2 class="title"><span class="main-color js-rotating">LIVE, FREE</span> Parent Orientations</h2>
-                    <h4 class="sub-title">Every <span class="alt-color js-rotating">Tuesday, Thursday, Saturday</span> 8 PM (PH Time)</h4>
-                    <p id="parent-orientation-paragraph" class="para">There are many variations of passages of Lorem Ipsum available, but the majority
-                        have suffered alteration in some form, by injected humour, or randomised words which don't look
-                        even slightly believable. If you are going to use a passage of Lorem Ipsum.
-                    </p>
+                    <h2 class="title"><span class="main-color js-rotating">{{ $data->sect3_heading1 }}</span> {{ $data->sect3_heading2 }}</h2>
+                    <p id="parent-orientation-paragraph" class="para">{!! $data->sect3_para !!}</p>
                     <a class="btn btn-large btn-rounded btn-pink btn-hvr-blue my-3"  href="{{ route('contact-us.book-consultation') }}">Book Appointment for Live Agent
                         <div class="btn-hvr-setting">
                             <ul class="btn-hvr-setting-inner">
@@ -385,14 +376,13 @@
 
 
 <!--ABOUT PEOPLE Start-->
-<section id="about-people-section" class="text-center gradient-bg2">
+<section id="about-people-section" class="text-center" style="background: #4287F5;">
     <div class="container">
         <!--TITLE-->
         <div class="row">
             <div class="col-md-12 wow fadeInUp">
                 <div class="heading-area mx-570 mb-5">
-                    <h2 id="about-people-title" class="title text-white">We have some <span class="main-color js-rotating">great, ideal</span> talented
-                        staff</h2>
+                    <h2 id="about-people-title" class="title text-white">{{ $data->sect4_heading }}</h2>
                 </div>
             </div>
         </div>
@@ -408,15 +398,9 @@
                         <h6 id="vicki-nameplate" class="text-white">TEACHER VICKI</h6>
                     </div>
                     <!--Designation-->
-                    <h6 id="vicki-designation" class="designation mb-2 text-white">Founder & Director</h6>
+                    <h6 id="vicki-designation" class="designation mb-2 text-white">{{ $data->sect4_position1 }}</h6>
                     <!--Description-->
-                    <p id="vicki-description" class="about-people text-white">The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
-                    <!--Team Social-->
-                    <div class="team-social social-icon-bg-hvr pb-4">
-                        <a id="vicki-facebook" href="#"><i aria-hidden="true" class="fab fa-facebook-f text-white"></i></a>
-                        <a id="vicki-linkedin" href="#"><i aria-hidden="true" class="fab fa-linkedin-in text-white"></i></a>
-                        <a id="vicki-twitter" href="#"><i aria-hidden="true" class="fab fa-twitter text-white"></i></a>
-                    </div>
+                    <p id="vicki-description" class="about-people text-white">{!! $data->sect4_para1 !!}</p>
                 </div>
             </div>
             <div class="col-md-6">
@@ -429,15 +413,9 @@
                         <h6 id="likha-nameplate" class="text-white">SIR LIKHA</h6>
                     </div>
                     <!--Designation-->
-                    <h6 id="likha-designation" class="designation mb-2 text-white">Director</h6>
+                    <h6 id="likha-designation" class="designation mb-2 text-white">{{ $data->sect4_position2 }}</h6>
                     <!--Description-->
-                    <p id="likha-description" class="about-people text-white">The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
-                    <!--Team Social-->
-                    <div class="team-social social-icon-bg-hvr pb-4">
-                        <a id="likha-facebook" href="#"><i aria-hidden="true" class="fab fa-facebook-f text-white"></i></a>
-                        <a id="likha-linkedin" href="#"><i aria-hidden="true" class="fab fa-linkedin-in text-white"></i></a>
-                        <a id="likha-twitter" href="#"><i aria-hidden="true" class="fab fa-twitter text-white"></i></a>
-                    </div>
+                    <p id="likha-description" class="about-people text-white">{!! $data->sect4_para2 !!}</p>
                 </div>
             </div>
         </div>
@@ -451,11 +429,9 @@
         <div class="row area-juris-desc">
             <div class="col-md-12 wow fadeInUp">
                 <div class="heading-area mx-570 mb-5">
-                    <h1 class="title alt-color"><span class="main-color">AREA</span> JURISDICTIONS</h2>
-                    <h4 class="title alt-color"> We have branches in</h4>
-                    <h4 class="title"><span class="js-rotating main-color">Philippines, UAE, Indonesia, Thailand, Vietnam</span></h4>
-                    <p id="area-jurisdiction-paragraph" class="para">There are many variations of passages of Lorem Ipsum available, but the majority
-                        have suffered alteration in some form, by injected.</p>
+                    <h4 class="title alt-color">{{ $data->sect5_heading }}</h4>
+                    <h4 class="title"><span class="js-rotating main-color">{{ $data->sect5_countries }}</span></h4>
+                    <p id="area-jurisdiction-paragraph" class="para">{!! $data->sect5_para1 !!}</p>
                 </div>
             </div>
         </div>
@@ -694,10 +670,8 @@
             <div class="row w-75">
                 <div class="col-lg-12 wow fadeInUp">
                     <div class="heading-area my-3 text-center my-5">
-                        <h1 class="text-white font-weight-bold mb-3">Join the Instant Reader <span class="main-color">Kids Club</span></h1>
-                        <p class="text-white">The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 
-                            from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions 
-                            from the 1914 translation by H. Rackham.</p>
+                        <h1 class="text-white font-weight-bold mb-3">{{ $data->sect7_heading }}</h1>
+                        <p class="text-white">{!! $data->sect7_para !!}</p>
                         <a class="btn btn-large btn-rounded btn-pink btn-hvr-blue" href="{{ route('learn-more.kids-club') }}">Join IR Kids Club
                             <div class="btn-hvr-setting">
                                 <ul class="btn-hvr-setting-inner">
@@ -726,12 +700,8 @@
             </div>
             <div class="col-xl-6 wow fadeInRight py-5 enroll-now-detail">
                 <div class="heading-area">
-                    <h1 id="enroll-now-heading" class="alt-color font-weight-bold">ENROLL NOW!</h1>
-                    <p id="enroll-now-paragraph">
-                        There are many variations of passages of Lorem Ipsum available, but the majority
-                        have suffered alteration in some form, by injected humour, or randomised words which don't look
-                        even slightly believable. If you are going to use a passage of Lorem Ipsum.
-                    </p>
+                    <h1 id="enroll-now-heading" class="alt-color font-weight-bold">{{ $data->sect8_heading }}</h1>
+                    <p id="enroll-now-paragraph">{{ $data->sect8_para }}</p>
                     <a class="btn btn-xlarge btn-rounded btn-pink btn-hvr-blue p-auto" href="{{ route('learn-more.reading-assessment') }}">Book Online Reading Assessment
                         <div class="btn-hvr-setting">
                             <ul class="btn-hvr-setting-inner">
