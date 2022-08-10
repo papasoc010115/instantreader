@@ -86,7 +86,7 @@
     </div>
 
     <div class="auto-container">
-        <h2 class="hide-cursor">{{ $data->sect1_heading }}</h2>
+        <h2 class="hide-cursor">Reading Programs</h2>
         <ul class="page-breadcrumb link">
             <li>
                 <a href="{{ route('learn-more.reading-assessment') }}" class="card-btn btn btn-large btn-rounded btn-pink btn-hvr-blue mt-3">

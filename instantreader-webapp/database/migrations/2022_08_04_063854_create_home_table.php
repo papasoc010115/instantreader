@@ -38,7 +38,9 @@ return new class extends Migration
             $table->string('sect3_heading1');
             $table->string('sect3_heading2');
             $table->mediumText('sect3_para');
-            $table->string('sect3_images');
+            $table->string('sect3_image1');
+            $table->string('sect3_image2');
+            $table->string('sect3_image3');
 
             // Section 4: Teacher Vicki & Likha
             $table->string('sect4_heading');
@@ -94,7 +96,9 @@ return new class extends Migration
                 'sect3_heading1' => '',
                 'sect3_heading2' => '',
                 'sect3_para' => '',
-                'sect3_images' => '',
+                'sect3_image1' => '',
+                'sect3_image2' => '',
+                'sect3_image3' => '',
 
                 // Section 4: Teacher Vicki & Likha
                 'sect4_heading' => '',

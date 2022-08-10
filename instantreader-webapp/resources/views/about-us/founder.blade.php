@@ -93,17 +93,14 @@
         <div class="row">
             <div class="col-lg-6 wow fadeInLeft">
                 <div class="heading-area">
-                    <span class="sub-title">We are megaone company</span>
-                    <h2 class="title">We are making <span class="alt-color js-rotating">design, ideas</span> better for
-                        everyone</h2>
-                    <p class="para half-para">There are many variations of passages of Lorem Ipsum available, but the majority
-                        have suffered alteration in some form, by injected humour, or randomised words which don't look
-                        even slightly believable. If you are going to use a passage of Lorem Ipsum.</p>
+                    <span class="sub-title">{{ $data->sect1_subheading }}</span>
+                    <h2 class="title">{{ $data->sect1_heading }}</h2>
+                    <p class="para half-para">{!! $data->sect1_para !!}</p>
                 </div>
             </div>
             <div class="col-lg-6 wow fadeInRight">
                 <div class="half-img mt-4 pt-3 mt-lg-0 pt-lg-0">
-                    <img alt="vector" src="{{ url($data->teacher_vicki_image) }}">
+                    <img alt="vector" src="{{ asset('marketing-site/assets/agency/img/blog-news-1.jpg') }}">
                 </div>
             </div>
         </div>
@@ -115,28 +112,22 @@
 <section class="bg-light" id="socmedlinks">
     <div class="container">
         <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-4">
                 <div class="process-wrapp">
-                    <a class="pro-step blue" href="https://www.facebook.com/"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                    <a class="pro-step blue" href="{{ $data->sect1_fb }}"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
                     <h4 class="service-heading">Facebook</h4>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-4">
                 <div class="process-wrapp">
-                    <a class="pro-step midnight" href="https://www.twitter.com/"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                    <a class="pro-step midnight" href="{{ $data->sect1_twt }}"><i class="fab fa-twitter" aria-hidden="true"></i></a>
                     <h4 class="service-heading">Twitter</h4>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-4">
                 <div class="process-wrapp">
-                    <a class="pro-step purple" href="https://www.instagram.com/"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                    <a class="pro-step pink" href="{{ $data->sect1_ig }}"><i class="fab fa-instagram" aria-hidden="true"></i></a>
                     <h4 class="service-heading">Instagram</h4>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="process-wrapp">
-                    <a class="pro-step pink" href="https://www.linkedin.com/"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
-                    <h4 class="service-heading">Linked-In</h4>
                 </div>
             </div>
         </div>
@@ -151,17 +142,13 @@
         <div class="row">
             <div class="col-md-12 text-center">
                 <div class="heading-area mb-lg-4 mb-3">
-                    <h1 class="title">Instant Reader History</h1>
-                    <p class="para pt-2" style="color: #282525;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tincidunt
-                    egestas nunc, at pellentesque arcu sollicitudin et. Aliquam hendrerit diam quis ipsum
-                    ultricies, quis ultricies arcu suscipit. Lorem ipsum dolor sit amet, consectetur adipiscing
-                    elit. Fusce ut diam quis nulla faucibus venenatis. </p>
+                    <h1 class="title">{{ $data->sect2_heading }}</h1>
                 </div>
             </div>
         </div>
         <!--Video Row-->
         <div class="row justify-content-center">
-            <video class="founder-video" preload="none" controls poster="{{ asset('marketing-site/assets/agency/img/blog-news-1.jpg')}}" playsinline>
+            <video class="founder-video" preload="none" controls poster="{{ asset('marketing-site/assets/agency/img/blog-news-1.jpg') }}" playsinline>
                 <source src="{{ asset('marketing-site/assets/agency/img/video.mp4') }}" type="video/mp4">
             </video>
         </div>
@@ -172,15 +159,12 @@
         <div class="row mt-lg-5 pt-4 mb-lg-4">
             <div class="col-md-6">
                 <div class="heading-area history1-heading">
-                    <h2 style="color: #562FB7;">Title</h2>
-                    <p class="para half-para-right pt-3" style="color: #282525;">There are many variations of passages of Lorem Ipsum available, but the majority
-                        have suffered alteration in some form, by injected humour, or randomised words which don't look
-                        even slightly believable. If you are going to use a passage of Lorem Ipsum.</p>
+                    <p class="para half-para-right pt-3" style="color: #282525;">{!! $data->sect2_para1 !!}</p>
                 </div>
             </div>
             <div class="col-md-6 wow fadeInRight">
                 <div class="half-img mt-2 pt-4 mt-lg-0 pt-lg-0">
-                    <img alt="image" src="{{ url($data->ir_history_image1) }}">
+                    <img alt="image" src="{{ asset('marketing-site/assets/agency/img/blog-news-1.jpg') }}">
                 </div>
             </div>
         </div>
@@ -191,15 +175,12 @@
         <div class="row mt-lg-5 pt-4">
             <div class="col-md-6 wow fadeInLeft info2-img">
                 <div class="half-img mt-2 pt-4 mt-lg-0 pt-lg-0">
-                    <img alt="image" src="{{ url($data->ir_history_image2) }}">
+                    <img alt="image" src="{{ asset('marketing-site/assets/agency/img/blog-news-1.jpg') }}">
                 </div>
             </div>
             <div class="col-md-6 info2-text">
                 <div class="heading-area">
-                    <h2 style="color: #562FB7;">Title</h2>
-                    <p class="para half-para pt-3" style="color: #282525;">There are many variations of passages of Lorem Ipsum available, but the majority
-                        have suffered alteration in some form, by injected humour, or randomised words which don't look
-                        even slightly believable. If you are going to use a passage of Lorem Ipsum.</p>
+                    <p class="para half-para pt-3" style="color: #282525;">{!! $data->sect2_para2 !!}</p>
                 </div>
             </div>
         </div>
@@ -213,15 +194,13 @@
         <div class="row">
             <div class="col-md-6 wow">
                 <div class="heading-area  vision-heading">
-                    <h1 class="title text-white">Our Vision</h1>
-                    <p class="para half-para-right text-white">There are many variations of passages of Lorem Ipsum available, but the majority
-                        have suffered alteration in some form, by injected humour, or randomised words which don't look
-                        even slightly believable. If you are going to use a passage of Lorem Ipsum.</p>
+                    <h1 class="title text-white">{{ $data->sect3_heading }}</h1>
+                    <p class="para half-para-right text-white">{!! $data->sect3_para !!}</p>
                 </div>
             </div>
             <div class="col-md-6 wow fadeInRight">
                 <div class="half-img mt-5 pt-4 mt-lg-0 pt-lg-0">
-                    <img alt="image" src="{{ url($data->ir_vision_image) }}">
+                    <img alt="image" src="{{ asset('marketing-site/assets/agency/img/blog-news-1.jpg') }}">
                 </div>
             </div>
         </div>
@@ -233,13 +212,12 @@
 <section>
     <div class="container">
         <div class="heading-area text-center mb-4">
-            <h1 class="title">Our Mission</h1>
-            <p class="para">There are many variations of passages of Lorem Ipsum available, but the majority
-                have suffered alteration in some form.</p>
+            <h1 class="title">{{ $data->sect4_heading }}</h1>
+            <p class="para">{!! $data->sect4_para !!}</p>
         </div>
         <!--Image Row-->
         <div class="row justify-content-center">
-            <img class="mission-img" alt="image" src="{{ url($data->ir_mission_image) }}">
+            <img class="mission-img" alt="image" src="{{ asset('marketing-site/assets/agency/img/blog-news-1.jpg') }}">
         </div>
     </div>
 </section>
@@ -252,7 +230,7 @@
         <div class="row">
             <div class="col-md-12 text-center mb-5">
                 <div class="heading-area mb-lg-4 mb-3">
-                    <h1 class="title text-white">Project VIRAC</h1>
+                    <h1 class="title text-white">{{ $data->sect5_heading }}</h1>
                 </div>
             </div>
         </div>
@@ -269,10 +247,7 @@
             <!-- Text -->
             <div class="col-md-6 virac-vid-text">
                 <div class="heading-area">
-                    <p class="para half-para-right text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tincidunt
-                    egestas nunc, at pellentesque arcu sollicitudin et. Aliquam hendrerit diam quis ipsum
-                    ultricies, quis ultricies arcu suscipit. Lorem ipsum dolor sit amet, consectetur adipiscing
-                    elit. Fusce ut diam quis nulla faucibus venenatis. </p>
+                    <p class="para half-para-right text-white">{!! $data->sect5_para1 !!}</p>
                 </div>
             </div>
         </div>
@@ -281,9 +256,7 @@
         <div class="row virac-img-row">
             <div class="col-md-6 virac-imgs-text">
                 <div class="heading-area">
-                    <p class="para half-para text-white">There are many variations of passages of Lorem Ipsum available, but the majority
-                        have suffered alteration in some form, by injected humour, or randomised words which don't look
-                        even slightly believable.</p>
+                    <p class="para half-para text-white">{!! $data->sect5_para2 !!}</p>
                 </div>
             </div>
             <div class="col-md-6 mb-4 mt-4 virac-imgs">
@@ -312,117 +285,5 @@
     </div>
 </section>
 <!--Project VIRAC End-->
-
-<!--Sign-Up for Newsletter Start-->
-<section class="application">
-
-    <div class="container">
-
-        <div class="row align-items-top">
-
-            <!-- Side Information -->
-            <div class="col-lg-5 order-lg-2 wow">
-                <div class="application-detail">
-                    <div class="contact-dots" data-dots=""></div>
-                    <!--Heading-->
-                    <div class="heading-area justify-content-center mb-3">
-                        <h2 class="title mt-0 pb-1">Lorem Ipsum</h2>
-                        <p class="para half-para">There are many variations of passages of Lorem Ipsum available, but the majority
-                            have suffered .</p>
-                    </div>
-
-                    <div class="col-lg-12 wow">
-                        <div class="half-img mt-4 pt-1 mt-lg-0 pt-lg-0">
-                            <img alt="sample" src="{{ asset('marketing-site/assets/img/tutor-application.jpg') }}">
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!--Application Form-->
-            <div class="col-lg-7 mt-4 pt-3 mt-lg-0 pt-lg-0 wow">
-                <!--Heading-->
-                <div class="heading-area pb-2">
-                    <h2 class="title mt-0">Sign-up Now</h2>
-                </div>
-                <!--Actual Form-->
-                <form action="{{ route('about-us.store_founder') }}" method="POST" class="newsletter-form" id="newsletter-form-data">
-                    @csrf
-                    <div class="form-group row mb-3">
-
-                        <!-- Name Field -->
-                        <div class="form-group row mb-4">
-                            <div class="col-md-12">
-                                <input
-                                    name="founderName"
-                                    type="text"
-                                    class="form-control form-control-user"
-                                    id="userFullName"
-                                    placeholder="Full Name"
-                                    required="true"
-                                />
-                            </div>
-                        </div>
-
-                        <!-- Email Field -->
-                        <div class="form-group row mb-4">
-                            <div class="col-md-12">
-                                <input
-                                    name="founderEmail"
-                                    type="email"
-                                    class="form-control form-control-user"
-                                    id="userEmail"
-                                    placeholder="Email"
-                                    required="true"
-                                />
-                            </div>
-                        </div>
-
-                        <!-- Address Field -->
-                        <div class="form-group row mb-4">
-                            <div class="col-md-12">
-                                <input
-                                    name="founderAddress"
-                                    type="text"
-                                    class="form-control form-control-user"
-                                    id="userAddress"
-                                    placeholder="Current Country/City"
-                                    required="true"
-                                />
-                            </div>
-                        </div>
-
-                        <!-- Captcha Field -->
-                        <div class="row mb-4">
-                            <div class="col-md-12 d-flex justify-content-center">
-                                <div class="g-recaptcha" data-sitekey="6LdtbighAAAAAHhWzmWkWwkT53HNEcL5CPxg9PN_"></div>
-                            </div>
-                        </div>
-
-                        <!--Button-->
-                        <div class="col btn-col">
-                            <button type="submit" class="btn btn-large btn-rounded btn-purple btn-hvr-blue">                    
-                                Submit
-                                <div class="btn-hvr-setting">
-                                    <ul class="btn-hvr-setting-inner">
-                                        <li class="btn-hvr-effect"></li>
-                                        <li class="btn-hvr-effect"></li>
-                                        <li class="btn-hvr-effect"></li>
-                                        <li class="btn-hvr-effect"></li>
-                                    </ul>
-                                </div>
-                            </button>
-                        </div>
-
-                    </div>
-                </form>
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-<!--Sign-Up for Newsletter  End-->
 
 @endsection

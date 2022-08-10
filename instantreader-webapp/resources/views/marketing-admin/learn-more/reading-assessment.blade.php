@@ -80,22 +80,32 @@
                 </div>
             </div>
 
+            <!-- Subheading of Section 1 -->
+            <form data-route="{{ route('learn-more.assessment.update_page') }}">
+                @csrf
+                <div class="form-group py-3">
+                    <label for="sect1-subheading">Tiny Text Above Section Title</label>                    
+                    <input required data-fieldtype="big" type="text" class="form-control" name="sect1_subheading" id="sect1-subheading" placeholder="e.g. The Best Reading Course" value="{{ $data->sect1_subheading }}">
+                    <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>                    
+                </div>
+            </form>
+
             <!-- Heading of Section 1 -->
-            <form action="">
+            <form data-route="{{ route('learn-more.assessment.update_page') }}">
                 @csrf
                 <div class="form-group py-3">
                     <label for="sect1-heading">Section Heading/Title</label>                    
-                    <input type="text" class="form-control" id="sect1-heading" placeholder="e.g. The Best Reading Course">
+                    <input required data-fieldtype="big" type="text" class="form-control" name="sect1_heading" id="sect1-heading" placeholder="e.g. The Best Reading Course" value="{{ $data->sect1_heading }}">
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>                    
                 </div>
             </form>
 
             <!-- Paragraph -->
-            <form action="">
+            <form data-route="{{ route('learn-more.assessment.update_page') }}">
                 @csrf
                 <div class="form-group py-3">
                     <label for="sect1-paragraph">Paragraph</label>
-                    <textarea class="form-control" name="sect1-paragraph" aria-describedby="sect1ParagraphHelp" id="sect1-paragraph"></textarea>
+                    <textarea data-fieldtype="tiny" class="form-control" name="sect1_para" aria-describedby="sect1ParagraphHelp" id="sect1-paragraph">{{ $data->sect1_para }}</textarea>
                     <small id="sect1ParagraphHelp" class="form-text text-muted">Recommended length: 3-5 sentences</small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
                 </div>
@@ -112,11 +122,11 @@
             </script>
 
             <!-- Image-->
-            <form action="">
+            <form data-route="{{ route('learn-more.assessment.update_page') }}">
                 @csrf
                 <div class="mb-3 py-3">
                     <label for="sect1-image" class="form-label">Image</label>
-                    <input required data-fieldtype="media" class="form-control form-control-sm" type="file" id="sect1-image" aria-describedby="sect1ImageHelp">
+                    <input required data-fieldtype="media" class="form-control form-control-sm" type="file" name="sect1_image" id="sect1-image" aria-describedby="sect1ImageHelp">
                     <small id="sect1ImageHelp" class="form-text text-muted">Recommended image size: WxH</small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
                 </div>                
@@ -133,21 +143,21 @@
             </div>
 
             <!-- Heading of Section 2 -->
-            <form action="">
+            <form data-route="{{ route('learn-more.assessment.update_page') }}">
                 @csrf
                 <div class="form-group py-3">
                     <label for="sect2-heading">Section Heading/Title</label>                    
-                    <input type="text" class="form-control" id="sect2-heading" placeholder="e.g. The Best Reading Course">
+                    <input required data-fieldtype="big" type="text" class="form-control" name="sect2_heading" id="sect2-heading" placeholder="e.g. The Best Reading Course" value="{{ $data->sect2_heading }}">
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>                    
                 </div>
             </form>
 
             <!-- Paragraph -->
-            <form action="">
+            <form data-route="{{ route('learn-more.assessment.update_page') }}">
                 @csrf
                 <div class="form-group py-3">
                     <label for="sect2-paragraph">Paragraph</label>
-                    <textarea class="form-control" name="sect2-paragraph" aria-describedby="sect2ParagraphHelp" id="sect2-paragraph"></textarea>
+                    <textarea data-fieldtype="tiny" class="form-control" name="sect2_para" aria-describedby="sect2ParagraphHelp" id="sect2-paragraph">{{ $data->sect2_para }}</textarea>
                     <small id="sect2ParagraphHelp" class="form-text text-muted">Recommended length: 3-5 sentences</small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
                 </div>
@@ -164,7 +174,7 @@
             </script>
 
             <!-- Add Date -->
-            <form action="">
+            <form data-route="{{ route('learn-more.assessment.update_page') }}">
                 @csrf
                 <div class="form-group py-3">
                     <label for="sect2-date">New Schedule</label>                    

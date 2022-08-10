@@ -17,6 +17,8 @@ const infoGetter = (el) => {
                 .getContent()
                 .replace(/<p>/g, "")
                 .replace(/<\/p>/g, "");
+        default:
+            console.log("Unknown fieldtype");
     }
 };
 
@@ -77,7 +79,8 @@ for (let i = 0; i < forms.length; i++) {
                     alert("Successfully Updated!");
                 },
                 error: function (error) {
-                    alert("Update Failed. Try checking character count.");
+                    // alert("Update Failed. Contact your admin.");
+                    console.log(error);
                 },
             });
         }

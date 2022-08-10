@@ -12,15 +12,13 @@ class ReadingProgram extends Model
     use HasFactory;
 
     protected $fillable = [
+        // Metadata
         'page_title',
         'page_desc',
         'page_keywords',
         'page_author',
-        'page_title',
-        'page_desc',
-        'page_keywords',
-        'page_author',
-        'sect1_heading',
+
+        // Section 1: All Programs
         'sect1_para1',
         'sect1_para2',
         'sect1_para3',
@@ -29,6 +27,8 @@ class ReadingProgram extends Model
         'sect1_image2',
         'sect1_image3',
         'sect1_image4',
+
+        // Section 2: Basic Program
         'sect2_heading',
         'sect2_para1',
         'sect2_para2',
@@ -36,6 +36,8 @@ class ReadingProgram extends Model
         'sect2_image1',
         'sect2_image2',
         'sect2_image3',
+
+        // Section 3: Advanced Program
         'sect3_heading',
         'sect3_para1',
         'sect3_para2',
@@ -43,6 +45,8 @@ class ReadingProgram extends Model
         'sect3_image1',
         'sect3_image2',
         'sect3_image3',
+
+        // Section 4: Mastery Program
         'sect4_heading',
         'sect4_para1',
         'sect4_para2',
@@ -50,6 +54,8 @@ class ReadingProgram extends Model
         'sect4_image1',
         'sect4_image2',
         'sect4_image3',
+
+        // Section 5: Compass Program
         'sect5_heading',
         'sect5_para1',
         'sect5_para2',

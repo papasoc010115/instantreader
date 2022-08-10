@@ -25,10 +25,10 @@ return new class extends Migration
             
             // Section 1: Parental Concerns
             $table->string('sect1_heading');
-            $table->string('sect1_para1');
-            $table->string('sect1_para2');
-            $table->string('sect1_para3');
-            $table->string('sect1_para4');
+            $table->mediumText('sect1_para1');
+            $table->mediumText('sect1_para2');
+            $table->mediumText('sect1_para3');
+            $table->mediumText('sect1_para4');
             $table->string('sect1_image1');
             $table->string('sect1_image2');
             $table->string('sect1_image3');
@@ -36,10 +36,10 @@ return new class extends Migration
 
             // Section 2: Parental Goals
             $table->string('sect2_heading');
-            $table->string('sect2_para1');
-            $table->string('sect2_para2');
-            $table->string('sect2_para3');
-            $table->string('sect2_para4');
+            $table->mediumText('sect2_para1');
+            $table->mediumText('sect2_para2');
+            $table->mediumText('sect2_para3');
+            $table->mediumText('sect2_para4');
             $table->string('sect2_image1');
             $table->string('sect2_image2');
             $table->string('sect2_image3');
@@ -47,10 +47,10 @@ return new class extends Migration
 
             // Section 3: Testimonials Gallery
             $table->string('sect3_heading');
-            $table->string('sect3_para1');
-            $table->string('sect3_para2');
-            $table->string('sect3_para3');
-            $table->string('sect3_para4');
+            $table->mediumText('sect3_para1');
+            $table->mediumText('sect3_para2');
+            $table->mediumText('sect3_para3');
+            $table->mediumText('sect3_para4');
             $table->string('sect3_images');
         });
 

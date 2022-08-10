@@ -91,14 +91,9 @@
         <div class="row">
             <div class="col-lg-6 wow fadeInLeft">
                 <div class="heading-area">
-                    <span class="sub-title">Know what program fits.</span>
-                    <h2 class="title">Each child has a different level of <span class="alt-color">skill</span></h2>
-                    <p class="para">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                        Adipiscing diam donec adipiscing tristique risus nec feugiat. Rhoncus urna neque viverra justo nec ultrices dui sapien. 
-                        Egestas sed tempus urna et pharetra pharetra massa massa ultricies. Donec ac odio tempor orci dapibus ultrices in iaculis nunc. 
-                                            
-                    </p>
+                    <span class="sub-title">{{ $data->sect1_subheading }}</span>
+                    <h2 class="title">{{ $data->sect1_heading }}</h2>
+                    <p class="para">{!! $data->sect1_para !!}</p>
                     <a class="btn btn-large btn-rounded btn-pink btn-hvr-blue mt-3" href="{{route('learn-more.program-overview')}}">                    
                         Learn More
                         <div class="btn-hvr-setting">
@@ -129,12 +124,8 @@
         <!-- Calendar Paragraph -->
         <div class="row">
             <div class="col-12 pt-5">
-                <h2>Find the right schedule</h2>
-                <p class="para">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                    Adipiscing diam donec adipiscing tristique risus nec feugiat. Rhoncus urna neque viverra justo nec ultrices dui sapien. 
-                    Egestas sed tempus urna et pharetra pharetra massa massa ultricies. Donec ac odio tempor orci dapibus ultrices in iaculis nunc.         
-                </p>
+                <h2>{{ $data->sect2_heading }}</h2>
+                <p class="para">{!! $data->sect2_para !!}</p>
             </div>
         </div>
 

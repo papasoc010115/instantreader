@@ -11,5 +11,11 @@ class AdditionalResource extends Model
 
     use HasFactory;
 
-    protected $fillable = ['page_title', 'page_desc', 'page_keywords', 'page_author'];
+    protected $fillable = [
+        // Metadata
+        'page_title',
+        'page_desc',
+        'page_keywords',
+        'page_author'
+    ];
 }

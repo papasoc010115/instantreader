@@ -143,18 +143,17 @@
 </style>
 
 <!-- Introduction -->
-<section class="nocursor introduction page-title cursor-light bg-light" id="intro">
+<section class="nocursor introduction page-title cursor-light" style="background-color: white" id="intro">
     <div class="introduction-content fadeIn">
-        <h2>Welcome to Instant Reader Kids Club!</h2>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet. Dui accumsan sit amet nulla. Sit amet nisl purus in mollis nunc sed id semper. Purus sit amet luctus venenatis lectus magna fringilla urna. Vitae semper quis lectus nulla at volutpat. Bibendum est ultricies integer quis. In hac habitasse platea dictumst quisque sagittis purus. Magna fringilla urna porttitor rhoncus dolor purus non enim praesent.
-        </p>
+        <h2>{{ $data->sect1_heading }}</h2>
+        <p>{!! $data->sect1_para !!}</p>
     </div>
 </section>
 
-<section class="bg-light">
-    <div class="container">
-        <div class="row">            
+<section>
+    <div class="container mb-5">
+        <div class="row">
+            <h1 class="text-center mb-5">{{ $data->sect2_heading }}</h1>     
             <div class="col-md-6">
                 <!--Video Row-->
                 <div class="row mb-3">
@@ -164,23 +163,14 @@
                 </div>
             </div>  
             <div class="col-md-6 video-text">
-                <h1>The Metaverse</h1>
-                <p class="half-para" style="color: #282525;">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing diam donec adipiscing tristique risus nec feugiat. Rhoncus urna neque viverra justo nec ultrices dui sapien. Egestas sed tempus urna et pharetra pharetra massa massa ultricies. Donec ac odio tempor orci dapibus ultrices in iaculis nunc. Gravida rutrum quisque non tellus orci. Et egestas quis ipsum suspendisse ultrices gravida dictum. Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper. Ultrices dui sapien eget mi. Aliquam eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis. Netus et malesuada fames ac turpis egestas. Dolor sit amet consectetur adipiscing elit.
-                </p>
+                <p class="half-para" style="color: #282525;">{!! $data->sect2_para1 !!}</p>
             </div>
         </div>
     </div>
-</section>
-
-<section>
     <div class="container">
         <div class="row">
             <div class="col-md-6 carousel-text">
-                <h1>Lorem Ipsum</h1>
-                <p class="half-para-right" style="color: #282525">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing diam donec adipiscing tristique risus nec feugiat. Rhoncus urna neque viverra justo nec ultrices dui sapien. Egestas sed tempus urna et pharetra pharetra massa massa ultricies. Donec ac odio tempor orci dapibus ultrices in iaculis nunc. Gravida rutrum quisque non tellus orci. Et egestas quis ipsum suspendisse ultrices gravida dictum. Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper. Ultrices dui sapien eget mi. Aliquam eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis.
-                </p>
+                <p class="half-para-right" style="color: #282525">{!! $data->sect2_para2 !!}</p>
             </div>
             <div class="col-md-6 mb-3 carousel-imgs">
                 <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel">
@@ -220,11 +210,9 @@
             <div class="row overlay-text">
                 <div class="col-md-12">
                     <div class="heading-area mx-570 mb-5 lg-mb-0 lg-pb-0">
-                        <h1 class="text-white"><strong>Millions of Kids Have Already Joined</strong></h1>
+                        <h1 class="text-white"><strong>{{ $data->sect3_heading }}</strong></h1>
                         <br>
-                        <p class="text-white">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet. Dui accumsan sit amet nulla. Sit amet nisl purus in mollis nunc sed id semper. 
-                        </p>
+                        <p class="text-white">{!! $data->sect3_para !!}</p>
                         <button class="card-btn btn btn-large btn-rounded btn-pink btn-hvr-blue mt-3">Join Now
                         <div class="btn-hvr-setting">
                             <ul class="btn-hvr-setting-inner">

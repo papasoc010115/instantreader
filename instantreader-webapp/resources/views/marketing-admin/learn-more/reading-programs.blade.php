@@ -80,16 +80,6 @@
                 </div>
             </div>
 
-            <!-- Heading of Section 1 -->
-            <form data-route="{{ route('learn-more.reading-programs.update_page') }}">
-                @csrf
-                <div class="form-group py-3">
-                    <label for="sect1-heading">Section Heading/Title</label>                    
-                    <input required data-fieldtype="big" type="text" class="form-control" name="sect1_heading" id="sect1-heading" placeholder="e.g. The Best Reading Course" value="{{ $data->sect1_heading }}">
-                    <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>                    
-                </div>
-            </form>
-
             <!-- Paragraph 1 -->
             <form data-route="{{ route('learn-more.reading-programs.update_page') }}">
                 @csrf

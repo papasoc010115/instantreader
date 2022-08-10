@@ -12,39 +12,47 @@ class Founder extends Model
     use HasFactory;
 
     protected $fillable = [
-        // Meta Data
+        // Metadata
         'page_title', 
         'page_desc', 
         'page_keywords', 
         'page_author',
 
         // Section 1: Teacher Vicki
-        'teacher_vicki_title',
-        'teacher_vicki_para',
-        'teacher_vicki_image',
+        'sect1_subheading',
+        'sect1_heading',
+        'sect1_para',
+        'sect1_image',
+        'sect1_fb',
+        'sect1_twt',
+        'sect1_ig',
 
         // Section 2: IR History
-        'ir_history_title',
-        'ir_history_para1',
-        'ir_history_para2',
-        'ir_history_image1',
-        'ir_history_image2',
-        'ir_history_video',
+        'sect2_heading',
+        'sect2_para1',
+        'sect2_para2',
+        'sect2_image1',
+        'sect2_image2',
+        'sect2_video',
 
         // Section 3: Vision
-        'ir_vision_title',
-        'ir_vision_para',
-        'ir_vision_image',
+        'sect3_heading',
+        'sect3_para',
+        'sect3_image',
 
         // Section 4: Mission
-        'ir_mission_title',
-        'ir_mission_para',
-        'ir_mission_image',
+        'sect4_heading',
+        'sect4_para',
+        'sect4_image',
 
         // Section 5: Project VIRAC
-        'proj_virac_para1',
-        'proj_virac_para2',
-        'proj_virac_video',
-        'proj_virac_images'
+        'sect5_para1',
+        'sect5_para2',
+        'sect5_video',
+        'sect5_image1',
+        'sect5_image2',
+        'sect5_image3',
+        'sect5_image4',
+        'sect5_image5',
     ];
 }

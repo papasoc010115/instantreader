@@ -239,13 +239,35 @@
                 });            
             </script>
 
-            <!-- Images of Section 3 -->
+            <!-- Image 1 of Section 3 -->
             <form data-route="{{ route('home.update_page') }}">
                 @csrf
                 <div class="mb-3 py-3">
-                    <label for="sect3-images" class="form-label">Images (Select 3 only)</label>
-                    <input class="form-control form-control-sm" data-fieldtype="big" name="sect3_images" type="file" id="sect3-images" aria-describedby="sect3ImagesHelp" multiple value="{{ $data->orientation_images }}">
-                    <small id="sect3ImagesHelp" class="form-text text-muted">Recommended image size: WxH</small>
+                    <label for="sect3-image1" class="form-label">Image 1</label>
+                    <input class="form-control form-control-sm" data-fieldtype="big" name="sect3_image1" type="file" id="sect3-image1" aria-describedby="sect3Image1Help" value="{{ $data->sect3_image1 }}">
+                    <small id="sect3Image1Help" class="form-text text-muted">Recommended image size: WxH</small>
+                    <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
+                </div>                
+            </form>
+
+            <!-- Image 2 of Section 3 -->
+            <form data-route="{{ route('home.update_page') }}">
+                @csrf
+                <div class="mb-3 py-3">
+                    <label for="sect3-image2" class="form-label">Image 2</label>
+                    <input class="form-control form-control-sm" data-fieldtype="big" name="sect3_image2" type="file" id="sect3-image2" aria-describedby="sect3Image2Help" value="{{ $data->sect3_image2 }}">
+                    <small id="sect3Image2Help" class="form-text text-muted">Recommended image size: WxH</small>
+                    <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
+                </div>                
+            </form>
+
+            <!-- Image 3 of Section 3 -->
+            <form data-route="{{ route('home.update_page') }}">
+                @csrf
+                <div class="mb-3 py-3">
+                    <label for="sect3-image3" class="form-label">Image 3</label>
+                    <input class="form-control form-control-sm" data-fieldtype="big" name="sect3_image3" type="file" id="sect3-image3" aria-describedby="sect3Image3Help" value="{{ $data->sect3_image3 }}">
+                    <small id="sect3Image3Help" class="form-text text-muted">Recommended image size: WxH</small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
                 </div>                
             </form>
@@ -551,13 +573,13 @@
                 });            
             </script>
 
-            <!-- Images of Section 8 -->
+            <!-- Image of Section 8 -->
             <form data-route="{{ route('home.update_page') }}">
                 @csrf
                 <div class="mb-3 py-3">
-                    <label for="sect8-images" class="form-label">Image</label>
-                    <input required data-fieldtype="media" class="form-control form-control-sm" data-fieldtype="big" name="enroll_image" type="file" id="sect8-images" aria-describedby="sect8ImagesHelp" multiple value="{{ $data->enroll_image }}">
-                    <small id="sect8ImagesHelp" class="form-text text-muted">Recommended image size: WxH</small>
+                    <label for="sect8-image" class="form-label">Image</label>
+                    <input required data-fieldtype="media" class="form-control form-control-sm" data-fieldtype="big" name="enroll_image" type="file" id="sect8-image" aria-describedby="sect8ImageHelp" multiple value="{{ $data->sect8_image }}">
+                    <small id="sect8ImageHelp" class="form-text text-muted">Recommended image size: WxH</small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
                 </div>                
             </form>

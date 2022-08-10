@@ -12,10 +12,13 @@ class Career extends Model
     use HasFactory;
 
     protected $fillable = [
+        // Metadata
         'page_title',
         'page_desc', 
         'page_keywords', 
         'page_author',
+
+        // Section 1: Job Description & Requirements
         'sect1_heading',
         'sect1_title1',
         'sect1_para1',

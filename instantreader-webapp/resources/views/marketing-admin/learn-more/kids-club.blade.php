@@ -81,21 +81,21 @@
             </div>
 
             <!-- Heading of Section 1 -->
-            <form action="">
+            <form data-route="{{ route('learn-more.kids-club.update_page') }}">
                 @csrf
                 <div class="form-group py-3">
                     <label for="sect1-heading">Section Heading/Title</label>                    
-                    <input type="text" class="form-control" id="sect1-heading" placeholder="e.g. The Best Reading Course">
+                    <input required data-fieldtype="big" type="text" class="form-control" name="sect1_heading" id="sect1-heading" placeholder="e.g. The Best Reading Course">
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>                    
                 </div>
             </form>
 
             <!-- Paragraph -->
-            <form action="">
+            <form data-route="{{ route('learn-more.kids-club.update_page') }}">
                 @csrf
                 <div class="form-group py-3">
                     <label for="sect1-paragraph">Paragraph</label>
-                    <textarea class="form-control" name="sect1-paragraph" aria-describedby="sect1ParagraphHelp" id="sect1-paragraph"></textarea>
+                    <textarea data-fieldtype="tiny" class="form-control" name="sect1_para" aria-describedby="sect1ParagraphHelp" id="sect1-paragraph"></textarea>
                     <small id="sect1ParagraphHelp" class="form-text text-muted">Recommended length: 3 sentences</small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
                 </div>
@@ -112,11 +112,11 @@
             </script>
 
             <!-- Image -->
-            <form action="">
+            <form data-route="{{ route('learn-more.kids-club.update_page') }}">
                 @csrf
                 <div class="mb-3 py-3">
                     <label for="sect1-image" class="form-label">Image</label>
-                    <input required data-fieldtype="media" class="form-control form-control-sm" type="file" id="sect1-image" aria-describedby="sect1ImageHelp">
+                    <input required data-fieldtype="media" class="form-control form-control-sm" type="file" name="sect1_image" id="sect1-image" aria-describedby="sect1ImageHelp">
                     <small id="sect1ImageHelp" class="form-text text-muted">Recommended image size: WxH</small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
                 </div>                
@@ -133,21 +133,21 @@
             </div>
 
             <!-- Heading of Section 2 -->
-            <form action="">
+            <form data-route="{{ route('learn-more.kids-club.update_page') }}">
                 @csrf
                 <div class="form-group py-3">
                     <label for="sect2-heading">Section Heading/Title</label>                    
-                    <input type="text" class="form-control" id="sect2-heading" placeholder="e.g. The Best Reading Course">
+                    <input required data-fieldtype="big" type="text" class="form-control" name="sect2_heading" id="sect2-heading" placeholder="e.g. The Best Reading Course">
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>                    
                 </div>
             </form>
 
             <!-- Paragraph 1 -->
-            <form action="">
+            <form data-route="{{ route('learn-more.kids-club.update_page') }}">
                 @csrf
                 <div class="form-group py-3">
                     <label for="sect2-paragraph1">Paragraph 1</label>
-                    <textarea class="form-control" name="sect2-paragraph1" aria-describedby="sect2Paragraph1Help" id="sect2-paragraph1"></textarea>
+                    <textarea data-fieldtype="tiny" class="form-control" name="sect2_para1" aria-describedby="sect2Paragraph1Help" id="sect2-paragraph1"></textarea>
                     <small id="sect2Paragraph1Help" class="form-text text-muted">Recommended length: 3-5 sentences</small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
                 </div>
@@ -164,11 +164,11 @@
             </script>
 
             <!-- Paragraph 2 -->
-            <form action="">
+            <form data-route="{{ route('learn-more.kids-club.update_page') }}">
                 @csrf
                 <div class="form-group py-3">
                     <label for="sect2-paragraph2">Paragraph 2</label>
-                    <textarea class="form-control" name="sect2-paragraph2" aria-describedby="sect2Paragraph2Help" id="sect2-paragraph2"></textarea>
+                    <textarea data-fieldtype="tiny" class="form-control" name="sect2_para2" aria-describedby="sect2Paragraph2Help" id="sect2-paragraph2"></textarea>
                     <small id="sect2Paragraph2Help" class="form-text text-muted">Recommended length: 3-5 sentences</small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
                 </div>
@@ -184,23 +184,45 @@
                 });            
             </script>
 
-            <!-- Images -->
-            <form action="">
+            <!-- Image 1 -->
+            <form data-route="{{ route('learn-more.reading-programs.update_page') }}">
                 @csrf
                 <div class="mb-3 py-3">
-                    <label for="sect2-images" class="form-label">Images (Select 3 photos)</label>
-                    <input required data-fieldtype="media" class="form-control form-control-sm" type="file" id="sect2-images" aria-describedby="sect2ImagesHelp" multiple>
-                    <small id="sect2ImagesHelp" class="form-text text-muted">Recommended image size: WxH</small>
+                    <label for="sect2-image1" class="form-label">Image 1</label>
+                    <input required data-fieldtype="media" class="form-control form-control-sm" type="file" name="sect2_image1" id="sect2-image1" aria-describedby="sect2Image1Help" value="{{ $data->sect2_image1 }}">
+                    <small id="sect2Image1Help" class="form-text text-muted">Recommended image size: WxH</small>
+                    <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
+                </div>                
+            </form>
+
+            <!-- Image 2 -->
+            <form data-route="{{ route('learn-more.reading-programs.update_page') }}">
+                @csrf
+                <div class="mb-3 py-3">
+                    <label for="sect2-image2" class="form-label">Image 2</label>
+                    <input required data-fieldtype="media" class="form-control form-control-sm" type="file" name="sect2_image2" id="sect2-image2" aria-describedby="sect2Image2Help" value="{{ $data->sect2_image2 }}">
+                    <small id="sect2Image2Help" class="form-text text-muted">Recommended image size: WxH</small>
+                    <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
+                </div>                
+            </form>
+
+            <!-- Image 3 -->
+            <form data-route="{{ route('learn-more.reading-programs.update_page') }}">
+                @csrf
+                <div class="mb-3 py-3">
+                    <label for="sect2-image3" class="form-label">Image 3</label>
+                    <input required data-fieldtype="media" class="form-control form-control-sm" type="file" name="sect2_image3" id="sect2-image3" aria-describedby="sect2Image3Help" value="{{ $data->sect2_image3 }}">
+                    <small id="sect2Image3Help" class="form-text text-muted">Recommended image size: WxH</small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
                 </div>                
             </form>
 
             <!-- Video -->
-            <form action="">
+            <form data-route="{{ route('learn-more.kids-club.update_page') }}">
                 @csrf
                 <div class="mb-3 py-3">
                     <label for="sect2-video" class="form-label">Video</label>
-                    <input required data-fieldtype="media" class="form-control form-control-sm" type="file" id="sect2-video" aria-describedby="sect2Video">
+                    <input required data-fieldtype="media" class="form-control form-control-sm" type="file" name="sect2_video" id="sect2-video" aria-describedby="sect2Video">
                     <small id="sect2Video" class="form-text text-muted">Recommended video size: WxH</small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
                 </div>  
@@ -217,21 +239,21 @@
             </div>
 
             <!-- Heading of Section 3 -->
-            <form action="">
+            <form data-route="{{ route('learn-more.kids-club.update_page') }}">
                 @csrf
                 <div class="form-group py-3">
                     <label for="sect3-heading">Section Heading/Title</label>                    
-                    <input type="text" class="form-control" id="sect3-heading" placeholder="e.g. The Best Reading Course">
+                    <input required data-fieldtype="big" type="text" class="form-control" name="sect3_heading" id="sect3-heading" placeholder="e.g. The Best Reading Course">
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>                    
                 </div>
             </form>
 
             <!-- Paragraph -->
-            <form action="">
+            <form data-route="{{ route('learn-more.kids-club.update_page') }}">
                 @csrf
                 <div class="form-group py-3">
                     <label for="sect3-paragraph">Paragraph</label>
-                    <textarea class="form-control" name="sect3-paragraph" aria-describedby="sect3ParagraphHelp" id="sect3-paragraph"></textarea>
+                    <textarea data-fieldtype="tiny" class="form-control" name="sect3_para" aria-describedby="sect3ParagraphHelp" id="sect3-paragraph"></textarea>
                     <small id="sect3ParagraphHelp" class="form-text text-muted">Recommended length: 2 sentences</small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
                 </div>
@@ -248,11 +270,11 @@
             </script>
 
             <!-- Image -->
-            <form action="">
+            <form data-route="{{ route('learn-more.kids-club.update_page') }}">
                 @csrf
                 <div class="mb-3 py-3">
                     <label for="sect3-image" class="form-label">Image</label>
-                    <input required data-fieldtype="media" class="form-control form-control-sm" type="file" id="sect3-image" aria-describedby="sect3ImageHelp">
+                    <input required data-fieldtype="media" class="form-control form-control-sm" type="file" name="sect3_image" id="sect3-image" aria-describedby="sect3ImageHelp">
                     <small id="sect3ImageHelp" class="form-text text-muted">Recommended image size: WxH</small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
                 </div>                

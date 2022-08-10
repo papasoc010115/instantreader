@@ -23,7 +23,6 @@ return new class extends Migration
             $table->string('page_author', 60);
 
             // Section 1: All Programs
-            $table->string('sect1_heading');
             $table->mediumText('sect1_para1');
             $table->mediumText('sect1_para2');
             $table->mediumText('sect1_para3');
@@ -85,7 +84,6 @@ return new class extends Migration
                 'page_author' => '',
 
                 // Section 1: All Programs
-                'sect1_heading' => '',
                 'sect1_para1' => '',
                 'sect1_para2' => '',
                 'sect1_para3' => '',

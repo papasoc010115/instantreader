@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
 
+            // Metadata
             $table->string('page_title', 60);
             $table->string('page_desc', 155);
             $table->string('page_keywords', 155);
@@ -35,6 +36,7 @@ return new class extends Migration
         // Insert empty values
         DB::table('career')->insert(
             array(
+                // Metadata
                 'page_title' => '',
                 'page_desc' => '',
                 'page_keywords' => '',
