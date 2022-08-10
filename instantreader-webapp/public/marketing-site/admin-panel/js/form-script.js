@@ -12,7 +12,11 @@ const infoGetter = (el) => {
                 .replace(/^\s+|\s+$/g, ""); // removes whitespaces at the start and at the end of the string
 
         case "tiny":
-            return tinymce.get(el.id).getContent(); // we don't have to remove whitespaces since this is WYSIWYG
+            return tinymce
+                .get(el.id)
+                .getContent()
+                .replace(/<p>/g, "")
+                .replace(/<\/p>/g, "");
     }
 };
 
@@ -23,10 +27,13 @@ const isEmpty = (str, type) => {
         str = str.replace(/\s/g, "");
     } else if (type === "tiny") {
         // remove whitespaces
-        str = str.replace(/\s/g, "");
-        str = str.replace(/<p>/g, "");
-        str = str.replace(/<\/p>/g, "");
-        str = str.replace(/\&nbsp;/g, "");
+        str = str
+            .replace(/\s/g, "")
+            .replace(/<p>/g, "")
+            .replace(/<\/p>/g, "")
+            .replace(/<div>/g, "")
+            .replace(/<\/div>/g, "")
+            .replace(/\&nbsp;/g, "");
     }
 
     // if all characters were whitespaces
