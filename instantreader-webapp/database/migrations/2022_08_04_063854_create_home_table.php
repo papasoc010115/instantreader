@@ -26,13 +26,13 @@ return new class extends Migration
             // Section 1: IR Welcome Screen
             // $table->string('sect1_heading');
             // $table->string('sect1_para');
-            // $table->string('sect1_image');
+            $table->string('sect1_image');
 
             // // Section 2: Highlight Video
             // $table->string('sect2_heading1');
             // $table->string('sect2_heading2');
             // $table->string('sect2_para');
-            // $table->string('sect2_video');
+            $table->string('sect2_video');
 
             // // Section 3: Live Parent Orientation
             // $table->string('sect3_heading');
@@ -78,13 +78,13 @@ return new class extends Migration
                 // Section 1: IR Welcome Screen
                 // 'sect1_heading' => '',
                 // 'sect1_para' => '',
-                // 'sect1_image' => '',
+                'sect1_image' => '',
 
                 // // Section 2: Highlight Video
                 // 'sect2_heading1' => '',
                 // 'sect2_heading2' => '',
                 // 'sect2_para' => '',
-                // 'sect2_video' => '',
+                'sect2_video' => '',
 
                 // // Section 3: Live Parent Orientation
                 // 'sect3_heading' => '',

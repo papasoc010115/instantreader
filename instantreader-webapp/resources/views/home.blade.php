@@ -133,6 +133,7 @@
     }
 
     .page-title{
+        background: url("{{ url($data->sect1_image) }}" );
         background-size: cover;
         background-position: center center;
         background-repeat: no-repeat;
@@ -219,7 +220,7 @@
         <div class="row d-flex align-items-center">
             <div class="col-lg-7 video-container wow fadeInLeft">
                 <video id="highlight-video-player" preload="none" controls poster="{{ asset('marketing-site/assets/agency/img/blog-news-1.jpg')}}" playsinline>
-                    <source id="highlight-video-source" src="{{ asset('marketing-site/assets/agency/img/video.mp4') }}" type="video/mp4">
+                    <source id="highlight-video-source" src="{{ url($data->sect2_video) }}" type="video/mp4">
                 </video>
             </div>
             <div class="col-lg-5 pl-4 pt-4 wow fadeInRight">

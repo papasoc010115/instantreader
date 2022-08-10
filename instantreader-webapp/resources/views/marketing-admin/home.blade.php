@@ -24,7 +24,7 @@
                 Page Title. 
                 According to Montti (2021), Moz’s title tag length recommendation is 50 – 60 characters. (reference: https://www.searchenginejournal.com/google-title-tag-length/400682/#close)
             -->
-            <form data-route="{{ route('home.update_page') }}">
+            <form data-route="{{ route('home.update_page') }}" class="non-media">
                 @csrf
                 <div class="form-group py-3">
                     <label for="title-editor">Page Title</label>
@@ -37,7 +37,7 @@
                 Description.
                 According to ContentKing (2021), 155 is a good maximum character length for description. (reference: https://www.contentkingapp.com/academy/meta-description/#:~:text=Meta%20Description%20have%3F-,Length,70%20characters%20or%20430%20pixels)
             -->
-            <form data-route="{{ route('home.update_page') }}">
+            <form data-route="{{ route('home.update_page') }}" class="non-media">
                 @csrf
                 <div class="form-group py-3">
                     <label for="description-editor">Page Description</label>
@@ -49,7 +49,7 @@
             <!-- 
                 Keywords
              -->
-            <form data-route="{{ route('home.update_page') }}">
+            <form data-route="{{ route('home.update_page') }}" class="non-media">
                 @csrf
                 <div class="form-group py-3">
                     <label for="keywords-editor">Keywords</label>                    
@@ -61,7 +61,7 @@
             <!-- 
                 Author
             -->
-            <form data-route="{{ route('home.update_page') }}">
+            <form data-route="{{ route('home.update_page') }}" class="non-media">
                 @csrf
                 <div class="form-group py-3">
                     <label for="author-editor">Author</label>                    
@@ -81,7 +81,7 @@
             </div>
 
             <!-- Heading of Section 1 -->
-            <form action="">
+            <form action="" class="non-media">
                 @csrf
                 <div class="form-group py-3">
                     <label for="sect1-heading">Section Heading/Title</label>                    
@@ -91,7 +91,7 @@
             </form>
 
             <!-- Opening Statement -->
-            <form action="">
+            <form action="{{ route('home.update_page')}}" class="non-media">
                 @csrf
                 <div class="form-group py-3">
                     <label for="sect1-opening-statement">Opening Statement</label>
@@ -112,11 +112,11 @@
             </script>
 
             <!-- Image -->
-            <form data-route="{{ route('home.update_page') }}">
+            <form action="{{ route('home.store_media_single') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="mb-3 py-3">
                     <label for="sect1-opening-image" class="form-label">Image</label>
-                    <input required data-fieldtype="media" class="form-control form-control-sm" data-fieldtype="big" name="welcome_image" type="file" id="sect1-opening-image" aria-describedby="sect1ImageHelp" value="{{ $data->welcome_image }}">
+                    <input required data-fieldtype="media" class="form-control form-control-sm" name="sect1_image" type="file" id="sect1-opening-image" aria-describedby="sect1ImageHelp" value="{{ $data->sect1_image }}">
                     <small id="sect1ImageHelp" class="form-text text-muted">Recommended image size: WxH</small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
                 </div>                
@@ -133,7 +133,7 @@
             </div>
 
             <!-- Heading of Section 2 -->
-            <form action="">
+            <form action="" class="non-media">
                 @csrf
                 <div class="form-group py-3">
                     <label for="sect2-heading">Section Heading/Title</label>                    
@@ -143,7 +143,7 @@
             </form>
 
             <!-- Paragraph of Section 2 -->
-            <form action="">
+            <form action="" class="non-media">
                 @csrf
                 <div class="form-group py-3">
                     <label for="sect2-paragraph">Paragraph</label>
@@ -164,11 +164,11 @@
             </script>
 
             <!-- Video of Section 2 -->
-            <form action="">
+            <form action="{{ route('home.store_media_single') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="mb-3 py-3">
                     <label for="sect2-video" class="form-label">Video</label>
-                    <input required data-fieldtype="media" class="form-control form-control-sm" type="file" id="sect2-video" aria-describedby="sect2VideoHelp">
+                    <input required data-fieldtype="media" name="sect2_video" class="form-control form-control-sm" type="file" id="sect2-video" aria-describedby="sect2VideoHelp">
                     <small id="sect2VideoHelp" class="form-text text-muted">Recommended video size: WxH</small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
                 </div>                
@@ -185,7 +185,7 @@
             </div>
 
             <!-- Heading of Section 3 -->
-            <form action="">
+            <form action="" class="non-media">
                 @csrf
                 <div class="form-group py-3">
                     <label for="sect3-heading">Section Heading/Title</label>                    
@@ -195,7 +195,7 @@
             </form>
 
             <!-- Paragraph of Section 3 -->
-            <form action="">
+            <form action="" class="non-media">
                 @csrf
                 <div class="form-group py-3">
                     <label for="sect3-paragraph">Paragraph</label>
@@ -237,7 +237,7 @@
             </div>
 
             <!-- Heading of Section 4 -->
-            <form action="">
+            <form action="" class="non-media">
                 @csrf
                 <div class="form-group py-3">
                     <label for="sect4-heading">Section Heading/Title</label>                    
@@ -247,7 +247,7 @@
             </form>
 
             <!-- Paragraph 1 -->
-            <form action="">
+            <form action="" class="non-media">
                 @csrf
                 <div class="form-group py-3">
                     <label for="sect4-paragraph1">Paragraph for Teacher Vicki</label>
@@ -268,7 +268,7 @@
             </script>
 
             <!-- Paragraph 2 -->
-            <form action="">
+            <form action="" class="non-media">
                 @csrf
                 <div class="form-group py-3">
                     <label for="sect4-paragraph2">Paragraph for Likha</label>
@@ -321,7 +321,7 @@
             </div>
             
             <!-- Heading of Section 5 -->
-            <form action="">
+            <form action="" class="non-media">
                 @csrf
                 <div class="form-group py-3">
                     <label for="sect5-heading">Section Heading/Title</label>                    
@@ -331,7 +331,7 @@
             </form>          
             
             <!-- Statement -->
-            <form action="">
+            <form action="" class="non-media">
                 @csrf
                 <div class="form-group py-3">
                     <label for="sect5-statement">Statement</label>
@@ -362,7 +362,7 @@
             </div>
             
             <!-- Heading of Section 6 -->
-            <form action="">
+            <form action="" class="non-media">
                 @csrf
                 <div class="form-group py-3">
                     <label for="sect6-heading">Section Heading/Title</label>                    
@@ -372,7 +372,7 @@
             </form>  
 
             <!-- Statement -->
-            <form action="">
+            <form action="" class="non-media">
                 @csrf
                 <div class="form-group py-3">
                     <label for="sect6-statement">Statement</label>
@@ -414,7 +414,7 @@
             </div>
 
             <!-- Heading of Section 7 -->
-            <form action="">
+            <form action="" class="non-media">
                 @csrf
                 <div class="form-group py-3">
                     <label for="sect7-heading">Section Heading/Title</label>                    
@@ -424,7 +424,7 @@
             </form> 
 
             <!-- Statement -->
-            <form action="">
+            <form action="" class="non-media">
                 @csrf
                 <div class="form-group py-3">
                     <label for="sect7-statement">Statement</label>
@@ -466,7 +466,7 @@
             </div>
 
             <!-- Heading of Section 8 -->
-            <form action="">
+            <form action="" class="non-media">
                 @csrf
                 <div class="form-group py-3">
                     <label for="sect8-heading">Section Heading/Title</label>                    
@@ -476,7 +476,7 @@
             </form> 
 
             <!-- Statement -->
-            <form action="">
+            <form action="" class="non-media">
                 @csrf
                 <div class="form-group py-3">
                     <label for="sect8-statement">Statement</label>
@@ -511,4 +511,12 @@
     </section>
 </div>
 
+<script>
+    // Checks if the upload of a file is successful
+    if ("{{ Session::has('upload_media') }}") {
+        alert("{{ Session::get('upload_media') }}");
+    }
+</script>
+
 @endsection
+
