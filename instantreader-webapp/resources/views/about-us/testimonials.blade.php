@@ -50,7 +50,7 @@
          <div class="row">
             <div class="col-md-12 text-center">
                 <div class="heading-area mx-570 mb-lg-4 mb-3 pb-2">
-                    <span class="title alt-color"> Parental Concerns </span>
+                    <span class="title alt-color">{{ $data->sect1_heading }}</span>
                 </div>
             </div>
         </div>
@@ -60,9 +60,9 @@
             <div class="col-md-3 d-flex align-items-stretch">
                 <div class="card shadow">
                     <div class="card-body bg-white">
-                        <img src="{{ url($data->parental_concerns_image1) }}" class="rounded-circle shadow-1-strong" width="30%" height="30%" />
+                        <img src="{{ url($data->sect1_image1) }}" class="rounded-circle shadow-1-strong" width="30%" height="30%" />
                         <h5 class="card-title pt-3 text-white">Card title</h5>
-                        <p class="card-text">"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even <span class="alt-color">slightly believable</span>. If you are going to use a passage of Lorem Ipsum."</p>
+                        <p class="card-text">{!! $data->sect1_para1 !!}</p>
                     </div>
                     <div class="card-footer">
                         <span>Father of Xxxxxxx</span>
@@ -72,9 +72,9 @@
             <div class="col-md-3 d-flex align-items-stretch">
                 <div class="card shadow">
                     <div class="card-body bg-white">
-                        <img src="{{ url($data->parental_concerns_image2) }}" class="rounded-circle shadow-1-strong" width="30%" height="30%" />
+                        <img src="{{ url($data->sect1_image2) }}" class="rounded-circle shadow-1-strong" width="30%" height="30%" />
                         <h5 class="card-title pt-3">Card title</h5>
-                        <p class="card-text">"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even <span class="alt-color">slightly believable</span>. If you are going to use a passage of Lorem Ipsum."</p>
+                        <p class="card-text">{!! $data->sect1_para2 !!}</p>
                     </div>
                     <div class="card-footer">
                         <span>Guardian of Xxxx</span>
@@ -84,9 +84,9 @@
             <div class="col-md-3 d-flex align-items-stretch">
                 <div class="card shadow">
                     <div class="card-body bg-white">
-                        <img src="{{ url($data->parental_concerns_image3) }}" class="rounded-circle shadow-1-strong" width="30%" height="30%" />
+                        <img src="{{ url($data->sect1_image3) }}" class="rounded-circle shadow-1-strong" width="30%" height="30%" />
                         <h5 class="card-title pt-3 text-white">Card title</h5>
-                        <p class="card-text">"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even <span class="alt-color">slightly believable</span>. If you are going to use a passage of Lorem Ipsum."</p>
+                        <p class="card-text">{!! $data->sect1_para3 !!}</p>
                     </div>
                     <div class="card-footer">
                         <span>Mother of Xxxxxx</span>
@@ -96,9 +96,9 @@
             <div class="col-md-3 d-flex align-items-stretch">
                 <div class="card shadow">
                     <div class="card-body bg-white">
-                        <img src="{{ url($data->parental_concerns_image4) }}" class="rounded-circle shadow-1-strong" width="30%" height="30%" />
+                        <img src="{{ url($data->sect1_image4) }}" class="rounded-circle shadow-1-strong" width="30%" height="30%" />
                         <h5 class="card-title pt-3 text-white">Card title</h5>
-                        <p class="card-text">"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even <span class="alt-color">slightly believable</span>. If you are going to use a passage of Lorem Ipsum."</p>
+                        <p class="card-text">{!! $data->sect1_para4 !!}</p>
                     </div>
                     <div class="card-footer">
                         <span>Father of Xxx</span>
@@ -118,7 +118,7 @@
          <div class="row">
             <div class="col-md-12 text-center">
                 <div class="heading-area mx-570 mb-lg-4 mb-3 pb-2">
-                    <span class="title text-white"> Parental Goals </span>
+                    <span class="title text-white">{{ $data->sect2_heading }}</span>
                 </div>
             </div>
         </div>
@@ -128,9 +128,9 @@
             <div class="col-md-3 d-flex align-items-stretch">
                 <div class="card">
                     <div class="card-body">
-                        <img src="{{ url($data->parental_goals_image1) }}" class="rounded-circle shadow-1-strong" width="30%" height="30%" />
+                        <img src="{{ url($data->sect2_image1) }}" class="rounded-circle shadow-1-strong" width="30%" height="30%" />
                         <h5 class="card-title pt-3">Card title</h5>
-                        <p class="card-text">"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even <span class="alt-color">slightly believable</span>. If you are going to use a passage of Lorem Ipsum."</p>
+                        <p class="card-text">{!! $data->sect2_para1 !!}</p>
                     </div>
                     <div class="card-footer" style="background-color: #7004bc">
                         <span class="text-white">Father of Xxx</span>
@@ -140,9 +140,9 @@
             <div class="col-md-3 d-flex align-items-stretch">
                 <div class="card">
                     <div class="card-body">
-                        <img src="{{ url($data->parental_goals_image2) }}" class="rounded-circle shadow-1-strong" width="30%" height="30%" />
+                        <img src="{{ url($data->sect2_image2) }}" class="rounded-circle shadow-1-strong" width="30%" height="30%" />
                         <h5 class="card-title pt-3">Card title</h5>
-                        <p class="card-text">"There are many variations of passages of <span class="alt-color">Lorem Ipsum available</span>, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum."</p>
+                        <p class="card-text">{!! $data->sect2_para2 !!}</p>
                     </div>
                     <div class="card-footer" style="background-color: #7004bc">
                         <span class="text-white">Guardian of Xxxxxx</span>
@@ -152,9 +152,9 @@
             <div class="col-md-3 d-flex align-items-stretch">
                 <div class="card">
                     <div class="card-body">
-                        <img src="{{ url($data->parental_goals_image3) }}" class="rounded-circle shadow-1-strong" width="30%" height="30%" />
+                        <img src="{{ url($data->sect2_image3) }}" class="rounded-circle shadow-1-strong" width="30%" height="30%" />
                         <h5 class="card-title pt-3">Card title</h5>
-                        <p class="card-text">"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or <span class="alt-color">randomised words</span> which don't look even slightly believable."</p>
+                        <p class="card-text">{!! $data->sect2_para3 !!}</p>
                     </div>
                     <div class="card-footer" style="background-color: #7004bc">
                         <span class="text-white">Mother of Xxxx</span>
@@ -164,9 +164,9 @@
             <div class="col-md-3 d-flex align-items-stretch">
                 <div class="card">
                     <div class="card-body">
-                        <img src="{{ url($data->parental_goals_image4) }}" class="rounded-circle shadow-1-strong" width="30%" height="30%" />
+                        <img src="{{ url($data->sect2_image4) }}" class="rounded-circle shadow-1-strong" width="30%" height="30%" />
                         <h5 class="card-title pt-3">Card title</h5>
-                        <p class="card-text">"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or <span class="alt-color">randomised words</span> which don't look even slightly believable."</p>
+                        <p class="card-text">{!! $data->sect2_para4 !!}</p>
                     </div>
                     <div class="card-footer" style="background-color: #7004bc">
                         <span class="text-white">Mother of Xxxx</span>
@@ -242,8 +242,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="heading-area mx-570 mb-5">
-                    <h2 class="title text-white m-0">Some <span class="js-rotating">great, ideal</span> words from
-                        our clients</h2>
+                    <h2 class="title text-white m-0">{!! $data->sect3_heading !!}</h2>
                 </div>
             </div>
         </div>
@@ -274,43 +273,22 @@
             <div class="col-md-5 testimonials-text">
                 <div class="owl-carousel wow zoomIn" id="testimonial-slider">
                     <div class="item">
-                        <p class="para align-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tincidunt
-                            egestas nunc, at pellentesque arcu sollicitudin et. Aliquam hendrerit diam quis ipsum
-                            ultricies, quis ultricies arcu suscipit. Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit. Fusce ut diam quis nulla faucibus venenatis. </p>
+                        <p class="para align-left">{!! $data->sect3_para1 !!}</p>
                         <h5 class="name gradient-text1">David Villas</h5>
                         <span class="designation">Designer, Company Name</span>
                     </div>
                     <div class="item">
-                        <p class="para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tincidunt
-                            egestas nunc, at pellentesque arcu sollicitudin et. Aliquam hendrerit diam quis ipsum
-                            ultricies, quis ultricies arcu suscipit. Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit. Fusce ut diam quis nulla faucibus venenatis. </p>
+                        <p class="para">{!! $data->sect3_para2 !!}</p>
                         <h5 class="name gradient-text1">David Villas</h5>
                         <span class="designation">Designer, Company Name</span>
                     </div>
                     <div class="item">
-                        <p class="para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tincidunt
-                            egestas nunc, at pellentesque arcu sollicitudin et. Aliquam hendrerit diam quis ipsum
-                            ultricies, quis ultricies arcu suscipit. Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit. Fusce ut diam quis nulla faucibus venenatis. </p>
+                        <p class="para">{!! $data->sect3_para3 !!}</p>
                         <h5 class="name gradient-text1">David Villas</h5>
                         <span class="designation">Designer, Company Name</span>
                     </div>
                     <div class="item">
-                        <p class="para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tincidunt
-                            egestas nunc, at pellentesque arcu sollicitudin et. Aliquam hendrerit diam quis ipsum
-                            ultricies, quis ultricies arcu suscipit. Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit. Fusce ut diam quis nulla faucibus venenatis. </p>
-                        <h5 class="name gradient-text1">David Villas</h5>
-                        <span class="designation">Designer, Company Name</span>
-                    </div>
-                    <div class="item">
-                        <p class="para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tincidunt
-                            egestas nunc, at pellentesque arcu sollicitudin et. Aliquam hendrerit diam quis ipsum
-                            ultricies, quis ultricies arcu suscipit. Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit. Fusce ut diam quis nulla faucibus venenatis. </p>
-                        <h5 class="name gradient-text1">David Villas</h5>
+                        <p class="para">{!! $data->sect3_para4 !!}</h5>
                         <span class="designation">Designer, Company Name</span>
                     </div>
                 </div>
