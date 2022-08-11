@@ -101,15 +101,14 @@
 <section class="pb-0" style="margin-top: 2em;">
     <div class="container" style="max-width: 80%">
         <div class="row">        
-
             <!-- Basic Card -->
-            <div class="col-lg-3">
+            <div class="col-lg-3 d-flex align-items-stretch">
                 <div class="card">
                     <img class="card-img-top" src="{{ asset('marketing-site/assets/img/basic-card-img.jpg') }}" alt="img">
-                    <div class="card-body">
+                    <div class="card-body d-flex flex-column">
                         <h5 class="card-title">Basic</h5>
                         <p class="card-text">{!! $data->sect1_para1 !!}</p>
-                        <button class="card-btn btn btn-large btn-rounded btn-pink btn-hvr-blue mt-3" id="card-btn-basic">Read More
+                        <button class="card-btn btn btn-large btn-rounded btn-pink btn-hvr-blue mt-auto align-self-start" id="card-btn-basic">Read More
                         <div class="btn-hvr-setting">
                             <ul class="btn-hvr-setting-inner">
                                 <li class="btn-hvr-effect"></li>
@@ -124,13 +123,13 @@
             </div>
             
             <!-- Advanced Card -->
-            <div class="col-lg-3">
+            <div class="col-lg-3 d-flex align-items-stretch">
                 <div class="card">
                     <img class="card-img-top" src="{{ asset('marketing-site/assets/img/advanced-card-img.jpg') }}" alt="img">
-                    <div class="card-body">
+                    <div class="card-body d-flex flex-column">
                         <h5 class="card-title">Advanced</h5>
                         <p class="card-text">{!! $data->sect1_para2 !!}</p>
-                        <button class="card-btn btn btn-large btn-rounded btn-pink btn-hvr-blue mt-3" id="card-btn-advanced">Read More
+                        <button class="card-btn btn btn-large btn-rounded btn-pink btn-hvr-blue mt-auto align-self-start" id="card-btn-advanced">Read More
                         <div class="btn-hvr-setting">
                             <ul class="btn-hvr-setting-inner">
                                 <li class="btn-hvr-effect"></li>
@@ -145,13 +144,13 @@
             </div>
             
             <!-- Mastery Card -->
-            <div class="col-lg-3">
+            <div class="col-lg-3 d-flex align-items-stretch">
                 <div class="card">
                     <img class="card-img-top" src="{{ asset('marketing-site/assets/img/mastery-card-img.jpg') }}" alt="img">
-                    <div class="card-body">
+                    <div class="card-body d-flex flex-column">
                         <h5 class="card-title">Mastery</h5>
                         <p class="card-text">{!! $data->sect1_para3 !!}</p>
-                        <button class="card-btn btn btn-large btn-rounded btn-pink btn-hvr-blue mt-3" id="card-btn-mastery">Read More
+                        <button class="card-btn btn btn-large btn-rounded btn-pink btn-hvr-blue mt-auto align-self-start" id="card-btn-mastery">Read More
                         <div class="btn-hvr-setting">
                             <ul class="btn-hvr-setting-inner">
                                 <li class="btn-hvr-effect"></li>
@@ -166,13 +165,13 @@
             </div>
             
             <!-- Compass Card -->
-            <div class="col-lg-3">
+            <div class="col-lg-3 d-flex align-items-stretch">
                 <div class="card">
                     <img class="card-img-top" src="{{ asset('marketing-site/assets/img/compass-card-img.jpg') }}" alt="img">
-                    <div class="card-body">
-                        <h5 class="card-title">COMPASS</h5>
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Compass</h5>
                         <p class="card-text">{!! $data->sect1_para4 !!}</p>
-                        <button class="card-btn btn btn-large btn-rounded btn-pink btn-hvr-blue mt-3" id="card-btn-compass">Read More
+                        <button class="card-btn btn btn-large btn-rounded btn-pink btn-hvr-blue mt-auto align-self-start" id="card-btn-compass">Read More
                         <div class="btn-hvr-setting">
                             <ul class="btn-hvr-setting-inner">
                                 <li class="btn-hvr-effect"></li>
@@ -185,8 +184,6 @@
                     </div>
                 </div>
             </div>
-
-
         </div>
     </div>
 </section>
