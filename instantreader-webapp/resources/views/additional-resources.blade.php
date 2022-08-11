@@ -57,7 +57,7 @@
          <div class="row">
             <div class="col-md-12 text-center">
                 <div class="heading-area mx-570 mb-md-4 mb-3 pb-2">
-                    <h1 class="title" style="color: #562FB7;">Tips and Resources</h1>
+                    <h1 class="title" style="color: #562FB7;">{{ $data->sect1_heading }}</h1>
                 </div>
             </div>
         </div>
@@ -69,7 +69,7 @@
                     <img class="card-img-top" src="{{  asset('marketing-site/assets/agency/img/blog-news-3.jpg')  }}" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title pt-3">Card title</h5>
-                        <p class="card-text">"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even <span class="alt-color">slightly believable</span>. If you are going to use a passage of Lorem Ipsum."</p>
+                        <p class="card-text">{!! $data->sect1_para1 !!}</p>
                     </div>
                     <div class="card-footer" style="background-color: #7004bc">
                         <span class="text-white">Loram Ipsum</span>
@@ -81,7 +81,7 @@
                     <img class="card-img-top" src="{{  asset('marketing-site/assets/agency/img/blog-news-3.jpg')  }}" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title pt-3">Card title</h5>
-                        <p class="card-text">"There are many variations of passages of <span class="alt-color">Lorem Ipsum available</span>, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum."</p>
+                        <p class="card-text">{!! $data->sect1_para2 !!}</p>
                     </div>
                     <div class="card-footer" style="background-color: #7004bc">
                         <span class="text-white">Lorem Ipsum</span>
@@ -93,7 +93,7 @@
                     <img class="card-img-top" src="{{  asset('marketing-site/assets/agency/img/blog-news-3.jpg')  }}" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title pt-3">Card title</h5>
-                        <p class="card-text">"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or <span class="alt-color">randomised words</span> which don't look even slightly believable."</p>
+                        <p class="card-text">{!! $data->sect1_para3 !!}</p>
                     </div>
                     <div class="card-footer" style="background-color: #7004bc">
                         <span class="text-white">Lorem Ipsum</span>
@@ -113,7 +113,7 @@
         <div class="row">
             <div class="col-md-12 text-center">
                 <div class="heading-area mx-570 pb-md-5 mb-3">
-                    <h1 class="title mb-0 text-white">E-books and PDFs</h1>
+                    <h1 class="title mb-0 text-white">{{ $data->sect2_heading1 }}</h1>
                 </div>
             </div>
         </div>
@@ -185,7 +185,7 @@
         <div class="row">
             <div class="col-md-12 text-center">
                 <div class="heading-area mx-570 pb-md-5 mb-3">
-                    <h1 class="title mb-0 main-color">Blogs</h1>
+                    <h1 class="title mb-0 main-color">{{ $data->sect2_heading2 }}</h1>
                 </div>
             </div>
         </div>
@@ -252,11 +252,8 @@
     <div class="auto-container px-5">
         <!-- Heading -->
         <div class="row text-center"  style="margin-bottom: 2em;">
-            <h1 class="title text-white mb-3">Video Resources</h1>
-            <p class="para text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tincidunt
-            egestas nunc, at pellentesque arcu sollicitudin et. Aliquam hendrerit diam quis ipsum
-            ultricies, quis ultricies arcu suscipit. Lorem ipsum dolor sit amet, consectetur adipiscing
-            elit. Fusce ut diam quis nulla faucibus venenatis. </p>
+            <h1 class="title text-white mb-3">{{ $data->sect3_heading }}</h1>
+            <p class="para text-white">{!! $data->sect3_para !!} </p>
         </div>
 
         <!-- Row of Videos -->
@@ -334,10 +331,8 @@
             </div>
             <div class="col-md-5">
                 <div class="heading-area">
-                    <h1 class="title" style="color: #562FB7;">Lorem Ipsum</h1>
-                    <p class="para">There are many variations of passages of Lorem Ipsum available, but the majority
-                        have suffered alteration in some form, by injected humour, or randomised words which don't look
-                        even slightly believable.</p>
+                    <h1 class="title" style="color: #562FB7;">{{ $data->sect4_heading }}</h1>
+                    <p class="para">{!! $data->sect4_para !!}</p>
                 </div>
             </div>
         </div>

@@ -81,21 +81,21 @@
             </div>
 
             <!-- Heading of Section 1 -->
-            <form data-route="">
+            <form data-route="{{ route('additional-resources.update_page') }}">
                 @csrf
                 <div class="form-group py-3">
                     <label for="sect1-heading">Section Heading/Title</label>                    
-                    <input required data-fieldtype="big" type="text" class="form-control" id="sect1-heading" placeholder="e.g. The Best Reading Course">
+                    <input required data-fieldtype="big" type="text" class="form-control" name="sect1_heading" id="sect1-heading" placeholder="e.g. The Best Reading Course" value="{{ $data->sect1_heading }}">
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>                    
                 </div>
             </form>
 
             <!-- Paragraph 1 -->
-            <form action="">
+            <form data-route="{{ route('additional-resources.update_page') }}">
                 @csrf
                 <div class="form-group py-3">
                     <label for="sect1-paragraph1">Paragraph 1</label>
-                    <textarea data-fieldtype="tiny" class="form-control" name="sect1_para1" aria-describedby="sect1Paragraph1Help" id="sect1-paragraph1"></textarea>
+                    <textarea data-fieldtype="tiny" class="form-control" name="sect1_para1" aria-describedby="sect1Paragraph1Help" id="sect1-paragraph1">{{ $data->sect1_para1 }}</textarea>
                     <small id="sect1Paragraph1Help" class="form-text text-muted">Recommended length: 3 sentences</small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
                 </div>
@@ -112,11 +112,11 @@
             </script>
 
             <!-- Paragraph 2 -->
-            <form action="">
+            <form data-route="{{ route('additional-resources.update_page') }}">
                 @csrf
                 <div class="form-group py-3">
                     <label for="sect1-paragraph2">Paragraph 2</label>
-                    <textarea data-fieldtype="tiny" class="form-control" name="sect1_para2" aria-describedby="sect1Paragraph2Help" id="sect1-paragraph2"></textarea>
+                    <textarea data-fieldtype="tiny" class="form-control" name="sect1_para2" aria-describedby="sect1Paragraph2Help" id="sect1-paragraph2">{{ $data->sect1_para2 }}</textarea>
                     <small id="sect1Paragraph2Help" class="form-text text-muted">Recommended length: 3 sentences</small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
                 </div>
@@ -133,11 +133,11 @@
             </script>
 
             <!-- Paragraph 3 -->
-            <form action="">
+            <form data-route="{{ route('additional-resources.update_page') }}">
                 @csrf
                 <div class="form-group py-3">
                     <label for="sect1-paragraph3">Paragraph 3</label>
-                    <textarea data-fieldtype="tiny" class="form-control" name="sect1_para3" aria-describedby="sect1Paragraph3Help" id="sect1-paragraph3"></textarea>
+                    <textarea data-fieldtype="tiny" class="form-control" name="sect1_para3" aria-describedby="sect1Paragraph3Help" id="sect1-paragraph3">{{ $data->sect1_para3 }}</textarea>
                     <small id="sect1Paragraph3Help" class="form-text text-muted">Recommended length: 3 sentences</small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
                 </div>
@@ -154,33 +154,33 @@
             </script>
 
             <!-- Image 1 -->
-            <form data-route="">
+            <form data-route="{{ route('additional-resources.update_page') }}">
                 @csrf
                 <div class="mb-3 py-3">
                     <label for="sect1-image1" class="form-label">Image 1</label>
-                    <input required data-fieldtype="media" class="form-control form-control-sm" data-fieldtype="big" name="sect1_image1" type="file" id="sect1-image1" aria-describedby="sect1Image1Help">
+                    <input required data-fieldtype="media" class="form-control form-control-sm" data-fieldtype="big" name="sect1_image1" type="file" id="sect1-image1" aria-describedby="sect1Image1Help" value="{{ $data->sect1_image1 }}">
                     <small id="sect1Image1Help" class="form-text text-muted">Recommended image size: WxH</small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
                 </div>                
             </form>
 
             <!-- Image 2 -->
-            <form data-route="">
+            <form data-route="{{ route('additional-resources.update_page') }}">
                 @csrf
                 <div class="mb-3 py-3">
                     <label for="sect1-image2" class="form-label">Image 2</label>
-                    <input required data-fieldtype="media" class="form-control form-control-sm" data-fieldtype="big" name="sect1_image2" type="file" id="sect1-image2" aria-describedby="sect1Image2Help">
+                    <input required data-fieldtype="media" class="form-control form-control-sm" data-fieldtype="big" name="sect1_image2" type="file" id="sect1-image2" aria-describedby="sect1Image2Help" value="{{ $data->sect1_image2 }}">
                     <small id="sect1Image2Help" class="form-text text-muted">Recommended image size: WxH</small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
                 </div>                
             </form>
 
             <!-- Image 3 -->
-            <form data-route="">
+            <form data-route="{{ route('additional-resources.update_page') }}">
                 @csrf
                 <div class="mb-3 py-3">
                     <label for="sect1-image3" class="form-label">Image 3</label>
-                    <input required data-fieldtype="media" class="form-control form-control-sm" data-fieldtype="big" name="sect1_image3" type="file" id="sect1-image3" aria-describedby="sect1Image3Help">
+                    <input required data-fieldtype="media" class="form-control form-control-sm" data-fieldtype="big" name="sect1_image3" type="file" id="sect1-image3" aria-describedby="sect1Image3Help" value="{{ $data->sect1_image3 }}">
                     <small id="sect1Image3Help" class="form-text text-muted">Recommended image size: WxH</small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
                 </div>                
@@ -196,110 +196,24 @@
                 </div>
             </div>
 
-            <!-- Heading of Section 2 -->
-            <form data-route="">
+            <!-- Heading 1 of Section 2 -->
+            <form data-route="{{ route('additional-resources.update_page') }}">
                 @csrf
                 <div class="form-group py-3">
-                    <label for="sect2-heading">Section Heading/Title</label>                    
-                    <input required data-fieldtype="big" type="text" class="form-control" id="sect2-heading" placeholder="e.g. The Best Reading Course">
+                    <label for="sect2-heading1">Section Heading/Title 1 (E-books/PDFs)</label>                    
+                    <input required data-fieldtype="big" type="text" class="form-control" name="sect2_heading1" id="sect2-heading1" placeholder="e.g. The Best Reading Course" value="{{ $data->sect2_heading1 }}">
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>                    
                 </div>
             </form>
 
-            <!-- Paragraph 1 -->
-            <form action="">
+            <!-- Heading 2 of Section 2 -->
+            <form data-route="{{ route('additional-resources.update_page') }}">
                 @csrf
                 <div class="form-group py-3">
-                    <label for="sect2-paragraph1">Paragraph 1</label>
-                    <textarea data-fieldtype="tiny" class="form-control" name="sect2_para1" aria-describedby="sect2Paragraph1Help" id="sect2-paragraph1"></textarea>
-                    <small id="sect2Paragraph1Help" class="form-text text-muted">Recommended length: N sentences</small>
-                    <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
+                    <label for="sect2-heading2">Section Heading/Title 2 (Blogs)</label>                    
+                    <input required data-fieldtype="big" type="text" class="form-control" name="sect2_heading2" id="sect2-heading2" placeholder="e.g. The Best Reading Course" value="{{ $data->sect2_heading2 }}">
+                    <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>                    
                 </div>
-            </form>
-            <script>    
-                tinymce.init({
-                    height: "10rem",
-                    selector: '#sect2-paragraph1',
-                    placeholder: "e.g. Tell something about this section.",
-                    plugins: 'link',
-                    menubar: false,
-                    toolbar: 'undo redo | bold italic underline | link'
-                });            
-            </script>
-
-            <!-- Paragraph 2 -->
-            <form action="">
-                @csrf
-                <div class="form-group py-3">
-                    <label for="sect2-paragraph2">Paragraph 2</label>
-                    <textarea data-fieldtype="tiny" class="form-control" name="sect2_para2" aria-describedby="sect2Paragraph2Help" id="sect2-paragraph2"></textarea>
-                    <small id="sect2Paragraph2Help" class="form-text text-muted">Recommended length: N sentences</small>
-                    <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
-                </div>
-            </form>
-            <script>    
-                tinymce.init({
-                    height: "10rem",
-                    selector: '#sect2-paragraph2',
-                    placeholder: "e.g. Tell something about this section.",
-                    plugins: 'link',
-                    menubar: false,
-                    toolbar: 'undo redo | bold italic underline | link'
-                });            
-            </script>
-
-            <!-- Paragraph 3 -->
-            <form action="">
-                @csrf
-                <div class="form-group py-3">
-                    <label for="sect2-paragraph3">Paragraph 3</label>
-                    <textarea data-fieldtype="tiny" class="form-control" name="sect2_para3" aria-describedby="sect2Paragraph3Help" id="sect2-paragraph3"></textarea>
-                    <small id="sect2Paragraph3Help" class="form-text text-muted">Recommended length: N sentences</small>
-                    <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
-                </div>
-            </form>
-            <script>    
-                tinymce.init({
-                    height: "10rem",
-                    selector: '#sect2-paragraph3',
-                    placeholder: "e.g. Tell something about this section.",
-                    plugins: 'link',
-                    menubar: false,
-                    toolbar: 'undo redo | bold italic underline | link'
-                });            
-            </script>
-
-            <!-- Image 1 -->
-            <form data-route="">
-                @csrf
-                <div class="mb-3 py-3">
-                    <label for="sect2-image1" class="form-label">Image 1</label>
-                    <input required data-fieldtype="media" class="form-control form-control-sm" data-fieldtype="big" name="sect2_image1" type="file" id="sect2-image1" aria-describedby="sect2Image1Help">
-                    <small id="sect2Image1Help" class="form-text text-muted">Recommended image size: WxH</small>
-                    <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
-                </div>                
-            </form>
-
-            <!-- Image 2 -->
-            <form data-route="">
-                @csrf
-                <div class="mb-3 py-3">
-                    <label for="sect2-image2" class="form-label">Image 2</label>
-                    <input required data-fieldtype="media" class="form-control form-control-sm" data-fieldtype="big" name="sect2_image2" type="file" id="sect2-image2" aria-describedby="sect2Image2Help">
-                    <small id="sect2Image2Help" class="form-text text-muted">Recommended image size: WxH</small>
-                    <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
-                </div>                
-            </form>
-
-            <!-- Image 3 -->
-            <form data-route="">
-                @csrf
-                <div class="mb-3 py-3">
-                    <label for="sect2-image3" class="form-label">Image 3</label>
-                    <input required data-fieldtype="media" class="form-control form-control-sm" data-fieldtype="big" name="sect2_image3" type="file" id="sect2-image3" aria-describedby="sect2Image3Help">
-                    <small id="sect2Image3Help" class="form-text text-muted">Recommended image size: WxH</small>
-                    <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
-                </div>                
             </form>
             <!-- End of Section 2 -->
             
@@ -313,29 +227,29 @@
             </div>
 
             <!-- Heading of Section 3 -->
-            <form data-route="">
+            <form data-route="{{ route('additional-resources.update_page') }}">
                 @csrf
                 <div class="form-group py-3">
                     <label for="sect3-heading">Section Heading/Title</label>                    
-                    <input required data-fieldtype="big" type="text" class="form-control" id="sect3-heading" placeholder="e.g. The Best Reading Course">
+                    <input required data-fieldtype="big" type="text" class="form-control" name="sect3_heading" id="sect3-heading" placeholder="e.g. The Best Reading Course" value="{{ $data->sect3_para1 }}">
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>                    
                 </div>
             </form>
 
             <!-- Paragraph -->
-            <form action="">
+            <form data-route="{{ route('additional-resources.update_page') }}">
                 @csrf
                 <div class="form-group py-3">
-                    <label for="sect3-paragraph1">Paragraph 1</label>
-                    <textarea data-fieldtype="tiny" class="form-control" name="sect3_para" aria-describedby="sect3Paragraph1Help" id="sect3-paragraph1"></textarea>
-                    <small id="sect3Paragraph1Help" class="form-text text-muted">Recommended length: N sentences</small>
+                    <label for="sect3-paragraph">Paragraph</label>
+                    <textarea data-fieldtype="tiny" class="form-control" name="sect3_para" aria-describedby="sect3ParagraphHelp" id="sect3-paragraph">{{ $data->sect3_para }}</textarea>
+                    <small id="sect3ParagraphHelp" class="form-text text-muted">Recommended length: N sentences</small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
                 </div>
             </form>
             <script>    
                 tinymce.init({
                     height: "10rem",
-                    selector: '#sect3-paragraph1',
+                    selector: '#sect3-paragraph',
                     placeholder: "e.g. Tell something about this section.",
                     plugins: 'link',
                     menubar: false,
@@ -344,11 +258,11 @@
             </script>
 
             <!-- Videos of Section 3 -->
-            <form data-route="">
+            <form data-route="{{ route('additional-resources.update_page') }}">
                 @csrf
                 <div class="mb-3 py-3">
                     <label for="sect3-videoss" class="form-label">Videos (Select at least 1 video)</label>
-                    <input required data-fieldtype="media" class="form-control form-control-sm" name="sect3_videos" type="file" id="sect3-videos" aria-describedby="sect3VideosHelp" multiple>
+                    <input required data-fieldtype="media" class="form-control form-control-sm" name="sect3_videos" type="file" id="sect3-videos" aria-describedby="sect3VideosHelp" multiple value="{{ $data->sect3_videos }}">
                     <small id="sect3VideosHelp" class="form-text text-muted">Recommended image size: WxH</small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
                 </div>                
@@ -365,29 +279,29 @@
         </div>
 
         <!-- Heading of Section 4 -->
-        <form data-route="">
+        <form data-route="{{ route('additional-resources.update_page') }}">
             @csrf
             <div class="form-group py-3">
                 <label for="sect4-heading">Section Heading/Title</label>                    
-                <input required data-fieldtype="big" type="text" class="form-control" id="sect4-heading" placeholder="e.g. The Best Reading Course">
+                <input required data-fieldtype="big" type="text" class="form-control" name="sect4_heading" id="sect4-heading" placeholder="e.g. The Best Reading Course" value="{{ $data->sect4_heading }}">
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>                    
             </div>
         </form>
 
         <!-- Paragraph -->
-        <form action="">
+        <form data-route="{{ route('additional-resources.update_page') }}">
             @csrf
             <div class="form-group py-3">
-                <label for="sect4-paragraph1">Paragraph 1</label>
-                <textarea data-fieldtype="tiny" class="form-control" name="sect4_para" aria-describedby="sect4Paragraph1Help" id="sect4-paragraph1"></textarea>
-                <small id="sect4Paragraph1Help" class="form-text text-muted">Recommended length: N sentences</small>
+                <label for="sect4-paragraph">Paragraph</label>
+                <textarea data-fieldtype="tiny" class="form-control" name="sect4_para" aria-describedby="sect4ParagraphHelp" id="sect4-paragraph">{{ $data->sect4_para }}</textarea>
+                <small id="sect4ParagraphHelp" class="form-text text-muted">Recommended length: N sentences</small>
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
             </div>
         </form>
         <script>    
             tinymce.init({
                 height: "10rem",
-                selector: '#sect4-paragraph1',
+                selector: '#sect4-paragraph',
                 placeholder: "e.g. Tell something about this section.",
                 plugins: 'link',
                 menubar: false,
@@ -396,11 +310,11 @@
         </script>
 
         <!-- Images of Section 4 -->
-        <form data-route="">
+        <form data-route="{{ route('additional-resources.update_page') }}">
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect4-images" class="form-label">Images (Select at least 1 photo)</label>
-                <input required data-fieldtype="media" class="form-control form-control-sm" name="sect4_images" type="file" id="sect4-images" aria-describedby="sect4ImagesHelp" multiple>
+                <input required data-fieldtype="media" class="form-control form-control-sm" name="sect4_images" type="file" id="sect4-images" aria-describedby="sect4ImagesHelp" multiple value="{{ $data->sect4_images }}">
                 <small id="sect4ImagesHelp" class="form-text text-muted">Recommended image size: WxH</small>
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
             </div>              
