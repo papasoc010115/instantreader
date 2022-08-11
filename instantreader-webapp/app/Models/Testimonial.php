@@ -19,7 +19,7 @@ class Testimonial extends Model
         'page_author',
         
         // Section 1: Parental Concerns
-        'sect1_title',
+        'sect1_heading',
         'sect1_para1',
         'sect1_para2',
         'sect1_para3',
@@ -30,7 +30,7 @@ class Testimonial extends Model
         'sect1_image4',
 
         // Section 2: Parental Goals
-        'sect2_title',
+        'sect2_heading',
         'sect2_para1',
         'sect2_para2',
         'sect2_para3',
@@ -41,11 +41,19 @@ class Testimonial extends Model
         'sect2_image4',
 
         // Section 3: Testimonials Gallery
-        'sect3_title',
+        'sect3_heading',
+        'sect3_name1',
         'sect3_para1',
+        'sect3_name2',
         'sect3_para2',
+        'sect3_name3',
         'sect3_para3',
+        'sect3_name4',
         'sect3_para4',
+        'sect3_image1',
+        'sect3_image2',
+        'sect3_image3',
+        'sect3_image4',
         'sect3_images',
     ];
 }

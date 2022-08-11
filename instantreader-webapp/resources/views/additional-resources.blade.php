@@ -16,9 +16,6 @@
     .card {
         margin-bottom: 1.5em;
     }
-    .ebook-resources {
-        background-color: #562FB7;
-    }
     .visuals-row {
         display: flex;
         flex-direction: row;
@@ -107,7 +104,7 @@
 <!--Tips/Resources Library End-->
 
 <!--E-books/PDFs Start-->
-<section class="ebook-resources">
+<section class="ebook-resources purple-bg">
     <div class="container">
         <!--Row-->
         <div class="row">

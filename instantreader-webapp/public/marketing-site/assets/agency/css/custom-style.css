@@ -139,3 +139,11 @@ body::-webkit-scrollbar-thumb {
 .main-link {
     margin: 0px 10px 10px 10px;
 }
+
+.purple-bg {
+    background-color: #562fb7;
+}
+
+.dark-gray {
+    color: #282525;
+}

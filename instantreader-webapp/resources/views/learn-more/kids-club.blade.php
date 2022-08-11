@@ -152,8 +152,8 @@
 
 <section>
     <div class="container mb-5">
-        <div class="row">
-            <h1 class="text-center mb-5">{{ $data->sect2_heading }}</h1>     
+        <h1 class="text-center mb-5">{{ $data->sect2_heading }}</h1> 
+        <div class="row py-5">    
             <div class="col-md-6">
                 <!--Video Row-->
                 <div class="row mb-3">
@@ -166,9 +166,7 @@
                 <p class="half-para" style="color: #282525;">{!! $data->sect2_para1 !!}</p>
             </div>
         </div>
-    </div>
-    <div class="container">
-        <div class="row">
+        <div class="row py-5">
             <div class="col-md-6 carousel-text">
                 <p class="half-para-right" style="color: #282525">{!! $data->sect2_para2 !!}</p>
             </div>

@@ -29,7 +29,7 @@
                 <div class="form-group py-3">
                     <label for="title-editor">Page Title</label>
                     <input required data-fieldtype="big" type="text" class="form-control" id="title-editor" maxlength="60" name="page_title" placeholder="Enter page title" value="{{ $data->page_title }}">
-                    <small class="form-text char-count" id="title-editor-char-counter">0/60</small>
+                    <small class="form-text char-count" id="title-editor-char-counter"></small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
                 </div>
             </form>
@@ -42,7 +42,7 @@
                 <div class="form-group py-3">
                     <label for="description-editor">Page Description</label>
                     <textarea required data-fieldtype="big" class="form-control" id="description-editor" name="page_desc" placeholder="Enter page description" maxlength="155" rows="3">{{ $data->page_desc }}</textarea>
-                    <small class="form-text char-count" id="description-editor-char-counter">0/155</small>
+                    <small class="form-text char-count" id="description-editor-char-counter"></small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
                 </div>
             </form>

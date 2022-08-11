@@ -179,7 +179,7 @@
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect1-image1" class="form-label">Image 1</label>
-                <input  required data-fieldtype="media" class="form-control form-control-sm" data-fieldtype="big" name="sect1_image1" type="file" id="sect1-image1" aria-describedby="sect1Image1Help" value="{{ $data->sect1_image1 }}">
+                <input  required data-fieldtype="media" class="form-control form-control-sm" name="sect1_image1" type="file" id="sect1-image1" aria-describedby="sect1Image1Help" value="{{ $data->sect1_image1 }}">
                 <small id="sect1Image1Help" class="form-text text-muted">Recommended image size: WxH</small>
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
             </div>                
@@ -190,7 +190,7 @@
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect1-image2" class="form-label">Image 2</label>
-                <input  required data-fieldtype="media" class="form-control form-control-sm" data-fieldtype="big" name="sect1_image2" type="file" id="sect1-image2" aria-describedby="sect1Image2Help" value="{{ $data->sect1_image2 }}">
+                <input  required data-fieldtype="media" class="form-control form-control-sm" name="sect1_image2" type="file" id="sect1-image2" aria-describedby="sect1Image2Help" value="{{ $data->sect1_image2 }}">
                 <small id="sect1Image2Help" class="form-text text-muted">Recommended image size: WxH</small>
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
             </div>                
@@ -201,7 +201,7 @@
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect1-image3" class="form-label">Image 3</label>
-                <input  required data-fieldtype="media" class="form-control form-control-sm" data-fieldtype="big" name="sect1_image3" type="file" id="sect1-image3" aria-describedby="sect1Image3Help" value="{{ $data->sect1_image3 }}">
+                <input  required data-fieldtype="media" class="form-control form-control-sm"  name="sect1_image3" type="file" id="sect1-image3" aria-describedby="sect1Image3Help" value="{{ $data->sect1_image3 }}">
                 <small id="sect1Image3Help" class="form-text text-muted">Recommended image size: WxH</small>
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
             </div>                
@@ -212,7 +212,7 @@
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect1-image4" class="form-label">Image 4</label>
-                <input  required data-fieldtype="media" class="form-control form-control-sm" data-fieldtype="big" name="sect1_image4" type="file" id="sect1-image4" aria-describedby="sect1Image4Help" value="{{ $data->sect1_image4 }}">
+                <input  required data-fieldtype="media" class="form-control form-control-sm" name="sect1_image4" type="file" id="sect1-image4" aria-describedby="sect1Image4Help" value="{{ $data->sect1_image4 }}">
                 <small id="sect1Image4Help" class="form-text text-muted">Recommended image size: WxH</small>
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
             </div>                
@@ -385,12 +385,22 @@
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>                    
             </div>
         </form>
+
+        <!-- Name 1 -->
+        <form data-route="{{ route('about-us.testimonials.update_page') }}">
+            @csrf
+            <div class="form-group py-3">
+                <label for="sect3-name1">Name 1</label>                    
+                <input required data-fieldtype="big" type="text" class="form-control" name="sect3_name1" id="sect3-name1" placeholder="e.g. Hinata Shoyo" value="{{ $data->sect3_name1 }}">
+                <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>                    
+            </div>
+        </form>
         
         <!-- Paragraph 1 -->
         <form data-route="{{ route('about-us.testimonials.update_page') }}">
             @csrf
             <div class="form-group py-3">
-                <label for="sect3-paragraph1">Paragraph 1</label>
+                <label for="sect3-paragraph1">Card Testimony 1</label>
                 <textarea data-fieldtype="tiny" class="form-control" name="sect3_para1" aria-describedby="sect2Paragraph1Help" id="sect3-paragraph1">{{ $data->sect3_para1 }}</textarea>
                 <small id="sect2Paragraph1Help" class="form-text text-muted">Recommended length: 3-5 sentences</small>
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
@@ -407,11 +417,32 @@
             });            
         </script>
 
+        <!-- Image 1 of Section 3 -->
+        <form data-route="{{ route('about-us.testimonials.update_page') }}">
+            @csrf
+            <div class="mb-3 py-3">
+                <label for="sect3-image1" class="form-label">Card Image 1</label>
+                <input required data-fieldtype="media" class="form-control form-control-sm" name="sect3_image1" type="file" id="sect3-image1" aria-describedby="sect3Image1Help" value="{{ $data->sect3_image1 }}">
+                <small id="sect3Image1Help" class="form-text text-muted">Recommended image size: WxH</small>
+                <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
+            </div>                
+        </form>
+
+        <!-- Name 2 -->
+        <form data-route="{{ route('about-us.testimonials.update_page') }}">
+            @csrf
+            <div class="form-group py-3">
+                <label for="sect3-name2">Name 2</label>                    
+                <input required data-fieldtype="big" type="text" class="form-control" name="sect3_name2" id="sect3-name2" placeholder="e.g. Hinata Shoyo" value="{{ $data->sect3_name2 }}">
+                <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>                    
+            </div>
+        </form>
+
         <!-- Paragraph 2 -->
         <form data-route="{{ route('about-us.testimonials.update_page') }}">
             @csrf
             <div class="form-group py-3">
-                <label for="sect3-paragraph2">Paragraph 2</label>
+                <label for="sect3-paragraph2">Card Testimony 2</label>
                 <textarea data-fieldtype="tiny" class="form-control" name="sect3_para2" aria-describedby="sect3Paragraph2Help" id="sect3-paragraph2">{{ $data->sect3_para2 }}</textarea>
                 <small id="sect3Paragraph2Help" class="form-text text-muted">Recommended length: 3-5 sentences</small>
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
@@ -428,11 +459,32 @@
             });            
         </script>
 
+        <!-- Image 2 of Section 3 -->
+        <form data-route="{{ route('about-us.testimonials.update_page') }}">
+            @csrf
+            <div class="mb-3 py-3">
+                <label for="sect3-image2" class="form-label">Card Image 2</label>
+                <input required data-fieldtype="media" class="form-control form-control-sm" name="sect3_image2" type="file" id="sect3-image2" aria-describedby="sect3Image2Help" value="{{ $data->sect3_image2 }}">
+                <small id="sect3Image2Help" class="form-text text-muted">Recommended image size: WxH</small>
+                <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
+            </div>                
+        </form>
+
+        <!-- Name 3 -->
+        <form data-route="{{ route('about-us.testimonials.update_page') }}">
+            @csrf
+            <div class="form-group py-3">
+                <label for="sect3-name3">Name 3</label>                    
+                <input required data-fieldtype="big" type="text" class="form-control" name="sect3_name3" id="sect3-name3" placeholder="e.g. Hinata Shoyo" value="{{ $data->sect3_name3 }}">
+                <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>                    
+            </div>
+        </form>
+
         <!-- Paragraph 3 -->
         <form data-route="{{ route('about-us.testimonials.update_page') }}">
             @csrf
             <div class="form-group py-3">
-                <label for="sect3-paragraph3">Paragraph 3</label>
+                <label for="sect3-paragraph3">Card Testimony 3</label>
                 <textarea data-fieldtype="tiny" class="form-control" name="sect3_para3" aria-describedby="sect3Paragraph3Help" id="sect3-paragraph3">{{ $data->sect3_para3 }}</textarea>
                 <small id="sect3Paragraph3Help" class="form-text text-muted">Recommended length: 3-5 sentences</small>
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
@@ -449,11 +501,32 @@
             });            
         </script>
 
+        <!-- Image 3 of Section 3 -->
+        <form data-route="{{ route('about-us.testimonials.update_page') }}">
+            @csrf
+            <div class="mb-3 py-3">
+                <label for="sect3-image3" class="form-label">Card Image 3</label>
+                <input required data-fieldtype="media" class="form-control form-control-sm" name="sect3_image3" type="file" id="sect3-image3" aria-describedby="sect3Image3Help" value="{{ $data->sect3_image3 }}">
+                <small id="sect3Image3Help" class="form-text text-muted">Recommended image size: WxH</small>
+                <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
+            </div>                
+        </form>
+
+        <!-- Name 4 -->
+        <form data-route="{{ route('about-us.testimonials.update_page') }}">
+            @csrf
+            <div class="form-group py-3">
+                <label for="sect3-name4">Name 4</label>                    
+                <input required data-fieldtype="big" type="text" class="form-control" name="sect3_name4" id="sect3-name4" placeholder="e.g. Hinata Shoyo" value="{{ $data->sect3_name4 }}">
+                <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>                    
+            </div>
+        </form>
+
         <!-- Paragraph 4 -->
         <form data-route="{{ route('about-us.testimonials.update_page') }}">
             @csrf
             <div class="form-group py-3">
-                <label for="sect3-paragraph4">Paragraph 4</label>
+                <label for="sect3-paragraph4">Card Testimony 4</label>
                 <textarea data-fieldtype="tiny" class="form-control" name="sect3_para4" aria-describedby="sect3Paragraph4Help" id="sect3-paragraph4">{{ $data->sect3_para4 }}</textarea>
                 <small id="sect3Paragraph4Help" class="form-text text-muted">Recommended length: 3-5 sentences</small>
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
@@ -469,6 +542,18 @@
                 toolbar: 'undo redo | bold italic underline | link'
             });            
         </script>
+
+        <!-- Image 4 of Section 3 -->
+        <form data-route="{{ route('about-us.testimonials.update_page') }}">
+            @csrf
+            <div class="mb-3 py-3">
+                <label for="sect3-image4" class="form-label">Card Image 4</label>
+                <input required data-fieldtype="media" class="form-control form-control-sm" name="sect3_image4" type="file" id="sect3-image4" aria-describedby="sect3Image4Help" value="{{ $data->sect3_image4 }}">
+                <small id="sect3Image4Help" class="form-text text-muted">Recommended image size: WxH</small>
+                <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
+            </div>                
+        </form>
+        <!-- End of Section 3 -->
 
         <!-- Images of Section 3 -->
         <form data-route="{{ route('about-us.testimonials.update_page') }}">

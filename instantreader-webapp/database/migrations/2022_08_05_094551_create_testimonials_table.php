@@ -47,10 +47,18 @@ return new class extends Migration
 
             // Section 3: Testimonials Gallery
             $table->string('sect3_heading');
+            $table->string('sect3_name1');
             $table->mediumText('sect3_para1');
+            $table->string('sect3_name2');
             $table->mediumText('sect3_para2');
+            $table->string('sect3_name3');
             $table->mediumText('sect3_para3');
+            $table->string('sect3_name4');
             $table->mediumText('sect3_para4');
+            $table->string('sect3_image1');
+            $table->string('sect3_image2');
+            $table->string('sect3_image3');
+            $table->string('sect3_image4');
             $table->string('sect3_images');
         });
 
@@ -87,10 +95,18 @@ return new class extends Migration
 
                 // Section 3: Testimonials Gallery
                 'sect3_heading' => '',
+                'sect3_name1' => '',
                 'sect3_para1' => '',
+                'sect3_name2' => '',
                 'sect3_para2' => '',
+                'sect3_name3' => '',
                 'sect3_para3' => '',
+                'sect3_name4' => '',
                 'sect3_para4' => '',
+                'sect3_image1' => '',
+                'sect3_image2' => '',
+                'sect3_image3' => '',
+                'sect3_image4' => '',
                 'sect3_images' => '',
             )
         );

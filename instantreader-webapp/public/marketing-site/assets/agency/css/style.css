@@ -45,7 +45,7 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:300,500,600,700,800&display=swap");
 
 .main-font {
-    font-family: "Roboto", sans-serif;
+    font-family: "Sora", sans-serif;
 }
 .alt-font {
     font-family: "Montserrat", sans-serif;
@@ -56,7 +56,7 @@
 ====================================== */
 
 body {
-    font-family: "Roboto", sans-serif;
+    font-family: "Sora", sans-serif;
     font-size: 16px;
     color: #696969;
     font-weight: 300;
@@ -443,7 +443,7 @@ blockquote > cite {
     color: #f033b5;
 }
 .alt-color {
-    color: #03a9f5;
+    color: #562fb7;
 }
 
 .gradient-text1 {
