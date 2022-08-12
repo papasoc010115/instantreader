@@ -24,7 +24,7 @@
                 Page Title. 
                 According to Montti (2021), Moz’s title tag length recommendation is 50 – 60 characters. (reference: https://www.searchenginejournal.com/google-title-tag-length/400682/#close)
             -->
-            <form data-route="{{ route('about-us.testimonials.update_page') }}">
+            <form data-route="{{ route('about-us.testimonials.update_page') }}" class="non-media">
                 @csrf
                 <div class="form-group py-3">
                     <label for="title-editor">Page Title</label>
@@ -37,7 +37,7 @@
                 Description.
                 According to ContentKing (2021), 155 is a good maximum character length for description. (reference: https://www.contentkingapp.com/academy/meta-description/#:~:text=Meta%20Description%20have%3F-,Length,70%20characters%20or%20430%20pixels)
             -->
-            <form data-route="{{ route('about-us.testimonials.update_page') }}">
+            <form data-route="{{ route('about-us.testimonials.update_page') }}" class="non-media">
                 @csrf
                 <div class="form-group py-3">
                     <label for="description-editor">Page Description</label>
@@ -49,7 +49,7 @@
             <!-- 
                 Keywords
              -->
-            <form data-route="{{ route('about-us.testimonials.update_page') }}">
+            <form data-route="{{ route('about-us.testimonials.update_page') }}" class="non-media">
                 @csrf
                 <div class="form-group py-3">
                     <label for="keywords-editor">Keywords</label>                    
@@ -61,7 +61,7 @@
             <!-- 
                 Author
             -->
-            <form data-route="{{ route('about-us.testimonials.update_page') }}">
+            <form data-route="{{ route('about-us.testimonials.update_page') }}" class="non-media">
                 @csrf
                 <div class="form-group py-3">
                     <label for="author-editor">Author</label>                    
@@ -81,7 +81,7 @@
         </div>
 
         <!-- Heading of Section 1 -->
-        <form data-route="{{ route('about-us.testimonials.update_page') }}">
+        <form data-route="{{ route('about-us.testimonials.update_page') }}" class="non-media">
             @csrf
             <div class="form-group py-3">
                 <label for="sect1-heading">Section Heading/Title</label>                    
@@ -91,7 +91,7 @@
         </form>
         
         <!-- Paragraph 1 -->
-        <form data-route="{{ route('about-us.testimonials.update_page') }}">
+        <form data-route="{{ route('about-us.testimonials.update_page') }}" class="non-media">
             @csrf
             <div class="form-group py-3">
                 <label for="sect1-paragraph1">Paragraph 1</label>
@@ -112,7 +112,7 @@
         </script>
 
         <!-- Paragraph 2 -->
-        <form data-route="{{ route('about-us.testimonials.update_page') }}">
+        <form data-route="{{ route('about-us.testimonials.update_page') }}" class="non-media">
             @csrf
             <div class="form-group py-3">
                 <label for="sect1-paragraph2">Paragraph 2</label>
@@ -133,7 +133,7 @@
         </script>
 
         <!-- Paragraph 3 -->
-        <form data-route="{{ route('about-us.testimonials.update_page') }}">
+        <form data-route="{{ route('about-us.testimonials.update_page') }}" class="non-media">
             @csrf
             <div class="form-group py-3">
                 <label for="sect1-paragraph3">Paragraph 3</label>
@@ -154,7 +154,7 @@
         </script>
 
         <!-- Paragraph 4 -->
-        <form data-route="{{ route('about-us.testimonials.update_page') }}">
+        <form data-route="{{ route('about-us.testimonials.update_page') }}" class="non-media">
             @csrf
             <div class="form-group py-3">
                 <label for="sect1-paragraph4">Paragraph 4</label>
@@ -175,7 +175,7 @@
         </script>
 
          <!-- Image 1 -->
-         <form data-route="{{ route('about-us.testimonials.update_page') }}">
+         <form action="{{ route('about-us.testimonials.store_media_single') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect1-image1" class="form-label">Image 1</label>
@@ -186,7 +186,7 @@
         </form>
 
         <!-- Image 2 -->
-        <form data-route="{{ route('about-us.testimonials.update_page') }}">
+        <form action="{{ route('about-us.testimonials.store_media_single') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect1-image2" class="form-label">Image 2</label>
@@ -197,7 +197,7 @@
         </form>
 
         <!-- Image 3 -->
-        <form data-route="{{ route('about-us.testimonials.update_page') }}">
+        <form action="{{ route('about-us.testimonials.store_media_single') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect1-image3" class="form-label">Image 3</label>
@@ -208,7 +208,7 @@
         </form>
 
         <!-- Image 4 -->
-        <form data-route="{{ route('about-us.testimonials.update_page') }}">
+        <form action="{{ route('about-us.testimonials.store_media_single') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect1-image4" class="form-label">Image 4</label>
@@ -229,7 +229,7 @@
         </div>
 
         <!-- Heading of Section 2 -->
-        <form data-route="{{ route('about-us.testimonials.update_page') }}">
+        <form data-route="{{ route('about-us.testimonials.update_page') }}" class="non-media">
             @csrf
             <div class="form-group py-3">
                 <label for="sect2-heading">Section Heading/Title</label>                    
@@ -239,7 +239,7 @@
         </form>
         
         <!-- Paragraph 1 -->
-        <form data-route="{{ route('about-us.testimonials.update_page') }}">
+        <form data-route="{{ route('about-us.testimonials.update_page') }}" class="non-media">
             @csrf
             <div class="form-group py-3">
                 <label for="sect2-paragraph1">Paragraph 1</label>
@@ -260,7 +260,7 @@
         </script>
 
         <!-- Paragraph 2 -->
-        <form data-route="{{ route('about-us.testimonials.update_page') }}">
+        <form data-route="{{ route('about-us.testimonials.update_page') }}" class="non-media">
             @csrf
             <div class="form-group py-3">
                 <label for="sect2-paragraph2">Paragraph 2</label>
@@ -281,7 +281,7 @@
         </script>
 
         <!-- Paragraph 3 -->
-        <form data-route="{{ route('about-us.testimonials.update_page') }}">
+        <form data-route="{{ route('about-us.testimonials.update_page') }}" class="non-media">
             @csrf
             <div class="form-group py-3">
                 <label for="sect2-paragraph3">Paragraph 3</label>
@@ -302,7 +302,7 @@
         </script>
 
         <!-- Paragraph 4 -->
-        <form data-route="{{ route('about-us.testimonials.update_page') }}">
+        <form data-route="{{ route('about-us.testimonials.update_page') }}" class="non-media">
             @csrf
             <div class="form-group py-3">
                 <label for="sect2-paragraph4">Paragraph 4</label>
@@ -323,7 +323,7 @@
         </script>
 
         <!-- Image 1 -->
-        <form data-route="{{ route('about-us.testimonials.update_page') }}">
+        <form action="{{ route('about-us.testimonials.store_media_single') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect2-image1" class="form-label">Image 1</label>
@@ -334,7 +334,7 @@
         </form>
 
         <!-- Image 2 -->
-        <form data-route="{{ route('about-us.testimonials.update_page') }}">
+        <form action="{{ route('about-us.testimonials.store_media_single') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect2-image2" class="form-label">Image 2</label>
@@ -345,7 +345,7 @@
         </form>
 
         <!-- Image 3 -->
-        <form data-route="{{ route('about-us.testimonials.update_page') }}">
+        <form action="{{ route('about-us.testimonials.store_media_single') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect2-image3" class="form-label">Image 3</label>
@@ -356,7 +356,7 @@
         </form>
 
         <!-- Image 4 -->
-        <form data-route="{{ route('about-us.testimonials.update_page') }}">
+        <form action="{{ route('about-us.testimonials.store_media_single') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect2-image4" class="form-label">Image 4</label>
@@ -377,7 +377,7 @@
         </div>
 
         <!-- Heading of Section 3 -->
-        <form data-route="{{ route('about-us.testimonials.update_page') }}">
+        <form data-route="{{ route('about-us.testimonials.update_page') }}" class="non-media">
             @csrf
             <div class="form-group py-3">
                 <label for="sect3-heading">Section Heading/Title</label>                    
@@ -387,7 +387,7 @@
         </form>
 
         <!-- Name 1 -->
-        <form data-route="{{ route('about-us.testimonials.update_page') }}">
+        <form data-route="{{ route('about-us.testimonials.update_page') }}" class="non-media">
             @csrf
             <div class="form-group py-3">
                 <label for="sect3-name1">Name 1</label>                    
@@ -397,7 +397,7 @@
         </form>
         
         <!-- Paragraph 1 -->
-        <form data-route="{{ route('about-us.testimonials.update_page') }}">
+        <form data-route="{{ route('about-us.testimonials.update_page') }}" class="non-media">
             @csrf
             <div class="form-group py-3">
                 <label for="sect3-paragraph1">Card Testimony 1</label>
@@ -418,7 +418,7 @@
         </script>
 
         <!-- Image 1 of Section 3 -->
-        <form data-route="{{ route('about-us.testimonials.update_page') }}">
+        <form action="{{ route('about-us.testimonials.store_media_single') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect3-image1" class="form-label">Card Image 1</label>
@@ -429,7 +429,7 @@
         </form>
 
         <!-- Name 2 -->
-        <form data-route="{{ route('about-us.testimonials.update_page') }}">
+        <form data-route="{{ route('about-us.testimonials.update_page') }}" class="non-media">
             @csrf
             <div class="form-group py-3">
                 <label for="sect3-name2">Name 2</label>                    
@@ -439,7 +439,7 @@
         </form>
 
         <!-- Paragraph 2 -->
-        <form data-route="{{ route('about-us.testimonials.update_page') }}">
+        <form data-route="{{ route('about-us.testimonials.update_page') }}" class="non-media">
             @csrf
             <div class="form-group py-3">
                 <label for="sect3-paragraph2">Card Testimony 2</label>
@@ -460,7 +460,7 @@
         </script>
 
         <!-- Image 2 of Section 3 -->
-        <form data-route="{{ route('about-us.testimonials.update_page') }}">
+        <form action="{{ route('about-us.testimonials.store_media_single') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect3-image2" class="form-label">Card Image 2</label>
@@ -471,7 +471,7 @@
         </form>
 
         <!-- Name 3 -->
-        <form data-route="{{ route('about-us.testimonials.update_page') }}">
+        <form data-route="{{ route('about-us.testimonials.update_page') }}" class="non-media">
             @csrf
             <div class="form-group py-3">
                 <label for="sect3-name3">Name 3</label>                    
@@ -481,7 +481,7 @@
         </form>
 
         <!-- Paragraph 3 -->
-        <form data-route="{{ route('about-us.testimonials.update_page') }}">
+        <form data-route="{{ route('about-us.testimonials.update_page') }}" class="non-media">
             @csrf
             <div class="form-group py-3">
                 <label for="sect3-paragraph3">Card Testimony 3</label>
@@ -502,7 +502,7 @@
         </script>
 
         <!-- Image 3 of Section 3 -->
-        <form data-route="{{ route('about-us.testimonials.update_page') }}">
+        <form action="{{ route('about-us.testimonials.store_media_single') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect3-image3" class="form-label">Card Image 3</label>
@@ -513,7 +513,7 @@
         </form>
 
         <!-- Name 4 -->
-        <form data-route="{{ route('about-us.testimonials.update_page') }}">
+        <form data-route="{{ route('about-us.testimonials.update_page') }}" class="non-media">
             @csrf
             <div class="form-group py-3">
                 <label for="sect3-name4">Name 4</label>                    
@@ -523,7 +523,7 @@
         </form>
 
         <!-- Paragraph 4 -->
-        <form data-route="{{ route('about-us.testimonials.update_page') }}">
+        <form data-route="{{ route('about-us.testimonials.update_page') }}" class="non-media">
             @csrf
             <div class="form-group py-3">
                 <label for="sect3-paragraph4">Card Testimony 4</label>
@@ -544,7 +544,7 @@
         </script>
 
         <!-- Image 4 of Section 3 -->
-        <form data-route="{{ route('about-us.testimonials.update_page') }}">
+        <form action="{{ route('about-us.testimonials.store_media_single') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect3-image4" class="form-label">Card Image 4</label>
@@ -556,7 +556,7 @@
         <!-- End of Section 3 -->
 
         <!-- Images of Section 3 -->
-        <form data-route="{{ route('about-us.testimonials.update_page') }}">
+        <form action="{{ route('about-us.testimonials.store_media_multiple') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect3-images" class="form-label">Images (Select at least 4 photos)</label>
