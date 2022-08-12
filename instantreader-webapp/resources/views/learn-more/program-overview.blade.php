@@ -197,11 +197,6 @@
         <div class="row py-4 d-flex align-items-center wow fadeInLeft">
             <div class="col-md-6 media-content">
                 <div id="about-basic-carousel" class="carousel slide carousel-fade" data-ride="carousel">
-                    <ol class="carousel-indicators">
-                        <li data-target="#about-basic-carousel" data-slide-to="0" class="active"></li>
-                        <li data-target="#about-basic-carousel" data-slide-to="1"></li>
-                        <li data-target="#about-basic-carousel" data-slide-to="2"></li>
-                    </ol>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <img id="about-basic-image-1" class="d-block w-100" src="{{ url($data->sect2_image1) }}" alt="First slide">
@@ -213,14 +208,6 @@
                             <img id="about-basic-image-3" class="d-block w-100" src="{{ url($data->sect2_image3) }}" alt="Third slide">
                         </div>
                     </div>
-                    <a class="carousel-control-prev" href="#about-basic-carousel" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#about-basic-carousel" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
                 </div>
             </div>
             <div class="col-md-6 text-content">
@@ -253,11 +240,6 @@
             </div>
             <div class="col-md-6 media-content">
                 <div id="about-advanced-carousel" class="carousel slide carousel-fade" data-ride="carousel">
-                    <ol class="carousel-indicators">
-                        <li data-target="#about-advanced-carousel" data-slide-to="0" class="active"></li>
-                        <li data-target="#about-advanced-carousel" data-slide-to="1"></li>
-                        <li data-target="#about-advanced-carousel" data-slide-to="2"></li>
-                    </ol>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <img id="about-advanced-image-1" class="d-block w-100" src="{{ url($data->sect3_image1) }}" alt="First slide">
@@ -269,14 +251,6 @@
                             <img id="about-advanced-image-3" class="d-block w-100" src="{{ url($data->sect3_image3) }}" alt="Third slide">
                         </div>
                     </div>
-                    <a class="carousel-control-prev" href="#about-advanced-carousel" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#about-advanced-carousel" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
                 </div>
             </div>
         </div>
@@ -299,11 +273,6 @@
         <div class="row py-4 d-flex align-items-center wow fadeInLeft">
             <div class="col-md-6 media-content">
                 <div id="about-mastery-carousel" class="carousel slide carousel-fade" data-ride="carousel">
-                    <ol class="carousel-indicators">
-                        <li data-target="#about-mastery-carousel" data-slide-to="0" class="active"></li>
-                        <li data-target="#about-mastery-carousel" data-slide-to="1"></li>
-                        <li data-target="#about-mastery-carousel" data-slide-to="2"></li>
-                    </ol>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <img id="about-mastery-image-1" class="d-block w-100" src="{{ url($data->sect4_image1) }}" alt="First slide">
@@ -315,14 +284,6 @@
                             <img id="about-mastery-image-3" class="d-block w-100" src="{{ url($data->sect4_image3) }}" alt="Third slide">
                         </div>
                     </div>
-                    <a class="carousel-control-prev" href="#about-mastery-carousel" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#about-mastery-carousel" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
                 </div>
             </div>
             <div class="col-md-6 text-content">
@@ -333,7 +294,7 @@
         </div>
         <div class="row py-4">
             <div class="col-md-12">
-                <a href="{{ route('learn-more.reading-assessment') }}" class="card-btn btn btn-large btn-rounded btn-white btn-hvr-pink mt-3">
+                <a href="{{ route('learn-more.reading-assessment') }}" class="card-btn btn btn-large btn-rounded btn-white btn-hvr-blue mt-3">
                     Join Now                    
                 </a>  
             </div>
@@ -362,13 +323,6 @@
         <div class="row py-4 d-flex align-items-center wow fadeInLeft">
             <div class="col-md-6 media-content">
                 <div id="about-compass-carousel" class="carousel slide carousel-fade" data-ride="carousel">
-                    <ol class="carousel-indicators">
-                        <li data-target="#about-compass-carousel" data-slide-to="0" class="active"></li>
-                        <li data-target="#about-compass-carousel" data-slide-to="1"></li>
-                        <li data-target="#about-compass-carousel" data-slide-to="2"></li>
-                        <li data-target="#about-compass-carousel" data-slide-to="3"></li>
-                        <li data-target="#about-compass-carousel" data-slide-to="4"></li>
-                    </ol>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <img id="about-compass-image-1" class="d-block w-100" src="{{ url($data->sect5_image1) }}" alt="First slide">
@@ -386,14 +340,6 @@
                             <img id="about-compass-image-5" class="d-block w-100" src="{{ url($data->sect5_image5) }}" alt="Fifth slide">
                         </div>
                     </div>
-                    <a class="carousel-control-prev" href="#about-compass-carousel" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#about-compass-carousel" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
                 </div>
             </div>
             <div class="col-md-6 text-content">
@@ -404,7 +350,7 @@
         </div>
         <div class="row py-4">
             <div class="col-md-12">
-                <a href="{{ route('learn-more.reading-assessment') }}" class="card-btn btn btn-large btn-rounded btn-white btn-hvr-pink mt-3">
+                <a href="{{ route('learn-more.reading-assessment') }}" class="card-btn btn btn-large btn-rounded btn-white btn-hvr-blue mt-3">
                     Join Now                    
                 </a>  
             </div>
