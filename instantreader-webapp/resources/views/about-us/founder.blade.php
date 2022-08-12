@@ -104,7 +104,7 @@
             <!--Image-->
             <div class="col-lg-6 wow fadeInRight">
                 <div class="half-img mt-4 pt-3 mt-lg-0 pt-lg-0">
-                    <img alt="vector" src="{{ asset('marketing-site/assets/agency/img/blog-news-1.jpg') }}">
+                    <img alt="vector" src="{{ url($data->sect1_image) }}">
                 </div>
             </div>
         </div>
@@ -159,7 +159,7 @@
         <!--Video Row-->
         <div class="row justify-content-center">
             <video class="founder-video" preload="none" controls poster="{{ asset('marketing-site/assets/img/consultation.jpg') }}" playsinline>
-                <source src="{{ asset('marketing-site/assets/agency/img/video.mp4') }}" type="video/mp4">
+                <source src="{{ url($data->sect2_video) }}" type="video/mp4">
             </video>
         </div>
 
@@ -174,7 +174,7 @@
             </div>
             <div class="col-md-6 wow fadeInRight">
                 <div class="mt-2 pt-4 mt-lg-0 pt-lg-0">
-                    <img alt="image" src="{{ asset('marketing-site/assets/agency/img/blog-news-1.jpg') }}">
+                    <img alt="image" src="{{ url($data->sect2_image1) }}">
                 </div>
             </div>
         </div>
@@ -185,7 +185,7 @@
         <div class="row mt-lg-5 pt-4">
             <div class="col-md-6 wow fadeInLeft info2-img">
                 <div class="mt-2 pt-4 mt-lg-0 pt-lg-0">
-                    <img alt="image" src="{{ asset('marketing-site/assets/agency/img/blog-news-1.jpg') }}">
+                    <img alt="image" src="{{ url($data->sect2_image2) }}">
                 </div>
             </div>
             <div class="col-md-6 info2-text">
@@ -213,7 +213,7 @@
             <!--Image-->
             <div class="col-md-6 wow fadeInRight">
                 <div class=" mt-5 pt-4 mt-lg-0 pt-lg-0">
-                    <img alt="image" src="{{ asset('marketing-site/assets/agency/img/blog-news-1.jpg') }}">
+                    <img alt="image" src="{{ url($data->sect3_image) }}">
                 </div>
             </div>
         </div>
@@ -232,7 +232,7 @@
 
         <!--Image Row-->
         <div class="row justify-content-center">
-            <img class="mission-img" alt="image" src="{{ asset('marketing-site/assets/agency/img/blog-news-1.jpg') }}">
+            <img class="mission-img" alt="image" src="{{ url($data->sect4_image) }}">
         </div>
     </div>
 </section>
@@ -257,7 +257,7 @@
             <div class="col-md-6 mb-4 virac-vid">
                 <div class="row justify-content-center">
                     <video class="virac-video" preload="none" controls poster="{{ asset('marketing-site/assets/agency/img/blog-news-1.jpg')}}" playsinline>
-                        <source src="{{ asset('marketing-site/assets/agency/img/video.mp4') }}" type="video/mp4">
+                        <source src="{{ url($data->sect5_video) }}" type="video/mp4">
                     </video>
                 </div>
             </div>
@@ -287,16 +287,24 @@
                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
                     </div>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                        <img src="{{ asset('marketing-site/assets/img/tutor-application.jpg') }}" class="d-block w-100" alt="...">
+                        <img src="{{ url($data->sect5_image1) }}" class="d-block w-100" alt="...">
                         </div>
                         <div class="carousel-item">
-                        <img src="{{ asset('marketing-site/assets/img/consultation.jpg') }}" class="d-block w-100" alt="...">
+                        <img src="{{ url($data->sect5_image2) }}" class="d-block w-100" alt="...">
                         </div>
                         <div class="carousel-item">
-                        <img src="{{ asset('marketing-site/assets/img/tutor-application.jpg') }}" class="d-block w-100" alt="...">
+                        <img src="{{ url($data->sect5_image3) }}" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                        <img src="{{ url($data->sect5_image4) }}" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                        <img src="{{ url($data->sect5_image5) }}" class="d-block w-100" alt="...">
                         </div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">

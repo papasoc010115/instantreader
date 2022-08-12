@@ -39,20 +39,20 @@
         
         <!-- Paragraphs & Images -->
         <div class="row py-5 text-justify">
-            <div class="col-md-6"><img src="{{ asset('marketing-site/assets/agency/img/blog-news-1.jpg') }}" alt="parental concern image"></div>
+            <div class="col-md-6"><img src="{{ url($data->sect1_image1) }}" alt="parental concern image"></div>
             <div class="col-md-6">{!! $data->sect1_para1 !!}</div>
         </div>
         <div class="row py-5 text-justify">
             <div class="col-md-6">{!! $data->sect1_para2 !!}</div>
-            <div class="col-md-6"><img src="{{ asset('marketing-site/assets/agency/img/blog-news-1.jpg') }}" alt="parental concern image"></div>            
+            <div class="col-md-6"><img src="{{ url($data->sect1_image2) }}" alt="parental concern image"></div>            
         </div>
         <div class="row py-5 text-justify">
-            <div class="col-md-6"><img src="{{ asset('marketing-site/assets/agency/img/blog-news-1.jpg') }}" alt="parental concern image"></div>
+            <div class="col-md-6"><img src="{{ url($data->sect1_image3) }}" alt="parental concern image"></div>
             <div class="col-md-6">{!! $data->sect1_para3 !!}</div>
         </div>
         <div class="row py-5 text-justify">
             <div class="col-md-6">{!! $data->sect1_para4 !!}</div>
-            <div class="col-md-6"><img src="{{ asset('marketing-site/assets/agency/img/blog-news-1.jpg') }}" alt="parental concern image"></div>            
+            <div class="col-md-6"><img src="{{ url($data->sect1_image4) }}" alt="parental concern image"></div>            
         </div>
         <!-- Paragraphs & Images End -->
 
@@ -75,20 +75,20 @@
 
         <!-- Paragraphs & Images -->
         <div class="row py-5 text-justify">
-            <div class="col-md-6"><img src="{{ asset('marketing-site/assets/agency/img/blog-news-1.jpg') }}" alt="parental goal image"></div>
+            <div class="col-md-6"><img src="{{ url($data->sect2_image1) }}" alt="parental goal image"></div>
             <div class="col-md-6 text-white">{!! $data->sect2_para1 !!}</div>
         </div>
         <div class="row py-5 text-justify">
             <div class="col-md-6 text-white">{!! $data->sect2_para2 !!}</div>
-            <div class="col-md-6"><img src="{{ asset('marketing-site/assets/agency/img/blog-news-1.jpg') }}" alt="parental goal image"></div>            
+            <div class="col-md-6"><img src="{{ url($data->sect2_image2) }}" alt="parental goal image"></div>            
         </div>
         <div class="row py-5 text-justify">
-            <div class="col-md-6"><img src="{{ asset('marketing-site/assets/agency/img/blog-news-1.jpg') }}" alt="parental goal image"></div>
+            <div class="col-md-6"><img src="{{ url($data->sect2_image3) }}" alt="parental goal image"></div>
             <div class="col-md-6 text-white">{!! $data->sect2_para3 !!}</div>
         </div>
         <div class="row py-5 text-justify">
             <div class="col-md-6 text-white">{!! $data->sect2_para4 !!}</div>
-            <div class="col-md-6"><img src="{{ asset('marketing-site/assets/agency/img/blog-news-1.jpg') }}" alt="parental goal image"></div>            
+            <div class="col-md-6"><img src="{{ url($data->sect2_image4) }}" alt="parental goal image"></div>            
         </div>
         <!-- Paragraphs & Images End -->
     </div>
@@ -112,7 +112,7 @@
         <div class="row py-5 text-center">
             <div class="col-md-3 d-flex align-items-stretch px-3 mb-5">
                 <div class="card shadow">
-                    <img class="card-img-top" src="{{  asset('marketing-site/assets/agency/img/blog-news-2.jpg')  }}" alt="Card image cap">
+                    <img class="card-img-top" src="{{ url($data->sect3_image1) }}" alt="Card image cap">
                     <div class="card-body bg-white">
                         <p class="card-text">{!! $data->sect3_para1 !!}</p>
                     </div>
@@ -121,7 +121,7 @@
             </div>
             <div class="col-md-3 d-flex align-items-stretch px-3 mb-5">
                 <div class="card shadow">
-                    <img class="card-img-top" src="{{  asset('marketing-site/assets/agency/img/blog-news-2.jpg')  }}" alt="Card image cap">
+                    <img class="card-img-top" src="{{ url($data->sect3_image2) }}" alt="Card image cap">
                     <div class="card-body bg-white">
                         <p class="card-text">{!! $data->sect3_para2 !!}</p>
                     </div>
@@ -130,7 +130,7 @@
             </div>
             <div class="col-md-3 d-flex align-items-stretch px-3 mb-5">
                 <div class="card shadow">
-                    <img class="card-img-top" src="{{  asset('marketing-site/assets/agency/img/blog-news-2.jpg')  }}" alt="Card image cap">
+                    <img class="card-img-top" src="{{ url($data->sect3_image3) }}" alt="Card image cap">
                     <div class="card-body bg-white">
                         <p class="card-text">{!! $data->sect3_para3 !!}</p>
                     </div>
@@ -139,7 +139,7 @@
             </div>
             <div class="col-md-3 d-flex align-items-stretch px-3 mb-5">
                 <div class="card shadow">
-                    <img class="card-img-top" src="{{  asset('marketing-site/assets/agency/img/blog-news-2.jpg')  }}" alt="Card image cap">
+                    <img class="card-img-top" src="{{ url($data->sect3_image4) }}" alt="Card image cap">
                     <div class="card-body bg-white">
                         <p class="card-text">{!! $data->sect3_para4 !!}</p>
                     </div>
@@ -152,15 +152,17 @@
         <!-- More Images -->
         <div id="gallery" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
-                <div class="carousel-item active">
-                <img class="d-block w-100" src="{{ asset('marketing-site/assets/img/carousel-filler-img.jpg') }}" alt="First slide">
-                </div>
-                <div class="carousel-item">
-                <img class="d-block w-100" src="{{ asset('marketing-site/assets/img/carousel-filler-img.jpg') }}" alt="Second slide">
-                </div>
-                <div class="carousel-item">
-                <img class="d-block w-100" src="{{ asset('marketing-site/assets/img/carousel-filler-img.jpg') }}" alt="Third slide">
-                </div>
+                @foreach (Illuminate\Support\Facades\Storage::files($data->sect3_images) as $image)
+                    @if ($loop->first){
+                        <div class="carousel-item active">
+                        <img class="d-block w-100" src="{{ url(str_replace('public','storage',$image)) }}" alt="...">
+                        </div>
+                    }
+                    @endif
+                    <div class="carousel-item">
+                    <img class="d-block w-100" src="{{ url(str_replace('public','storage',$image)) }}" alt="...">
+                    </div>
+                @endforeach
             </div>
             <a class="carousel-control-prev" href="#gallery" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>

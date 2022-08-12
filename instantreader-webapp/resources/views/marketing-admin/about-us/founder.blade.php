@@ -24,7 +24,7 @@
                 Page Title. 
                 According to Montti (2021), Moz’s title tag length recommendation is 50 – 60 characters. (reference: https://www.searchenginejournal.com/google-title-tag-length/400682/#close)
             -->
-            <form data-route="{{ route('about-us.founder.update_page') }}">
+            <form data-route="{{ route('about-us.founder.update_page') }}" class="non-media">
                 @csrf
                 <div class="form-group py-3">
                     <label for="title-editor">Page Title</label>
@@ -37,7 +37,7 @@
                 Description.
                 According to ContentKing (2021), 155 is a good maximum character length for description. (reference: https://www.contentkingapp.com/academy/meta-description/#:~:text=Meta%20Description%20have%3F-,Length,70%20characters%20or%20430%20pixels)
             -->
-            <form data-route="{{ route('about-us.founder.update_page') }}">
+            <form data-route="{{ route('about-us.founder.update_page') }}" class="non-media">
                 @csrf
                 <div class="form-group py-3">
                     <label for="description-editor">Page Description</label>
@@ -49,7 +49,7 @@
             <!-- 
                 Keywords
              -->
-            <form data-route="{{ route('about-us.founder.update_page') }}">
+            <form data-route="{{ route('about-us.founder.update_page') }}" class="non-media">
                 @csrf
                 <div class="form-group py-3">
                     <label for="keywords-editor">Keywords</label>                    
@@ -61,7 +61,7 @@
             <!-- 
                 Author
             -->
-            <form data-route="{{ route('about-us.founder.update_page') }}">
+            <form data-route="{{ route('about-us.founder.update_page') }}" class="non-media">
                 @csrf
                 <div class="form-group py-3">
                     <label for="author-editor">Author</label>                    
@@ -81,7 +81,7 @@
         </div>
 
         <!-- Subheading of Section 1 -->
-        <form data-route="{{ route('about-us.founder.update_page') }}">
+        <form data-route="{{ route('about-us.founder.update_page') }}" class="non-media">
             @csrf
             <div class="form-group py-3">
                 <label for="sect1-subheading">Tiny Text Above Section Title</label>                    
@@ -91,7 +91,7 @@
         </form>
 
         <!-- Heading of Section 1 -->
-        <form data-route="{{ route('about-us.founder.update_page') }}">
+        <form data-route="{{ route('about-us.founder.update_page') }}" class="non-media">
             @csrf
             <div class="form-group py-3">
                 <label for="sect1-heading">Section Heading/Title</label>                    
@@ -101,7 +101,7 @@
         </form>
 
         <!-- Paragraph of Section 1 -->
-        <form data-route="{{ route('about-us.founder.update_page') }}">
+        <form data-route="{{ route('about-us.founder.update_page') }}" class="non-media">
             @csrf
             <div class="form-group py-3">
                 <label for="sect1-paragraph">Paragraph</label>
@@ -122,18 +122,18 @@
         </script>
 
         <!-- Image -->
-        <form data-route="{{ route('about-us.founder.update_page') }}">
+        <form action="{{ route('about-us.founder.store_media_single') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect1-image" class="form-label">Image</label>
-                <input required data-fieldtype="media" class="form-control form-control-sm" data-fieldtype="big" name="sect1_image" type="file" id="sect1-image" aria-describedby="sect1ImageHelp" value="{{ $data->teacher_vicki_image }}" >
+                <input required data-fieldtype="media" accept="image/*" class="form-control form-control-sm" name="sect1_image" type="file" id="sect1-image" aria-describedby="sect1ImageHelp" value="{{ $data->sect1_image }}" >
                 <small id="sect1ImageHelp" class="form-text text-muted">Recommended image size: WxH</small>
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
             </div>                
         </form>
 
         <!-- Facebook link -->
-        <form data-route="{{ route('about-us.founder.update_page') }}">
+        <form data-route="{{ route('about-us.founder.update_page') }}" class="non-media">
             @csrf
             <div class="form-group py-3">
                 <label for="sect1-fb">Facebook Link</label>                    
@@ -143,7 +143,7 @@
         </form>
 
         <!-- Twitter link -->
-        <form data-route="{{ route('about-us.founder.update_page') }}">
+        <form data-route="{{ route('about-us.founder.update_page') }}" class="non-media">
             @csrf
             <div class="form-group py-3">
                 <label for="sect1-twt">Twitter Link</label>                    
@@ -153,7 +153,7 @@
         </form>
 
         <!-- Instagram link -->
-        <form data-route="{{ route('about-us.founder.update_page') }}">
+        <form data-route="{{ route('about-us.founder.update_page') }}" class="non-media">
             @csrf
             <div class="form-group py-3">
                 <label for="sect1-ig">Instagram Link</label>                    
@@ -173,7 +173,7 @@
         </div>
 
         <!-- Heading of Section 2 -->
-        <form data-route="{{ route('about-us.founder.update_page') }}">
+        <form data-route="{{ route('about-us.founder.update_page') }}" class="non-media">
             @csrf
             <div class="form-group py-3">
                 <label for="sect2-heading">Section Heading/Title</label>                    
@@ -183,7 +183,7 @@
         </form>
 
         <!-- Paragraph 1 -->
-        <form data-route="{{ route('about-us.founder.update_page') }}">
+        <form data-route="{{ route('about-us.founder.update_page') }}" class="non-media">
             @csrf
             <div class="form-group py-3">
                 <label for="sect2-paragraph1">Paragraph 1</label>
@@ -204,7 +204,7 @@
         </script>
 
         <!-- Paragraph 2 -->
-        <form data-route="{{ route('about-us.founder.update_page') }}">
+        <form data-route="{{ route('about-us.founder.update_page') }}" class="non-media">
             @csrf
             <div class="form-group py-3">
                 <label for="sect2-paragraph2">Paragraph 2</label>
@@ -225,33 +225,33 @@
         </script>
 
         <!-- Image 1 -->
-        <form data-route="{{ route('about-us.founder.update_page') }}">
+        <form action="{{ route('about-us.founder.store_media_single') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect2-image1" class="form-label">Image 1</label>
-                <input required data-fieldtype="media" class="form-control form-control-sm" data-fieldtype="big" name="sect2_image1" type="file" id="sect2-image1" aria-describedby="sect2Image1Help" value="{{ $data->sect2_image1 }}">
+                <input required data-fieldtype="media" accept="image/*" class="form-control form-control-sm" name="sect2_image1" type="file" id="sect2-image1" aria-describedby="sect2Image1Help" value="{{ $data->sect2_image1 }}">
                 <small id="sect2Image1Help" class="form-text text-muted">Recommended image size: WxH</small>
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
             </div>                
         </form>
 
         <!-- Image 2 -->
-        <form data-route="{{ route('about-us.founder.update_page') }}">
+        <form action="{{ route('about-us.founder.store_media_single') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect2-image2" class="form-label">Image 2</label>
-                <input required data-fieldtype="media" class="form-control form-control-sm" data-fieldtype="big" name="sect2_image2" type="file" id="sect2-image2" aria-describedby="sect2Image2Help" value="{{ $data->sect2_image2 }}">
+                <input required data-fieldtype="media" accept="image/*" class="form-control form-control-sm" name="sect2_image2" type="file" id="sect2-image2" aria-describedby="sect2Image2Help" value="{{ $data->sect2_image2 }}">
                 <small id="sect2Image2Help" class="form-text text-muted">Recommended image size: WxH</small>
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
             </div>                
         </form>
 
         <!-- Video -->
-        <form data-route="{{ route('about-us.founder.update_page') }}">
+        <form action="{{ route('about-us.founder.store_media_single') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect2-video" class="form-label">Video</label>
-                <input required data-fieldtype="media" class="form-control form-control-sm" type="file" name="sect2_video" id="sect2-video" aria-describedby="sect2VideoHelp" value="{{ $data->sect3_video }}">
+                <input required data-fieldtype="media" accept="video/*" class="form-control form-control-sm" type="file" name="sect2_video" id="sect2-video" aria-describedby="sect2VideoHelp" value="{{ $data->sect3_video }}">
                 <small id="sect2VideoHelp" class="form-text text-muted">Recommended video size: WxH</small>
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
             </div>                
@@ -268,7 +268,7 @@
         </div>
 
         <!-- Heading of Section 3 -->
-        <form data-route="{{ route('about-us.founder.update_page') }}">
+        <form data-route="{{ route('about-us.founder.update_page') }}" class="non-media">
             @csrf
             <div class="form-group py-3">
                 <label for="sect3-heading">Section Heading/Title</label>                    
@@ -278,11 +278,11 @@
         </form>
 
         <!-- Paragraph -->
-        <form data-route="{{ route('about-us.founder.update_page') }}"">
+        <form data-route="{{ route('about-us.founder.update_page') }}" class="non-media">
             @csrf
             <div class="form-group py-3">
                 <label for="sect3-paragraph">Paragraph</label>
-                <textarea data-fieldtype="tiny" class="form-control" name="sect3_para" aria-describedby="sect3ParagraphHelp" id="sect3-paragraph" value="{{ $data->sect3_para }}"></textarea>
+                <textarea data-fieldtype="tiny" class="form-control" name="sect3_para" aria-describedby="sect3ParagraphHelp" id="sect3-paragraph">{{ $data->sect3_para }}</textarea>
                 <small id="sect3ParagraphHelp" class="form-text text-muted">Recommended length: 5-10 sentences</small>
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
             </div>
@@ -299,11 +299,11 @@
         </script>
 
         <!-- Image -->
-        <form data-route="{{ route('about-us.founder.update_page') }}">
+        <form action="{{ route('about-us.founder.store_media_single') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect3-image" class="form-label">Image</label>
-                <input required data-fieldtype="media" class="form-control form-control-sm" data-fieldtype="big" name="sect3_image" type="file" id="sect3-image" aria-describedby="sect3ImageHelp" value="{{ $data->sect3_image }}">
+                <input required data-fieldtype="media" accept="image/*" class="form-control form-control-sm" name="sect3_image" type="file" id="sect3-image" aria-describedby="sect3ImageHelp" value="{{ $data->sect3_image }}">
                 <small id="sect3ImageHelp" class="form-text text-muted">Recommended image size: WxH</small>
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
             </div>                
@@ -320,7 +320,7 @@
         </div>
 
         <!-- Heading of Section 4 -->
-        <form data-route="{{ route('about-us.founder.update_page') }}">
+        <form data-route="{{ route('about-us.founder.update_page') }}" class="non-media">
             @csrf
             <div class="form-group py-3">
                 <label for="sect4-heading">Section Heading/Title</label>                    
@@ -330,11 +330,11 @@
         </form>
 
         <!-- Paragraph -->
-        <form data-route="{{ route('about-us.founder.update_page') }}">
+        <form data-route="{{ route('about-us.founder.update_page') }}" class="non-media">
             @csrf
             <div class="form-group py-3">
                 <label for="sect4-statement">Statement</label>
-                <textarea data-fieldtype="big" class="form-control" name="sect4_para" id="sect4-paragraph" aria-describedby="sect4ParagraphHelp" value="{{ $data->sect4_para }}"></textarea>
+                <textarea data-fieldtype="big" class="form-control" name="sect4_para" id="sect4-paragraph" aria-describedby="sect4ParagraphHelp">{{ $data->sect4_para }}</textarea>
                 <small id="sect4ParagraphHelp" class="form-text text-muted">Recommended length: 1 sentence</small>
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
             </div>
@@ -351,11 +351,11 @@
         </script>
 
         <!-- Image -->
-        <form data-route="{{ route('about-us.founder.update_page') }}">
+        <form action="{{ route('about-us.founder.store_media_single') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect4-image" class="form-label">Image</label>
-                <input required data-fieldtype="media" class="form-control form-control-sm" data-fieldtype="big" name="sect4_image" type="file" id="sect4-image" aria-describedby="sect4ImageHelp" value="{{ $data->sect4_image }}">
+                <input required data-fieldtype="media" accept="image/*" class="form-control form-control-sm" name="sect4_image" type="file" id="sect4-image" aria-describedby="sect4ImageHelp" value="{{ $data->sect4_image }}">
                 <small id="sect4ImageHelp" class="form-text text-muted">Recommended image size: WxH</small>
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
             </div>                
@@ -372,7 +372,7 @@
         </div>
 
         <!-- Heading of Section 5 -->
-        <form data-route="{{ route('about-us.founder.update_page') }}">
+        <form data-route="{{ route('about-us.founder.update_page') }}" class="non-media">
             @csrf
             <div class="form-group py-3">
                 <label for="sect5-heading">Section Heading/Title</label>                    
@@ -382,11 +382,11 @@
         </form>
 
         <!-- Paragraph 1 -->
-        <form data-route="{{ route('about-us.founder.update_page') }}">
+        <form data-route="{{ route('about-us.founder.update_page') }}" class="non-media">
             @csrf
             <div class="form-group py-3">
                 <label for="sect5-paragraph1">Paragraph 1</label>
-                <textarea data-fieldtype="tiny" class="form-control" id="sect5-paragraph1" name="sect5_para1" aria-describedby="sect5Paragraph1Help" value="{{  $data->sect5_para1 }}"></textarea>
+                <textarea data-fieldtype="tiny" class="form-control" id="sect5-paragraph1" name="sect5_para1" aria-describedby="sect5Paragraph1Help">{{  $data->sect5_para1 }}</textarea>
                 <small id="sect5Paragraph1Help" class="form-text text-muted">Recommended length: 3-5 sentences</small>
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
             </div>
@@ -403,11 +403,11 @@
         </script>
 
         <!-- Paragraph 2 -->
-        <form data-route="{{ route('about-us.founder.update_page') }}">
+        <form data-route="{{ route('about-us.founder.update_page') }}" class="non-media">
             @csrf
             <div class="form-group py-3">
                 <label for="sect5-paragraph2">Paragraph 2</label>
-                <textarea data-fieldtype="tiny" class="form-control" id="sect5-paragraph2" name="sect5_para2" aria-describedby="sect5Paragraph2Help" value="{{ $data->sect5_para2 }}"></textarea>
+                <textarea data-fieldtype="tiny" class="form-control" id="sect5-paragraph2" name="sect5_para2" aria-describedby="sect5Paragraph2Help">{{ $data->sect5_para2 }}</textarea>
                 <small id="sect5Paragraph2Help" class="form-text text-muted">Recommended length: 3-5 sentences</small>
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
             </div>
@@ -424,66 +424,66 @@
         </script>
 
         <!-- Image 1 -->
-        <form data-route="{{ route('learn-more.reading-programs.update_page') }}">
+        <form action="{{ route('about-us.founder.store_media_single') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect5-image1" class="form-label">Image 1</label>
-                <input required data-fieldtype="media" class="form-control form-control-sm" type="file" name="sect5_image1" id="sect5-image1" aria-describedby="sect5Image1Help" value="{{ $data->sect5_image1 }}">
+                <input required data-fieldtype="media" accept="image/*" class="form-control form-control-sm" type="file" name="sect5_image1" id="sect5-image1" aria-describedby="sect5Image1Help" value="{{ $data->sect5_image1 }}">
                 <small id="sect5Image1Help" class="form-text text-muted">Recommended image size: WxH</small>
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
             </div>                
         </form>
 
         <!-- Image 2 -->
-        <form data-route="{{ route('learn-more.reading-programs.update_page') }}">
+        <form action="{{ route('about-us.founder.store_media_single') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect5-image2" class="form-label">Image 2</label>
-                <input required data-fieldtype="media" class="form-control form-control-sm" type="file" name="sect5_image2" id="sect5-image2" aria-describedby="sect5Image2Help" value="{{ $data->sect5_image2 }}">
+                <input required data-fieldtype="media" accept="image/*" class="form-control form-control-sm" type="file" name="sect5_image2" id="sect5-image2" aria-describedby="sect5Image2Help" value="{{ $data->sect5_image2 }}">
                 <small id="sect5Image2Help" class="form-text text-muted">Recommended image size: WxH</small>
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
             </div>                
         </form>
 
         <!-- Image 3 -->
-        <form data-route="{{ route('learn-more.reading-programs.update_page') }}">
+        <form action="{{ route('about-us.founder.store_media_single') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect5-image3" class="form-label">Image 3</label>
-                <input required data-fieldtype="media" class="form-control form-control-sm" type="file" name="sect5_image3" id="sect5-image3" aria-describedby="sect5Image3Help" value="{{ $data->sect5_image3 }}">
+                <input required data-fieldtype="media" accept="image/*" class="form-control form-control-sm" type="file" name="sect5_image3" id="sect5-image3" aria-describedby="sect5Image3Help" value="{{ $data->sect5_image3 }}">
                 <small id="sect5Image3Help" class="form-text text-muted">Recommended image size: WxH</small>
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
             </div>                
         </form>
 
         <!-- Image 4 -->
-        <form data-route="{{ route('learn-more.reading-programs.update_page') }}">
+        <form action="{{ route('about-us.founder.store_media_single') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect5-image4" class="form-label">Image 4</label>
-                <input required data-fieldtype="media" class="form-control form-control-sm" type="file" name="sect5_image4" id="sect5-image4" aria-describedby="sect5Image4Help" value="{{ $data->sect5_image4 }}">
+                <input required data-fieldtype="media" accept="image/*" class="form-control form-control-sm" type="file" name="sect5_image4" id="sect5-image4" aria-describedby="sect5Image4Help" value="{{ $data->sect5_image4 }}">
                 <small id="sect5Image4Help" class="form-text text-muted">Recommended image size: WxH</small>
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
             </div>                
         </form>
 
         <!-- Image 5 -->
-        <form data-route="{{ route('learn-more.reading-programs.update_page') }}">
+        <form action="{{ route('about-us.founder.store_media_single') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect5-image5" class="form-label">Image 5</label>
-                <input required data-fieldtype="media" class="form-control form-control-sm" type="file" name="sect5_image5" id="sect5-image5" aria-describedby="sect5Image5Help" value="{{ $data->sect5_image5 }}">
+                <input required data-fieldtype="media" accept="image/*" class="form-control form-control-sm" type="file" name="sect5_image5" id="sect5-image5" aria-describedby="sect5Image5Help" value="{{ $data->sect5_image5 }}">
                 <small id="sect5Image5Help" class="form-text text-muted">Recommended image size: WxH</small>
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
             </div>                
         </form>
 
         <!-- Video -->
-        <form data-route="{{ route('about-us.founder.update_page') }}">
+        <form action="{{ route('about-us.founder.store_media_single') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect5-video" class="form-label">Video</label>
-                <input required data-fieldtype="media" class="form-control form-control-sm" type="file" name="sect5_video" id="sect5-video" aria-describedby="sect5VideoHelp" value="{{ $data->sect5_video }}">
+                <input required data-fieldtype="media" accept="video/*" class="form-control form-control-sm" type="file" name="sect5_video" id="sect5-video" aria-describedby="sect5VideoHelp" value="{{ $data->sect5_video }}">
                 <small id="sect5VideoHelp" class="form-text text-muted">Recommended video size: WxH</small>
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
             </div>                
@@ -491,5 +491,16 @@
         <!-- End of Section 5 -->
     </section>
 </div>
+
+<script>
+    // Checks if the upload of a file is successful
+    if ("{{ Session::has('upload_media_success') }}") {
+        alert("{{ Session::get('upload_media_success') }}");
+    }
+     // Checks if the upload of a file failed
+     if ("{{ Session::has('upload_media_fail') }}") {
+        alert("{{ Session::get('upload_media_fail') }}");
+    }
+</script>
 
 @endsection

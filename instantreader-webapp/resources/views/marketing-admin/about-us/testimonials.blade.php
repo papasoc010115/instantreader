@@ -179,7 +179,7 @@
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect1-image1" class="form-label">Image 1</label>
-                <input  required data-fieldtype="media" class="form-control form-control-sm" name="sect1_image1" type="file" id="sect1-image1" aria-describedby="sect1Image1Help" value="{{ $data->sect1_image1 }}">
+                <input  required data-fieldtype="media" accept="image/*" class="form-control form-control-sm" name="sect1_image1" type="file" id="sect1-image1" aria-describedby="sect1Image1Help" value="{{ $data->sect1_image1 }}">
                 <small id="sect1Image1Help" class="form-text text-muted">Recommended image size: WxH</small>
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
             </div>                
@@ -190,7 +190,7 @@
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect1-image2" class="form-label">Image 2</label>
-                <input  required data-fieldtype="media" class="form-control form-control-sm" name="sect1_image2" type="file" id="sect1-image2" aria-describedby="sect1Image2Help" value="{{ $data->sect1_image2 }}">
+                <input  required data-fieldtype="media" accept="image/*" class="form-control form-control-sm" name="sect1_image2" type="file" id="sect1-image2" aria-describedby="sect1Image2Help" value="{{ $data->sect1_image2 }}">
                 <small id="sect1Image2Help" class="form-text text-muted">Recommended image size: WxH</small>
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
             </div>                
@@ -201,7 +201,7 @@
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect1-image3" class="form-label">Image 3</label>
-                <input  required data-fieldtype="media" class="form-control form-control-sm"  name="sect1_image3" type="file" id="sect1-image3" aria-describedby="sect1Image3Help" value="{{ $data->sect1_image3 }}">
+                <input  required data-fieldtype="media" accept="image/*" class="form-control form-control-sm"  name="sect1_image3" type="file" id="sect1-image3" aria-describedby="sect1Image3Help" value="{{ $data->sect1_image3 }}">
                 <small id="sect1Image3Help" class="form-text text-muted">Recommended image size: WxH</small>
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
             </div>                
@@ -212,7 +212,7 @@
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect1-image4" class="form-label">Image 4</label>
-                <input  required data-fieldtype="media" class="form-control form-control-sm" name="sect1_image4" type="file" id="sect1-image4" aria-describedby="sect1Image4Help" value="{{ $data->sect1_image4 }}">
+                <input  required data-fieldtype="media" accept="image/*" class="form-control form-control-sm" name="sect1_image4" type="file" id="sect1-image4" aria-describedby="sect1Image4Help" value="{{ $data->sect1_image4 }}">
                 <small id="sect1Image4Help" class="form-text text-muted">Recommended image size: WxH</small>
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
             </div>                
@@ -327,7 +327,7 @@
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect2-image1" class="form-label">Image 1</label>
-                <input required data-fieldtype="media" class="form-control form-control-sm" data-fieldtype="big" name="sect2_image1" type="file" id="sect2-image1" aria-describedby="sect2Image1Help" value="{{ $data->sect2_image1 }}">
+                <input required data-fieldtype="media" accept="image/*" class="form-control form-control-sm" name="sect2_image1" type="file" id="sect2-image1" aria-describedby="sect2Image1Help" value="{{ $data->sect2_image1 }}">
                 <small id="sect2Image1Help" class="form-text text-muted">Recommended image size: WxH</small>
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
             </div>                
@@ -338,7 +338,7 @@
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect2-image2" class="form-label">Image 2</label>
-                <input required data-fieldtype="media" class="form-control form-control-sm" data-fieldtype="big" name="sect2_image2" type="file" id="sect2-image2" aria-describedby="sect2Image2Help" value="{{ $data->sect2_image2 }}">
+                <input required data-fieldtype="media" accept="image/*" class="form-control form-control-sm" name="sect2_image2" type="file" id="sect2-image2" aria-describedby="sect2Image2Help" value="{{ $data->sect2_image2 }}">
                 <small id="sect2Image2Help" class="form-text text-muted">Recommended image size: WxH</small>
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
             </div>                
@@ -349,7 +349,7 @@
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect2-image3" class="form-label">Image 3</label>
-                <input required data-fieldtype="media" class="form-control form-control-sm" data-fieldtype="big" name="sect2_image3" type="file" id="sect2-image3" aria-describedby="sect2Image3Help" value="{{ $data->sect2_image3 }}">
+                <input required data-fieldtype="media" accept="image/*" class="form-control form-control-sm" name="sect2_image3" type="file" id="sect2-image3" aria-describedby="sect2Image3Help" value="{{ $data->sect2_image3 }}">
                 <small id="sect2Image3Help" class="form-text text-muted">Recommended image size: WxH</small>
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
             </div>                
@@ -360,7 +360,7 @@
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect2-image4" class="form-label">Image 4</label>
-                <input required data-fieldtype="media" class="form-control form-control-sm" data-fieldtype="big" name="sect2_image4" type="file" id="sect2-image4" aria-describedby="sect2Image4Help" value="{{ $data->sect2_image4 }}">
+                <input required data-fieldtype="media" accept="image/*" class="form-control form-control-sm" name="sect2_image4" type="file" id="sect2-image4" aria-describedby="sect2Image4Help" value="{{ $data->sect2_image4 }}">
                 <small id="sect2Image4Help" class="form-text text-muted">Recommended image size: WxH</small>
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
             </div>                
@@ -370,7 +370,7 @@
         <br><br><br>
 
         <!-- Section 3: Testimonials Gallery -->
-         <div class="row">
+        <div class="row">
             <div class="col-lg-12">
                 <h2>Section 3: Testimonials Gallery</h2>
             </div>
@@ -422,7 +422,7 @@
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect3-image1" class="form-label">Card Image 1</label>
-                <input required data-fieldtype="media" class="form-control form-control-sm" name="sect3_image1" type="file" id="sect3-image1" aria-describedby="sect3Image1Help" value="{{ $data->sect3_image1 }}">
+                <input required data-fieldtype="media" accept="image/*" class="form-control form-control-sm" name="sect3_image1" type="file" id="sect3-image1" aria-describedby="sect3Image1Help" value="{{ $data->sect3_image1 }}">
                 <small id="sect3Image1Help" class="form-text text-muted">Recommended image size: WxH</small>
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
             </div>                
@@ -464,7 +464,7 @@
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect3-image2" class="form-label">Card Image 2</label>
-                <input required data-fieldtype="media" class="form-control form-control-sm" name="sect3_image2" type="file" id="sect3-image2" aria-describedby="sect3Image2Help" value="{{ $data->sect3_image2 }}">
+                <input required data-fieldtype="media" accept="image/*" class="form-control form-control-sm" name="sect3_image2" type="file" id="sect3-image2" aria-describedby="sect3Image2Help" value="{{ $data->sect3_image2 }}">
                 <small id="sect3Image2Help" class="form-text text-muted">Recommended image size: WxH</small>
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
             </div>                
@@ -506,7 +506,7 @@
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect3-image3" class="form-label">Card Image 3</label>
-                <input required data-fieldtype="media" class="form-control form-control-sm" name="sect3_image3" type="file" id="sect3-image3" aria-describedby="sect3Image3Help" value="{{ $data->sect3_image3 }}">
+                <input required data-fieldtype="media" accept="image/*" class="form-control form-control-sm" name="sect3_image3" type="file" id="sect3-image3" aria-describedby="sect3Image3Help" value="{{ $data->sect3_image3 }}">
                 <small id="sect3Image3Help" class="form-text text-muted">Recommended image size: WxH</small>
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
             </div>                
@@ -548,7 +548,7 @@
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect3-image4" class="form-label">Card Image 4</label>
-                <input required data-fieldtype="media" class="form-control form-control-sm" name="sect3_image4" type="file" id="sect3-image4" aria-describedby="sect3Image4Help" value="{{ $data->sect3_image4 }}">
+                <input required data-fieldtype="media" accept="image/*" class="form-control form-control-sm" name="sect3_image4" type="file" id="sect3-image4" aria-describedby="sect3Image4Help" value="{{ $data->sect3_image4 }}">
                 <small id="sect3Image4Help" class="form-text text-muted">Recommended image size: WxH</small>
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
             </div>                
@@ -560,7 +560,7 @@
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect3-images" class="form-label">Images (Select at least 4 photos)</label>
-                <input required data-fieldtype="media" class="form-control form-control-sm" name="sect3_images" type="file" id="sect3-images" aria-describedby="sect3ImagesHelp" multiple value="{{ $data->sect3_images }}">
+                <input required data-fieldtype="media" accept="image/*" class="form-control form-control-sm" name="sect3_images[]" type="file" id="sect3-images" aria-describedby="sect3ImagesHelp" multiple value="{{ $data->sect3_images }}">
                 <small id="sect3ImagesHelp" class="form-text text-muted">Recommended image size: WxH</small>
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
             </div>                
@@ -568,5 +568,16 @@
         <!-- End of Section 3 -->
     </section>
 </div>
+
+<script>
+    // Checks if the upload of a file is successful
+    if ("{{ Session::has('upload_media_success') }}") {
+        alert("{{ Session::get('upload_media_success') }}");
+    }
+     // Checks if the upload of a file failed
+     if ("{{ Session::has('upload_media_fail') }}") {
+        alert("{{ Session::get('upload_media_fail') }}");
+    }
+</script>
 
 @endsection
