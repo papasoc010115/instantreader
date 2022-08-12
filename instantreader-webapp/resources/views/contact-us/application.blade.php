@@ -190,7 +190,7 @@
 
                     <!-- Captcha Field -->
                     <div class="row mb-4">
-                        <div class="col-md-12 d-flex justify-content-center">
+                        <div class="col-md-12 d-flex justify-content-start">
                             <div class="g-recaptcha" data-sitekey="6LdtbighAAAAAHhWzmWkWwkT53HNEcL5CPxg9PN_"></div>
                         </div>
                     </div>

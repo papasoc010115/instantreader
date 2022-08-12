@@ -89,8 +89,8 @@
         <h2 class="hide-cursor">Reading Programs</h2>
         <ul class="page-breadcrumb link">
             <li>
-                <a href="{{ route('learn-more.reading-assessment') }}" class="card-btn btn btn-large btn-rounded btn-pink btn-hvr-blue mt-3">
-                    Join the program                    
+                <a href="{{ route('learn-more.reading-assessment') }}" class="card-btn btn btn-large btn-rounded btn-white btn-hvr-blue mt-3">
+                    Join Now                    
                 </a>
             </li>
         </ul>
@@ -231,8 +231,8 @@
         </div>
         <div class="row py-4">
             <div class="col-md-12">
-                <a href="{{ route('learn-more.reading-assessment') }}" class="card-btn btn btn-xlarge btn-rounded btn-pink btn-hvr-blue mt-3">
-                    Join Basic Program                    
+                <a href="{{ route('learn-more.reading-assessment') }}" class="card-btn btn btn-large btn-rounded btn-white btn-hvr-blue mt-3">
+                    Join Now                    
                 </a>  
             </div>
         </div>
@@ -282,8 +282,8 @@
         </div>
         <div class="row py-4">
             <div class="col-md-12">
-                <a href="{{ route('learn-more.reading-assessment') }}" class="card-btn btn btn-xlarge btn-rounded btn-pink btn-hvr-blue mt-3">
-                    Join Advanced Program                    
+                <a href="{{ route('learn-more.reading-assessment') }}" class="card-btn btn btn-large btn-rounded btn-white btn-hvr-blue mt-3">
+                    Join Now                    
                 </a>  
             </div>
         </div>
@@ -333,8 +333,8 @@
         </div>
         <div class="row py-4">
             <div class="col-md-12">
-                <a href="{{ route('learn-more.reading-assessment') }}" class="card-btn btn btn-xlarge btn-rounded btn-blue btn-hvr-pink mt-3">
-                    Join Mastery Program                    
+                <a href="{{ route('learn-more.reading-assessment') }}" class="card-btn btn btn-large btn-rounded btn-white btn-hvr-pink mt-3">
+                    Join Now                    
                 </a>  
             </div>
         </div>
@@ -404,8 +404,8 @@
         </div>
         <div class="row py-4">
             <div class="col-md-12">
-                <a href="{{ route('learn-more.reading-assessment') }}" class="card-btn btn btn-xlarge btn-rounded btn-blue btn-hvr-pink mt-3">
-                    Join COMPASS Program                    
+                <a href="{{ route('learn-more.reading-assessment') }}" class="card-btn btn btn-large btn-rounded btn-white btn-hvr-pink mt-3">
+                    Join Now                    
                 </a>  
             </div>
         </div>
