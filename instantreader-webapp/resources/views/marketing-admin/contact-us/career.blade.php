@@ -153,22 +153,22 @@
             </script>
 
             <!-- Image 1 -->
-            <form action="{{ route('contact-us.career.update_media_single') }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ route('contact-us.career.store_media_single') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="mb-3 py-3">
                     <label for="sect1-image1" class="form-label">Image 1</label>
-                    <input required data-fieldtype="media" class="form-control form-control-sm" data-fieldtype="big" name="sect1_image1" type="file" id="sect1-image1" aria-describedby="sect1Image1Help" value="{{ $data->sect1_image1 }}">
+                    <input required data-fieldtype="media" class="form-control form-control-sm" name="sect1_image1" type="file" id="sect1-image1" aria-describedby="sect1Image1Help" value="{{ $data->sect1_image1 }}">
                     <small id="sect1Image1Help" class="form-text text-muted">Recommended image size: WxH</small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
                 </div>                
             </form>
 
             <!-- Image 2 -->
-            <form action="{{ route('contact-us.career.update_media_single) }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ route('contact-us.career.store_media_single') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="mb-3 py-3">
                     <label for="sect1-image2" class="form-label">Image 2</label>
-                    <input required data-fieldtype="media" class="form-control form-control-sm" data-fieldtype="big" name="sect1_image2" type="file" id="sect1-image2" aria-describedby="sect1Image2Help" value="{{ $data->sect1_image2 }}">
+                    <input required data-fieldtype="media" class="form-control form-control-sm" name="sect1_image2" type="file" id="sect1-image2" aria-describedby="sect1Image2Help" value="{{ $data->sect1_image2 }}">
                     <small id="sect1Image2Help" class="form-text text-muted">Recommended image size: WxH</small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
                 </div>                
@@ -177,4 +177,16 @@
         </div>
     </section>
 </div>
+
+<script>
+    // Checks if the upload of a file is successful
+    if ("{{ Session::has('upload_media_success') }}") {
+        alert("{{ Session::get('upload_media_success') }}");
+    }
+     // Checks if the upload of a file failed
+     if ("{{ Session::has('upload_media_fail') }}") {
+        alert("{{ Session::get('upload_media_fail') }}");
+    }
+</script>
+
 @endsection
