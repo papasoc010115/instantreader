@@ -153,15 +153,15 @@
         <div id="gallery" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 @foreach (Illuminate\Support\Facades\Storage::files($data->sect3_images) as $image)
-                    @if ($loop->first){
+                    @if ($loop->first)
                         <div class="carousel-item active">
                         <img class="d-block w-100" src="{{ url(str_replace('public','storage',$image)) }}" alt="...">
                         </div>
-                    }
+                    @else
+                        <div class="carousel-item">
+                        <img class="d-block w-100" src="{{ url(str_replace('public','storage',$image)) }}" alt="...">
+                        </div>
                     @endif
-                    <div class="carousel-item">
-                    <img class="d-block w-100" src="{{ url(str_replace('public','storage',$image)) }}" alt="...">
-                    </div>
                 @endforeach
             </div>
             <a class="carousel-control-prev" href="#gallery" role="button" data-slide="prev">

@@ -290,17 +290,26 @@
             <!-- Carousel -->
             <div class="col-md-7 mb-3">
                 <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        @foreach (Illuminate\Support\Facades\Storage::files($data->sect4_images) as $index=>$image)
+                            @if ($loop->first)
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{ $index }}" class="active" aria-current="true" aria-label="Slide {{ $index }}"></button>
+                            @else
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{ $index }}" aria-label="Slide {{ $index }}"></button>
+                            @endif
+                        @endforeach
+                    </div>
                     <div class="carousel-inner">
                         @foreach (Illuminate\Support\Facades\Storage::files($data->sect4_images) as $image)
-                            @if ($loop->first){
+                            @if ($loop->first)
                                 <div class="carousel-item active">
                                 <img src="{{ url(str_replace('public','storage',$image)) }}" class="d-block w-100" alt="...">
                                 </div>
-                            }
+                            @else
+                                <div class="carousel-item">
+                                <img src="{{ url(str_replace('public','storage',$image)) }}" class="d-block w-100" alt="...">
+                                </div>
                             @endif
-                            <div class="carousel-item">
-                            <img src="{{ url(str_replace('public','storage',$image)) }}" class="d-block w-100" alt="...">
-                            </div>
                         @endforeach
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
