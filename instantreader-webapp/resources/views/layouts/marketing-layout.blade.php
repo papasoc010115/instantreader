@@ -51,8 +51,8 @@
         <div class="sidebar-profile text-white">
             <img src="{{ asset('marketing-site/assets/agency/img/default-profile-pic.png') }}" class="profile-pic" />
             <h6 class="user-title">Guest</h6>
-            <span><a class="alt-font sidebar-button" href="{{ route('account.log-in') }}">Log In</a></span>
-            <span><a class="alt-font sidebar-button" href="{{ route('account.sign-up') }}">Sign Up</a></span>
+            <span><a class="alt-font link sidebar-button" href="{{ route('account.log-in') }}">Log In</a></span>
+            <span><a class="alt-font link sidebar-button" href="{{ route('account.sign-up') }}">Sign Up</a></span>
         </div>
 
         <hr class="sidebar-divider">

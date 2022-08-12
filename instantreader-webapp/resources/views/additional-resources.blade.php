@@ -41,13 +41,6 @@
     </div>
     <div class="auto-container">
         <h2 class="hide-cursor">Additional Resources</h2>
-        <ul class="page-breadcrumb link">
-            <li>
-                <i>
-                   Subtitle
-                </i>
-            </li>
-        </ul>
     </div>
 </section>
 <!--Banner End-->
