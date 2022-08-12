@@ -203,7 +203,7 @@
 <section id="welcome-section" class="page-title cursor-light p-0">
     <div class="auto-container">
         <h2 class="hide-cursor px-3" id="welcome-title">{{ $data->sect1_heading }}</h2>
-        <p class="text-white px-3" id="welcome-paragraph">{!! $data->sect1_para !!}</p>
+        <p class="text-white px-5" id="welcome-paragraph">{!! $data->sect1_para !!}</p>
     </div>
 </section>
 <!--WELCOME End-->
@@ -672,7 +672,7 @@
             <div class="col-xl-6 wow fadeInRight py-5 enroll-now-detail">
                 <div class="heading-area">
                     <h1 id="enroll-now-heading" class="alt-color font-weight-bold">{{ $data->sect8_heading }}</h1>
-                    <p id="enroll-now-paragraph">{{ $data->sect8_para }}</p>
+                    <p id="enroll-now-paragraph" class="pb-5">{{ $data->sect8_para }}</p>
                     <a class="btn btn-xlarge btn-rounded btn-pink btn-hvr-blue p-auto" href="{{ route('learn-more.reading-assessment') }}">Book Online Reading Assessment
                         <div class="btn-hvr-setting">
                             <ul class="btn-hvr-setting-inner">

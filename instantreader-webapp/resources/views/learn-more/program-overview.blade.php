@@ -311,7 +311,7 @@
                         <div class="carousel-item">
                             <img id="about-mastery-image-2" class="d-block w-100" src="{{ url($data->sect4_image2) }}" alt="Second slide">
                         </div>
-                        <div class="carousel-item"
+                        <div class="carousel-item">
                             <img id="about-mastery-image-3" class="d-block w-100" src="{{ url($data->sect4_image3) }}" alt="Third slide">
                         </div>
                     </div>
