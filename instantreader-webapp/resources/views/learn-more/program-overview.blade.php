@@ -104,7 +104,7 @@
             <!-- Basic Card -->
             <div class="col-lg-3 d-flex align-items-stretch">
                 <div class="card">
-                    <img class="card-img-top" src="{{ asset('marketing-site/assets/img/basic-card-img.jpg') }}" alt="img">
+                    <img class="card-img-top" src="{{ url($data->sect1_image1) }}" alt="img">
                     <div class="card-body d-flex flex-column">
                         <h5 class="card-title">Basic</h5>
                         <p class="card-text">{!! $data->sect1_para1 !!}</p>
@@ -125,7 +125,7 @@
             <!-- Advanced Card -->
             <div class="col-lg-3 d-flex align-items-stretch">
                 <div class="card">
-                    <img class="card-img-top" src="{{ asset('marketing-site/assets/img/advanced-card-img.jpg') }}" alt="img">
+                    <img class="card-img-top" src="{{ url($data->sect1_image2) }}" alt="img">
                     <div class="card-body d-flex flex-column">
                         <h5 class="card-title">Advanced</h5>
                         <p class="card-text">{!! $data->sect1_para2 !!}</p>
@@ -146,7 +146,7 @@
             <!-- Mastery Card -->
             <div class="col-lg-3 d-flex align-items-stretch">
                 <div class="card">
-                    <img class="card-img-top" src="{{ asset('marketing-site/assets/img/mastery-card-img.jpg') }}" alt="img">
+                    <img class="card-img-top" src="{{ url($data->sect1_image3) }}" alt="img">
                     <div class="card-body d-flex flex-column">
                         <h5 class="card-title">Mastery</h5>
                         <p class="card-text">{!! $data->sect1_para3 !!}</p>
@@ -167,7 +167,7 @@
             <!-- Compass Card -->
             <div class="col-lg-3 d-flex align-items-stretch">
                 <div class="card">
-                    <img class="card-img-top" src="{{ asset('marketing-site/assets/img/compass-card-img.jpg') }}" alt="img">
+                    <img class="card-img-top" src="{{ url($data->sect1_image4) }}" alt="img">
                     <div class="card-body d-flex flex-column">
                         <h5 class="card-title">Compass</h5>
                         <p class="card-text">{!! $data->sect1_para4 !!}</p>
@@ -204,13 +204,13 @@
                     </ol>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img id="about-basic-image-1" class="d-block w-100" src="{{ asset('marketing-site/assets/img/consultation.jpg') }}" alt="First slide">
+                            <img id="about-basic-image-1" class="d-block w-100" src="{{ url($data->sect2_image1) }}" alt="First slide">
                         </div>
                         <div class="carousel-item">
-                            <img id="about-basic-image-2" class="d-block w-100" src="{{ asset('marketing-site/assets/img/tutor-application.jpg') }}" alt="Second slide">
+                            <img id="about-basic-image-2" class="d-block w-100" src="{{ url($data->sect2_image2) }}" alt="Second slide">
                         </div>
                         <div class="carousel-item">
-                            <img id="about-basic-image-3" class="d-block w-100" src="{{ asset('marketing-site/assets/img/consultation.jpg') }}" alt="Third slide">
+                            <img id="about-basic-image-3" class="d-block w-100" src="{{ url($data->sect2_image3) }}" alt="Third slide">
                         </div>
                     </div>
                     <a class="carousel-control-prev" href="#about-basic-carousel" role="button" data-slide="prev">
@@ -260,13 +260,13 @@
                     </ol>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img id="about-advanced-image-1" class="d-block w-100" src="{{ asset('marketing-site/assets/img/tutor-application.jpg') }}" alt="First slide">
+                            <img id="about-advanced-image-1" class="d-block w-100" src="{{ url($data->sect3_image1) }}" alt="First slide">
                         </div>
                         <div class="carousel-item">
-                            <img id="about-advanced-image-2" class="d-block w-100" src="{{ asset('marketing-site/assets/img/consultation.jpg') }}" alt="Second slide">
+                            <img id="about-advanced-image-2" class="d-block w-100" src="{{ url($data->sect3_image2) }}" alt="Second slide">
                         </div>
                         <div class="carousel-item">
-                            <img id="about-advanced-image-3" class="d-block w-100" src="{{ asset('marketing-site/assets/img/tutor-application.jpg') }}" alt="Third slide">
+                            <img id="about-advanced-image-3" class="d-block w-100" src="{{ url($data->sect3_image3) }}" alt="Third slide">
                         </div>
                     </div>
                     <a class="carousel-control-prev" href="#about-advanced-carousel" role="button" data-slide="prev">
@@ -306,13 +306,13 @@
                     </ol>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img id="about-mastery-image-1" class="d-block w-100" src="{{ asset('marketing-site/assets/img/consultation.jpg') }}" alt="First slide">
+                            <img id="about-mastery-image-1" class="d-block w-100" src="{{ url($data->sect4_image1) }}" alt="First slide">
                         </div>
                         <div class="carousel-item">
-                            <img id="about-mastery-image-2" class="d-block w-100" src="{{ asset('marketing-site/assets/img/tutor-application.jpg') }}" alt="Second slide">
+                            <img id="about-mastery-image-2" class="d-block w-100" src="{{ url($data->sect4_image2) }}" alt="Second slide">
                         </div>
-                        <div class="carousel-item">
-                            <img id="about-mastery-image-3" class="d-block w-100" src="{{ asset('marketing-site/assets/img/consultation.jpg') }}" alt="Third slide">
+                        <div class="carousel-item"
+                            <img id="about-mastery-image-3" class="d-block w-100" src="{{ url($data->sect4_image3) }}" alt="Third slide">
                         </div>
                     </div>
                     <a class="carousel-control-prev" href="#about-mastery-carousel" role="button" data-slide="prev">
@@ -355,7 +355,7 @@
             </div>
             <div class="col-md-6 media-content">
                 <video preload="none" controls poster="{{ asset('marketing-site/assets/img/consultation.jpg') }}" playsinline>
-                    <source src="{{ asset('marketing-site/assets/agency/img/video.mp4') }}" type="video/mp4">
+                    <source src="{{ url($data->sect5_video) }}" type="video/mp4">
                 </video>
             </div>
         </div>
@@ -371,19 +371,19 @@
                     </ol>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img id="about-compass-image-1" class="d-block w-100" src="{{ asset('marketing-site/assets/img/tutor-application.jpg') }}" alt="First slide">
+                            <img id="about-compass-image-1" class="d-block w-100" src="{{ url($data->sect5_image1) }}" alt="First slide">
                         </div>
                         <div class="carousel-item">
-                            <img id="about-compass-image-2" class="d-block w-100" src="{{ asset('marketing-site/assets/img/consultation.jpg') }}" alt="Second slide">
+                            <img id="about-compass-image-2" class="d-block w-100" src="{{ url($data->sect5_image2) }}" alt="Second slide">
                         </div>
                         <div class="carousel-item">
-                            <img id="about-compass-image-3" class="d-block w-100" src="{{ asset('marketing-site/assets/img/tutor-application.jpg') }}" alt="Third slide">
+                            <img id="about-compass-image-3" class="d-block w-100" src="{{ url($data->sect5_image3) }}" alt="Third slide">
                         </div>
                         <div class="carousel-item">
-                            <img id="about-compass-image-4" class="d-block w-100" src="{{ asset('marketing-site/assets/img/consultation.jpg') }}" alt="Fourth slide">
+                            <img id="about-compass-image-4" class="d-block w-100" src="{{ url($data->sect5_image4) }}" alt="Fourth slide">
                         </div>
                         <div class="carousel-item">
-                            <img id="about-compass-image-5" class="d-block w-100" src="{{ asset('marketing-site/assets/img/tutor-application.jpg') }}" alt="Fifth slide">
+                            <img id="about-compass-image-5" class="d-block w-100" src="{{ url($data->sect5_image5) }}" alt="Fifth slide">
                         </div>
                     </div>
                     <a class="carousel-control-prev" href="#about-compass-carousel" role="button" data-slide="prev">

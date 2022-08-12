@@ -84,7 +84,7 @@
     }
 
     .scrolling-img{
-        background: url("{{ asset('marketing-site/assets/img/kids-club-img2.png') }}") repeat-x;
+        background: url("{{ url($data->sect3_image) }}") repeat-x;
         height: 100%;
         width: 100%;
         position: absolute;
@@ -158,7 +158,7 @@
                 <!--Video Row-->
                 <div class="row mb-3">
                     <video class="kidsclub-video" preload="none" controls poster="{{ asset('marketing-site/assets/agency/img/blog-news-1.jpg')}}" playsinline>
-                        <source src="{{ asset('marketing-site/assets/agency/img/video.mp4') }}" type="video/mp4">
+                        <source src="{{ url($data->sect2_video) }}" type="video/mp4">
                     </video>
                 </div>
             </div>  
@@ -179,13 +179,13 @@
                     </div>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                        <img src="{{ asset('marketing-site/assets/img/tutor-application.jpg') }}" class="d-block w-100" alt="...">
+                        <img src="{{ url($data->sect2_image1) }}" class="d-block w-100" alt="...">
                         </div>
                         <div class="carousel-item">
-                        <img src="{{ asset('marketing-site/assets/img/consultation.jpg') }}" class="d-block w-100" alt="...">
+                        <img src="{{ url($data->sect2_image2) }}" class="d-block w-100" alt="...">
                         </div>
                         <div class="carousel-item">
-                        <img src="{{ asset('marketing-site/assets/img/tutor-application.jpg') }}" class="d-block w-100" alt="...">
+                        <img src="{{ url($data->sect2_image3) }}" class="d-block w-100" alt="...">
                         </div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -204,7 +204,7 @@
 
 <section class="nocursor cursor-light ir-kids-avatar">
     <div class="scrolling-img-container">
-        <div class="scrolling-img" style="background-image: {{ asset('marketing-site/assets/img/kids-club-img1.png') }}">
+        <div class="scrolling-img">
             <div class="row overlay-text">
                 <div class="col-md-12">
                     <div class="heading-area mx-570 mb-5 lg-mb-0 lg-pb-0">

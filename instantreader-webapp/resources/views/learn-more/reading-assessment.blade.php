@@ -109,7 +109,7 @@
             </div>
             <div class="col-lg-6 wow fadeInRight">
                 <div class="half-img mt-5 pt-4 mt-lg-0 pt-lg-0">
-                    <img alt="vector" src="{{ asset('marketing-site/assets/img/reading-assessment-img.jpg') }}">
+                    <img alt="vector" src="{{ url($data->sect1_image) }}">
                 </div>
             </div>
         </div>
