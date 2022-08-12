@@ -16,15 +16,19 @@
     .founder-video {
         max-width: 100%;
     }
+    
     hr {
         border-top: 1px solid;
     }
+
     .mission-img {
         max-width: 100%;
     }
+
     .history1-heading, .vision-heading,  .virac-vid-heading, .virac-vid-text {
         text-align: center;
     }
+
     @media only screen and (min-width: 768px) {
         .half-para { /* for col-md-6 paragraphs in desktop-view (left-aligned)*/
             text-align: justify;
@@ -43,12 +47,14 @@
             text-align: right;
         }
     }
+
     .virac-img-row, .virac-vid-row {
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
     }
+
     @media only screen and (max-width: 767px) {
         .para {
             text-align: justify;
@@ -79,18 +85,21 @@
     <div class="auto-container">
         <h2 class="hide-cursor">Our Founder & Developer</h2>
         <ul class="page-breadcrumb link">
-            <li><a href="/"><span class="icon fas fa-home"></span></a></li>
-            <li>About Us</li>
-            <li>Our Founder & Developer</li>
+            <li>
+                <i>
+                   Subtitle
+                </i>
+            </li>
         </ul>
     </div>
 </section>
 <!--Banner End-->
 
-<!--Main Information Start-->
+<!--Teacher Vicki Start-->
 <section class="pb-0 bg-light" id="about-us">
     <div class="container">
         <div class="row">
+            <!--Heading and Information-->
             <div class="col-lg-6 wow fadeInLeft">
                 <div class="heading-area">
                     <span class="sub-title">{{ $data->sect1_subheading }}</span>
@@ -98,6 +107,8 @@
                     <p class="para half-para">{!! $data->sect1_para !!}</p>
                 </div>
             </div>
+
+            <!--Image-->
             <div class="col-lg-6 wow fadeInRight">
                 <div class="half-img mt-4 pt-3 mt-lg-0 pt-lg-0">
                     <img alt="vector" src="{{ asset('marketing-site/assets/agency/img/blog-news-1.jpg') }}">
@@ -106,24 +117,29 @@
         </div>
     </div>
 </section>
-<!--Main Information Start-->
+<!--Teacher Vicki Start-->
 
 <!--Social Media Links Start-->
 <section class="bg-light" id="socmedlinks">
     <div class="container">
         <div class="row">
+            <!--Facebook-->
             <div class="col-md-4">
                 <div class="process-wrapp">
                     <a class="pro-step blue" href="{{ $data->sect1_fb }}"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
                     <h4 class="service-heading">Facebook</h4>
                 </div>
             </div>
+            
+            <!--Twitter-->
             <div class="col-md-4">
                 <div class="process-wrapp">
                     <a class="pro-step midnight" href="{{ $data->sect1_twt }}"><i class="fab fa-twitter" aria-hidden="true"></i></a>
                     <h4 class="service-heading">Twitter</h4>
                 </div>
             </div>
+            
+            <!--Instagram-->
             <div class="col-md-4">
                 <div class="process-wrapp">
                     <a class="pro-step pink" href="{{ $data->sect1_ig }}"><i class="fab fa-instagram" aria-hidden="true"></i></a>
@@ -137,7 +153,7 @@
 
 <!--History Start-->
 <section id="ir-history">
-    <div class="container mb-5">
+    <div class="container">
         <!--Heading Row-->
         <div class="row">
             <div class="col-md-12 text-center">
@@ -146,15 +162,16 @@
                 </div>
             </div>
         </div>
+
         <!--Video Row-->
         <div class="row justify-content-center">
-            <video class="founder-video" preload="none" controls poster="{{ asset('marketing-site/assets/agency/img/blog-news-1.jpg') }}" playsinline>
+            <video class="founder-video" preload="none" controls poster="{{ asset('marketing-site/assets/img/consultation.jpg') }}" playsinline>
                 <source src="{{ asset('marketing-site/assets/agency/img/video.mp4') }}" type="video/mp4">
             </video>
         </div>
-    </div>
-    <hr/>
-    <div class="container d-flex mb-5 pb-3">
+
+        <br>
+
         <!-- First Information Row -->
         <div class="row mt-lg-5 pt-4 mb-lg-4">
             <div class="col-md-6">
@@ -163,18 +180,18 @@
                 </div>
             </div>
             <div class="col-md-6 wow fadeInRight">
-                <div class="half-img mt-2 pt-4 mt-lg-0 pt-lg-0">
+                <div class="mt-2 pt-4 mt-lg-0 pt-lg-0">
                     <img alt="image" src="{{ asset('marketing-site/assets/agency/img/blog-news-1.jpg') }}">
                 </div>
             </div>
         </div>
-    </div>
-    <hr/>
-    <div class="container d-flex">
+
+        <br>
+
         <!-- Second Information Row -->
         <div class="row mt-lg-5 pt-4">
             <div class="col-md-6 wow fadeInLeft info2-img">
-                <div class="half-img mt-2 pt-4 mt-lg-0 pt-lg-0">
+                <div class="mt-2 pt-4 mt-lg-0 pt-lg-0">
                     <img alt="image" src="{{ asset('marketing-site/assets/agency/img/blog-news-1.jpg') }}">
                 </div>
             </div>
@@ -190,16 +207,19 @@
 
 <!--Vision Start-->
 <section class="gradient-bg1">
-    <div class="container d-flex">
+    <div class="container">
         <div class="row">
+            <!--Heading and Information-->
             <div class="col-md-6 wow">
-                <div class="heading-area  vision-heading">
+                <div class="heading-area vision-heading">
                     <h1 class="title text-white">{{ $data->sect3_heading }}</h1>
                     <p class="para half-para-right text-white">{!! $data->sect3_para !!}</p>
                 </div>
             </div>
+
+            <!--Image-->
             <div class="col-md-6 wow fadeInRight">
-                <div class="half-img mt-5 pt-4 mt-lg-0 pt-lg-0">
+                <div class=" mt-5 pt-4 mt-lg-0 pt-lg-0">
                     <img alt="image" src="{{ asset('marketing-site/assets/agency/img/blog-news-1.jpg') }}">
                 </div>
             </div>
@@ -211,10 +231,12 @@
 <!--Mission Start-->
 <section>
     <div class="container">
+        <!--Heading and Information Row-->
         <div class="heading-area text-center mb-4">
             <h1 class="title">{{ $data->sect4_heading }}</h1>
             <p class="para">{!! $data->sect4_para !!}</p>
         </div>
+
         <!--Image Row-->
         <div class="row justify-content-center">
             <img class="mission-img" alt="image" src="{{ asset('marketing-site/assets/agency/img/blog-news-1.jpg') }}">
@@ -225,6 +247,7 @@
 
 <!--Project VIRAC Start-->
 <section style="background-color: #562FB7;">
+    <!--Video Container-->
     <div class="container mb-5">
         <!--Heading Row-->
         <div class="row">
@@ -234,6 +257,7 @@
                 </div>
             </div>
         </div>
+
         <!--Video Row-->
         <div class="row virac-vid-row" style="text-align: right;">
             <!-- Video -->
@@ -244,7 +268,7 @@
                     </video>
                 </div>
             </div>
-            <!-- Text -->
+            <!-- Information 1 -->
             <div class="col-md-6 virac-vid-text">
                 <div class="heading-area">
                     <p class="para half-para-right text-white">{!! $data->sect5_para1 !!}</p>
@@ -252,13 +276,18 @@
             </div>
         </div>
     </div>
+
+    <!--Carousel Container-->
     <div class="container">
         <div class="row virac-img-row">
+            <!--Information 2-->
             <div class="col-md-6 virac-imgs-text">
                 <div class="heading-area">
                     <p class="para half-para text-white">{!! $data->sect5_para2 !!}</p>
                 </div>
             </div>
+            
+            <!--Carousel-->
             <div class="col-md-6 mb-3">
                 <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel">
                     <div class="carousel-indicators">
