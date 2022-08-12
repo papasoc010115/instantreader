@@ -21,9 +21,11 @@
     <div class="auto-container">
         <h2 class="hide-cursor">Testimonials</h2>
         <ul class="page-breadcrumb link">
-            <li><a href="/"><span class="icon fas fa-home"></span></a></li>
-            <li>About Us</li>
-            <li>Testimonials</li>
+            <li>
+                <i>
+                   Subtitle
+                </i>
+            </li>
         </ul>
     </div>
 </section>

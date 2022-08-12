@@ -45,9 +45,11 @@
     <div class="auto-container">
         <h2 class="hide-cursor">Book a Free Consultation</h2>
         <ul class="page-breadcrumb link">
-            <li><a href="/"><span class="icon fas fa-home"></span></a></li>
-            <li>Contact Us</li>
-            <li>Book a Free Consultation</li>
+            <li>
+                <button id="scroll-to-form" class="card-btn btn btn-large btn-rounded btn-pink btn-hvr-blue mt-3">
+                Book Now <i class="fas fa-angle-double-down" style="font-size:0.8em"></i>                  
+                </button>
+            </li>
         </ul>
     </div>
 </section>
@@ -94,7 +96,7 @@
 </section>
 <!--Section 1 End-->
 
-<!--Section 2 Start-->
+<!--Calendar Start-->
 <section style="background-color: #562FB7;">
     <div class="container desc-2">
         <div class="row">
@@ -112,10 +114,10 @@
         </div>
     </div>
 </section>
-<!--Section 2 End-->
+<!--Calendar End-->
 
 <!--Booking Form Start-->
-<section class="contact-us" id="consultation">
+<section id="book-consultation-form">
 
     <div class="container">
 
@@ -261,5 +263,14 @@
     </div>
 
 </section>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+<script>
+    // script for scrolling down to form
+    document.getElementById("scroll-to-form").onclick = function () {
+        document.getElementById("book-consultation-form").scrollIntoView({behavior: 'smooth'});
+    };
+</script>
 
 @endsection

@@ -13,7 +13,6 @@
 
 <!-- Style Start -->
 <style>
-
     .heading-area {
         margin-bottom: 2rem; 
     }
@@ -21,6 +20,7 @@
     .para {
         text-align: justify;
     }
+    
     @media only screen and (max-width: 767px) {
         .btn-col {
             text-align: center;
@@ -48,9 +48,11 @@
     <div class="auto-container">
         <h2 class="hide-cursor">Start a Career With Us</h2>
         <ul class="page-breadcrumb link">
-            <li><a href="/"><span class="icon fas fa-home"></span></a></li>
-            <li>Contact Us</li>
-            <li>Start a Career With Us</li>
+            <li>
+                <button id="scroll-to-form" class="card-btn btn btn-large btn-rounded btn-pink btn-hvr-blue mt-3">
+                Apply Now <i class="fas fa-angle-double-down" style="font-size:0.8em"></i>                  
+                </button>
+            </li>
         </ul>
     </div>
 </section>
@@ -100,7 +102,7 @@
 <!--Section 1 End-->
 
 <!--Application Form Start-->
-<section class="contact-us" id="consultation" style="background-color: #562FB7;">
+<section class="purple-bg" id="application-form">
     <div class="container">
 
         <div class="col-md-12 mt-4 pt-3 mt-lg-0 pt-lg-0 wow">
@@ -215,5 +217,14 @@
     </div>
 
 </section>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+<script>
+    // script for scrolling down to form
+    document.getElementById("scroll-to-form").onclick = function () {
+        document.getElementById("application-form").scrollIntoView({behavior: 'smooth'});
+    };
+</script>
 
 @endsection

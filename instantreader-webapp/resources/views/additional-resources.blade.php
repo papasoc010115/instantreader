@@ -16,12 +16,14 @@
     .card {
         margin-bottom: 1.5em;
     }
+
     .visuals-row {
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
     }
+
     @media only screen and (max-width: 767px) {
         .para {
             text-align: justify;
@@ -40,8 +42,11 @@
     <div class="auto-container">
         <h2 class="hide-cursor">Additional Resources</h2>
         <ul class="page-breadcrumb link">
-            <li><a href="/"><span class="icon fas fa-home"></span></a></li>
-            <li>Additional Resources</li>
+            <li>
+                <i>
+                   Subtitle
+                </i>
+            </li>
         </ul>
     </div>
 </section>
@@ -59,7 +64,7 @@
             </div>
         </div>
 
-        <!-- Row of Testimonials -->
+        <!-- Row of Tips and Resources -->
         <div class="row text-center">
             <div class="col-md-4 d-flex align-items-stretch">
                 <div class="card shadow">
@@ -99,14 +104,13 @@
             </div>
         </div>
     </div>
-
 </section>
 <!--Tips/Resources Library End-->
 
 <!--E-books/PDFs Start-->
 <section class="ebook-resources purple-bg">
     <div class="container">
-        <!--Row-->
+        <!--Row of Heading-->
         <div class="row">
             <div class="col-md-12 text-center">
                 <div class="heading-area mx-570 pb-md-5 mb-3">
@@ -114,7 +118,8 @@
                 </div>
             </div>
         </div>
-        <!--Row-->
+
+        <!--Row of E-books-->
         <div class="row">
             <div class="col-md-4 d-flex align-items-stretch">
                 <div class="card shadow">
@@ -159,9 +164,10 @@
                 </div>
             </div>
         </div>
+
+        <!--Pagination-->
         <div class="row pt-4">
             <div class="col-sm-12">
-                <!--Pagination-->
                 <ul class="pagination justify-content-center top55 mb-4 mb-md-0 mb-sm-3" style="padding-top=5%">
                     <li class="page-item"><a class="page-link disabled" href="#.">&laquo;</i></a></li>
                     <li class="page-item active"><a class="page-link" href="#.">1</a></li>
@@ -178,7 +184,7 @@
 <!--Blogs Start-->
 <section class="blog-resources">
     <div class="container">
-        <!--Row-->
+        <!--Row of Heading-->
         <div class="row">
             <div class="col-md-12 text-center">
                 <div class="heading-area mx-570 pb-md-5 mb-3">
@@ -186,7 +192,8 @@
                 </div>
             </div>
         </div>
-        <!--Row-->
+
+        <!--Row of Blogs-->
         <div class="row">
             <div class="col-md-4 d-flex align-items-stretch">
                 <div class="card shadow">
@@ -228,9 +235,10 @@
                 </div>
             </div>
         </div>
+        
+        <!--Pagination-->
         <div class="row pt-4">
             <div class="col-sm-12">
-                <!--Pagination-->
                 <ul class="pagination justify-content-center top55 mb-4 mb-md-0 mb-sm-3" style="padding-top=5%">
                     <li class="page-item"><a class="page-link disabled" href="#.">&laquo;</i></a></li>
                     <li class="page-item active"><a class="page-link" href="#.">1</a></li>
@@ -247,7 +255,7 @@
 <!--Video Resources Start-->
 <section class="video-resources" style="background-color: #4287f5">
     <div class="auto-container px-5">
-        <!-- Heading -->
+        <!-- Row of Heading and Information -->
         <div class="row text-center"  style="margin-bottom: 2em;">
             <h1 class="title text-white mb-3">{{ $data->sect3_heading }}</h1>
             <p class="para text-white">{!! $data->sect3_para !!} </p>
@@ -278,9 +286,9 @@
             </div>
         </div>
 
+        <!--Pagination-->
         <div class="row pt-4">
             <div class="col-sm-12">
-                <!--Pagination-->
                 <ul class="pagination justify-content-center top55 mb-4 mb-md-0 mb-sm-3" style="padding-top=5%">
                     <li class="page-item"><a class="page-link disabled" href="#.">&laquo;</a></li>
                     <li class="page-item active"><a class="page-link" href="#.">1</a></li>
@@ -298,6 +306,7 @@
 <section class="visuals">
     <div class="auto-container px-5">
         <div class="row visuals-row">
+            <!-- Carousel -->
             <div class="col-md-7 mb-3">
                 <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel">
                     <div class="carousel-indicators">
@@ -326,6 +335,8 @@
                     </button>
                 </div>
             </div>
+            
+            <!-- Heading and Information -->
             <div class="col-md-5">
                 <div class="heading-area">
                     <h1 class="title" style="color: #562FB7;">{{ $data->sect4_heading }}</h1>
