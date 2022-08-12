@@ -33,7 +33,9 @@ class Home extends Model
         'sect3_heading1',
         'sect3_heading2',
         'sect3_para',
-        'sect3_images',
+        'sect3_image1',
+        'sect3_image2',
+        'sect3_image3',
 
         // Section 4: Teacher Vicki & Likha
         'sect4_heading',

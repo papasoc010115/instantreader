@@ -46,7 +46,8 @@ const isEmpty = (str, type) => {
     return false;
 };
 
-const forms = $("form").get();
+// const forms = $("form").get();
+const forms = $(".non-media").get();
 for (let i = 0; i < forms.length; i++) {
     const form = forms[i];
     form.addEventListener("submit", (e) => {

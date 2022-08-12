@@ -24,7 +24,7 @@
                 Page Title. 
                 According to Montti (2021), Moz’s title tag length recommendation is 50 – 60 characters. (reference: https://www.searchenginejournal.com/google-title-tag-length/400682/#close)
             -->
-            <form data-route="{{ route('home.update_page') }}">
+            <form data-route="{{ route('home.update_page') }}" class="non-media">
                 @csrf
                 <div class="form-group py-3">
                     <label for="title-editor">Page Title</label>
@@ -37,7 +37,7 @@
                 Description.
                 According to ContentKing (2021), 155 is a good maximum character length for description. (reference: https://www.contentkingapp.com/academy/meta-description/#:~:text=Meta%20Description%20have%3F-,Length,70%20characters%20or%20430%20pixels)
             -->
-            <form data-route="{{ route('home.update_page') }}">
+            <form data-route="{{ route('home.update_page') }}" class="non-media">
                 @csrf
                 <div class="form-group py-3">
                     <label for="description-editor">Page Description</label>
@@ -49,7 +49,7 @@
             <!-- 
                 Keywords
              -->
-            <form data-route="{{ route('home.update_page') }}">
+            <form data-route="{{ route('home.update_page') }}" class="non-media">
                 @csrf
                 <div class="form-group py-3">
                     <label for="keywords-editor">Keywords</label>                    
@@ -61,7 +61,7 @@
             <!-- 
                 Author
             -->
-            <form data-route="{{ route('home.update_page') }}">
+            <form data-route="{{ route('home.update_page') }}" class="non-media">
                 @csrf
                 <div class="form-group py-3">
                     <label for="author-editor">Author</label>                    
@@ -81,7 +81,7 @@
             </div>
 
             <!-- Heading of Section 1 -->
-            <form data-route="{{ route('home.update_page') }}">
+            <form data-route="{{ route('home.update_page') }}" class="non-media">
                 @csrf
                 <div class="form-group py-3">
                     <label for="sect1-heading">Section Heading/Title</label>                    
@@ -91,7 +91,7 @@
             </form>
 
             <!-- Opening Statement -->
-            <form data-route="{{ route('home.update_page') }}">
+            <form data-route="{{ route('home.update_page') }}" class="non-media">
                 @csrf
                 <div class="form-group py-3">
                     <label for="sect1-paragraph">Opening Statement</label>
@@ -112,11 +112,11 @@
             </script>
 
             <!-- Image -->
-            <form data-route="{{ route('home.update_page') }}">
+            <form action="{{ route('home.store_media_single') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="mb-3 py-3">
                     <label for="sect1-opening-image" class="form-label">Image</label>
-                    <input required data-fieldtype="media" class="form-control form-control-sm" data-fieldtype="big" name="sect1_image" type="file" id="sect1-opening-image" aria-describedby="sect1ImageHelp" value="{{ $data->welcome_image }}">
+                    <input required data-fieldtype="media" accept="image/*" class="form-control form-control-sm" name="sect1_image" type="file" id="sect1-opening-image" aria-describedby="sect1ImageHelp" value="{{ $data->sect1_image }}">
                     <small id="sect1ImageHelp" class="form-text text-muted">Recommended image size: WxH</small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
                 </div>                
@@ -133,7 +133,7 @@
             </div>
 
             <!-- Heading 1 of Section 2 -->
-            <form data-route="{{ route('home.update_page') }}">
+            <form data-route="{{ route('home.update_page') }}" class="non-media">
                 @csrf
                 <div class="form-group py-3">
                     <label for="sect2-heading1">Section Heading/Title 1</label>                    
@@ -144,7 +144,7 @@
             </form>
 
             <!-- Heading 2 of Section 2 -->
-            <form data-route="{{ route('home.update_page') }}">
+            <form data-route="{{ route('home.update_page') }}" class="non-media">
                 @csrf
                 <div class="form-group py-3">
                     <label for="sect2-heading2">Section Heading/Title 2</label>                    
@@ -155,7 +155,7 @@
             </form>
 
             <!-- Paragraph of Section 2 -->
-            <form data-route="{{ route('home.update_page') }}">
+            <form data-route="{{ route('home.update_page') }}" class="non-media">
                 @csrf
                 <div class="form-group py-3">
                     <label for="sect2-paragraph">Paragraph</label>
@@ -176,11 +176,11 @@
             </script>
 
             <!-- Video of Section 2 -->
-            <form data-route="{{ route('home.update_page') }}">
+            <form action="{{ route('home.store_media_single') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="mb-3 py-3">
                     <label for="sect2-video" class="form-label">Video</label>
-                    <input required data-fieldtype="media" class="form-control form-control-sm" type="file" name="sect2_video" id="sect2-video" aria-describedby="sect2VideoHelp">
+                    <input required data-fieldtype="media" accept="video/*" class="form-control form-control-sm" name="sect2_video" type="file" id="sect2-video" aria-describedby="sect2VideoHelp" value="{{ $data->sect2_video }}">
                     <small id="sect2VideoHelp" class="form-text text-muted">Recommended video size: WxH</small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
                 </div>                
@@ -197,7 +197,7 @@
             </div>
 
             <!-- Heading 1 of Section 3 -->
-            <form data-route="{{ route('home.update_page') }}">
+            <form data-route="{{ route('home.update_page') }}" class="non-media">
                 @csrf
                 <div class="form-group py-3">
                     <label for="sect3-heading1">Section Heading/Title 1</label>                    
@@ -208,7 +208,7 @@
             </form>
 
             <!-- Heading 2 of Section 3 -->
-            <form data-route="{{ route('home.update_page') }}">
+            <form data-route="{{ route('home.update_page') }}" class="non-media">
                 @csrf
                 <div class="form-group py-3">
                     <label for="sect3-heading2">Section Heading/Title 2</label>                    
@@ -219,7 +219,7 @@
             </form>
 
             <!-- Paragraph of Section 3 -->
-            <form data-route="{{ route('home.update_page') }}">
+            <form data-route="{{ route('home.update_page') }}" class="non-media">
                 @csrf
                 <div class="form-group py-3">
                     <label for="sect3-paragraph">Paragraph</label>
@@ -240,33 +240,33 @@
             </script>
 
             <!-- Image 1 of Section 3 -->
-            <form data-route="{{ route('home.update_page') }}">
+            <form action="{{ route('home.store_media_single') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="mb-3 py-3">
                     <label for="sect3-image1" class="form-label">Image 1</label>
-                    <input class="form-control form-control-sm" data-fieldtype="big" name="sect3_image1" type="file" id="sect3-image1" aria-describedby="sect3Image1Help" value="{{ $data->sect3_image1 }}">
+                    <input required data-fieldtype="media" accept="image/*" class="form-control form-control-sm" name="sect3_image1" type="file" id="sect3-image1" aria-describedby="sect3Image1Help" value="{{ $data->sect3_image1 }}">
                     <small id="sect3Image1Help" class="form-text text-muted">Recommended image size: WxH</small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
                 </div>                
             </form>
 
             <!-- Image 2 of Section 3 -->
-            <form data-route="{{ route('home.update_page') }}">
+            <form action="{{ route('home.store_media_single') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="mb-3 py-3">
                     <label for="sect3-image2" class="form-label">Image 2</label>
-                    <input class="form-control form-control-sm" data-fieldtype="big" name="sect3_image2" type="file" id="sect3-image2" aria-describedby="sect3Image2Help" value="{{ $data->sect3_image2 }}">
+                    <input required data-fieldtype="media" accept="image/*" class="form-control form-control-sm" name="sect3_image2" type="file" id="sect3-image2" aria-describedby="sect3Image2Help" value="{{ $data->sect3_image2 }}">
                     <small id="sect3Image2Help" class="form-text text-muted">Recommended image size: WxH</small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
                 </div>                
             </form>
 
             <!-- Image 3 of Section 3 -->
-            <form data-route="{{ route('home.update_page') }}">
+            <form action="{{ route('home.store_media_single') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="mb-3 py-3">
                     <label for="sect3-image3" class="form-label">Image 3</label>
-                    <input class="form-control form-control-sm" data-fieldtype="big" name="sect3_image3" type="file" id="sect3-image3" aria-describedby="sect3Image3Help" value="{{ $data->sect3_image3 }}">
+                    <input required data-fieldtype="media" accept="image/*" class="form-control form-control-sm" name="sect3_image3" type="file" id="sect3-image3" aria-describedby="sect3Image3Help" value="{{ $data->sect3_image3 }}">
                     <small id="sect3Image3Help" class="form-text text-muted">Recommended image size: WxH</small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
                 </div>                
@@ -283,17 +283,17 @@
             </div>
 
             <!-- Heading of Section 4 -->
-            <form data-route="{{ route('home.update_page') }}">
+            <form data-route="{{ route('home.update_page') }}" class="non-media">
                 @csrf
                 <div class="form-group py-3">
                     <label for="sect4-heading">Section Heading/Title</label>                    
-                    <input required data-fieldtype="big" type="text" class="form-control" id="sect4-heading" placeholder="e.g. The Best Reading Course" value="{{ $data->sect4_heading }}">
+                    <input required data-fieldtype="big" name="sect4_heading" type="text" class="form-control" id="sect4-heading" placeholder="e.g. The Best Reading Course" value="{{ $data->sect4_heading }}">
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>                    
                 </div>
             </form>
             
             <!-- Teacher Vicky's Position -->
-            <form data-route="{{ route('home.update_page') }}">
+            <form data-route="{{ route('home.update_page') }}" class="non-media">
                 @csrf
                 <div class="form-group py-3">
                     <label for="sect4-position1">Teacher Vicky's Position</label>                    
@@ -303,7 +303,7 @@
             </form>
 
             <!-- Likha's Position -->
-            <form data-route="{{ route('home.update_page') }}">
+            <form data-route="{{ route('home.update_page') }}" class="non-media">
                 @csrf
                 <div class="form-group py-3">
                     <label for="sect4-position2">Likha's Position</label>                    
@@ -313,7 +313,7 @@
             </form>
 
             <!-- Paragraph 1 -->
-            <form data-route="{{ route('home.update_page') }}">
+            <form data-route="{{ route('home.update_page') }}" class="non-media">
                 @csrf
                 <div class="form-group py-3">
                     <label for="sect4-paragraph1">Paragraph for Teacher Vicki</label>
@@ -334,7 +334,7 @@
             </script>
 
             <!-- Paragraph 2 -->
-            <form data-route="{{ route('home.update_page') }}">
+            <form data-route="{{ route('home.update_page') }}" class="non-media">
                 @csrf
                 <div class="form-group py-3">
                     <label for="sect4-paragraph2">Paragraph for Likha</label>
@@ -355,22 +355,22 @@
             </script>
 
             <!-- Image for Teacher Vicki -->
-            <form data-route="{{ route('home.update_page') }}">
+            <form action="{{ route('home.store_media_single') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="mb-3 py-3">
                     <label for="sect4-image1" class="form-label">Image for Teacher Vicki</label>
-                    <input required data-fieldtype="media" class="form-control form-control-sm" data-fieldtype="big" name="sect4_image1" type="file" id="sect4-image1" aria-describedby="sect4Image1Help" value="{{ $data->vicki_image }}">
+                    <input required data-fieldtype="media" accept="image/*" class="form-control form-control-sm" name="sect4_image1" type="file" id="sect4-image1" aria-describedby="sect4Image1Help" value="{{ $data->sect4_image1 }}">
                     <small id="sect4Image1Help" class="form-text text-muted">Recommended image size: WxH</small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
                 </div>                
             </form>
 
             <!-- Image for Likha-->
-            <form data-route="{{ route('home.update_page') }}">
+            <form action="{{ route('home.store_media_single') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="mb-3 py-3">
                     <label for="sect4-image2" class="form-label">Image for Likha</label>
-                    <input required data-fieldtype="media" class="form-control form-control-sm" data-fieldtype="big" name="sect4_image2" type="file" id="sect4-image2" aria-describedby="sect4Image2Help" value="{{ $data->likha_image }}">
+                    <input required data-fieldtype="media" accept="image/*" class="form-control form-control-sm" name="sect4_image2" type="file" id="sect4-image2" aria-describedby="sect4Image2Help" value="{{ $data->sect4_image2 }}">
                     <small id="sect4Image2Help" class="form-text text-muted">Recommended image size: WxH</small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
                 </div>                
@@ -387,7 +387,7 @@
             </div>
             
             <!-- Heading of Section 5 -->
-            <form data-route="{{ route('home.update_page') }}">
+            <form data-route="{{ route('home.update_page') }}" class="non-media">
                 @csrf
                 <div class="form-group py-3">
                     <label for="sect5-heading">Section Heading/Title</label>                    
@@ -397,18 +397,18 @@
             </form>          
 
             <!-- Countries -->
-            <form data-route="{{ route('home.update_page') }}">
+            <form data-route="{{ route('home.update_page') }}" class="non-media">
                 @csrf
                 <div class="form-group py-3">
                     <label for="sect5-countries">Countries</label>                    
-                    <input required data-fieldtype="big" type="text" class="form-control" name="sect5_countries" id="sect5-countries" aria-describedby="sect5CountriesHelp" placeholder="e.g. The Best Reading Course" value="{{ $data->sect3_heading1 }}">
+                    <input required data-fieldtype="big" type="text" class="form-control" name="sect5_countries" id="sect5-countries" aria-describedby="sect5CountriesHelp" placeholder="e.g. The Best Reading Course" value="{{ $data->sect5_countries }}">
                     <small id="sect5CountriesHelp" class="form-text text-muted">This will be the countries that alternate. Separate by comma (e.g. USA, PHILIPPINES).</small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>                    
                 </div>
             </form>
             
             <!-- Statement -->
-            <form data-route="{{ route('home.update_page') }}">
+            <form data-route="{{ route('home.update_page') }}" class="non-media">
                 @csrf
                 <div class="form-group py-3">
                     <label for="sect5-statement">Statement</label>
@@ -439,7 +439,7 @@
             </div>
             
             <!-- Heading of Section 6 -->
-            <form data-route="{{ route('home.update_page') }}">
+            <form data-route="{{ route('home.update_page') }}" class="non-media">
                 @csrf
                 <div class="form-group py-3">
                     <label for="sect6-heading">Section Heading/Title</label>                    
@@ -449,7 +449,7 @@
             </form>  
 
             <!-- Statement -->
-            <form data-route="{{ route('home.update_page') }}">
+            <form data-route="{{ route('home.update_page') }}" class="non-media">
                 @csrf
                 <div class="form-group py-3">
                     <label for="sect6-statement">Statement</label>
@@ -470,11 +470,11 @@
             </script>
 
              <!-- Images of Section 6 -->
-             <form data-route="{{ route('home.update_page') }}">
+             <form action="{{ route('home.store_media_multiple') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="mb-3 py-3">
                     <label for="sect6-images" class="form-label">Images (Select at least 3 photos)</label>
-                    <input required data-fieldtype="media" class="form-control form-control-sm" data-fieldtype="big" name="testimonies_images" type="file" id="sect6-images" aria-describedby="sect6ImagesHelp" multiple value="{{ $data->testimonies_images }}">
+                    <input required data-fieldtype="media" accept="image/*" class="form-control form-control-sm" name="sect6_images" type="file" id="sect6-images" aria-describedby="sect6ImagesHelp" multiple value="{{ $data->sect6_images }}">
                     <small id="sect6ImagesHelp" class="form-text text-muted">Recommended image size: WxH</small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
                 </div>                
@@ -491,7 +491,7 @@
             </div>
 
             <!-- Heading of Section 7 -->
-            <form data-route="{{ route('home.update_page') }}">
+            <form data-route="{{ route('home.update_page') }}" class="non-media">
                 @csrf
                 <div class="form-group py-3">
                     <label for="sect7-heading">Section Heading/Title</label>                    
@@ -501,7 +501,7 @@
             </form> 
 
             <!-- Statement -->
-            <form data-route="{{ route('home.update_page') }}">
+            <form data-route="{{ route('home.update_page') }}" class="non-media">
                 @csrf
                 <div class="form-group py-3">
                     <label for="sect7-statement">Statement</label>
@@ -522,11 +522,11 @@
             </script>
 
              <!-- Images of Section 7 -->
-             <form data-route="{{ route('home.update_page') }}">
+             <form action="{{ route('home.store_media_multiple') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="mb-3 py-3">
                     <label for="sect7-images" class="form-label">Images (Select at least 3 photos)</label>
-                    <input required data-fieldtype="media" class="form-control form-control-sm" data-fieldtype="big" name="sect7_images" type="file" id="sect7-images" aria-describedby="sect7ImagesHelp" multiple value="{{ $data->sect7_images }}">
+                    <input required data-fieldtype="media" accept="image/*" class="form-control form-control-sm" name="sect7_images[]" type="file" id="sect7-images" aria-describedby="sect7ImagesHelp" multiple value="{{ $data->sect7_images }}">
                     <small id="sect7ImagesHelp" class="form-text text-muted">Recommended image size: WxH</small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
                 </div>                
@@ -543,7 +543,7 @@
             </div>
 
             <!-- Heading of Section 8 -->
-            <form data-route="{{ route('home.update_page') }}">
+            <form data-route="{{ route('home.update_page') }}" class="non-media">
                 @csrf
                 <div class="form-group py-3">
                     <label for="sect8-heading">Section Heading/Title</label>                    
@@ -553,7 +553,7 @@
             </form> 
 
             <!-- Statement -->
-            <form data-route="{{ route('home.update_page') }}">
+            <form data-route="{{ route('home.update_page') }}" class="non-media">
                 @csrf
                 <div class="form-group py-3">
                     <label for="sect8-statement">Statement</label>
@@ -574,11 +574,11 @@
             </script>
 
             <!-- Image of Section 8 -->
-            <form data-route="{{ route('home.update_page') }}">
+            <form action="{{ route('home.store_media_single') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="mb-3 py-3">
                     <label for="sect8-image" class="form-label">Image</label>
-                    <input required data-fieldtype="media" class="form-control form-control-sm" data-fieldtype="big" name="enroll_image" type="file" id="sect8-image" aria-describedby="sect8ImageHelp" multiple value="{{ $data->sect8_image }}">
+                    <input required data-fieldtype="media" accept="image/*" class="form-control form-control-sm" name="sect8_image" type="file" id="sect8-image" aria-describedby="sect8ImageHelp" multiple value="{{ $data->sect8_image }}">
                     <small id="sect8ImageHelp" class="form-text text-muted">Recommended image size: WxH</small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
                 </div>                
@@ -587,4 +587,16 @@
         </div>
     </section>
 </div>
+
+<script>
+    // Checks if the upload of a file is successful
+    if ("{{ Session::has('upload_media_success') }}") {
+        alert("{{ Session::get('upload_media_success') }}");
+    }
+     // Checks if the upload of a file failed
+     if ("{{ Session::has('upload_media_fail') }}") {
+        alert("{{ Session::get('upload_media_fail') }}");
+    }
+</script>
+
 @endsection

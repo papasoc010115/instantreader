@@ -133,6 +133,7 @@
     }
 
     .page-title{
+        background: url("{{ url($data->sect1_image) }}" );
         background-size: cover;
         background-position: center center;
         background-repeat: no-repeat;
@@ -147,6 +148,7 @@
     :root {
         --marquee-width: 100vw;
         --marquee-height: 60vh;
+        --marquee-elements: "{{ count(Illuminate\Support\Facades\Storage::files($data->sect7_images)) }}";
         --marquee-elements-displayed: 2;
         --marquee-element-width: calc(var(--marquee-width)/var(--marquee-elements-displayed));
         --marquee-animation-duration: calc(var(--marquee-elements) * 2s);
@@ -176,11 +178,8 @@
     }
 
     @keyframes scrolling{
-        0% {
-            transform: translateX(100);
-        }
         100% {
-            transform: translateX(calc(-1*var(--marquee-element-width)*var(--marquee-elements-displayed)));
+            transform: translateX(calc(-1*var(--marquee-element-width)*var(--marquee-elements)));
         }
     }
 
@@ -215,7 +214,7 @@
         <div class="row d-flex align-items-center">
             <div class="col-lg-7 video-container wow fadeInLeft">
                 <video id="highlight-video-player" preload="none" controls poster="{{ asset('marketing-site/assets/agency/img/blog-news-1.jpg')}}" playsinline>
-                    <source id="highlight-video-source" src="{{ asset('marketing-site/assets/agency/img/video.mp4') }}" type="video/mp4">
+                    <source id="highlight-video-source" src="{{ url($data->sect2_video) }}" type="video/mp4">
                 </video>
             </div>
             <div class="col-lg-5 pl-4 pt-4 wow fadeInRight">
@@ -267,13 +266,13 @@
                     </ol>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img id="parent-orientation-image-1" class="d-block w-100" src="{{ asset('marketing-site/assets/agency/img/vector-art-2.png') }}" alt="First slide">
+                            <img id="parent-orientation-image-1" class="d-block w-100" src="{{ url($data->sect3_image1) }}" alt="First slide">
                         </div>
                         <div class="carousel-item">
-                            <img id="parent-orientation-image-2" class="d-block w-100" src="{{ asset('marketing-site/assets/agency/img/vector-art-2.png') }}" alt="Second slide">
+                            <img id="parent-orientation-image-2" class="d-block w-100" src="{{ url($data->sect3_image2) }}" alt="Second slide">
                         </div>
                         <div class="carousel-item">
-                            <img id="parent-orientation-image-3" class="d-block w-100" src="{{ asset('marketing-site/assets/agency/img/vector-art-2.png') }}" alt="Third slide">
+                            <img id="parent-orientation-image-3" class="d-block w-100" src="{{ url($data->sect3_image3) }}" alt="Third slide">
                         </div>
                     </div>
                     <a class="carousel-control-prev" href="#parent-orientation-carousel" role="button" data-slide="prev">
@@ -391,7 +390,7 @@
             <div class="col-md-6">
                 <div class="team-item">
                     <!--Team Image-->
-                    <img id="vicki-image" alt="Teacher Vicki" class="team-image" src="{{ asset('marketing-site/assets/agency/img/vector-art-2.png') }}">
+                    <img id="vicki-image" alt="Teacher Vicki" class="team-image" src="{{ url($data->sect4_image1) }}">
                     <!--Name-->
                     <div class="name">
                         <img alt="shape" src="{{ asset('marketing-site/assets/agency/img/shape-11.png') }}">
@@ -405,8 +404,8 @@
             </div>
             <div class="col-md-6">
                 <div class="team-item">
-                    <!--Team Image (will be fixed after once file import and form programs are complete)-->
-                    <img id="likha-image" alt="Sir Likha" class="team-image" src="{{ asset('marketing-site/assets/agency/img/vector-art-2.png') }}"> 
+                    <!--Team Image-->
+                    <img id="likha-image" alt="Sir Likha" class="team-image" src="{{ url($data->sect4_image2) }}"> 
                     <!--Name-->
                     <div class="name">
                         <img alt="shape" src="{{ asset('marketing-site/assets/agency/img/shape-11.png') }}">
@@ -431,7 +430,7 @@
                 <div class="heading-area mx-570 mb-5">
                     <h4 class="title alt-color">{{ $data->sect5_heading }}</h4>
                     <h4 class="title"><span class="js-rotating main-color">{{ $data->sect5_countries }}</span></h4>
-                    <p id="area-jurisdiction-paragraph" class="para">{!! $data->sect5_para1 !!}</p>
+                    <p id="area-jurisdiction-paragraph" class="para">{!! $data->sect5_para !!}</p>
                 </div>
             </div>
         </div>
@@ -627,41 +626,13 @@
 
 <!--KIDS CLUB Start-->
 <section id="kids-club-section" class="p-0 m-0">
-    <!-- <div class="scrolling-img-container">
-        <div class="scrolling-img">
-            <div class="row overlay-text">
-                <div class="col-md-12 wow fadeInUp">
-                    <div class="heading-area mx-570 mb-5">
-                        <h1 class="text-white">Join the Instant Reader <span class="main-color">Kids Club</span></h1>
-                        <p class="text-white">The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 
-                            from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions 
-                            from the 1914 translation by H. Rackham.</p>
-                        <a class="btn btn-xlarge btn-rounded btn-pink btn-hvr-blue mt-3" href="{{ route('learn-more.reading-assessment') }}">Book Online Reading Assessment
-                            <div class="btn-hvr-setting">
-                                <ul class="btn-hvr-setting-inner">
-                                    <li class="btn-hvr-effect"></li>
-                                    <li class="btn-hvr-effect"></li>
-                                    <li class="btn-hvr-effect"></li>
-                                    <li class="btn-hvr-effect"></li>
-                                </ul>
-                            </div>
-                        </a>
-                    </div>
-                </div> 
-            </div>
-        </div>
-    </div> -->
-
     <div class="container m-0 p-0">
         <!-- Marquee -->
         <div class="marquee d-flex align-items-center justify-content-center">
             <ul id="ir-kids-club-list" class="marquee-content d-flex align-items-center justify-content-center">
-                <li class="d-flex align-items-center justify-content-center"><img class="marquee-image" src="{{ asset('marketing-site/assets/img/tutor-application.jpg') }}" /></li>
-                <li class="d-flex align-items-center justify-content-center"><img class="marquee-image" src="{{ asset('marketing-site/assets/img/consultation.jpg') }}" /></li>
-                <li class="d-flex align-items-center justify-content-center"><img class="marquee-image" src="{{ asset('marketing-site/assets/img/tutor-application.jpg') }}" /></li>
-                <li class="d-flex align-items-center justify-content-center"><img class="marquee-image" src="{{ asset('marketing-site/assets/img/consultation.jpg') }}" /></li>
-                <li class="d-flex align-items-center justify-content-center"><img class="marquee-image" src="{{ asset('marketing-site/assets/img/tutor-application.jpg') }}" /></li>
-                <li class="d-flex align-items-center justify-content-center"><img class="marquee-image" src="{{ asset('marketing-site/assets/img/consultation.jpg') }}" /></li>
+                @foreach (Illuminate\Support\Facades\Storage::files($data->sect7_images) as $image)
+                    <li class="d-flex align-items-center justify-content-center"><img class="marquee-image" src="{{ url(str_replace('public','storage',$image)) }}" /></li>
+                @endforeach
             </ul>
         </div>
 
@@ -696,7 +667,7 @@
     <div class="container">
         <div class="row d-flex align-items-center">
             <div class="col-xl-6 wow fadeInLeft">
-                <img id="enroll-now-image" class="h-100" src="{{ asset('marketing-site/assets/agency/img/vector-art-2.png') }}" alt="Enroll Now">            
+                <img id="enroll-now-image" class="h-100" src="{{ url($data->sect8_image) }}" alt="Enroll Now">            
             </div>
             <div class="col-xl-6 wow fadeInRight py-5 enroll-now-detail">
                 <div class="heading-area">
