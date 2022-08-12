@@ -259,6 +259,10 @@ Route::post('/api/learn-more/kids-club/update-page', [KidsClubController::class,
 Route::post('/api/learn-more/kids-club/upload-media-single', [KidsClubController::class, 'store_media_single'])->name('learn-more.kids-club.store_media_single');
 
 Route::post('/api/learn-more/faq/update-page', [FaqController::class, 'update_page'])->name('learn-more.faq.update_page');
+Route::post('/api/learn-more/faq/store-question-and-answer', [FaqController::class, 'store_question_and_answer'])->name('learn-more.faq.store_question_and_answer');
+Route::post('/api/learn-more/faq/update-question-and-answer', [FaqController::class, 'update_question_and_answer'])->name('learn-more.faq.update_question_and_answer');
+Route::post('/api/learn-more/faq/delete-question-and-answer', [FaqController::class, 'delete_question_and_answer'])->name('learn-more.faq.delete_question_and_answer'); 
+
 Route::post('/api/about-us/founder/update-page', [FounderController::class, 'update_page'])->name('about-us.founder.update_page');
 Route::post('/api/about-us/testimonials/update-page', [TestimonialController::class, 'update_page'])->name('about-us.testimonials.update_page');
 Route::post('/api/contact-us/consultation/update-page', [ConsultationController::class, 'update_page'])->name('contact-us.consultation.update_page');

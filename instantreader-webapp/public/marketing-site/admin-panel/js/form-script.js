@@ -7,6 +7,7 @@
 const infoGetter = (el) => {
     switch (el.dataset.fieldtype) {
         case "big":
+        case "default":
             return el.value
                 .replace(/\s+/g, " ") // removes whitespaces in between words
                 .replace(/^\s+|\s+$/g, ""); // removes whitespaces at the start and at the end of the string
@@ -24,7 +25,7 @@ const infoGetter = (el) => {
 
 // Function for checking if input is all whitespaces only
 const isEmpty = (str, type) => {
-    if (type === "big") {
+    if (type === "big" || type === "default") {
         // remove whitespaces
         str = str.replace(/\s/g, "");
     } else if (type === "tiny") {
@@ -37,16 +38,39 @@ const isEmpty = (str, type) => {
             .replace(/<\/div>/g, "")
             .replace(/\&nbsp;/g, "");
     }
-
-    // if all characters were whitespaces
     if (str.length === 0) {
+        // if all characters were whitespaces
         return true;
     }
-
     return false;
 };
 
-// const forms = $("form").get();
+// Function for sending POST request
+const ajaxPOST = (api_route, update_data, asyncBool, success_msg) => {
+    // AJAX setup
+    $.ajaxSetup({
+        headers: {
+            "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"),
+        },
+    });
+
+    // Send POST request to server
+    $.ajax({
+        url: api_route,
+        method: "POST",
+        data: update_data,
+        async: asyncBool,
+        success: function (response) {
+            alert(success_msg);
+        },
+        error: function (error) {
+            // alert("Update Failed. Contact your admin.");
+            console.log(error);
+        },
+    });
+};
+
+// non-media and non-FAQ forms
 const forms = $(".non-media").get();
 for (let i = 0; i < forms.length; i++) {
     const form = forms[i];
@@ -62,28 +86,74 @@ for (let i = 0; i < forms.length; i++) {
         if (isEmpty(update_data.value, input_element.dataset.fieldtype)) {
             alert("Empty field not allowed!");
         } else {
-            // AJAX setup
-            $.ajaxSetup({
-                headers: {
-                    "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr(
-                        "content"
-                    ),
-                },
-            });
+            ajaxPOST(api_route, update_data, true, "Successfully Updated!");
+        }
+    });
+}
 
-            // Send POST request to server
-            $.ajax({
-                url: api_route,
-                method: "POST",
-                data: update_data,
-                success: function (response) {
-                    alert("Successfully Updated!");
-                },
-                error: function (error) {
-                    // alert("Update Failed. Contact your admin.");
-                    console.log(error);
-                },
-            });
+// FAQ form
+const faqs = $(".faq").get();
+for (let i = 0; i < faqs.length; i++) {
+    const faq = faqs[i];
+    faq.addEventListener("submit", (e) => {
+        e.preventDefault(); // prevents page from refreshing
+        const api_route = faq.dataset.route; // api endpoint
+        const q = faq.children[1].children[1];
+        const a = faq.children[1].children[3];
+        let update_data = {
+            question: infoGetter(q),
+            answer: infoGetter(a),
+        };
+
+        if (
+            isEmpty(q.value, q.dataset.fieldtype) ||
+            isEmpty(a.value, a.dataset.fieldtype)
+        ) {
+            alert("Empty field not allowed!");
+        } else {
+            ajaxPOST(api_route, update_data, false, "Successfully Updated!");
+            location.reload();
+        }
+    });
+}
+
+// FAQ Delete
+const deleteFaqBtn = $(".delete-faq").get();
+for (let i = 0; i < deleteFaqBtn.length; i++) {
+    const btn = deleteFaqBtn[i];
+    btn.addEventListener("click", (e) => {
+        const api_route = btn.dataset.route;
+        const faq_id = btn.dataset.faq_id; // FAQ to delete
+        const data = { id: faq_id };
+        console.log(faq_id);
+        ajaxPOST(api_route, data, false, "Successfully Deleted!");
+        location.reload();
+    });
+}
+
+// FAQ Update
+const updateFAQ = $(".update-faq").get();
+for (let i = 0; i < updateFAQ.length; i++) {
+    const faq = updateFAQ[i];
+    faq.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const api_route = faq.dataset.route;
+        const q = faq.children[1].children[1];
+        const a = faq.children[1].children[3];
+        let update_data = {
+            id: faq.dataset.faq_id,
+            question: infoGetter(q),
+            answer: infoGetter(a),
+        };
+
+        if (
+            isEmpty(q.value, q.dataset.fieldtype) ||
+            isEmpty(a.value, a.dataset.fieldtype)
+        ) {
+            alert("Empty field not allowed!");
+        } else {
+            ajaxPOST(api_route, update_data, false, "Successfully Updated!");
+            location.reload();
         }
     });
 }

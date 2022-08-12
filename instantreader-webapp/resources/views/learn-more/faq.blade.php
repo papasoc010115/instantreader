@@ -119,68 +119,19 @@
     </div>
 </section>
 
-<!-- Questions -->
+<!-- Questions and Answers -->
 <section class="questions">
     <div class="tabs">
+        @foreach($faqs as $faq)
         <div class="tab">
-            <input type="checkbox" id="rd1" name="rd">
-            <label class="tab-label" for="rd1">Is this a great question?</label>
+            <input type="checkbox" id="{{ $faq->id }}" name="rd">
+            <label class="tab-label" for="{{ $faq->id }}">{{ $faq->question }}</label>
             <div class="tab-content">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet. Dui accumsan sit amet nulla. Sit amet nisl purus in mollis nunc sed id semper. Purus sit amet luctus venenatis lectus magna fringilla urna. Vitae semper quis lectus nulla at volutpat. Bibendum est ultricies integer quis. In hac habitasse platea dictumst quisque sagittis purus. Magna fringilla urna porttitor rhoncus dolor purus non enim praesent. Fringilla phasellus faucibus scelerisque eleifend donec pretium. 
+            {{ $faq->answer }} 
             </div>
         </div>
-        
-        <div class="tab">
-            <input type="checkbox" id="rd2" name="rd">
-            <label class="tab-label" for="rd2">Is this a great question?</label>
-            <div class="tab-content">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet. Dui accumsan sit amet nulla. Sit amet nisl purus in mollis nunc sed id semper. Purus sit amet luctus venenatis lectus magna fringilla urna. Vitae semper quis lectus nulla at volutpat. Bibendum est ultricies integer quis. In hac habitasse platea dictumst quisque sagittis purus. Magna fringilla urna porttitor rhoncus dolor purus non enim praesent. Fringilla phasellus faucibus scelerisque eleifend donec pretium. 
-            </div>
-        </div>
-
-        <div class="tab">
-            <input type="checkbox" id="rd3" name="rd">
-            <label class="tab-label" for="rd3">Is this a great question?</label>
-            <div class="tab-content">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet. Dui accumsan sit amet nulla. Sit amet nisl purus in mollis nunc sed id semper. Purus sit amet luctus venenatis lectus magna fringilla urna. Vitae semper quis lectus nulla at volutpat. Bibendum est ultricies integer quis. In hac habitasse platea dictumst quisque sagittis purus. Magna fringilla urna porttitor rhoncus dolor purus non enim praesent. Fringilla phasellus faucibus scelerisque eleifend donec pretium. 
-            </div>
-        </div>
-
-        <div class="tab">
-            <input type="checkbox" id="rd4" name="rd">
-            <label class="tab-label" for="rd4">Is this a great question?</label>
-            <div class="tab-content">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet. Dui accumsan sit amet nulla. Sit amet nisl purus in mollis nunc sed id semper. Purus sit amet luctus venenatis lectus magna fringilla urna. Vitae semper quis lectus nulla at volutpat. Bibendum est ultricies integer quis. In hac habitasse platea dictumst quisque sagittis purus. Magna fringilla urna porttitor rhoncus dolor purus non enim praesent. Fringilla phasellus faucibus scelerisque eleifend donec pretium. 
-            </div>
-        </div>
-
-        <div class="tab">
-            <input type="checkbox" id="rd5" name="rd">
-            <label class="tab-label" for="rd5">Is this a great question?</label>
-            <div class="tab-content">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet. Dui accumsan sit amet nulla. Sit amet nisl purus in mollis nunc sed id semper. Purus sit amet luctus venenatis lectus magna fringilla urna. Vitae semper quis lectus nulla at volutpat. Bibendum est ultricies integer quis. In hac habitasse platea dictumst quisque sagittis purus. Magna fringilla urna porttitor rhoncus dolor purus non enim praesent. Fringilla phasellus faucibus scelerisque eleifend donec pretium. 
-            </div>
-        </div>
-
-        <div class="tab">
-            <input type="checkbox" id="rd6" name="rd">
-            <label class="tab-label" for="rd6">Is this a great question?</label>
-            <div class="tab-content">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet. Dui accumsan sit amet nulla. Sit amet nisl purus in mollis nunc sed id semper. Purus sit amet luctus venenatis lectus magna fringilla urna. Vitae semper quis lectus nulla at volutpat. Bibendum est ultricies integer quis. In hac habitasse platea dictumst quisque sagittis purus. Magna fringilla urna porttitor rhoncus dolor purus non enim praesent. Fringilla phasellus faucibus scelerisque eleifend donec pretium. 
-            </div>
-        </div>
-
-        <div class="tab">
-            <input type="checkbox" id="rd7" name="rd">
-            <label class="tab-label" for="rd7">Is this a great question?</label>
-            <div class="tab-content">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet. Dui accumsan sit amet nulla. Sit amet nisl purus in mollis nunc sed id semper. Purus sit amet luctus venenatis lectus magna fringilla urna. Vitae semper quis lectus nulla at volutpat. Bibendum est ultricies integer quis. In hac habitasse platea dictumst quisque sagittis purus. Magna fringilla urna porttitor rhoncus dolor purus non enim praesent. Fringilla phasellus faucibus scelerisque eleifend donec pretium. 
-            </div>
-        </div>
-
+        @endforeach
     </div>
-    
- 
 </section>
 <!--PAGE CONTENT END -->
 @endsection
