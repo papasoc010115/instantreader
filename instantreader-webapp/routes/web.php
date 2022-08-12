@@ -248,23 +248,26 @@ API ENDPOINTS
 Route::post('/api/home/update-page', [HomeController::class, 'update_page'])->name('home.update_page');
 Route::post('/api/home/upload-media-single', [HomeController::class, 'store_media_single'])->name('home.store_media_single');
 Route::post('/api/home/upload-media-mutiple', [HomeController::class, 'store_media_multiple'])->name('home.store_media_multiple');
-
 Route::post('/api/learn-more/assessment/update-page', [ReadingAssessmentController::class, 'update_page'])->name('learn-more.assessment.update_page');
 Route::post('/api/learn-more/assessment/upload-media-single', [ReadingAssessmentController::class, 'store_media_single'])->name('learn-more.assessment.store_media_single');
-
 Route::post('/api/learn-more/reading-programs/update-page', [ReadingProgramController::class, 'update_page'])->name('learn-more.reading-programs.update_page');
 Route::post('/api/learn-more/reading-programs/upload-media-single', [ReadingProgramController::class, 'store_media_single'])->name('learn-more.reading-programs.store_media_single');
-
 Route::post('/api/learn-more/kids-club/update-page', [KidsClubController::class, 'update_page'])->name('learn-more.kids-club.update_page');
 Route::post('/api/learn-more/kids-club/upload-media-single', [KidsClubController::class, 'store_media_single'])->name('learn-more.kids-club.store_media_single');
-
 Route::post('/api/learn-more/faq/update-page', [FaqController::class, 'update_page'])->name('learn-more.faq.update_page');
 Route::post('/api/learn-more/faq/store-question-and-answer', [FaqController::class, 'store_question_and_answer'])->name('learn-more.faq.store_question_and_answer');
 Route::post('/api/learn-more/faq/update-question-and-answer', [FaqController::class, 'update_question_and_answer'])->name('learn-more.faq.update_question_and_answer');
 Route::post('/api/learn-more/faq/delete-question-and-answer', [FaqController::class, 'delete_question_and_answer'])->name('learn-more.faq.delete_question_and_answer'); 
 
 Route::post('/api/about-us/founder/update-page', [FounderController::class, 'update_page'])->name('about-us.founder.update_page');
+Route::post('/api/about-us/founder/upload-media-single', [FounderController::class, 'store_media_single'])->name('about-us.founder.store_media_single');
 Route::post('/api/about-us/testimonials/update-page', [TestimonialController::class, 'update_page'])->name('about-us.testimonials.update_page');
+Route::post('/api/about-us/testimonials/upload-media-single', [TestimonialController::class, 'store_media_single'])->name('about-us.testimonials.store_media_single');
+Route::post('/api/about-us/testimonials/upload-media-mutiple', [TestimonialController::class, 'store_media_multiple'])->name('about-us.testimonials.store_media_multiple');
 Route::post('/api/contact-us/consultation/update-page', [ConsultationController::class, 'update_page'])->name('contact-us.consultation.update_page');
+Route::post('/api/contact-us/consultation/upload-media-single', [ConsultationController::class, 'store_media_single'])->name('contact-us.consultation.store_media_single');
 Route::post('/api/contact-us/career/update-page', [CareerController::class, 'update_page'])->name('contact-us.career.update_page');
+Route::post('/api/contact-us/career/upload-media-single', [CareerController::class, 'store_media_single'])->name('contact-us.career.store_media_single');
 Route::post('/api/additional-resources/update-page', [AdditionalResourceController::class, 'update_page'])->name('additional-resources.update_page'); 
+Route::post('/api/additional-resources/upload-media-single', [AdditionalResourceController::class, 'store_media_single'])->name('additional-resources.store_media_single'); 
+Route::post('/api/additional-resources/upload-media-mutiple', [AdditionalResourceController::class, 'store_media_multiple'])->name('additional-resources.store_media_multiple'); 

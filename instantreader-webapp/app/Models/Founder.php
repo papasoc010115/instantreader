@@ -46,6 +46,7 @@ class Founder extends Model
         'sect4_image',
 
         // Section 5: Project VIRAC
+        'sect5_heading',
         'sect5_para1',
         'sect5_para2',
         'sect5_video',

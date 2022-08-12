@@ -61,7 +61,7 @@
         <div class="row text-center">
             <div class="col-md-4 d-flex align-items-stretch">
                 <div class="card shadow">
-                    <img class="card-img-top" src="{{  asset('marketing-site/assets/agency/img/blog-news-3.jpg')  }}" alt="Card image cap">
+                    <img class="card-img-top" src="{{  url($data->sect1_image1)  }}" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title pt-3">Card title</h5>
                         <p class="card-text">{!! $data->sect1_para1 !!}</p>
@@ -73,7 +73,7 @@
             </div>
             <div class="col-md-4 d-flex align-items-stretch">
                 <div class="card shadow">
-                    <img class="card-img-top" src="{{  asset('marketing-site/assets/agency/img/blog-news-3.jpg')  }}" alt="Card image cap">
+                    <img class="card-img-top" src="{{  url($data->sect1_image2)   }}" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title pt-3">Card title</h5>
                         <p class="card-text">{!! $data->sect1_para2 !!}</p>
@@ -85,7 +85,7 @@
             </div>
             <div class="col-md-4 d-flex align-items-stretch">
                 <div class="card shadow">
-                    <img class="card-img-top" src="{{  asset('marketing-site/assets/agency/img/blog-news-3.jpg')  }}" alt="Card image cap">
+                    <img class="card-img-top" src="{{  url($data->sect1_image3)   }}" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title pt-3">Card title</h5>
                         <p class="card-text">{!! $data->sect1_para3 !!}</p>
@@ -256,27 +256,15 @@
 
         <!-- Row of Videos -->
         <div class="row">
-            <div class="col-md-4 d-flex align-items-stretch">
-                <div class="card">
-                    <video id="player1" style="max-width: 100%" preload="none" controls poster="{{ asset('marketing-site/assets/agency/img/blog-news-1.jpg')}}" playsinline>
-                        <source src="{{ asset('marketing-site/assets/agency/img/video.mp4') }}" type="video/mp4">
-                    </video>
+            @foreach (Illuminate\Support\Facades\Storage::files($data->sect3_videos) as $video)
+                <div class="col-md-4 d-flex align-items-stretch">
+                    <div class="card">
+                        <video id="player1" style="max-width: 100%" preload="none" controls poster="{{ asset('marketing-site/assets/agency/img/blog-news-1.jpg')}}" playsinline>
+                            <source src="{{ url(str_replace('public','storage',$video)) }}" type="video/mp4">
+                        </video>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-4 d-flex align-items-stretch">
-                <div class="card">
-                    <video id="player1" style="max-width: 100%" preload="none" controls poster="{{ asset('marketing-site/assets/agency/img/blog-news-1.jpg')}}" playsinline>
-                        <source src="{{ asset('marketing-site/assets/agency/img/video.mp4') }}" type="video/mp4">
-                    </video>
-                </div>
-            </div>
-            <div class="col-md-4 d-flex align-items-stretch">
-                <div class="card">
-                    <video id="player1" style="max-width: 100%" preload="none" controls poster="{{ asset('marketing-site/assets/agency/img/blog-news-1.jpg')}}" playsinline>
-                        <source src="{{ asset('marketing-site/assets/agency/img/video.mp4') }}" type="video/mp4">
-                    </video>
-                </div>
-            </div>
+            @endforeach
         </div>
 
         <!--Pagination-->
@@ -303,20 +291,26 @@
             <div class="col-md-7 mb-3">
                 <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel">
                     <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        @foreach (Illuminate\Support\Facades\Storage::files($data->sect4_images) as $index=>$image)
+                            @if ($loop->first)
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{ $index }}" class="active" aria-current="true" aria-label="Slide {{ $index }}"></button>
+                            @else
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{ $index }}" aria-label="Slide {{ $index }}"></button>
+                            @endif
+                        @endforeach
                     </div>
                     <div class="carousel-inner">
-                        <div class="carousel-item active">
-                        <img src="{{ asset('marketing-site/assets/img/tutor-application.jpg') }}" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                        <img src="{{ asset('marketing-site/assets/img/consultation.jpg') }}" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                        <img src="{{ asset('marketing-site/assets/img/tutor-application.jpg') }}" class="d-block w-100" alt="...">
-                        </div>
+                        @foreach (Illuminate\Support\Facades\Storage::files($data->sect4_images) as $image)
+                            @if ($loop->first)
+                                <div class="carousel-item active">
+                                <img src="{{ url(str_replace('public','storage',$image)) }}" class="d-block w-100" alt="...">
+                                </div>
+                            @else
+                                <div class="carousel-item">
+                                <img src="{{ url(str_replace('public','storage',$image)) }}" class="d-block w-100" alt="...">
+                                </div>
+                            @endif
+                        @endforeach
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
