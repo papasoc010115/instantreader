@@ -14,8 +14,8 @@
     <section class="forms">
         <div class="container-fluid">
 
-           <!-- Metadata -->
-           <div class="row">
+            <!-- Metadata -->
+            <div class="row">
                 <div class="col-lg-12">
                     <h2>Metadata</h2>
                 </div>
@@ -24,7 +24,7 @@
                 Page Title. 
                 According to Montti (2021), Moz’s title tag length recommendation is 50 – 60 characters. (reference: https://www.searchenginejournal.com/google-title-tag-length/400682/#close)
             -->
-            <form data-route="{{ route('learn-more.assessment.update_page') }}">
+            <form data-route="{{ route('learn-more.assessment.update_page') }}" class="non-media">
                 @csrf
                 <div class="form-group py-3">
                     <label for="title-editor">Page Title</label>
@@ -37,7 +37,7 @@
                 Description.
                 According to ContentKing (2021), 155 is a good maximum character length for description. (reference: https://www.contentkingapp.com/academy/meta-description/#:~:text=Meta%20Description%20have%3F-,Length,70%20characters%20or%20430%20pixels)
             -->
-            <form data-route="{{ route('learn-more.assessment.update_page') }}">
+            <form data-route="{{ route('learn-more.assessment.update_page') }}" class="non-media">
                 @csrf
                 <div class="form-group py-3">
                     <label for="description-editor">Page Description</label>
@@ -49,7 +49,7 @@
             <!-- 
                 Keywords
              -->
-            <form data-route="{{ route('learn-more.assessment.update_page') }}">
+            <form data-route="{{ route('learn-more.assessment.update_page') }}" class="non-media">
                 @csrf
                 <div class="form-group py-3">
                     <label for="keywords-editor">Keywords</label>                    
@@ -61,7 +61,7 @@
             <!-- 
                 Author
             -->
-            <form data-route="{{ route('learn-more.assessment.update_page') }}">
+            <form data-route="{{ route('learn-more.assessment.update_page') }}" class="non-media">
                 @csrf
                 <div class="form-group py-3">
                     <label for="author-editor">Author</label>                    
@@ -81,7 +81,7 @@
             </div>
 
             <!-- Subheading of Section 1 -->
-            <form data-route="{{ route('learn-more.assessment.update_page') }}">
+            <form data-route="{{ route('learn-more.assessment.update_page') }}" class="non-media">
                 @csrf
                 <div class="form-group py-3">
                     <label for="sect1-subheading">Tiny Text Above Section Title</label>                    
@@ -91,7 +91,7 @@
             </form>
 
             <!-- Heading of Section 1 -->
-            <form data-route="{{ route('learn-more.assessment.update_page') }}">
+            <form data-route="{{ route('learn-more.assessment.update_page') }}" class="non-media">
                 @csrf
                 <div class="form-group py-3">
                     <label for="sect1-heading">Section Heading/Title</label>                    
@@ -101,7 +101,7 @@
             </form>
 
             <!-- Paragraph -->
-            <form data-route="{{ route('learn-more.assessment.update_page') }}">
+            <form data-route="{{ route('learn-more.assessment.update_page') }}" class="non-media">
                 @csrf
                 <div class="form-group py-3">
                     <label for="sect1-paragraph">Paragraph</label>
@@ -122,11 +122,11 @@
             </script>
 
             <!-- Image-->
-            <form data-route="{{ route('learn-more.assessment.update_page') }}">
+            <form action="{{ route('learn-more.assessment.store_media_single') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="mb-3 py-3">
                     <label for="sect1-image" class="form-label">Image</label>
-                    <input required data-fieldtype="media" class="form-control form-control-sm" type="file" name="sect1_image" id="sect1-image" aria-describedby="sect1ImageHelp">
+                    <input required data-fieldtype="media" accept="image/*" class="form-control form-control-sm" type="file" name="sect1_image" id="sect1-image" aria-describedby="sect1ImageHelp" value="{{ $data->sect1_image }}">
                     <small id="sect1ImageHelp" class="form-text text-muted">Recommended image size: WxH</small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
                 </div>                
@@ -143,7 +143,7 @@
             </div>
 
             <!-- Heading of Section 2 -->
-            <form data-route="{{ route('learn-more.assessment.update_page') }}">
+            <form data-route="{{ route('learn-more.assessment.update_page') }}" class="non-media">
                 @csrf
                 <div class="form-group py-3">
                     <label for="sect2-heading">Section Heading/Title</label>                    
@@ -153,7 +153,7 @@
             </form>
 
             <!-- Paragraph -->
-            <form data-route="{{ route('learn-more.assessment.update_page') }}">
+            <form data-route="{{ route('learn-more.assessment.update_page') }}" class="non-media">
                 @csrf
                 <div class="form-group py-3">
                     <label for="sect2-paragraph">Paragraph</label>
@@ -174,7 +174,7 @@
             </script>
 
             <!-- Add Date -->
-            <form data-route="{{ route('learn-more.assessment.update_page') }}">
+            <form data-route="{{ route('learn-more.assessment.update_page') }}" class="non-media">
                 @csrf
                 <div class="form-group py-3">
                     <label for="sect2-date">New Schedule</label>                    
@@ -188,4 +188,16 @@
         </div>
     </section>
 </div>
+
+<script>
+    // Checks if the upload of a file is successful
+    if ("{{ Session::has('upload_media_success') }}") {
+        alert("{{ Session::get('upload_media_success') }}");
+    }
+     // Checks if the upload of a file failed
+     if ("{{ Session::has('upload_media_fail') }}") {
+        alert("{{ Session::get('upload_media_fail') }}");
+    }
+</script>
+
 @endsection
