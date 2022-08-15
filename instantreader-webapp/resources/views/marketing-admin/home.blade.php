@@ -474,7 +474,7 @@
                 @csrf
                 <div class="mb-3 py-3">
                     <label for="sect6-images" class="form-label">Images (Select at least 3 photos)</label>
-                    <input required data-fieldtype="media" accept="image/*" class="form-control form-control-sm" name="sect6_images" type="file" id="sect6-images" aria-describedby="sect6ImagesHelp" multiple value="{{ $data->sect6_images }}">
+                    <input required data-fieldtype="media" accept="image/*" class="form-control form-control-sm" name="sect6_images[]" type="file" id="sect6-images" aria-describedby="sect6ImagesHelp" multiple value="{{ $data->sect6_images }}">
                     <small id="sect6ImagesHelp" class="form-text text-muted">Recommended image size: WxH</small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
                 </div>                

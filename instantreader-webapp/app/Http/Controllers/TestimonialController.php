@@ -66,7 +66,7 @@ class TestimonialController extends Controller
                 return redirect()->route("marketing-admin.about-us.testimonials")->with('upload_media_fail', 'Update Failed. Try checking the number of files.');
             }
 
-            $value = 'public/marketing-site/assets/img/'.$name.'/';
+            $value = 'public/marketing-site/assets/img/'.$page.'_'.$name.'/';
 
             // delete old files in the directory
             $delete_files = Storage::allFiles('public/marketing-site/assets/img/'.$name);
@@ -76,7 +76,7 @@ class TestimonialController extends Controller
             foreach ($file_list as $file) {
                 // renaming the file and saving it to the specified path
                 $filename = $page.'_'.$name.'_'.$file_num.'.'.explode('/',$file->getMimeType())[1];
-                $path = $file->storeAs('public/marketing-site/assets/img/'.$name.'/', $filename);
+                $path = $file->storeAs('public/marketing-site/assets/img/'.$page.'_'.$name.'/', $filename);
                 
                 // updating the file number
                 $file_num = $file_num + 1;
