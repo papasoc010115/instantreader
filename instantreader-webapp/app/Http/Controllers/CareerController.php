@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Career;
-use Purifier;
 
 class CareerController extends Controller
 {
@@ -19,7 +18,7 @@ class CareerController extends Controller
     //Update Data
     public function update_page(Request $req) {
         $name = $req->name;
-        $value = Purifier::clean($req->value);
+        $value = $req->value;
         Career::first()->update([$name => $value]);
     }
 

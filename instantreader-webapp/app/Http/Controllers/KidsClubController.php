@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\KidsClub;
-use Purifier;
 
 class KidsClubController extends Controller
 {
@@ -17,7 +16,7 @@ class KidsClubController extends Controller
     //Update Data
     public function update_page(Request $req) {
         $name = $req->name;
-        $value = Purifier::clean($req->value);
+        $value = $req->value;
         KidsClub::first()->update([$name => $value]);
     }
 

@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\ReadingAssessment;
-use Purifier;
 
 class ReadingAssessmentController extends Controller
 {
@@ -17,7 +16,7 @@ class ReadingAssessmentController extends Controller
     //Update Data
     public function update_page(Request $req) {
         $name = $req->name;
-        $value = Purifier::clean($req->value);
+        $value = $req->value;
         ReadingAssessment::first()->update([$name => $value]);
     }
 
