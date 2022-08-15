@@ -195,6 +195,10 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+
+        /* For sanitizing content */
+        Mews\Purifier\PurifierServiceProvider::class,
+
     ],
 
     /*
@@ -210,6 +214,7 @@ return [
 
     'aliases' => Facade::defaultAliases()->merge([
         // 'ExampleClass' => App\Example\ExampleClass::class,
+        'Purifier' => Mews\Purifier\Facades\Purifier::class,
     ])->toArray(),
 
 ];

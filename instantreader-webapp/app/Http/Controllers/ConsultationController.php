@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Consultation;
+use Purifier;
 
 class ConsultationController extends Controller
 {
@@ -18,7 +19,7 @@ class ConsultationController extends Controller
     //Update Data
     public function update_page(Request $req) {
         $name = $req->name;
-        $value = $req->value;
+        $value = Purifier::clean($req->value);
         Consultation::first()->update([$name => $value]);
     }
 

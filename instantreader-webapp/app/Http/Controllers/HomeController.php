@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use App\Models\Home;
+use Purifier;
 
 class HomeController extends Controller
 {
@@ -17,7 +18,7 @@ class HomeController extends Controller
     //Update Data
     public function update_page(Request $req) {
         $name = $req->name;
-        $value = $req->value;
+        $value = Purifier::clean($req->value);
         Home::first()->update([$name => $value]);
     }
 

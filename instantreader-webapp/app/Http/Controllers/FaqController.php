@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Faq;
 use App\Models\QuestionAndAnswer;
+use Purifier;
 
 class FaqController extends Controller
 {
@@ -26,8 +27,8 @@ class FaqController extends Controller
     public function store_question_and_answer(Request $req) {
         $faq = new QuestionAndAnswer();
 
-        $faq->question = $req->question;
-        $faq->answer = $req->answer;
+        $faq->question = Purifier::clean($req->question);
+        $faq->answer = Purifier::clean($req->answer);
 
         $faq->save();
     }

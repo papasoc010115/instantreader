@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use App\Models\AdditionalResource;
+use Purifier;
 
 class AdditionalResourceController extends Controller
 {
@@ -17,8 +18,8 @@ class AdditionalResourceController extends Controller
     //Update Data
     public function update_page(Request $req) {
         $name = $req->name;
-        $value = $req->value;
-        AdditionalResource::first()->update([$name => $value]);
+        $value = Purifier::clean($req->value);
+        AdditionalResource::first()->update([$req->name => $req->value]);
     }
 
     // Upload Single Media File
