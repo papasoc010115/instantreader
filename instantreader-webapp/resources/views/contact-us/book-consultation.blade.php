@@ -32,6 +32,48 @@
         justify-content: center;
         align-items: center;
     }
+
+    #day-selection {
+        height: 200px;
+    }
+
+    #reading-assessment-carousel{
+        width: 90%;
+    }
+
+    .carousel-control{
+        width: 5%;
+    }
+
+    .carousel-card {
+        border-radius: 10px;
+        background-color: #D9D9D9;
+    }
+
+    .general-time-card {
+        width: 150px;
+        height: 50px;
+        border-radius: 10px;
+        background-color: #D9D9D9;
+    }
+
+    .specific-time-card {
+        width: 250px;
+        height: 75px;
+        border-radius: 10px;
+        background-color: #D9D9D9;
+    }
+
+    .carousel-card:hover, .general-time-card:hover, .specific-time-card:hover {
+        cursor: pointer;
+        color: white;
+        background-color: #564F4F;
+    }
+
+    .is-active{
+        color: white;
+        background-color: #483BF7;
+    }
 </style>
 <!-- Style End -->
 
@@ -96,25 +138,143 @@
 </section>
 <!--Section 1 End-->
 
-<!--Calendar Start-->
-<section style="background-color: #562FB7;">
-    <div class="container desc-2">
+<!-- Calendar Start -->
+<section class="bg-light pb-0 pt-4 m-0 wow fadeInUp" id="calendar-reading-assessment">
+    <div class="container">
+
+        <!-- Calendar Paragraph -->
         <div class="row">
-            <div class="col-md-6 wow fadeInLeft">
-                <div class="half-img mt-5 pt-4 mt-lg-0 pt-lg-0">
-                    <img alt="image" src="{{ asset('marketing-site/assets/img/consultation.jpg') }}">
+            <div class="col-12 pt-5">
+                <h2>{{ $data->sect2_heading }}</h2>
+                <p class="para">{!! $data->sect2_para !!}</p>
+            </div>
+        </div>
+
+        <!-- Day Carousel -->
+        <div id="day-selection" class="w-100 d-flex align-items-center justify-content-center my-5">
+            <div class="carousel-control text-center">
+                <i type="button" class="fas fa-2x fa-chevron-left" data-bs-target="#reading-assessment-carousel" data-bs-slide="prev"></i>
+            </div>
+            <div id="reading-assessment-carousel" class="carousel slide h-100">
+                <div class="carousel-inner h-100">
+                    <div class="carousel-item h-100 active">
+                        <ul class="row m-auto h-100 list-unstyled">
+                            <li class="col-3 py-3 h-100" >
+                                <div class="carousel-card h-100 d-flex align-items-center justify-content-center text-center">
+                                    <p>
+                                        August 05, 2022
+                                        <br>
+                                        Available Slots
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="col-3 py-3 h-100">
+                                <div class="carousel-card h-100 d-flex align-items-center justify-content-center text-center">
+                                    <p>
+                                        August 06, 2022
+                                        <br>
+                                        Available Slots
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="col-3 py-3 h-100">
+                                <div class="carousel-card h-100 d-flex align-items-center justify-content-center text-center">
+                                    <p>
+                                        August 07, 2022
+                                        <br>
+                                        Available Slots
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="col-3 py-3 h-100">
+                                <div class="carousel-card h-100 d-flex align-items-center justify-content-center text-center">
+                                    <p>
+                                        August 08, 2022
+                                        <br>
+                                        Available Slots
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="carousel-item h-100">
+                        <div class="row m-auto h-100">
+                            <div class="col-3 py-3 h-100">
+                                <div class="carousel-card h-100 d-flex align-items-center justify-content-center text-center">
+                                    <p>
+                                        August 09, 2022
+                                        <br>
+                                        Available Slots
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-3 py-3 h-100">
+                                <div class="carousel-card h-100 d-flex align-items-center justify-content-center text-center">
+                                    <p>
+                                        August 10, 2022
+                                        <br>
+                                        Available Slots
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-3 py-3 h-100">
+                                <div class="carousel-card h-100 d-flex align-items-center justify-content-center text-center">
+                                    <p>
+                                        August 11, 2022
+                                        <br>
+                                        Available Slots
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-3 py-3 h-100">
+                                <div class="carousel-card h-100 d-flex align-items-center justify-content-center text-center">
+                                    <p>
+                                        August 12, 2022
+                                        <br>
+                                        Available Slots
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-md-6 wow fadeInRight">
-                <div class="heading-area">
-                    <h2 class="title text-white">{{ $data->sect2_heading }}</h2>
-                    <p class="para text-white">{!! $data->sect2_para !!}</p>
-                </div>
+            <div class="carousel-control text-center">
+                <i type="button" class="fas fa-2x fa-chevron-right" data-bs-target="#reading-assessment-carousel" data-bs-slide="next"></i>
+            </div>
+        </div>
+
+        <!-- General Time Selection -->
+        <div id="general-time-selection" class="w-100 d-flex align-items-center justify-content-center my-5">
+            <div class="general-time-card mx-2 d-flex align-items-center justify-content-center">
+                Morning
+            </div>
+            <div class="general-time-card mx-2 d-flex align-items-center justify-content-center">
+                Afternoon
+            </div>
+            <div class="general-time-card mx-2 d-flex align-items-center justify-content-center">
+                Evening
+            </div>
+        </div>
+
+        <!-- Specific Time Selection -->
+        <div id="specific-time-selection" class="w-100 d-flex align-items-center justify-content-center my-5">
+            <div class="specific-time-card mx-2 d-flex align-items-center justify-content-center">
+                8am - 9am
+            </div>
+            <div class="specific-time-card mx-2 d-flex align-items-center justify-content-center">
+                9am - 10am
+            </div>
+            <div class="specific-time-card mx-2 d-flex align-items-center justify-content-center">
+                10am - 11am
+            </div>
+            <div class="specific-time-card mx-2 d-flex align-items-center justify-content-center">
+                10am - 12am
             </div>
         </div>
     </div>
 </section>
-<!--Calendar End-->
+<!-- Calendar End -->
 
 <!--Booking Form Start-->
 <section id="book-consultation-form">
@@ -267,6 +427,48 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
 <script>
+    // jquery for selecting day cards
+    $(".carousel-card").on("click",function() {
+        if($(this).hasClass("is-active")){
+            // if the card is active, remove the class
+            $(this).removeClass("is-active");
+            $(".general-time-card.is-active").removeClass("is-active");
+            $(".specific-time-card.is-active").removeClass("is-active");
+        } else{
+            // else remove all currently active cards, then set current card as active
+            $(".carousel-card.is-active").removeClass("is-active");
+            $(".general-time-card.is-active").removeClass("is-active");
+            $(".specific-time-card.is-active").removeClass("is-active");
+            $(this).addClass("is-active");
+        }
+    });
+
+    // jquery for selecting general time cards
+    $(".general-time-card").on("click",function() {
+        if($(this).hasClass("is-active")){
+            // if the card is active, remove the class
+            $(this).removeClass("is-active");
+            $(".specific-time-card.is-active").removeClass("is-active");
+        } else {
+            // else remove all currently active cards, then set current card as active
+            $(".general-time-card.is-active").removeClass("is-active");
+            $(".specific-time-card.is-active").removeClass("is-active");
+            $(this).addClass("is-active");
+        }
+    });
+
+    // jquery for selecting specific time cards
+    $(".specific-time-card").on("click",function() {
+        if($(this).hasClass("is-active")){
+            // if the card is active, remove the class
+            $(this).removeClass("is-active");
+        } else{
+            // else remove all currently active cards, then set current card as active
+            $(".specific-time-card.is-active").removeClass("is-active");
+            $(this).addClass("is-active");
+        }
+    });
+
     // script for scrolling down to form
     document.getElementById("scroll-to-form").onclick = function () {
         document.getElementById("book-consultation-form").scrollIntoView({behavior: 'smooth'});
