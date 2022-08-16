@@ -161,10 +161,10 @@
 
             <br><br><br>
 
-            <!-- Section 2: Calendar -->
+            <!-- Section 2.1: Calendar -->
             <div class="row">
                 <div class="col-lg-12">
-                    <h2>Section 2: Calendar</h2>
+                    <h2>Section 2.1: Calendar</h2>
                 </div>
             </div>
 
@@ -198,51 +198,86 @@
                     toolbar: 'undo redo | bold italic underline | link'
                 });            
             </script>
-
-            <!-- Add Date -->
-            <form data-route="{{ route('learn-more.assessment.update_page') }}" class="non-media">
-                @csrf
-                <div class="form-group py-3">
-                    <label for="sect2-date">New Schedule</label>                    
-                    <input type="date" class="form-control" id="sect2-date">
-                    <label for="sect2-time">Time</label>                    
-                    <input type="time" class="form-control" id="sect2-time">
-                    <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Add Schedule</span></button>                    
-                </div>
-            </form>
-            <!-- End of Section 2 -->
+            <!-- End of Section 2.1 -->
 
             <br><br><br>
 
-            <!-- Section 3: Availability -->
+            <!-- Section 2.2: Assessment Booking -->
             <div class="row">
                 <div class="col-lg-12">
-                    <h2>Section 3: Availability</h2>
+                    <h2>Section 2.2: Assessment Booking</h2>
                 </div>
             </div>
 
             <!-- Schedule -->
             <form data-route="{{ route('learn-more.assessment.update_page') }}" class="non-media">
                 @csrf
-                <div class="form-group pt-4">
-                    <label for="sect3-schedule">Select Schedule</label>
-                    <div id="sect3-schedule">
-                        <div class="list-group schedule">
-                            <div class="list-group-item py-3 px-5 active-schedule d-flex">
-                                <span class="fw-bold">Work Schedule</span>
-                                <i class="schedule-delete fas fa-trash-alt ms-auto"></i>
-                            </div>
-                        </div>
+                <!-- Event Cards -->
+                <!-- Event Date Range -->
+                <div id="sect2-date-range" class="py-3">
+                    <label for="sect2-date-range" class="pb-3"><strong>Date Range</strong></label>
+                    <div class="form-check sect2-form-check">
+                        <input class="form-check-input" type="radio" name="event-range" id="sect2-event-range1" checked>
+                        <label>
+                            <input class="form-control" type="number" id="sect2-days-into-future" name="days-into-future" required> days into the future
+                        </label>
                     </div>
-                    <div onclick="addSchedule()" class="list-group schedule">
-                        <div class="list-group-item py-3 px-5">
-                            <i class="fas fa-plus me-3"></i>
-                            <span>New Schedule</span>
+                    <div class="form-check sect2-form-check sect2-custom-date-range">
+                        <input class="form-check-input" type="radio" name="event-range" id="sect2-event-range2">
+                        <label class="form-check-label" for="sect2-event-range2">
+                            Custom Date Range
+                        </label>
+                    </div>
+
+                    <div class="form-group sect2-start-end-date sect2-flex-container-x removed" id="sect2-start-end-date">
+                        <div>
+                            <label for="sect2-start-date">Start Date</label>                    
+                            <input required type="date" class="form-control" name="sect2_start_date" id="sect2-start-date">
+                        </div>
+                        <div>                      
+                            <label for="sect2-end-date">End Date</label>  
+                            <input required type="date" class="form-control" name="sect2_end_date" id="sect2-end-date">
+                        </div> 
+                    </div>
+
+                </div>
+            
+                <!-- Event Duration -->
+                <div class="form-group row py-3" id="sect2-duration">
+                    <label for="sect2-duration" class="pb-3"><strong>Duration</strong></label>
+                    <div class="sect2-flex-container-x">
+                        <div>
+                            <select required class="form-select" id="sect2-duration-value" aria-label="Default select example">
+                                <option value="15">15 min</option>
+                                <option value="30" selected>30 min</option>
+                                <option value="45">45 min</option>
+                                <option value="60">1 hour</option>
+                                <option value="75">1 hour and 15 min</option>
+                                <option value="90">1 hour and 30 min</option>
+                                <option value="105">1 hour and 45 min</option>
+                                <option value="120">2 hours</option>
+                            </select>
                         </div>
                     </div>
                 </div>
-                <div class="form-group pt-4">
-                    <label for="sect3-timezone">Time Zone</label>
+                
+                <div class="form-group py-3" id="sect2-time-allowance">
+                    <label for="sect2-event-interval" class="pb-3"><strong>Event Interval</strong></label>
+                    <select required class="form-select" id="sect2-event-interval" aria-label="Default select example">
+                        <option value="0" selected>None</option>
+                        <option value="10">10 min</option>
+                        <option value="15">15 min</option>
+                        <option value="20">20 min</option>
+                        <option value="25">25 min</option>
+                        <option value="30">30 min</option>
+                        <option value="45">45 min</option>
+                        <option value="60">1 hour</option>
+                    </select>
+                </div>
+
+                <!-- Availability -->
+                <div class="form-group py-3">
+                    <label for="sect3-timezone" class="pb-3"><strong>Time Zone</strong></label>
                     <div>
                         <select name="sect3_timezone" id="sect3-timezone" class="span5">
                             <option value="-12:00">(GMT -12:00) Eniwetok, Kwajalein</option>
@@ -288,8 +323,8 @@
                         </select>
                     </div>
                 </div>
-                <div class="form-group pt-4">
-                    <label for="sect3-hours">Set your weekly hours</label>
+                <div class="form-group py-3">
+                    <label for="sect3-hours"><strong>Set your weekly hours</strong></label>
                     <div class="list-group" id="sect3-hours">
                         <div class="list-group-item py-3 px-5 ">
                             <div class="row">
@@ -391,9 +426,11 @@
                         </div>
                     </div>
                 </div>
-                <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
+
+
+                <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Generate Events</span></button>
             </form>
-            <!-- End of Section 3 -->
+            <!-- End of Section 2.2 -->
         </div>
     </section>
 </div>
