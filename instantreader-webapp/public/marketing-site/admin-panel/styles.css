@@ -59,3 +59,52 @@ small,
     float: right;
     font-size: 0.8rem;
 }
+
+#sect2-days-into-future {
+    display: inline !important;
+    width: 3.3rem;
+    margin-left: 0.3rem;
+    margin-right: 0.3rem;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type="number"] {
+    -moz-appearance: textfield; /* Firefox */
+}
+
+.sect2-form-check {
+    margin-bottom: 2rem;
+}
+
+.sect2-flex-container-x {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.sect2-custom-date-range {
+    margin-bottom: 1.2rem;
+}
+
+#sect2-start-date,
+#sect2-end-date {
+    width: 10rem;
+}
+
+#sect2-event-interval {
+    width: 21rem;
+}
+
+#sect2-duration-value {
+    width: 21rem;
+}
+
+.removed {
+    display: none;
+}
