@@ -329,100 +329,100 @@
                         <div class="list-group-item py-3 px-5 ">
                             <div class="row">
                                 <div class="col-2">
-                                    <input disabled id="sun-check" name="sunday_check" value="available" class="form-check-input me-5" type="checkbox" value="" id="flexCheckDefault" />
+                                    <input disabled id="sunday-check" name="sunday_check" value="available" class="form-check-input me-5" type="checkbox"  id="flexCheckDefault" />
                                     <span class="fw-bold">SUNDAY</span>
                                 </div>
-                                <div id="sun-status" class="col-9">Unavailable</div>
+                                <div id="sunday-status" class="col-9">Unavailable</div>
                                 <div class="col-1">
-                                    <i onclick="addTimeSlot('sun-timeslots','sunday')" class="fas fa-plus me-3"></i>
-                                    <i class="far fa-clone"></i>
+                                    <i onclick="addTimeSlot('sunday-timeslots','sunday')" class="fas fa-plus me-3"></i>
+                                    <i onclick="openPopup('sunday-timeslots')" class="far fa-clone"></i>
                                 </div>
                             </div>
-                            <div id="sun-timeslots"></div>
+                            <div id="sunday-timeslots"></div>
                         </div>
                         <div class="list-group-item py-3 px-5 ">
                             <div class="row">
                                 <div class="col-2">
-                                    <input disabled id="mon-check" name="monday_check" value="available" class="form-check-input me-5" type="checkbox" value="" id="flexCheckDefault" />
+                                    <input disabled id="monday-check" name="monday_check" value="available" class="form-check-input me-5" type="checkbox"  id="flexCheckDefault" />
                                     <span class="fw-bold">MONDAY</span>
                                 </div>
-                                <div id="mon-status" class="col-9">Unavailable</div>
+                                <div id="monday-status" class="col-9">Unavailable</div>
                                 <div class="col-1"> 
-                                    <i onclick="addTimeSlot('mon-timeslots','monday')" class="fas fa-plus me-3"></i>
-                                    <i class="far fa-clone"></i>
+                                    <i onclick="addTimeSlot('monday-timeslots','monday')" class="fas fa-plus me-3"></i>
+                                    <i onclick="openPopup('monday-timeslots')" class="far fa-clone"></i>
                                 </div>
                             </div>
-                            <div id="mon-timeslots"></div>
+                            <div id="monday-timeslots"></div>
                         </div>
                         <div class="list-group-item py-3 px-5 ">
                             <div class="row">
                                 <div class="col-2">
-                                    <input disabled id="tue-check" name="tuesday_check" value="available" class="form-check-input me-5" type="checkbox" value="" id="flexCheckDefault" />
+                                    <input disabled id="tuesday-check" name="tuesday_check" value="available" class="form-check-input me-5" type="checkbox"  id="flexCheckDefault" />
                                     <span class="fw-bold">TUESDAY</span>
                                 </div>
-                                <div id="tue-status" class="col-9">Unavailable</div>
+                                <div id="tuesday-status" class="col-9">Unavailable</div>
                                 <div class="col-1"> 
-                                    <i onclick="addTimeSlot('tue-timeslots','tuesday')" class="fas fa-plus me-3"></i>
-                                    <i class="far fa-clone"></i>
+                                    <i onclick="addTimeSlot('tuesday-timeslots','tuesday')" class="fas fa-plus me-3"></i>
+                                    <i onclick="openPopup('tuesday-timeslots')" class="far fa-clone"></i>
                                 </div>
                             </div>
-                            <div id="tue-timeslots"></div>
+                            <div id="tuesday-timeslots"></div>
                         </div>
                         <div class="list-group-item py-3 px-5 ">
                             <div class="row">
                                 <div class="col-2">
-                                    <input disabled id="wed-check" name="wednesday_check" value="available" class="form-check-input me-5" type="checkbox" value="" id="flexCheckDefault" />
+                                    <input disabled id="wednesday-check" name="wednesday_check" value="available" class="form-check-input me-5" type="checkbox"  id="flexCheckDefault" />
                                     <span class="fw-bold">WEDNESDAY</span>
                                 </div>
-                                <div id="wed-status" class="col-9">Unavailable</div>
+                                <div id="wednesday-status" class="col-9">Unavailable</div>
                                 <div class="col-1"> 
-                                    <i onclick="addTimeSlot('wed-timeslots','wednesday')" class="fas fa-plus me-3"></i>
-                                    <i class="far fa-clone"></i>
+                                    <i onclick="addTimeSlot('wednesday-timeslots','wednesday')" class="fas fa-plus me-3"></i>
+                                    <i onclick="openPopup('wednesday-timeslots')" class="far fa-clone"></i>
                                 </div>
                             </div>
-                            <div id="wed-timeslots"></div>
+                            <div id="wednesday-timeslots"></div>
                         </div>
                         <div class="list-group-item py-3 px-5 ">
                             <div class="row">
                                 <div class="col-2">
-                                    <input disabled id="thu-check" name="thursday_check" value="available" class="form-check-input me-5" type="checkbox" value="" id="flexCheckDefault" />
+                                    <input disabled id="thursday-check" name="thursday_check" value="available" class="form-check-input me-5" type="checkbox"  id="flexCheckDefault" />
                                     <span class="fw-bold">THURSDAY</span>
                                 </div>
-                                <div id="thu-status" class="col-9">Unavailable</div>
+                                <div id="thursday-status" class="col-9">Unavailable</div>
                                 <div class="col-1"> 
-                                    <i onclick="addTimeSlot('thu-timeslots','thursday')" class="fas fa-plus me-3"></i>
-                                    <i class="far fa-clone"></i>
+                                    <i onclick="addTimeSlot('thursday-timeslots','thursday')" class="fas fa-plus me-3"></i>
+                                    <i onclick="openPopup('thursday-timeslots')" class="far fa-clone"></i>
                                 </div>
                             </div>
-                            <div id="thu-timeslots"></div>
+                            <div id="thursday-timeslots"></div>
                         </div>
                         <div class="list-group-item py-3 px-5 ">
                             <div class="row">
                                 <div class="col-2">
-                                    <input disabled id="fri-check" name="friday_check" value="available" class="form-check-input me-5" type="checkbox" value="" id="flexCheckDefault" />
+                                    <input disabled id="friday-check" name="friday_check" value="available" class="form-check-input me-5" type="checkbox"  id="flexCheckDefault" />
                                     <span class="fw-bold">FRIDAY</span>
                                 </div>
-                                <div id="fri-status" class="col-9">Unavailable</div>
+                                <div id="friday-status" class="col-9">Unavailable</div>
                                 <div class="col-1"> 
-                                    <i onclick="addTimeSlot('fri-timeslots','friday')" class="fas fa-plus me-3"></i>
-                                    <i class="far fa-clone"></i>
+                                    <i onclick="addTimeSlot('friday-timeslots','friday')" class="fas fa-plus me-3"></i>
+                                    <i onclick="openPopup('friday-timeslots')" class="far fa-clone"></i>
                                 </div>
                             </div>
-                            <div id="fri-timeslots"></div>
+                            <div id="friday-timeslots"></div>
                         </div>
                         <div class="list-group-item py-3 px-5 ">
                             <div class="row">
                                 <div class="col-2">
-                                    <input disabled id="sat-check" name="saturday_check" class="form-check-input me-5" type="checkbox" value="" id="flexCheckDefault" />
+                                    <input disabled id="saturday-check" name="saturday_check" value="available" class="form-check-input me-5" type="checkbox"  id="flexCheckDefault" />
                                     <span class="fw-bold">SATURDAY</span>
                                 </div>
-                                <div id="sat-status" class="col-9">Unavailable</div>
+                                <div id="saturday-status" class="col-9">Unavailable</div>
                                 <div class="col-1"> 
-                                    <i onclick="addTimeSlot('sat-timeslots','saturday')" class="fas fa-plus me-3"></i>
-                                    <i class="far fa-clone"></i>
+                                    <i onclick="addTimeSlot('saturday-timeslots','saturday')" class="fas fa-plus me-3"></i>
+                                    <i onclick="openPopup('saturday-timeslots')" class="far fa-clone"></i>
                                 </div>
                             </div>
-                            <div id="sat-timeslots"></div>
+                            <div id="saturday-timeslots"></div>
                         </div>
                     </div>
                 </div>
@@ -431,38 +431,61 @@
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Generate Events</span></button>
             </form>
             <!-- End of Section 2.2 -->
+            <div id="clone-popup" title="Select day to clone">
+                <div class="d-flex justify-content-center">
+                    <div>
+                        <div class="d-flex">
+                            <input value="sunday-timeslots" class="clone_day form-check-input me-5" type="checkbox" id="flexCheckDefault" />
+                            <span class="fw-bold">SUNDAY</span>
+                        </div>
+                        <div class="d-flex">
+                            <input value="monday-timeslots" class="clone_day form-check-input me-5" type="checkbox" id="flexCheckDefault" />
+                            <span class="fw-bold">MONDAY</span>
+                        </div>
+                        <div class="d-flex">
+                            <input value="tuesday-timeslots" class="clone_day form-check-input me-5" type="checkbox" id="flexCheckDefault" />
+                            <span class="fw-bold">TUESDAY</span>
+                        </div>
+                        <div class="d-flex">
+                            <input value="wednesday-timeslots" class="clone_day form-check-input me-5" type="checkbox" id="flexCheckDefault" />
+                            <span class="fw-bold">WEDNESDAY</span>
+                        </div>
+                        <div class="d-flex">
+                            <input value="thursday-timeslots" class="clone_day form-check-input me-5" type="checkbox" id="flexCheckDefault" />
+                            <span class="fw-bold">THURSDAY</span>
+                        </div>
+                        <div class="d-flex">
+                            <input value="friday-timeslots" class="clone_day form-check-input me-5" type="checkbox" id="flexCheckDefault" />
+                            <span class="fw-bold">FRIDAY</span>
+                        </div>
+                        <div class="d-flex">
+                            <input value="saturday-timeslots" class="clone_day form-check-input me-5" type="checkbox" id="flexCheckDefault" />
+                            <span class="fw-bold">SATURDAY</span>
+                        </div>
+                    </div>
+                </div>
+                <button onclick="cloneSchedule()" class="btn btn-primary update-btn w-100"><span style="font-size: 0.8rem">Clone</span></button>
+            </div>
+            <!-- End of Section 3 -->
         </div>
     </section>
 </div>
 
 <script>
-    // ------------- ADDING & DELETING SCHEDULES start
-    function addSchedule(){
-        let sched_id = prompt("Enter Schedule Name");
-        let scdhed_list = document.getElementById("sect3-schedule")
-
-        // create the new schedule
-        let div = document.createElement('div');
-        div.id = sched_id;
-        div.classList.add('list-group');
-        div.classList.add('schedule');
-        div.innerHTML = "<div class=\"list-group-item py-3 px-5 d-flex\"><span class=\"fw-bold\">"+ sched_id +"</span><i class=\"fas fa-trash-alt ms-auto\"></i></div>";
-    
-        // append the new schedule to the list
-        scdhed_list.appendChild(div);
-    }
-    // ------------- ADDING & DELETING SCHEDULES start
-    
-
-    // ------------- ADDING & DELETING TIMESLOTS start
+    // hide the clone pop-up and unchecks all input checkbox
+    $('#clone-popup').hide();
+    $('input[type="checkbox"]').each(function(){
+  	    $(this).prop('checked', false);
+    });
+    // ------------- ADDING, DELETING, & CLONING TIMESLOTS start
     // initializing variables
-    let sunday_count = 0;
-    let monday_count = 0;
-    let tuesday_count = 0;
-    let wednesday_count = 0;
-    let thursday_count = 0;
-    let friday_count = 0;
-    let saturday_count = 0;
+    var sunday_count = 0;
+    var monday_count = 0;
+    var tuesday_count = 0;
+    var wednesday_count = 0;
+    var thursday_count = 0;
+    var friday_count = 0;
+    var saturday_count = 0;
 
     function addTimeSlot(list_id, day){
         // get the necessary variables
@@ -489,11 +512,35 @@
         // get the time slot list
         let slot_list = document.getElementById(list_id);
 
-        // create the time slot
-        let div = document.createElement('div');
-        div.id = day + '_' + num;
-        div.classList.add('mt-3');
-        div.innerHTML = "<input required data-fieldtype=\"big\" name=\"" + day + "_start_" + num + "\" class=\"rounded text-center timeslot-input\" type=\"time\"><span> - </span><input required data-fieldtype=\"big\" name=\"" + day + "_end_" + num + "\" class=\"rounded text-center timeslot-input\" type=\"time\"><i onclick=\"deleteTimeSlot('" + list_id + "', '" + day + "_" + num + "')\" class=\"far fa-trash-alt ms-3\"></i>";
+        // create the main time slot div
+        let main_div = document.createElement('div');
+        main_div.id = day + '_' + num;
+        main_div.classList.add('mt-3');
+        // create the timeslot start input field
+        let timeslot_start = document.createElement('input');
+        timeslot_start.id = day + '_start_' + num;
+        timeslot_start.name = day + '_start_' + num;
+        timeslot_start.classList.add('rounded', 'text-center', 'timeslot-input', 'me-3');
+        timeslot_start.type = 'time';
+        timeslot_start.required = 'true';
+        main_div.appendChild(timeslot_start);
+        // create the dash between the input field
+        let dash = document.createElement('span');
+        dash.textContent = 'to';
+        main_div.appendChild(dash);
+        // create the timeslot end input field
+        let timeslot_end = document.createElement('input');
+        timeslot_end.id = day + '_end_' + num;
+        timeslot_end.name = day + '_end_' + num;
+        timeslot_end.classList.add('rounded', 'text-center', 'timeslot-input', 'ms-3');
+        timeslot_end.type = 'time';
+        timeslot_end.required = 'true';
+        main_div.appendChild(timeslot_end);
+        // create the delete icon
+        let delete_icon = document.createElement('i');
+        delete_icon.classList.add('fas', 'fa-trash-alt', 'ms-3');
+        delete_icon.setAttribute('onclick', 'deleteTimeSlot(\"' + list_id + '\", \"' + main_div.id + '\")');
+        main_div.appendChild(delete_icon);
 
         // update necessary variables
         if (day == "sunday"){
@@ -513,7 +560,7 @@
         }
 
         // append the timeslot to the list
-        slot_list.appendChild(div);
+        slot_list.appendChild(main_div);
     }
 
     function deleteTimeSlot(list_id, slot_id){
@@ -530,7 +577,102 @@
             document.getElementById(list_id.replace("timeslots", "check")).checked = false;
         }
     }
-    // ------------- ADDING & DELETING TIMESLOTS end
+
+    function openPopup(list_id){
+        $('#clone-popup').show();
+        $('#clone-popup').data('list_id', list_id).dialog();
+    }
+
+    function cloneSchedule(){
+        let list_id = $('#clone-popup').data('list_id')
+        $('.clone_day:checkbox:checked').each(function () {
+            // only proceed if the target day is NOT same as source day
+            if ($(this).attr('value') != list_id){
+                // get the old day from source list and the new days for destination list
+                let old_day = list_id.split('-')[0];                
+                let new_day = $(this).attr('value').split('-')[0];
+
+                // get the necessary variables
+                if (new_day == "sunday"){
+                    num = sunday_count;
+                } else if (new_day == "monday") {
+                    num = monday_count;
+                } else if (new_day == "tuesday") {
+                    num = tuesday_count;
+                } else if (new_day == "wednesday") {
+                    num = wednesday_count;
+                } else if (new_day == "thursday") {
+                    num = thursday_count;
+                } else if (new_day == "friday") {
+                    num = friday_count;
+                } else {
+                    num = saturday_count;
+                }
+
+                // get target list
+                let target_slot_list = document.getElementById($(this).attr('value'));
+
+                // iterate through all the time slots
+                for (const timeslot of document.getElementById(list_id).childNodes) {
+
+                    // check if values for times exist
+                    if (timeslot.childNodes[0].value == '' || timeslot.childNodes[2].value == '') {
+                        continue;
+                    }
+
+                    // update status of timeslot
+                    document.getElementById($(this).attr('value').replace("timeslots", "status")).innerHTML = "";
+                    document.getElementById($(this).attr('value').replace("timeslots", "check")).checked = true;
+                    
+                    // create the main div
+                    let main_div = document.createElement('div');
+                    main_div.id = new_day + '_' + num;
+                    main_div.classList.add('mt-3');
+                    
+                    // iterate through all the child nodes
+                    for (const child of timeslot.childNodes){
+                        let clone = child.cloneNode();
+                        if (clone.id) {
+                            clone.id = new_day + "_" + clone.id.split('_')[1] + "_" + num;
+                            clone.name = new_day + "_" +  clone.name.split('_')[1] + "_" + num;
+                            main_div.appendChild(clone);
+                            continue;
+                        }
+                        if (clone.onclick) {
+                            clone.setAttribute('onclick', 'deleteTimeSlot(\"' + $(this).attr('value') + '\", \"' + main_div.id + '\")');
+                            main_div.appendChild(clone);
+                            continue;
+                        }
+                        if (clone.tagName == "SPAN") {
+                            let dash = document.createElement('span');
+                            dash.textContent = 'to';
+                            main_div.appendChild(dash);
+                            continue;
+                        }
+                    }
+                    target_slot_list.appendChild(main_div);
+
+                    // update count
+                    if (new_day == "sunday"){
+                        sunday_count += 1;
+                    } else if (new_day == "monday") {
+                        monday_count += 1;
+                    } else if (new_day == "tuesday") {
+                        tuesday_count += 1;
+                    } else if (new_day == "wednesday") {
+                        wednesday_count += 1;
+                    } else if (new_day == "thursday") {
+                        thursday_count += 1;
+                    } else if (new_day == "friday") {
+                        friday_count += 1;
+                    } else {
+                        saturday_count += 1;
+                    }
+                }
+            }
+        });
+    }
+    // ------------- ADDING, DELETING, & CLONING TIMESLOTS end
 
     // ------------- ALERTS FOR UPLOADING MEDIA start
     // Checks if the upload of a file is successful
