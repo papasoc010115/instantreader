@@ -157,3 +157,41 @@ for (let i = 0; i < updateFAQ.length; i++) {
         }
     });
 }
+
+// For Booking Forms
+
+// Event Class
+class Event {
+    constructor(type, date, start_time, end_time, slots) {
+        this.type = type;
+        this.date = date;
+        this.start_time = start_time;
+        this.this.end_time = end_time;
+        this.slots = slots;
+    }
+}
+
+// Functions
+const showDateRange = () => {
+    try {
+        $("#sect2-start-end-date").removeClass("removed");
+        $("#sect2-days-into-future").prop("required", false);
+
+        $("#sect2-start-date").prop("required", true);
+        $("#sect2-end-date").prop("required", true);
+    } catch {}
+};
+
+const hideDateRange = () => {
+    try {
+        $("#sect2-start-end-date").addClass("removed");
+        $("#sect2-days-into-future").prop("required", true);
+
+        $("#sect2-start-date").prop("required", false);
+        $("#sect2-end-date").prop("required", false);
+    } catch {}
+};
+
+// Add Event Handlers
+$("#sect2-event-range1").click(hideDateRange);
+$("#sect2-event-range2").click(showDateRange);
