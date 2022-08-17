@@ -19,7 +19,7 @@ const infoGetter = (el) => {
                 .replace(/<p>/g, "")
                 .replace(/<\/p>/g, "");
         default:
-            console.log("Unknown fieldtype");
+            alert("Unknown fieldtype");
     }
 };
 
@@ -162,8 +162,8 @@ for (let i = 0; i < updateFAQ.length; i++) {
 
 // EventCard Class
 class EventCard {
-    constructor(type, date, start_time, end_time, slots) {
-        this.type = type;
+    constructor(event_name, date, start_time, end_time, slots) {
+        this.event_name = event_name;
         this.date = date;
         this.start_time = start_time;
         this.this.end_time = end_time;
@@ -172,26 +172,106 @@ class EventCard {
 }
 
 // Functions
+// For showing date range
 const showDateRange = () => {
     try {
+        $("#sect2-days-into-future").val(""); // clears integer field
+
         $("#sect2-start-end-date").removeClass("removed");
         $("#sect2-days-into-future").prop("required", false);
 
         $("#sect2-start-date").prop("required", true);
         $("#sect2-end-date").prop("required", true);
-    } catch {}
+    } catch (e) {
+        throw e;
+    }
 };
 
+// For hiding date range
 const hideDateRange = () => {
     try {
+        $("#sect2-start-date").val(""); // clears value when hidden
+        $("#sect2-end-date").val(""); // clears value when hidden
+
         $("#sect2-start-end-date").addClass("removed");
         $("#sect2-days-into-future").prop("required", true);
 
         $("#sect2-start-date").prop("required", false);
         $("#sect2-end-date").prop("required", false);
-    } catch {}
+    } catch (e) {
+        throw e;
+    }
 };
 
 // Add Event Handlers
 $("#sect2-event-range1").click(hideDateRange);
 $("#sect2-event-range2").click(showDateRange);
+
+// Function for getting all the dates (from custom range or from number input)
+const getDates = () => {
+    try {
+        let dates = [];
+        const selected = $('input[name="event-range"]:checked').val();
+
+        if (selected === "int") {
+            let number = $("#sect2-days-into-future").val();
+            if (isNaN(number)) {
+                alert("Invalid number of days.");
+                return;
+            }
+            number = Number(number);
+            const isInteger = Number.isInteger(number);
+            if (!isInteger || number <= 0) {
+                alert("Invalid number of days.");
+                return;
+            }
+
+            for (let i = 1; i <= number; i++) {
+                const tempDate = new Date();
+                tempDate.setDate(tempDate.getDate() + i);
+                dates.push(tempDate);
+            }
+        } else {
+            const today = new Date();
+            today.setHours(0, 0, 0, 0);
+
+            const startDate = new Date($("#sect2-start-date").val());
+            const endDate = new Date($("#sect2-end-date").val());
+
+            if (startDate > endDate || startDate < today) {
+                alert("Invalid date range.");
+                return;
+            }
+
+            const time = endDate - startDate; //time between in milliseconds
+            const numOfDays = time / (1000 * 3600 * 24); //days between dates
+
+            for (let i = 0; i <= numOfDays; i++) {
+                const tempDate = new Date(startDate);
+                tempDate.setDate(tempDate.getDate() + i);
+                dates.push(tempDate);
+            }
+        }
+        return dates;
+    } catch (e) {
+        throw e;
+    }
+};
+
+// Function for getting availability
+
+// Function for generating EventCard instances
+const generateEvent = () => {
+    // let events = []; // will be returned
+    // const availability = getAvailability();
+    const dates = getDates();
+    for (let i = 0; i < dates.length; i++) {
+        // events.push(makeEvent(dates[i], availability));
+    }
+    // return events;
+};
+
+// TODO: add generateEvent function onSubmit of form
+$("#dateRange-btn-test").click(() => {
+    console.log(getDates());
+});
