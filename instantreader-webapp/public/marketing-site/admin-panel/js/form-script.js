@@ -160,8 +160,8 @@ for (let i = 0; i < updateFAQ.length; i++) {
 
 // For Booking Forms
 
-// Event Class
-class Event {
+// EventCard Class
+class EventCard {
     constructor(type, date, start_time, end_time, slots) {
         this.type = type;
         this.date = date;
