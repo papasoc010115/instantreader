@@ -12,6 +12,9 @@
     .timeslot-input {
         width: 150px;
     }
+    .disabled-button {
+        pointer-events: none;
+    }
 </style>
 <div class="content">
     <!-- Intro -->
@@ -314,13 +317,13 @@
                         <div class="list-group-item py-3 px-5 ">
                             <div class="row">
                                 <div class="col-2">
-                                    <input disabled id="sunday-check" name="sunday_check" value="available" class="form-check-input me-5" type="checkbox"  id="flexCheckDefault" />
+                                    <input id="sunday-check" name="sunday_check" value="available" class="calendar-checkbox day-checkbox form-check-input me-5" type="checkbox"  id="flexCheckDefault" />
                                     <span class="fw-bold">SUNDAY</span>
                                 </div>
                                 <div id="sunday-status" class="col-9">Unavailable</div>
                                 <div class="col-1">
-                                    <i onclick="addTimeSlot('sunday-timeslots','sunday')" class="fas fa-plus me-3"></i>
-                                    <i onclick="openPopup('sunday-timeslots')" class="far fa-clone"></i>
+                                    <i id="sunday-add" onclick="addTimeSlot('sunday-timeslots','sunday')" class="fas fa-plus me-3 disabled-button"></i>
+                                    <i id="sunday-clone" onclick="openPopup('sunday-timeslots')" class="far fa-clone disabled-button"></i>
                                 </div>
                             </div>
                             <div id="sunday-timeslots"></div>
@@ -328,13 +331,13 @@
                         <div class="list-group-item py-3 px-5 ">
                             <div class="row">
                                 <div class="col-2">
-                                    <input disabled id="monday-check" name="monday_check" value="available" class="form-check-input me-5" type="checkbox"  id="flexCheckDefault" />
+                                    <input id="monday-check" name="monday_check" value="available" class="calendar-checkbox day-checkbox form-check-input me-5" type="checkbox"  id="flexCheckDefault" />
                                     <span class="fw-bold">MONDAY</span>
                                 </div>
                                 <div id="monday-status" class="col-9">Unavailable</div>
                                 <div class="col-1"> 
-                                    <i onclick="addTimeSlot('monday-timeslots','monday')" class="fas fa-plus me-3"></i>
-                                    <i onclick="openPopup('monday-timeslots')" class="far fa-clone"></i>
+                                    <i id="monday-add" onclick="addTimeSlot('monday-timeslots','monday')" class="fas fa-plus me-3 disabled-button"></i>
+                                    <i id="monday-clone" onclick="openPopup('monday-timeslots')" class="far fa-clone disabled-button"></i>
                                 </div>
                             </div>
                             <div id="monday-timeslots"></div>
@@ -342,13 +345,13 @@
                         <div class="list-group-item py-3 px-5 ">
                             <div class="row">
                                 <div class="col-2">
-                                    <input disabled id="tuesday-check" name="tuesday_check" value="available" class="form-check-input me-5" type="checkbox"  id="flexCheckDefault" />
+                                    <input id="tuesday-check" name="tuesday_check" value="available" class="calendar-checkbox day-checkbox form-check-input me-5" type="checkbox"  id="flexCheckDefault" />
                                     <span class="fw-bold">TUESDAY</span>
                                 </div>
                                 <div id="tuesday-status" class="col-9">Unavailable</div>
                                 <div class="col-1"> 
-                                    <i onclick="addTimeSlot('tuesday-timeslots','tuesday')" class="fas fa-plus me-3"></i>
-                                    <i onclick="openPopup('tuesday-timeslots')" class="far fa-clone"></i>
+                                    <i id="tuesday-add" onclick="addTimeSlot('tuesday-timeslots','tuesday')" class="fas fa-plus me-3 disabled-button"></i>
+                                    <i id="tuesday-clone" onclick="openPopup('tuesday-timeslots')" class="far fa-clone disabled-button"></i>
                                 </div>
                             </div>
                             <div id="tuesday-timeslots"></div>
@@ -356,13 +359,13 @@
                         <div class="list-group-item py-3 px-5 ">
                             <div class="row">
                                 <div class="col-2">
-                                    <input disabled id="wednesday-check" name="wednesday_check" value="available" class="form-check-input me-5" type="checkbox"  id="flexCheckDefault" />
+                                    <input id="wednesday-check" name="wednesday_check" value="available" class="calendar-checkbox day-checkbox form-check-input me-5" type="checkbox"  id="flexCheckDefault" />
                                     <span class="fw-bold">WEDNESDAY</span>
                                 </div>
                                 <div id="wednesday-status" class="col-9">Unavailable</div>
                                 <div class="col-1"> 
-                                    <i onclick="addTimeSlot('wednesday-timeslots','wednesday')" class="fas fa-plus me-3"></i>
-                                    <i onclick="openPopup('wednesday-timeslots')" class="far fa-clone"></i>
+                                    <i id="wednesday-add" onclick="addTimeSlot('wednesday-timeslots','wednesday')" class="fas fa-plus me-3 disabled-button"></i>
+                                    <i id="wednesday-clone" onclick="openPopup('wednesday-timeslots')" class="far fa-clone disabled-button"></i>
                                 </div>
                             </div>
                             <div id="wednesday-timeslots"></div>
@@ -370,13 +373,13 @@
                         <div class="list-group-item py-3 px-5 ">
                             <div class="row">
                                 <div class="col-2">
-                                    <input disabled id="thursday-check" name="thursday_check" value="available" class="form-check-input me-5" type="checkbox"  id="flexCheckDefault" />
+                                    <input id="thursday-check" name="thursday_check" value="available" class="calendar-checkbox day-checkbox form-check-input me-5" type="checkbox"  id="flexCheckDefault" />
                                     <span class="fw-bold">THURSDAY</span>
                                 </div>
                                 <div id="thursday-status" class="col-9">Unavailable</div>
                                 <div class="col-1"> 
-                                    <i onclick="addTimeSlot('thursday-timeslots','thursday')" class="fas fa-plus me-3"></i>
-                                    <i onclick="openPopup('thursday-timeslots')" class="far fa-clone"></i>
+                                    <i id="thursday-add" onclick="addTimeSlot('thursday-timeslots','thursday')" class="fas fa-plus me-3 disabled-button"></i>
+                                    <i id="thursday-clone" onclick="openPopup('thursday-timeslots')" class="far fa-clone disabled-button"></i>
                                 </div>
                             </div>
                             <div id="thursday-timeslots"></div>
@@ -384,13 +387,13 @@
                         <div class="list-group-item py-3 px-5 ">
                             <div class="row">
                                 <div class="col-2">
-                                    <input disabled id="friday-check" name="friday_check" value="available" class="form-check-input me-5" type="checkbox"  id="flexCheckDefault" />
+                                    <input id="friday-check" name="friday_check" value="available" class="calendar-checkbox day-checkbox form-check-input me-5" type="checkbox"  id="flexCheckDefault" />
                                     <span class="fw-bold">FRIDAY</span>
                                 </div>
                                 <div id="friday-status" class="col-9">Unavailable</div>
                                 <div class="col-1"> 
-                                    <i onclick="addTimeSlot('friday-timeslots','friday')" class="fas fa-plus me-3"></i>
-                                    <i onclick="openPopup('friday-timeslots')" class="far fa-clone"></i>
+                                    <i id="friday-add" onclick="addTimeSlot('friday-timeslots','friday')" class="fas fa-plus me-3 disabled-button"></i>
+                                    <i id="friday-clone" onclick="openPopup('friday-timeslots')" class="far fa-clone disabled-button"></i>
                                 </div>
                             </div>
                             <div id="friday-timeslots"></div>
@@ -398,13 +401,13 @@
                         <div class="list-group-item py-3 px-5 ">
                             <div class="row">
                                 <div class="col-2">
-                                    <input disabled id="saturday-check" name="saturday_check" value="available" class="form-check-input me-5" type="checkbox"  id="flexCheckDefault" />
+                                    <input id="saturday-check" name="saturday_check" value="available" class="calendar-checkbox day-checkbox form-check-input me-5" type="checkbox"  id="flexCheckDefault" />
                                     <span class="fw-bold">SATURDAY</span>
                                 </div>
                                 <div id="saturday-status" class="col-9">Unavailable</div>
                                 <div class="col-1"> 
-                                    <i onclick="addTimeSlot('saturday-timeslots','saturday')" class="fas fa-plus me-3"></i>
-                                    <i onclick="openPopup('saturday-timeslots')" class="far fa-clone"></i>
+                                    <i id="saturday-add" onclick="addTimeSlot('saturday-timeslots','saturday')" class="fas fa-plus me-3 disabled-button"></i>
+                                    <i id="saturday-clone" onclick="openPopup('saturday-timeslots')" class="far fa-clone disabled-button"></i>
                                 </div>
                             </div>
                             <div id="saturday-timeslots"></div>
@@ -419,31 +422,31 @@
                 <div class="d-flex justify-content-center">
                     <div>
                         <div class="d-flex">
-                            <input value="sunday-timeslots" class="clone_day form-check-input me-5" type="checkbox" id="flexCheckDefault" />
+                            <input value="sunday-timeslots" class="clone_day calendar-checkbox form-check-input me-5" type="checkbox" id="flexCheckDefault" />
                             <span class="fw-bold">SUNDAY</span>
                         </div>
                         <div class="d-flex">
-                            <input value="monday-timeslots" class="clone_day form-check-input me-5" type="checkbox" id="flexCheckDefault" />
+                            <input value="monday-timeslots" class="clone_day calendar-checkbox form-check-input me-5" type="checkbox" id="flexCheckDefault" />
                             <span class="fw-bold">MONDAY</span>
                         </div>
                         <div class="d-flex">
-                            <input value="tuesday-timeslots" class="clone_day form-check-input me-5" type="checkbox" id="flexCheckDefault" />
+                            <input value="tuesday-timeslots" class="clone_day calendar-checkbox form-check-input me-5" type="checkbox" id="flexCheckDefault" />
                             <span class="fw-bold">TUESDAY</span>
                         </div>
                         <div class="d-flex">
-                            <input value="wednesday-timeslots" class="clone_day form-check-input me-5" type="checkbox" id="flexCheckDefault" />
+                            <input value="wednesday-timeslots" class="clone_day calendar-checkbox form-check-input me-5" type="checkbox" id="flexCheckDefault" />
                             <span class="fw-bold">WEDNESDAY</span>
                         </div>
                         <div class="d-flex">
-                            <input value="thursday-timeslots" class="clone_day form-check-input me-5" type="checkbox" id="flexCheckDefault" />
+                            <input value="thursday-timeslots" class="clone_day calendar-checkbox form-check-input me-5" type="checkbox" id="flexCheckDefault" />
                             <span class="fw-bold">THURSDAY</span>
                         </div>
                         <div class="d-flex">
-                            <input value="friday-timeslots" class="clone_day form-check-input me-5" type="checkbox" id="flexCheckDefault" />
+                            <input value="friday-timeslots" class="clone_day calendar-checkbox form-check-input me-5" type="checkbox" id="flexCheckDefault" />
                             <span class="fw-bold">FRIDAY</span>
                         </div>
                         <div class="d-flex">
-                            <input value="saturday-timeslots" class="clone_day form-check-input me-5" type="checkbox" id="flexCheckDefault" />
+                            <input value="saturday-timeslots" class="clone_day calendar-checkbox form-check-input me-5" type="checkbox" id="flexCheckDefault" />
                             <span class="fw-bold">SATURDAY</span>
                         </div>
                     </div>
@@ -458,10 +461,42 @@
 <script>
     // hide the clone pop-up and unchecks all input checkbox
     $('#clone-popup').hide();
-    $('input[type="checkbox"]').each(function(){
+    $('.calendar-checkbox').each(function(){
   	    $(this).prop('checked', false);
     });
-    
+
+    // jquery for toggling checkbox
+    $('.day-checkbox').change(function () {
+        // if the checkbox is checked
+        if ($(this).is(":checked")) {
+            // the day is obtained and a timeslot is added based on the day
+            let day = $(this).attr('id').split('-')[0];
+            addTimeSlot(day + "-timeslots", day);
+
+            // removes restrictions for the add and clone buttons
+            $("#" + day + "-add").removeClass("disabled-button");
+            $("#" + day + "-clone").removeClass("disabled-button");
+
+        // if the checkbox is unchecked
+        } else {
+            // the day is obtained and the list of timeslots is obtained based on the day
+            let day = $(this).attr('id').split('-')[0];
+            let slot_list = document.getElementById(day + "-timeslots");
+            let child = slot_list.lastElementChild;
+
+            // delete all the children/timeslots from the list of timeslots  
+            while (child) {
+                slot_list.removeChild(child);
+                child = slot_list.lastElementChild;
+            }
+
+            // update timeslot status and disable the buttons again
+            document.getElementById(day + "-status").innerHTML = "Unavailable";
+            $("#" + day + "-add").addClass("disabled-button");
+            $("#" + day + "-clone").addClass("disabled-button");
+        }   
+    });
+
     // ------------- ADDING, DELETING, & CLONING TIMESLOTS start
     // initializing variables
     var sunday_count = 0;
@@ -621,6 +656,10 @@
                     document.getElementById($(this).attr('value').replace("timeslots", "status")).innerHTML = "";
                     document.getElementById($(this).attr('value').replace("timeslots", "check")).checked = true;
                     
+                    // removes restrictions for the add and clone buttons
+                    $("#" + new_day + "-add").removeClass("disabled-button");
+                    $("#" + new_day + "-clone").removeClass("disabled-button");
+                    
                     // create the main div
                     let main_div = document.createElement('div');
                     main_div.id = new_day + '_' + num;
@@ -650,21 +689,22 @@
                     target_slot_list.appendChild(main_div);
                     num += 1;
                 }
+                
                 // update count
                 if (new_day == "sunday"){
-                    sunday_count == num;
+                    sunday_count = num;
                 } else if (new_day == "monday") {
-                    monday_count == num;
+                    monday_count = num;;
                 } else if (new_day == "tuesday") {
-                    tuesday_count == num;
+                    tuesday_count = num;
                 } else if (new_day == "wednesday") {
-                    wednesday_count == num;
+                    wednesday_count = num;
                 } else if (new_day == "thursday") {
-                    thursday_count == num;
+                    thursday_count = num;
                 } else if (new_day == "friday") {
-                    friday_count == num;
+                    friday_count = num;
                 } else {
-                    saturday_count == num;
+                    saturday_count = num;
                 }
             }
         });
