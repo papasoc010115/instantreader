@@ -268,7 +268,7 @@
                         <div class="list-group-item py-3 px-5 ">
                             <div class="row">
                                 <div class="col-2">
-                                    <input id="sunday-check" name="sunday_check" value="available" class="calendar-checkbox day-checkbox form-check-input me-5" type="checkbox"  id="flexCheckDefault" />
+                                    <input id="sunday-check" name="sunday_check" value="available" class="calendar-checkbox day-checkbox form-check-input me-5" type="checkbox" />
                                     <span class="fw-bold">SUNDAY</span>
                                 </div>
                                 <div id="sunday-status" class="col-9">Unavailable</div>
@@ -282,7 +282,7 @@
                         <div class="list-group-item py-3 px-5 ">
                             <div class="row">
                                 <div class="col-2">
-                                    <input id="monday-check" name="monday_check" value="available" class="calendar-checkbox day-checkbox form-check-input me-5" type="checkbox"  id="flexCheckDefault" />
+                                    <input id="monday-check" name="monday_check" value="available" class="calendar-checkbox day-checkbox form-check-input me-5" type="checkbox" />
                                     <span class="fw-bold">MONDAY</span>
                                 </div>
                                 <div id="monday-status" class="col-9">Unavailable</div>
@@ -296,7 +296,7 @@
                         <div class="list-group-item py-3 px-5 ">
                             <div class="row">
                                 <div class="col-2">
-                                    <input id="tuesday-check" name="tuesday_check" value="available" class="calendar-checkbox day-checkbox form-check-input me-5" type="checkbox"  id="flexCheckDefault" />
+                                    <input id="tuesday-check" name="tuesday_check" value="available" class="calendar-checkbox day-checkbox form-check-input me-5" type="checkbox" />
                                     <span class="fw-bold">TUESDAY</span>
                                 </div>
                                 <div id="tuesday-status" class="col-9">Unavailable</div>
@@ -310,7 +310,7 @@
                         <div class="list-group-item py-3 px-5 ">
                             <div class="row">
                                 <div class="col-2">
-                                    <input id="wednesday-check" name="wednesday_check" value="available" class="calendar-checkbox day-checkbox form-check-input me-5" type="checkbox"  id="flexCheckDefault" />
+                                    <input id="wednesday-check" name="wednesday_check" value="available" class="calendar-checkbox day-checkbox form-check-input me-5" type="checkbox" />
                                     <span class="fw-bold">WEDNESDAY</span>
                                 </div>
                                 <div id="wednesday-status" class="col-9">Unavailable</div>
@@ -324,7 +324,7 @@
                         <div class="list-group-item py-3 px-5 ">
                             <div class="row">
                                 <div class="col-2">
-                                    <input id="thursday-check" name="thursday_check" value="available" class="calendar-checkbox day-checkbox form-check-input me-5" type="checkbox"  id="flexCheckDefault" />
+                                    <input id="thursday-check" name="thursday_check" value="available" class="calendar-checkbox day-checkbox form-check-input me-5" type="checkbox" />
                                     <span class="fw-bold">THURSDAY</span>
                                 </div>
                                 <div id="thursday-status" class="col-9">Unavailable</div>
@@ -338,7 +338,7 @@
                         <div class="list-group-item py-3 px-5 ">
                             <div class="row">
                                 <div class="col-2">
-                                    <input id="friday-check" name="friday_check" value="available" class="calendar-checkbox day-checkbox form-check-input me-5" type="checkbox"  id="flexCheckDefault" />
+                                    <input id="friday-check" name="friday_check" value="available" class="calendar-checkbox day-checkbox form-check-input me-5" type="checkbox" />
                                     <span class="fw-bold">FRIDAY</span>
                                 </div>
                                 <div id="friday-status" class="col-9">Unavailable</div>
@@ -352,7 +352,7 @@
                         <div class="list-group-item py-3 px-5 ">
                             <div class="row">
                                 <div class="col-2">
-                                    <input id="saturday-check" name="saturday_check" value="available" class="calendar-checkbox day-checkbox form-check-input me-5" type="checkbox"  id="flexCheckDefault" />
+                                    <input id="saturday-check" name="saturday_check" value="available" class="calendar-checkbox day-checkbox form-check-input me-5" type="checkbox" />
                                     <span class="fw-bold">SATURDAY</span>
                                 </div>
                                 <div id="saturday-status" class="col-9">Unavailable</div>
@@ -373,31 +373,31 @@
                 <div class="d-flex justify-content-center">
                     <div>
                         <div class="d-flex">
-                            <input value="sunday-timeslots" class="clone_day calendar-checkbox form-check-input me-5" type="checkbox" id="flexCheckDefault" />
+                            <input value="sunday-timeslots" class="clone_day calendar-checkbox form-check-input me-5" type="checkbox"/>
                             <span class="fw-bold">SUNDAY</span>
                         </div>
                         <div class="d-flex">
-                            <input value="monday-timeslots" class="clone_day calendar-checkbox form-check-input me-5" type="checkbox" id="flexCheckDefault" />
+                            <input value="monday-timeslots" class="clone_day calendar-checkbox form-check-input me-5" type="checkbox"/>
                             <span class="fw-bold">MONDAY</span>
                         </div>
                         <div class="d-flex">
-                            <input value="tuesday-timeslots" class="clone_day calendar-checkbox form-check-input me-5" type="checkbox" id="flexCheckDefault" />
+                            <input value="tuesday-timeslots" class="clone_day calendar-checkbox form-check-input me-5" type="checkbox"/>
                             <span class="fw-bold">TUESDAY</span>
                         </div>
                         <div class="d-flex">
-                            <input value="wednesday-timeslots" class="clone_day calendar-checkbox form-check-input me-5" type="checkbox" id="flexCheckDefault" />
+                            <input value="wednesday-timeslots" class="clone_day calendar-checkbox form-check-input me-5" type="checkbox"/>
                             <span class="fw-bold">WEDNESDAY</span>
                         </div>
                         <div class="d-flex">
-                            <input value="thursday-timeslots" class="clone_day calendar-checkbox form-check-input me-5" type="checkbox" id="flexCheckDefault" />
+                            <input value="thursday-timeslots" class="clone_day calendar-checkbox form-check-input me-5" type="checkbox"/>
                             <span class="fw-bold">THURSDAY</span>
                         </div>
                         <div class="d-flex">
-                            <input value="friday-timeslots" class="clone_day calendar-checkbox form-check-input me-5" type="checkbox" id="flexCheckDefault" />
+                            <input value="friday-timeslots" class="clone_day calendar-checkbox form-check-input me-5" type="checkbox"/>
                             <span class="fw-bold">FRIDAY</span>
                         </div>
                         <div class="d-flex">
-                            <input value="saturday-timeslots" class="clone_day calendar-checkbox form-check-input me-5" type="checkbox" id="flexCheckDefault" />
+                            <input value="saturday-timeslots" class="clone_day calendar-checkbox form-check-input me-5" type="checkbox"/>
                             <span class="fw-bold">SATURDAY</span>
                         </div>
                     </div>
