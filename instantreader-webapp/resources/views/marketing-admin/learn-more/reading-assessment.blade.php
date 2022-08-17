@@ -605,6 +605,19 @@
                         continue;
                     }
 
+                    // check if the schedules are a duplicate
+                    let duplicate = false;
+                    for (const target_timeslot of document.getElementById($(this).attr('value')).childNodes){
+                        console.log(timeslot.childNodes[0].value, target_timeslot.childNodes[0].value)
+                        if (timeslot.childNodes[0].value == target_timeslot.childNodes[0].value && 
+                            timeslot.childNodes[2].value == target_timeslot.childNodes[2].value) {
+                            duplicate = true;
+                        }
+                    }
+                    if (duplicate) {
+                        continue;
+                    }
+
                     // update status of timeslot
                     document.getElementById($(this).attr('value').replace("timeslots", "status")).innerHTML = "";
                     document.getElementById($(this).attr('value').replace("timeslots", "check")).checked = true;
@@ -656,6 +669,7 @@
                 }
             }
         });
+        alert('Schedule cloned');
     }
     // ------------- ADDING, DELETING, & CLONING TIMESLOTS end
 
