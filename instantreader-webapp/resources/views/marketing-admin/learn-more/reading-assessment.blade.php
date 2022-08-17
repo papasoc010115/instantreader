@@ -279,7 +279,7 @@
                 <div class="form-group py-3">
                     <label for="sect3-timezone" class="pb-3"><strong>Time Zone</strong></label>
                     <div>
-                        <select name="sect3_timezone" id="sect3-timezone" class="span5">
+                        <select class="form-select" name="sect3_timezone" id="sect3-timezone" class="span5">
                             <option value="-12:00">(GMT -12:00) Eniwetok, Kwajalein</option>
                             <option value="-11:00">(GMT -11:00) Midway Island, Samoa</option>
                             <option value="-10:00">(GMT -10:00) Hawaii</option>
