@@ -9,24 +9,8 @@
         cursor: pointer;
         color: #4285F4;
     }
-    .active-schedule i:hover {
-        color: #ffffff;
-    }
     .timeslot-input {
         width: 150px;
-    }
-    .active-schedule{
-        color: #ffffff;
-        background-color: #4285F4;
-    }
-    .schedule:hover {
-        cursor: pointer;
-    }
-    .test {
-        background-color: red;
-    }
-    .test2 {
-        background-color: yellow;
     }
 </style>
 <div class="content">
@@ -210,7 +194,7 @@
             </div>
 
             <!-- Schedule -->
-            <form data-route="{{ route('learn-more.assessment.update_page') }}" class="non-media">
+            <form data-route="{{ route('learn-more.assessment.update_page') }}">
                 @csrf
                 <!-- Event Cards -->
                 <!-- Event Date Range -->
@@ -323,6 +307,7 @@
                         </select>
                     </div>
                 </div>
+
                 <div class="form-group py-3">
                     <label for="sect3-hours"><strong>Set your weekly hours</strong></label>
                     <div class="list-group" id="sect3-hours">
@@ -427,10 +412,9 @@
                     </div>
                 </div>
 
-
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Generate Events</span></button>
             </form>
-            <!-- End of Section 2.2 -->
+            
             <div id="clone-popup" title="Select day to clone">
                 <div class="d-flex justify-content-center">
                     <div>
@@ -466,7 +450,7 @@
                 </div>
                 <button onclick="cloneSchedule()" class="btn btn-primary update-btn w-100"><span style="font-size: 0.8rem">Clone</span></button>
             </div>
-            <!-- End of Section 3 -->
+            <!-- End of Section 2.2 -->
         </div>
     </section>
 </div>
@@ -477,6 +461,7 @@
     $('input[type="checkbox"]').each(function(){
   	    $(this).prop('checked', false);
     });
+    
     // ------------- ADDING, DELETING, & CLONING TIMESLOTS start
     // initializing variables
     var sunday_count = 0;
@@ -651,23 +636,23 @@
                         }
                     }
                     target_slot_list.appendChild(main_div);
-
-                    // update count
-                    if (new_day == "sunday"){
-                        sunday_count += 1;
-                    } else if (new_day == "monday") {
-                        monday_count += 1;
-                    } else if (new_day == "tuesday") {
-                        tuesday_count += 1;
-                    } else if (new_day == "wednesday") {
-                        wednesday_count += 1;
-                    } else if (new_day == "thursday") {
-                        thursday_count += 1;
-                    } else if (new_day == "friday") {
-                        friday_count += 1;
-                    } else {
-                        saturday_count += 1;
-                    }
+                    num += 1;
+                }
+                // update count
+                if (new_day == "sunday"){
+                    sunday_count == num;
+                } else if (new_day == "monday") {
+                    monday_count == num;
+                } else if (new_day == "tuesday") {
+                    tuesday_count == num;
+                } else if (new_day == "wednesday") {
+                    wednesday_count == num;
+                } else if (new_day == "thursday") {
+                    thursday_count == num;
+                } else if (new_day == "friday") {
+                    friday_count == num;
+                } else {
+                    saturday_count == num;
                 }
             }
         });
