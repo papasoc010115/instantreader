@@ -608,7 +608,6 @@
                     // check if the schedules are a duplicate
                     let duplicate = false;
                     for (const target_timeslot of document.getElementById($(this).attr('value')).childNodes){
-                        console.log(timeslot.childNodes[0].value, target_timeslot.childNodes[0].value)
                         if (timeslot.childNodes[0].value == target_timeslot.childNodes[0].value && 
                             timeslot.childNodes[2].value == target_timeslot.childNodes[2].value) {
                             duplicate = true;
