@@ -201,13 +201,13 @@
                 <div id="sect2-date-range" class="py-3">
                     <label for="sect2-date-range" class="pb-3"><strong>Date Range</strong></label>
                     <div class="form-check sect2-form-check">
-                        <input class="form-check-input" type="radio" name="event-range" id="sect2-event-range1" checked>
+                        <input class="form-check-input" type="radio" name="event-range" id="sect2-event-range1" value="int" checked>
                         <label>
                             <input class="form-control" type="number" id="sect2-days-into-future" name="days-into-future" required> days into the future
                         </label>
                     </div>
                     <div class="form-check sect2-form-check sect2-custom-date-range">
-                        <input class="form-check-input" type="radio" name="event-range" id="sect2-event-range2">
+                        <input class="form-check-input" type="radio" name="event-range" id="sect2-event-range2" value="range">
                         <label class="form-check-label" for="sect2-event-range2">
                             Custom Date Range
                         </label>
@@ -216,14 +216,14 @@
                     <div class="form-group sect2-start-end-date sect2-flex-container-x removed" id="sect2-start-end-date">
                         <div>
                             <label for="sect2-start-date">Start Date</label>                    
-                            <input required type="date" class="form-control" name="sect2_start_date" id="sect2-start-date">
+                            <input type="date" class="form-control" name="sect2_start_date" id="sect2-start-date">
                         </div>
                         <div>                      
                             <label for="sect2-end-date">End Date</label>  
-                            <input required type="date" class="form-control" name="sect2_end_date" id="sect2-end-date">
+                            <input type="date" class="form-control" name="sect2_end_date" id="sect2-end-date">
                         </div> 
                     </div>
-
+                    <button type="button" id="dateRange-btn-test">TEST</button>
                 </div>
             
                 <!-- Event Duration -->
