@@ -14,6 +14,7 @@
     }
     .disabled-button {
         pointer-events: none;
+        color: #d3d3d3;
     }
 </style>
 <div class="content">
@@ -544,9 +545,12 @@
         // delete the time slot
         slot_list.removeChild(timeslot);
 
+        // if the slot list is empty set status to unavailable, uncheck, and disable the buttons
         if (slot_list.childNodes.length == 0){
             document.getElementById(list_id.replace("timeslots", "status")).innerHTML = "Unavailable";
             document.getElementById(list_id.replace("timeslots", "check")).checked = false;
+            $("#" + list_id.replace("timeslots", "add")).addClass("disabled-button");
+            $("#" + list_id.replace("timeslots", "clone")).addClass("disabled-button");
         }
     }
 
@@ -660,6 +664,13 @@
                 }
             }
         });
+
+        // close the dialog and uncheck the options
+        $('#clone-popup').dialog('close');
+        $('.clone_day').each(function(){
+            $(this).prop('checked', false);
+        });
+
         alert('Schedule cloned');
     }
     // ------------- ADDING, DELETING, & CLONING TIMESLOTS end
