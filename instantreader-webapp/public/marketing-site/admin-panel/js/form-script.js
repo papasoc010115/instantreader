@@ -259,19 +259,36 @@ const getDates = () => {
 };
 
 // Function for getting availability
+const getAvailability = () => {
+    let start_time = $(".timeslot-start");
+    let availability = [];
+
+    // create & push objects
+    for (let i = 0; i < start_time.length; i++) {
+        const curr = start_time[i];
+        const str = curr.id.split("_");
+        const obj = {
+            day: str[0],
+            start_time: curr.value,
+            end_time: $(`#${str[0]}_end_${str[2]}`).val(),
+        };
+        availability.push(obj);
+    }
+    return availability;
+};
 
 // Function for generating EventCard instances
 const generateEvent = () => {
-    // let events = []; // will be returned
-    // const availability = getAvailability();
+    let events = []; // will be returned
+    const availability = getAvailability();
     const dates = getDates();
     for (let i = 0; i < dates.length; i++) {
         // events.push(makeEvent(dates[i], availability));
     }
-    // return events;
+    return events;
 };
 
 // TODO: add generateEvent function onSubmit of form
-$("#dateRange-btn-test").click(() => {
-    console.log(getDates());
-});
+// $("#btn-test").click(() => {
+//     console.log(getAvailability());
+// });

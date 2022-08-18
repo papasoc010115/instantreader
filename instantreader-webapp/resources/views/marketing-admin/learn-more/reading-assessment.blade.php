@@ -268,7 +268,7 @@
                         <div class="list-group-item py-3 px-5 ">
                             <div class="row">
                                 <div class="col-2">
-                                    <input id="sunday-check" name="sunday_check" value="available" class="calendar-checkbox day-checkbox form-check-input me-5" type="checkbox" />
+                                    <input id="sunday-check" name="sunday_check" class="calendar-checkbox day-checkbox form-check-input me-5" type="checkbox" />
                                     <span class="fw-bold">SUNDAY</span>
                                 </div>
                                 <div id="sunday-status" class="col-9">Unavailable</div>
@@ -282,7 +282,7 @@
                         <div class="list-group-item py-3 px-5 ">
                             <div class="row">
                                 <div class="col-2">
-                                    <input id="monday-check" name="monday_check" value="available" class="calendar-checkbox day-checkbox form-check-input me-5" type="checkbox" />
+                                    <input id="monday-check" name="monday_check" class="calendar-checkbox day-checkbox form-check-input me-5" type="checkbox" />
                                     <span class="fw-bold">MONDAY</span>
                                 </div>
                                 <div id="monday-status" class="col-9">Unavailable</div>
@@ -296,7 +296,7 @@
                         <div class="list-group-item py-3 px-5 ">
                             <div class="row">
                                 <div class="col-2">
-                                    <input id="tuesday-check" name="tuesday_check" value="available" class="calendar-checkbox day-checkbox form-check-input me-5" type="checkbox" />
+                                    <input id="tuesday-check" name="tuesday_check" class="calendar-checkbox day-checkbox form-check-input me-5" type="checkbox" />
                                     <span class="fw-bold">TUESDAY</span>
                                 </div>
                                 <div id="tuesday-status" class="col-9">Unavailable</div>
@@ -310,7 +310,7 @@
                         <div class="list-group-item py-3 px-5 ">
                             <div class="row">
                                 <div class="col-2">
-                                    <input id="wednesday-check" name="wednesday_check" value="available" class="calendar-checkbox day-checkbox form-check-input me-5" type="checkbox" />
+                                    <input id="wednesday-check" name="wednesday_check" class="calendar-checkbox day-checkbox form-check-input me-5" type="checkbox" />
                                     <span class="fw-bold">WEDNESDAY</span>
                                 </div>
                                 <div id="wednesday-status" class="col-9">Unavailable</div>
@@ -324,7 +324,7 @@
                         <div class="list-group-item py-3 px-5 ">
                             <div class="row">
                                 <div class="col-2">
-                                    <input id="thursday-check" name="thursday_check" value="available" class="calendar-checkbox day-checkbox form-check-input me-5" type="checkbox" />
+                                    <input id="thursday-check" name="thursday_check" class="calendar-checkbox day-checkbox form-check-input me-5" type="checkbox" />
                                     <span class="fw-bold">THURSDAY</span>
                                 </div>
                                 <div id="thursday-status" class="col-9">Unavailable</div>
@@ -338,7 +338,7 @@
                         <div class="list-group-item py-3 px-5 ">
                             <div class="row">
                                 <div class="col-2">
-                                    <input id="friday-check" name="friday_check" value="available" class="calendar-checkbox day-checkbox form-check-input me-5" type="checkbox" />
+                                    <input id="friday-check" name="friday_check" class="calendar-checkbox day-checkbox form-check-input me-5" type="checkbox" />
                                     <span class="fw-bold">FRIDAY</span>
                                 </div>
                                 <div id="friday-status" class="col-9">Unavailable</div>
@@ -352,7 +352,7 @@
                         <div class="list-group-item py-3 px-5 ">
                             <div class="row">
                                 <div class="col-2">
-                                    <input id="saturday-check" name="saturday_check" value="available" class="calendar-checkbox day-checkbox form-check-input me-5" type="checkbox" />
+                                    <input id="saturday-check" name="saturday_check" class="calendar-checkbox day-checkbox form-check-input me-5" type="checkbox" />
                                     <span class="fw-bold">SATURDAY</span>
                                 </div>
                                 <div id="saturday-status" class="col-9">Unavailable</div>
@@ -405,6 +405,7 @@
                 <button onclick="cloneSchedule()" class="btn btn-primary update-btn w-100"><span style="font-size: 0.8rem">Clone</span></button>
             </div>
             <!-- End of Section 2.2 -->
+            <button id="btn-test" type="button">TEST</button>
         </div>
     </section>
 </div>
@@ -491,7 +492,7 @@
         let timeslot_start = document.createElement('input');
         timeslot_start.id = day + '_start_' + num;
         timeslot_start.name = day + '_start_' + num;
-        timeslot_start.classList.add('rounded', 'text-center', 'timeslot-input', 'me-3');
+        timeslot_start.classList.add('rounded', 'text-center', 'timeslot-input', 'me-3', 'timeslot-start');
         timeslot_start.type = 'time';
         timeslot_start.required = 'true';
         main_div.appendChild(timeslot_start);
@@ -503,7 +504,7 @@
         let timeslot_end = document.createElement('input');
         timeslot_end.id = day + '_end_' + num;
         timeslot_end.name = day + '_end_' + num;
-        timeslot_end.classList.add('rounded', 'text-center', 'timeslot-input', 'ms-3');
+        timeslot_end.classList.add('rounded', 'text-center', 'timeslot-input', 'ms-3', 'timeslot-end');
         timeslot_end.type = 'time';
         timeslot_end.required = 'true';
         main_div.appendChild(timeslot_end);
