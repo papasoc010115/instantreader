@@ -16,6 +16,12 @@
         pointer-events: none;
         color: #d3d3d3;
     }
+    .ui-dialog-titlebar-close {
+        padding: 0 !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 </style>
 <div class="content">
     <!-- Intro -->
@@ -555,12 +561,21 @@
     }
 
     function openPopup(list_id){
+        // show the popup and pass some parameters
         $('#clone-popup').show();
         $('#clone-popup').data('list_id', list_id).dialog();
+        
+        // removes all x icons before adding another one
+        $('.ui-dialog-titlebar-close').each(function(){
+            if ($(this).children()){
+                $('#popup-close').remove();
+            }
+        });
+        $('.ui-dialog-titlebar-close').append('<i id=\"popup-close\"class=\"fas fa-times\"></i>');
     }
 
-    function cloneSchedule(){
-        let list_id = $('#clone-popup').data('list_id')
+    function cloneSchedule(){   
+        let list_id = $('#clone-popup').data('list_id');
         $('.clone_day:checkbox:checked').each(function () {
             // only proceed if the target day is NOT same as source day
             if ($(this).attr('value') != list_id){
