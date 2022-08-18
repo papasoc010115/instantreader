@@ -14,6 +14,7 @@
     }
     .disabled-button {
         pointer-events: none;
+        color: #d3d3d3;
     }
 </style>
 <div class="content">
@@ -659,6 +660,13 @@
                 }
             }
         });
+
+        // close the dialog and uncheck the options
+        $('#clone-popup').dialog('close');
+        $('.clone_day').each(function(){
+            $(this).prop('checked', false);
+        });
+
         alert('Schedule cloned');
     }
     // ------------- ADDING, DELETING, & CLONING TIMESLOTS end
