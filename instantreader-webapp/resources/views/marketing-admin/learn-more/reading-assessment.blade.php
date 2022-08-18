@@ -671,7 +671,7 @@
             $(this).prop('checked', false);
         });
 
-        alert('Schedule cloned');
+        // alert('Schedule cloned'); // temporarily removed for faster response to user
     }
     // ------------- ADDING, DELETING, & CLONING TIMESLOTS end
 
