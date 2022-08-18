@@ -544,9 +544,12 @@
         // delete the time slot
         slot_list.removeChild(timeslot);
 
+        // if the slot list is empty set status to unavailable, uncheck, and disable the buttons
         if (slot_list.childNodes.length == 0){
             document.getElementById(list_id.replace("timeslots", "status")).innerHTML = "Unavailable";
             document.getElementById(list_id.replace("timeslots", "check")).checked = false;
+            $("#" + list_id.replace("timeslots", "add")).addClass("disabled-button");
+            $("#" + list_id.replace("timeslots", "clone")).addClass("disabled-button");
         }
     }
 
