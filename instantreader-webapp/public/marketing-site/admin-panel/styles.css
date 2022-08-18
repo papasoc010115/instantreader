@@ -105,6 +105,10 @@ input[type="number"] {
     width: 21rem;
 }
 
+#sect2-slots {
+    width: 21rem;
+}
+
 .removed {
     display: none;
 }
