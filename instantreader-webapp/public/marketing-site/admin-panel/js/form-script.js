@@ -4,6 +4,9 @@
     by: rmhizon & sclee
 */
 
+/* FOR TEXT INPUT (NON_FAQ) AND TEXTAREA FUNCTIONALITY */
+
+// Function for getting the value from input(text)/textarea
 const infoGetter = (el) => {
     switch (el.dataset.fieldtype) {
         case "big":
@@ -91,6 +94,8 @@ for (let i = 0; i < forms.length; i++) {
     });
 }
 
+/* FOR FAQ FUNCTIONALITY */
+
 // FAQ form
 const faqs = $(".faq").get();
 for (let i = 0; i < faqs.length; i++) {
@@ -158,20 +163,13 @@ for (let i = 0; i < updateFAQ.length; i++) {
     });
 }
 
-// For Booking Forms
+/* FOR BOOKING FORM'S UI */
 
-// EventCard Class
-class EventCard {
-    constructor(event_name, date, start_time, end_time, slots) {
-        this.event_name = event_name;
-        this.date = date;
-        this.start_time = start_time;
-        this.end_time = end_time;
-        this.slots = slots;
-    }
-}
+// For disabling past dates
+let curr_date = new Date().toISOString().split("T")[0];
+$("#sect2-start-date").attr("min", curr_date);
+$("#sect2-end-date").attr("min", curr_date);
 
-// Functions
 // For showing date range
 const showDateRange = () => {
     try {
@@ -207,6 +205,25 @@ const hideDateRange = () => {
 $("#sect2-event-range1").click(hideDateRange);
 $("#sect2-event-range2").click(showDateRange);
 
+// For setting the minimum time of end-date
+const disableEndTime = (id) => {
+    const temp = id.split("_");
+    const min = toTimeFormat(toMinutes($(`#${id}`).val()) + 15);
+    $(`#${temp[0]}_end_${temp[2]}`).attr("min", min);
+};
+
+/* FOR BOOKING FORM'S FUNCTIONALITY */
+
+// EventCard Class
+class EventCard {
+    constructor(event_name, date, start_time, end_time, slots) {
+        this.event_name = event_name;
+        this.date = date;
+        this.start_time = start_time;
+        this.end_time = end_time;
+        this.slots = slots;
+    }
+}
 // Function for converting int to day
 const intToDay = (i) => {
     switch (i) {
@@ -364,7 +381,7 @@ const makeEvent = (name, date, availability) => {
 };
 
 // Function for generating EventCard instances
-const generateAssessmentEvent = () => {
+const generateAssessmentEvents = () => {
     let events = []; // will be returned
     const availability = getAvailability();
     const dates = getDates();
@@ -376,6 +393,6 @@ const generateAssessmentEvent = () => {
 };
 
 // TEST BUTTON
-// $("#btn-test").click(() => {
-
+// $("#sect2-generate-events-btn").click(() => {
+//     console.log(generateAssessmentEvents());
 // });

@@ -378,7 +378,7 @@
                     </div>
                 </div>
 
-                <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Generate Events</span></button>
+                <button type="submit" id="sect2-generate-events-btn" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Generate Events</span></button>
             </form>
             
             <div id="clone-popup" title="Select day to clone">
@@ -506,6 +506,7 @@
         timeslot_start.classList.add('rounded', 'text-center', 'timeslot-input', 'me-3', 'timeslot-start');
         timeslot_start.type = 'time';
         timeslot_start.required = 'true';
+        timeslot_start.onchange = () => disableEndTime(timeslot_start.id);
         main_div.appendChild(timeslot_start);
         // create the dash between the input field
         let dash = document.createElement('span');
