@@ -261,6 +261,11 @@
                         <option value="60">1 hour</option>
                     </select>
                 </div>
+                
+                <div class="form-group py-3" id="sect2-available-slots">
+                    <label for="sect2-slots" class="pb-3"><strong>Maximum Slots</strong></label>
+                    <input required type="number" class="form-control" name="sect2_slots" id="sect2-slots">
+                </div>
 
                 <!-- Availability -->
                 <div class="form-group py-3">
@@ -406,7 +411,6 @@
                 <button onclick="cloneSchedule()" class="btn btn-primary update-btn w-100"><span style="font-size: 0.8rem">Clone</span></button>
             </div>
             <!-- End of Section 2.2 -->
-            <button id="btn-test" type="button">TEST</button>
         </div>
     </section>
 </div>

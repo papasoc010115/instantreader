@@ -166,7 +166,7 @@ class EventCard {
         this.event_name = event_name;
         this.date = date;
         this.start_time = start_time;
-        this.this.end_time = end_time;
+        this.end_time = end_time;
         this.slots = slots;
     }
 }
@@ -206,6 +206,28 @@ const hideDateRange = () => {
 // Add Event Handlers
 $("#sect2-event-range1").click(hideDateRange);
 $("#sect2-event-range2").click(showDateRange);
+
+// Function for converting int to day
+const intToDay = (i) => {
+    switch (i) {
+        case 0:
+            return "sunday";
+        case 1:
+            return "monday";
+        case 2:
+            return "tuesday";
+        case 3:
+            return "wednesday";
+        case 4:
+            return "thursday";
+        case 5:
+            return "friday";
+        case 6:
+            return "saturday";
+        default:
+            return "error";
+    }
+};
 
 // Function for getting all the dates (from custom range or from number input)
 const getDates = () => {
@@ -277,18 +299,83 @@ const getAvailability = () => {
     return availability;
 };
 
-// Function for generating EventCard instances
-const generateEvent = () => {
-    let events = []; // will be returned
-    const availability = getAvailability();
-    const dates = getDates();
-    for (let i = 0; i < dates.length; i++) {
-        // events.push(makeEvent(dates[i], availability));
+// Function for converting time (h:m) to minutes
+const toMinutes = (t) => {
+    const temp = t.split(":");
+    return Number(temp[0]) * 60 + Number(temp[1]);
+};
+
+// Function for converting minutes to time (h:m)
+const toTimeFormat = (m) => {
+    const hour = Math.floor(m / 60);
+    const minutes = m % 60;
+
+    return `${hour}:${minutes >= 10 ? minutes : "0" + minutes.toString()}`;
+};
+
+// Function for converting Date object to date-only string
+const toDateOnlyFormat = (date) => {
+    const months = [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December",
+    ];
+    return `${
+        months[date.getMonth()]
+    } ${date.getDate()}, ${date.getFullYear()}`;
+};
+
+// Function for making Event cards
+const makeEvent = (name, date, availability) => {
+    const day = intToDay(date.getDay());
+    const duration = Number($("#sect2-duration-value").val());
+    const interval = Number($("#sect2-event-interval").val());
+    let events = [];
+    for (let i = 0; i < availability.length; i++) {
+        const obj = availability[i];
+        if (obj.day != day) continue;
+        let start = toMinutes(obj.start_time);
+        const end = toMinutes(obj.end_time);
+        while (start < end) {
+            // create event
+            if (start + duration > end) break;
+            const event = new EventCard(
+                name,
+                toDateOnlyFormat(date),
+                toTimeFormat(start),
+                toTimeFormat(start + duration),
+                Number($("#sect2-slots").val())
+            );
+            // store event
+            events.push(event);
+            start += duration + interval;
+        }
     }
     return events;
 };
 
-// TODO: add generateEvent function onSubmit of form
+// Function for generating EventCard instances
+const generateAssessmentEvent = () => {
+    let events = []; // will be returned
+    const availability = getAvailability();
+    const dates = getDates();
+    for (let i = 0; i < dates.length; i++) {
+        const temp = makeEvent("Assessment", dates[i], availability);
+        events = events.concat(temp);
+    }
+    return events;
+};
+
+// TEST BUTTON
 // $("#btn-test").click(() => {
-//     console.log(getAvailability());
+
 // });
