@@ -4,16 +4,17 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\ReadingAssessment;
+use App\Models\EventSchedule;
 
 class ReadingAssessmentController extends Controller
 {
-    //Reading Assessment Admin View
+    // Reading Assessment Admin View
     public function admin_index() {
         $data = ReadingAssessment::first();
         return view('marketing-admin.learn-more.reading-assessment', [ 'data' => $data ]);
     }
 
-    //Update Data
+    // Update Data
     public function update_page(Request $req) {
         $name = $req->name;
         $value = $req->value;
@@ -45,7 +46,7 @@ class ReadingAssessmentController extends Controller
         return redirect()->route("marketing-admin.learn-more.reading-assessment")->with('upload_media_success', 'Successfully Updated!');
     }
     
-    //Reading Assessment View
+    // Reading Assessment View
     public function index() {
         $data = ReadingAssessment::first();
         return view('learn-more.reading-assessment', [ 'data' => $data ]);

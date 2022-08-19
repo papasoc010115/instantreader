@@ -7,15 +7,15 @@ use App\Models\Consultation;
 
 class ConsultationController extends Controller
 {
-    //Book Free Online Consultation Admin View
+    // Book Free Online Consultation Admin View
     public function admin_index() {
-        //get necessary data from table
+        // get necessary data from table
         $data = Consultation::first();
 
         return view('marketing-admin.contact-us.consultation', [ 'data' => $data ]);
     }
 
-    //Update Data
+    // Update Data
     public function update_page(Request $req) {
         $name = $req->name;
         $value = $req->value;
@@ -47,9 +47,9 @@ class ConsultationController extends Controller
         return redirect()->route("marketing-admin.contact-us.consultation")->with('upload_media_success', 'Successfully Updated!');
     }
     
-    //Book Free Online Consultation View
+    // Book Free Online Consultation View
     public function index() {
-        //get necessary data from table
+        // get necessary data from table
         $data = Consultation::first();
         return view('contact-us.book-consultation', [ 'data' => $data ]);
     }

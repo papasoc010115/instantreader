@@ -113,5 +113,6 @@
     @yield('content')
 <script src="{{ asset('marketing-site/admin-panel/js/script.js') }}"></script>
 <script src="{{ asset('marketing-site/admin-panel/js/form-script.js') }}"></script>
+@yield('otherScript')
 </body>
 </html>

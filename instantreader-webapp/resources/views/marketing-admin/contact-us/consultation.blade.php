@@ -157,10 +157,10 @@
 
             <br><br><br>
 
-            <!-- Section 2: Calendar-->
+            <!-- Section 2.1: Calendar-->
             <div class="row">
                 <div class="col-lg-12">
-                    <h2>Section 2: Calendar</h2>
+                    <h2>Section 2.1: Calendar</h2>
                 </div>
             </div>
 
@@ -194,19 +194,231 @@
                     toolbar: 'undo redo | bold italic underline | link'
                 });            
             </script>
+            <!-- End of Section 2.1 -->
 
-            <!-- Add Date -->
-            <form data-route="{{ route('contact-us.consultation.update_page') }}">
-                @csrf
-                <div class="form-group py-3">
-                    <label for="sect2-date">New Schedule</label>                    
-                    <input type="date" class="form-control" id="sect2-date">
-                    <label for="sect2-time">Time</label>                    
-                    <input type="time" class="form-control" id="sect2-time">
-                    <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Add Schedule</span></button>                    
+            <br><br><br>
+
+            <!-- Section 2.2: Assessment Booking -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2>Section 2.2: Consultation Booking</h2>
                 </div>
+            </div>
+
+            <!-- Schedule -->
+            <form id="sect2-schedule-form" data-route="{{ route('booking.store_schedules') }}" data-eventtype="Consultation">
+                @csrf
+                <!-- Event Cards -->
+                <!-- Event Date Range -->
+                <div id="sect2-date-range" class="py-3">
+                    <label for="sect2-date-range" class="pb-3"><strong>Date Range</strong></label>
+                    <div class="form-check sect2-form-check">
+                        <input class="form-check-input" type="radio" name="event-range" id="sect2-event-range1" value="int" checked>
+                        <label>
+                            <input class="form-control" type="number" id="sect2-days-into-future" name="days-into-future" required> days into the future
+                        </label>
+                    </div>
+                    <div class="form-check sect2-form-check sect2-custom-date-range">
+                        <input class="form-check-input" type="radio" name="event-range" id="sect2-event-range2" value="range">
+                        <label class="form-check-label" for="sect2-event-range2">
+                            Custom Date Range
+                        </label>
+                    </div>
+
+                    <div class="form-group sect2-start-end-date sect2-flex-container-x removed" id="sect2-start-end-date">
+                        <div>
+                            <label for="sect2-start-date">Start Date</label>                    
+                            <input type="date" class="form-control" name="sect2_start_date" id="sect2-start-date">
+                        </div>
+                        <div>                      
+                            <label for="sect2-end-date">End Date</label>  
+                            <input type="date" class="form-control" name="sect2_end_date" id="sect2-end-date">
+                        </div> 
+                    </div>                    
+                </div>
+            
+                <!-- Event Duration -->
+                <div class="form-group row py-3" id="sect2-duration">
+                    <label for="sect2-duration" class="pb-3"><strong>Duration</strong></label>
+                    <div class="sect2-flex-container-x">
+                        <div>
+                            <select required class="form-select" id="sect2-duration-value" aria-label="Default select example">
+                                <option value="15">15 min</option>
+                                <option value="30" selected>30 min</option>
+                                <option value="45">45 min</option>
+                                <option value="60">1 hour</option>
+                                <option value="75">1 hour and 15 min</option>
+                                <option value="90">1 hour and 30 min</option>
+                                <option value="105">1 hour and 45 min</option>
+                                <option value="120">2 hours</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group py-3" id="sect2-time-allowance">
+                    <label for="sect2-event-interval" class="pb-3"><strong>Event Interval</strong></label>
+                    <select required class="form-select" id="sect2-event-interval" aria-label="Default select example">
+                        <option value="0" selected>None</option>
+                        <option value="10">10 min</option>
+                        <option value="15">15 min</option>
+                        <option value="20">20 min</option>
+                        <option value="25">25 min</option>
+                        <option value="30">30 min</option>
+                        <option value="45">45 min</option>
+                        <option value="60">1 hour</option>
+                    </select>
+                </div>
+                
+                <div class="form-group py-3" id="sect2-available-slots">
+                    <label for="sect2-slots" class="pb-3"><strong>Maximum Slots</strong></label>
+                    <input required type="number" class="form-control" name="sect2_slots" id="sect2-slots">
+                </div>
+
+                <!-- Availability -->
+                <div class="form-group py-3">
+                    <label for="sect2-hours"><strong>Set your weekly hours</strong></label>
+                    <div class="list-group" id="sect2-hours">
+                        <div class="list-group-item py-3 px-5 ">
+                            <div class="row">
+                                <div class="col-2">
+                                    <input id="sunday-check" name="sunday_check" class="calendar-checkbox day-checkbox form-check-input me-5" type="checkbox" />
+                                    <span class="fw-bold">SUNDAY</span>
+                                </div>
+                                <div id="sunday-status" class="col-9">Unavailable</div>
+                                <div class="col-1">
+                                    <i id="sunday-add" onclick="addTimeSlot('sunday-timeslots','sunday')" class="fas fa-plus me-3 disabled-button"></i>
+                                    <i id="sunday-clone" onclick="openPopup('sunday-timeslots')" class="far fa-clone disabled-button"></i>
+                                </div>
+                            </div>
+                            <div id="sunday-timeslots"></div>
+                        </div>
+                        <div class="list-group-item py-3 px-5 ">
+                            <div class="row">
+                                <div class="col-2">
+                                    <input id="monday-check" name="monday_check" class="calendar-checkbox day-checkbox form-check-input me-5" type="checkbox" />
+                                    <span class="fw-bold">MONDAY</span>
+                                </div>
+                                <div id="monday-status" class="col-9">Unavailable</div>
+                                <div class="col-1"> 
+                                    <i id="monday-add" onclick="addTimeSlot('monday-timeslots','monday')" class="fas fa-plus me-3 disabled-button"></i>
+                                    <i id="monday-clone" onclick="openPopup('monday-timeslots')" class="far fa-clone disabled-button"></i>
+                                </div>
+                            </div>
+                            <div id="monday-timeslots"></div>
+                        </div>
+                        <div class="list-group-item py-3 px-5 ">
+                            <div class="row">
+                                <div class="col-2">
+                                    <input id="tuesday-check" name="tuesday_check" class="calendar-checkbox day-checkbox form-check-input me-5" type="checkbox" />
+                                    <span class="fw-bold">TUESDAY</span>
+                                </div>
+                                <div id="tuesday-status" class="col-9">Unavailable</div>
+                                <div class="col-1"> 
+                                    <i id="tuesday-add" onclick="addTimeSlot('tuesday-timeslots','tuesday')" class="fas fa-plus me-3 disabled-button"></i>
+                                    <i id="tuesday-clone" onclick="openPopup('tuesday-timeslots')" class="far fa-clone disabled-button"></i>
+                                </div>
+                            </div>
+                            <div id="tuesday-timeslots"></div>
+                        </div>
+                        <div class="list-group-item py-3 px-5 ">
+                            <div class="row">
+                                <div class="col-2">
+                                    <input id="wednesday-check" name="wednesday_check" class="calendar-checkbox day-checkbox form-check-input me-5" type="checkbox" />
+                                    <span class="fw-bold">WEDNESDAY</span>
+                                </div>
+                                <div id="wednesday-status" class="col-9">Unavailable</div>
+                                <div class="col-1"> 
+                                    <i id="wednesday-add" onclick="addTimeSlot('wednesday-timeslots','wednesday')" class="fas fa-plus me-3 disabled-button"></i>
+                                    <i id="wednesday-clone" onclick="openPopup('wednesday-timeslots')" class="far fa-clone disabled-button"></i>
+                                </div>
+                            </div>
+                            <div id="wednesday-timeslots"></div>
+                        </div>
+                        <div class="list-group-item py-3 px-5 ">
+                            <div class="row">
+                                <div class="col-2">
+                                    <input id="thursday-check" name="thursday_check" class="calendar-checkbox day-checkbox form-check-input me-5" type="checkbox" />
+                                    <span class="fw-bold">THURSDAY</span>
+                                </div>
+                                <div id="thursday-status" class="col-9">Unavailable</div>
+                                <div class="col-1"> 
+                                    <i id="thursday-add" onclick="addTimeSlot('thursday-timeslots','thursday')" class="fas fa-plus me-3 disabled-button"></i>
+                                    <i id="thursday-clone" onclick="openPopup('thursday-timeslots')" class="far fa-clone disabled-button"></i>
+                                </div>
+                            </div>
+                            <div id="thursday-timeslots"></div>
+                        </div>
+                        <div class="list-group-item py-3 px-5 ">
+                            <div class="row">
+                                <div class="col-2">
+                                    <input id="friday-check" name="friday_check" class="calendar-checkbox day-checkbox form-check-input me-5" type="checkbox" />
+                                    <span class="fw-bold">FRIDAY</span>
+                                </div>
+                                <div id="friday-status" class="col-9">Unavailable</div>
+                                <div class="col-1"> 
+                                    <i id="friday-add" onclick="addTimeSlot('friday-timeslots','friday')" class="fas fa-plus me-3 disabled-button"></i>
+                                    <i id="friday-clone" onclick="openPopup('friday-timeslots')" class="far fa-clone disabled-button"></i>
+                                </div>
+                            </div>
+                            <div id="friday-timeslots"></div>
+                        </div>
+                        <div class="list-group-item py-3 px-5 ">
+                            <div class="row">
+                                <div class="col-2">
+                                    <input id="saturday-check" name="saturday_check" class="calendar-checkbox day-checkbox form-check-input me-5" type="checkbox" />
+                                    <span class="fw-bold">SATURDAY</span>
+                                </div>
+                                <div id="saturday-status" class="col-9">Unavailable</div>
+                                <div class="col-1"> 
+                                    <i id="saturday-add" onclick="addTimeSlot('saturday-timeslots','saturday')" class="fas fa-plus me-3 disabled-button"></i>
+                                    <i id="saturday-clone" onclick="openPopup('saturday-timeslots')" class="far fa-clone disabled-button"></i>
+                                </div>
+                            </div>
+                            <div id="saturday-timeslots"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" id="sect2-generate-events-btn" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Generate Events</span></button>
             </form>
-            <!-- End of Section 2 -->
+            
+            <div id="clone-popup" title="Select day to clone">
+                <div class="d-flex justify-content-center">
+                    <div>
+                        <div class="d-flex">
+                            <input value="sunday-timeslots" class="clone_day calendar-checkbox form-check-input me-5" type="checkbox"/>
+                            <span class="fw-bold">SUNDAY</span>
+                        </div>
+                        <div class="d-flex">
+                            <input value="monday-timeslots" class="clone_day calendar-checkbox form-check-input me-5" type="checkbox"/>
+                            <span class="fw-bold">MONDAY</span>
+                        </div>
+                        <div class="d-flex">
+                            <input value="tuesday-timeslots" class="clone_day calendar-checkbox form-check-input me-5" type="checkbox"/>
+                            <span class="fw-bold">TUESDAY</span>
+                        </div>
+                        <div class="d-flex">
+                            <input value="wednesday-timeslots" class="clone_day calendar-checkbox form-check-input me-5" type="checkbox"/>
+                            <span class="fw-bold">WEDNESDAY</span>
+                        </div>
+                        <div class="d-flex">
+                            <input value="thursday-timeslots" class="clone_day calendar-checkbox form-check-input me-5" type="checkbox"/>
+                            <span class="fw-bold">THURSDAY</span>
+                        </div>
+                        <div class="d-flex">
+                            <input value="friday-timeslots" class="clone_day calendar-checkbox form-check-input me-5" type="checkbox"/>
+                            <span class="fw-bold">FRIDAY</span>
+                        </div>
+                        <div class="d-flex">
+                            <input value="saturday-timeslots" class="clone_day calendar-checkbox form-check-input me-5" type="checkbox"/>
+                            <span class="fw-bold">SATURDAY</span>
+                        </div>
+                    </div>
+                </div>
+                <button onclick="cloneSchedule()" class="btn btn-primary update-btn w-100"><span style="font-size: 0.8rem">Clone</span></button>
+            </div>
+            <!-- End of Section 2.2 -->
         </div>
     </section>
 </div>
@@ -222,4 +434,8 @@
     }
 </script>
 
+@endsection
+
+@section('otherScript')
+<script src="{{ asset('marketing-site/admin-panel/js/bookingUI-script.js') }}"></script>
 @endsection

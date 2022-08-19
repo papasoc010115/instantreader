@@ -5,15 +5,16 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class OrientationSchedule extends Model
+class EventSchedule extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        // Online Orientation Schedule Information
+        // Event Schedule Information
+        'type',
         'date',
         'start_time',
         'end_time',
-        'slots'
+        'slots',
     ];
 }

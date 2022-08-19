@@ -67,7 +67,7 @@ const ajaxPOST = (api_route, update_data, asyncBool, success_msg) => {
             alert(success_msg);
         },
         error: function (error) {
-            // alert("Update Failed. Contact your admin.");
+            alert("Something went wrong. Contact your IT admin.");
             console.log(error);
         },
     });
@@ -162,55 +162,6 @@ for (let i = 0; i < updateFAQ.length; i++) {
         }
     });
 }
-
-/* FOR BOOKING FORM'S UI */
-
-// For disabling past dates
-let curr_date = new Date().toISOString().split("T")[0];
-$("#sect2-start-date").attr("min", curr_date);
-$("#sect2-end-date").attr("min", curr_date);
-
-// For showing date range
-const showDateRange = () => {
-    try {
-        $("#sect2-days-into-future").val(""); // clears integer field
-
-        $("#sect2-start-end-date").removeClass("removed");
-        $("#sect2-days-into-future").prop("required", false);
-
-        $("#sect2-start-date").prop("required", true);
-        $("#sect2-end-date").prop("required", true);
-    } catch (e) {
-        throw e;
-    }
-};
-
-// For hiding date range
-const hideDateRange = () => {
-    try {
-        $("#sect2-start-date").val(""); // clears value when hidden
-        $("#sect2-end-date").val(""); // clears value when hidden
-
-        $("#sect2-start-end-date").addClass("removed");
-        $("#sect2-days-into-future").prop("required", true);
-
-        $("#sect2-start-date").prop("required", false);
-        $("#sect2-end-date").prop("required", false);
-    } catch (e) {
-        throw e;
-    }
-};
-
-// Add Event Handlers
-$("#sect2-event-range1").click(hideDateRange);
-$("#sect2-event-range2").click(showDateRange);
-
-// For setting the minimum time of end-date
-const disableEndTime = (id) => {
-    const temp = id.split("_");
-    const min = toTimeFormat(toMinutes($(`#${id}`).val()) + 15);
-    $(`#${temp[0]}_end_${temp[2]}`).attr("min", min);
-};
 
 /* FOR BOOKING FORM'S FUNCTIONALITY */
 
@@ -381,18 +332,29 @@ const makeEvent = (name, date, availability) => {
 };
 
 // Function for generating EventCard instances
-const generateAssessmentEvents = () => {
+const generateEvents = (eventType) => {
     let events = []; // will be returned
     const availability = getAvailability();
     const dates = getDates();
     for (let i = 0; i < dates.length; i++) {
-        const temp = makeEvent("Assessment", dates[i], availability);
+        let temp;
+        temp = makeEvent(eventType, dates[i], availability);
         events = events.concat(temp);
     }
     return events;
 };
 
-// TEST BUTTON
-// $("#sect2-generate-events-btn").click(() => {
-//     console.log(generateAssessmentEvents());
-// });
+// SUBMIT SCHEDULE
+$("#sect2-schedule-form").on("submit", (e) => {
+    e.preventDefault();
+    const eventCards = generateEvents(
+        $("#sect2-schedule-form").data("eventtype")
+    );
+    const api_route = $("#sect2-schedule-form").data("route");
+    ajaxPOST(
+        api_route,
+        { data: JSON.stringify(eventCards) },
+        true,
+        "Events were created."
+    );
+});

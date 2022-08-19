@@ -13,11 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('assessment_schedules', function (Blueprint $table) {
+        Schema::create('event_schedules', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
 
-            // Online Assessment Schedule Information
+            // Event Schedule Information
+            $table->string('type');
             $table->string('date');
             $table->string('start_time');
             $table->string('end_time');
@@ -32,6 +33,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('assessment_schedules');
+        Schema::dropIfExists('event_schedules');
     }
 };
