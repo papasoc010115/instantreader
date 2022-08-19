@@ -14,6 +14,7 @@ $("#sect2-end-date").attr("min", curr_date);
 const showDateRange = () => {
     try {
         $("#sect2-days-into-future").val(""); // clears integer field
+        $("#sect2-days-into-future").prop("disabled", true); // disable
 
         $("#sect2-start-end-date").removeClass("removed");
         $("#sect2-days-into-future").prop("required", false);
@@ -28,6 +29,8 @@ const showDateRange = () => {
 // For hiding date range
 const hideDateRange = () => {
     try {
+        $("#sect2-days-into-future").prop("disabled", false); // enable
+
         $("#sect2-start-date").val(""); // clears value when hidden
         $("#sect2-end-date").val(""); // clears value when hidden
 
