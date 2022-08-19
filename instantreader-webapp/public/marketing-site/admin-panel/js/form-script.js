@@ -351,10 +351,5 @@ $("#sect2-schedule-form").on("submit", (e) => {
         $("#sect2-schedule-form").data("eventtype")
     );
     const api_route = $("#sect2-schedule-form").data("route");
-    ajaxPOST(
-        api_route,
-        { data: JSON.stringify(eventCards) },
-        true,
-        "Successfully Created!"
-    );
+    ajaxPOST(api_route, { data: JSON.stringify(eventCards) }, true, "Success!");
 });
