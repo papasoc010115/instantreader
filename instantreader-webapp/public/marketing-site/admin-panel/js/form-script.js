@@ -68,7 +68,7 @@ const ajaxPOST = (api_route, update_data, asyncBool, success_msg) => {
         },
         error: function (error) {
             alert("Something went wrong. Contact your IT admin.");
-            console.log(error);
+            // console.log(error);
         },
     });
 };
@@ -355,6 +355,6 @@ $("#sect2-schedule-form").on("submit", (e) => {
         api_route,
         { data: JSON.stringify(eventCards) },
         true,
-        "Events were created."
+        "Successfully Created!"
     );
 });
