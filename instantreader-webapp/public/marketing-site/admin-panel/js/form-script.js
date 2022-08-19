@@ -204,17 +204,7 @@ const getDates = () => {
         const selected = $('input[name="event-range"]:checked').val();
 
         if (selected === "int") {
-            let number = $("#sect2-days-into-future").val();
-            if (isNaN(number)) {
-                alert("Invalid number of days.");
-                return;
-            }
-            number = Number(number);
-            const isInteger = Number.isInteger(number);
-            if (!isInteger || number <= 0) {
-                alert("Invalid number of days.");
-                return;
-            }
+            let number = Number($("#sect2-days-into-future").val());
 
             for (let i = 1; i <= number; i++) {
                 const tempDate = new Date();
@@ -250,21 +240,25 @@ const getDates = () => {
 
 // Function for getting availability
 const getAvailability = () => {
-    let start_time = $(".timeslot-start");
-    let availability = [];
+    try {
+        let start_time = $(".timeslot-start");
+        let availability = [];
 
-    // create & push objects
-    for (let i = 0; i < start_time.length; i++) {
-        const curr = start_time[i];
-        const str = curr.id.split("_");
-        const obj = {
-            day: str[0],
-            start_time: curr.value,
-            end_time: $(`#${str[0]}_end_${str[2]}`).val(),
-        };
-        availability.push(obj);
+        // create & push objects
+        for (let i = 0; i < start_time.length; i++) {
+            const curr = start_time[i];
+            const str = curr.id.split("_");
+            const obj = {
+                day: str[0],
+                start_time: curr.value,
+                end_time: $(`#${str[0]}_end_${str[2]}`).val(),
+            };
+            availability.push(obj);
+        }
+        return availability;
+    } catch (e) {
+        throw e;
     }
-    return availability;
 };
 
 // Function for converting time (h:m) to minutes
@@ -304,52 +298,110 @@ const toDateOnlyFormat = (date) => {
 
 // Function for making Event cards
 const makeEvent = (name, date, availability) => {
-    const day = intToDay(date.getDay());
-    const duration = Number($("#sect2-duration-value").val());
-    const interval = Number($("#sect2-event-interval").val());
-    let events = [];
-    for (let i = 0; i < availability.length; i++) {
-        const obj = availability[i];
-        if (obj.day != day) continue;
-        let start = toMinutes(obj.start_time);
-        const end = toMinutes(obj.end_time);
-        while (start < end) {
-            // create event
-            if (start + duration > end) break;
-            const event = new EventCard(
-                name,
-                toDateOnlyFormat(date),
-                toTimeFormat(start),
-                toTimeFormat(start + duration),
-                Number($("#sect2-slots").val())
-            );
-            // store event
-            events.push(event);
-            start += duration + interval;
+    try {
+        const day = intToDay(date.getDay());
+        const duration = Number($("#sect2-duration-value").val());
+        const interval = Number($("#sect2-event-interval").val());
+        let events = [];
+        for (let i = 0; i < availability.length; i++) {
+            const obj = availability[i];
+            if (obj.day != day) continue;
+            let start = toMinutes(obj.start_time);
+            const end = toMinutes(obj.end_time);
+            while (start < end) {
+                // create event
+                if (start + duration > end) break;
+                const event = new EventCard(
+                    name,
+                    toDateOnlyFormat(date),
+                    toTimeFormat(start),
+                    toTimeFormat(start + duration),
+                    Number($("#sect2-slots").val())
+                );
+                // store event
+                events.push(event);
+                start += duration + interval;
+            }
         }
+        return events;
+    } catch (e) {
+        throw e;
     }
-    return events;
 };
 
 // Function for generating EventCard instances
 const generateEvents = (eventType) => {
-    let events = []; // will be returned
-    const availability = getAvailability();
-    const dates = getDates();
-    for (let i = 0; i < dates.length; i++) {
-        let temp;
-        temp = makeEvent(eventType, dates[i], availability);
-        events = events.concat(temp);
+    try {
+        let events = []; // will be returned
+        const availability = getAvailability();
+        const dates = getDates();
+        for (let i = 0; i < dates.length; i++) {
+            let temp;
+            temp = makeEvent(eventType, dates[i], availability);
+            events = events.concat(temp);
+        }
+        return events;
+    } catch (e) {
+        throw e;
     }
-    return events;
+};
+
+// Function for checking input fields
+const eventFormChecker = () => {
+    const selected = $('input[name="event-range"]:checked').val();
+
+    if (selected === "int") {
+        let numberOfDays = $("#sect2-days-into-future").val();
+        if (isNaN(numberOfDays)) {
+            alert("Invalid number of days.");
+            return false;
+        }
+        numberOfDays = Number(numberOfDays);
+        let isInteger = Number.isInteger(numberOfDays);
+        if (!isInteger || numberOfDays <= 0) {
+            alert("Invalid number of days.");
+            return false;
+        }
+    }
+
+    let numberOfSlots = $("#sect2-slots").val();
+    if (isNaN(numberOfSlots)) {
+        alert("Invalid number of slots.");
+        return false;
+    }
+    numberOfSlots = Number(numberOfSlots);
+    isInteger = Number.isInteger(numberOfSlots);
+    if (!isInteger || numberOfSlots <= 0) {
+        alert("Invalid number of slots.");
+        return false;
+    }
+
+    return true;
 };
 
 // SUBMIT SCHEDULE
 $("#sect2-schedule-form").on("submit", (e) => {
-    e.preventDefault();
-    const eventCards = generateEvents(
-        $("#sect2-schedule-form").data("eventtype")
-    );
-    const api_route = $("#sect2-schedule-form").data("route");
-    ajaxPOST(api_route, { data: JSON.stringify(eventCards) }, true, "Success!");
+    try {
+        e.preventDefault();
+        const valid = eventFormChecker();
+        if (valid) {
+            const eventCards = generateEvents(
+                $("#sect2-schedule-form").data("eventtype")
+            );
+            if (eventCards.length === 0) {
+                alert("No events were created/updated. Check your inputs.");
+                return;
+            }
+            const api_route = $("#sect2-schedule-form").data("route");
+            ajaxPOST(
+                api_route,
+                { data: JSON.stringify(eventCards) },
+                true,
+                "Success!"
+            );
+        }
+    } catch (e) {
+        alert("Something went wrong. Contact your IT admin.");
+        // console.log(e); // for debugging purposes
+    }
 });
