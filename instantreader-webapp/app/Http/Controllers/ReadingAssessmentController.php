@@ -11,7 +11,8 @@ class ReadingAssessmentController extends Controller
     // Reading Assessment Admin View
     public function admin_index() {
         $data = ReadingAssessment::first();
-        return view('marketing-admin.learn-more.reading-assessment', [ 'data' => $data ]);
+        $schedule = EventSchedule::where(['type' => 'Assessment'])->get();
+        return view('marketing-admin.learn-more.reading-assessment', [ 'data' => $data, 'schedule' => $schedule ]);
     }
 
     // Update Data
@@ -49,6 +50,7 @@ class ReadingAssessmentController extends Controller
     // Reading Assessment View
     public function index() {
         $data = ReadingAssessment::first();
-        return view('learn-more.reading-assessment', [ 'data' => $data ]);
+        $schedule = EventSchedule::where(['type' => 'Assessment'])->get();
+        return view('learn-more.reading-assessment', [ 'data' => $data, 'schedule' => $schedule ]);
     }
 }
