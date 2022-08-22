@@ -22,10 +22,6 @@
     }
 </style>
 
-<script>
-    var active_day_id = "";
-</script>
-
 <!-- Banner -->
 <section class="page-title cursor-light">
     <!-- Pattern Layers -->

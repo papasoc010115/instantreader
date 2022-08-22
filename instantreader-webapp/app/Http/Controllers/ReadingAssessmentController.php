@@ -11,7 +11,8 @@ class ReadingAssessmentController extends Controller
     // Reading Assessment Admin View
     public function admin_index() {
         $data = ReadingAssessment::first();
-        return view('marketing-admin.learn-more.reading-assessment', [ 'data' => $data ]);
+        $events = EventSchedule::where(['type' => 'Assessment'])->get();
+        return view('marketing-admin.learn-more.reading-assessment', [ 'data' => $data, 'events' => $events ]);
     }
 
     // Update Data
