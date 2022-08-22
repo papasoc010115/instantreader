@@ -11,8 +11,8 @@ class ConsultationController extends Controller
     public function admin_index() {
         // get necessary data from table
         $data = Consultation::first();
-        $schedule = EventSchedule::where(['type' => 'Consultation'])->get();
-        return view('marketing-admin.contact-us.consultation', [ 'data' => $data, 'schedule' => $schedule ]);
+        $events = EventSchedule::where(['type' => 'Consultation'])->get();
+        return view('marketing-admin.contact-us.consultation', [ 'data' => $data, 'events' => $events ]);
     }
 
     // Update Data
@@ -51,8 +51,8 @@ class ConsultationController extends Controller
     public function index() {
         // get necessary data from table
         $data = Consultation::first();
-        $schedule = EventSchedule::where(['type' => 'Consultation'])->get();
-        return view('contact-us.book-consultation', [ 'data' => $data, 'schedule' => $schedule ]);
+        $events = EventSchedule::where(['type' => 'Consultation'])->get();
+        return view('contact-us.book-consultation', [ 'data' => $data, 'events' => $events ]);
     }
 
 }
