@@ -417,6 +417,27 @@
                 <button onclick="cloneSchedule()" class="btn btn-primary update-btn w-100"><span style="font-size: 0.8rem">Clone</span></button>
             </div>
             <!-- End of Section 2.2 -->
+
+            <br><br><br>
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2>Existing Assessment Events</h2>
+                </div>                
+            </div>
+
+            <!-- EDIT THIS PART (PUT EVENT CARD COMPONENTS HERE) -->
+            <div class="row">
+                <!-- EXAMPLE: -->
+                <ul>
+                    @foreach ($schedule as $s)
+                        <li>
+                            {{$s->start_time}} - {{$s->end_time}}
+                        </li>
+                    @endforeach
+                </ul>
+            </div>
+            <!-- END EDIT THIS -->
         </div>
     </section>
 </div>
