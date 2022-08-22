@@ -210,6 +210,7 @@ Written by: edcabalda
                     false,
                     "Success!"
                 );
+                location.reload();
             });
         }
     });
