@@ -37,4 +37,10 @@ class BookingController extends Controller
             }
         }
     }
+
+    //Delete existing schedule
+    public function delete_schedule(Request $req) {
+        EventSchedule::where('id', $req->id)->delete();
+    }
+
 }
