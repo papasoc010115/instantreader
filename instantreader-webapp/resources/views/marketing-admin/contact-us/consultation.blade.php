@@ -419,6 +419,8 @@
                 <button onclick="cloneSchedule()" class="btn btn-primary update-btn w-100"><span style="font-size: 0.8rem">Clone</span></button>
             </div>
             <!-- End of Section 2.2 -->
+
+            @include('calendar.admin-calendar')
         </div>
     </section>
 </div>
