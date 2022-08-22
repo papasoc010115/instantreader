@@ -38,14 +38,8 @@
         background-color: #D9D9D9;
     }
 
-    .general-time-card {
-        width: 150px;
-        height: 50px;
-        border-radius: 10px;
-        background-color: #D9D9D9;
-    }
-
     .specific-time-card {
+        flex: 1 0 21%;
         width: 250px;
         height: 75px;
         border-radius: 10px;
@@ -58,12 +52,21 @@
         background-color: #564F4F;
     }
 
+    #specific-time-selection {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
     .is-active{
         color: white;
         background-color: #483BF7;
     }
 
 </style>
+
+<script>
+    var active_day_id = "";
+</script>
 
 <!-- Banner -->
 <section class="page-title cursor-light">
@@ -136,86 +139,41 @@
             </div>
             <div id="reading-assessment-carousel" class="carousel slide h-100">
                 <div class="carousel-inner h-100">
-                    <div class="carousel-item h-100 active">
-                        <ul class="row m-auto h-100 list-unstyled">
-                            <li class="col-3 py-3 h-100" >
-                                <div class="carousel-card h-100 d-flex align-items-center justify-content-center text-center">
-                                    <p>
-                                        August 05, 2022
-                                        <br>
-                                        Available Slots
-                                    </p>
-                                </div>
-                            </li>
-                            <li class="col-3 py-3 h-100">
-                                <div class="carousel-card h-100 d-flex align-items-center justify-content-center text-center">
-                                    <p>
-                                        August 06, 2022
-                                        <br>
-                                        Available Slots
-                                    </p>
-                                </div>
-                            </li>
-                            <li class="col-3 py-3 h-100">
-                                <div class="carousel-card h-100 d-flex align-items-center justify-content-center text-center">
-                                    <p>
-                                        August 07, 2022
-                                        <br>
-                                        Available Slots
-                                    </p>
-                                </div>
-                            </li>
-                            <li class="col-3 py-3 h-100">
-                                <div class="carousel-card h-100 d-flex align-items-center justify-content-center text-center">
-                                    <p>
-                                        August 08, 2022
-                                        <br>
-                                        Available Slots
-                                    </p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="carousel-item h-100">
-                        <div class="row m-auto h-100">
-                            <div class="col-3 py-3 h-100">
-                                <div class="carousel-card h-100 d-flex align-items-center justify-content-center text-center">
-                                    <p>
-                                        August 09, 2022
-                                        <br>
-                                        Available Slots
-                                    </p>
-                                </div>
+                    @foreach ($events as $chunk)
+                        @if($loop->first)
+                            <div class="carousel-item h-100 active">
+                                <ul class="row m-auto h-100 list-unstyled">
+                                    @foreach($chunk as $date)
+                                    <li class="col-3 py-3 h-100" >
+                                        <div id="{{ $date[0] }}" class="day-card carousel-card h-100 d-flex align-items-center justify-content-center text-center">
+                                            <p>
+                                                {{ $date[0] }}
+                                                <br>
+                                                Available Slots : {{ $date[2] }}
+                                            </p>
+                                        </div>
+                                    </li>
+                                    @endforeach
+                                </ul>
                             </div>
-                            <div class="col-3 py-3 h-100">
-                                <div class="carousel-card h-100 d-flex align-items-center justify-content-center text-center">
-                                    <p>
-                                        August 10, 2022
-                                        <br>
-                                        Available Slots
-                                    </p>
-                                </div>
+                        @else
+                            <div class="carousel-item h-100">
+                                <ul class="row m-auto h-100 list-unstyled">
+                                    @foreach($chunk as $date)
+                                    <li class="col-3 py-3 h-100" >
+                                        <div id="{{ $date[0] }}" class="day-card carousel-card h-100 d-flex align-items-center justify-content-center text-center">
+                                            <p>
+                                                {{ $date[0] }}
+                                                <br>
+                                                Available Slots : {{ $date[2] }}
+                                            </p>
+                                        </div>
+                                    </li>
+                                    @endforeach
+                                </ul>
                             </div>
-                            <div class="col-3 py-3 h-100">
-                                <div class="carousel-card h-100 d-flex align-items-center justify-content-center text-center">
-                                    <p>
-                                        August 11, 2022
-                                        <br>
-                                        Available Slots
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="col-3 py-3 h-100">
-                                <div class="carousel-card h-100 d-flex align-items-center justify-content-center text-center">
-                                    <p>
-                                        August 12, 2022
-                                        <br>
-                                        Available Slots
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                        @endif
+                    @endforeach
                 </div>
             </div>
             <div class="carousel-control text-center">
@@ -223,34 +181,8 @@
             </div>
         </div>
 
-        <!-- General Time Selection -->
-        <div id="general-time-selection" class="w-100 d-flex align-items-center justify-content-center my-5">
-            <div class="general-time-card mx-2 d-flex align-items-center justify-content-center">
-                Morning
-            </div>
-            <div class="general-time-card mx-2 d-flex align-items-center justify-content-center">
-                Afternoon
-            </div>
-            <div class="general-time-card mx-2 d-flex align-items-center justify-content-center">
-                Evening
-            </div>
-        </div>
-
         <!-- Specific Time Selection -->
-        <div id="specific-time-selection" class="w-100 d-flex align-items-center justify-content-center my-5">
-            <div class="specific-time-card mx-2 d-flex align-items-center justify-content-center">
-                8am - 9am
-            </div>
-            <div class="specific-time-card mx-2 d-flex align-items-center justify-content-center">
-                9am - 10am
-            </div>
-            <div class="specific-time-card mx-2 d-flex align-items-center justify-content-center">
-                10am - 11am
-            </div>
-            <div class="specific-time-card mx-2 d-flex align-items-center justify-content-center">
-                10am - 12am
-            </div>
-        </div>
+        <div id="specific-time-selection" class="w-100 d-flex align-items-center justify-content-center my-5"></div>
     </div>
 </section>
 <!-- Calendar End -->
@@ -375,44 +307,78 @@
 <script>
 
     // jquery for selecting day cards
-    $(".carousel-card").on("click",function() {
+    $(".day-card").on("click",function() {
         if($(this).hasClass("is-active")){
             // if the card is active, remove the class
             $(this).removeClass("is-active");
-            $(".general-time-card.is-active").removeClass("is-active");
             $(".specific-time-card.is-active").removeClass("is-active");
-        } else{
-            // else remove all currently active cards, then set current card as active
-            $(".carousel-card.is-active").removeClass("is-active");
-            $(".general-time-card.is-active").removeClass("is-active");
-            $(".specific-time-card.is-active").removeClass("is-active");
-            $(this).addClass("is-active");
-        }
-    });
 
-    // jquery for selecting general time cards
-    $(".general-time-card").on("click",function() {
-        if($(this).hasClass("is-active")){
-            // if the card is active, remove the class
-            $(this).removeClass("is-active");
-            $(".specific-time-card.is-active").removeClass("is-active");
+            let timeslot_list = document.getElementById("specific-time-selection");
+
+            // delete all the children/timeslots from the list of timeslots
+            let child = timeslot_list.lastElementChild;
+            while (child) {
+                timeslot_list.removeChild(child);
+                child = timeslot_list.lastElementChild;
+            }
+            
         } else {
             // else remove all currently active cards, then set current card as active
-            $(".general-time-card.is-active").removeClass("is-active");
+            $(".day-card.is-active").removeClass("is-active");
             $(".specific-time-card.is-active").removeClass("is-active");
             $(this).addClass("is-active");
-        }
-    });
 
-    // jquery for selecting specific time cards
-    $(".specific-time-card").on("click",function() {
-        if($(this).hasClass("is-active")){
-            // if the card is active, remove the class
-            $(this).removeClass("is-active");
-        } else{
-            // else remove all currently active cards, then set current card as active
-            $(".specific-time-card.is-active").removeClass("is-active");
-            $(this).addClass("is-active");
+            let timeslot_list = document.getElementById("specific-time-selection");
+
+            // delete all the children/timeslots from the list of timeslots
+            let child = timeslot_list.lastElementChild;
+            while (child) {
+                timeslot_list.removeChild(child);
+                child = timeslot_list.lastElementChild;
+            }
+
+            // update the timeslot list
+            active_day_id = $(this).attr('id');
+            let events = <?php echo json_encode($events); ?>;
+            for (let x=0; x<events.length; x++){
+                let chunk = events[x];
+                for (let y=0; y<chunk.length; y++){
+                    let date = chunk[y];
+                    if (date[0] == active_day_id){
+                        for (let z=0; z<date[1].length; z++){
+                            // only append timeslot if there are any available slots
+                            if (date[1][z].slots > 0) {                            
+                                let timeslot = document.createElement("div");
+                                timeslot.id = date[1][z].id;
+                                timeslot.classList.add(
+                                    "specific-time-card",
+                                    "m-2",
+                                    "d-flex",
+                                    "align-items-center",
+                                    "justify-content-center",
+                                    "text-center",
+                                );
+                                timeslot.setAttribute('style', 'white-space: pre');
+                                timeslot.textContent = date[1][z].start_time + " to " + date[1][z].end_time + "\r\n";
+                                timeslot.textContent += "Available Slots: " + date[1][z].slots;
+                                timeslot_list.appendChild(timeslot);
+                            }
+                        }
+                    }
+                }
+            }
+
+            // update the jquery for specific time cards
+            $(".specific-time-card").on("click",function() {
+                if($(this).hasClass("is-active")){
+                    // if the card is active, remove the class
+                    $(this).removeClass("is-active");
+                } else{
+                    // else remove all currently active cards, then set current card as active
+                    $(".specific-time-card.is-active").removeClass("is-active");
+                    $(this).addClass("is-active");
+                }
+            });
         }
     });
 
