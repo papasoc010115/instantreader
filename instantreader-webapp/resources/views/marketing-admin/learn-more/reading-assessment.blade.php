@@ -428,11 +428,11 @@
 
             <!-- EDIT THIS PART (PUT EVENT CARD COMPONENTS HERE) -->
             <div class="row">
-                <!-- EXAMPLE: -->
+                <!-- EXAMPLE (REPLACE LIST WITH CARD COMPONENTS): -->
                 <ul>
-                    @foreach ($schedule as $s)
+                    @foreach ($events as $event)
                         <li>
-                            {{$s->start_time}} - {{$s->end_time}}
+                            {{$event->start_time}} - {{$event->end_time}}
                         </li>
                     @endforeach
                 </ul>
