@@ -419,6 +419,14 @@
                 <button onclick="cloneSchedule()" class="btn btn-primary update-btn w-100"><span style="font-size: 0.8rem">Clone</span></button>
             </div>
             <!-- End of Section 2.2 -->
+            
+            <br><br><br>
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2>Existing Assessment Events</h2>
+                </div>                
+            </div>
 
             @include('calendar.admin-calendar')
         </div>
