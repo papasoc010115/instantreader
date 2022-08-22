@@ -108,7 +108,7 @@
             </div>
         </div>
 
-        @include('calendar')
+        @include('calendar.calendar')
     </div>
 </section>
 <!-- Calendar End -->

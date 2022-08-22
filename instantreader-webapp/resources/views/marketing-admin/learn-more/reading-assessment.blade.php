@@ -425,19 +425,8 @@
                     <h2>Existing Assessment Events</h2>
                 </div>                
             </div>
-
-            <!-- EDIT THIS PART (PUT EVENT CARD COMPONENTS HERE) -->
-            <div class="row">
-                <!-- EXAMPLE (REPLACE LIST WITH CARD COMPONENTS): -->
-                <ul>
-                    @foreach ($events as $event)
-                        <li>
-                            {{$event->start_time}} - {{$event->end_time}}
-                        </li>
-                    @endforeach
-                </ul>
-            </div>
-            <!-- END EDIT THIS -->
+            
+            @include('calendar.admin-calendar')
         </div>
     </section>
 </div>

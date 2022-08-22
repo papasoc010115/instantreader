@@ -49,7 +49,9 @@ window.onload = function () {
         getCurrentDescCount();
         var current = document.getElementsByClassName("active"); // get current active class
         if (current.length > 0) {
-            current[0].className = current[0].className.replace(" active", ""); // remove current active class
+            if (!current[0].className.includes("carousel-item")){
+                current[0].className = current[0].className.replace(" active", ""); // remove current active class
+            }
         }
 
         var path = window.location.pathname; // current path

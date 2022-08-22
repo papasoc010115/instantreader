@@ -282,3 +282,4 @@ Route::post('/api/additional-resources/upload-media-single', [AdditionalResource
 Route::post('/api/additional-resources/upload-media-mutiple', [AdditionalResourceController::class, 'store_media_multiple'])->name('additional-resources.store_media_multiple');
 
 Route::post('/api/booking/store-schedules', [BookingController::class, 'store_schedules'])->name('booking.store_schedules');
+Route::post('/api/booking/delete-schedule', [BookingController::class, 'delete_schedule'])->name('booking.delete_schedule');

@@ -11,8 +11,38 @@ class ReadingAssessmentController extends Controller
     // Reading Assessment Admin View
     public function admin_index() {
         $data = ReadingAssessment::first();
-        $events = EventSchedule::where(['type' => 'Assessment'])->get();
-        return view('marketing-admin.learn-more.reading-assessment', [ 'data' => $data, 'events' => $events ]);
+        $assessment_events = EventSchedule::get()->where('type', 'Assessment')->sortBy('date');
+
+        // get each unique date
+        $unique_dates = [];
+        $curr_date = "";
+        foreach($assessment_events as $event){
+            if ($curr_date != $event->date){
+                array_push($unique_dates, $event->date);
+                $curr_date = $event->date;
+            }
+        }
+
+        // get all slots for each unique date
+        $final_events = [];
+        $date_slots = [];
+        $total_slots = 0;
+        foreach($unique_dates as $date){
+            foreach ($assessment_events as $event){
+                if ($date == $event->date){
+                    array_push($date_slots, $event);
+                    $total_slots = $total_slots + $event->slots;
+                }
+            }
+            array_push($final_events, [$date, $date_slots, $total_slots]);
+            $date_slots = [];
+            $total_slots = 0;
+        }
+
+        // group array into chunks of 4
+        $final_events = array_chunk($final_events, 4);
+
+        return view('marketing-admin.learn-more.reading-assessment', [ 'data' => $data, 'events' => $final_events ]);
     }
 
     // Update Data
