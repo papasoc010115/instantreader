@@ -141,7 +141,7 @@ Written by: edcabalda
             }
 
             // update the timeslot list
-            active_day_id = $(this).attr('id');
+            let active_day_id = $(this).attr('id');
             let events = <?php echo json_encode($events); ?>;
             for (let x=0; x<events.length; x++){
                 let chunk = events[x];
