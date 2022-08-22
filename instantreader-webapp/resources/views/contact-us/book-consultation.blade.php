@@ -264,48 +264,6 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
 <script>
-    // jquery for selecting day cards
-    $(".carousel-card").on("click",function() {
-        if($(this).hasClass("is-active")){
-            // if the card is active, remove the class
-            $(this).removeClass("is-active");
-            $(".general-time-card.is-active").removeClass("is-active");
-            $(".specific-time-card.is-active").removeClass("is-active");
-        } else{
-            // else remove all currently active cards, then set current card as active
-            $(".carousel-card.is-active").removeClass("is-active");
-            $(".general-time-card.is-active").removeClass("is-active");
-            $(".specific-time-card.is-active").removeClass("is-active");
-            $(this).addClass("is-active");
-        }
-    });
-
-    // jquery for selecting general time cards
-    $(".general-time-card").on("click",function() {
-        if($(this).hasClass("is-active")){
-            // if the card is active, remove the class
-            $(this).removeClass("is-active");
-            $(".specific-time-card.is-active").removeClass("is-active");
-        } else {
-            // else remove all currently active cards, then set current card as active
-            $(".general-time-card.is-active").removeClass("is-active");
-            $(".specific-time-card.is-active").removeClass("is-active");
-            $(this).addClass("is-active");
-        }
-    });
-
-    // jquery for selecting specific time cards
-    $(".specific-time-card").on("click",function() {
-        if($(this).hasClass("is-active")){
-            // if the card is active, remove the class
-            $(this).removeClass("is-active");
-        } else{
-            // else remove all currently active cards, then set current card as active
-            $(".specific-time-card.is-active").removeClass("is-active");
-            $(this).addClass("is-active");
-        }
-    });
-
     // script for scrolling down to form
     document.getElementById("scroll-to-form").onclick = function () {
         document.getElementById("book-consultation-form").scrollIntoView({behavior: 'smooth'});
