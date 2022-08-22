@@ -25,6 +25,8 @@
     <link rel="stylesheet" href="{{ asset('marketing-site/assets/agency/css/style.css') }}" rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{{ asset('marketing-site/assets/agency/css/custom-style.css') }}">
+    <!-- Moment for converting time -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.js"></script>
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="90">

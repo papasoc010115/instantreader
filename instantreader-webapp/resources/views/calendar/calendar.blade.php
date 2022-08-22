@@ -24,7 +24,7 @@ Written by: edcabalda
 
     .specific-time-card {
         flex: 1 0 21%;
-        width: 250px;
+        max-width: 250px;
         height: 75px;
         border-radius: 10px;
         background-color: #D9D9D9;
@@ -109,6 +109,10 @@ Written by: edcabalda
     
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script>
+    function convert_time(input) {
+        return moment(input, "HH:mm",).format("h:mm A");
+    }
+
     // jquery for selecting day cards
     $(".day-card").on("click",function() {
         if($(this).hasClass("is-active")){
@@ -162,7 +166,7 @@ Written by: edcabalda
                                     "text-center",
                                 );
                                 timeslot.setAttribute('style', 'white-space: pre');
-                                timeslot.textContent = date[1][z].start_time + " to " + date[1][z].end_time + "\r\n";
+                                timeslot.textContent = convert_time(date[1][z].start_time) + " to " + convert_time(date[1][z].end_time) + "\r\n";
                                 timeslot.textContent += "Available Slots: " + date[1][z].slots;
                                 timeslot_list.appendChild(timeslot);
                             }

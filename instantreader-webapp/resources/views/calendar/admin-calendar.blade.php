@@ -108,6 +108,10 @@ Written by: edcabalda
 <div id="specific-time-selection" class="w-100 d-flex align-items-center justify-content-center my-5"></div>
     
 <script>
+    function convert_time(input) {
+        return moment(input, "HH:mm",).format("h:mm A");
+    }
+    
     // jquery for selecting day cards
     $(".day-card").on("click",function() {
         if($(this).hasClass("is-active")){
@@ -163,7 +167,7 @@ Written by: edcabalda
                                     "text-center",
                                 );
                                 timeslot_text.setAttribute('style', 'white-space: pre');
-                                timeslot_text.textContent = date[1][z].start_time + " to " + date[1][z].end_time + "\r\n";
+                                timeslot_text.textContent = convert_time(date[1][z].start_time) + " to " + convert_time(date[1][z].end_time) + "\r\n";
                                 timeslot_text.textContent += "Available Slots: " + date[1][z].slots;
                                 timeslot.appendChild(timeslot_text);
 
