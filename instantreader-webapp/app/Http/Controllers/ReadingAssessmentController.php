@@ -11,7 +11,9 @@ class ReadingAssessmentController extends Controller
     // Reading Assessment Admin View
     public function admin_index() {
         $data = ReadingAssessment::first();
-        $assessment_events = EventSchedule::get()->where('type', 'Assessment')->sortBy('date');
+        $assessment_events = EventSchedule::get()->where('type', 'Assessment')->sortBy('start_time')->sortBy('date');
+
+        // dd($assessment_events);
 
         // get each unique date
         $unique_dates = [];
@@ -25,17 +27,24 @@ class ReadingAssessmentController extends Controller
 
         // get all slots for each unique date
         $final_events = [];
-        $date_slots = [];
         $total_slots = 0;
         foreach($unique_dates as $date){
+            $am_slots = [];
+            $pm_slots = [];
             foreach ($assessment_events as $event){
                 if ($date == $event->date){
-                    array_push($date_slots, $event);
-                    $total_slots = $total_slots + $event->slots;
+                    if ((int)explode(":", $event->start_time)[0] - 10 >= 0) {
+                        array_push($pm_slots, $event);
+                        $total_slots = $total_slots + $event->slots;
+                    } else {
+                        array_push($am_slots, $event);
+                        $total_slots = $total_slots + $event->slots;
+                    }
                 }
             }
+            $date_slots = array_merge($am_slots, $pm_slots);
+
             array_push($final_events, [$date, $date_slots, $total_slots]);
-            $date_slots = [];
             $total_slots = 0;
         }
 
@@ -80,7 +89,7 @@ class ReadingAssessmentController extends Controller
     // Reading Assessment View
     public function index() {
         $data = ReadingAssessment::first();
-        $assessment_events = EventSchedule::get()->where('type', 'Assessment')->sortBy('date');
+        $assessment_events = EventSchedule::get()->where('type', 'Assessment')->sortBy('start_time')->sortBy('date');
 
         // get each unique date
         $unique_dates = [];
@@ -94,17 +103,24 @@ class ReadingAssessmentController extends Controller
 
         // get all slots for each unique date
         $final_events = [];
-        $date_slots = [];
         $total_slots = 0;
         foreach($unique_dates as $date){
+            $am_slots = [];
+            $pm_slots = [];
             foreach ($assessment_events as $event){
                 if ($date == $event->date){
-                    array_push($date_slots, $event);
-                    $total_slots = $total_slots + $event->slots;
+                    if ((int)explode(":", $event->start_time)[0] - 10 >= 0) {
+                        array_push($pm_slots, $event);
+                        $total_slots = $total_slots + $event->slots;
+                    } else {
+                        array_push($am_slots, $event);
+                        $total_slots = $total_slots + $event->slots;
+                    }
                 }
             }
+            $date_slots = array_merge($am_slots, $pm_slots);
+            
             array_push($final_events, [$date, $date_slots, $total_slots]);
-            $date_slots = [];
             $total_slots = 0;
         }
 

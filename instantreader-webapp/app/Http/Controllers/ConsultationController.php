@@ -12,7 +12,7 @@ class ConsultationController extends Controller
     public function admin_index() {
         // get necessary data from table
         $data = Consultation::first();
-        $consultation_events = EventSchedule::get()->where('type', 'Consultation')->sortBy('date');
+        $consultation_events = EventSchedule::get()->where('type', 'Consultation')->sortBy('start_time')->sortBy('date');
 
         // get each unique date
         $unique_dates = [];
@@ -26,17 +26,24 @@ class ConsultationController extends Controller
 
         // get all slots for each unique date
         $final_events = [];
-        $date_slots = [];
         $total_slots = 0;
         foreach($unique_dates as $date){
+            $am_slots = [];
+            $pm_slots = [];
             foreach ($consultation_events as $event){
                 if ($date == $event->date){
-                    array_push($date_slots, $event);
-                    $total_slots = $total_slots + $event->slots;
+                    if ((int)explode(":", $event->start_time)[0] - 10 >= 0) {
+                        array_push($pm_slots, $event);
+                        $total_slots = $total_slots + $event->slots;
+                    } else {
+                        array_push($am_slots, $event);
+                        $total_slots = $total_slots + $event->slots;
+                    }
                 }
             }
+            $date_slots = array_merge($am_slots, $pm_slots);
+
             array_push($final_events, [$date, $date_slots, $total_slots]);
-            $date_slots = [];
             $total_slots = 0;
         }
 
@@ -82,7 +89,7 @@ class ConsultationController extends Controller
     public function index() {
         // get necessary data from table
         $data = Consultation::first();
-        $consultation_events = EventSchedule::get()->where('type', 'Consultation')->sortBy('date');
+        $consultation_events = EventSchedule::get()->where('type', 'Consultation')->sortBy('start_time')->sortBy('date');
 
         // get each unique date
         $unique_dates = [];
@@ -99,14 +106,22 @@ class ConsultationController extends Controller
         $date_slots = [];
         $total_slots = 0;
         foreach($unique_dates as $date){
+            $am_slots = [];
+            $pm_slots = [];
             foreach ($consultation_events as $event){
                 if ($date == $event->date){
-                    array_push($date_slots, $event);
-                    $total_slots = $total_slots + $event->slots;
+                    if ((int)explode(":", $event->start_time)[0] - 10 >= 0) {
+                        array_push($pm_slots, $event);
+                        $total_slots = $total_slots + $event->slots;
+                    } else {
+                        array_push($am_slots, $event);
+                        $total_slots = $total_slots + $event->slots;
+                    }
                 }
             }
+            $date_slots = array_merge($am_slots, $pm_slots);
+
             array_push($final_events, [$date, $date_slots, $total_slots]);
-            $date_slots = [];
             $total_slots = 0;
         }
 
