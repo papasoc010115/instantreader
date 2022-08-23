@@ -99,6 +99,8 @@
         </h2>
         <form action="{{ route('learn-more.store_ora') }}" method="POST" class="contact-form">
             @csrf
+            <input type="hidden" id="form_event_id" name="event_id"/>
+
             <div class="row">
                 <!--Left Column-->
                 <div class="col-md-6 mb-4">                    

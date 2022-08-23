@@ -184,6 +184,7 @@ Written by: edcabalda
                     // else remove all currently active cards, then set current card as active
                     $(".specific-time-card.is-active").removeClass("is-active");
                     $(this).addClass("is-active");
+                    $("#form_event_id").val($(this).attr('id'));
                 }
             });
         }

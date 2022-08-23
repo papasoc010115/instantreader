@@ -127,6 +127,9 @@
 
             <form action="{{ route('contact-us.store_consultation') }}" method="POST" class="booking-form" id="booking-form-data">
                 @csrf
+
+                <input type="hidden" id="form_event_id" name="event_id"/>
+
                 <div class="form-group row mb-3">
 
                     <!-- Parent's Name Fields -->
