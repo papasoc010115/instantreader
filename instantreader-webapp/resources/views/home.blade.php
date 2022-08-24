@@ -475,126 +475,101 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="owl-carousel wow zoomIn" id="testimonial-slider">
+                    @if( count($testimonials) > 0)
                     <div id="testimonies-item-1" class="item">
-                        <p class="para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tincidunt
-                            egestas nunc, at pellentesque arcu sollicitudin et. Aliquam hendrerit diam quis ipsum
-                            ultricies, quis ultricies arcu suscipit. Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit. Fusce ut diam quis nulla faucibus venenatis. </p>
-                        <h5 class="name gradient-text1">David Villas</h5>
-                        <span class="designation">Designer, Company Name</span>
+                        <p class="para">{{ $testimonials[0]->testimonial }}</p>
+                        <h5 class="name gradient-text1">{{ $testimonials[0]->name }}</h5>
                         <ul class="ratings list-unstyled">
-                            <li><i aria-hidden="true" class="fas fa-star"></i></li>
-                            <li><i aria-hidden="true" class="fas fa-star"></i></li>
-                            <li><i aria-hidden="true" class="fas fa-star"></i></li>
-                            <li><i aria-hidden="true" class="fas fa-star"></i></li>
-                            <li><i aria-hidden="true" class="fas fa-star"></i></li>
+                            @for($x=0; $x < $testimonials[0]->rating; $x++)
+                                <li><i aria-hidden="true" class="fas fa-star"></i></li>
+                            @endfor 
                         </ul>
                     </div>
+                    @endif
+
+                    @if( count($testimonials) > 1)
                     <div id="testimonies-item-2" class="item">
-                        <p class="para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tincidunt
-                            egestas nunc, at pellentesque arcu sollicitudin et. Aliquam hendrerit diam quis ipsum
-                            ultricies, quis ultricies arcu suscipit. Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit. Fusce ut diam quis nulla faucibus venenatis. </p>
-                        <h5 class="name gradient-text1">David Villas</h5>
-                        <span class="designation">Designer, Company Name</span>
+                        <p class="para">{{ $testimonials[1]->testimonial }}</p>
+                        <h5 class="name gradient-text1">{{ $testimonials[1]->name }}</h5>
                         <ul class="ratings list-unstyled">
-                            <li><i aria-hidden="true" class="fas fa-star"></i></li>
-                            <li><i aria-hidden="true" class="fas fa-star"></i></li>
-                            <li><i aria-hidden="true" class="fas fa-star"></i></li>
-                            <li><i aria-hidden="true" class="fas fa-star"></i></li>
-                            <li><i aria-hidden="true" class="fas fa-star"></i></li>
+                            @for($x=0; $x < $testimonials[1]->rating; $x++)
+                                <li><i aria-hidden="true" class="fas fa-star"></i></li>
+                            @endfor 
                         </ul>
                     </div>
+                    @endif
+
+                    @if( count($testimonials) > 2)
                     <div id="testimonies-item-3" class="item">
-                        <p class="para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tincidunt
-                            egestas nunc, at pellentesque arcu sollicitudin et. Aliquam hendrerit diam quis ipsum
-                            ultricies, quis ultricies arcu suscipit. Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit. Fusce ut diam quis nulla faucibus venenatis. </p>
-                        <h5 class="name gradient-text1">David Villas</h5>
-                        <span class="designation">Designer, Company Name</span>
+                        <p class="para">{{ $testimonials[2]->testimonial }}</p>
+                        <h5 class="name gradient-text1">{{ $testimonials[2]->name }}</h5>
                         <ul class="ratings list-unstyled">
-                            <li><i aria-hidden="true" class="fas fa-star"></i></li>
-                            <li><i aria-hidden="true" class="fas fa-star"></i></li>
-                            <li><i aria-hidden="true" class="fas fa-star"></i></li>
-                            <li><i aria-hidden="true" class="fas fa-star"></i></li>
-                            <li><i aria-hidden="true" class="fas fa-star"></i></li>
+                            @for($x=0; $x < $testimonials[2]->rating; $x++)
+                                <li><i aria-hidden="true" class="fas fa-star"></i></li>
+                            @endfor 
                         </ul>
                     </div>
+                    @endif
+
+                    @if( count($testimonials) > 3)
                     <div id="testimonies-item-4" class="item">
-                        <p class="para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tincidunt
-                            egestas nunc, at pellentesque arcu sollicitudin et. Aliquam hendrerit diam quis ipsum
-                            ultricies, quis ultricies arcu suscipit. Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit. Fusce ut diam quis nulla faucibus venenatis. </p>
-                        <h5 class="name gradient-text1">David Villas</h5>
-                        <span class="designation">Designer, Company Name</span>
+                        <p class="para">{{ $testimonials[3]->testimonial }}</p>
+                        <h5 class="name gradient-text1">{{ $testimonials[3]->name }}</h5>
                         <ul class="ratings list-unstyled">
-                            <li><i aria-hidden="true" class="fas fa-star"></i></li>
-                            <li><i aria-hidden="true" class="fas fa-star"></i></li>
-                            <li><i aria-hidden="true" class="fas fa-star"></i></li>
-                            <li><i aria-hidden="true" class="fas fa-star"></i></li>
-                            <li><i aria-hidden="true" class="fas fa-star"></i></li>
+                            @for($x=0; $x < $testimonials[3]->rating; $x++)
+                                <li><i aria-hidden="true" class="fas fa-star"></i></li>
+                            @endfor 
                         </ul>
                     </div>
+                    @endif
+
+                    @if( count($testimonials) > 4)
                     <div id="testimonies-item-5" class="item">
-                        <p class="para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tincidunt
-                            egestas nunc, at pellentesque arcu sollicitudin et. Aliquam hendrerit diam quis ipsum
-                            ultricies, quis ultricies arcu suscipit. Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit. Fusce ut diam quis nulla faucibus venenatis. </p>
-                        <h5 class="name gradient-text1">David Villas</h5>
-                        <span class="designation">Designer, Company Name</span>
+                        <p class="para">{{ $testimonials[4]->testimonial }}</p>
+                        <h5 class="name gradient-text1">{{ $testimonials[4]->name }}</h5>
                         <ul class="ratings list-unstyled">
-                            <li><i aria-hidden="true" class="fas fa-star"></i></li>
-                            <li><i aria-hidden="true" class="fas fa-star"></i></li>
-                            <li><i aria-hidden="true" class="fas fa-star"></i></li>
-                            <li><i aria-hidden="true" class="fas fa-star"></i></li>
-                            <li><i aria-hidden="true" class="fas fa-star"></i></li>
+                            @for($x=0; $x < $testimonials[4]->rating; $x++)
+                                <li><i aria-hidden="true" class="fas fa-star"></i></li>
+                            @endfor 
                         </ul>
                     </div>
+                    @endif
+
+                    @if( count($testimonials) > 5)
                     <div id="testimonies-item-6" class="item">
-                        <p class="para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tincidunt
-                            egestas nunc, at pellentesque arcu sollicitudin et. Aliquam hendrerit diam quis ipsum
-                            ultricies, quis ultricies arcu suscipit. Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit. Fusce ut diam quis nulla faucibus venenatis. </p>
-                        <h5 class="name gradient-text1">David Villas</h5>
-                        <span class="designation">Designer, Company Name</span>
+                        <p class="para">{{ $testimonials[5]->testimonial }}</p>
+                        <h5 class="name gradient-text1">{{ $testimonials[5]->name }}</h5>
                         <ul class="ratings list-unstyled">
-                            <li><i aria-hidden="true" class="fas fa-star"></i></li>
-                            <li><i aria-hidden="true" class="fas fa-star"></i></li>
-                            <li><i aria-hidden="true" class="fas fa-star"></i></li>
-                            <li><i aria-hidden="true" class="fas fa-star"></i></li>
-                            <li><i aria-hidden="true" class="fas fa-star"></i></li>
+                            @for($x=0; $x < $testimonials[5]->rating; $x++)
+                                <li><i aria-hidden="true" class="fas fa-star"></i></li>
+                            @endfor 
                         </ul>
                     </div>
+                    @endif
+
+                    @if( count($testimonials) > 6)
                     <div id="testimonies-item-7" class="item">
-                        <p class="para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tincidunt
-                            egestas nunc, at pellentesque arcu sollicitudin et. Aliquam hendrerit diam quis ipsum
-                            ultricies, quis ultricies arcu suscipit. Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit. Fusce ut diam quis nulla faucibus venenatis. </p>
-                        <h5 class="name gradient-text1">David Villas</h5>
-                        <span class="designation">Designer, Company Name</span>
+                        <p class="para">{{ $testimonials[6]->testimonial }}</p>
+                        <h5 class="name gradient-text1">{{ $testimonials[6]->name }}</h5>
                         <ul class="ratings list-unstyled">
-                            <li><i aria-hidden="true" class="fas fa-star"></i></li>
-                            <li><i aria-hidden="true" class="fas fa-star"></i></li>
-                            <li><i aria-hidden="true" class="fas fa-star"></i></li>
-                            <li><i aria-hidden="true" class="fas fa-star"></i></li>
-                            <li><i aria-hidden="true" class="fas fa-star"></i></li>
+                            @for($x=0; $x < $testimonials[6]->rating; $x++)
+                                <li><i aria-hidden="true" class="fas fa-star"></i></li>
+                            @endfor 
                         </ul>
                     </div>
+                    @endif
+
+                    @if( count($testimonials) > 7)
                     <div id="testimonies-item-8" class="item">
-                        <p class="para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tincidunt
-                            egestas nunc, at pellentesque arcu sollicitudin et. Aliquam hendrerit diam quis ipsum
-                            ultricies, quis ultricies arcu suscipit. Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit. Fusce ut diam quis nulla faucibus venenatis. </p>
-                        <h5 class="name gradient-text1">David Villas</h5>
-                        <span class="designation">Designer, Company Name</span>
+                        <p class="para">{{ $testimonials[7]->testimonial }}</p>
+                        <h5 class="name gradient-text1">{{ $testimonials[7]->name }}</h5>
                         <ul class="ratings list-unstyled">
-                            <li><i aria-hidden="true" class="fas fa-star"></i></li>
-                            <li><i aria-hidden="true" class="fas fa-star"></i></li>
-                            <li><i aria-hidden="true" class="fas fa-star"></i></li>
-                            <li><i aria-hidden="true" class="fas fa-star"></i></li>
-                            <li><i aria-hidden="true" class="fas fa-star"></i></li>
+                            @for($x=0; $x < $testimonials[7]->rating; $x++)
+                                <li><i aria-hidden="true" class="fas fa-star"></i></li>
+                            @endfor 
                         </ul>
                     </div>
+                    @endif
                 </div>
             </div>
         </div>
@@ -602,23 +577,46 @@
         <!--Testimonial Thumbs-->
         <div class="owl-dots" id="testimonials-avatar">
             <!--data-position[top,right,bottom,left]-->
+            @if (count($testimonials) > 0)
             <button class="owl-dot active" data-position="22%,auto,auto,5%">
-                <img id="testimonies-image-1" alt="image" src="{{ asset('marketing-site/assets/agency/img/avatar-1.png') }}"></button>
+                <img id="testimonies-image-1" alt="image" src="{{ url($testimonials[0]->image) }}"></button>
+            @endif
+
+            @if (count($testimonials) > 1)
             <button class="owl-dot active" data-position="30%,auto,auto,16%">
-                <img id="testimonies-image-2" alt="image" src="{{ asset('marketing-site/assets/agency/img/avatar-2.png') }}"></button>
+                <img id="testimonies-image-2" alt="image" src="{{ url($testimonials[1]->image) }}"></button>
+            @endif
+
+            @if (count($testimonials) > 2)
             <button class="owl-dot active" data-position="auto,auto,38%,7%">
-                <img id="testimonies-image-3" alt="image" src="{{ asset('marketing-site/assets/agency/img/avatar-3.png') }}"></button>
+                <img id="testimonies-image-3" alt="image" src="{{ url($testimonials[2]->image) }}"></button>
+            @endif
+
+            @if (count($testimonials) > 3)
             <button class="owl-dot active" data-position="auto,auto,23%,18%">
-                <img id="testimonies-image-4" alt="image" src="{{ asset('marketing-site/assets/agency/img/avatar-7.png') }}"></button>
+                <img id="testimonies-image-4" alt="image" src="{{ url($testimonials[3]->image) }}"></button>
+            @endif
+
             <!--data-position[top,right,bottom,left]-->
+            @if (count($testimonials) > 4)
             <button class="owl-dot active" data-position="20%,19%,auto,auto">
-                <img id="testimonies-image-5" alt="image" src="{{ asset('marketing-site/assets/agency/img/avatar-5.png') }}"></button>
+                <img id="testimonies-image-5" alt="image" src="{{ url($testimonials[4]->image) }}"></button>
+            @endif
+
+            @if (count($testimonials) > 5)
             <button class="owl-dot active" data-position="28%,6%,auto,auto">
-                <img id="testimonies-image-6" alt="image" src="{{ asset('marketing-site/assets/agency/img/avatar-6.png') }}"></button>
+                <img id="testimonies-image-6" alt="image" src="{{ url($testimonials[5]->image) }}"></button>
+            @endif
+
+            @if (count($testimonials) > 6)
             <button class="owl-dot active" data-position="40%,15%,auto,auto">
-                <img id="testimonies-image-7" alt="image" src="{{ asset('marketing-site/assets/agency/img/avatar-4.png') }}"></button>
+                <img id="testimonies-image-7" alt="image" src="{{ url($testimonials[6]->image) }}"></button>
+            @endif
+
+            @if (count($testimonials) > 7)
             <button class="owl-dot active" data-position="auto,21%,22%,auto">
-                <img id="testimonies-image-8" alt="image" src="{{ asset('marketing-site/assets/agency/img/avatar-2.png') }}"></button>
+                <img id="testimonies-image-8" alt="image" src="{{ url($testimonials[7]->image) }}"></button>
+            @endif
         </div>
     </div>
 </section>

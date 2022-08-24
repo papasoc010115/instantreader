@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use App\Models\Home;
+use App\Models\IndividualTestimonial;
 
 class HomeController extends Controller
 {
@@ -96,6 +97,7 @@ class HomeController extends Controller
     //Home View
     public function index() {
         $data = Home::first();
-        return view('home', [ 'data' => $data ]);
+        $testimonials = IndividualTestimonial::inRandomOrder()->limit(8)->get();
+        return view('home', [ 'data' => $data, 'testimonials' => $testimonials ]);
     }
 }
