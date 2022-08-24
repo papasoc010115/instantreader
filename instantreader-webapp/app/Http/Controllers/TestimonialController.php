@@ -125,13 +125,12 @@ class TestimonialController extends Controller
         return redirect()->route("marketing-admin.about-us.testimonials")->with('upload_testimonial_success', 'Successfully Updated!');
     }
 
-    //Delete existing question and answer
+    //Delete existing testimonial
     public function delete_individual_testimonial(Request $req) {
-        dd($req->all());
         IndividualTestimonial::where('id', $req->id)->delete();
     }
 
-    //Update existing question and answer
+    //Update existing testimonial
     public function update_individual_testimonial(Request $req) {
         // getting the current page to be updated
         $uri = explode('/',$req->getRequestUri());

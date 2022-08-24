@@ -386,6 +386,14 @@
             </div>
         </form>
 
+        <br><br><br>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <h2>Add a New Testimonial</h2>
+            </div>
+        </div>
+
         <form action="{{ route('about-us.testimonials.store_individual_testimonial') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="form-group py-3">
@@ -432,8 +440,8 @@
                         <input required name="sect4_image" data-fieldtype="media" value="{{ $testimonial->image }}" accept="image/*" class="form-control form-control-sm" id="sect3-image-{{ $testimonial->id }}" type="file" aria-describedby="sect4ImageHelp-{{ $testimonial->id }}">
                         <small id="sect4ImageHelp-{{ $testimonial->id }}" class="form-text text-muted">Recommended image size: WxH</small>
                         
-                        <button type="submit" class="btn btn-primary update-btn update-faq"><span style="font-size: 0.8rem">Update</span></button>
-                        <button type="button" class="btn btn-secondary update-btn delete-faq" data-route="{{ route('about-us.testimonials.delete_individual_testimonial') }}" data-individual_testimonial_id="{{ $testimonial->id }}"> <span style="font-size: 0.8rem">Delete</span></button>                       
+                        <button type="submit" class="btn btn-primary update-btn"><span style="font-size: 0.8rem">Update</span></button>
+                        <button type="button" class="btn btn-secondary update-btn delete-individual-testimonial" data-route="{{ route('about-us.testimonials.delete_individual_testimonial') }}" data-individual_testimonial_id="{{ $testimonial->id }}"> <span style="font-size: 0.8rem">Delete</span></button>                       
                     </div>
                 </form>
                 @endforeach

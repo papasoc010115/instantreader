@@ -163,6 +163,21 @@ for (let i = 0; i < updateFAQ.length; i++) {
     });
 }
 
+/* FOR INDIVIDUAL TESTIMONIAL */
+
+// Testimonial Delete
+const deleteIndividualTestimonialBtn = $(".delete-individual-testimonial").get();
+for (let i = 0; i < deleteIndividualTestimonialBtn.length; i++) {
+    const btn = deleteIndividualTestimonialBtn[i];
+    btn.addEventListener("click", (e) => {
+        const api_route = btn.dataset.route;
+        const individual_testimonial_id = btn.dataset.individual_testimonial_id; // FAQ to delete
+        const data = { id: individual_testimonial_id };
+        ajaxPOST(api_route, data, false, "Successfully Deleted!");
+        location.reload();
+    });
+}
+
 /* FOR BOOKING FORM'S FUNCTIONALITY */
 
 // EventCard Class
