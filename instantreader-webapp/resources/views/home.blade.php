@@ -465,8 +465,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="heading-area mx-570 mb-5">
-                    <h2 class="title text-white m-0">Some <span class="js-rotating">great, ideal</span> words from
-                        our clients</h2>
+                    <h2 class="title text-white m-0">{{ $data->sect6_heading }}</h2>
                 </div>
             </div>
         </div>
