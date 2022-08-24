@@ -446,38 +446,6 @@
                     <input required data-fieldtype="big" type="text" class="form-control" name="sect6_heading" id="sect6-heading" placeholder="e.g. The Best Reading Course" value="{{ $data->sect6_heading }}">
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>                    
                 </div>
-            </form>  
-
-            <!-- Statement -->
-            <form data-route="{{ route('home.update_page') }}" class="non-media">
-                @csrf
-                <div class="form-group py-3">
-                    <label for="sect6-statement">Statement</label>
-                    <textarea data-fieldtype="tiny" class="form-control" name="sect6-statement" aria-describedby="sect6SentenceHelp" id="sect6-statement"></textarea>
-                    <small id="sect6SentenceHelp" class="form-text text-muted">Recommended length: 1 sentence</small>
-                    <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
-                </div>
-            </form>
-            <script>    
-                tinymce.init({
-                    height: "10rem",
-                    selector: '#sect6-statement',
-                    placeholder: "e.g. Welcome to Instant Reader!",
-                    plugins: 'link',
-                    menubar: false,
-                    toolbar: 'undo redo | bold italic underline | link'
-                });            
-            </script>
-
-             <!-- Images of Section 6 -->
-             <form action="{{ route('home.store_media_multiple') }}" method="POST" enctype="multipart/form-data">
-                @csrf
-                <div class="mb-3 py-3">
-                    <label for="sect6-images" class="form-label">Images (Select at least 3 photos)</label>
-                    <input required data-fieldtype="media" accept="image/*" class="form-control form-control-sm" name="sect6_images[]" type="file" id="sect6-images" aria-describedby="sect6ImagesHelp" multiple value="{{ $data->sect6_images }}">
-                    <small id="sect6ImagesHelp" class="form-text text-muted">Recommended image size: WxH</small>
-                    <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
-                </div>                
             </form>
             <!-- End of Section 6 -->
 
