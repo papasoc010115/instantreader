@@ -110,42 +110,17 @@
 
         <!-- Cards -->
         <div class="row py-5 text-center">
-            <div class="col-md-3 d-flex align-items-stretch px-3 mb-5">
-                <div class="card shadow">
-                    <img class="card-img-top" src="{{ url($data->sect3_image1) }}" alt="Card image cap">
-                    <div class="card-body bg-white">
-                        <p class="card-text">{!! $data->sect3_para1 !!}</p>
+            @foreach ($testimonials as $testimonial)
+                <div class="col-md-3 d-flex align-items-stretch px-3 mb-5">
+                    <div class="card shadow">
+                        <img class="card-img-top" src="{{ url($testimonial->image) }}" alt="Card image cap">
+                        <div class="card-body bg-white">
+                            <p class="card-text">{!! $testimonial->testimonial !!}</p>
+                        </div>
+                        <div class="card-footer"><span>{{ $testimonial->name }}</span></div>
                     </div>
-                    <div class="card-footer"><span>{{ $data->sect3_name1 }}</span></div>
                 </div>
-            </div>
-            <div class="col-md-3 d-flex align-items-stretch px-3 mb-5">
-                <div class="card shadow">
-                    <img class="card-img-top" src="{{ url($data->sect3_image2) }}" alt="Card image cap">
-                    <div class="card-body bg-white">
-                        <p class="card-text">{!! $data->sect3_para2 !!}</p>
-                    </div>
-                    <div class="card-footer"><span>{{ $data->sect3_name2 }}</span></div>
-                </div>
-            </div>
-            <div class="col-md-3 d-flex align-items-stretch px-3 mb-5">
-                <div class="card shadow">
-                    <img class="card-img-top" src="{{ url($data->sect3_image3) }}" alt="Card image cap">
-                    <div class="card-body bg-white">
-                        <p class="card-text">{!! $data->sect3_para3 !!}</p>
-                    </div>
-                    <div class="card-footer"><span>{{ $data->sect3_name3 }}</span></div>
-                </div>
-            </div>
-            <div class="col-md-3 d-flex align-items-stretch px-3 mb-5">
-                <div class="card shadow">
-                    <img class="card-img-top" src="{{ url($data->sect3_image4) }}" alt="Card image cap">
-                    <div class="card-body bg-white">
-                        <p class="card-text">{!! $data->sect3_para4 !!}</p>
-                    </div>
-                    <div class="card-footer"><span>{{ $data->sect3_name4 }}</span></div>
-                </div>
-            </div>
+            @endforeach
         </div>
         <!-- Cards End -->
         
