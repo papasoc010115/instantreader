@@ -386,186 +386,60 @@
             </div>
         </form>
 
-        <!-- Name 1 -->
-        <form data-route="{{ route('about-us.testimonials.update_page') }}" class="non-media">
+        <form action="{{ route('about-us.testimonials.store_individual_testimonial') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="form-group py-3">
-                <label for="sect3-name1">Name 1</label>                    
-                <input required data-fieldtype="big" type="text" class="form-control" name="sect3_name1" id="sect3-name1" placeholder="e.g. Hinata Shoyo" value="{{ $data->sect3_name1 }}">
-                <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>                    
+                <label for="sect3-testimonial">Testimonial</label>                    
+                <input required name="sect3_testimonial" type="text" class="form-control" id="sect3-testimonial" data-fieldtype="default" placeholder="e.g. Instant Reader is great!">
+                
+                <label for="sect3-name">Name</label>                    
+                <input required name="sect3_name" type="text" class="form-control" id="sect3-name" data-fieldtype="default" placeholder="e.g. Juan dela Cruz">
+                
+                <label for="sect3-rating">Rating out of 5 stars</label>                    
+                <input required name="sect3_rating" type="number" class="form-control" id="sect3-rating" data-fieldtype="default" placeholder="e.g. 5">
+                
+                <label for="sect3-image" class="form-label">Image</label>
+                <input required data-fieldtype="media" accept="image/*" class="form-control form-control-sm" name="sect3_image" type="file" id="sect3-image" aria-describedby="sect3ImageHelp">
+                <small id="sect3ImageHelp" class="form-text text-muted">Recommended image size: WxH</small>
+
+                <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Add Testimonial</span></button>                    
             </div>
-        </form>
-        
-        <!-- Paragraph 1 -->
-        <form data-route="{{ route('about-us.testimonials.update_page') }}" class="non-media">
-            @csrf
-            <div class="form-group py-3">
-                <label for="sect3-paragraph1">Card Testimony 1</label>
-                <textarea data-fieldtype="tiny" class="form-control" name="sect3_para1" aria-describedby="sect2Paragraph1Help" id="sect3-paragraph1">{{ $data->sect3_para1 }}</textarea>
-                <small id="sect2Paragraph1Help" class="form-text text-muted">Recommended length: 3-5 sentences</small>
-                <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
-            </div>
-        </form>
-        <script>    
-            tinymce.init({
-                height: "10rem",
-                selector: '#sect3-paragraph1',
-                placeholder: "e.g. Tell something about this section.",
-                plugins: 'link',
-                menubar: false,
-                toolbar: 'undo redo | bold italic underline | link'
-            });            
-        </script>
-
-        <!-- Image 1 of Section 3 -->
-        <form action="{{ route('about-us.testimonials.store_media_single') }}" method="POST" enctype="multipart/form-data">
-            @csrf
-            <div class="mb-3 py-3">
-                <label for="sect3-image1" class="form-label">Card Image 1</label>
-                <input required data-fieldtype="media" accept="image/*" class="form-control form-control-sm" name="sect3_image1" type="file" id="sect3-image1" aria-describedby="sect3Image1Help" value="{{ $data->sect3_image1 }}">
-                <small id="sect3Image1Help" class="form-text text-muted">Recommended image size: WxH</small>
-                <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
-            </div>                
-        </form>
-
-        <!-- Name 2 -->
-        <form data-route="{{ route('about-us.testimonials.update_page') }}" class="non-media">
-            @csrf
-            <div class="form-group py-3">
-                <label for="sect3-name2">Name 2</label>                    
-                <input required data-fieldtype="big" type="text" class="form-control" name="sect3_name2" id="sect3-name2" placeholder="e.g. Hinata Shoyo" value="{{ $data->sect3_name2 }}">
-                <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>                    
-            </div>
-        </form>
-
-        <!-- Paragraph 2 -->
-        <form data-route="{{ route('about-us.testimonials.update_page') }}" class="non-media">
-            @csrf
-            <div class="form-group py-3">
-                <label for="sect3-paragraph2">Card Testimony 2</label>
-                <textarea data-fieldtype="tiny" class="form-control" name="sect3_para2" aria-describedby="sect3Paragraph2Help" id="sect3-paragraph2">{{ $data->sect3_para2 }}</textarea>
-                <small id="sect3Paragraph2Help" class="form-text text-muted">Recommended length: 3-5 sentences</small>
-                <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
-            </div>
-        </form>
-        <script>    
-            tinymce.init({
-                height: "10rem",
-                selector: '#sect3-paragraph2',
-                placeholder: "e.g. Tell something about this section.",
-                plugins: 'link',
-                menubar: false,
-                toolbar: 'undo redo | bold italic underline | link'
-            });            
-        </script>
-
-        <!-- Image 2 of Section 3 -->
-        <form action="{{ route('about-us.testimonials.store_media_single') }}" method="POST" enctype="multipart/form-data">
-            @csrf
-            <div class="mb-3 py-3">
-                <label for="sect3-image2" class="form-label">Card Image 2</label>
-                <input required data-fieldtype="media" accept="image/*" class="form-control form-control-sm" name="sect3_image2" type="file" id="sect3-image2" aria-describedby="sect3Image2Help" value="{{ $data->sect3_image2 }}">
-                <small id="sect3Image2Help" class="form-text text-muted">Recommended image size: WxH</small>
-                <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
-            </div>                
-        </form>
-
-        <!-- Name 3 -->
-        <form data-route="{{ route('about-us.testimonials.update_page') }}" class="non-media">
-            @csrf
-            <div class="form-group py-3">
-                <label for="sect3-name3">Name 3</label>                    
-                <input required data-fieldtype="big" type="text" class="form-control" name="sect3_name3" id="sect3-name3" placeholder="e.g. Hinata Shoyo" value="{{ $data->sect3_name3 }}">
-                <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>                    
-            </div>
-        </form>
-
-        <!-- Paragraph 3 -->
-        <form data-route="{{ route('about-us.testimonials.update_page') }}" class="non-media">
-            @csrf
-            <div class="form-group py-3">
-                <label for="sect3-paragraph3">Card Testimony 3</label>
-                <textarea data-fieldtype="tiny" class="form-control" name="sect3_para3" aria-describedby="sect3Paragraph3Help" id="sect3-paragraph3">{{ $data->sect3_para3 }}</textarea>
-                <small id="sect3Paragraph3Help" class="form-text text-muted">Recommended length: 3-5 sentences</small>
-                <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
-            </div>
-        </form>
-        <script>    
-            tinymce.init({
-                height: "10rem",
-                selector: '#sect3-paragraph3',
-                placeholder: "e.g. Tell something about this section.",
-                plugins: 'link',
-                menubar: false,
-                toolbar: 'undo redo | bold italic underline | link'
-            });            
-        </script>
-
-        <!-- Image 3 of Section 3 -->
-        <form action="{{ route('about-us.testimonials.store_media_single') }}" method="POST" enctype="multipart/form-data">
-            @csrf
-            <div class="mb-3 py-3">
-                <label for="sect3-image3" class="form-label">Card Image 3</label>
-                <input required data-fieldtype="media" accept="image/*" class="form-control form-control-sm" name="sect3_image3" type="file" id="sect3-image3" aria-describedby="sect3Image3Help" value="{{ $data->sect3_image3 }}">
-                <small id="sect3Image3Help" class="form-text text-muted">Recommended image size: WxH</small>
-                <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
-            </div>                
-        </form>
-
-        <!-- Name 4 -->
-        <form data-route="{{ route('about-us.testimonials.update_page') }}" class="non-media">
-            @csrf
-            <div class="form-group py-3">
-                <label for="sect3-name4">Name 4</label>                    
-                <input required data-fieldtype="big" type="text" class="form-control" name="sect3_name4" id="sect3-name4" placeholder="e.g. Hinata Shoyo" value="{{ $data->sect3_name4 }}">
-                <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>                    
-            </div>
-        </form>
-
-        <!-- Paragraph 4 -->
-        <form data-route="{{ route('about-us.testimonials.update_page') }}" class="non-media">
-            @csrf
-            <div class="form-group py-3">
-                <label for="sect3-paragraph4">Card Testimony 4</label>
-                <textarea data-fieldtype="tiny" class="form-control" name="sect3_para4" aria-describedby="sect3Paragraph4Help" id="sect3-paragraph4">{{ $data->sect3_para4 }}</textarea>
-                <small id="sect3Paragraph4Help" class="form-text text-muted">Recommended length: 3-5 sentences</small>
-                <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
-            </div>
-        </form>
-        <script>    
-            tinymce.init({
-                height: "10rem",
-                selector: '#sect3-paragraph4',
-                placeholder: "e.g. Tell something about this section.",
-                plugins: 'link',
-                menubar: false,
-                toolbar: 'undo redo | bold italic underline | link'
-            });            
-        </script>
-
-        <!-- Image 4 of Section 3 -->
-        <form action="{{ route('about-us.testimonials.store_media_single') }}" method="POST" enctype="multipart/form-data">
-            @csrf
-            <div class="mb-3 py-3">
-                <label for="sect3-image4" class="form-label">Card Image 4</label>
-                <input required data-fieldtype="media" accept="image/*" class="form-control form-control-sm" name="sect3_image4" type="file" id="sect3-image4" aria-describedby="sect3Image4Help" value="{{ $data->sect3_image4 }}">
-                <small id="sect3Image4Help" class="form-text text-muted">Recommended image size: WxH</small>
-                <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
-            </div>                
         </form>
         <!-- End of Section 3 -->
 
-        <!-- Images of Section 3 -->
-        <form action="{{ route('about-us.testimonials.store_media_multiple') }}" method="POST" enctype="multipart/form-data">
-            @csrf
-            <div class="mb-3 py-3">
-                <label for="sect3-images" class="form-label">Images (Select at least 4 photos)</label>
-                <input required data-fieldtype="media" accept="image/*" class="form-control form-control-sm" name="sect3_images[]" type="file" id="sect3-images" aria-describedby="sect3ImagesHelp" multiple value="{{ $data->sect3_images }}">
-                <small id="sect3ImagesHelp" class="form-text text-muted">Recommended image size: WxH</small>
-                <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
-            </div>                
-        </form>
-        <!-- End of Section 3 -->
+        <br><br><br>
+
+        <!-- Section 4: Existing Testimonials Display -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h2>Existing Testimonials</h2>
+                @foreach ($testimonials as $testimonial)
+                <form action="{{ route('about-us.testimonials.update_individual_testimonial') }}" method="POST" enctype="multipart/form-data">
+                    @csrf
+                    <div class="form-group py-3" class="existing-faq">
+                        <input hidden name="sect4_id" value="{{ $testimonial->id }}"/>
+
+                        <label for="sect4-testimonial-{{ $testimonial->id }}">Testimonial</label>                    
+                        <input required name="sect4_testimonial" value="{{ $testimonial->testimonial }}" type="text" class="form-control" id="sect3-testimonial-{{ $testimonial->id }}" data-fieldtype="default" placeholder="e.g. Instant Reader is great!">
+                        
+                        <label for="sect4-name-{{ $testimonial->id }}">Name</label>                    
+                        <input required name="sect4_name" value="{{ $testimonial->name }}" type="text" class="form-control" id="sect3-name-{{ $testimonial->id }}" data-fieldtype="default" placeholder="e.g. Juan dela Cruz">
+                        
+                        <label for="sect4-rating-{{ $testimonial->id }}">Rating out of 5 stars</label>                    
+                        <input required name="sect4_rating" value="{{ $testimonial->rating }}" type="number" class="form-control" id="sect3-rating-{{ $testimonial->id }}" data-fieldtype="default" placeholder="e.g. 5">
+                        
+                        <label for="sect4-image-{{ $testimonial->id }}" class="form-label">Image</label>
+                        <input required name="sect4_image" data-fieldtype="media" value="{{ $testimonial->image }}" accept="image/*" class="form-control form-control-sm" id="sect3-image-{{ $testimonial->id }}" type="file" aria-describedby="sect4ImageHelp-{{ $testimonial->id }}">
+                        <small id="sect4ImageHelp-{{ $testimonial->id }}" class="form-text text-muted">Recommended image size: WxH</small>
+                        
+                        <button type="submit" class="btn btn-primary update-btn update-faq"><span style="font-size: 0.8rem">Update</span></button>
+                        <button type="button" class="btn btn-secondary update-btn delete-faq" data-route="{{ route('about-us.testimonials.delete_individual_testimonial') }}" data-individual_testimonial_id="{{ $testimonial->id }}"> <span style="font-size: 0.8rem">Delete</span></button>                       
+                    </div>
+                </form>
+                @endforeach
+            </div>
+        </div>
+        <!-- End of Existing Testimonials Display -->
     </section>
 </div>
 
@@ -574,10 +448,18 @@
     if ("{{ Session::has('upload_media_success') }}") {
         alert("{{ Session::get('upload_media_success') }}");
     }
-     // Checks if the upload of a file failed
-     if ("{{ Session::has('upload_media_fail') }}") {
+    // Checks if the upload of a file failed
+    if ("{{ Session::has('upload_media_fail') }}") {
         alert("{{ Session::get('upload_media_fail') }}");
-    }
+    }   
+    // Checks if the upload of a testimonial is successful
+    if ("{{ Session::has('upload_testimonial_success') }}") {
+        alert("{{ Session::get('upload_testimonial_success') }}");
+    } 
+    // Checks if the upload of a testimonial failed
+    if ("{{ Session::has('upload_testimonial_fail') }}") {
+        alert("{{ Session::get('upload_testimonial_fail') }}");
+    } 
 </script>
 
 @endsection

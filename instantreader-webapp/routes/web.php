@@ -270,6 +270,9 @@ Route::post('/api/about-us/founder/upload-media-single', [FounderController::cla
 Route::post('/api/about-us/testimonials/update-page', [TestimonialController::class, 'update_page'])->name('about-us.testimonials.update_page');
 Route::post('/api/about-us/testimonials/upload-media-single', [TestimonialController::class, 'store_media_single'])->name('about-us.testimonials.store_media_single');
 Route::post('/api/about-us/testimonials/upload-media-mutiple', [TestimonialController::class, 'store_media_multiple'])->name('about-us.testimonials.store_media_multiple');
+Route::post('/api/about-us/testimonials/store-individual-testimonial', [TestimonialController::class, 'store_individual_testimonial'])->name('about-us.testimonials.store_individual_testimonial');
+Route::post('/api/about-us/testimonials/update-individual-testimonial', [TestimonialController::class, 'update_individual_testimonial'])->name('about-us.testimonials.update_individual_testimonial');
+Route::post('/api/about-us/testimonials/delete-individual-testimonial', [TestimonialController::class, 'delete_individual_testimonial'])->name('about-us.testimonials.delete_individual_testimonial');
 
 Route::post('/api/contact-us/consultation/update-page', [ConsultationController::class, 'update_page'])->name('contact-us.consultation.update_page');
 Route::post('/api/contact-us/consultation/upload-media-single', [ConsultationController::class, 'store_media_single'])->name('contact-us.consultation.store_media_single');
