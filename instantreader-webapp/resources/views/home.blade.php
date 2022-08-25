@@ -135,14 +135,14 @@
     .page-title{
         margin: 90px 0px 0px 0px;
         background: url("{{ url($data->sect1_image) }}" );
-        background-size: contain;
+        background-size: cover;
         background-position: center center;
         background-repeat: no-repeat;
     }
 
     .auto-container{
         text-align: center;
-        padding: 230px 0px 130px;
+        padding: 130px 0px 130px;
         background-color: rgba(35, 122, 254, .9);
     }
 

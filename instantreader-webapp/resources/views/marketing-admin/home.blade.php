@@ -117,7 +117,7 @@
                 <div class="mb-3 py-3">
                     <label for="sect1-opening-image" class="form-label">Image</label>
                     <input required data-fieldtype="media" accept="image/*" class="form-control form-control-sm" name="sect1_image" type="file" id="sect1-opening-image" aria-describedby="sect1ImageHelp" value="{{ $data->sect1_image }}">
-                    <small id="sect1ImageHelp" class="form-text text-muted">Recommended image size: 2048x1365 px ( 3:2 aspect ratio )</small>
+                    <small id="sect1ImageHelp" class="form-text text-muted">Recommended image size: 1820x500 px ( 3:2 aspect ratio )</small>
                     
                     <label for="sect1-current-opening-image" class="form-label">
                         Current Image:
