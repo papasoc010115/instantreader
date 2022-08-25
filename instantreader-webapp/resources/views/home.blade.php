@@ -133,8 +133,9 @@
     }
 
     .page-title{
+        margin: 90px 0px 0px 0px;
         background: url("{{ url($data->sect1_image) }}" );
-        background-size: cover;
+        background-size: contain;
         background-position: center center;
         background-repeat: no-repeat;
     }
@@ -143,6 +144,10 @@
         text-align: center;
         padding: 230px 0px 130px;
         background-color: rgba(35, 122, 254, .9);
+    }
+
+    .kids-club-section {
+        min-height: 70vh;
     }
 
     :root {
@@ -169,12 +174,8 @@
     .marquee-content li {
         white-space: no-wrap;
         width: var(--marquee-element-width);
-        height: 70vh;
+        height: 100%;
         flex-shrink: 1;
-    }
-
-    .marquee-image {
-        object-fit: cover;
     }
 
     @keyframes scrolling{
@@ -188,7 +189,7 @@
         top: 0;
         left: 0;
         width: 100vw;
-        min-height: 70vh;
+        height: 100%;
         z-index: 2;
         background-color: rgba(35, 122, 254, .9);
     }
@@ -625,8 +626,8 @@
 <section id="kids-club-section" class="p-0 m-0">
     <div class="container m-0 p-0">
         <!-- Marquee -->
-        <div class="marquee d-flex align-items-center justify-content-center">
-            <ul id="ir-kids-club-list" class="marquee-content d-flex align-items-center justify-content-center">
+        <div class="marquee d-flex">
+            <ul id="ir-kids-club-list" class="marquee-content d-flex">
                 @foreach (Illuminate\Support\Facades\Storage::files($data->sect7_images) as $image)
                     <li class="d-flex align-items-center justify-content-center"><img class="marquee-image" src="{{ url(str_replace('public','storage',$image)) }}" /></li>
                 @endforeach

@@ -435,11 +435,21 @@
                         
                         <label for="sect4-rating-{{ $testimonial->id }}">Rating out of 5 stars</label>                    
                         <input required name="sect4_rating" value="{{ $testimonial->rating }}" type="number" class="form-control" id="sect3-rating-{{ $testimonial->id }}" data-fieldtype="default" placeholder="e.g. 5">
-                        
+
                         <label for="sect4-image-{{ $testimonial->id }}" class="form-label">Image</label>
                         <input required name="sect4_image" data-fieldtype="media" value="{{ $testimonial->image }}" accept="image/*" class="form-control form-control-sm" id="sect3-image-{{ $testimonial->id }}" type="file" aria-describedby="sect4ImageHelp-{{ $testimonial->id }}">
                         <small id="sect4ImageHelp-{{ $testimonial->id }}" class="form-text text-muted">Recommended image size: WxH</small>
                         
+                        <label for="sect4-image-{{ $testimonial->id }}" class="form-label">
+                            Current Image:
+                            @php
+                                $path = explode('/',$testimonial->image);
+                                $filename = end($path);
+                            @endphp
+                            {{ $filename }} 
+                        </label>
+                        <img id="sect4-current-image-{{ $testimonial->id }}" class="d-block admin-panel-image" src="{{ url($testimonial->image) }}">
+
                         <button type="submit" class="btn btn-primary update-btn"><span style="font-size: 0.8rem">Update</span></button>
                         <button type="button" class="btn btn-secondary update-btn delete-individual-testimonial" data-route="{{ route('about-us.testimonials.delete_individual_testimonial') }}" data-individual_testimonial_id="{{ $testimonial->id }}"> <span style="font-size: 0.8rem">Delete</span></button>                       
                     </div>

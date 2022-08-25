@@ -112,3 +112,9 @@ input[type="number"] {
 .removed {
     display: none;
 }
+
+.admin-panel-image{
+    margin: 10px;
+    max-width: 500px;
+    max-height: 300px;
+}
