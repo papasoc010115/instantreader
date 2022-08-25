@@ -127,7 +127,7 @@
             <div class="mb-3 py-3">
                 <label for="sect1-image" class="form-label">Image</label>
                 <input required data-fieldtype="media" accept="image/*" class="form-control form-control-sm" name="sect1_image" type="file" id="sect1-image" aria-describedby="sect1ImageHelp" value="{{ $data->sect1_image }}" >
-                <small id="sect1ImageHelp" class="form-text text-muted">Recommended image size: 1366x1365</small>
+                <small id="sect1ImageHelp" class="form-text text-muted">Recommended image size: 1365x1365 px ( 1:1 aspect ratio )</small>
                 
                 <label for="sect1-current-image" class="form-label">
                     Current Image:
@@ -248,7 +248,7 @@
             <div class="mb-3 py-3">
                 <label for="sect2-image1" class="form-label">Image 1</label>
                 <input required data-fieldtype="media" accept="image/*" class="form-control form-control-sm" name="sect2_image1" type="file" id="sect2-image1" aria-describedby="sect2Image1Help" value="{{ $data->sect2_image1 }}">
-                <small id="sect2Image1Help" class="form-text text-muted">Recommended image size: 2048x1365</small>
+                <small id="sect2Image1Help" class="form-text text-muted">Recommended image size: 2048x1365 px ( 3:2 aspect ratio )</small>
                 
                 <label for="sect2-current-image1" class="form-label">
                     Current Image:
@@ -277,7 +277,7 @@
             <div class="mb-3 py-3">
                 <label for="sect2-image2" class="form-label">Image 2</label>
                 <input required data-fieldtype="media" accept="image/*" class="form-control form-control-sm" name="sect2_image2" type="file" id="sect2-image2" aria-describedby="sect2Image2Help" value="{{ $data->sect2_image2 }}">
-                <small id="sect2Image2Help" class="form-text text-muted">Recommended image size: 2048x1365</small>
+                <small id="sect2Image2Help" class="form-text text-muted">Recommended image size: 2048x1365 px ( 3:2 aspect ratio )</small>
                 
                 <label for="sect2-current-image2" class="form-label">
                     Current Image:
@@ -358,7 +358,7 @@
             <div class="mb-3 py-3">
                 <label for="sect3-image" class="form-label">Image</label>
                 <input required data-fieldtype="media" accept="image/*" class="form-control form-control-sm" name="sect3_image" type="file" id="sect3-image" aria-describedby="sect3ImageHelp" value="{{ $data->sect3_image }}">
-                <small id="sect3ImageHelp" class="form-text text-muted">Recommended image size: 2048x1365</small>
+                <small id="sect3ImageHelp" class="form-text text-muted">Recommended image size: 2048x1365 px ( 3:2 aspect ratio )</small>
                 
                 <label for="sect3-current-image" class="form-label">
                     Current Image:
@@ -428,7 +428,7 @@
             <div class="mb-3 py-3">
                 <label for="sect4-image" class="form-label">Image</label>
                 <input required data-fieldtype="media" accept="image/*" class="form-control form-control-sm" name="sect4_image" type="file" id="sect4-image" aria-describedby="sect4ImageHelp" value="{{ $data->sect4_image }}">
-                <small id="sect4ImageHelp" class="form-text text-muted">Recommended image size: 2048x1365</small>
+                <small id="sect4ImageHelp" class="form-text text-muted">Recommended image size: 2048x1365 px ( 3:2 aspect ratio )</small>
                 
                 <label for="sect4-current-image" class="form-label">
                     Current Image:
@@ -519,7 +519,7 @@
             <div class="mb-3 py-3">
                 <label for="sect5-image1" class="form-label">Image 1</label>
                 <input required data-fieldtype="media" accept="image/*" class="form-control form-control-sm" type="file" name="sect5_image1" id="sect5-image1" aria-describedby="sect5Image1Help" value="{{ $data->sect5_image1 }}">
-                <small id="sect5Image1Help" class="form-text text-muted">Recommended image size: 2048x1365</small>
+                <small id="sect5Image1Help" class="form-text text-muted">Recommended image size: 2048x1365 px ( 3:2 aspect ratio )</small>
                 
                 <label for="sect5-current-image1" class="form-label">
                     Current Image:
@@ -548,7 +548,7 @@
             <div class="mb-3 py-3">
                 <label for="sect5-image2" class="form-label">Image 2</label>
                 <input required data-fieldtype="media" accept="image/*" class="form-control form-control-sm" type="file" name="sect5_image2" id="sect5-image2" aria-describedby="sect5Image2Help" value="{{ $data->sect5_image2 }}">
-                <small id="sect5Image2Help" class="form-text text-muted">Recommended image size: 2048x1365</small>
+                <small id="sect5Image2Help" class="form-text text-muted">Recommended image size: 2048x1365 px ( 3:2 aspect ratio )</small>
                 
                 <label for="sect5-current-image2" class="form-label">
                     Current Image:
@@ -577,7 +577,7 @@
             <div class="mb-3 py-3">
                 <label for="sect5-image3" class="form-label">Image 3</label>
                 <input required data-fieldtype="media" accept="image/*" class="form-control form-control-sm" type="file" name="sect5_image3" id="sect5-image3" aria-describedby="sect5Image3Help" value="{{ $data->sect5_image3 }}">
-                <small id="sect5Image3Help" class="form-text text-muted">Recommended image size: 2048x1365</small>
+                <small id="sect5Image3Help" class="form-text text-muted">Recommended image size: 2048x1365 px ( 3:2 aspect ratio )</small>
                 
                 <label for="sect5-current-image3" class="form-label">
                     Current Image:
@@ -606,7 +606,7 @@
             <div class="mb-3 py-3">
                 <label for="sect5-image4" class="form-label">Image 4</label>
                 <input required data-fieldtype="media" accept="image/*" class="form-control form-control-sm" type="file" name="sect5_image4" id="sect5-image4" aria-describedby="sect5Image4Help" value="{{ $data->sect5_image4 }}">
-                <small id="sect5Image4Help" class="form-text text-muted">Recommended image size: 2048x1365</small>
+                <small id="sect5Image4Help" class="form-text text-muted">Recommended image size: 2048x1365 px ( 3:2 aspect ratio )</small>
                 
                 <label for="sect5-current-image4" class="form-label">
                     Current Image:
@@ -635,7 +635,7 @@
             <div class="mb-3 py-3">
                 <label for="sect5-image5" class="form-label">Image 5</label>
                 <input required data-fieldtype="media" accept="image/*" class="form-control form-control-sm" type="file" name="sect5_image5" id="sect5-image5" aria-describedby="sect5Image5Help" value="{{ $data->sect5_image5 }}">
-                <small id="sect5Image5Help" class="form-text text-muted">Recommended image size: 2048x1365</small>
+                <small id="sect5Image5Help" class="form-text text-muted">Recommended image size: 2048x1365 px ( 3:2 aspect ratio )</small>
                 
                 <label for="sect5-current-image5" class="form-label">
                     Current Image:
