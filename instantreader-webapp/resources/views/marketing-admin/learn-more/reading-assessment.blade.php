@@ -147,7 +147,25 @@
                 <div class="mb-3 py-3">
                     <label for="sect1-image" class="form-label">Image</label>
                     <input required data-fieldtype="media" accept="image/*" class="form-control form-control-sm" type="file" name="sect1_image" id="sect1-image" aria-describedby="sect1ImageHelp" value="{{ $data->sect1_image }}">
-                    <small id="sect1ImageHelp" class="form-text text-muted">Recommended image size: WxH</small>
+                    <small id="sect1ImageHelp" class="form-text text-muted">Recommended image size: 2048x1365</small>
+                    
+                    <label for="sect1-current-image" class="form-label">
+                        Current Image:
+                        @php
+                            if ($data->sect1_image) {
+                                $path = explode('/',$data->sect1_image);
+                                $filename = end($path);
+                            } else {
+                                $filename = "No image set";
+                            }
+                        @endphp
+                        {{ $filename }} 
+                    </label>
+                    @if ($data->sect1_image)
+                        <img id="sect1-current-image" class="d-block admin-panel-image" src="{{ url($data->sect1_image) }}">
+                    @endif 
+                    <br>
+                    
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
                 </div>                
             </form>
