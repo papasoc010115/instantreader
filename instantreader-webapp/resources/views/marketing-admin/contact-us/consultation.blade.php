@@ -138,7 +138,25 @@
                 <div class="mb-3 py-3">
                     <label for="sect1-image1" class="form-label">Image 1</label>
                     <input required data-fieldtype="media" accept="image/*" class="form-control form-control-sm" name="sect1_image1" type="file" id="sect1-image1" aria-describedby="sect1Image1Help" value="{{ $data->sect1_image1 }}">
-                    <small id="sect1Image1Help" class="form-text text-muted">Recommended image size: WxH</small>
+                    <small id="sect1Image1Help" class="form-text text-muted">Recommended image size: 2048x1365</small>
+                    
+                    <label for="sect1-current-image1" class="form-label">
+                        Current Image:
+                        @php
+                            if ($data->sect1_image1) {
+                                $path = explode('/',$data->sect1_image1);
+                                $filename = end($path);
+                            } else {
+                                $filename = "No image set";
+                            }
+                        @endphp
+                        {{ $filename }} 
+                    </label>
+                    @if ($data->sect1_image1)
+                        <img id="sect1-current-image1" class="d-block admin-panel-image" src="{{ url($data->sect1_image1) }}">
+                    @endif 
+                    <br>
+                    
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
                 </div>                
             </form>
@@ -149,7 +167,25 @@
                 <div class="mb-3 py-3">
                     <label for="sect1-image2" class="form-label">Image 2</label>
                     <input required data-fieldtype="media" accept="image/*" class="form-control form-control-sm" name="sect1_image2" type="file" id="sect1-image2" aria-describedby="sect1Image2Help" value="{{ $data->sect1_image2 }}">
-                    <small id="sect1Image2Help" class="form-text text-muted">Recommended image size: WxH</small>
+                    <small id="sect1Image2Help" class="form-text text-muted">Recommended image size: 2048x1365</small>
+                    
+                    <label for="sect1-current-image2" class="form-label">
+                        Current Image:
+                        @php
+                            if ($data->sect1_image2) {
+                                $path = explode('/',$data->sect1_image2);
+                                $filename = end($path);
+                            } else {
+                                $filename = "No image set";
+                            }
+                        @endphp
+                        {{ $filename }} 
+                    </label>
+                    @if ($data->sect1_image2)
+                        <img id="sect1-current-image2" class="d-block admin-panel-image" src="{{ url($data->sect1_image2) }}">
+                    @endif 
+                    <br>
+
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
                 </div>                
             </form>
