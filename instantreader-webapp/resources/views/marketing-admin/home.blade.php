@@ -432,7 +432,7 @@
                 <div class="mb-3 py-3">
                     <label for="sect4-image1" class="form-label">Image for Teacher Vicki</label>
                     <input required data-fieldtype="media" accept="image/*" class="form-control form-control-sm" name="sect4_image1" type="file" id="sect4-image1" aria-describedby="sect4Image1Help" value="{{ $data->sect4_image1 }}">
-                    <small id="sect4Image1Help" class="form-text text-muted">Recommended image size: 660x660</small>
+                    <small id="sect4Image1Help" class="form-text text-muted">Recommended image size: 500x500 px ( 1:1 aspect ratio )</small>
                     
                     <label for="sect4-current-image1" class="form-label">
                         Current Image:
@@ -461,7 +461,7 @@
                 <div class="mb-3 py-3">
                     <label for="sect4-image2" class="form-label">Image for Likha</label>
                     <input required data-fieldtype="media" accept="image/*" class="form-control form-control-sm" name="sect4_image2" type="file" id="sect4-image2" aria-describedby="sect4Image2Help" value="{{ $data->sect4_image2 }}">
-                    <small id="sect4Image2Help" class="form-text text-muted">Recommended image size: 660x660</small>
+                    <small id="sect4Image2Help" class="form-text text-muted">Recommended image size: 500x500 px ( 1:1 aspect ratio )</small>
                     
                     <label for="sect4-current-image2" class="form-label">
                         Current Image:
