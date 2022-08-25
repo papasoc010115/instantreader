@@ -58,6 +58,7 @@ class ConsultationController extends Controller
         $name = $req->name;
         $value = $req->value;
         Consultation::first()->update([$name => $value]);
+        app('App\Http\Controllers\LogController')->store("Updated Consultation page's ".$name);
     }
 
     // Upload Single Media File
@@ -82,6 +83,7 @@ class ConsultationController extends Controller
 
         // update the database
         Consultation::first()->update([$name => $value]);
+        app('App\Http\Controllers\LogController')->store("Updated Consultation page's ".$name);
         return redirect()->route("marketing-admin.contact-us.consultation")->with('upload_media_success', 'Successfully Updated!');
     }
     

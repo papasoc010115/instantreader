@@ -18,13 +18,34 @@ body {
     margin-right: 30px;
 }
 
-.dropdown {
-    margin-left: 1rem;
-    margin-right: 1rem;
+.account-btn::after {
+    display: none;
+}
+
+.account-btn {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    color: #ffffff;
+}
+
+.account-text {
+    color: #ffffff !important;
+}
+
+.account-dropdown-form a {
+    margin: 0;
+    padding: 0;
+    border: 0;
 }
 
 .active {
     font-weight: 500;
+}
+
+.horizontal-flexbox-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .main-heading {
@@ -111,4 +132,18 @@ input[type="number"] {
 
 .removed {
     display: none;
+}
+
+.page-link {
+    color: #575e64;
+}
+
+.active > .page-link,
+.page-link.active {
+    background-color: #575e64 !important;
+    border-color: #575e64 !important;
+}
+
+.page-link:hover {
+    color: #282525;
 }

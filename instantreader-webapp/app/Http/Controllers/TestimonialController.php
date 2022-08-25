@@ -21,6 +21,7 @@ class TestimonialController extends Controller
         $name = $req->name;
         $value = $req->value;
         Testimonial::first()->update([$name => $value]);
+        app('App\Http\Controllers\LogController')->store("Updated Testimonial page's ".$name);
     }
 
     // Upload Single Media File
@@ -87,6 +88,7 @@ class TestimonialController extends Controller
 
         // update the database
         Testimonial::first()->update([$name => $value]);
+        app('App\Http\Controllers\LogController')->store("Updated Testimonial page's ".$name);
         return redirect()->route("marketing-admin.about-us.testimonials")->with('upload_media_success', 'Successfully Updated!');
     }
 
@@ -122,12 +124,14 @@ class TestimonialController extends Controller
 
         // update the database
         IndividualTestimonial::where('id', $id)->update(['image' => $value]);
+        app('App\Http\Controllers\LogController')->store("Updated Testimonial page's ".$name);
         return redirect()->route("marketing-admin.about-us.testimonials")->with('upload_testimonial_success', 'Successfully Updated!');
     }
 
     //Delete existing testimonial
     public function delete_individual_testimonial(Request $req) {
         IndividualTestimonial::where('id', $req->id)->delete();
+        app('App\Http\Controllers\LogController')->store("Deleted a testimonial");
     }
 
     //Update existing testimonial
@@ -156,6 +160,8 @@ class TestimonialController extends Controller
             'rating' => $req->sect4_rating,
             'image' => $value
         ]);
+
+        app('App\Http\Controllers\LogController')->store("Updated a testimonial");
         return redirect()->route("marketing-admin.about-us.testimonials")->with('upload_testimonial_success', 'Successfully Updated!');
     }
 

@@ -19,6 +19,7 @@ class AdditionalResourceController extends Controller
         $name = $req->name;
         $value = $req->value;
         AdditionalResource::first()->update([$name => $value]);
+        app('App\Http\Controllers\LogController')->store("Updated Additional Resources page's ".$name);
     }
 
     // Upload Single Media File
@@ -43,6 +44,7 @@ class AdditionalResourceController extends Controller
 
         // update the database
         AdditionalResource::first()->update([$name => $value]);
+        app('App\Http\Controllers\LogController')->store("Updated Additional Resources page's ".$name);
         return redirect()->route("marketing-admin.additional-resources")->with('upload_media_success', 'Successfully Updated!');
     }
 
@@ -89,6 +91,7 @@ class AdditionalResourceController extends Controller
 
         // update the database
         AdditionalResource::first()->update([$name => $value]);
+        app('App\Http\Controllers\LogController')->store("Updated Additional Resources page's ".$name);
         return redirect()->route("marketing-admin.additional-resources")->with('upload_media_success', 'Successfully Updated!');
     }
 

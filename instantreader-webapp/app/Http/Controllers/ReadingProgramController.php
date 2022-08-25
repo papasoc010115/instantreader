@@ -18,6 +18,7 @@ class ReadingProgramController extends Controller
         $name = $req->name;
         $value = $req->value;
         ReadingProgram::first()->update([$name => $value]);
+        app('App\Http\Controllers\LogController')->store("Updated Reading Program page's ".$name);
     }
 
     // Upload Single Media File
@@ -42,6 +43,7 @@ class ReadingProgramController extends Controller
 
         // update the database
         ReadingProgram::first()->update([$name => $value]);
+        app('App\Http\Controllers\LogController')->store("Updated Reading Program page's ".$name);
         return redirect()->route("marketing-admin.learn-more.reading-programs")->with('upload_media_success', 'Successfully Updated!');
     }
 

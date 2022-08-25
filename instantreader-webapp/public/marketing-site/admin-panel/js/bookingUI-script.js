@@ -1,8 +1,7 @@
 /*
 This is the script for the event-booking UI.
 
-Written by: edcabalda
-This was modified and new codes were added by: rmhizon & sclee
+Written by: edcabalda, rmhizon, & sclee
 */
 
 // For disabling past dates

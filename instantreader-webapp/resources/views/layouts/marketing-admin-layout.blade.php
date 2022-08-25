@@ -62,7 +62,7 @@
             <!-- Links -->
             <div class="collapse navbar-collapse" id="toggleMobileMenu">
                 <ul class="navbar-nav ms-auto text-center">
-                    <li>
+                    <li class="px-5">
                         <a
                             href="{{ route('marketing-admin.home') }}"
                             class="nav-link px-5"
@@ -70,7 +70,7 @@
                             >Home</a
                         >
                     </li>
-                    <li class="nav-item dropdown">
+                    <li class="nav-item dropdown px-5">
                         <a class="nav-link dropdown-toggle" href="#" id="learn-more-link" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Learn More
                         </a>
@@ -81,7 +81,7 @@
                             <li><a class="dropdown-item" href="{{ route('marketing-admin.learn-more.faq') }}">FAQs</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item dropdown">
+                    <li class="nav-item dropdown px-5">
                         <a class="nav-link dropdown-toggle" href="#" id="contact-us-link" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Contact Us
                         </a>
@@ -90,7 +90,7 @@
                             <li><a class="dropdown-item" href="{{ route('marketing-admin.contact-us.career') }}">Start a Career with Us</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item dropdown">
+                    <li class="nav-item dropdown px-5">
                         <a class="nav-link dropdown-toggle" href="#" id="about-us-link" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             About Us
                         </a>
@@ -99,13 +99,48 @@
                             <li><a class="dropdown-item" href="{{ route('marketing-admin.about-us.testimonials') }}">Testimonials</a></li>
                         </ul>
                     </li>
-                    <li>
+                    <li class="px-5">
                         <a
                             href="/admin/additional-resources"
-                            class="nav-link px-5"
+                            class="nav-link"
                             id="additional-resources-link"
                             >Additional Resources</a
                         >
+                    </li>
+                    <li class="nav-item dropdown px-5">
+                        <div class="horizontal-flexbox-container" id="account-link" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <button class="nav-link dropdown-toggle btn btn-secondary account-btn" href="#">
+                                <span class="account-text">Account</span>
+                            </button>
+                        </div>
+                        <ul class="dropdown-menu" aria-labelledby="account-link">
+                            <li><span class="dropdown-item">{{Auth::user()->name}}</span></li>
+
+                            @if (Auth::user()->getAdminType() === 'superuser')
+                            <li>
+                                <div class="dropdown-item account-dropdown-form">
+                                    <a class="btn btn-link" href="{{ route('marketing-admin.user.add') }}">Add User</a>
+                                </div>
+                            </li>
+                            @endif
+
+                            <li>
+                                <div class="dropdown-item account-dropdown-form">
+                                    <a class="btn btn-link" href="{{ route('marketing-admin.logs') }}">View Logs</a>
+                                </div>
+                            </li>
+
+                            <li>
+                                <form method="POST" class="dropdown-item account-dropdown-form" action="{{ route('logout') }}">
+                                    @csrf
+                                    <a class="btn btn-link"
+                                            onclick="event.preventDefault();
+                                                        this.closest('form').submit();">
+                                        Log Out
+                                    </a>
+                                </form>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
             </div>

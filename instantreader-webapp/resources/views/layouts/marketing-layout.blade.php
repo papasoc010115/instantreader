@@ -50,15 +50,6 @@
             <button type="button" class="btn-close text-reset btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
 
-        <div class="sidebar-profile text-white">
-            <img src="{{ asset('marketing-site/assets/agency/img/default-profile-pic.png') }}" class="profile-pic" />
-            <h6 class="user-title">Guest</h6>
-            <span><a class="alt-font link sidebar-button" href="{{ route('account.log-in') }}">Log In</a></span>
-            <span><a class="alt-font link sidebar-button" href="{{ route('account.sign-up') }}">Sign Up</a></span>
-        </div>
-
-        <hr class="sidebar-divider">
-
         <div class="offcanvas-body">
             <div class="full-menu-multiple-title" >
                 <span class="sidebar-anchor-circle"></span>

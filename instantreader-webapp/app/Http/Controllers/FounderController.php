@@ -18,6 +18,7 @@ class FounderController extends Controller
         $name = $req->name;
         $value = $req->value;
         Founder::first()->update([$name => $value]);
+        app('App\Http\Controllers\LogController')->store("Updated Founder & Developer page's ".$name);
     }
 
     // Upload Single Media File
@@ -42,6 +43,7 @@ class FounderController extends Controller
 
         // update the database
         Founder::first()->update([$name => $value]);
+        app('App\Http\Controllers\LogController')->store("Updated Founder & Developer page's ".$name);
         return redirect()->route("marketing-admin.about-us.founder")->with('upload_media_success', 'Successfully Updated!');
     }
 

@@ -20,6 +20,7 @@ class HomeController extends Controller
         $name = $req->name;
         $value = $req->value;
         Home::first()->update([$name => $value]);
+        app('App\Http\Controllers\LogController')->store("Updated Home page's ".$name);
     }
 
     // Upload Single Media File
@@ -44,6 +45,7 @@ class HomeController extends Controller
 
         // update the database
         Home::first()->update([$name => $value]);
+        app('App\Http\Controllers\LogController')->store("Updated Home page's ".$name);
         return redirect()->route("marketing-admin.home")->with('upload_media_success', 'Successfully Updated!');
     }
 
@@ -91,6 +93,7 @@ class HomeController extends Controller
 
         // update the database
         Home::first()->update([$name => $value]);
+        app('App\Http\Controllers\LogController')->store("Updated Home page's ".$name);
         return redirect()->route("marketing-admin.home")->with('upload_media_success', 'Successfully Updated!');
     }
 

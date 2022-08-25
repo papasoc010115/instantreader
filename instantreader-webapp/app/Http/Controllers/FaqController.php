@@ -35,11 +35,13 @@ class FaqController extends Controller
     //Delete existing question and answer
     public function delete_question_and_answer(Request $req) {
         QuestionAndAnswer::where('id', $req->id)->delete();
+        app('App\Http\Controllers\LogController')->store("Deleted an FAQ");
     }
 
     //Update existing question and answer
     public function update_question_and_answer(Request $req) {
         QuestionAndAnswer::where('id', $req->id)->update(['question' => $req->question, 'answer' => $req->answer]);
+        app('App\Http\Controllers\LogController')->store("Updated an FAQ");
     }
 
     //FAQ View

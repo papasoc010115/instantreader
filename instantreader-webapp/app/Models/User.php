@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-use Illuminate\Contracts\Auth\MustVerifyEmail;
+// use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -21,7 +21,22 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'admin_type'
     ];
+
+    /**
+     * Getter for admin_type
+     */
+    public function getAdminType () {
+        return $this->attributes['admin_type'];
+    }
+
+    /**
+     * Getter for email
+     */
+    public function getEmail() {
+        return $this->attributes['email'];
+    }
 
     /**
      * The attributes that should be hidden for serialization.

@@ -18,6 +18,7 @@ class KidsClubController extends Controller
         $name = $req->name;
         $value = $req->value;
         KidsClub::first()->update([$name => $value]);
+        app('App\Http\Controllers\LogController')->store("Updated IR Kids Club page's ".$name);
     }
 
     // Upload Single Media File
@@ -42,6 +43,7 @@ class KidsClubController extends Controller
 
         // update the database
         KidsClub::first()->update([$name => $value]);
+        app('App\Http\Controllers\LogController')->store("Updated IR Kids Club page's ".$name);
         return redirect()->route('marketing-admin.learn-more.kids-club')->with('upload_media_success', 'Successfully Updated!');
     }
 

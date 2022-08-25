@@ -59,6 +59,7 @@ class ReadingAssessmentController extends Controller
         $name = $req->name;
         $value = $req->value;
         ReadingAssessment::first()->update([$name => $value]);
+        app('App\Http\Controllers\LogController')->store("Updated Reading Assessment page's ".$name);
     }
 
     // Upload Single Media File
@@ -83,6 +84,7 @@ class ReadingAssessmentController extends Controller
 
         // update the database
         ReadingAssessment::first()->update([$name => $value]);
+        app('App\Http\Controllers\LogController')->store("Updated Reading Assessment page's ".$name);
         return redirect()->route("marketing-admin.learn-more.reading-assessment")->with('upload_media_success', 'Successfully Updated!');
     }
     

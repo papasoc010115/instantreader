@@ -68,7 +68,7 @@ const ajaxPOST = (api_route, update_data, asyncBool, success_msg) => {
         },
         error: function (error) {
             alert("Something went wrong. Contact your IT admin.");
-            // console.log(error);
+            console.log(error);
         },
     });
 };
@@ -166,7 +166,9 @@ for (let i = 0; i < updateFAQ.length; i++) {
 /* FOR INDIVIDUAL TESTIMONIAL */
 
 // Testimonial Delete
-const deleteIndividualTestimonialBtn = $(".delete-individual-testimonial").get();
+const deleteIndividualTestimonialBtn = $(
+    ".delete-individual-testimonial"
+).get();
 for (let i = 0; i < deleteIndividualTestimonialBtn.length; i++) {
     const btn = deleteIndividualTestimonialBtn[i];
     btn.addEventListener("click", (e) => {
