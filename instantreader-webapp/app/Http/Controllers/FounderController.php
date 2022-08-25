@@ -42,7 +42,6 @@ class FounderController extends Controller
 
         // update the database
         Founder::first()->update([$name => $value]);
-        return redirect()->route("marketing-admin.about-us.founder")->with('upload_media_success', 'Successfully Updated!');
     }
 
     //Founder and Developer View

@@ -142,7 +142,7 @@
             </script>
 
             <!-- Image-->
-            <form action="{{ route('learn-more.assessment.store_media_single') }}" method="POST" enctype="multipart/form-data">
+            <form data-route="{{ route('learn-more.assessment.store_media_single') }}" enctype="multipart/form-data" class="media">
                 @csrf
                 <div class="mb-3 py-3">
                     <label for="sect1-image" class="form-label">Image</label>
@@ -448,18 +448,7 @@
         </div>
     </section>
 </div>
-<script>
-    // ------------- ALERTS FOR UPLOADING MEDIA start
-    // Checks if the upload of a file is successful
-    if ("{{ Session::has('upload_media_success') }}") {
-        alert("{{ Session::get('upload_media_success') }}");
-    }
-    // Checks if the upload of a file failed
-    if ("{{ Session::has('upload_media_fail') }}") {
-    alert("{{ Session::get('upload_media_fail') }}");
-    }
-    // ------------- ALERTS FOR UPLOADING MEDIA end
-</script>
+
 @endsection
 
 @section('otherScript')

@@ -154,7 +154,7 @@
             </script>
 
             <!-- Image 1 -->
-            <form action="{{ route('additional-resources.store_media_single') }}" method="POST" enctype="multipart/form-data">
+            <form data-route="{{ route('additional-resources.store_media_single') }}" enctype="multipart/form-data" class="media">
                 @csrf
                 <div class="mb-3 py-3">
                     <label for="sect1-image1" class="form-label">Image 1</label>
@@ -183,7 +183,7 @@
             </form>
 
             <!-- Image 2 -->
-            <form action="{{ route('additional-resources.store_media_single') }}" method="POST" enctype="multipart/form-data">
+            <form data-route="{{ route('additional-resources.store_media_single') }}" enctype="multipart/form-data" class="media">    
                 @csrf
                 <div class="mb-3 py-3">
                     <label for="sect1-image2" class="form-label">Image 2</label>
@@ -212,7 +212,7 @@
             </form>
 
             <!-- Image 3 -->
-            <form action="{{ route('additional-resources.store_media_single') }}" method="POST" enctype="multipart/form-data">
+            <form data-route="{{ route('additional-resources.store_media_single') }}" enctype="multipart/form-data" class="media">
                 @csrf
                 <div class="mb-3 py-3">
                     <label for="sect1-image3" class="form-label">Image 3</label>
@@ -312,7 +312,7 @@
             </script>
 
             <!-- Videos of Section 3 -->
-            <form action="{{ route('additional-resources.store_media_multiple') }}" method="POST" enctype="multipart/form-data">
+            <form data-route="{{ route('additional-resources.store_media_multiple') }}" enctype="multipart/form-data" class="media">
                 @csrf
                 <div class="mb-3 py-3">
                     <label for="sect3-videoss" class="form-label">Videos (Select at least 1 video)</label>
@@ -364,7 +364,7 @@
         </script>
 
         <!-- Images of Section 4 -->
-        <form action="{{ route('additional-resources.store_media_multiple') }}" method="POST" enctype="multipart/form-data">
+        <form data-route="{{ route('additional-resources.store_media_multiple') }}" enctype="multipart/form-data" class="media">
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect4-images" class="form-label">Images (Select at least 1 photo)</label>
@@ -389,16 +389,5 @@
         </div>
     </section>
 </div>
-
-<script>
-    // Checks if the upload of a file is successful
-    if ("{{ Session::has('upload_media_success') }}") {
-        alert("{{ Session::get('upload_media_success') }}");
-    }
-     // Checks if the upload of a file failed
-     if ("{{ Session::has('upload_media_fail') }}") {
-        alert("{{ Session::get('upload_media_fail') }}");
-    }
-</script>
 
 @endsection

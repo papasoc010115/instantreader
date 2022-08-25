@@ -83,7 +83,6 @@ class ReadingAssessmentController extends Controller
 
         // update the database
         ReadingAssessment::first()->update([$name => $value]);
-        return redirect()->route("marketing-admin.learn-more.reading-assessment")->with('upload_media_success', 'Successfully Updated!');
     }
     
     // Reading Assessment View

@@ -82,7 +82,6 @@ class ConsultationController extends Controller
 
         // update the database
         Consultation::first()->update([$name => $value]);
-        return redirect()->route("marketing-admin.contact-us.consultation")->with('upload_media_success', 'Successfully Updated!');
     }
     
     // Book Free Online Consultation View

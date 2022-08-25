@@ -175,7 +175,7 @@
         </script>
 
          <!-- Image 1 -->
-         <form action="{{ route('about-us.testimonials.store_media_single') }}" method="POST" enctype="multipart/form-data">
+         <form data-route="{{ route('about-us.testimonials.store_media_single') }}" enctype="multipart/form-data" class="media">
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect1-image1" class="form-label">Image 1</label>
@@ -204,7 +204,7 @@
         </form>
 
         <!-- Image 2 -->
-        <form action="{{ route('about-us.testimonials.store_media_single') }}" method="POST" enctype="multipart/form-data">
+        <form data-route="{{ route('about-us.testimonials.store_media_single') }}" enctype="multipart/form-data" class="media">
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect1-image2" class="form-label">Image 2</label>
@@ -233,7 +233,7 @@
         </form>
 
         <!-- Image 3 -->
-        <form action="{{ route('about-us.testimonials.store_media_single') }}" method="POST" enctype="multipart/form-data">
+        <form data-route="{{ route('about-us.testimonials.store_media_single') }}" enctype="multipart/form-data" class="media">
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect1-image3" class="form-label">Image 3</label>
@@ -262,7 +262,7 @@
         </form>
 
         <!-- Image 4 -->
-        <form action="{{ route('about-us.testimonials.store_media_single') }}" method="POST" enctype="multipart/form-data">
+        <form data-route="{{ route('about-us.testimonials.store_media_single') }}" enctype="multipart/form-data" class="media">
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect1-image4" class="form-label">Image 4</label>
@@ -395,7 +395,7 @@
         </script>
 
         <!-- Image 1 -->
-        <form action="{{ route('about-us.testimonials.store_media_single') }}" method="POST" enctype="multipart/form-data">
+        <form data-route="{{ route('about-us.testimonials.store_media_single') }}" enctype="multipart/form-data" class="media">
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect2-image1" class="form-label">Image 1</label>
@@ -424,7 +424,7 @@
         </form>
 
         <!-- Image 2 -->
-        <form action="{{ route('about-us.testimonials.store_media_single') }}" method="POST" enctype="multipart/form-data">
+        <form data-route="{{ route('about-us.testimonials.store_media_single') }}" enctype="multipart/form-data" class="media">
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect2-image2" class="form-label">Image 2</label>
@@ -453,7 +453,7 @@
         </form>
 
         <!-- Image 3 -->
-        <form action="{{ route('about-us.testimonials.store_media_single') }}" method="POST" enctype="multipart/form-data">
+        <form data-route="{{ route('about-us.testimonials.store_media_single') }}" enctype="multipart/form-data" class="media">
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect2-image3" class="form-label">Image 3</label>
@@ -482,7 +482,7 @@
         </form>
 
         <!-- Image 4 -->
-        <form action="{{ route('about-us.testimonials.store_media_single') }}" method="POST" enctype="multipart/form-data">
+        <form data-route="{{ route('about-us.testimonials.store_media_single') }}" enctype="multipart/form-data" class="media">
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect2-image4" class="form-label">Image 4</label>
@@ -538,7 +538,7 @@
             </div>
         </div>
 
-        <form action="{{ route('about-us.testimonials.store_individual_testimonial') }}" method="POST" enctype="multipart/form-data">
+        <form data-route="{{ route('about-us.testimonials.store_individual_testimonial') }}" enctype="multipart/form-data" class="testimonial">
             @csrf
             <div class="form-group py-3">
                 <label for="sect3-testimonial">Testimonial</label>                    
@@ -566,7 +566,7 @@
             <div class="col-lg-12">
                 <h2>Existing Testimonials</h2>
                 @foreach ($testimonials as $testimonial)
-                <form action="{{ route('about-us.testimonials.update_individual_testimonial') }}" method="POST" enctype="multipart/form-data">
+                <form data-route="{{ route('about-us.testimonials.update_individual_testimonial') }}" enctype="multipart/form-data" class="testimonial">
                     @csrf
                     <div class="form-group py-3" class="existing-faq">
                         <input hidden name="sect4_id" value="{{ $testimonial->id }}"/>
@@ -604,24 +604,5 @@
         <!-- End of Existing Testimonials Display -->
     </section>
 </div>
-
-<script>
-    // Checks if the upload of a file is successful
-    if ("{{ Session::has('upload_media_success') }}") {
-        alert("{{ Session::get('upload_media_success') }}");
-    }
-    // Checks if the upload of a file failed
-    if ("{{ Session::has('upload_media_fail') }}") {
-        alert("{{ Session::get('upload_media_fail') }}");
-    }   
-    // Checks if the upload of a testimonial is successful
-    if ("{{ Session::has('upload_testimonial_success') }}") {
-        alert("{{ Session::get('upload_testimonial_success') }}");
-    } 
-    // Checks if the upload of a testimonial failed
-    if ("{{ Session::has('upload_testimonial_fail') }}") {
-        alert("{{ Session::get('upload_testimonial_fail') }}");
-    } 
-</script>
 
 @endsection

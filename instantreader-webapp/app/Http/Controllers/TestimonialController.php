@@ -45,7 +45,6 @@ class TestimonialController extends Controller
 
         // update the database
         Testimonial::first()->update([$name => $value]);
-        return redirect()->route("marketing-admin.about-us.testimonials")->with('upload_media_success', 'Successfully Updated!');
     }
 
     // Upload Multiple Media File
@@ -87,7 +86,6 @@ class TestimonialController extends Controller
 
         // update the database
         Testimonial::first()->update([$name => $value]);
-        return redirect()->route("marketing-admin.about-us.testimonials")->with('upload_media_success', 'Successfully Updated!');
     }
 
     //Add new testimonial

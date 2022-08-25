@@ -73,6 +73,24 @@ const ajaxPOST = (api_route, update_data, asyncBool, success_msg) => {
     });
 };
 
+const ajaxPOSTmedia = (api_route, update_data, asyncBool, success_msg) => {
+    $.ajax({
+        url: api_route,
+        type: "POST",
+        contentType: false,
+        processData: false,
+        cache: false,
+        data: update_data,
+        async: asyncBool,
+        success: (res) => {
+            alert(success_msg);
+        },
+        error: () => {
+            alert("Something went wrong. Contact your IT admin.");
+        },
+    });
+};
+
 // non-media and non-FAQ forms
 const forms = $(".non-media").get();
 for (let i = 0; i < forms.length; i++) {
@@ -165,6 +183,20 @@ for (let i = 0; i < updateFAQ.length; i++) {
 
 /* FOR INDIVIDUAL TESTIMONIAL */
 
+// Testimonial Form
+const testimonials = $(".testimonial").get();
+for (let i = 0; i < testimonials.length; i++) {
+    const testimonial = testimonials[i];
+
+    testimonial.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const api_route = testimonial.dataset.route;
+        const update_data = new FormData(testimonial);
+        ajaxPOSTmedia(api_route, update_data, false, "Successfully Updated!");
+        location.reload();
+    })
+}
+
 // Testimonial Delete
 const deleteIndividualTestimonialBtn = $(".delete-individual-testimonial").get();
 for (let i = 0; i < deleteIndividualTestimonialBtn.length; i++) {
@@ -177,6 +209,21 @@ for (let i = 0; i < deleteIndividualTestimonialBtn.length; i++) {
         location.reload();
     });
 }
+
+/* FOR FILE UPLOAD */
+
+const files = $(".media").get();
+for (let i = 0; i < files.length; i++) {
+    const file = files[i];
+    
+    file.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const api_route = file.dataset.route;
+        const update_data = new FormData(file);
+        ajaxPOSTmedia(api_route, update_data, false, "Successfully Updated!");
+        location.reload();
+    })
+};
 
 /* FOR BOOKING FORM'S FUNCTIONALITY */
 

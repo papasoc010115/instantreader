@@ -42,7 +42,6 @@ class KidsClubController extends Controller
 
         // update the database
         KidsClub::first()->update([$name => $value]);
-        return redirect()->route('marketing-admin.learn-more.kids-club')->with('upload_media_success', 'Successfully Updated!');
     }
 
     //IR Kids Club View

@@ -44,7 +44,6 @@ class HomeController extends Controller
 
         // update the database
         Home::first()->update([$name => $value]);
-        return redirect()->route("marketing-admin.home")->with('upload_media_success', 'Successfully Updated!');
     }
 
     // Upload Multiple Media File
@@ -91,7 +90,6 @@ class HomeController extends Controller
 
         // update the database
         Home::first()->update([$name => $value]);
-        return redirect()->route("marketing-admin.home")->with('upload_media_success', 'Successfully Updated!');
     }
 
     //Home View

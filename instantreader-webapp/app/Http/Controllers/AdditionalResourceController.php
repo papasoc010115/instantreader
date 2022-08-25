@@ -43,7 +43,6 @@ class AdditionalResourceController extends Controller
 
         // update the database
         AdditionalResource::first()->update([$name => $value]);
-        return redirect()->route("marketing-admin.additional-resources")->with('upload_media_success', 'Successfully Updated!');
     }
 
     // Upload Multiple Media File
@@ -89,7 +88,6 @@ class AdditionalResourceController extends Controller
 
         // update the database
         AdditionalResource::first()->update([$name => $value]);
-        return redirect()->route("marketing-admin.additional-resources")->with('upload_media_success', 'Successfully Updated!');
     }
 
     //Additional Resources View

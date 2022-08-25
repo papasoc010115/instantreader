@@ -122,7 +122,7 @@
         </script>
 
         <!-- Image -->
-        <form action="{{ route('about-us.founder.store_media_single') }}" method="POST" enctype="multipart/form-data">
+        <form data-route="{{ route('about-us.founder.store_media_single') }}" enctype="multipart/form-data" class="media">
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect1-image" class="form-label">Image</label>
@@ -243,7 +243,7 @@
         </script>
 
         <!-- Image 1 -->
-        <form action="{{ route('about-us.founder.store_media_single') }}" method="POST" enctype="multipart/form-data">
+        <form data-route="{{ route('about-us.founder.store_media_single') }}" enctype="multipart/form-data" class="media">
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect2-image1" class="form-label">Image 1</label>
@@ -272,7 +272,7 @@
         </form>
 
         <!-- Image 2 -->
-        <form action="{{ route('about-us.founder.store_media_single') }}" method="POST" enctype="multipart/form-data">
+        <form data-route="{{ route('about-us.founder.store_media_single') }}" enctype="multipart/form-data" class="media">
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect2-image2" class="form-label">Image 2</label>
@@ -301,7 +301,7 @@
         </form>
 
         <!-- Video -->
-        <form action="{{ route('about-us.founder.store_media_single') }}" method="POST" enctype="multipart/form-data">
+        <form data-route="{{ route('about-us.founder.store_media_single') }}" enctype="multipart/form-data" class="media">
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect2-video" class="form-label">Video</label>
@@ -353,7 +353,7 @@
         </script>
 
         <!-- Image -->
-        <form action="{{ route('about-us.founder.store_media_single') }}" method="POST" enctype="multipart/form-data">
+        <form data-route="{{ route('about-us.founder.store_media_single') }}" enctype="multipart/form-data" class="media">
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect3-image" class="form-label">Image</label>
@@ -423,7 +423,7 @@
         </script>
 
         <!-- Image -->
-        <form action="{{ route('about-us.founder.store_media_single') }}" method="POST" enctype="multipart/form-data">
+        <form data-route="{{ route('about-us.founder.store_media_single') }}" enctype="multipart/form-data" class="media">
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect4-image" class="form-label">Image</label>
@@ -514,7 +514,7 @@
         </script>
 
         <!-- Image 1 -->
-        <form action="{{ route('about-us.founder.store_media_single') }}" method="POST" enctype="multipart/form-data">
+        <form data-route="{{ route('about-us.founder.store_media_single') }}" enctype="multipart/form-data" class="media">
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect5-image1" class="form-label">Image 1</label>
@@ -543,7 +543,7 @@
         </form>
 
         <!-- Image 2 -->
-        <form action="{{ route('about-us.founder.store_media_single') }}" method="POST" enctype="multipart/form-data">
+        <form data-route="{{ route('about-us.founder.store_media_single') }}" enctype="multipart/form-data" class="media">
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect5-image2" class="form-label">Image 2</label>
@@ -572,7 +572,7 @@
         </form>
 
         <!-- Image 3 -->
-        <form action="{{ route('about-us.founder.store_media_single') }}" method="POST" enctype="multipart/form-data">
+        <form data-route="{{ route('about-us.founder.store_media_single') }}" enctype="multipart/form-data" class="media">
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect5-image3" class="form-label">Image 3</label>
@@ -601,7 +601,7 @@
         </form>
 
         <!-- Image 4 -->
-        <form action="{{ route('about-us.founder.store_media_single') }}" method="POST" enctype="multipart/form-data">
+        <form data-route="{{ route('about-us.founder.store_media_single') }}" enctype="multipart/form-data" class="media">
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect5-image4" class="form-label">Image 4</label>
@@ -630,7 +630,7 @@
         </form>
 
         <!-- Image 5 -->
-        <form action="{{ route('about-us.founder.store_media_single') }}" method="POST" enctype="multipart/form-data">
+        <form data-route="{{ route('about-us.founder.store_media_single') }}" enctype="multipart/form-data" class="media">
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect5-image5" class="form-label">Image 5</label>
@@ -659,7 +659,7 @@
         </form>
 
         <!-- Video -->
-        <form action="{{ route('about-us.founder.store_media_single') }}" method="POST" enctype="multipart/form-data">
+        <form data-route="{{ route('about-us.founder.store_media_single') }}" enctype="multipart/form-data" class="media">
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect5-video" class="form-label">Video</label>
@@ -671,16 +671,5 @@
         <!-- End of Section 5 -->
     </section>
 </div>
-
-<script>
-    // Checks if the upload of a file is successful
-    if ("{{ Session::has('upload_media_success') }}") {
-        alert("{{ Session::get('upload_media_success') }}");
-    }
-     // Checks if the upload of a file failed
-     if ("{{ Session::has('upload_media_fail') }}") {
-        alert("{{ Session::get('upload_media_fail') }}");
-    }
-</script>
 
 @endsection

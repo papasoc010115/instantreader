@@ -153,7 +153,7 @@
             </script>
 
             <!-- Image 1 -->
-            <form action="{{ route('contact-us.career.store_media_single') }}" method="POST" enctype="multipart/form-data">
+            <form data-route="{{ route('contact-us.career.store_media_single') }}" enctype="multipart/form-data" class="media">
                 @csrf
                 <div class="mb-3 py-3">
                     <label for="sect1-image1" class="form-label">Image 1</label>
@@ -182,7 +182,7 @@
             </form>
 
             <!-- Image 2 -->
-            <form action="{{ route('contact-us.career.store_media_single') }}" method="POST" enctype="multipart/form-data">
+            <form data-route="{{ route('contact-us.career.store_media_single') }}" enctype="multipart/form-data" class="media">
                 @csrf
                 <div class="mb-3 py-3">
                     <label for="sect1-image2" class="form-label">Image 2</label>
@@ -213,16 +213,5 @@
         </div>
     </section>
 </div>
-
-<script>
-    // Checks if the upload of a file is successful
-    if ("{{ Session::has('upload_media_success') }}") {
-        alert("{{ Session::get('upload_media_success') }}");
-    }
-     // Checks if the upload of a file failed
-     if ("{{ Session::has('upload_media_fail') }}") {
-        alert("{{ Session::get('upload_media_fail') }}");
-    }
-</script>
 
 @endsection

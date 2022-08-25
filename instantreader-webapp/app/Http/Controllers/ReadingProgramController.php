@@ -42,7 +42,6 @@ class ReadingProgramController extends Controller
 
         // update the database
         ReadingProgram::first()->update([$name => $value]);
-        return redirect()->route("marketing-admin.learn-more.reading-programs")->with('upload_media_success', 'Successfully Updated!');
     }
 
     //Reading Programs View
