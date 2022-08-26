@@ -73,6 +73,26 @@ const ajaxPOST = (api_route, update_data, asyncBool, success_msg) => {
     });
 };
 
+const ajaxPOSTmedia = (api_route, update_data, asyncBool, success_msg, progress_bar) => {
+    $.ajax({
+        url: api_route,
+        type: "POST",
+        contentType: false,
+        processData: false,
+        cache: false,
+        data: update_data,
+        async: asyncBool,
+        success: (res) => {
+            $("#"+progress_bar).attr("hidden", true);
+            alert(success_msg);
+        },
+        error: () => {
+            $("#"+progress_bar).attr("hidden", true);
+            alert("Something went wrong. Contact your IT admin.");
+        },
+    });
+};
+
 // non-media and non-FAQ forms
 const forms = $(".non-media").get();
 for (let i = 0; i < forms.length; i++) {
@@ -165,6 +185,20 @@ for (let i = 0; i < updateFAQ.length; i++) {
 
 /* FOR INDIVIDUAL TESTIMONIAL */
 
+// Testimonial Form
+const testimonials = $(".testimonial").get();
+for (let i = 0; i < testimonials.length; i++) {
+    const testimonial = testimonials[i];
+
+    testimonial.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const api_route = testimonial.dataset.route;
+        const update_data = new FormData(testimonial);
+        ajaxPOSTmedia(api_route, update_data, false, "Successfully Updated!");
+        location.reload();
+    })
+}
+
 // Testimonial Delete
 const deleteIndividualTestimonialBtn = $(
     ".delete-individual-testimonial"
@@ -179,6 +213,27 @@ for (let i = 0; i < deleteIndividualTestimonialBtn.length; i++) {
         location.reload();
     });
 }
+
+/* FOR FILE UPLOAD */
+
+const files = $(".media").get();
+for (let i = 0; i < files.length; i++) {
+    const file = files[i];
+
+    file.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const api_route = file.dataset.route;
+        let progress_bar;
+        if (file.dataset.progress_bar){
+            progress_bar = file.dataset.progress_bar;
+            console.log($("#"+progress_bar));
+            $("#" + progress_bar).removeAttr('hidden');
+        }
+        const update_data = new FormData(file);
+        ajaxPOSTmedia(api_route, update_data, false, "Successfully Updated!", progress_bar);
+        location.reload();
+    })
+};
 
 /* FOR BOOKING FORM'S FUNCTIONALITY */
 

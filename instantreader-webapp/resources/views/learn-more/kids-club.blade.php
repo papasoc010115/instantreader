@@ -37,7 +37,7 @@
     .introduction{
         position: relative;
         width: 100%;
-        height: 80vh;
+        /* height: 80vh; */
         display: flex;
         justify-content: center;
         align-items: center;
@@ -62,7 +62,6 @@
         margin: 0 auto;
         max-width: 900px;
         text-align: center;
-
     }
 
     .introduction-content h2{
@@ -140,13 +139,21 @@
             order: 1;
         }
     }
+
+    .welcome-image {
+        object-fit: contain;
+        max-height: 400px;
+        max-width: 75%;
+    }
 </style>
 
 <!-- Introduction -->
+</section>
 <section class="nocursor introduction page-title cursor-light" style="background-color: white" id="intro">
     <div class="introduction-content fadeIn">
         <h2>{{ $data->sect1_heading }}</h2>
         <p>{!! $data->sect1_para !!}</p>
+        <img src="{{ url($data->sect1_image) }}" class="welcome-image" alt="...">
     </div>
 </section>
 

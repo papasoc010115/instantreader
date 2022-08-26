@@ -46,7 +46,6 @@ class HomeController extends Controller
         // update the database
         Home::first()->update([$name => $value]);
         app('App\Http\Controllers\LogController')->store("Updated Home page's ".$name);
-        return redirect()->route("marketing-admin.home")->with('upload_media_success', 'Successfully Updated!');
     }
 
     // Upload Multiple Media File
@@ -77,7 +76,7 @@ class HomeController extends Controller
             $value = 'public/marketing-site/assets/img/'.$page.'_'.$name.'/';
 
             // delete old files in the directory
-            $delete_files = Storage::allFiles('public/marketing-site/assets/img/'.$name);
+            $delete_files = Storage::allFiles('public/marketing-site/assets/img/'.$page.'_'.$name);
             Storage::delete($delete_files);
 
             // save new files in the directory
@@ -94,7 +93,6 @@ class HomeController extends Controller
         // update the database
         Home::first()->update([$name => $value]);
         app('App\Http\Controllers\LogController')->store("Updated Home page's ".$name);
-        return redirect()->route("marketing-admin.home")->with('upload_media_success', 'Successfully Updated!');
     }
 
     //Home View

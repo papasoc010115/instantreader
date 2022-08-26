@@ -46,7 +46,6 @@ class CareerController extends Controller
         // update the database
         Career::first()->update([$name => $value]);
         app('App\Http\Controllers\LogController')->store("Updated Career page's ".$name);
-        return redirect()->route("marketing-admin.contact-us.career")->with('upload_media_success', 'Successfully Updated!');
     }
 
     //Start a Career With Us View

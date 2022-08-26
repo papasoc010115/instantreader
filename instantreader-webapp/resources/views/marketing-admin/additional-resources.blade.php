@@ -154,35 +154,107 @@
             </script>
 
             <!-- Image 1 -->
-            <form action="{{ route('additional-resources.store_media_single') }}" method="POST" enctype="multipart/form-data">
+            <form data-route="{{ route('additional-resources.store_media_single') }}" data-progress_bar="additional-resources-sect1-image1-bar" enctype="multipart/form-data" class="media">
                 @csrf
                 <div class="mb-3 py-3">
                     <label for="sect1-image1" class="form-label">Image 1</label>
                     <input required data-fieldtype="media" class="form-control form-control-sm" name="sect1_image1" type="file" id="sect1-image1" aria-describedby="sect1Image1Help" value="{{ $data->sect1_image1 }}">
-                    <small id="sect1Image1Help" class="form-text text-muted">Recommended image size: WxH</small>
+                    <small id="sect1Image1Help" class="form-text text-muted">Recommended image size: 2048x1365 px ( 3:2 aspect ratio )</small>
+                    
+                    <label for="sect1-current-image1" class="form-label">
+                        Current Image:
+                        @php
+                            if ($data->sect1_image1) {
+                                $path = explode('/',$data->sect1_image1);
+                                $filename = end($path);
+                            } else {
+                                $filename = "No image set";
+                            }
+                        @endphp
+                        {{ $filename }} 
+                    </label>
+                    @if ($data->sect1_image1)
+                        <img id="sect1-current-image1" class="d-block admin-panel-image" src="{{ url($data->sect1_image1) }}">
+                    @endif
+                    <br>
+                    
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
+                </div> 
+                <div id="additional-resources-sect1-image1-bar" hidden>
+                    <div>Uploading files. Please wait.</div>     
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                    </div>  
                 </div>                
             </form>
 
             <!-- Image 2 -->
-            <form action="{{ route('additional-resources.store_media_single') }}" method="POST" enctype="multipart/form-data">
+            <form data-route="{{ route('additional-resources.store_media_single') }}" data-progress_bar="additional-resources-sect1-image2-bar" enctype="multipart/form-data" class="media">    
                 @csrf
                 <div class="mb-3 py-3">
                     <label for="sect1-image2" class="form-label">Image 2</label>
                     <input required data-fieldtype="media" accept="image/*" class="form-control form-control-sm" name="sect1_image2" type="file" id="sect1-image2" aria-describedby="sect1Image2Help" value="{{ $data->sect1_image2 }}">
-                    <small id="sect1Image2Help" class="form-text text-muted">Recommended image size: WxH</small>
+                    <small id="sect1Image2Help" class="form-text text-muted">Recommended image size: 2048x1365 px ( 3:2 aspect ratio )</small>
+                    
+                    <label for="sect1-current-image2" class="form-label">
+                        Current Image:
+                        @php
+                            if ($data->sect1_image2) {
+                                $path = explode('/',$data->sect1_image2);
+                                $filename = end($path);
+                            } else {
+                                $filename = "No image set";
+                            }
+                        @endphp
+                        {{ $filename }} 
+                    </label>
+                    @if ($data->sect1_image2)
+                        <img id="sect1-current-image2" class="d-block admin-panel-image" src="{{ url($data->sect1_image2) }}">
+                    @endif
+                    <br>
+                    
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
+                </div> 
+                <div id="additional-resources-sect1-image2-bar" hidden>
+                    <div>Uploading files. Please wait.</div>     
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                    </div>  
                 </div>                
             </form>
 
             <!-- Image 3 -->
-            <form action="{{ route('additional-resources.store_media_single') }}" method="POST" enctype="multipart/form-data">
+            <form data-route="{{ route('additional-resources.store_media_single') }}" data-progress_bar="additional-resources-sect1-image3-bar" enctype="multipart/form-data" class="media">
                 @csrf
                 <div class="mb-3 py-3">
                     <label for="sect1-image3" class="form-label">Image 3</label>
                     <input required data-fieldtype="media" accept="image/*" class="form-control form-control-sm" name="sect1_image3" type="file" id="sect1-image3" aria-describedby="sect1Image3Help" value="{{ $data->sect1_image3 }}">
-                    <small id="sect1Image3Help" class="form-text text-muted">Recommended image size: WxH</small>
+                    <small id="sect1Image3Help" class="form-text text-muted">Recommended image size: 2048x1365 px ( 3:2 aspect ratio )</small>
+                    
+                    <label for="sect1-current-image3" class="form-label">
+                        Current Image:
+                        @php
+                            if ($data->sect1_image3) {
+                                $path = explode('/',$data->sect1_image3);
+                                $filename = end($path);
+                            } else {
+                                $filename = "No image set";
+                            }
+                        @endphp
+                        {{ $filename }} 
+                    </label>
+                    @if ($data->sect1_image3)
+                        <img id="sect1-current-image3" class="d-block admin-panel-image" src="{{ url($data->sect1_image3) }}">
+                    @endif
+                    <br>
+                    
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
+                </div> 
+                <div id="additional-resources-sect1-image3-bar" hidden>
+                    <div>Uploading files. Please wait.</div>     
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                    </div>  
                 </div>                
             </form>
             <!-- End of Section 1 -->
@@ -258,14 +330,34 @@
             </script>
 
             <!-- Videos of Section 3 -->
-            <form action="{{ route('additional-resources.store_media_multiple') }}" method="POST" enctype="multipart/form-data">
+            <form data-route="{{ route('additional-resources.store_media_multiple') }}" data-progress_bar="additional-resources-sect3-videos-bar" enctype="multipart/form-data" class="media">
                 @csrf
                 <div class="mb-3 py-3">
                     <label for="sect3-videoss" class="form-label">Videos (Select at least 1 video)</label>
                     <input required data-fieldtype="media" accept="video/*" class="form-control form-control-sm" name="sect3_videos[]" type="file" id="sect3-videos" aria-describedby="sect3VideosHelp" multiple value="{{ $data->sect3_videos }}">
-                    <small id="sect3VideosHelp" class="form-text text-muted">Recommended image size: WxH</small>
+                    <small id="sect3VideosHelp" class="form-text text-muted">Recommended image size: 640x360 px ( 16:9 aspect ratio)</small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
-                </div>                
+                </div>       
+                <div id="additional-resources-sect3-videos-bar" hidden>
+                    <div>Uploading files. Please wait.</div>     
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                    </div>  
+                </div>    
+                <label for="sect3-current-videos" class="form-label">
+                    Current Videos: 
+                </label>
+                <div id="sect3-current-videos">
+                    @if ($data->sect3_videos)
+                        @foreach (Illuminate\Support\Facades\Storage::files($data->sect3_videos) as $video)
+                        <video class="admin-panel-image" id="highlight-video-player" preload="none" controls poster="{{ asset('marketing-site/assets/agency/img/blog-news-1.jpg')}}" playsinline>
+                            <source id="highlight-video-source" src="{{ url(str_replace('public','storage',$video)) }}" type="video/mp4">
+                        </video>
+                        @endforeach
+                    @else
+                        <span>No images set</span>
+                    @endif
+                </div>     
             </form>
             <!-- End of Section 3 -->
             
@@ -310,29 +402,36 @@
         </script>
 
         <!-- Images of Section 4 -->
-        <form action="{{ route('additional-resources.store_media_multiple') }}" method="POST" enctype="multipart/form-data">
+        <form data-route="{{ route('additional-resources.store_media_multiple') }}" data-progress_bar="additional-resources-sect4-images-bar" enctype="multipart/form-data" class="media">
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect4-images" class="form-label">Images (Select at least 1 photo)</label>
                 <input required data-fieldtype="media" accept="image/*" class="form-control form-control-sm" name="sect4_images[]" type="file" id="sect4-images" aria-describedby="sect4ImagesHelp" multiple value="{{ $data->sect4_images }}">
-                <small id="sect4ImagesHelp" class="form-text text-muted">Recommended image size: WxH</small>
+                <small id="sect4ImagesHelp" class="form-text text-muted">Recommended image size: 2048x1365 px ( 3:2 aspect ratio )</small>
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
-            </div>              
+            </div>      
+            <div id="additional-resources-sect4-images-bar" hidden>
+                <div>Uploading files. Please wait.</div>     
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                </div>  
+            </div>
+            <label for="sect4-current-images" class="form-label">
+                Current Images: 
+            </label>
+            <div id="sect4-current-images">
+                @if ($data->sect4_images)
+                    @foreach (Illuminate\Support\Facades\Storage::files($data->sect4_images) as $image)
+                        <img class="admin-panel-image" src="{{ url(str_replace('public','storage',$image)) }}" />
+                    @endforeach
+                @else
+                    <span>No images set</span>
+                @endif
+            </div>        
         </form>
         <!-- End of Section 4 -->
         </div>
     </section>
 </div>
-
-<script>
-    // Checks if the upload of a file is successful
-    if ("{{ Session::has('upload_media_success') }}") {
-        alert("{{ Session::get('upload_media_success') }}");
-    }
-     // Checks if the upload of a file failed
-     if ("{{ Session::has('upload_media_fail') }}") {
-        alert("{{ Session::get('upload_media_fail') }}");
-    }
-</script>
 
 @endsection

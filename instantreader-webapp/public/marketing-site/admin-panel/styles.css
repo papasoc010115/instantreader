@@ -147,3 +147,9 @@ input[type="number"] {
 .page-link:hover {
     color: #282525;
 }
+
+.admin-panel-image{
+    margin: 10px;
+    max-width: 500px;
+    max-height: 300px;
+}

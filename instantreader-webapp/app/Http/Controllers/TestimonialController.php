@@ -46,7 +46,6 @@ class TestimonialController extends Controller
 
         // update the database
         Testimonial::first()->update([$name => $value]);
-        return redirect()->route("marketing-admin.about-us.testimonials")->with('upload_media_success', 'Successfully Updated!');
     }
 
     // Upload Multiple Media File
@@ -72,7 +71,7 @@ class TestimonialController extends Controller
             $value = 'public/marketing-site/assets/img/'.$page.'_'.$name.'/';
 
             // delete old files in the directory
-            $delete_files = Storage::allFiles('public/marketing-site/assets/img/'.$name);
+            $delete_files = Storage::allFiles('public/marketing-site/assets/img/'.$page.'_'.$name);
             Storage::delete($delete_files);
 
             // save new files in the directory
@@ -89,7 +88,6 @@ class TestimonialController extends Controller
         // update the database
         Testimonial::first()->update([$name => $value]);
         app('App\Http\Controllers\LogController')->store("Updated Testimonial page's ".$name);
-        return redirect()->route("marketing-admin.about-us.testimonials")->with('upload_media_success', 'Successfully Updated!');
     }
 
     //Add new testimonial

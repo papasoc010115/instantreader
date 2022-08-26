@@ -142,14 +142,38 @@
             </script>
 
             <!-- Image-->
-            <form action="{{ route('learn-more.assessment.store_media_single') }}" method="POST" enctype="multipart/form-data">
+            <form data-route="{{ route('learn-more.assessment.store_media_single') }}" data-progress_bar="reading-assessment-sect1-image-bar" enctype="multipart/form-data" class="media">
                 @csrf
                 <div class="mb-3 py-3">
                     <label for="sect1-image" class="form-label">Image</label>
                     <input required data-fieldtype="media" accept="image/*" class="form-control form-control-sm" type="file" name="sect1_image" id="sect1-image" aria-describedby="sect1ImageHelp" value="{{ $data->sect1_image }}">
-                    <small id="sect1ImageHelp" class="form-text text-muted">Recommended image size: WxH</small>
+                    <small id="sect1ImageHelp" class="form-text text-muted">Recommended image size: 2048x1365 px ( 3:2 aspect ratio )</small>
+                    
+                    <label for="sect1-current-image" class="form-label">
+                        Current Image:
+                        @php
+                            if ($data->sect1_image) {
+                                $path = explode('/',$data->sect1_image);
+                                $filename = end($path);
+                            } else {
+                                $filename = "No image set";
+                            }
+                        @endphp
+                        {{ $filename }} 
+                    </label>
+                    @if ($data->sect1_image)
+                        <img id="sect1-current-image" class="d-block admin-panel-image" src="{{ url($data->sect1_image) }}">
+                    @endif 
+                    <br>
+                    
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
-                </div>                
+                </div>    
+                <div id="reading-assessment-sect1-image-bar" hidden>
+                    <div>Uploading files. Please wait.</div>     
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                    </div>  
+                </div>              
             </form>
             <!-- End of Section 1 -->
 
@@ -430,18 +454,7 @@
         </div>
     </section>
 </div>
-<script>
-    // ------------- ALERTS FOR UPLOADING MEDIA start
-    // Checks if the upload of a file is successful
-    if ("{{ Session::has('upload_media_success') }}") {
-        alert("{{ Session::get('upload_media_success') }}");
-    }
-    // Checks if the upload of a file failed
-    if ("{{ Session::has('upload_media_fail') }}") {
-    alert("{{ Session::get('upload_media_fail') }}");
-    }
-    // ------------- ALERTS FOR UPLOADING MEDIA end
-</script>
+
 @endsection
 
 @section('otherScript')
