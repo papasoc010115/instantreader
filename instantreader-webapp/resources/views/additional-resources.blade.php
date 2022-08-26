@@ -29,6 +29,20 @@
             text-align: justify;
         }
     }
+    .carousel-indicators {
+        position: relative;
+        bottom: 80%;
+    }
+    #blog-carousel .carousel-indicators li {
+        background-color: #5A88FF;
+    }
+    .para .blog-content {
+        display: block;
+        width: 100px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
 </style>
 <!-- Style End -->
 
@@ -101,6 +115,8 @@
 <!--Tips/Resources Library End-->
 
 <!--E-books/PDFs Start-->
+<!-- Only show if there are ebooks -->
+@if (count($ebooks) > 0)
 <section class="ebook-resources purple-bg">
     <div class="container">
         <!--Row of Heading-->
@@ -112,69 +128,78 @@
             </div>
         </div>
 
-        <!--Row of E-books-->
-        <div class="row">
-            <div class="col-md-4 d-flex align-items-stretch">
-                <div class="card shadow">
-                    <img class="card-img-top" src="{{  asset('marketing-site/assets/agency/img/blog-news-1.jpg')  }}" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title pt-3 alt-color">Web design is fun</h5>
-                        <p class="card-text">Hena Sword</p>
-                    </div>
-                    <div class="card-footer d-flex">
-                        <a class="ml-auto" href="javascript:void(0);">
-                            <i class="icon fas fa-download" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 d-flex align-items-stretch">
-                <div class="card shadow">
-                    <img class="card-img-top" src="{{  asset('marketing-site/assets/agency/img/blog-news-2.jpg')  }}" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title pt-3 alt-color">Digital Marketing</h5>
-                        <p class="card-text">David Villas</p>
-                    </div>
-                    <div class="card-footer d-flex">
-                        <a class="ml-auto" href="javascript:void(0);">
-                            <i class="icon fas fa-download" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 d-flex align-items-stretch">
-                <div class="card shadow">
-                    <img class="card-img-top" src="{{  asset('marketing-site/assets/agency/img/blog-news-3.jpg')  }}" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title pt-3 alt-color">Future of websites</h5>
-                        <p class="card-text">Jhon Walker</p>
-                    </div>
-                    <div class="card-footer d-flex">
-                        <a class="ml-auto" href="javascript:void(0);">
-                            <i class="icon fas fa-download" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <!--Carousel Wrapper-->
+        <div id="ebook-carousel" class="carousel slide carousel-multi-item" data-ride="carousel">
 
-        <!--Pagination-->
-        <div class="row pt-4">
-            <div class="col-sm-12">
-                <ul class="pagination justify-content-center top55 mb-4 mb-md-0 mb-sm-3" style="padding-top=5%">
-                    <li class="page-item"><a class="page-link disabled" href="#.">&laquo;</i></a></li>
-                    <li class="page-item active"><a class="page-link" href="#.">1</a></li>
-                    <li class="page-item"><a class="page-link" href="#.">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#.">3</a></li>
-                    <li class="page-item"><a class="page-link" href="#.">&raquo;</i></a></li>
-                </ul>
+            <!--Slides-->
+            <div class="carousel-inner" role="listbox">
+                @for ($i = 0; $i < ceil(count($ebooks)/3); $i++)
+                    @if ($i === 0)
+                    <div class="carousel-item active row">
+                        @for ($j = 0; $j < 3 && ($i*3+$j) < count($ebooks); $j++)
+                        <div class="col-md-4" style="float:left">
+                            <div class="card shadow mb-2">
+                                <img class="card-img-top" src="{{  asset($ebooks[$i*3 + $j]->image)  }}" alt="Card image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title pt-3 alt-color">{{ $ebooks[$i*3 + $j]->title }}</h5>
+                                    <p class="card-text">{{ $ebooks[$i*3 + $j]->author }}</p>
+                                </div>
+                                <!-- Include download function -->
+                                <div class="card-footer d-flex">
+                                    <a class="ml-auto" href="javascript:void(0);">
+                                        <i class="icon fas fa-download" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        @endfor
+                    </div>
+                    @else
+                    <div class="carousel-item">
+                        @for ($j = 0; $j < 3 && ($i*3+$j) < count($ebooks); $j++)
+                        <div class="col-md-4" style="float:left">
+                            <div class="card shadow mb-2">
+                                <img class="card-img-top" src="{{  asset($ebooks[$i*3 + $j]->image)  }}" alt="Card image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title pt-3 alt-color">{{ $ebooks[$i*3 + $j]->title }}</h5>
+                                    <p class="card-text">{{ $ebooks[$i*3 + $j]->author }}</p>
+                                </div>
+                                <!-- Include download function -->
+                                <div class="card-footer d-flex">
+                                    <a class="ml-auto" href="javascript:void(0);">
+                                        <i class="icon fas fa-download" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        @endfor
+                    </div>
+                    @endif
+                @endfor
             </div>
+            <!--/.Slides-->
+
+            <!--Indicators-->
+            <ol class="carousel-indicators">
+                @for ($i = 0; $i < ceil(count($ebooks)/3); $i++)
+                    @if ($i === 0)
+                        <li data-target="#ebook-carousel" data-slide-to="{{ $i }}" class="active"></li>
+                    @else
+                        <li data-target="#ebook-carousel" data-slide-to="{{ $i }}"></li>
+                    @endif
+                @endfor
+            </ol>
+            <!--/.Indicators-->
         </div>
+        <!--/.Carousel Wrapper-->
     </div>
 </section>
+@endif
 <!--E-books/PDFs End-->
 
 <!--Blogs Start-->
+<!-- Only show if there are blogs -->
+@if (count($blogs) > 0)
 <section class="blog-resources">
     <div class="container">
         <!--Row of Heading-->
@@ -185,64 +210,72 @@
                 </div>
             </div>
         </div>
-
-        <!--Row of Blogs-->
-        <div class="row">
-            <div class="col-md-4 d-flex align-items-stretch">
-                <div class="card shadow">
-                    <img class="card-img-top" src="{{  asset('marketing-site/assets/agency/img/blog-news-1.jpg')  }}" alt="Card image cap">
-                    <div class="card-body">
-                        <a href="agency/blog-list.html" class="card-text">Hena Sword</a>
-                        <a href="agency/blog-list.html"><h5 class="pt-2">Future of websites</h5></a>
-                        <p class="para">Lorem ipsum dolor sit amet consectetur adipiscing elit ipsum dolor sit am...</p>
-                    </div>
-                    <div class="card-footer">
-                        <span class="date main-color">October 29, 2020</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 d-flex align-items-stretch">
-                <div class="card shadow">
-                    <img class="card-img-top" src="{{  asset('marketing-site/assets/agency/img/blog-news-2.jpg')  }}" alt="Card image cap">
-                    <div class="card-body">
-                        <a href="agency/blog-list.html" class="card-text">David Villas</a>
-                        <a href="agency/blog-list.html"><h5 class="pt-2">Web design is fun</h5></a>
-                        <p class="para">Lorem ipsum dolor sit amet consectetur adipiscing elit ipsum dolor sit am...</p>
-                    </div>
-                    <div class="card-footer">
-                        <span class="date main-color">October 29, 2020</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 d-flex align-items-stretch">
-                <div class="card shadow">
-                    <img class="card-img-top" src="{{  asset('marketing-site/assets/agency/img/blog-news-3.jpg')  }}" alt="Card image cap">
-                    <div class="card-body">
-                        <a href="agency/blog-list.html" class="card-text">Jhon Walker</a>
-                        <a href="agency/blog-list.html"><h5 class="pt-2">Lorem ipsum dolor sit amet consectetur</h5></a>
-                        <p class="para">Lorem ipsum dolor sit amet consectetur adipiscing elit ipsum dolor sit am...</p>
-                    </div>
-                    <div class="card-footer">
-                        <span class="date main-color">October 29, 2020</span>
-                    </div>
-                </div>
-            </div>
-        </div>
         
-        <!--Pagination-->
-        <div class="row pt-4">
-            <div class="col-sm-12">
-                <ul class="pagination justify-content-center top55 mb-4 mb-md-0 mb-sm-3" style="padding-top=5%">
-                    <li class="page-item"><a class="page-link disabled" href="#.">&laquo;</i></a></li>
-                    <li class="page-item active"><a class="page-link" href="#.">1</a></li>
-                    <li class="page-item"><a class="page-link" href="#.">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#.">3</a></li>
-                    <li class="page-item"><a class="page-link" href="#.">&raquo;</i></a></li>
-                </ul>
+        <!--Carousel Wrapper-->
+        <div id="blog-carousel" class="carousel slide carousel-multi-item" data-ride="carousel">
+
+            <!--Slides-->
+            <div class="carousel-inner" role="listbox">
+                @for ($i = 0; $i < ceil(count($blogs)/3); $i++)
+                    @if ($i === 0)
+                    <div class="carousel-item active row">
+                        @for ($j = 0; $j < 3 && ($i*3+$j) < count($blogs); $j++)
+                        <div class="col-md-4" style="float:left">
+                            <div class="card shadow mb-2">
+                                <img class="card-img-top" src="{{  asset($blogs[$i*3 + $j]->image)  }}" alt="Card image cap">
+                                <div class="card-body">
+                                    <!-- Update to link to blog -->
+                                    <a href="">{{ $blogs[$i*3 + $j]->author }}</a>
+                                    <a href=""><h5 class="pt-2">{{ $blogs[$i*3 + $j]->title }}</h5></a>
+                                    <p class="para blog-content">{{ str_limit($blogs[$i*3 + $j]->content, $limit = 50, $end = '...') }}</p>
+                                </div>
+                                <div class="card-footer">
+                                    <span class="date main-color">{{ $blogs[$i*3 + $j]->created_at }}</span>
+                                </div>
+                            </div>
+                        </div>
+                        @endfor
+                    </div>
+                    @else
+                    <div class="carousel-item">
+                        @for ($j = 0; $j < 3 && ($i*3+$j) < count($blogs); $j++)
+                        <div class="col-md-4" style="float:left">
+                            <div class="card shadow mb-2">
+                                <img class="card-img-top" src="{{  asset($blogs[$i*3 + $j]->image)  }}" alt="Card image cap">
+                                <div class="card-body">
+                                    <!-- Update to link to blog -->
+                                    <a href="">{{ $blogs[$i*3 + $j]->author }}</a>
+                                    <a href=""><h5 class="pt-2">{{ $blogs[$i*3 + $j]->title }}</h5></a>
+                                    <p class="para blog-content">{{ str_limit($blogs[$i*3 + $j]->content, $limit = 50, $end = '...') }}</p>
+                                </div>
+                                <div class="card-footer">
+                                    <span class="date main-color">{{ $blogs[$i*3 + $j]->created_at }}</span>
+                                </div>
+                            </div>
+                        </div>
+                        @endfor
+                    </div>
+                    @endif
+                @endfor
             </div>
+            <!--/.Slides-->
+
+            <!--Indicators-->
+            <ol class="carousel-indicators">
+                @for ($i = 0; $i < ceil(count($blogs)/3); $i++)
+                    @if ($i === 0)
+                        <li data-target="#blog-carousel" data-slide-to="{{ $i }}" class="active"></li>
+                    @else
+                        <li data-target="#blog-carousel" data-slide-to="{{ $i }}"></li>
+                    @endif
+                @endfor
+            </ol>
+            <!--/.Indicators-->
         </div>
+        <!--/.Carousel Wrapper-->
     </div>
 </section>
+@endif
 <!--Blogs End-->
 
 <!--Video Resources Start-->
@@ -265,19 +298,6 @@
                     </div>
                 </div>
             @endforeach
-        </div>
-
-        <!--Pagination-->
-        <div class="row pt-4">
-            <div class="col-sm-12">
-                <ul class="pagination justify-content-center top55 mb-4 mb-md-0 mb-sm-3" style="padding-top=5%">
-                    <li class="page-item"><a class="page-link disabled" href="#.">&laquo;</a></li>
-                    <li class="page-item active"><a class="page-link" href="#.">1</a></li>
-                    <li class="page-item"><a class="page-link" href="#.">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#.">3</a></li>
-                    <li class="page-item"><a class="page-link" href="#.">&raquo;</a></li>
-                </ul>
-            </div>
         </div>
     </div>
 </section>

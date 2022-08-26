@@ -125,7 +125,7 @@
             </div>
             <!--Form-->
 
-            <form action="{{ route('contact-us.store_consultation') }}" method="POST" class="booking-form" id="booking-form-data">
+            <form action="{{ route('contact-us.store_consultation') }}" method="POST" class="booking-form">
                 @csrf
 
                 <input type="hidden" id="form_event_id" name="event_id"/>

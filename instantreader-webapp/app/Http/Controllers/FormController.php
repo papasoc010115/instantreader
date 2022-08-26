@@ -62,7 +62,7 @@ class FormController extends Controller
         // dd($request->all());
 
         // if captcha is successful, redirect to home page
-        return redirect()->route('home');
+        // return redirect()->route('home');
     }
 
     // JOB APPLICATION form validation

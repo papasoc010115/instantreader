@@ -217,7 +217,10 @@
 <script src="{{ asset('marketing-site/assets/agency/js/map.js') }}"></script>
 <!-- Bootstrap js -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+ <!-- JQuery -->
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <!-- Custom script -->
 <script src="{{ asset('marketing-site/assets/agency/js/topbar.js') }}"></script>
+<script src="{{ asset('marketing-site/assets/form-script.js') }}"></script>
 </body>
 </html>

@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use App\Models\AdditionalResource;
+use App\Models\Ebook;
+use App\Models\Blog;
 
 class AdditionalResourceController extends Controller
 {
@@ -96,6 +98,8 @@ class AdditionalResourceController extends Controller
     //Additional Resources View
     public function index() {
         $data = AdditionalResource::first();
-        return view('additional-resources', ['data' => $data]);
+        $ebooks = Ebook::latest()->get();
+        $blogs = Blog::latest()->get();
+        return view('additional-resources', ['data' => $data, 'ebooks' => $ebooks, 'blogs' => $blogs]);
     }
 }

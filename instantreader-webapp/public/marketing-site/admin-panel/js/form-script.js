@@ -68,12 +68,17 @@ const ajaxPOST = (api_route, update_data, asyncBool, success_msg) => {
         },
         error: function (error) {
             alert("Something went wrong. Contact your IT admin.");
-            console.log(error);
         },
     });
 };
 
-const ajaxPOSTmedia = (api_route, update_data, asyncBool, success_msg, progress_bar) => {
+const ajaxPOSTmedia = (
+    api_route,
+    update_data,
+    asyncBool,
+    success_msg,
+    progress_bar
+) => {
     $.ajax({
         url: api_route,
         type: "POST",
@@ -83,11 +88,11 @@ const ajaxPOSTmedia = (api_route, update_data, asyncBool, success_msg, progress_
         data: update_data,
         async: asyncBool,
         success: (res) => {
-            $("#"+progress_bar).attr("hidden", true);
+            $("#" + progress_bar).attr("hidden", true);
             alert(success_msg);
         },
         error: () => {
-            $("#"+progress_bar).attr("hidden", true);
+            $("#" + progress_bar).attr("hidden", true);
             alert("Something went wrong. Contact your IT admin.");
         },
     });
@@ -196,7 +201,7 @@ for (let i = 0; i < testimonials.length; i++) {
         const update_data = new FormData(testimonial);
         ajaxPOSTmedia(api_route, update_data, false, "Successfully Updated!");
         location.reload();
-    })
+    });
 }
 
 // Testimonial Delete
@@ -224,16 +229,22 @@ for (let i = 0; i < files.length; i++) {
         e.preventDefault();
         const api_route = file.dataset.route;
         let progress_bar;
-        if (file.dataset.progress_bar){
+        if (file.dataset.progress_bar) {
             progress_bar = file.dataset.progress_bar;
-            console.log($("#"+progress_bar));
-            $("#" + progress_bar).removeAttr('hidden');
+            console.log($("#" + progress_bar));
+            $("#" + progress_bar).removeAttr("hidden");
         }
         const update_data = new FormData(file);
-        ajaxPOSTmedia(api_route, update_data, false, "Successfully Updated!", progress_bar);
+        ajaxPOSTmedia(
+            api_route,
+            update_data,
+            false,
+            "Successfully Updated!",
+            progress_bar
+        );
         location.reload();
-    })
-};
+    });
+}
 
 /* FOR BOOKING FORM'S FUNCTIONALITY */
 

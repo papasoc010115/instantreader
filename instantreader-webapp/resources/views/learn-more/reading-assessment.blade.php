@@ -97,7 +97,7 @@
         <h2 style="color: white; margin-bottom: 1em">
             Booking Form
         </h2>
-        <form action="{{ route('learn-more.store_ora') }}" method="POST" class="contact-form">
+        <form data-route="{{ route('learn-more.store_ora') }}" class="assessment-form">
             @csrf
             <input type="hidden" id="form_event_id" name="event_id"/>
 
@@ -192,8 +192,8 @@
 
             <div class="row">
                 <div class="col">
-                    <button class="btn btn-large btn-rounded btn-pink btn-hvr-blue">                    
-                        Submit
+                    <button type="submit" class="btn btn-large btn-rounded btn-pink btn-hvr-blue">                    
+                        Book
                         <div class="btn-hvr-setting">
                             <ul class="btn-hvr-setting-inner">
                                 <li class="btn-hvr-effect"></li>
