@@ -20,7 +20,10 @@ class RegisteredUserController extends Controller
      */
     public function create()
     {
-        return view('auth.register');
+        $target = User::where('admin_type', 'superuser')->get();
+
+        $superuser_count = count($target);
+        return view('auth.register', ['superuser_count' => $superuser_count]);
     }
 
     /**

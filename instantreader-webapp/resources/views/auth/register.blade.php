@@ -1,4 +1,5 @@
 <x-guest-layout>
+    @if($superuser_count === 0)
     <x-auth-card>
         <x-slot name="logo">
             <a href="/">
@@ -59,5 +60,9 @@
                 </x-button>
             </div>
         </form>
-    </x-auth-card>    
+    </x-auth-card>
+
+    @else
+    <x-access-denied></x-access-denied>
+    @endif    
 </x-guest-layout>
