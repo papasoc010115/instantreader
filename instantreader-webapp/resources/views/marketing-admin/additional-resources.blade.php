@@ -335,7 +335,7 @@
                 <div class="mb-3 py-3">
                     <label for="sect3-videoss" class="form-label">Videos (Select at least 1 video)</label>
                     <input required data-fieldtype="media" accept="video/*" class="form-control form-control-sm" name="sect3_videos[]" type="file" id="sect3-videos" aria-describedby="sect3VideosHelp" multiple value="{{ $data->sect3_videos }}">
-                    <small id="sect3VideosHelp" class="form-text text-muted">Recommended image size: WxH</small>
+                    <small id="sect3VideosHelp" class="form-text text-muted">Recommended image size: 640x360 px ( 16:9 aspect ratio)</small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
                 </div>       
                 <div id="additional-resources-sect3-videos-bar" hidden>
@@ -343,7 +343,21 @@
                     <div class="progress">
                         <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
                     </div>  
-                </div>         
+                </div>    
+                <label for="sect3-current-videos" class="form-label">
+                    Current Videos: 
+                </label>
+                <div id="sect3-current-videos">
+                    @if ($data->sect3_videos)
+                        @foreach (Illuminate\Support\Facades\Storage::files($data->sect3_videos) as $video)
+                        <video class="admin-panel-image" id="highlight-video-player" preload="none" controls poster="{{ asset('marketing-site/assets/agency/img/blog-news-1.jpg')}}" playsinline>
+                            <source id="highlight-video-source" src="{{ url(str_replace('public','storage',$video)) }}" type="video/mp4">
+                        </video>
+                        @endforeach
+                    @else
+                        <span>No images set</span>
+                    @endif
+                </div>     
             </form>
             <!-- End of Section 3 -->
             

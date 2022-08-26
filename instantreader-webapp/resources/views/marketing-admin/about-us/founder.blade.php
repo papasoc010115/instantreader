@@ -324,7 +324,29 @@
             <div class="mb-3 py-3">
                 <label for="sect2-video" class="form-label">Video</label>
                 <input required data-fieldtype="media" accept="video/*" class="form-control form-control-sm" type="file" name="sect2_video" id="sect2-video" aria-describedby="sect2VideoHelp" value="{{ $data->sect3_video }}">
-                <small id="sect2VideoHelp" class="form-text text-muted">Recommended video size: WxH</small>
+                <small id="sect2VideoHelp" class="form-text text-muted">Recommended video size: 640x360 px ( 16:9 aspect ratio)</small>
+                
+                <label for="sect2-current-video" class="form-label">
+                    Current Video:
+                    @php
+                        if ($data->sect2_video) {
+                            $path = explode('/',$data->sect2_video);
+                            $filename = end($path);
+                        } else {
+                            $filename = "No image set";
+                        }
+                    @endphp
+                    {{ $filename }} 
+                </label>
+                @if ($data->sect2_video)
+                <div>
+                    <video class="admin-panel-image" id="highlight-video-player" preload="none" controls poster="{{ asset('marketing-site/assets/agency/img/blog-news-1.jpg')}}" playsinline>
+                        <source id="highlight-video-source" src="{{ url($data->sect2_video) }}" type="video/mp4">
+                    </video>
+                </div>
+                @endif
+                <br>
+                
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
             </div>  
             <div id="about-us-sect2-video-bar" hidden>
@@ -730,7 +752,29 @@
             <div class="mb-3 py-3">
                 <label for="sect5-video" class="form-label">Video</label>
                 <input required data-fieldtype="media" accept="video/*" class="form-control form-control-sm" type="file" name="sect5_video" id="sect5-video" aria-describedby="sect5VideoHelp" value="{{ $data->sect5_video }}">
-                <small id="sect5VideoHelp" class="form-text text-muted">Recommended video size: WxH</small>
+                <small id="sect5VideoHelp" class="form-text text-muted">Recommended video size: 640x360 px ( 16:9 aspect ratio)</small>
+                
+                <label for="sect5-current-video" class="form-label">
+                    Current Video:
+                    @php
+                        if ($data->sect5_video) {
+                            $path = explode('/',$data->sect5_video);
+                            $filename = end($path);
+                        } else {
+                            $filename = "No image set";
+                        }
+                    @endphp
+                    {{ $filename }} 
+                </label>
+                @if ($data->sect5_video)
+                <div>
+                    <video class="admin-panel-image" id="highlight-video-player" preload="none" controls poster="{{ asset('marketing-site/assets/agency/img/blog-news-1.jpg')}}" playsinline>
+                        <source id="highlight-video-source" src="{{ url($data->sect5_video) }}" type="video/mp4">
+                    </video>
+                </div>
+                @endif
+                <br>
+                
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
             </div>             
             <div id="about-us-sect5-video-bar" hidden>
