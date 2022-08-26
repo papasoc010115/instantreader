@@ -133,7 +133,7 @@
             </script>
 
             <!-- Image 1 -->
-            <form data-route="{{ route('contact-us.consultation.store_media_single') }}" enctype="multipart/form-data" class="media">
+            <form data-route="{{ route('contact-us.consultation.store_media_single') }}" data-progress_bar="consultation-sect1-image1-bar" enctype="multipart/form-data" class="media">
                 @csrf
                 <div class="mb-3 py-3">
                     <label for="sect1-image1" class="form-label">Image 1</label>
@@ -158,11 +158,17 @@
                     <br>
                     
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
-                </div>                
+                </div>   
+                <div id="consultation-sect1-image1-bar" hidden>
+                    <div>Uploading files. Please wait.</div>     
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                    </div>  
+                </div>               
             </form>
 
             <!-- Image 2 -->
-            <form data-route="{{ route('contact-us.consultation.store_media_single') }}" enctype="multipart/form-data" class="media">
+            <form data-route="{{ route('contact-us.consultation.store_media_single') }}" data-progress_bar="consultation-sect1-image2-bar" enctype="multipart/form-data" class="media">
                 @csrf
                 <div class="mb-3 py-3">
                     <label for="sect1-image2" class="form-label">Image 2</label>
@@ -187,7 +193,13 @@
                     <br>
 
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
-                </div>                
+                </div>  
+                <div id="consultation-sect1-image2-bar" hidden>
+                    <div>Uploading files. Please wait.</div>     
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                    </div>  
+                </div>              
             </form>
             <!-- End of Section 1 -->
 

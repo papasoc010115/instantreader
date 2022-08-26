@@ -73,7 +73,7 @@ const ajaxPOST = (api_route, update_data, asyncBool, success_msg) => {
     });
 };
 
-const ajaxPOSTmedia = (api_route, update_data, asyncBool, success_msg) => {
+const ajaxPOSTmedia = (api_route, update_data, asyncBool, success_msg, progress_bar) => {
     $.ajax({
         url: api_route,
         type: "POST",
@@ -83,9 +83,11 @@ const ajaxPOSTmedia = (api_route, update_data, asyncBool, success_msg) => {
         data: update_data,
         async: asyncBool,
         success: (res) => {
+            $("#"+progress_bar).attr("hidden", true);
             alert(success_msg);
         },
         error: () => {
+            $("#"+progress_bar).attr("hidden", true);
             alert("Something went wrong. Contact your IT admin.");
         },
     });
@@ -215,12 +217,18 @@ for (let i = 0; i < deleteIndividualTestimonialBtn.length; i++) {
 const files = $(".media").get();
 for (let i = 0; i < files.length; i++) {
     const file = files[i];
-    
+
     file.addEventListener("submit", (e) => {
         e.preventDefault();
         const api_route = file.dataset.route;
+        let progress_bar;
+        if (file.dataset.progress_bar){
+            progress_bar = file.dataset.progress_bar;
+            console.log($("#"+progress_bar));
+            $("#" + progress_bar).removeAttr('hidden');
+        }
         const update_data = new FormData(file);
-        ajaxPOSTmedia(api_route, update_data, false, "Successfully Updated!");
+        ajaxPOSTmedia(api_route, update_data, false, "Successfully Updated!", progress_bar);
         location.reload();
     })
 };

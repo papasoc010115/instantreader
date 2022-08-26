@@ -142,7 +142,7 @@
             </script>
 
             <!-- Image-->
-            <form data-route="{{ route('learn-more.assessment.store_media_single') }}" enctype="multipart/form-data" class="media">
+            <form data-route="{{ route('learn-more.assessment.store_media_single') }}" data-progress_bar="reading-assessment-sect1-image-bar" enctype="multipart/form-data" class="media">
                 @csrf
                 <div class="mb-3 py-3">
                     <label for="sect1-image" class="form-label">Image</label>
@@ -167,7 +167,13 @@
                     <br>
                     
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
-                </div>                
+                </div>    
+                <div id="reading-assessment-sect1-image-bar" hidden>
+                    <div>Uploading files. Please wait.</div>     
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                    </div>  
+                </div>              
             </form>
             <!-- End of Section 1 -->
 

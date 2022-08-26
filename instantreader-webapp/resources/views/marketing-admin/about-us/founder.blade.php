@@ -122,7 +122,7 @@
         </script>
 
         <!-- Image -->
-        <form data-route="{{ route('about-us.founder.store_media_single') }}" enctype="multipart/form-data" class="media">
+        <form data-route="{{ route('about-us.founder.store_media_single') }}" data-progress_bar="founder-sect1-image-bar" enctype="multipart/form-data" class="media">
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect1-image" class="form-label">Image</label>
@@ -147,7 +147,13 @@
                 <br>
                 
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
-            </div>                
+            </div>
+            <div id="founder-sect1-image-bar" hidden>
+                <div>Uploading files. Please wait.</div>     
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                </div>  
+            </div>                  
         </form>
 
         <!-- Facebook link -->
@@ -243,7 +249,7 @@
         </script>
 
         <!-- Image 1 -->
-        <form data-route="{{ route('about-us.founder.store_media_single') }}" enctype="multipart/form-data" class="media">
+        <form data-route="{{ route('about-us.founder.store_media_single') }}" data-progress_bar="founder-sect2-image1-bar" enctype="multipart/form-data" class="media">
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect2-image1" class="form-label">Image 1</label>
@@ -268,11 +274,17 @@
                 <br>
                 
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
-            </div>                
+            </div> 
+            <div id="founder-sect2-image1-bar" hidden>
+                <div>Uploading files. Please wait.</div>     
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                </div>  
+            </div>               
         </form>
 
         <!-- Image 2 -->
-        <form data-route="{{ route('about-us.founder.store_media_single') }}" enctype="multipart/form-data" class="media">
+        <form data-route="{{ route('about-us.founder.store_media_single') }}" data-progress_bar="founder-sect2-image2-bar" enctype="multipart/form-data" class="media">
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect2-image2" class="form-label">Image 2</label>
@@ -297,18 +309,30 @@
                 <br>
                 
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
-            </div>                
+            </div>
+            <div id="founder-sect2-image2-bar" hidden>
+                <div>Uploading files. Please wait.</div>     
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                </div>  
+            </div>                    
         </form>
 
         <!-- Video -->
-        <form data-route="{{ route('about-us.founder.store_media_single') }}" enctype="multipart/form-data" class="media">
+        <form data-route="{{ route('about-us.founder.store_media_single') }}" data-progress_bar="about-us-sect2-video-bar" enctype="multipart/form-data" class="media">
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect2-video" class="form-label">Video</label>
                 <input required data-fieldtype="media" accept="video/*" class="form-control form-control-sm" type="file" name="sect2_video" id="sect2-video" aria-describedby="sect2VideoHelp" value="{{ $data->sect3_video }}">
                 <small id="sect2VideoHelp" class="form-text text-muted">Recommended video size: WxH</small>
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
-            </div>                
+            </div>  
+            <div id="about-us-sect2-video-bar" hidden>
+                <div>Uploading files. Please wait.</div>     
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                </div>  
+            </div>               
         </form>
         <!-- End of Section 2 -->
 
@@ -353,7 +377,7 @@
         </script>
 
         <!-- Image -->
-        <form data-route="{{ route('about-us.founder.store_media_single') }}" enctype="multipart/form-data" class="media">
+        <form data-route="{{ route('about-us.founder.store_media_single') }}" data-progress_bar="founder-sect3-image-bar" enctype="multipart/form-data" class="media">
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect3-image" class="form-label">Image</label>
@@ -378,7 +402,13 @@
                 <br>
                 
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
-            </div>                
+            </div>       
+            <div id="founder-sect3-image-bar" hidden>
+                <div>Uploading files. Please wait.</div>     
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                </div>  
+            </div>         
         </form>        
         <!-- End of Section 3 -->
 
@@ -423,7 +453,7 @@
         </script>
 
         <!-- Image -->
-        <form data-route="{{ route('about-us.founder.store_media_single') }}" enctype="multipart/form-data" class="media">
+        <form data-route="{{ route('about-us.founder.store_media_single') }}" data-progress_bar="founder-sect4-image-bar" enctype="multipart/form-data" class="media">
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect4-image" class="form-label">Image</label>
@@ -448,7 +478,13 @@
                 <br>
                 
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
-            </div>                
+            </div> 
+            <div id="founder-sect4-image-bar" hidden>
+                <div>Uploading files. Please wait.</div>     
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                </div>  
+            </div>                     
         </form>        
         <!-- End of Section 4 -->
 
@@ -514,7 +550,7 @@
         </script>
 
         <!-- Image 1 -->
-        <form data-route="{{ route('about-us.founder.store_media_single') }}" enctype="multipart/form-data" class="media">
+        <form data-route="{{ route('about-us.founder.store_media_single') }}" data-progress_bar="founder-sect5-image1-bar" enctype="multipart/form-data" class="media">
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect5-image1" class="form-label">Image 1</label>
@@ -539,11 +575,17 @@
                 <br>
                 
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
+            </div>
+            <div id="founder-sect5-image1-bar" hidden>
+                <div>Uploading files. Please wait.</div>     
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                </div>  
             </div>                
         </form>
 
         <!-- Image 2 -->
-        <form data-route="{{ route('about-us.founder.store_media_single') }}" enctype="multipart/form-data" class="media">
+        <form data-route="{{ route('about-us.founder.store_media_single') }}" data-progress_bar="founder-sect5-image2-bar" enctype="multipart/form-data" class="media">
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect5-image2" class="form-label">Image 2</label>
@@ -568,11 +610,17 @@
                 <br>
                 
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
-            </div>                
+            </div>    
+            <div id="founder-sect5-image2-bar" hidden>
+                <div>Uploading files. Please wait.</div>     
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                </div>  
+            </div>            
         </form>
 
         <!-- Image 3 -->
-        <form data-route="{{ route('about-us.founder.store_media_single') }}" enctype="multipart/form-data" class="media">
+        <form data-route="{{ route('about-us.founder.store_media_single') }}" data-progress_bar="founder-sect5-image3-bar" enctype="multipart/form-data" class="media">
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect5-image3" class="form-label">Image 3</label>
@@ -597,11 +645,17 @@
                 <br>
                 
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
-            </div>                
+            </div>  
+            <div id="founder-sect5-image3-bar" hidden>
+                <div>Uploading files. Please wait.</div>     
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                </div>  
+            </div>               
         </form>
 
         <!-- Image 4 -->
-        <form data-route="{{ route('about-us.founder.store_media_single') }}" enctype="multipart/form-data" class="media">
+        <form data-route="{{ route('about-us.founder.store_media_single') }}" data-progress_bar="founder-sect5-image4-bar" enctype="multipart/form-data" class="media">
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect5-image4" class="form-label">Image 4</label>
@@ -626,11 +680,17 @@
                 <br>
                 
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
-            </div>                
+            </div>   
+            <div id="founder-sect5-image4-bar" hidden>
+                <div>Uploading files. Please wait.</div>     
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                </div>  
+            </div>             
         </form>
 
         <!-- Image 5 -->
-        <form data-route="{{ route('about-us.founder.store_media_single') }}" enctype="multipart/form-data" class="media">
+        <form data-route="{{ route('about-us.founder.store_media_single') }}" data-progress_bar="founder-sect5-image5-bar" enctype="multipart/form-data" class="media">
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect5-image5" class="form-label">Image 5</label>
@@ -655,18 +715,30 @@
                 <br>
                 
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
-            </div>                
+            </div> 
+            <div id="founder-sect5-image5-bar" hidden>
+                <div>Uploading files. Please wait.</div>     
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                </div>  
+            </div>                 
         </form>
 
         <!-- Video -->
-        <form data-route="{{ route('about-us.founder.store_media_single') }}" enctype="multipart/form-data" class="media">
+        <form data-route="{{ route('about-us.founder.store_media_single') }}" data-progress_bar="about-us-sect5-video-bar"enctype="multipart/form-data" class="media">
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect5-video" class="form-label">Video</label>
                 <input required data-fieldtype="media" accept="video/*" class="form-control form-control-sm" type="file" name="sect5_video" id="sect5-video" aria-describedby="sect5VideoHelp" value="{{ $data->sect5_video }}">
                 <small id="sect5VideoHelp" class="form-text text-muted">Recommended video size: WxH</small>
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
-            </div>                
+            </div>             
+            <div id="about-us-sect5-video-bar" hidden>
+                <div>Uploading files. Please wait.</div>     
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                </div>  
+            </div>   
         </form>
         <!-- End of Section 5 -->
     </section>

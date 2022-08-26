@@ -165,7 +165,7 @@
             </script>
 
             <!-- Image 1 -->
-            <form data-route="{{ route('learn-more.reading-programs.store_media_single') }}" enctype="multipart/form-data" class="media">
+            <form data-route="{{ route('learn-more.reading-programs.store_media_single') }}" data-progress_bar="reading-programs-sect1-image1-bar" enctype="multipart/form-data" class="media">
                 @csrf
                 <div class="mb-3 py-3">
                     <label for="sect1-image1" class="form-label">Image 1</label>
@@ -190,11 +190,17 @@
                     <br>
                     
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
-                </div>                
+                </div>      
+                <div id="reading-programs-sect1-image1-bar" hidden>
+                    <div>Uploading files. Please wait.</div>     
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                    </div>  
+                </div>            
             </form>
 
             <!-- Image 2 -->
-            <form data-route="{{ route('learn-more.reading-programs.store_media_single') }}" enctype="multipart/form-data" class="media">
+            <form data-route="{{ route('learn-more.reading-programs.store_media_single') }}" data-progress_bar="reading-programs-sect1-image2-bar" enctype="multipart/form-data" class="media">
                 @csrf
                 <div class="mb-3 py-3">
                     <label for="sect1-image2" class="form-label">Image 2</label>
@@ -219,11 +225,17 @@
                     <br>
                     
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
+                </div> 
+                <div id="reading-programs-sect1-image2-bar" hidden>
+                    <div>Uploading files. Please wait.</div>     
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                    </div>  
                 </div>                
             </form>
 
             <!-- Image 3 -->
-            <form data-route="{{ route('learn-more.reading-programs.store_media_single') }}" enctype="multipart/form-data" class="media">
+            <form data-route="{{ route('learn-more.reading-programs.store_media_single') }}" data-progress_bar="reading-programs-sect1-image3-bar" enctype="multipart/form-data" class="media">
                 @csrf
                 <div class="mb-3 py-3">
                     <label for="sect1-image3" class="form-label">Image 3</label>
@@ -248,11 +260,17 @@
                     <br>
                     
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
-                </div>                
+                </div>   
+                <div id="reading-programs-sect1-image3-bar" hidden>
+                    <div>Uploading files. Please wait.</div>     
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                    </div>  
+                </div>                  
             </form>
 
             <!-- Image 4 -->
-            <form data-route="{{ route('learn-more.reading-programs.store_media_single') }}" enctype="multipart/form-data" class="media">
+            <form data-route="{{ route('learn-more.reading-programs.store_media_single') }}" data-progress_bar="reading-programs-sect1-image4-bar" enctype="multipart/form-data" class="media">
                 @csrf
                 <div class="mb-3 py-3">
                     <label for="sect1-image4" class="form-label">Image 4</label>
@@ -277,7 +295,13 @@
                     <br>
                     
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
-                </div>                
+                </div>
+                <div id="reading-programs-sect1-image4-bar" hidden>
+                    <div>Uploading files. Please wait.</div>     
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                    </div>  
+                </div>                  
             </form>
             <!-- End of Section 1 -->
 
@@ -364,7 +388,7 @@
             </script>
 
             <!-- Image 1 -->
-            <form data-route="{{ route('learn-more.reading-programs.store_media_single') }}" enctype="multipart/form-data" class="media">
+            <form data-route="{{ route('learn-more.reading-programs.store_media_single') }}" data-progress_bar="reading-programs-sect2-image1-bar" enctype="multipart/form-data" class="media">
                 @csrf
                 <div class="mb-3 py-3">
                     <label for="sect2-image1" class="form-label">Image 1</label>
@@ -389,11 +413,17 @@
                     <br>
                     
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
-                </div>                
+                </div>
+                <div id="reading-programs-sect2-image1-bar" hidden>
+                    <div>Uploading files. Please wait.</div>     
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                    </div>  
+                </div>                 
             </form>
 
             <!-- Image 2 -->
-            <form data-route="{{ route('learn-more.reading-programs.store_media_single') }}" enctype="multipart/form-data" class="media">
+            <form data-route="{{ route('learn-more.reading-programs.store_media_single') }}" data-progress_bar="reading-programs-sect2-image2-bar" enctype="multipart/form-data" class="media">
                 @csrf
                 <div class="mb-3 py-3">
                     <label for="sect2-image2" class="form-label">Image 2</label>
@@ -418,11 +448,17 @@
                     <br>
                     
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
-                </div>                
+                </div>  
+                <div id="reading-programs-sect2-image2-bar" hidden>
+                    <div>Uploading files. Please wait.</div>     
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                    </div>  
+                </div>               
             </form>
 
             <!-- Image 3 -->
-            <form data-route="{{ route('learn-more.reading-programs.store_media_single') }}" enctype="multipart/form-data" class="media">
+            <form data-route="{{ route('learn-more.reading-programs.store_media_single') }}" data-progress_bar="reading-programs-sect2-image3-bar" enctype="multipart/form-data" class="media">
                 @csrf
                 <div class="mb-3 py-3">
                     <label for="sect2-image3" class="form-label">Image 3</label>
@@ -447,7 +483,13 @@
                     <br>
                     
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
-                </div>                
+                </div>    
+                <div id="reading-programs-sect2-image3-bar" hidden>
+                    <div>Uploading files. Please wait.</div>     
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                    </div>  
+                </div>             
             </form>
             <!-- End of Section 2 -->
 
@@ -534,7 +576,7 @@
             </script>
 
             <!-- Image 1 -->
-            <form data-route="{{ route('learn-more.reading-programs.store_media_single') }}" enctype="multipart/form-data" class="media">
+            <form data-route="{{ route('learn-more.reading-programs.store_media_single') }}" data-progress_bar="reading-programs-sect3-image1-bar" enctype="multipart/form-data" class="media">
                 @csrf
                 <div class="mb-3 py-3">
                     <label for="sect3-image1" class="form-label">Image 1</label>
@@ -559,11 +601,17 @@
                     <br>
                     
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
-                </div>                
+                </div>      
+                <div id="reading-programs-sect3-image1-bar" hidden>
+                    <div>Uploading files. Please wait.</div>     
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                    </div>  
+                </div>             
             </form>
 
             <!-- Image 2 -->
-            <form data-route="{{ route('learn-more.reading-programs.store_media_single') }}" enctype="multipart/form-data" class="media">
+            <form data-route="{{ route('learn-more.reading-programs.store_media_single') }}" data-progress_bar="reading-programs-sect3-image2-bar" enctype="multipart/form-data" class="media">
                 @csrf
                 <div class="mb-3 py-3">
                     <label for="sect3-image2" class="form-label">Image 2</label>
@@ -588,11 +636,17 @@
                     <br>
                     
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
-                </div>                
+                </div> 
+                <div id="reading-programs-sect3-image2-bar" hidden>
+                    <div>Uploading files. Please wait.</div>     
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                    </div>  
+                </div>                  
             </form>
 
             <!-- Image 3 -->
-            <form data-route="{{ route('learn-more.reading-programs.store_media_single') }}" enctype="multipart/form-data" class="media">
+            <form data-route="{{ route('learn-more.reading-programs.store_media_single') }}" data-progress_bar="reading-programs-sect3-image3-bar" enctype="multipart/form-data" class="media">
                 @csrf
                 <div class="mb-3 py-3">
                     <label for="sect3-image3" class="form-label">Image 3</label>
@@ -617,7 +671,13 @@
                     <br>
                     
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
-                </div>                
+                </div> 
+                <div id="reading-programs-sect3-image3-bar" hidden>
+                    <div>Uploading files. Please wait.</div>     
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                    </div>  
+                </div>               
             </form>
             <!-- End of Section 3 -->
 
@@ -704,7 +764,7 @@
             </script>
 
             <!-- Image 1 -->
-            <form data-route="{{ route('learn-more.reading-programs.store_media_single') }}" enctype="multipart/form-data" class="media">
+            <form data-route="{{ route('learn-more.reading-programs.store_media_single') }}" data-progress_bar="reading-programs-sect4-image1-bar" enctype="multipart/form-data" class="media">
                 @csrf
                 <div class="mb-3 py-3">
                     <label for="sect4-image1" class="form-label">Image 1</label>
@@ -730,10 +790,16 @@
                     
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
                 </div>                
+                <div id="reading-programs-sect4-image1-bar" hidden>
+                    <div>Uploading files. Please wait.</div>     
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                    </div>  
+                </div>  
             </form>
 
             <!-- Image 2 -->
-            <form data-route="{{ route('learn-more.reading-programs.store_media_single') }}" enctype="multipart/form-data" class="media">
+            <form data-route="{{ route('learn-more.reading-programs.store_media_single') }}" data-progress_bar="reading-programs-sect4-image2-bar" enctype="multipart/form-data" class="media">
                 @csrf
                 <div class="mb-3 py-3">
                     <label for="sect4-image2" class="form-label">Image 2</label>
@@ -758,11 +824,17 @@
                     <br>
                     
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
+                </div>  
+                <div id="reading-programs-sect4-image2-bar" hidden>
+                    <div>Uploading files. Please wait.</div>     
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                    </div>  
                 </div>                
             </form>
 
             <!-- Image 3 -->
-            <form data-route="{{ route('learn-more.reading-programs.store_media_single') }}" enctype="multipart/form-data" class="media">
+            <form data-route="{{ route('learn-more.reading-programs.store_media_single') }}" data-progress_bar="reading-programs-sect4-image3-bar" enctype="multipart/form-data" class="media">
                 @csrf
                 <div class="mb-3 py-3">
                     <label for="sect4-image3" class="form-label">Image 3</label>
@@ -787,7 +859,13 @@
                     <br>
                     
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
-                </div>                
+                </div> 
+                <div id="reading-programs-sect4-image3-bar" hidden>
+                    <div>Uploading files. Please wait.</div>     
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                    </div>  
+                </div>                 
             </form>
             <!-- End of Section 4 -->
 
@@ -937,7 +1015,7 @@
             </script>
 
             <!-- Image 1 -->
-            <form data-route="{{ route('learn-more.reading-programs.store_media_single') }}" enctype="multipart/form-data" class="media">
+            <form data-route="{{ route('learn-more.reading-programs.store_media_single') }}" data-progress_bar="reading-programs-sect5-image1-bar" enctype="multipart/form-data" class="media">
                 @csrf
                 <div class="mb-3 py-3">
                     <label for="sect5-image1" class="form-label">Image 1</label>
@@ -962,11 +1040,17 @@
                     <br>
                     
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
+                </div> 
+                <div id="reading-programs-sect5-image1-bar" hidden>
+                    <div>Uploading files. Please wait.</div>     
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                    </div>  
                 </div>                
             </form>
 
             <!-- Image 2 -->
-            <form data-route="{{ route('learn-more.reading-programs.store_media_single') }}" enctype="multipart/form-data" class="media">
+            <form data-route="{{ route('learn-more.reading-programs.store_media_single') }}" data-progress_bar="reading-programs-sect5-image2-bar" enctype="multipart/form-data" class="media">
                 @csrf
                 <div class="mb-3 py-3">
                     <label for="sect5-image2" class="form-label">Image 2</label>
@@ -991,11 +1075,17 @@
                     <br>
                     
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
-                </div>                
+                </div> 
+                <div id="reading-programs-sect5-image2-bar" hidden>
+                    <div>Uploading files. Please wait.</div>     
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                    </div>  
+                </div>               
             </form>
 
             <!-- Image 3 -->
-            <form data-route="{{ route('learn-more.reading-programs.store_media_single') }}" enctype="multipart/form-data" class="media">
+            <form data-route="{{ route('learn-more.reading-programs.store_media_single') }}" data-progress_bar="reading-programs-sect5-image3-bar" enctype="multipart/form-data" class="media">
                 @csrf
                 <div class="mb-3 py-3">
                     <label for="sect5-image3" class="form-label">Image 3</label>
@@ -1020,11 +1110,17 @@
                     <br>
                     
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
-                </div>                
+                </div>  
+                <div id="reading-programs-sect5-image3-bar" hidden>
+                    <div>Uploading files. Please wait.</div>     
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                    </div>  
+                </div>               
             </form>
 
             <!-- Image 4 -->
-            <form data-route="{{ route('learn-more.reading-programs.store_media_single') }}" enctype="multipart/form-data" class="media">
+            <form data-route="{{ route('learn-more.reading-programs.store_media_single') }}" data-progress_bar="reading-programs-sect5-image4-bar" enctype="multipart/form-data" class="media">
                 @csrf
                 <div class="mb-3 py-3">
                     <label for="sect5-image4" class="form-label">Image 4</label>
@@ -1049,11 +1145,17 @@
                     <br>
                     
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
-                </div>  
+                </div> 
+                <div id="reading-programs-sect5-image4-bar" hidden>
+                    <div>Uploading files. Please wait.</div>     
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                    </div>  
+                </div> 
             </form>    
         
             <!-- Image 5 -->
-            <form data-route="{{ route('learn-more.reading-programs.store_media_single') }}" enctype="multipart/form-data" class="media">
+            <form data-route="{{ route('learn-more.reading-programs.store_media_single') }}" data-progress_bar="reading-programs-sect5-image5-bar" enctype="multipart/form-data" class="media">
                 @csrf
                 <div class="mb-3 py-3">
                     <label for="sect5-image5" class="form-label">Image 5</label>
@@ -1079,16 +1181,28 @@
                     
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
                 </div>  
+                <div id="reading-programs-sect5-image5-bar" hidden>
+                    <div>Uploading files. Please wait.</div>     
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                    </div>  
+                </div>
             </form> 
 
             <!-- Video -->
-            <form data-route="{{ route('learn-more.reading-programs.store_media_single') }}" enctype="multipart/form-data" class="media">
+            <form data-route="{{ route('learn-more.reading-programs.store_media_single') }}" data-progress_bar="learn-more-sect5-video-bar" enctype="multipart/form-data" class="media">
                 @csrf
                 <div class="mb-3 py-3">
                     <label for="sect5-video" class="form-label">Video</label>
                     <input required data-fieldtype="media" class="form-control form-control-sm" accept="video/*" type="file" name="sect5_video" id="sect5-video" aria-describedby="sect5Video" value="{{ $data->sect5_video }}">
                     <small id="sect5Video" class="form-text text-muted">Recommended video size: WxH</small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
+                </div>
+                <div id="learn-more-sect5-video-bar" hidden>
+                    <div>Uploading files. Please wait.</div>     
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                    </div>  
                 </div>  
             </form> 
         <!-- End of Section 5 -->

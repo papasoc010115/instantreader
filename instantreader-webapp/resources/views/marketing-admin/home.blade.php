@@ -112,7 +112,7 @@
             </script>
 
             <!-- Image -->
-            <form data-route="{{ route('home.store_media_single') }}" enctype="multipart/form-data" class="media">
+            <form data-route="{{ route('home.store_media_single') }}" data-progress_bar="home-sect1-image-bar" enctype="multipart/form-data" class="media">
                 @csrf
                 <div class="mb-3 py-3">
                     <label for="sect1-opening-image" class="form-label">Image</label>
@@ -137,7 +137,13 @@
                     <br>
                     
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
-                </div>                
+                </div>   
+                <div id="home-sect1-image-bar" hidden>
+                    <div>Uploading files. Please wait.</div>     
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                    </div>  
+                </div>             
             </form>
             <!-- End of Section 1 -->
 
@@ -194,14 +200,20 @@
             </script>
 
             <!-- Video of Section 2 -->
-            <form data-route="{{ route('home.store_media_single') }}" enctype="multipart/form-data" class="media">
+            <form data-route="{{ route('home.store_media_single') }}" data-progress_bar="home-sect2-video-bar" enctype="multipart/form-data" class="media">
                 @csrf
                 <div class="mb-3 py-3">
                     <label for="sect2-video" class="form-label">Video</label>
                     <input required data-fieldtype="media" accept="video/*" class="form-control form-control-sm" name="sect2_video" type="file" id="sect2-video" aria-describedby="sect2VideoHelp" value="{{ $data->sect2_video }}">
                     <small id="sect2VideoHelp" class="form-text text-muted">Recommended video size: WxH</small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
-                </div>                
+                </div>   
+                <div id="home-sect2-video-bar" hidden>
+                    <div>Uploading files. Please wait.</div>     
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                    </div>  
+                </div>
             </form>
             <!-- End of Section 2 -->
 
@@ -258,7 +270,7 @@
             </script>
 
             <!-- Image 1 of Section 3 -->
-            <form data-route="{{ route('home.store_media_single') }}" enctype="multipart/form-data" class="media">
+            <form data-route="{{ route('home.store_media_single') }}" data-progress_bar="home-sect3-image1-bar" enctype="multipart/form-data" class="media">
                 @csrf
                 <div class="mb-3 py-3">
                     <label for="sect3-image1" class="form-label">Image 1</label>
@@ -283,11 +295,17 @@
                     <br>
                     
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
-                </div>               
+                </div>      
+                <div id="home-sect3-image1-bar" hidden>
+                    <div>Uploading files. Please wait.</div>     
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                    </div>  
+                </div>    
             </form>
 
             <!-- Image 2 of Section 3 -->
-            <form data-route="{{ route('home.store_media_single') }}" enctype="multipart/form-data" class="media">
+            <form data-route="{{ route('home.store_media_single') }}" data-progress_bar="home-sect3-image2-bar" enctype="multipart/form-data" class="media">
                 @csrf
                 <div class="mb-3 py-3">
                     <label for="sect3-image2" class="form-label">Image 2</label>
@@ -312,11 +330,17 @@
                     <br>
                     
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
+                </div>   
+                <div id="home-sect3-image2-bar" hidden>
+                    <div>Uploading files. Please wait.</div>     
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                    </div>  
                 </div>    
             </form>
 
             <!-- Image 3 of Section 3 -->
-            <form data-route="{{ route('home.store_media_single') }}" enctype="multipart/form-data" class="media">
+            <form data-route="{{ route('home.store_media_single') }}" data-progress_bar="home-sect3-image3-bar" enctype="multipart/form-data" class="media">
                 @csrf
                 <div class="mb-3 py-3">
                     <label for="sect3-image3" class="form-label">Image 3</label>
@@ -341,6 +365,12 @@
                     <br>
                     
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
+                </div> 
+                <div id="home-sect3-image3-bar" hidden>
+                    <div>Uploading files. Please wait.</div>     
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                    </div>  
                 </div>             
             </form>
             <!-- End of Section 3 -->
@@ -427,7 +457,7 @@
             </script>
 
             <!-- Image for Teacher Vicki -->
-            <form data-route="{{ route('home.store_media_single') }}" enctype="multipart/form-data" class="media">
+            <form data-route="{{ route('home.store_media_single') }}" data-progress_bar="home-sect4-image1-bar" enctype="multipart/form-data" class="media">
                 @csrf
                 <div class="mb-3 py-3">
                     <label for="sect4-image1" class="form-label">Image for Teacher Vicki</label>
@@ -452,11 +482,17 @@
                     <br>
                     
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
+                </div>  
+                <div id="home-sect4-image1-bar" hidden>
+                    <div>Uploading files. Please wait.</div>     
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                    </div>  
                 </div>    
             </form>
 
             <!-- Image for Likha-->
-            <form data-route="{{ route('home.store_media_single') }}" enctype="multipart/form-data" class="media">
+            <form data-route="{{ route('home.store_media_single') }}" data-progress_bar="home-sect4-image2-bar" enctype="multipart/form-data" class="media">
                 @csrf
                 <div class="mb-3 py-3">
                     <label for="sect4-image2" class="form-label">Image for Likha</label>
@@ -481,7 +517,13 @@
                     <br> 
 
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
-                </div>    
+                </div>   
+                <div id="home-sect4-image2-bar" hidden>
+                    <div>Uploading files. Please wait.</div>     
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                    </div>  
+                </div>  
             </form>
             <!-- End of Section 4 -->
 
@@ -598,7 +640,7 @@
             </script>
 
              <!-- Images of Section 7 -->
-             <form data-route="{{ route('home.store_media_multiple') }}" enctype="multipart/form-data" class="media">
+             <form data-route="{{ route('home.store_media_multiple') }}" data-progress_bar="home-sect7-images-bar" enctype="multipart/form-data" class="media">
                 @csrf
                 <div class="mb-3 py-3">
                     <label for="sect7-images" class="form-label">Images (Select at least 3 photos)</label>
@@ -606,6 +648,12 @@
                     <small id="sect7ImagesHelp" class="form-text text-muted">Recommended image size: 2048x1365 px ( 3:2 aspect ratio )</small>
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
                 </div>  
+                <div id="home-sect7-images-bar" hidden>
+                    <div>Uploading files. Please wait.</div>     
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                    </div>  
+                </div>
                 <label for="sect7-current-images" class="form-label">
                     Current Images: 
                 </label>
@@ -662,7 +710,7 @@
             </script>
 
             <!-- Image of Section 8 -->
-            <form data-route="{{ route('home.store_media_single') }}" enctype="multipart/form-data" class="media">
+            <form data-route="{{ route('home.store_media_single') }}" data-progress_bar="home-sect8-image-bar" enctype="multipart/form-data" class="media">
                 @csrf
                 <div class="mb-3 py-3">
                     <label for="sect8-image" class="form-label">Image</label>
@@ -687,6 +735,12 @@
                     <br>
                     
                     <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
+                </div>
+                <div id="home-sect8-image-bar" hidden>
+                    <div>Uploading files. Please wait.</div>     
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                    </div>  
                 </div>
             </form>
             <!-- End of Section 8 -->

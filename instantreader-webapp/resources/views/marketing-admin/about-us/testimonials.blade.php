@@ -175,7 +175,7 @@
         </script>
 
          <!-- Image 1 -->
-         <form data-route="{{ route('about-us.testimonials.store_media_single') }}" enctype="multipart/form-data" class="media">
+         <form data-route="{{ route('about-us.testimonials.store_media_single') }}" data-progress_bar="testimonials-sect1-image1-bar" enctype="multipart/form-data" class="media">
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect1-image1" class="form-label">Image 1</label>
@@ -200,11 +200,17 @@
                 <br>
                 
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
-            </div>                
+            </div>
+            <div id="testimonials-sect1-image1-bar" hidden>
+                <div>Uploading files. Please wait.</div>     
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                </div>  
+            </div>                 
         </form>
 
         <!-- Image 2 -->
-        <form data-route="{{ route('about-us.testimonials.store_media_single') }}" enctype="multipart/form-data" class="media">
+        <form data-route="{{ route('about-us.testimonials.store_media_single') }}" data-progress_bar="testimonials-sect1-image2-bar" enctype="multipart/form-data" class="media">
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect1-image2" class="form-label">Image 2</label>
@@ -229,11 +235,17 @@
                 <br>
 
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
-            </div>                
+            </div>   
+            <div id="testimonials-sect1-image2-bar" hidden>
+                <div>Uploading files. Please wait.</div>     
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                </div>  
+            </div>                              
         </form>
 
         <!-- Image 3 -->
-        <form data-route="{{ route('about-us.testimonials.store_media_single') }}" enctype="multipart/form-data" class="media">
+        <form data-route="{{ route('about-us.testimonials.store_media_single') }}" data-progress_bar="testimonials-sect1-image3-bar" enctype="multipart/form-data" class="media">
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect1-image3" class="form-label">Image 3</label>
@@ -258,11 +270,17 @@
                 <br>
                 
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
-            </div>                
+            </div> 
+            <div id="testimonials-sect1-image3-bar" hidden>
+                <div>Uploading files. Please wait.</div>     
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                </div>  
+            </div>               
         </form>
 
         <!-- Image 4 -->
-        <form data-route="{{ route('about-us.testimonials.store_media_single') }}" enctype="multipart/form-data" class="media">
+        <form data-route="{{ route('about-us.testimonials.store_media_single') }}" data-progress_bar="testimonials-sect1-image4-bar" enctype="multipart/form-data" class="media">
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect1-image4" class="form-label">Image 4</label>
@@ -287,7 +305,13 @@
                 <br>
                 
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
-            </div>                
+            </div> 
+            <div id="testimonials-sect1-image4-bar" hidden>
+                <div>Uploading files. Please wait.</div>     
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                </div>  
+            </div>                 
         </form>
         <!-- End of Section 1 -->
 
@@ -395,7 +419,7 @@
         </script>
 
         <!-- Image 1 -->
-        <form data-route="{{ route('about-us.testimonials.store_media_single') }}" enctype="multipart/form-data" class="media">
+        <form data-route="{{ route('about-us.testimonials.store_media_single') }}" data-progress_bar="testimonials-sect2-image1-bar" enctype="multipart/form-data" class="media">
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect2-image1" class="form-label">Image 1</label>
@@ -420,11 +444,17 @@
                 <br>
                 
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
-            </div>                
+            </div>
+            <div id="testimonials-sect2-image1-bar" hidden>
+                <div>Uploading files. Please wait.</div>     
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                </div>  
+            </div>                 
         </form>
 
         <!-- Image 2 -->
-        <form data-route="{{ route('about-us.testimonials.store_media_single') }}" enctype="multipart/form-data" class="media">
+        <form data-route="{{ route('about-us.testimonials.store_media_single') }}" data-progress_bar="testimonials-sect2-image2-bar" enctype="multipart/form-data" class="media">
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect2-image2" class="form-label">Image 2</label>
@@ -449,11 +479,17 @@
                 <br>
                 
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
+            </div>  
+            <div id="testimonials-sect2-image2-bar" hidden>
+                <div>Uploading files. Please wait.</div>     
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                </div>  
             </div>                
         </form>
 
         <!-- Image 3 -->
-        <form data-route="{{ route('about-us.testimonials.store_media_single') }}" enctype="multipart/form-data" class="media">
+        <form data-route="{{ route('about-us.testimonials.store_media_single') }}" data-progress_bar="testimonials-sect2-image3-bar" enctype="multipart/form-data" class="media">
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect2-image3" class="form-label">Image 3</label>
@@ -479,10 +515,16 @@
 
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
             </div>                
+            <div id="testimonials-sect2-image3-bar" hidden>
+                <div>Uploading files. Please wait.</div>     
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                </div>  
+            </div>    
         </form>
 
         <!-- Image 4 -->
-        <form data-route="{{ route('about-us.testimonials.store_media_single') }}" enctype="multipart/form-data" class="media">
+        <form data-route="{{ route('about-us.testimonials.store_media_single') }}" data-progress_bar="testimonials-sect2-image4-bar" enctype="multipart/form-data" class="media">
             @csrf
             <div class="mb-3 py-3">
                 <label for="sect2-image4" class="form-label">Image 4</label>
@@ -507,7 +549,13 @@
                 <br>
                 
                 <button type="submit" class="btn btn-primary update-btn"> <span style="font-size: 0.8rem">Update</span></button>
-            </div>                
+            </div>  
+            <div id="testimonials-sect2-image4-bar" hidden>
+                <div>Uploading files. Please wait.</div>     
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                </div>  
+            </div>              
         </form>
         <!-- End of Section 2 -->
         
