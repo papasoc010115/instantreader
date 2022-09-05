@@ -1,0 +1,120 @@
+body {
+    font-family: "Sora", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-container {
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    position: fixed !important;
+    top: 0 !important;
+    width: 100% !important;
+    background: white;
+    z-index: 2;
+}
+
+.navbar-brand {
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.dropdown {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.active {
+    font-weight: 500;
+}
+
+.main-heading {
+    padding-top: 3rem;
+    text-align: center;
+}
+
+.forms {
+    padding: 2rem;
+    margin-top: 4rem;
+}
+
+.content {
+    margin-top: 4rem;
+}
+
+.update-btn {
+    margin-top: 0.5rem;
+}
+
+.tox-statusbar {
+    display: none !important;
+}
+
+.tox {
+    border-color: #ced4da !important;
+    border-width: 0.05rem !important;
+}
+
+small,
+.char-count {
+    float: right;
+    font-size: 0.8rem;
+}
+
+#sect2-days-into-future {
+    display: inline !important;
+    width: 3.3rem;
+    margin-left: 0.3rem;
+    margin-right: 0.3rem;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type="number"] {
+    -moz-appearance: textfield; /* Firefox */
+}
+
+.sect2-form-check {
+    margin-bottom: 2rem;
+}
+
+.sect2-flex-container-x {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.sect2-custom-date-range {
+    margin-bottom: 1.2rem;
+}
+
+#sect2-start-date,
+#sect2-end-date {
+    width: 10rem;
+}
+
+#sect2-event-interval {
+    width: 21rem;
+}
+
+#sect2-duration-value {
+    width: 21rem;
+}
+
+#sect2-slots {
+    width: 21rem;
+}
+
+.removed {
+    display: none;
+}
+
+.admin-panel-image{
+    margin: 10px;
+    max-width: 500px;
+    max-height: 300px;
+}
