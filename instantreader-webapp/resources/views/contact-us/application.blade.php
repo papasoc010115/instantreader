@@ -1,0 +1,230 @@
+@extends('layouts.marketing-layout')
+
+@section('metadata')
+<!-- Page title -->
+<title>{{ $data->page_title }}</title>
+<!-- Other metadata -->
+<meta name="description" content="{{ $data->page_desc }}">
+<meta name="keywords" content="{{ $data->page_keywords }}">
+<meta name="author" content="{{ $data->page_author }}">
+@endsection
+
+@section('content')
+
+<!-- Style Start -->
+<style>
+    .heading-area {
+        margin-bottom: 2rem; 
+    }
+
+    .para {
+        text-align: justify;
+    }
+    
+    @media only screen and (max-width: 767px) {
+        .btn-col {
+            text-align: center;
+        }
+        .form-heading {
+            text-align: center;
+        }
+        .desc-img {
+            order: 2;
+        }
+        .desc-text {
+            order: 1;
+        }
+    }
+</style>
+<!-- Style End -->
+
+<!--Banner Start-->
+<section class="page-title cursor-light">
+    <!-- Pattern Layers -->
+    <div class="pattern-layers">
+        <div class="layer-one"></div>
+        <div class="layer-two"></div>
+    </div>
+    <div class="auto-container">
+        <h2 class="hide-cursor">Start a Career With Us</h2>
+        <ul class="page-breadcrumb link">
+            <li>
+                <button id="scroll-to-form" class="card-btn btn btn-large btn-rounded btn-pink btn-hvr-blue mt-3">
+                Apply Now <i class="fas fa-angle-double-down" style="font-size:0.8em"></i>                  
+                </button>
+            </li>
+        </ul>
+    </div>
+</section>
+<!--Banner End-->
+
+<!--Section 1 Start-->
+<section class="bg-light">
+    <!--Heading-->
+    <div class="heading-area pb-2 text-center">
+        <h2 class="title mt-0">{{ $data->sect1_heading }}</h2>
+    </div>
+
+    <!--Job Description-->
+    <div class="container desc-2 mb-5">
+        <div class="row">
+            <div class="col-md-6 wow fadeInLeft desc-img">
+                <div class="half-img mt-3 pt-4 mt-lg-2 pt-lg-0">
+                    <img alt="image" src="{{ url($data->sect1_image1) }}">
+                </div>
+            </div>
+            <div class="col-md-6 wow fadeInRight desc-text">
+                <div>
+                    <h3>{{ $data->sect1_title1 }}</h3>
+                    <p class="para">{!! $data->sect1_para1 !!}</p>
+                </div>
+            </div>
+            </div>
+    </div>
+
+    <!--Job Requirements-->
+    <div class="container d-flex">
+        <div class="row">
+            <div class="col-md-6 reqs-text">
+                <div>
+                    <h3>{{ $data->sect1_title2 }}</h3>
+                    <p class="para">{!! $data->sect1_para2 !!}</p>
+                </div>
+            </div>
+            <div class="col-md-6 wow fadeInRight reqs-img">
+                <div class="half-img mt-3 pt-4 mt-lg-3 pt-lg-0">
+                    <img alt="image" src="{{ url($data->sect1_image2) }}">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--Section 1 End-->
+
+<!--Application Form Start-->
+<section class="purple-bg" id="application-form">
+    <div class="container">
+
+        <div class="col-md-12 mt-4 pt-3 mt-lg-0 pt-lg-0 wow">
+            <!--Heading-->
+            <div class="heading-area pb-2 form-heading">
+                <h2 class="title mt-0 text-white">Application Form</h2>
+            </div>
+            <!--Actual Form-->
+            <form action="{{ route('contact-us.store_application') }}" method="POST" class="application-form" id="application-form-data">
+                @csrf
+                <div class="form-group row mb-3">
+
+                    <!-- Name Fields -->
+                    <div class="form-group row mb-3">
+                        <div class="col-md-6 mb-3">
+                            <input
+                                name="applicationFirstName"
+                                type="text"
+                                class="form-control form-control-user"
+                                id="firstName"
+                                placeholder="First Name"
+                                required="true"
+                            />
+                        </div>
+                        <div class="col-md-6">
+                            <input
+                                name="applicationLastName"
+                                type="text"
+                                class="form-control form-control-user"
+                                id="lastName"
+                                placeholder="Last Name"
+                                required="true"
+                            />
+                        </div>
+                    </div>
+
+                    <!-- Contact Fields -->
+                    <div class="form-group row mb-3">
+                        <div class="col-md-6 mb-3">
+                            <input
+                                name="applicationContactNum"
+                                type="tel"
+                                class="form-control form-control-user"
+                                id="contactNo"
+                                placeholder="Contact No."
+                                required="true"
+                            />
+                        </div>
+                        <div class="col-md-6">
+                            <input
+                                name="applicationEmail"
+                                type="email"
+                                class="form-control form-control-user"
+                                id="email"
+                                placeholder="Email"
+                                required="true"
+                            />
+                        </div>
+                    </div>
+
+                    <!-- Address Field -->
+                    <div class="form-group row mb-3">
+                        <div class="col-md-6 mb-3">
+                            <input
+                                name="applicationAddress"
+                                type="text"
+                                class="form-control form-control-user"
+                                id="address"
+                                placeholder="City, Country"
+                                required="true"
+                            />
+                        </div>
+                    </div>
+                    
+                    <!-- Resume field -->
+                    <div class="form-group row mb-4">
+                        <label for="applicantResume" class="col-md-2 col-form-label text-white">Upload Résumé/CV</label>
+                        <div class="col-md-4 custom-file">
+                            <div class="custom-file">
+                                <input name="applicationResume" type="file" class="custom-file-input" id="resumeFile" required="true">
+                                <label class="custom-file-label" for="customFile">Choose file</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Captcha Field -->
+                    <div class="row mb-4">
+                        <div class="col-md-12 d-flex justify-content-start">
+                            <div class="g-recaptcha" data-sitekey="6LdtbighAAAAAHhWzmWkWwkT53HNEcL5CPxg9PN_"></div>
+                        </div>
+                    </div>
+
+                    <!--Button-->
+                    <div class="col btn-col">
+                        <button type="submit" class="btn btn-large btn-rounded btn-pink btn-hvr-blue">                    
+                            Apply
+                            <div class="btn-hvr-setting">
+                                <ul class="btn-hvr-setting-inner">
+                                    <li class="btn-hvr-effect"></li>
+                                    <li class="btn-hvr-effect"></li>
+                                    <li class="btn-hvr-effect"></li>
+                                    <li class="btn-hvr-effect"></li>
+                                </ul>
+                            </div>
+                        </button>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+</section>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+<script>
+    // script for scrolling down to form
+    document.getElementById("scroll-to-form").onclick = function () {
+        document.getElementById("application-form").scrollIntoView({behavior: 'smooth'});
+    };
+</script>
+
+@endsection
